@@ -11,7 +11,7 @@ $${\color{yellow}It\space is\space advised\space to\space take\space the\space w
 
 
 
-The tutorial code in this repository was used as a reference before it was modified to have the dynamic rqt parameter changing capabilities [Tutorial code](https://github.com/DREAMS-lab/RAS-SES-598-Space-Robotics-and-AI/blob/main/assignments/first_order_boustrophedon_navigator/first_order_boustrophedon_navigator/boustrophedon_controller.py).
+The [Tutorial code](https://github.com/DREAMS-lab/RAS-SES-598-Space-Robotics-and-AI/blob/main/assignments/first_order_boustrophedon_navigator/first_order_boustrophedon_navigator/boustrophedon_controller.py). in this repository was used as a reference before it was modified to have the dynamic rqt parameter changing capabilities 
 
 
 ## General Notes
