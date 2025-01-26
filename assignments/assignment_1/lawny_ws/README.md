@@ -8,7 +8,7 @@ The tutorial code in this repository was used as a reference before it was modif
 ## Notes on the parameter
 
 The tweaks and their respective cross track erros can be found in this [log file](https://1drv.ms/x/s!As21D3LIKaTsgdpu_zVlr5nVmnvYqQ?e=waO8v4) \
-$${\color{red}Red DISCLAIMER! /sapce This /sapce is/sapce not/sapce a/sapce professionally/sapce written/sapce log/sapce file/sapce it/sapce was/sapce just/sapce used/sapce as/sapce a/sapce reference/sapce to/sapce learn/sapce how/sapce the/sapce pattern/sapce turns/sapce out/sapce for/sapce every/sapce change/sapce to/sapce guess/sapce with/sapce a/sapce certain/sapce degree/sapce of/sapce confidence/sapce the/sapce values/sapce and/sapce their/sapce impact/sapce on/sapce the/sapce patten/sapce}$$
+$${\color{red}DISCLAIMER! \space This \space is\space not\space a\space professionally\space written\space log\space file\space it\space was\space just\space used\space as\space a\space reference\space to\space learn\space how\space the\space pattern\space turns\space out\space for\space every\space change\space to\space guess\space with\space a\space certain\space degree\space of\space confidence\space the\space values\space and\space their\space impact\space on\space the\space patten\space }$$
 
 Kp_angular was always to be the first parameter that was to be chosen to get any semblance of the desired pattern, but the tutorial code had a Kp_linear value of 15.0 which made the turtlel to sway more often than not making it unreliable to tune the parameters properly. Hence a small detour to get a consistent value for Kp_linear which turned out to be <ins> 9.65 </ins>
 
