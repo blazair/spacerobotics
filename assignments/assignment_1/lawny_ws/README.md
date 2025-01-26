@@ -16,7 +16,7 @@ One parameter was tweaked while the others were kept constant with the following
 >Kp_angular\
 >Kd_angular\
 
-K<sub>p,angular</sub> was always to be the first parameter that was to be chosen to get any semblance of the desired pattern, but the tutorial code had a Kp_linear value of 15.0 which made the turtle to sway more often than not making it unreliable to tune the parameters properly. Hence a small detour to get a consistent value for Kp_linear which turned out to be <ins> 9.65 </ins>
+K<sub>p,angular</sub> was always the first parameter that was to be chosen to get any semblance of the desired pattern, but the tutorial code had a K<sub>p,linear</sub> value of <ins>15.0</ins> which made the turtle to sway more often than not making it unreliable to tune the parameters properly. Hence a small detour to get a consistent value for Kp_linear which turned out to be <ins> 9.65 </ins>
 
 With the new value, other values were selcted based on the following criteria with no particular order of imporatance heirarchy
 
@@ -25,6 +25,6 @@ With the new value, other values were selcted based on the following criteria wi
 3. The turning speed
 4. The consistent performace of the above points for a set value of parameters
 
-The final value for <ins>linear proportional gain which is 9.4</ins> was selected despite having slightly worse cross track error for producing a more consistent pattern with effectively no failures in 10 runs.\
+The final value for <ins>K<sub>p,linear</sub> = 9.4</ins> was selected despite having slightly worse cross track error for producing a more consistent pattern with effectively no failures in 10 runs.\
 This is the reason why higher angular proportial gains
 
