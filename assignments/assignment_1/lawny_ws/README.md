@@ -20,10 +20,10 @@ Kp_angular was always to be the first parameter that was to be chosen to get any
 
 With the new value, other values were selcted based on the following criteria with no particular order of imporatance heirarchy
 
-*Average cross track error
-*The way the pattern looks (more subjective than objective)
-*The turning speed
-*The consistent performace of the above points for a set value of parameters
+* Average cross track error
+* The way the pattern looks (more subjective than objective)
+* The turning speed
+* The consistent performace of the above points for a set value of parameters
 
 
 
