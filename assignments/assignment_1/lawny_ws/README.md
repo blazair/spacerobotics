@@ -2,7 +2,7 @@
 >Assignment 1
 
 
-The tutorial code in this repository was used as a reference before it was modified to have the dyynamic rqt parameter changing capabilites [Tutorial code](https://github.com/DREAMS-lab/RAS-SES-598-Space-Robotics-and-AI/blob/main/assignments/first_order_boustrophedon_navigator/first_order_boustrophedon_navigator/boustrophedon_controller.py)
+The tutorial code in this repository was used as a reference before it was modified to have the dynamic rqt parameter changing capabilites [Tutorial code](https://github.com/DREAMS-lab/RAS-SES-598-Space-Robotics-and-AI/blob/main/assignments/first_order_boustrophedon_navigator/first_order_boustrophedon_navigator/boustrophedon_controller.py)
 
 
 ## General Notes
@@ -11,10 +11,10 @@ The tweaks and their respective cross track erros can be found in this [log file
 $${\color{red}DISCLAIMER! \space This \space is\space not\space a\space professionally\space written\space log\space file.\space It\space was\space just\space used\space as\space a\space reference\space to\space learn\space how\space the\space pattern\space turns\space out\space for\space every\space change\space to\space guess\space with\space a\space certain\space degree\space of\space confidence\space the\space values\space and\space their\space impact\space on\space the\space patten\space }$$
 
 One parameter was tweaked while the others were kept constant with the following order undertook
->K<sub>p, linear</sub>\
->K<sub>d, linear</sub>\
-K<sub>p, angular</sub>\
-K<sub>d, angular</sub>\
+1. K<sub>p, linear</sub>\
+2. K<sub>d, linear</sub>\
+3. K<sub>p, angular</sub>\
+4. K<sub>d, angular</sub>\
 
 K<sub>p, angular</sub> was always the first parameter that was to be chosen to get any semblance of the desired pattern, but the tutorial code had a K<sub>p,linear</sub> value of <ins>15.0</ins> which made the turtle to sway more often than not making it unreliable to tune the parameters properly. Hence a small detour to get a consistent value for Kp_linear which turned out to be <ins> 9.65 </ins>
 
@@ -25,15 +25,15 @@ With the new value, other values were selcted based on the following criteria wi
 3. The turning speed
 4. The consistent performace of the above points for a set value of parameters
 
-The final value for K<sub>p, linear</sub> = 9.4 was selected despite having slightly worse cross track error for producing a more consis
-tent pattern with effectively no failures in 10 runs.\
-This is the reason why higher K<sub>p, angular</sub> despite having cross track errors of **<0.1** was not chosen becasue of the ridiculously high turning speeds and the jankier patterns. They were disregarded.
+The final value for K<sub>p, linear</sub> = 9.4 was selected despite having slightly worse cross track error for producing a more consistent pattern with effectively no failures in 10 runs.\
 
 Lower K<sub>p, angular</sub> (around 6.0) can also be used if the shape of the path has more weight to the than the cross track error. So the below picture had an average cross track error of around 0.210 but produced much more rounded corners and consistent turning
 ![at 6 kpa](https://github.com/user-attachments/assets/64fb1fc6-06a1-478e-ac32-16890b9ad909)
 
+Higher K<sub>p, angular</sub> despite having cross track errors of **<0.1** was not chosen becasue of the ridiculously high turning speeds and the jankier patterns.
+This is a [run](https://github.com/user-attachments/assets/bffd77a7-c9b9-4a71-a372-27d7d9933e91) with angular values of 10.\ 
 
-This is a [run](https://github.com/user-attachments/assets/bffd77a7-c9b9-4a71-a372-27d7d9933e91) with angular values of 10. The video clearly shows the turtle turning at real high speeds (echoing the /turtle1/cmd_vel topic shows a speed of around 25). If these speeds are not bottlenecked by hardware, this value is the most optimal to get a near perfect traversal of the given waypoints. However damping needs to be increased and a low pass filter is recommended for gradual speed adjustment. Below is the final picture of the same run in the video
+The video clearly shows the turtle turning at real high speeds (echoing the /turtle1/cmd_vel topic shows a speed of around 25). If these speeds are not bottlenecked by hardware, this value is the most optimal to get a near perfect traversal of the given waypoints. However damping needs to be increased and a low pass filter is recommended for gradual speed adjustment. Below is the final picture of the same run in the video
 
 ![at 10 kpa](https://github.com/user-attachments/assets/6f8820cd-bb8c-4280-9b3b-182dff99434b)
 
