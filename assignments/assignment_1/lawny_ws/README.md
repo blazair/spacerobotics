@@ -29,7 +29,14 @@ The final value for <K<sub>p, linear</sub> = <ins>9.4</ins> was selected despite
 tent pattern with effectively no failures in 10 runs.\
 This is the reason why higher <K<sub>p, angular</sub> despite having cross track errors of **<0.1** was not chosen becasue of the ridiculously high turning speeds and the jankier patterns. They were disregarded.
 
-This is a [run](https://github.com/user-attachments/assets/bffd77a7-c9b9-4a71-a372-27d7d9933e91) with angular values of 10. The video clearly shows the turtle turning at real high speeds (echoing the /turtle1/cmd_vel topic shows a speed of around 25). If these speeds are not bottlenecked by hardware, this value is the most optimal to get a near perfect traversal of the given waypoints. However damping needs to be increased and a low pass filter is recommended for gradual speed adjustment.\
+Lower K<sub>p, angular</sub> (around 6.0) can also be used if the shape of the path has more weight to the than the cross track error. So the below picture had an average cross track error of around 0.210 but produced much more rounded corners and consistent turning
+![at 6 kpa](https://github.com/user-attachments/assets/64fb1fc6-06a1-478e-ac32-16890b9ad909)
+
+
+This is a [run](https://github.com/user-attachments/assets/bffd77a7-c9b9-4a71-a372-27d7d9933e91) with angular values of 10. The video clearly shows the turtle turning at real high speeds (echoing the /turtle1/cmd_vel topic shows a speed of around 25). If these speeds are not bottlenecked by hardware, this value is the most optimal to get a near perfect traversal of the given waypoints. However damping needs to be increased and a low pass filter is recommended for gradual speed adjustment. Below is the final picture of the same run in the video
+
+![at 10 kpa](https://github.com/user-attachments/assets/6f8820cd-bb8c-4280-9b3b-182dff99434b)
+
 
 Despite this, to make higher K<sub>p, angular</sub> work two methods were tried
 
@@ -50,13 +57,14 @@ The [controller.py]() has exhaustive comments on how these messages are calculat
 # Conclusion
 These are the following conclusions made from undertaking this assignment 
 1. Higher K<sub>p, angular</sub> gives the least cross track error **(<0.1)** and can be implemented blindly albeit with a low pass filter if there are no hardware constraints
-2. The final set of parameters chosen to make the pattern look perfect while having a low cross track error is
+2. The final set of parameters chosen to make the pattern look perfect while having a low cross track error is\
     K<sub>p, linear</sub> = 9.4\
     K<sub>d, linear</sub> = 0.2\
     K<sub>p, angular</sub> = 7.7\
     K<sub>d, angular</sub> = 0.05\
 The [video](https://drive.google.com/file/d/1xKvzyddJLRFbOUQDtk_UdF7NOMceFI81/view?usp=sharing) demonstration is enclosed and a picture of the final path is given below.
-![final](https://github.com/user-attachments/assets/f782c052-18f5-46ab-8f39-2e6a341cd746)
+![final final](https://github.com/user-attachments/assets/2f420562-22c0-46d4-9320-c54b194fd95d)
+
 
 
 
