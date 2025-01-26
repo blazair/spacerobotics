@@ -52,7 +52,7 @@ Custom messages were implemented and are showcased in a live rqt plot during the
 4. Distance to next waypoint
 5. Completion percentage
 
-The [controller.py]() has exhaustive comments on how these messages are calculated.
+The [controller.py](https://github.com/blazair/spacerobotics/blob/main/assignments/assignment_1/lawny_ws/src/control/scripts/controller.py) has comments on how these messages are calculated.
 
 ## Conclusion
 These are the following conclusions made from undertaking this assignment 
