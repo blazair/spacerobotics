@@ -16,7 +16,7 @@ One parameter was tweaked while the others were kept constant with the following
 3. K<sub>p, angular</sub>
 4. K<sub>d, angular</sub>
 
-K<sub>p, angular</sub> was always the first parameter that was to be chosen to get any semblance of the desired pattern, but the tutorial code had a K<sub>p,linear</sub> value of <ins>15.0</ins> which made the turtle to sway more often than not making it unreliable to tune the parameters properly. Hence a small detour to get a consistent value for Kp_linear which turned out to be <ins> 9.65 </ins>
+K<sub>p, angular</sub> was always the first parameter that was to be chosen to get any semblance of the desired pattern, but the tutorial code had a K<sub>p,linear</sub> value of <ins>15.0</ins> which made the turtle to sway more often than not making it unreliable to tune the parameters properly. Hence a small detour to get a consistent value for K<sub>p, linear</sub> which turned out to be <ins> 9.65 </ins>
 
 With the new value, other values were selcted based on the following criteria with no specific heirarchy of importance
 
