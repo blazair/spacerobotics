@@ -9,4 +9,7 @@ Any question or query regarding the projects can be submitted through
 
 >bvedant1@asu.edu (for ASU affiliated)
 
+# Assignments
+
+### [Assignment 1](https://github.com/blazair/spacerobotics/blob/main/assignments/assignment_1/lawny_ws/README.md)
 
