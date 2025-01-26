@@ -1,0 +1,297 @@
+[0.000000] (-) TimerEvent: {}
+[0.000293] (control) JobQueued: {'identifier': 'control', 'dependencies': OrderedDict()}
+[0.000329] (control) JobStarted: {'identifier': 'control'}
+[0.010741] (control) JobProgress: {'identifier': 'control', 'progress': 'cmake'}
+[0.011571] (control) JobProgress: {'identifier': 'control', 'progress': 'build'}
+[0.012379] (control) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/blazar/lawny_ws/build/control', '--', '-j16', '-l16'], 'cwd': '/home/blazar/lawny_ws/build/control', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'blazar'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/blazar/lawny_ws/install/control/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/blazar'), ('OLDPWD', '/home/blazar'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1044'), ('SYSTEMD_EXEC_PID', '1682'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '12702'), ('COLCON_PREFIX_PATH', '/home/blazar/lawny_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'blazar'), ('JOURNAL_STREAM', '8:1906'), ('_', '/home/blazar/.local/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'blazar'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/blazar/lawny_ws/install/first_order_boustrophedon_navigator/bin:/opt/ros/humble/bin:/home/blazar/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/blazar/.local/bin'), ('SESSION_MANAGER', 'local/zennie:@/tmp/.ICE-unix/1422,unix/zennie:/tmp/.ICE-unix/1422'), ('INVOCATION_ID', 'cce2a93eaefb4b45ab7bf0dd1c49263b'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/blazar/lawny_ws/install/first_order_boustrophedon_navigator:/home/blazar/lawny_ws/install/control:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:d040d22a-b051-4b33-bdbe-d79182586b1a'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/blazar/lawny_ws/build/control'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/blazar/lawny_ws/install/first_order_boustrophedon_navigator/lib/python3.10/site-packages:/home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/blazar/lawny_ws/install/control:/home/blazar/lawny_ws/install/first_order_boustrophedon_navigator:/opt/ros/humble')]), 'shell': False}
+[0.039795] (control) StdoutLine: {'line': b'/usr/bin/cmake -S/home/blazar/lawny_ws/src/control -B/home/blazar/lawny_ws/build/control --check-build-system CMakeFiles/Makefile.cmake 0\n'}
+[0.054085] (control) StdoutLine: {'line': b'/usr/bin/cmake -E cmake_progress_start /home/blazar/lawny_ws/build/control/CMakeFiles /home/blazar/lawny_ws/build/control//CMakeFiles/progress.marks\n'}
+[0.064844] (control) StdoutLine: {'line': b'/usr/bin/gmake  -f CMakeFiles/Makefile2 all\n'}
+[0.066928] (control) StdoutLine: {'line': b"gmake[1]: Entering directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.067098] (control) StdoutLine: {'line': b'/usr/bin/gmake  -f CMakeFiles/control__cpp.dir/build.make CMakeFiles/control__cpp.dir/depend\n'}
+[0.067265] (control) StdoutLine: {'line': b'/usr/bin/gmake  -f CMakeFiles/control__rosidl_generator_c.dir/build.make CMakeFiles/control__rosidl_generator_c.dir/depend\n'}
+[0.067580] (control) StdoutLine: {'line': b'/usr/bin/gmake  -f CMakeFiles/ament_cmake_python_copy_control.dir/build.make CMakeFiles/ament_cmake_python_copy_control.dir/depend\n'}
+[0.068615] (control) StdoutLine: {'line': b"gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.068765] (control) StdoutLine: {'line': b'cd /home/blazar/lawny_ws/build/control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control/CMakeFiles/control__cpp.dir/DependInfo.cmake --color=\n'}
+[0.069268] (control) StdoutLine: {'line': b"gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.069407] (control) StdoutLine: {'line': b'cd /home/blazar/lawny_ws/build/control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control/CMakeFiles/ament_cmake_python_copy_control.dir/DependInfo.cmake --color=\n'}
+[0.069550] (control) StdoutLine: {'line': b"gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.069665] (control) StdoutLine: {'line': b'cd /home/blazar/lawny_ws/build/control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control/CMakeFiles/control__rosidl_generator_c.dir/DependInfo.cmake --color=\n'}
+[0.080513] (control) StdoutLine: {'line': b"gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.080869] (control) StdoutLine: {'line': b"gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.080986] (control) StdoutLine: {'line': b"gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.081101] (control) StdoutLine: {'line': b'/usr/bin/gmake  -f CMakeFiles/control__cpp.dir/build.make CMakeFiles/control__cpp.dir/build\n'}
+[0.081223] (control) StdoutLine: {'line': b'/usr/bin/gmake  -f CMakeFiles/control__rosidl_generator_c.dir/build.make CMakeFiles/control__rosidl_generator_c.dir/build\n'}
+[0.081372] (control) StdoutLine: {'line': b'/usr/bin/gmake  -f CMakeFiles/ament_cmake_python_copy_control.dir/build.make CMakeFiles/ament_cmake_python_copy_control.dir/build\n'}
+[0.082653] (control) StdoutLine: {'line': b"gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.082806] (control) StdoutLine: {'line': b"gmake[2]: Nothing to be done for 'CMakeFiles/control__cpp.dir/build'.\n"}
+[0.082882] (control) StdoutLine: {'line': b"gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.082982] (control) StdoutLine: {'line': b"gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.083053] (control) StdoutLine: {'line': b'/usr/bin/cmake -E copy_directory /home/blazar/lawny_ws/build/control/rosidl_generator_py/control /home/blazar/lawny_ws/build/control/ament_cmake_python/control/control\n'}
+[0.083200] (control) StdoutLine: {'line': b"gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.083270] (control) StdoutLine: {'line': b"gmake[2]: Nothing to be done for 'CMakeFiles/control__rosidl_generator_c.dir/build'.\n"}
+[0.083348] (control) StdoutLine: {'line': b"gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.092335] (control) StdoutLine: {'line': b'[  9%] Built target control__cpp\n'}
+[0.092600] (control) StdoutLine: {'line': b'[ 12%] Built target control__rosidl_generator_c\n'}
+[0.093799] (control) StdoutLine: {'line': b'/usr/bin/gmake  -f CMakeFiles/control__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/control__rosidl_typesupport_introspection_cpp.dir/depend\n'}
+[0.094198] (control) StdoutLine: {'line': b'/usr/bin/gmake  -f CMakeFiles/control__rosidl_typesupport_cpp.dir/build.make CMakeFiles/control__rosidl_typesupport_cpp.dir/depend\n'}
+[0.094530] (control) StdoutLine: {'line': b'/usr/bin/gmake  -f CMakeFiles/control__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/control__rosidl_typesupport_fastrtps_c.dir/depend\n'}
+[0.094849] (control) StdoutLine: {'line': b'/usr/bin/gmake  -f CMakeFiles/control__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/control__rosidl_typesupport_introspection_c.dir/depend\n'}
+[0.095157] (control) StdoutLine: {'line': b'/usr/bin/gmake  -f CMakeFiles/control__rosidl_typesupport_c.dir/build.make CMakeFiles/control__rosidl_typesupport_c.dir/depend\n'}
+[0.095380] (control) StdoutLine: {'line': b'/usr/bin/gmake  -f CMakeFiles/control__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/control__rosidl_typesupport_fastrtps_cpp.dir/depend\n'}
+[0.095707] (control) StdoutLine: {'line': b"gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.096295] (control) StdoutLine: {'line': b"gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.096431] (control) StdoutLine: {'line': b'cd /home/blazar/lawny_ws/build/control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control/CMakeFiles/control__rosidl_typesupport_introspection_cpp.dir/DependInfo.cmake --color=\n'}
+[0.096628] (control) StdoutLine: {'line': b"gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.096925] (control) StdoutLine: {'line': b'cd /home/blazar/lawny_ws/build/control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control/CMakeFiles/control__rosidl_typesupport_fastrtps_c.dir/DependInfo.cmake --color=\n'}
+[0.097014] (control) StdoutLine: {'line': b"gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.097090] (control) StdoutLine: {'line': b'cd /home/blazar/lawny_ws/build/control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control/CMakeFiles/control__rosidl_typesupport_cpp.dir/DependInfo.cmake --color=\n'}
+[0.097173] (control) StdoutLine: {'line': b"gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.097236] (control) StdoutLine: {'line': b'cd /home/blazar/lawny_ws/build/control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control/CMakeFiles/control__rosidl_typesupport_introspection_c.dir/DependInfo.cmake --color=\n'}
+[0.097298] (control) StdoutLine: {'line': b"gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.097358] (control) StdoutLine: {'line': b'cd /home/blazar/lawny_ws/build/control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control/CMakeFiles/control__rosidl_typesupport_c.dir/DependInfo.cmake --color=\n'}
+[0.097714] (control) StdoutLine: {'line': b"gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.097861] (control) StdoutLine: {'line': b'cd /home/blazar/lawny_ws/build/control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control/CMakeFiles/control__rosidl_typesupport_fastrtps_cpp.dir/DependInfo.cmake --color=\n'}
+[0.098822] (-) TimerEvent: {}
+[0.107326] (control) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_copy_control\n'}
+[0.109070] (control) StdoutLine: {'line': b"gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.109317] (control) StdoutLine: {'line': b"gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.109466] (control) StdoutLine: {'line': b"gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.109625] (control) StdoutLine: {'line': b"gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.109724] (control) StdoutLine: {'line': b'/usr/bin/gmake  -f CMakeFiles/ament_cmake_python_build_control_egg.dir/build.make CMakeFiles/ament_cmake_python_build_control_egg.dir/depend\n'}
+[0.109869] (control) StdoutLine: {'line': b"gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.109961] (control) StdoutLine: {'line': b"gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.110080] (control) StdoutLine: {'line': b'/usr/bin/gmake  -f CMakeFiles/control__rosidl_typesupport_cpp.dir/build.make CMakeFiles/control__rosidl_typesupport_cpp.dir/build\n'}
+[0.110158] (control) StdoutLine: {'line': b'/usr/bin/gmake  -f CMakeFiles/control__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/control__rosidl_typesupport_introspection_cpp.dir/build\n'}
+[0.110295] (control) StdoutLine: {'line': b'/usr/bin/gmake  -f CMakeFiles/control__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/control__rosidl_typesupport_fastrtps_c.dir/build\n'}
+[0.110366] (control) StdoutLine: {'line': b'/usr/bin/gmake  -f CMakeFiles/control__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/control__rosidl_typesupport_introspection_c.dir/build\n'}
+[0.110503] (control) StdoutLine: {'line': b'/usr/bin/gmake  -f CMakeFiles/control__rosidl_typesupport_c.dir/build.make CMakeFiles/control__rosidl_typesupport_c.dir/build\n'}
+[0.110730] (control) StdoutLine: {'line': b"gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.110924] (control) StdoutLine: {'line': b'cd /home/blazar/lawny_ws/build/control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control/CMakeFiles/ament_cmake_python_build_control_egg.dir/DependInfo.cmake --color=\n'}
+[0.111077] (control) StdoutLine: {'line': b'/usr/bin/gmake  -f CMakeFiles/control__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/control__rosidl_typesupport_fastrtps_cpp.dir/build\n'}
+[0.112303] (control) StdoutLine: {'line': b"gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.112504] (control) StdoutLine: {'line': b"gmake[2]: Nothing to be done for 'CMakeFiles/control__rosidl_typesupport_cpp.dir/build'.\n"}
+[0.112640] (control) StdoutLine: {'line': b"gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.112724] (control) StdoutLine: {'line': b"gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.112786] (control) StdoutLine: {'line': b"gmake[2]: Nothing to be done for 'CMakeFiles/control__rosidl_typesupport_introspection_c.dir/build'.\n"}
+[0.112857] (control) StdoutLine: {'line': b"gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.112927] (control) StdoutLine: {'line': b"gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.112996] (control) StdoutLine: {'line': b"gmake[2]: Nothing to be done for 'CMakeFiles/control__rosidl_typesupport_introspection_cpp.dir/build'.\n"}
+[0.113075] (control) StdoutLine: {'line': b"gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.113139] (control) StdoutLine: {'line': b"gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.113200] (control) StdoutLine: {'line': b"gmake[2]: Nothing to be done for 'CMakeFiles/control__rosidl_typesupport_c.dir/build'.\n"}
+[0.113263] (control) StdoutLine: {'line': b"gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.113377] (control) StdoutLine: {'line': b"gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.113472] (control) StdoutLine: {'line': b"gmake[2]: Nothing to be done for 'CMakeFiles/control__rosidl_typesupport_fastrtps_c.dir/build'.\n"}
+[0.113595] (control) StdoutLine: {'line': b"gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.113789] (control) StdoutLine: {'line': b"gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.113943] (control) StdoutLine: {'line': b"gmake[2]: Nothing to be done for 'CMakeFiles/control__rosidl_typesupport_fastrtps_cpp.dir/build'.\n"}
+[0.114073] (control) StdoutLine: {'line': b"gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.123896] (control) StdoutLine: {'line': b'[ 41%] Built target control__rosidl_typesupport_fastrtps_c\n'}
+[0.124216] (control) StdoutLine: {'line': b'[ 41%] Built target control__rosidl_typesupport_introspection_cpp\n'}
+[0.124314] (control) StdoutLine: {'line': b'[ 41%] Built target control__rosidl_typesupport_cpp\n'}
+[0.124492] (control) StdoutLine: {'line': b'[ 61%] Built target control__rosidl_typesupport_fastrtps_cpp\n'}
+[0.124669] (control) StdoutLine: {'line': b'[ 61%] Built target control__rosidl_typesupport_introspection_c\n'}
+[0.124886] (control) StdoutLine: {'line': b'[ 70%] Built target control__rosidl_typesupport_c\n'}
+[0.125336] (control) StdoutLine: {'line': b"gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.125666] (control) StdoutLine: {'line': b'/usr/bin/gmake  -f CMakeFiles/ament_cmake_python_build_control_egg.dir/build.make CMakeFiles/ament_cmake_python_build_control_egg.dir/build\n'}
+[0.126554] (control) StdoutLine: {'line': b'/usr/bin/gmake  -f CMakeFiles/control.dir/build.make CMakeFiles/control.dir/depend\n'}
+[0.127376] (control) StdoutLine: {'line': b"gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.127513] (control) StdoutLine: {'line': b'cd /home/blazar/lawny_ws/build/control/ament_cmake_python/control && /usr/bin/python3 setup.py egg_info\n'}
+[0.128437] (control) StdoutLine: {'line': b"gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.128674] (control) StdoutLine: {'line': b'cd /home/blazar/lawny_ws/build/control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control/CMakeFiles/control.dir/DependInfo.cmake --color=\n'}
+[0.141744] (control) StdoutLine: {'line': b"gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.142103] (control) StdoutLine: {'line': b'/usr/bin/gmake  -f CMakeFiles/control.dir/build.make CMakeFiles/control.dir/build\n'}
+[0.144156] (control) StdoutLine: {'line': b"gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.144350] (control) StdoutLine: {'line': b"gmake[2]: Nothing to be done for 'CMakeFiles/control.dir/build'.\n"}
+[0.144445] (control) StdoutLine: {'line': b"gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.155455] (control) StdoutLine: {'line': b'[ 70%] Built target control\n'}
+[0.156993] (control) StdoutLine: {'line': b'/usr/bin/gmake  -f control__py/CMakeFiles/control__py.dir/build.make control__py/CMakeFiles/control__py.dir/depend\n'}
+[0.158701] (control) StdoutLine: {'line': b"gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.158856] (control) StdoutLine: {'line': b'cd /home/blazar/lawny_ws/build/control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/build/control/control__py /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control/control__py /home/blazar/lawny_ws/build/control/control__py/CMakeFiles/control__py.dir/DependInfo.cmake --color=\n'}
+[0.171615] (control) StdoutLine: {'line': b"gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.171908] (control) StdoutLine: {'line': b'/usr/bin/gmake  -f control__py/CMakeFiles/control__py.dir/build.make control__py/CMakeFiles/control__py.dir/build\n'}
+[0.173759] (control) StdoutLine: {'line': b"gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.173938] (control) StdoutLine: {'line': b"gmake[2]: Nothing to be done for 'control__py/CMakeFiles/control__py.dir/build'.\n"}
+[0.174083] (control) StdoutLine: {'line': b"gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.184642] (control) StdoutLine: {'line': b'[ 74%] Built target control__py\n'}
+[0.186124] (control) StdoutLine: {'line': b'/usr/bin/gmake  -f CMakeFiles/control__rosidl_generator_py.dir/build.make CMakeFiles/control__rosidl_generator_py.dir/depend\n'}
+[0.188511] (control) StdoutLine: {'line': b"gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.188697] (control) StdoutLine: {'line': b'cd /home/blazar/lawny_ws/build/control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control/CMakeFiles/control__rosidl_generator_py.dir/DependInfo.cmake --color=\n'}
+[0.198932] (-) TimerEvent: {}
+[0.200784] (control) StdoutLine: {'line': b"gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.201030] (control) StdoutLine: {'line': b'/usr/bin/gmake  -f CMakeFiles/control__rosidl_generator_py.dir/build.make CMakeFiles/control__rosidl_generator_py.dir/build\n'}
+[0.204029] (control) StdoutLine: {'line': b"gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.204214] (control) StdoutLine: {'line': b"gmake[2]: Nothing to be done for 'CMakeFiles/control__rosidl_generator_py.dir/build'.\n"}
+[0.204330] (control) StdoutLine: {'line': b"gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.214557] (control) StdoutLine: {'line': b'[ 80%] Built target control__rosidl_generator_py\n'}
+[0.216114] (control) StdoutLine: {'line': b'/usr/bin/gmake  -f CMakeFiles/control__rosidl_typesupport_fastrtps_c__pyext.dir/build.make CMakeFiles/control__rosidl_typesupport_fastrtps_c__pyext.dir/depend\n'}
+[0.216553] (control) StdoutLine: {'line': b'/usr/bin/gmake  -f CMakeFiles/control__rosidl_typesupport_introspection_c__pyext.dir/build.make CMakeFiles/control__rosidl_typesupport_introspection_c__pyext.dir/depend\n'}
+[0.216879] (control) StdoutLine: {'line': b'/usr/bin/gmake  -f CMakeFiles/control__rosidl_typesupport_c__pyext.dir/build.make CMakeFiles/control__rosidl_typesupport_c__pyext.dir/depend\n'}
+[0.218568] (control) StdoutLine: {'line': b"gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.218729] (control) StdoutLine: {'line': b'cd /home/blazar/lawny_ws/build/control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control/CMakeFiles/control__rosidl_typesupport_introspection_c__pyext.dir/DependInfo.cmake --color=\n'}
+[0.218900] (control) StdoutLine: {'line': b"gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.219003] (control) StdoutLine: {'line': b'cd /home/blazar/lawny_ws/build/control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control/CMakeFiles/control__rosidl_typesupport_fastrtps_c__pyext.dir/DependInfo.cmake --color=\n'}
+[0.219160] (control) StdoutLine: {'line': b"gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.219265] (control) StdoutLine: {'line': b'cd /home/blazar/lawny_ws/build/control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control/CMakeFiles/control__rosidl_typesupport_c__pyext.dir/DependInfo.cmake --color=\n'}
+[0.231730] (control) StdoutLine: {'line': b"gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.232063] (control) StdoutLine: {'line': b"gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.232148] (control) StdoutLine: {'line': b"gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.232262] (control) StdoutLine: {'line': b'/usr/bin/gmake  -f CMakeFiles/control__rosidl_typesupport_fastrtps_c__pyext.dir/build.make CMakeFiles/control__rosidl_typesupport_fastrtps_c__pyext.dir/build\n'}
+[0.232398] (control) StdoutLine: {'line': b'/usr/bin/gmake  -f CMakeFiles/control__rosidl_typesupport_introspection_c__pyext.dir/build.make CMakeFiles/control__rosidl_typesupport_introspection_c__pyext.dir/build\n'}
+[0.232492] (control) StdoutLine: {'line': b'/usr/bin/gmake  -f CMakeFiles/control__rosidl_typesupport_c__pyext.dir/build.make CMakeFiles/control__rosidl_typesupport_c__pyext.dir/build\n'}
+[0.235161] (control) StdoutLine: {'line': b"gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.235341] (control) StdoutLine: {'line': b"gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.235455] (control) StdoutLine: {'line': b"gmake[2]: Nothing to be done for 'CMakeFiles/control__rosidl_typesupport_introspection_c__pyext.dir/build'.\n"}
+[0.235562] (control) StdoutLine: {'line': b"gmake[2]: Nothing to be done for 'CMakeFiles/control__rosidl_typesupport_c__pyext.dir/build'.\n"}
+[0.235682] (control) StdoutLine: {'line': b"gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.235762] (control) StdoutLine: {'line': b"gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.235848] (control) StdoutLine: {'line': b"gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.235919] (control) StdoutLine: {'line': b"gmake[2]: Nothing to be done for 'CMakeFiles/control__rosidl_typesupport_fastrtps_c__pyext.dir/build'.\n"}
+[0.236021] (control) StdoutLine: {'line': b"gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.246837] (control) StdoutLine: {'line': b'[100%] Built target control__rosidl_typesupport_c__pyext\n'}
+[0.247168] (control) StdoutLine: {'line': b'[100%] Built target control__rosidl_typesupport_introspection_c__pyext\n'}
+[0.247278] (control) StdoutLine: {'line': b'[100%] Built target control__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.299049] (-) TimerEvent: {}
+[0.378012] (control) StdoutLine: {'line': b'running egg_info\n'}
+[0.379008] (control) StdoutLine: {'line': b'writing control.egg-info/PKG-INFO\n'}
+[0.379409] (control) StdoutLine: {'line': b'writing dependency_links to control.egg-info/dependency_links.txt\n'}
+[0.379712] (control) StdoutLine: {'line': b'writing top-level names to control.egg-info/top_level.txt\n'}
+[0.382395] (control) StdoutLine: {'line': b"reading manifest file 'control.egg-info/SOURCES.txt'\n"}
+[0.383167] (control) StdoutLine: {'line': b"writing manifest file 'control.egg-info/SOURCES.txt'\n"}
+[0.399220] (-) TimerEvent: {}
+[0.428561] (control) StdoutLine: {'line': b"gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.441696] (control) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_control_egg\n'}
+[0.443278] (control) StdoutLine: {'line': b"gmake[1]: Leaving directory '/home/blazar/lawny_ws/build/control'\n"}
+[0.443656] (control) StdoutLine: {'line': b'/usr/bin/cmake -E cmake_progress_start /home/blazar/lawny_ws/build/control/CMakeFiles 0\n'}
+[0.462942] (control) CommandEnded: {'returncode': 0}
+[0.464217] (control) JobProgress: {'identifier': 'control', 'progress': 'install'}
+[0.479494] (control) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/blazar/lawny_ws/build/control'], 'cwd': '/home/blazar/lawny_ws/build/control', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'blazar'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/blazar/lawny_ws/install/control/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/blazar'), ('OLDPWD', '/home/blazar'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1044'), ('SYSTEMD_EXEC_PID', '1682'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '12702'), ('COLCON_PREFIX_PATH', '/home/blazar/lawny_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'blazar'), ('JOURNAL_STREAM', '8:1906'), ('_', '/home/blazar/.local/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'blazar'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/blazar/lawny_ws/install/first_order_boustrophedon_navigator/bin:/opt/ros/humble/bin:/home/blazar/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/blazar/.local/bin'), ('SESSION_MANAGER', 'local/zennie:@/tmp/.ICE-unix/1422,unix/zennie:/tmp/.ICE-unix/1422'), ('INVOCATION_ID', 'cce2a93eaefb4b45ab7bf0dd1c49263b'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/blazar/lawny_ws/install/first_order_boustrophedon_navigator:/home/blazar/lawny_ws/install/control:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:d040d22a-b051-4b33-bdbe-d79182586b1a'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/blazar/lawny_ws/build/control'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/blazar/lawny_ws/install/first_order_boustrophedon_navigator/lib/python3.10/site-packages:/home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/blazar/lawny_ws/install/control:/home/blazar/lawny_ws/install/first_order_boustrophedon_navigator:/opt/ros/humble')]), 'shell': False}
+[0.492259] (control) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.492802] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/ament_index/resource_index/rosidl_interfaces/control\n'}
+[0.493028] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control\n'}
+[0.493121] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg\n'}
+[0.493204] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/performance_metrics.h\n'}
+[0.493291] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.493420] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/detail\n'}
+[0.493490] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/detail/performance_metrics__functions.h\n'}
+[0.493650] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/detail/performance_metrics__struct.h\n'}
+[0.493742] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/detail/performance_metrics__functions.c\n'}
+[0.493824] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/detail/performance_metrics__type_support.h\n'}
+[0.493885] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/environment/library_path.sh\n'}
+[0.493956] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/environment/library_path.dsv\n'}
+[0.494027] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/lib/libcontrol__rosidl_generator_c.so\n'}
+[0.494083] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control\n'}
+[0.494154] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg\n'}
+[0.494219] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.494281] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/detail\n'}
+[0.494341] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/detail/performance_metrics__rosidl_typesupport_fastrtps_c.h\n'}
+[0.494400] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/lib/libcontrol__rosidl_typesupport_fastrtps_c.so\n'}
+[0.494460] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control\n'}
+[0.494580] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg\n'}
+[0.494691] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.494752] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/detail\n'}
+[0.494807] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/detail/performance_metrics__type_support.c\n'}
+[0.494861] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/detail/performance_metrics__rosidl_typesupport_introspection_c.h\n'}
+[0.494918] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/lib/libcontrol__rosidl_typesupport_introspection_c.so\n'}
+[0.494993] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/lib/libcontrol__rosidl_typesupport_c.so\n'}
+[0.495126] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control\n'}
+[0.495220] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg\n'}
+[0.495323] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[0.495388] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/performance_metrics.hpp\n'}
+[0.495496] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/detail\n'}
+[0.495631] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/detail/performance_metrics__builder.hpp\n'}
+[0.495707] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/detail/performance_metrics__struct.hpp\n'}
+[0.495767] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/detail/performance_metrics__traits.hpp\n'}
+[0.495827] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/detail/performance_metrics__type_support.hpp\n'}
+[0.495884] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control\n'}
+[0.495943] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg\n'}
+[0.496043] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.496136] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/detail\n'}
+[0.496197] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/detail/dds_fastrtps\n'}
+[0.496256] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/detail/performance_metrics__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.496315] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/lib/libcontrol__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.496401] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control\n'}
+[0.496497] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg\n'}
+[0.496569] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/detail\n'}
+[0.496680] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/detail/performance_metrics__type_support.cpp\n'}
+[0.496738] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/detail/performance_metrics__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.496793] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/lib/libcontrol__rosidl_typesupport_introspection_cpp.so\n'}
+[0.496933] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/lib/libcontrol__rosidl_typesupport_cpp.so\n'}
+[0.497130] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/environment/pythonpath.sh\n'}
+[0.497228] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/environment/pythonpath.dsv\n'}
+[0.497291] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control-0.0.1-py3.10.egg-info\n'}
+[0.497377] (control) StdoutLine: {'line': b'-- Installing: /home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control-0.0.1-py3.10.egg-info/PKG-INFO\n'}
+[0.497584] (control) StdoutLine: {'line': b'-- Installing: /home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control-0.0.1-py3.10.egg-info/dependency_links.txt\n'}
+[0.497857] (control) StdoutLine: {'line': b'-- Installing: /home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control-0.0.1-py3.10.egg-info/SOURCES.txt\n'}
+[0.498098] (control) StdoutLine: {'line': b'-- Installing: /home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control-0.0.1-py3.10.egg-info/top_level.txt\n'}
+[0.498417] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control\n'}
+[0.498545] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control/_control_s.ep.rosidl_typesupport_c.c\n'}
+[0.498716] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control/libcontrol__rosidl_generator_py.so\n'}
+[0.498793] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control/control_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.498860] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control/_control_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[0.498923] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control/__init__.py\n'}
+[0.498985] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control/control_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.499067] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control/control_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.499130] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control/msg\n'}
+[0.499191] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control/msg/__init__.py\n'}
+[0.499277] (-) TimerEvent: {}
+[0.499404] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control/msg/_performance_metrics.py\n'}
+[0.499479] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control/msg/_performance_metrics_s.c\n'}
+[0.499554] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control/_control_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[0.536902] (control) StdoutLine: {'line': b"Listing '/home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control'...\n"}
+[0.537220] (control) StdoutLine: {'line': b"Listing '/home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control/msg'...\n"}
+[0.541970] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control/control_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.542319] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control/control_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.542784] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control/control_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.543243] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/lib/libcontrol__rosidl_generator_py.so\n'}
+[0.543492] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/msg/PerformanceMetrics.idl\n'}
+[0.543688] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/msg/PerformanceMetrics.msg\n'}
+[0.543824] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/lib/control/controller.py\n'}
+[0.543904] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/lib/control/exp.py\n'}
+[0.543978] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/lib/control/exp1.py\n'}
+[0.544054] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/launch/launch\n'}
+[0.544131] (control) StdoutLine: {'line': b'-- Installing: /home/blazar/lawny_ws/install/control/share/control/launch/launch/controller_launch.xml\n'}
+[0.544257] (control) StdoutLine: {'line': b'-- Installing: /home/blazar/lawny_ws/install/control/share/control/launch/launch/exp.launch\n'}
+[0.544328] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/ament_index/resource_index/package_run_dependencies/control\n'}
+[0.544427] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/ament_index/resource_index/parent_prefix_path/control\n'}
+[0.544495] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/environment/ament_prefix_path.sh\n'}
+[0.544568] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/environment/ament_prefix_path.dsv\n'}
+[0.544693] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/environment/path.sh\n'}
+[0.544768] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/environment/path.dsv\n'}
+[0.544830] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/local_setup.bash\n'}
+[0.544890] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/local_setup.sh\n'}
+[0.544949] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/local_setup.zsh\n'}
+[0.545007] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/local_setup.dsv\n'}
+[0.545095] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/package.dsv\n'}
+[0.545155] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/ament_index/resource_index/packages/control\n'}
+[0.545214] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/export_control__rosidl_generator_cExport.cmake\n'}
+[0.545273] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/export_control__rosidl_generator_cExport-noconfig.cmake\n'}
+[0.545367] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/export_control__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[0.545430] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/export_control__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[0.545491] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/control__rosidl_typesupport_introspection_cExport.cmake\n'}
+[0.545572] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/control__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[0.545670] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/control__rosidl_typesupport_cExport.cmake\n'}
+[0.545727] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/control__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[0.545801] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/export_control__rosidl_generator_cppExport.cmake\n'}
+[0.545862] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/export_control__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[0.545948] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/export_control__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[0.546013] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/control__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[0.546102] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/control__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[0.546167] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/control__rosidl_typesupport_cppExport.cmake\n'}
+[0.546254] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/control__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[0.546328] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/export_control__rosidl_generator_pyExport.cmake\n'}
+[0.546390] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/export_control__rosidl_generator_pyExport-noconfig.cmake\n'}
+[0.546481] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/rosidl_cmake-extras.cmake\n'}
+[0.546575] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.546672] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.546733] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[0.546792] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[0.546851] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.546942] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[0.547002] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/controlConfig.cmake\n'}
+[0.547056] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/controlConfig-version.cmake\n'}
+[0.547110] (control) StdoutLine: {'line': b'-- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/package.xml\n'}
+[0.551272] (control) CommandEnded: {'returncode': 0}
+[0.576294] (control) JobEnded: {'identifier': 'control', 'rc': 0}
+[0.577383] (-) EventReactorShutdown: {}

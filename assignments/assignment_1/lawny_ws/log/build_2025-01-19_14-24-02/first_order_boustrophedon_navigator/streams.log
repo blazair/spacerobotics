@@ -1,0 +1,21 @@
+[0.696s] Invoking command in '/home/blazar/lawny_ws/src/first_order_boustrophedon_navigator': PYTHONPATH=/home/blazar/lawny_ws/build/first_order_boustrophedon_navigator/prefix_override:/home/blazar/.local/lib/python3.10/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/blazar/lawny_ws/install/first_order_boustrophedon_navigator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/first_order_boustrophedon_navigator build --build-base /home/blazar/lawny_ws/build/first_order_boustrophedon_navigator/build install --record /home/blazar/lawny_ws/build/first_order_boustrophedon_navigator/install.log --single-version-externally-managed install_data
+[0.946s] running egg_info
+[0.947s] writing ../../build/first_order_boustrophedon_navigator/first_order_boustrophedon_navigator.egg-info/PKG-INFO
+[0.948s] writing dependency_links to ../../build/first_order_boustrophedon_navigator/first_order_boustrophedon_navigator.egg-info/dependency_links.txt
+[0.948s] writing entry points to ../../build/first_order_boustrophedon_navigator/first_order_boustrophedon_navigator.egg-info/entry_points.txt
+[0.948s] writing requirements to ../../build/first_order_boustrophedon_navigator/first_order_boustrophedon_navigator.egg-info/requires.txt
+[0.948s] writing top-level names to ../../build/first_order_boustrophedon_navigator/first_order_boustrophedon_navigator.egg-info/top_level.txt
+[0.950s] reading manifest file '../../build/first_order_boustrophedon_navigator/first_order_boustrophedon_navigator.egg-info/SOURCES.txt'
+[0.951s] writing manifest file '../../build/first_order_boustrophedon_navigator/first_order_boustrophedon_navigator.egg-info/SOURCES.txt'
+[0.951s] running build
+[0.951s] running build_py
+[0.952s] running install
+[0.952s] running install_lib
+[0.954s] running install_data
+[0.954s] running install_egg_info
+[0.956s] removing '/home/blazar/lawny_ws/install/first_order_boustrophedon_navigator/lib/python3.10/site-packages/first_order_boustrophedon_navigator-0.0.0-py3.10.egg-info' (and everything under it)
+[0.957s] Copying ../../build/first_order_boustrophedon_navigator/first_order_boustrophedon_navigator.egg-info to /home/blazar/lawny_ws/install/first_order_boustrophedon_navigator/lib/python3.10/site-packages/first_order_boustrophedon_navigator-0.0.0-py3.10.egg-info
+[0.958s] running install_scripts
+[0.984s] Installing boustrophedon_controller script to /home/blazar/lawny_ws/install/first_order_boustrophedon_navigator/bin
+[0.985s] writing list of installed files to '/home/blazar/lawny_ws/build/first_order_boustrophedon_navigator/install.log'
+[1.032s] Invoked command in '/home/blazar/lawny_ws/src/first_order_boustrophedon_navigator' returned '0': PYTHONPATH=/home/blazar/lawny_ws/build/first_order_boustrophedon_navigator/prefix_override:/home/blazar/.local/lib/python3.10/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/blazar/lawny_ws/install/first_order_boustrophedon_navigator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/first_order_boustrophedon_navigator build --build-base /home/blazar/lawny_ws/build/first_order_boustrophedon_navigator/build install --record /home/blazar/lawny_ws/build/first_order_boustrophedon_navigator/install.log --single-version-externally-managed install_data

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- Launch the turtlesim node -->
+    <node pkg="turtlesim" exec="turtlesim_node" name="turtlesim" output="screen" />
+
+    <!-- Launch the controller node -->
+    <node pkg="control" exec="exp.py" name="lawnmower_controller" output="screen" />
+
+    <!-- Launch the parameter tuner node -->
+    <node pkg="control" exec="parameter_tuner.py" name="parameter_tuner" output="screen" />
+
+    <!-- Optionally, you can still launch rqt_reconfigure for manual inspection -->
+    <node pkg="rqt_reconfigure" exec="rqt_reconfigure" name="adaptive_rqt_reconfigure" output="screen" />
+
+    <!-- Optionally, launch rqt_plot for cross-track error -->
+    <node pkg="rqt_plot" exec="rqt_plot" name="rqt_plot" output="screen" args="/cross_track_error" />
+</launch>

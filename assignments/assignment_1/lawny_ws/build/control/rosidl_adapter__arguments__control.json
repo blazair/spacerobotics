@@ -1,0 +1,6 @@
+{
+  "package_name": "control",
+  "non_idl_tuples": [
+    "/home/blazar/lawny_ws/src/control:msg/PerformanceMetrics.msg"
+  ]
+}
