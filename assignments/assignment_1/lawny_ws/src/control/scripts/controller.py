@@ -8,19 +8,19 @@ from turtlesim.msg import Pose
 import numpy as np
 import math
 from collections import deque  # To store a fixed-size history of cross-track errors
-from std_msgs.msg import Float64  # For publishing scalar messages
-from control.msg import PerformanceMetrics  # Custom message type for performance metrics
+from std_msgs.msg import Float64
+from control.msg import PerformanceMetrics
 
 class BoustrophedonController(Node):
     def __init__(self):
-        # Initialize the node with the name 'lawnmower_controller'
+        # Initialize the node
         super().__init__('knode')
 
-        # Declare ROS2 parameters for PD gains (proportional-derivative control)
-        self.declare_parameter('Kp_linear', 9.4)  # Proportional gain for linear velocity
-        self.declare_parameter('Kd_linear', 0.2)   # Derivative gain for linear velocity
-        self.declare_parameter('Kp_angular', 7.7)  # Proportional gain for angular velocity
-        self.declare_parameter('Kd_angular', 0.05)  # Derivative gain for angular velocity
+        # Declare ROS2 parameters for PD gains
+        self.declare_parameter('Kp_linear', 9.4)
+        self.declare_parameter('Kd_linear', 0.2)
+        self.declare_parameter('Kp_angular', 7.7)
+        self.declare_parameter('Kd_angular', 0.05)
 
         # Get parameters from the YAML file or use the default values
         self.Kp_linear = self.get_parameter('Kp_linear').value
@@ -42,7 +42,7 @@ class BoustrophedonController(Node):
         self.error_pub = self.create_publisher(Float64, 'cross_track_error', 10)
 
         # Define the lawnmower pattern spacing and initialize waypoints
-        self.spacing = 1.0  # Vertical distance between successive rows
+        self.spacing = 1.0 
         self.waypoints = self.generate_waypoints()  # Generate the list of waypoints to follow
         self.current_waypoint = 0  # Index of the current waypoint being targeted
 
@@ -57,7 +57,7 @@ class BoustrophedonController(Node):
         self.prev_angular_error = 0.0
         self.prev_time = self.get_clock().now()
 
-        # ---- ADDITION #1: Start time and 5-second delay variable ----
+        # Start time and 5-second delay
         self.start_time = self.get_clock().now()
         self.start_delay_seconds = 5.0
 
