@@ -41,7 +41,7 @@ The video clearly shows the turtle turning at real high speeds (echoing the /tur
 Despite this, to make higher K<sub>p, angular</sub> work two methods were tried.
 
 ### A direct cap on the velocity
-  Like the title suggests there was a hard cap made to the messages published to be less than a certain value. The outcome was lacluster just resembing a lower K<sub>p, angular</sub> value unsurprisingly.
+  Like the title suggests there was a hard cap made to the messages published to be less than a certain value. The outcome was lackluster just resembing a lower K<sub>p, angular</sub> value unsurprisingly.
 
 ### Low pass filter
   This seemed to alleviate the turning speeds resembling a K<sub>p, angular</sub> = 8 while havin a value of 10 but the pattern looked jankier and worse than a K<sub>p, angular</sub> = 8 without a low pass filter, hence there was no reason to go ahead with it.
