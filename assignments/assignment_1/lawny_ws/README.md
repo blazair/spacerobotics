@@ -18,14 +18,14 @@ K<sub>d, angular</sub>\
 
 K<sub>p, angular</sub> was always the first parameter that was to be chosen to get any semblance of the desired pattern, but the tutorial code had a K<sub>p,linear</sub> value of <ins>15.0</ins> which made the turtle to sway more often than not making it unreliable to tune the parameters properly. Hence a small detour to get a consistent value for Kp_linear which turned out to be <ins> 9.65 </ins>
 
-With the new value, other values were selcted based on the following criteria with no particular order of imporatance heirarchy
+With the new value, other values were selcted based on the following criteria with no specific heirarchy of importance
 
 1. Average cross track error
 2. The way the pattern looks (more subjective than objective)
 3. The turning speed
 4. The consistent performace of the above points for a set value of parameters
 
-The final value for <K<sub>p, linear</sub> = <ins>9.4</ins> was selected despite having slightly worse cross track error for producing a more consis
+The final value for K<sub>p, linear</sub> = <ins>9.4</ins> was selected despite having slightly worse cross track error for producing a more consis
 tent pattern with effectively no failures in 10 runs.\
 This is the reason why higher <K<sub>p, angular</sub> despite having cross track errors of **<0.1** was not chosen becasue of the ridiculously high turning speeds and the jankier patterns. They were disregarded.
 
@@ -58,10 +58,11 @@ The [controller.py]() has exhaustive comments on how these messages are calculat
 These are the following conclusions made from undertaking this assignment 
 1. Higher K<sub>p, angular</sub> gives the least cross track error **(<0.1)** and can be implemented blindly albeit with a low pass filter if there are no hardware constraints
 2. The final set of parameters chosen to make the pattern look perfect while having a low cross track error is\
-    K<sub>p, linear</sub> = 9.4\
-    K<sub>d, linear</sub> = 0.2\
-    K<sub>p, angular</sub> = 7.7\
-    K<sub>d, angular</sub> = 0.05\
+   a. K<sub>p, linear</sub> = 9.4\
+   b. K<sub>d, linear</sub> = 0.2\
+   c. K<sub>p, angular</sub> = 7.7\
+   d. K<sub>d, angular</sub> = 0.05\
+   
 The [video](https://drive.google.com/file/d/1xKvzyddJLRFbOUQDtk_UdF7NOMceFI81/view?usp=sharing) demonstration is enclosed and a picture of the final path is given below.
 ![final final](https://github.com/user-attachments/assets/2f420562-22c0-46d4-9320-c54b194fd95d)
 
