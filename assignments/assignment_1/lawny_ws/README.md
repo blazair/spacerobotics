@@ -27,7 +27,7 @@ With the new value, other values were selcted based on the following criteria wi
 
 The final value for K<sub>p, linear</sub> = 9.4 was selected despite having slightly worse cross track error for producing a more consistent pattern with effectively no failures in 10 runs.
 
-Lower K<sub>p, angular</sub> (around 6.0) can also be used if the shape of the path has more weight to the than the cross track error. So the below picture had an average cross track error of around 0.210 but produced much more rounded corners and consistent turning
+Lower K<sub>p, angular</sub> (around 6.0) can also be used if the shape of the path has more weight to the reader than the cross track error. So the below picture had an average cross track error of around 0.210 but produced much more rounded corners and consistent turning
 ![at 6 kpa](https://github.com/user-attachments/assets/64fb1fc6-06a1-478e-ac32-16890b9ad909)
 
 Higher K<sub>p, angular</sub> despite having cross track errors of **<0.1** was not chosen becasue of the ridiculously high turning speeds and the jankier patterns.
