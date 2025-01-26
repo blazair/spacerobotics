@@ -1,4 +1,4 @@
-# Boustrephhedon pattern
+# Boustrephedon pattern
 >Assignment 1
 
 
