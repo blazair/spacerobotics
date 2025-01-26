@@ -10,4 +10,4 @@ The tutorial code in this repository was used as a reference before it was modif
 Kp_angular was always to be the first parameter that was to be chosen to get any semblance of the desired pattern, but the tutorial code had a Kp_linear value of 15.0 which made the turtlel to sway more often than not making it unreliable to tune the parameters properly. Hence a small detour to get a consistent value for Kp_linear which turned out to be <ins> 9.65 </ins>
 
 One parameter was tweaked while the others were kept constant with the following order
-The background color is `#ffffff` for light mode and `#000000` for dark mode.
+The background color is `#fffffg` for light mode and `#000000` for dark mode.
