@@ -1,4 +1,4 @@
-#Boustrephhedon pattern
+# Boustrephhedon pattern
 >Assignment 1
 
 
@@ -25,9 +25,9 @@ With the new value, other values were selcted based on the following criteria wi
 3. The turning speed
 4. The consistent performace of the above points for a set value of parameters
 
-The final value for K<sub>p, linear</sub> = <ins>9.4</ins> was selected despite having slightly worse cross track error for producing a more consis
+The final value for K<sub>p, linear</sub> = 9.4 was selected despite having slightly worse cross track error for producing a more consis
 tent pattern with effectively no failures in 10 runs.\
-This is the reason why higher <K<sub>p, angular</sub> despite having cross track errors of **<0.1** was not chosen becasue of the ridiculously high turning speeds and the jankier patterns. They were disregarded.
+This is the reason why higher K<sub>p, angular</sub> despite having cross track errors of **<0.1** was not chosen becasue of the ridiculously high turning speeds and the jankier patterns. They were disregarded.
 
 Lower K<sub>p, angular</sub> (around 6.0) can also be used if the shape of the path has more weight to the than the cross track error. So the below picture had an average cross track error of around 0.210 but produced much more rounded corners and consistent turning
 ![at 6 kpa](https://github.com/user-attachments/assets/64fb1fc6-06a1-478e-ac32-16890b9ad909)
@@ -40,7 +40,7 @@ This is a [run](https://github.com/user-attachments/assets/bffd77a7-c9b9-4a71-a3
 
 Despite this, to make higher K<sub>p, angular</sub> work two methods were tried
 
-###A direct cap on the velocity
+### A direct cap on the velocity
   Like the title suggests there was a hard cap made to the messages published to be less than a certain value. The outcome was lacluster just resembing a lower K<sub>p, angular</sub> value unsurprisingly
 
 ### Low pass filter
@@ -54,7 +54,7 @@ Custom messages were implemented and are showcased in a live rqt plot during the
 
 The [controller.py]() has exhaustive comments on how these messages are calculated.
 
-# Conclusion
+## Conclusion
 These are the following conclusions made from undertaking this assignment 
 1. Higher K<sub>p, angular</sub> gives the least cross track error **(<0.1)** and can be implemented blindly albeit with a low pass filter if there are no hardware constraints
 2. The final set of parameters chosen to make the pattern look perfect while having a low cross track error is\
