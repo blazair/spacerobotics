@@ -7,7 +7,17 @@ The tutorial code in this repository was used as a reference before it was modif
 
 ## Notes on the parameter
 
+The tweaks and their respective cross track erros can be found in this excel file 
+<code style = "color : red"> DISCLAIMER! This is not a professionally written log file it was just used as a reference to learn how the pattern turns out for every change to guess with a certain degree of confidence the values and their impact on the patten </code>
+
 Kp_angular was always to be the first parameter that was to be chosen to get any semblance of the desired pattern, but the tutorial code had a Kp_linear value of 15.0 which made the turtlel to sway more often than not making it unreliable to tune the parameters properly. Hence a small detour to get a consistent value for Kp_linear which turned out to be <ins> 9.65 </ins>
 
-One parameter was tweaked while the others were kept constant with the following order
-The background color is `#fffffg` for light mode and `#000000` for dark mode.
+One parameter was tweaked while the others were kept constant with the following order undertook
+>Kp_linear\
+>Kd_linear\
+>Kp_angular\
+>Kd_angular\
+
+The initial <ins>Kp_linear</ins> is considered a calibration to get a more consistent pattern.
+
+
