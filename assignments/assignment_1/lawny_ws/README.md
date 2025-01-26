@@ -29,6 +29,34 @@ The final value for <K<sub>p, linear</sub> = <ins>9.4</ins> was selected despite
 tent pattern with effectively no failures in 10 runs.\
 This is the reason why higher <K<sub>p, angular</sub> despite having cross track errors of **<0.1** was not chosen becasue of the ridiculously high turning speeds and the jankier patterns. They were disregarded.
 
-This is a [run](https://github.com/user-attachments/assets/bffd77a7-c9b9-4a71-a372-27d7d9933e91) with angular values of 10.
+This is a [run](https://github.com/user-attachments/assets/bffd77a7-c9b9-4a71-a372-27d7d9933e91) with angular values of 10. The video clearly shows the turtle turning at real high speeds (echoing the /turtle1/cmd_vel topic shows a speed of around 25). If these speeds are not bottlenecked by hardware, this value is the most optimal to get a near perfect traversal of the given waypoints. However damping needs to be increased and a low pass filter is recommended for gradual speed adjustment.\
+
+Despite this, to make higher K<sub>p, angular</sub> work two methods were tried
+
+###A direct cap on the velocity
+  Like the title suggests there was a hard cap made to the messages published to be less than a certain value. The outcome was lacluster just resembing a lower K<sub>p, angular</sub> value unsurprisingly
+
+### Low pass filter
+  This seemed to alleviate the turning speeds resembling a K<sub>p, angular</sub> = 8 while havin a value of 10 but the pattern looked jankier and worse than a K<sub>p, angular</sub> = 8 without a low pass filter, hence there was no reason to go ahead with it.
+
+
+Custom messages were implemented and are showcased in a live rqt plot during the run. These are some of the messages that were included in the live plot
+1. Cross track error
+   '''python
+# Calculate the error vector and signed cross-track error
+error_vector = pos - projected_point
+error_sign = np.sign(np.cross(path_unit, error_vector / np.linalg.norm(error_vector)))
+error = np.linalg.norm(error_vector) * error_sign
+
+# Publish the error as a Float64 message
+error_msg = Float64()
+error_msg.data = error
+self.error_pub.publish(error_msg)
+'''
+3. Current velocity
+4. Distance to next waypoint
+5. Completion percentage
+
+
 
 
