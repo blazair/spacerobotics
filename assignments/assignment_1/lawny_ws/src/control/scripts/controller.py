@@ -191,7 +191,6 @@ class BoustrophedonController(Node):
                 f"Waiting {self.start_delay_seconds} seconds so parameters can be set. (elapsed: {elapsed:.1f}s)"
             )
             return
-        # ---------------------------------------------------
 
         if self.current_waypoint >= len(self.waypoints):
             # Stop if all waypoints are completed
@@ -206,9 +205,13 @@ class BoustrophedonController(Node):
         target_x, target_y = self.waypoints[self.current_waypoint]
         dt = max((current_time - self.prev_time).nanoseconds / 1e9, 1e-5)
 
-        # Calculate errors
+        # Calculate cross track error
         cross_track_error = self.calculate_cross_track_error()
+
+        # Straight-line distance between the turtle's position and the next waypoint
         distance = self.get_distance(self.pose.x, self.pose.y, target_x, target_y)
+
+        # Compute the angle required to navigate toward the next waypoint.
         target_angle = self.get_angle(self.pose.x, self.pose.y, target_x, target_y)
         angular_error = target_angle - self.pose.theta
 
@@ -218,7 +221,7 @@ class BoustrophedonController(Node):
         while angular_error < -math.pi:
             angular_error += 2 * math.pi
 
-        # PD control for velocity
+        # PD control for linear and angular velocity adjustments
         linear_velocity = (self.Kp_linear * distance
                            + self.Kd_linear * ((distance - self.prev_linear_error) / dt))
         angular_velocity = (self.Kp_angular * angular_error
@@ -235,7 +238,10 @@ class BoustrophedonController(Node):
         metrics_msg.cross_track_error = cross_track_error
         metrics_msg.current_velocity = vel_msg.linear.x
         metrics_msg.distance_to_next_waypoint = distance
+
+        # Percentage of waypoints completed in the lawnmower pattern.
         metrics_msg.completion_percentage = (self.current_waypoint / len(self.waypoints)) * 100.0
+        
         self.metrics_pub.publish(metrics_msg)
 
         # Update previous errors and time
