@@ -1,7 +1,7 @@
 # Boustrephedon pattern
 >Assignment 1
 
-This is a $${\color{orange}ament _ cmake }$$ ROS2 workspace To run use the following command 
+This is a $${\color{orange}cmake }$$ ROS2 workspace To run use the following command 
 
 ```
 ros2 launch control controller_launch.xml
