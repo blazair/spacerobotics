@@ -1,6 +1,15 @@
 # Boustrephedon pattern
 >Assignment 1
 
+This is a $${\color{orange}ament_cmake }$$ ROS2 workspace To run use the following command 
+
+```
+ros2 launch control controller_launch.xml
+```
+
+$${\color{yellow}It\space is\space advised\space to\space take\space the\space workspace\space folder\space out\space of\space the\space assignment\space directory\space and\space paste\space it\space in\space a\space more\space comfortable\space environment\space to\space cd\space into\space}$$
+
+
 
 The tutorial code in this repository was used as a reference before it was modified to have the dynamic rqt parameter changing capabilities [Tutorial code](https://github.com/DREAMS-lab/RAS-SES-598-Space-Robotics-and-AI/blob/main/assignments/first_order_boustrophedon_navigator/first_order_boustrophedon_navigator/boustrophedon_controller.py).
 
