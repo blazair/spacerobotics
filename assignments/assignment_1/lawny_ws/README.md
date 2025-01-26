@@ -11,10 +11,10 @@ The tweaks and their respective cross track erros can be found in this [log file
 $${\color{red}DISCLAIMER! \space This \space is\space not\space a\space professionally\space written\space log\space file.\space It\space was\space just\space used\space as\space a\space reference\space to\space learn\space how\space the\space pattern\space turns\space out\space for\space every\space change\space to\space guess\space with\space a\space certain\space degree\space of\space confidence\space the\space values\space and\space their\space impact\space on\space the\space patten\space }$$
 
 One parameter was tweaked while the others were kept constant with the following order undertook
->Kp_linear\
->Kd_linear\
->Kp_angular\
->Kd_angular\
+>K<sub>p, linear</sub>\
+>K<sub>d, linear</sub>\
+K<sub>p, angular</sub>\
+K<sub>d, angular</sub>\
 
 K<sub>p, angular</sub> was always the first parameter that was to be chosen to get any semblance of the desired pattern, but the tutorial code had a K<sub>p,linear</sub> value of <ins>15.0</ins> which made the turtle to sway more often than not making it unreliable to tune the parameters properly. Hence a small detour to get a consistent value for Kp_linear which turned out to be <ins> 9.65 </ins>
 
