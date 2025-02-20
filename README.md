@@ -1,7 +1,7 @@
 # Space Robotics and AI
 
 
->This repo is owned and maintained by $${\color{red}Bharath \space Vedantha \space Desikan}$$
+>This repo is owned and maintained by $${\color{orange}Bharath \space Vedantha \space Desikan}$$
 
 The Hyperlinks for the README.md files for each assignment and project will be provided here for easy navigation.
 
