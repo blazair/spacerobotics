@@ -12,5 +12,6 @@ Any question or query regarding the projects can be submitted through
 
 # Assignments
 
-### [Assignment 1](https://github.com/blazair/spacerobotics/blob/main/assignments/assignment_1/lawny_ws/README.md)
+## [Assignment 1](https://github.com/blazair/spacerobotics/blob/main/assignments/assignment_1/lawny_ws/README.md)
+## [Assignment 2](https://github.com/blazair/spacerobotics/blob/main/assignments/assignment_2/cartip_ws/src/cart_pole_optimal_control/README.md)
 
