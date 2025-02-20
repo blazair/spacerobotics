@@ -1,267 +1,146 @@
-# Cart-Pole Optimal Control Assignment
+# The Cart–Pole Problem
 
-[Watch the demo video](https://drive.google.com/file/d/1UEo88tqG-vV_pkRSoBF_-FWAlsZOLoIb/view?usp=sharing)
-![image](https://github.com/user-attachments/assets/c8591475-3676-4cdf-8b4a-6539e5a2325f)
+## State-Space Representation
 
-## Overview
-This assignment challenges students to tune and analyze an LQR controller for a cart-pole system subject to earthquake disturbances. The goal is to maintain the pole's stability while keeping the cart within its physical constraints under external perturbations. The earthquake force generator in this assignment introduces students to simulating and controlling systems under seismic disturbances, which connects to the Virtual Shake Robot covered later in the course. The skills developed here in handling dynamic disturbances and maintaining system stability will be useful for optimal control of space robots, such as Lunar landers or orbital debris removal robots.
+The cart–pole system is modeled as a **linear time-invariant (LTI) system** with the state vector:
 
-## System Description
-The assignment is based on the problem formalism here: https://underactuated.mit.edu/acrobot.html#cart_pole
-### Physical Setup
-- Inverted pendulum mounted on a cart
-- Cart traversal range: ±2.5m (total range: 5m)
-- Pole length: 1m
-- Cart mass: 1.0 kg
-- Pole mass: 1.0 kg
+$$
+x = \begin{bmatrix} 
+x_c \\ 
+\dot{x}_c \\ 
+\theta \\ 
+\dot{\theta} 
+\end{bmatrix}
+$$
 
-### Disturbance Generator
-The system includes an earthquake force generator that introduces external disturbances:
-- Generates continuous, earthquake-like forces using superposition of sine waves
-- Base amplitude: 15.0N (default setting)
-- Frequency range: 0.5-4.0 Hz (default setting)
-- Random variations in amplitude and phase
-- Additional Gaussian noise
+Where:
+- $x_c$ is the cart’s position.
+- $\dot{x}_c$ is the cart’s velocity.
+- $\theta$ is the pole’s angle from the vertical.
+- $\dot{\theta}$ is the pole’s angular velocity.
 
-## Assignment Objectives
 
-### Core Requirements
-1. Analyze and tune the provided LQR controller to:
-   - Maintain the pendulum in an upright position
-   - Keep the cart within its ±2.5m physical limits
-   - Achieve stable operation under earthquake disturbances
-2. Document your LQR tuning approach:
-   - Analysis of the existing Q and R matrices
-   - Justification for any tuning changes made
-   - Analysis of performance trade-offs
-   - Experimental results and observations
-3. Analyze system performance:
-   - Duration of stable operation
-   - Maximum cart displacement
-   - Pendulum angle deviation
-   - Control effort analysis
 
-### Learning Outcomes
-- Understanding of LQR control parameters and their effects
-- Experience with competing control objectives
-- Analysis of system behavior under disturbances
-- Practical experience with ROS2 and Gazebo simulation
+The system is controlled by applying a force \( u \) to the cart, which affects the system dynamics.
 
-### Extra Credit Options
-Students can implement reinforcement learning for extra credit (up to 30 points):
+---
 
-1. Reinforcement Learning Implementation:
-   - Implement a basic DQN (Deep Q-Network) controller
-   - Train the agent to stabilize the pendulum
-   - Compare performance with the LQR controller
-   - Document training process and results
-   - Create training progress visualizations
-   - Analyze and compare performance with LQR
+## The Role of Q and R
 
+### **Q Matrix: State Penalty**
+
+The **Q matrix** determines how much deviations in each state is penalised. It is a **diagonal matrix**, where each element represents the weight assigned to a particular state variable. A larger value means that deviations in that state are more heavily penalised.
+
+Using **Bryson’s Rule**,
+
+$$
+Q(i, i) = \frac{1}{(\text{max allowed state}_i)^2}
+$$
+
+This ensures that each state is normalized by its maximum permissible deviation.
+
+For our system:
+
+**The Q matrix is:**
+
+![image](https://github.com/user-attachments/assets/9339abc0-dc83-4747-8654-fd7d5c0091a9)
+
+
+
+This means:
+
+- Deviations in **pole angle** are penalized the most (**weight of 25**).
+- Cart position errors are also penalized significantly (**weight of 11.11**).
+- Cart velocity and pole angular velocity are penalized less.
+
+---
+
+### **R Matrix: Control Effort Penalty**
+
+The **R matrix** penalizes large control inputs (**force applied to the cart**). It is a **scalar value** in our case since only one control input is present:
+
+$$
+R = \frac{1}{\text{max force}^2}
+$$
+
+where:
+
+- **Max force** = 15 N.
+
+Thus:
+
+$$
+R = \frac{1}{15^2} = 0.0044
+$$
+
+A **small R value** means that applying force is not heavily penalized, allowing the controller to use strong corrections when needed.
+
+---
 ## Implementation
+${\color{red}A \space different\space approach\space than\space the\space last\space assignment\space where\space the\space explanations\space of\space the\space behaviour\space were\space more\space verbose\space than\space analytical\space.\space It\space will\space be\space toned\space down\space this\space time\space completely\space with\space easy\space to\space understand\space graphs\space doing\space most\space of\space the\space talking\space.}$
 
-### Controller Description
-The package includes a complete LQR controller implementation (`lqr_controller.py`) with the following features:
-- State feedback control
-- Configurable Q and R matrices
-- Real-time force command generation
-- State estimation and processing
+A barebones controller with live rqt tuning parameter to manually tune each value can be launched
 
-Current default parameters:
-```python
-# State cost matrix Q (default values)
-Q = np.diag([1.0, 1.0, 10.0, 10.0])  # [x, x_dot, theta, theta_dot]
-
-# Control cost R (default value)
-R = np.array([[0.1]])  # Control effort cost
 ```
-
-### Earthquake Disturbance
-The earthquake generator (`earthquake_force_generator.py`) provides realistic disturbances:
-- Configurable through ROS2 parameters
-- Default settings:
-  ```python
-  parameters=[{
-      'base_amplitude': 15.0,    # Strong force amplitude (N)
-      'frequency_range': [0.5, 4.0],  # Wide frequency range (Hz)
-      'update_rate': 50.0  # Update rate (Hz)
-  }]
-  ```
-
-## Getting Started
-
-### Prerequisites
-- ROS2 Humble or Jazzy
-- Gazebo Garden
-- Python 3.8+
-- Required Python packages: numpy, scipy
-
-#### Installation Commands
-```bash
-# Set ROS_DISTRO as per your configuration
-export ROS_DISTRO=humble
-
-# Install ROS2 packages
-sudo apt update
-sudo apt install -y \
-    ros-$ROS_DISTRO-ros-gz-bridge \
-    ros-$ROS_DISTRO-ros-gz-sim \
-    ros-$ROS_DISTRO-ros-gz-interfaces \
-    ros-$ROS_DISTRO-robot-state-publisher \
-    ros-$ROS_DISTRO-rviz2
-
-# Install Python dependencies
-pip3 install numpy scipy control
-```
-
-### Repository Setup
-
-#### If you already have a fork of the course repository:
-```bash
-# Navigate to your local copy of the repository
-cd ~/RAS-SES-598-Space-Robotics-and-AI
-
-# Add the original repository as upstream (if not already done)
-git remote add upstream https://github.com/DREAMS-lab/RAS-SES-598-Space-Robotics-and-AI.git
-
-# Fetch the latest changes from upstream
-git fetch upstream
-
-# Checkout your main branch
-git checkout main
-
-# Merge upstream changes
-git merge upstream/main
-
-# Push the updates to your fork
-git push origin main
-```
-
-#### If you don't have a fork yet:
-1. Fork the course repository:
-   - Visit: https://github.com/DREAMS-lab/RAS-SES-598-Space-Robotics-and-AI
-   - Click "Fork" in the top-right corner
-   - Select your GitHub account as the destination
-
-2. Clone your fork:
-```bash
-cd ~/
-git clone https://github.com/YOUR_USERNAME/RAS-SES-598-Space-Robotics-and-AI.git
-```
-
-### Create Symlink to ROS2 Workspace
-```bash
-# Create symlink in your ROS2 workspace
-cd ~/ros2_ws/src
-ln -s ~/RAS-SES-598-Space-Robotics-and-AI/assignments/cart_pole_optimal_control .
-```
-
-### Building and Running
-```bash
-# Build the package
-cd ~/ros2_ws
-colcon build --packages-select cart_pole_optimal_control --symlink-install
-
-# Source the workspace
-source install/setup.bash
-
-# Launch the simulation with visualization
 ros2 launch cart_pole_optimal_control cart_pole_rviz.launch.py
 ```
 
-This will start:
-- Gazebo simulation (headless mode)
-- RViz visualization showing:
-  * Cart-pole system
-  * Force arrows (control and disturbance forces)
-  * TF frames for system state
-- LQR controller
-- Earthquake force generator
-- Force visualizer
+Note that live update is one value behind, could not figure out why and didn't want to spend much time debugging.
 
-### Visualization Features
-The RViz view provides a side perspective of the cart-pole system with:
+The motivation behind the bryson values is the unwillingness to manually tune and log the values like the previous assignment as this takes much longer for one run and a higher range the values can be. 
 
-#### Force Arrows
-Two types of forces are visualized:
-1. Control Forces (at cart level):
-   - Red arrows: Positive control force (right)
-   - Blue arrows: Negative control force (left)
+So directly implementing the bryson values
 
-2. Earthquake Disturbances (above cart):
-   - Orange arrows: Positive disturbance (right)
-   - Purple arrows: Negative disturbance (left)
+```
+ros2 launch cart_pole_optimal_control cart_pole_bryson.launch.py
+```
 
-Arrow lengths are proportional to force magnitudes.
+[proper.webm](https://github.com/user-attachments/assets/f4594d2d-fbdc-4817-95f6-849fe916ec07)
 
-## Analysis Requirements
 
-### Performance Metrics
-Students should analyze:
-1. Stability Metrics:
-   - Maximum pole angle deviation
-   - RMS cart position error
-   - Peak control force used
-   - Recovery time after disturbances
+These graphs are obtained
+![control_input](https://github.com/user-attachments/assets/10e6e337-33cb-4cbb-9eca-a5a416c5ee9f)
+![pole_angle_vs_cart_position](https://github.com/user-attachments/assets/006a6cac-903b-48a1-8bd1-ad8e007c7f48)
+![state_evolution](https://github.com/user-attachments/assets/1d7e546a-8806-4986-9aab-8a0ef3c9970f)
 
-2. System Constraints:
-   - Cart position limit: ±2.5m
-   - Control rate: 50Hz
-   - Pole angle stability
-   - Control effort efficiency
 
-### Analysis Guidelines
-1. Baseline Performance:
-   - Document system behavior with default parameters
-   - Identify key performance bottlenecks
-   - Analyze disturbance effects
 
-2. Parameter Effects:
-   - Analyze how Q matrix weights affect different states
-   - Study R value's impact on control aggressiveness
-   - Document trade-offs between objectives
 
-3. Disturbance Response:
-   - Characterize system response to different disturbance frequencies
-   - Analyze recovery behavior
-   - Study control effort distribution
+## Multipliers
 
-## Evaluation Criteria
-### Core Assignment (100 points)
-1. Analysis Quality (40 points)
-   - Depth of parameter analysis
-   - Quality of performance metrics
-   - Understanding of system behavior
+To understsand how different **Q** and **R** values a multiplier is added
+```
+ros2 launch cart_pole_optimal_control cart_pole_bryson_multipliers.launch.py
+```
 
-2. Performance Results (30 points)
-   - Stability under disturbances
-   - Constraint satisfaction
-   - Control efficiency
+### Q x 1.5 and R x 0.8
 
-3. Documentation (30 points)
-   - Clear analysis presentation
-   - Quality of data and plots
-   - Thoroughness of discussion
+[q15r08.webm](https://github.com/user-attachments/assets/c01304d4-c1b1-4ef7-98fd-5d8297cae321)
 
-### Extra Credit (up to 30 points)
-- Reinforcement Learning Implementation (30 points)
 
-## Tips for Success
-1. Start with understanding the existing controller behavior
-2. Document baseline performance thoroughly
-3. Make systematic parameter adjustments
-4. Keep detailed records of all tests
-5. Focus on understanding trade-offs
-6. Use visualizations effectively
+![q_values_vs_time](https://github.com/user-attachments/assets/cf7c95b7-d729-4a04-a8bd-a152c4394540)
+![r_value_vs_time](https://github.com/user-attachments/assets/07b14ce3-5050-4341-87a0-772f8c51b3ff)
+![control_input](https://github.com/user-attachments/assets/45a8e4ee-44cd-4605-9402-2c9c30a94d1a)
+![pole_angle_vs_cart_position](https://github.com/user-attachments/assets/d9b9aa1e-154d-493e-8734-aaa28d65bb20)
+![state_evolution](https://github.com/user-attachments/assets/14b34e63-7ca2-4bd7-8c0a-8c5d79f96688)
 
-## Submission Requirements
-1. Technical report including:
-   - Analysis of controller behavior
-   - Performance data and plots
-   - Discussion of findings
-2. Video demonstration of system performance
-3. Any additional analysis tools or visualizations created
 
-## License
-This work is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
-[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/) 
+### Q x 0.8 and R x 1.5
+
+[q08r15.webm](https://github.com/user-attachments/assets/7205f869-9dd2-4887-b6e9-a447ba6839a0)
+
+
+![q_values_vs_time](https://github.com/user-attachments/assets/7618b14d-4ee1-4107-8fe8-ddd9bb64b19c)
+![r_value_vs_time](https://github.com/user-attachments/assets/b1bf8a77-4069-47bd-a04e-a9cda0ed08db)
+![control_input](https://github.com/user-attachments/assets/7a455994-9732-4174-a72f-c72920cd317f)
+![pole_angle_vs_cart_position](https://github.com/user-attachments/assets/fe0f1a4e-520c-4e62-8688-0d400791c301)
+![state_evolution](https://github.com/user-attachments/assets/7bad4b06-17f8-45cb-9307-f89dfb61060b)
+
+## [Reinforcement Learning](https://github.com/blazair/spacerobotics/tree/main/assignments/assignment_2/RL)
+
+A very peculiar error while I was trying to get the gym environment to work on ROS2. I had a venv with everything installed, but any node with gymnasium returned a **no module found** error.
+But the same venv had no problem running a gymnasium environemnt outside ROS. Could not figure it out so I tried to learn RL separately. It is still an ongoing process, made quite easy because of this [source](https://pytorch.org/tutorials/intermediate/reinforcement_q_learning.html).
+
+The error test was the [ralpoley](https://github.com/blazair/spacerobotics/tree/main/assignments/assignment_2/cartip_ws/src/ralpoley) package. Maybe I named the file the same as the import name, but the test was also done with a different name. I will revisit this when I have some free time. Any solutions please inform me.
+
+
