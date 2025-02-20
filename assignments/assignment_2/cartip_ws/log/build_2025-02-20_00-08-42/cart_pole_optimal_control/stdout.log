@@ -1,0 +1,28 @@
+running egg_info
+writing ../../build/cart_pole_optimal_control/cart_pole_optimal_control.egg-info/PKG-INFO
+writing dependency_links to ../../build/cart_pole_optimal_control/cart_pole_optimal_control.egg-info/dependency_links.txt
+writing entry points to ../../build/cart_pole_optimal_control/cart_pole_optimal_control.egg-info/entry_points.txt
+writing requirements to ../../build/cart_pole_optimal_control/cart_pole_optimal_control.egg-info/requires.txt
+writing top-level names to ../../build/cart_pole_optimal_control/cart_pole_optimal_control.egg-info/top_level.txt
+reading manifest file '../../build/cart_pole_optimal_control/cart_pole_optimal_control.egg-info/SOURCES.txt'
+writing manifest file '../../build/cart_pole_optimal_control/cart_pole_optimal_control.egg-info/SOURCES.txt'
+running build
+running build_py
+copying cart_pole_optimal_control/bryson_lqr_controller.py -> /home/blazar/workspaces/cartip_ws/build/cart_pole_optimal_control/build/lib/cart_pole_optimal_control
+running install
+running install_lib
+copying /home/blazar/workspaces/cartip_ws/build/cart_pole_optimal_control/build/lib/cart_pole_optimal_control/bryson_lqr_controller.py -> /home/blazar/workspaces/cartip_ws/install/cart_pole_optimal_control/lib/python3.12/site-packages/cart_pole_optimal_control
+byte-compiling /home/blazar/workspaces/cartip_ws/install/cart_pole_optimal_control/lib/python3.12/site-packages/cart_pole_optimal_control/bryson_lqr_controller.py to bryson_lqr_controller.cpython-312.pyc
+running install_data
+running install_egg_info
+removing '/home/blazar/workspaces/cartip_ws/install/cart_pole_optimal_control/lib/python3.12/site-packages/cart_pole_optimal_control-0.0.1-py3.12.egg-info' (and everything under it)
+Copying ../../build/cart_pole_optimal_control/cart_pole_optimal_control.egg-info to /home/blazar/workspaces/cartip_ws/install/cart_pole_optimal_control/lib/python3.12/site-packages/cart_pole_optimal_control-0.0.1-py3.12.egg-info
+running install_scripts
+Installing bryson_graph script to /home/blazar/workspaces/cartip_ws/install/cart_pole_optimal_control/lib/cart_pole_optimal_control
+Installing bryson_lqr_controller script to /home/blazar/workspaces/cartip_ws/install/cart_pole_optimal_control/lib/cart_pole_optimal_control
+Installing earthquake_force_generator script to /home/blazar/workspaces/cartip_ws/install/cart_pole_optimal_control/lib/cart_pole_optimal_control
+Installing force_visualizer script to /home/blazar/workspaces/cartip_ws/install/cart_pole_optimal_control/lib/cart_pole_optimal_control
+Installing lqr_controller script to /home/blazar/workspaces/cartip_ws/install/cart_pole_optimal_control/lib/cart_pole_optimal_control
+Installing ros_control_env script to /home/blazar/workspaces/cartip_ws/install/cart_pole_optimal_control/lib/cart_pole_optimal_control
+Installing state_republisher script to /home/blazar/workspaces/cartip_ws/install/cart_pole_optimal_control/lib/cart_pole_optimal_control
+writing list of installed files to '/home/blazar/workspaces/cartip_ws/build/cart_pole_optimal_control/install.log'

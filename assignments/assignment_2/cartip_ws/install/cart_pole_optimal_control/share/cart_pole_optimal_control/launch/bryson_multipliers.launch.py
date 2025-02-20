@@ -74,8 +74,8 @@ def generate_launch_description():
         # Bryson LQR Controller with Graphing (bryson_graph node)
         Node(
             package='cart_pole_optimal_control',
-            executable='bryson_graph',
-            name='bryson_graph',
+            executable='bryson_multipliers',
+            name='bryson_multipliers',
             output='screen'
         ),
 

@@ -31,11 +31,8 @@ setup(
             'earthquake_force_generator = cart_pole_optimal_control.earthquake_force_generator:main',
             'force_visualizer = cart_pole_optimal_control.force_visualizer:main',
             'state_republisher = cart_pole_optimal_control.state_republisher:main',
-            'performance_monitor = cart_pole_optimal_control.performance_monitor:main',
             'bryson_lqr_controller = cart_pole_optimal_control.bryson_lqr_controller:main',
-            'dqn_cartpole = cart_pole_optimal_control.dqn_cartpole:main',
-            'ros_control_env = cart_pole_optimal_control.ros_control_env:main',
-            'bryson_graph = cart_pole_optimal_control.bryson_graph:main',
+            'bryson_multipliers = cart_pole_optimal_control.bryson_multipliers:main',
         ],
     },
 )
