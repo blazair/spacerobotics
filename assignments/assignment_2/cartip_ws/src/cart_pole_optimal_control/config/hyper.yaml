@@ -1,0 +1,22 @@
+dqn:
+  learning_rate: 0.0005
+  gamma: 0.99
+  epsilon_start: 1.0
+  epsilon_min: 0.01
+  epsilon_decay: 0.995
+  batch_size: 64
+  memory_size: 50000
+  target_update: 10
+  num_episodes: 500
+  max_timesteps: 500
+  log_dir: "runs/dqn"
+
+ppo:
+  learning_rate: 0.0003
+  gamma: 0.99
+  clip_epsilon: 0.2
+  num_epochs: 4
+  batch_size: 64
+  num_episodes: 500
+  max_timesteps: 500
+  log_dir: "runs/ppo"
