@@ -1,5 +1,12 @@
 #!/home/blazar/envs/ros2_rl/bin/python
 """
+Bryson's Rule LQR Controller with Graphing and CSV Logging
+This node uses Bryson's Rule to set the weighting matrices(same as the controller before):
+    Q(i,i) = 1 / (max_allowed_state_i^2)
+    R = 1 / (max_force^2)
+It then computes the optimal gain matrix K by solving the continuous-time 
+algebraic Riccati equation (CARE) and using:
+    K = R⁻¹ B^T P
 The node subscribes to joint states and publishes control force commands.
 It logs the system state, control input, and the (dynamic) Q and R values at each control cycle.
 When terminated (Ctrl‑C), it saves five plots and one CSV file with the logged data.
