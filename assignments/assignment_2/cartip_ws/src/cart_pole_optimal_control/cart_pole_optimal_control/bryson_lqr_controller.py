@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 import os
 import csv
 
-# Set the output directory (change as needed)
+# Set the output directory
 OUTPUT_DIR = "/home/blazar/workspaces/cartip_ws/src/cart_pole_optimal_control/graphs/proper"
 
 class BrysonLQRController(Node):
@@ -161,7 +161,7 @@ class BrysonLQRController(Node):
         q_arr = np.array(self.q_log)
         r_arr = np.array(self.r_log)
 
-        # Plot 1: State Evolution (4 subplots)
+        # Plot 1: State Evolution (4 subplots)(GPT generated)
         fig1, axs = plt.subplots(4, 1, sharex=True, figsize=(10, 8))
         labels = ["Cart Position (m)", "Cart Velocity (m/s)", "Pole Angle (rad)", "Pole Angular Velocity (rad/s)"]
         for i in range(4):
