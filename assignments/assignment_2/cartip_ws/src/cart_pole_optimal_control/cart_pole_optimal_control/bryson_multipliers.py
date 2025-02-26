@@ -1,14 +1,5 @@
 #!/home/blazar/envs/ros2_rl/bin/python
 """
-Bryson's Rule LQR Controller with Graphing and CSV Logging
-
-This node uses Bryson's Rule to set the weighting matrices:
-    Q(i,i) = 1 / (max_allowed_state_i^2)
-    R = 1 / (max_force^2)
-It then computes the optimal gain matrix K by solving the continuous-time 
-algebraic Riccati equation (CARE) and using:
-    K = R⁻¹ B^T P
-
 The node subscribes to joint states and publishes control force commands.
 It logs the system state, control input, and the (dynamic) Q and R values at each control cycle.
 When terminated (Ctrl‑C), it saves five plots and one CSV file with the logged data.
@@ -21,15 +12,13 @@ from sensor_msgs.msg import JointState
 import numpy as np
 from scipy import linalg
 import matplotlib
-matplotlib.use('Agg')  # Non-interactive backend for saving plots
+matplotlib.use('Agg')  # Non-interactive backend for saving plots (some errors, this was solved by GPT)
 import matplotlib.pyplot as plt
 import os
 import csv
 
-# ------------------------
-# Configuration
-# ------------------------
-# Set the output directory (change as needed)
+
+# Set the output directory
 OUTPUT_DIR = "/home/blazar/workspaces/cartip_ws/src/cart_pole_optimal_control/graphs/run2"
 
 class BrysonLQRController(Node):
@@ -116,7 +105,7 @@ class BrysonLQRController(Node):
             self.get_logger().error(f"LQR computation failed: {e}")
             return np.zeros((1, 4), dtype=np.float64)
 
-    def update_q_r(self):
+    def update_q_r(self): #Encountered some weird errors here with the parameters. Turned out it was quite straight forward. GPT helped me with that
         # Update multipliers dynamically (Variant A)
         self.q_multiplier = getattr(self, 'q_multiplier', 1.0) * 0.8
         self.r_multiplier = getattr(self, 'r_multiplier', 1.0) * 1.5
@@ -175,7 +164,7 @@ class BrysonLQRController(Node):
         q_arr = np.array(self.q_log)
         r_arr = np.array(self.r_log)
 
-        # Plot 1: State Evolution
+        # Plot 1: State Evolution (GPT)
         fig1, axs = plt.subplots(4, 1, sharex=True, figsize=(10, 8))
         labels = ["Cart Position (m)", "Cart Velocity (m/s)", "Pole Angle (rad)", "Pole Angular Velocity (rad/s)"]
         for i in range(4):
