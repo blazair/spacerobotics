@@ -1,0 +1,31 @@
+[0.439s] Invoking command in '/home/blazar/workspaces/rockytimes_ws/src/terrain_mapping_drone_control': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(thingsbro) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/blazar/workspaces/rockytimes_ws/build/terrain_mapping_drone_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(thingsbro) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/terrain_mapping_drone_control build --build-base /home/blazar/workspaces/rockytimes_ws/build/terrain_mapping_drone_control/build install --record /home/blazar/workspaces/rockytimes_ws/build/terrain_mapping_drone_control/install.log --single-version-externally-managed install_data
+[0.579s] running egg_info
+[0.589s] writing ../../build/terrain_mapping_drone_control/terrain_mapping_drone_control.egg-info/PKG-INFO
+[0.589s] writing dependency_links to ../../build/terrain_mapping_drone_control/terrain_mapping_drone_control.egg-info/dependency_links.txt
+[0.589s] writing entry points to ../../build/terrain_mapping_drone_control/terrain_mapping_drone_control.egg-info/entry_points.txt
+[0.589s] writing requirements to ../../build/terrain_mapping_drone_control/terrain_mapping_drone_control.egg-info/requires.txt
+[0.589s] writing top-level names to ../../build/terrain_mapping_drone_control/terrain_mapping_drone_control.egg-info/top_level.txt
+[0.608s] reading manifest file '../../build/terrain_mapping_drone_control/terrain_mapping_drone_control.egg-info/SOURCES.txt'
+[0.608s] writing manifest file '../../build/terrain_mapping_drone_control/terrain_mapping_drone_control.egg-info/SOURCES.txt'
+[0.608s] running build
+[0.608s] running build_py
+[0.608s] copying terrain_mapping_drone_control/cylinder_landing_node.py -> /home/blazar/workspaces/rockytimes_ws/build/terrain_mapping_drone_control/build/lib/terrain_mapping_drone_control
+[0.609s] running install
+[0.612s] running install_lib
+[0.622s] copying /home/blazar/workspaces/rockytimes_ws/build/terrain_mapping_drone_control/build/lib/terrain_mapping_drone_control/cylinder_landing_node.py -> /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/lib/python3.12/site-packages/terrain_mapping_drone_control
+[0.622s] byte-compiling /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/lib/python3.12/site-packages/terrain_mapping_drone_control/cylinder_landing_node.py to cylinder_landing_node.cpython-312.pyc
+[0.624s] running install_data
+[0.625s] copying terrain_mapping_drone_control/cylinder_landing_node.py -> /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/lib/terrain_mapping_drone_control
+[0.625s] running install_egg_info
+[0.635s] removing '/home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/lib/python3.12/site-packages/terrain_mapping_drone_control-0.0.1-py3.12.egg-info' (and everything under it)
+[0.635s] Copying ../../build/terrain_mapping_drone_control/terrain_mapping_drone_control.egg-info to /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/lib/python3.12/site-packages/terrain_mapping_drone_control-0.0.1-py3.12.egg-info
+[0.635s] running install_scripts
+[0.703s] Installing aruco_tracker script to /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/bin
+[0.703s] Installing cylinder_landing_node script to /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/bin
+[0.703s] Installing feature_tracker script to /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/bin
+[0.703s] Installing mission_node script to /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/bin
+[0.704s] Installing pose_visualizer script to /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/bin
+[0.704s] Installing px4_odom_converter script to /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/bin
+[0.704s] Installing spiral_trajectory script to /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/bin
+[0.704s] writing list of installed files to '/home/blazar/workspaces/rockytimes_ws/build/terrain_mapping_drone_control/install.log'
+[0.718s] Invoked command in '/home/blazar/workspaces/rockytimes_ws/src/terrain_mapping_drone_control' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(thingsbro) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/blazar/workspaces/rockytimes_ws/build/terrain_mapping_drone_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(thingsbro) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/terrain_mapping_drone_control build --build-base /home/blazar/workspaces/rockytimes_ws/build/terrain_mapping_drone_control/build install --record /home/blazar/workspaces/rockytimes_ws/build/terrain_mapping_drone_control/install.log --single-version-externally-managed install_data
