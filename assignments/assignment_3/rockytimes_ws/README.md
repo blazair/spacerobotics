@@ -11,3 +11,4 @@ Had to code for a long time for this, ling time because of some inherent problem
 
 note to self<br>
 the documentation will be quite different this time including the errors i faced and how i resolved it, so i can use this as a reference for future px4 projects<br>
+![Screenshot from 2025-03-26 16-55-31](https://github.com/user-attachments/assets/cfb8a1a8-6cd8-4241-a2ee-fa75af061b03)
