@@ -1,12 +1,15 @@
 Done with the height estimation
 
-Had to code for a long time for this, ling time because of some inherent problems I couldn't figure out like <br>
+Had to code for a long time for this, long time because of some inherent problems I couldn't figure out like <br>
 
-  1)Why am i getting ore flight errors? Was it because EKF2 needed time to stabilise ? <br>
-  2)Why dd i have to constantly kill processes to sto pit from launching with previous configuration<br>
-  3)still do not understand the rtf factor, i am always off by three seconds <br>
-  4)the detetion if it was in a circle had coinciding problems when they passed and the cylinders coincided <br>
+  1)Why am i getting pre flight errors? Was it because EKF2 needed time to stabilise ? <br>
+  2)Why dd i have to constantly kill processes to stop it from launching with previous configuration<br>
+  3)still do not understand the rtf factor, i am always off by three seconds regardless of tring to fix it <br>
+  4)the detection if it in a circle had coinciding problems when the drone passed over the short cylinder and looked over the tall cylinder <br>
   5) I will keep updating this with questions I get for tomorrow's class.<br>
+
+aboandoned idea
+before i made it go to a hover where it can see both cylinders, i had it do a spiral slwly elevating and then going to 20m ghover to detect aruco and then land, but for the cylinder estimation, i just calculated every 2 seconds and had the median and that did not tourn out so well, so abandoned it
 
 
 note to self<br>
