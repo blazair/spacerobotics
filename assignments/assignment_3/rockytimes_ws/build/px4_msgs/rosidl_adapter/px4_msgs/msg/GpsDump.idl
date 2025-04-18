@@ -10,7 +10,8 @@ module px4_msgs {
       const uint8 ORB_QUEUE_LENGTH = 8;
     };
     @verbatim (language="comment", text=
-      "This message is used to dump the raw gps communication to the log.")
+      "This message is used to dump the raw gps communication to the log." "\n"
+      "Set the parameter GPS_DUMP_COMM to 1 to use this.")
     struct GpsDump {
       @verbatim (language="comment", text=
         "time since system start (microseconds)")

@@ -154,8 +154,6 @@ typedef struct px4_msgs__msg__ManualControlSwitches
   uint8_t photo_switch;
   /// Photo trigger switch
   uint8_t video_switch;
-  /// Payload power switch
-  uint8_t payload_power_switch;
   /// Engage the main motor (for helicopters)
   uint8_t engage_main_motor_switch;
   /// number of switch changes

@@ -60,6 +60,12 @@ cdr_serialize(
   // Member: acceptance_radius
   cdr << ros_message.acceptance_radius;
 
+  // Member: yaw_acceptance
+  cdr << ros_message.yaw_acceptance;
+
+  // Member: altitude_acceptance
+  cdr << ros_message.altitude_acceptance;
+
   // Member: type
   cdr << ros_message.type;
 
@@ -95,6 +101,12 @@ cdr_deserialize(
 
   // Member: acceptance_radius
   cdr >> ros_message.acceptance_radius;
+
+  // Member: yaw_acceptance
+  cdr >> ros_message.yaw_acceptance;
+
+  // Member: altitude_acceptance
+  cdr >> ros_message.altitude_acceptance;
 
   // Member: type
   cdr >> ros_message.type;
@@ -168,6 +180,20 @@ get_serialized_size(
   // Member: acceptance_radius
   {
     size_t item_size = sizeof(ros_message.acceptance_radius);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: yaw_acceptance
+  {
+    size_t item_size = sizeof(ros_message.yaw_acceptance);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: altitude_acceptance
+  {
+    size_t item_size = sizeof(ros_message.altitude_acceptance);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -258,6 +284,20 @@ max_serialized_size_PositionControllerStatus(
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
+  // Member: yaw_acceptance
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // Member: altitude_acceptance
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
   // Member: type
   {
     size_t array_size = 1;
@@ -310,6 +350,12 @@ cdr_serialize_key(
 
   // Member: acceptance_radius
   cdr << ros_message.acceptance_radius;
+
+  // Member: yaw_acceptance
+  cdr << ros_message.yaw_acceptance;
+
+  // Member: altitude_acceptance
+  cdr << ros_message.altitude_acceptance;
 
   // Member: type
   cdr << ros_message.type;
@@ -382,6 +428,20 @@ get_serialized_size_key(
   // Member: acceptance_radius
   {
     size_t item_size = sizeof(ros_message.acceptance_radius);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: yaw_acceptance
+  {
+    size_t item_size = sizeof(ros_message.yaw_acceptance);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: altitude_acceptance
+  {
+    size_t item_size = sizeof(ros_message.altitude_acceptance);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -472,6 +532,22 @@ max_serialized_size_key_PositionControllerStatus(
   }
 
   // Member: acceptance_radius
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Member: yaw_acceptance
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Member: altitude_acceptance
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint32_t);

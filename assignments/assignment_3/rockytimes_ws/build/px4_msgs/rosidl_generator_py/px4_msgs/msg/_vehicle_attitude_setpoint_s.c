@@ -62,6 +62,33 @@ bool px4_msgs__msg__vehicle_attitude_setpoint__convert_from_py(PyObject * _pymsg
     ros_message->timestamp = PyLong_AsUnsignedLongLong(field);
     Py_DECREF(field);
   }
+  {  // roll_body
+    PyObject * field = PyObject_GetAttrString(_pymsg, "roll_body");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->roll_body = (float)PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // pitch_body
+    PyObject * field = PyObject_GetAttrString(_pymsg, "pitch_body");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->pitch_body = (float)PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // yaw_body
+    PyObject * field = PyObject_GetAttrString(_pymsg, "yaw_body");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->yaw_body = (float)PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
   {  // yaw_sp_move_rate
     PyObject * field = PyObject_GetAttrString(_pymsg, "yaw_sp_move_rate");
     if (!field) {
@@ -164,6 +191,39 @@ PyObject * px4_msgs__msg__vehicle_attitude_setpoint__convert_to_py(void * raw_ro
     field = PyLong_FromUnsignedLongLong(ros_message->timestamp);
     {
       int rc = PyObject_SetAttrString(_pymessage, "timestamp", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // roll_body
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->roll_body);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "roll_body", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // pitch_body
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->pitch_body);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "pitch_body", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // yaw_body
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->yaw_body);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "yaw_body", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

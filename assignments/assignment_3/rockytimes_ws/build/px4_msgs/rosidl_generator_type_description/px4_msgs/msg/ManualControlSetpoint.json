@@ -162,16 +162,6 @@
             "nested_type_name": ""
           },
           "default_value": ""
-        },
-        {
-          "name": "buttons",
-          "type": {
-            "type_id": 5,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
         }
       ]
     },
@@ -180,7 +170,7 @@
   "type_hashes": [
     {
       "type_name": "px4_msgs/msg/ManualControlSetpoint",
-      "hash_string": "RIHS01_2ec0e528a355533ad4c66854efef104b62f42eded5d830af9dc18ab205b825ed"
+      "hash_string": "RIHS01_99b996a5b1aa6fb529641c005add9dad98efae2410e30d0ff388e49c515008df"
     }
   ]
 }

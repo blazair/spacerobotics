@@ -140,10 +140,7 @@ static char toplevel_type_raw_source[] =
   "uint8 target_system      # System ID (can be 0 for broadcast, but this is discouraged)\n"
   "uint8 target_component   # Component ID (can be 0 for broadcast, but this is discouraged)\n"
   "uint8 payload_length     # Length of the data transported in payload\n"
-  "uint8[128] payload       # Data itself\n"
-  "\n"
-  "# Topic aliases for known payload types\n"
-  "# TOPICS mavlink_tunnel esc_serial_passthru";
+  "uint8[128] payload       # Data itself";
 
 static char msg_encoding[] = "msg";
 
@@ -157,7 +154,7 @@ px4_msgs__msg__MavlinkTunnel__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__MavlinkTunnel__TYPE_NAME, 26, 26},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 1997, 1997},
+    {toplevel_type_raw_source, 1912, 1912},
   };
   return &source;
 }

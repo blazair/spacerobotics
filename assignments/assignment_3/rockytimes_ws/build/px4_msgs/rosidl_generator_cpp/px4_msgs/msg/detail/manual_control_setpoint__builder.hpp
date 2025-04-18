@@ -24,32 +24,16 @@ namespace msg
 namespace builder
 {
 
-class Init_ManualControlSetpoint_buttons
-{
-public:
-  explicit Init_ManualControlSetpoint_buttons(::px4_msgs::msg::ManualControlSetpoint & msg)
-  : msg_(msg)
-  {}
-  ::px4_msgs::msg::ManualControlSetpoint buttons(::px4_msgs::msg::ManualControlSetpoint::_buttons_type arg)
-  {
-    msg_.buttons = std::move(arg);
-    return std::move(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::ManualControlSetpoint msg_;
-};
-
 class Init_ManualControlSetpoint_sticks_moving
 {
 public:
   explicit Init_ManualControlSetpoint_sticks_moving(::px4_msgs::msg::ManualControlSetpoint & msg)
   : msg_(msg)
   {}
-  Init_ManualControlSetpoint_buttons sticks_moving(::px4_msgs::msg::ManualControlSetpoint::_sticks_moving_type arg)
+  ::px4_msgs::msg::ManualControlSetpoint sticks_moving(::px4_msgs::msg::ManualControlSetpoint::_sticks_moving_type arg)
   {
     msg_.sticks_moving = std::move(arg);
-    return Init_ManualControlSetpoint_buttons(msg_);
+    return std::move(msg_);
   }
 
 private:

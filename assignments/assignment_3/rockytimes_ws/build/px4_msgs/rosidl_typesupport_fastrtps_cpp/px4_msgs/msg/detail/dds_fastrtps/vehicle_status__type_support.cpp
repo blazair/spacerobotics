@@ -63,15 +63,6 @@ cdr_serialize(
   // Member: nav_state
   cdr << ros_message.nav_state;
 
-  // Member: executor_in_charge
-  cdr << ros_message.executor_in_charge;
-
-  // Member: valid_nav_states_mask
-  cdr << ros_message.valid_nav_states_mask;
-
-  // Member: can_set_nav_states_mask
-  cdr << ros_message.can_set_nav_states_mask;
-
   // Member: failure_detector_status
   cdr << ros_message.failure_detector_status;
 
@@ -86,9 +77,6 @@ cdr_serialize(
 
   // Member: failsafe_and_user_took_over
   cdr << (ros_message.failsafe_and_user_took_over ? true : false);
-
-  // Member: failsafe_defer_state
-  cdr << ros_message.failsafe_defer_state;
 
   // Member: gcs_connection_lost
   cdr << (ros_message.gcs_connection_lost ? true : false);
@@ -144,6 +132,12 @@ cdr_serialize(
   // Member: parachute_system_healthy
   cdr << (ros_message.parachute_system_healthy ? true : false);
 
+  // Member: avoidance_system_required
+  cdr << (ros_message.avoidance_system_required ? true : false);
+
+  // Member: avoidance_system_valid
+  cdr << (ros_message.avoidance_system_valid ? true : false);
+
   // Member: rc_calibration_in_progress
   cdr << (ros_message.rc_calibration_in_progress ? true : false);
 
@@ -189,15 +183,6 @@ cdr_deserialize(
   // Member: nav_state
   cdr >> ros_message.nav_state;
 
-  // Member: executor_in_charge
-  cdr >> ros_message.executor_in_charge;
-
-  // Member: valid_nav_states_mask
-  cdr >> ros_message.valid_nav_states_mask;
-
-  // Member: can_set_nav_states_mask
-  cdr >> ros_message.can_set_nav_states_mask;
-
   // Member: failure_detector_status
   cdr >> ros_message.failure_detector_status;
 
@@ -220,9 +205,6 @@ cdr_deserialize(
     cdr >> tmp;
     ros_message.failsafe_and_user_took_over = tmp ? true : false;
   }
-
-  // Member: failsafe_defer_state
-  cdr >> ros_message.failsafe_defer_state;
 
   // Member: gcs_connection_lost
   {
@@ -334,6 +316,20 @@ cdr_deserialize(
     ros_message.parachute_system_healthy = tmp ? true : false;
   }
 
+  // Member: avoidance_system_required
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message.avoidance_system_required = tmp ? true : false;
+  }
+
+  // Member: avoidance_system_valid
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message.avoidance_system_valid = tmp ? true : false;
+  }
+
   // Member: rc_calibration_in_progress
   {
     uint8_t tmp;
@@ -435,27 +431,6 @@ get_serialized_size(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Member: executor_in_charge
-  {
-    size_t item_size = sizeof(ros_message.executor_in_charge);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: valid_nav_states_mask
-  {
-    size_t item_size = sizeof(ros_message.valid_nav_states_mask);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: can_set_nav_states_mask
-  {
-    size_t item_size = sizeof(ros_message.can_set_nav_states_mask);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
   // Member: failure_detector_status
   {
     size_t item_size = sizeof(ros_message.failure_detector_status);
@@ -487,13 +462,6 @@ get_serialized_size(
   // Member: failsafe_and_user_took_over
   {
     size_t item_size = sizeof(ros_message.failsafe_and_user_took_over);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: failsafe_defer_state
-  {
-    size_t item_size = sizeof(ros_message.failsafe_defer_state);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -620,6 +588,20 @@ get_serialized_size(
   // Member: parachute_system_healthy
   {
     size_t item_size = sizeof(ros_message.parachute_system_healthy);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: avoidance_system_required
+  {
+    size_t item_size = sizeof(ros_message.avoidance_system_required);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: avoidance_system_valid
+  {
+    size_t item_size = sizeof(ros_message.avoidance_system_valid);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -726,26 +708,6 @@ max_serialized_size_VehicleStatus(
     last_member_size = array_size * sizeof(uint8_t);
     current_alignment += array_size * sizeof(uint8_t);
   }
-  // Member: executor_in_charge
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-  // Member: valid_nav_states_mask
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-  // Member: can_set_nav_states_mask
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
   // Member: failure_detector_status
   {
     size_t array_size = 1;
@@ -772,12 +734,6 @@ max_serialized_size_VehicleStatus(
     current_alignment += array_size * sizeof(uint8_t);
   }
   // Member: failsafe_and_user_took_over
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-  // Member: failsafe_defer_state
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint8_t);
@@ -886,6 +842,18 @@ max_serialized_size_VehicleStatus(
     current_alignment += array_size * sizeof(uint8_t);
   }
   // Member: parachute_system_healthy
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+  // Member: avoidance_system_required
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+  // Member: avoidance_system_valid
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint8_t);
@@ -959,15 +927,6 @@ cdr_serialize_key(
   // Member: nav_state
   cdr << ros_message.nav_state;
 
-  // Member: executor_in_charge
-  cdr << ros_message.executor_in_charge;
-
-  // Member: valid_nav_states_mask
-  cdr << ros_message.valid_nav_states_mask;
-
-  // Member: can_set_nav_states_mask
-  cdr << ros_message.can_set_nav_states_mask;
-
   // Member: failure_detector_status
   cdr << ros_message.failure_detector_status;
 
@@ -982,9 +941,6 @@ cdr_serialize_key(
 
   // Member: failsafe_and_user_took_over
   cdr << (ros_message.failsafe_and_user_took_over ? true : false);
-
-  // Member: failsafe_defer_state
-  cdr << ros_message.failsafe_defer_state;
 
   // Member: gcs_connection_lost
   cdr << (ros_message.gcs_connection_lost ? true : false);
@@ -1039,6 +995,12 @@ cdr_serialize_key(
 
   // Member: parachute_system_healthy
   cdr << (ros_message.parachute_system_healthy ? true : false);
+
+  // Member: avoidance_system_required
+  cdr << (ros_message.avoidance_system_required ? true : false);
+
+  // Member: avoidance_system_valid
+  cdr << (ros_message.avoidance_system_valid ? true : false);
 
   // Member: rc_calibration_in_progress
   cdr << (ros_message.rc_calibration_in_progress ? true : false);
@@ -1128,27 +1090,6 @@ get_serialized_size_key(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Member: executor_in_charge
-  {
-    size_t item_size = sizeof(ros_message.executor_in_charge);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: valid_nav_states_mask
-  {
-    size_t item_size = sizeof(ros_message.valid_nav_states_mask);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: can_set_nav_states_mask
-  {
-    size_t item_size = sizeof(ros_message.can_set_nav_states_mask);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
   // Member: failure_detector_status
   {
     size_t item_size = sizeof(ros_message.failure_detector_status);
@@ -1180,13 +1121,6 @@ get_serialized_size_key(
   // Member: failsafe_and_user_took_over
   {
     size_t item_size = sizeof(ros_message.failsafe_and_user_took_over);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: failsafe_defer_state
-  {
-    size_t item_size = sizeof(ros_message.failsafe_defer_state);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -1313,6 +1247,20 @@ get_serialized_size_key(
   // Member: parachute_system_healthy
   {
     size_t item_size = sizeof(ros_message.parachute_system_healthy);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: avoidance_system_required
+  {
+    size_t item_size = sizeof(ros_message.avoidance_system_required);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: avoidance_system_valid
+  {
+    size_t item_size = sizeof(ros_message.avoidance_system_valid);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -1427,29 +1375,6 @@ max_serialized_size_key_VehicleStatus(
     current_alignment += array_size * sizeof(uint8_t);
   }
 
-  // Member: executor_in_charge
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
-  // Member: valid_nav_states_mask
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Member: can_set_nav_states_mask
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
   // Member: failure_detector_status
   {
     size_t array_size = 1;
@@ -1480,13 +1405,6 @@ max_serialized_size_key_VehicleStatus(
   }
 
   // Member: failsafe_and_user_took_over
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
-  // Member: failsafe_defer_state
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint8_t);
@@ -1613,6 +1531,20 @@ max_serialized_size_key_VehicleStatus(
   }
 
   // Member: parachute_system_healthy
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Member: avoidance_system_required
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Member: avoidance_system_valid
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint8_t);

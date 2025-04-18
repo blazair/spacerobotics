@@ -43,9 +43,7 @@ typedef struct px4_msgs__msg__SensorGnssRelative
   float heading;
   /// Accuracy of heading of the relative position vector (radians)
   float heading_accuracy;
-  /// Length of the position vector (m)
   float position_length;
-  /// Accuracy of the position length (m)
   float accuracy_length;
   /// GNSS valid fix (i.e within DOP & accuracy masks)
   bool gnss_fix_ok;

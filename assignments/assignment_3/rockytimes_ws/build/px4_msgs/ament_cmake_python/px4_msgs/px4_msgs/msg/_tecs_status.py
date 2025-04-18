@@ -29,6 +29,8 @@ class Metaclass_TecsStatus(type):
     _TYPE_SUPPORT = None
 
     __constants = {
+        'TECS_MODE_NORMAL': 0,
+        'TECS_MODE_UNDERSPEED': 1,
     }
 
     @classmethod
@@ -57,17 +59,34 @@ class Metaclass_TecsStatus(type):
         # the message class under "Data and other attributes defined here:"
         # as well as populate each message instance
         return {
+            'TECS_MODE_NORMAL': cls.__constants['TECS_MODE_NORMAL'],
+            'TECS_MODE_UNDERSPEED': cls.__constants['TECS_MODE_UNDERSPEED'],
         }
+
+    @property
+    def TECS_MODE_NORMAL(self):
+        """Message constant 'TECS_MODE_NORMAL'."""
+        return Metaclass_TecsStatus.__constants['TECS_MODE_NORMAL']
+
+    @property
+    def TECS_MODE_UNDERSPEED(self):
+        """Message constant 'TECS_MODE_UNDERSPEED'."""
+        return Metaclass_TecsStatus.__constants['TECS_MODE_UNDERSPEED']
 
 
 class TecsStatus(metaclass=Metaclass_TecsStatus):
-    """Message class 'TecsStatus'."""
+    """
+    Message class 'TecsStatus'.
+
+    Constants:
+      TECS_MODE_NORMAL
+      TECS_MODE_UNDERSPEED
+    """
 
     __slots__ = [
         '_timestamp',
         '_altitude_sp',
         '_altitude_reference',
-        '_altitude_time_constant',
         '_height_rate_reference',
         '_height_rate_direct',
         '_height_rate_setpoint',
@@ -87,8 +106,7 @@ class TecsStatus(metaclass=Metaclass_TecsStatus):
         '_throttle_sp',
         '_pitch_sp_rad',
         '_throttle_trim',
-        '_underspeed_ratio',
-        '_fast_descend_ratio',
+        '_mode',
         '_check_fields',
     ]
 
@@ -96,7 +114,6 @@ class TecsStatus(metaclass=Metaclass_TecsStatus):
         'timestamp': 'uint64',
         'altitude_sp': 'float',
         'altitude_reference': 'float',
-        'altitude_time_constant': 'float',
         'height_rate_reference': 'float',
         'height_rate_direct': 'float',
         'height_rate_setpoint': 'float',
@@ -116,8 +133,7 @@ class TecsStatus(metaclass=Metaclass_TecsStatus):
         'throttle_sp': 'float',
         'pitch_sp_rad': 'float',
         'throttle_trim': 'float',
-        'underspeed_ratio': 'float',
-        'fast_descend_ratio': 'float',
+        'mode': 'uint8',
     }
 
     # This attribute is used to store an rosidl_parser.definition variable
@@ -145,9 +161,7 @@ class TecsStatus(metaclass=Metaclass_TecsStatus):
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
-        rosidl_parser.definition.BasicType('float'),  # noqa: E501
-        rosidl_parser.definition.BasicType('float'),  # noqa: E501
-        rosidl_parser.definition.BasicType('float'),  # noqa: E501
+        rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -162,7 +176,6 @@ class TecsStatus(metaclass=Metaclass_TecsStatus):
         self.timestamp = kwargs.get('timestamp', int())
         self.altitude_sp = kwargs.get('altitude_sp', float())
         self.altitude_reference = kwargs.get('altitude_reference', float())
-        self.altitude_time_constant = kwargs.get('altitude_time_constant', float())
         self.height_rate_reference = kwargs.get('height_rate_reference', float())
         self.height_rate_direct = kwargs.get('height_rate_direct', float())
         self.height_rate_setpoint = kwargs.get('height_rate_setpoint', float())
@@ -182,8 +195,7 @@ class TecsStatus(metaclass=Metaclass_TecsStatus):
         self.throttle_sp = kwargs.get('throttle_sp', float())
         self.pitch_sp_rad = kwargs.get('pitch_sp_rad', float())
         self.throttle_trim = kwargs.get('throttle_trim', float())
-        self.underspeed_ratio = kwargs.get('underspeed_ratio', float())
-        self.fast_descend_ratio = kwargs.get('fast_descend_ratio', float())
+        self.mode = kwargs.get('mode', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -220,8 +232,6 @@ class TecsStatus(metaclass=Metaclass_TecsStatus):
         if self.altitude_sp != other.altitude_sp:
             return False
         if self.altitude_reference != other.altitude_reference:
-            return False
-        if self.altitude_time_constant != other.altitude_time_constant:
             return False
         if self.height_rate_reference != other.height_rate_reference:
             return False
@@ -261,9 +271,7 @@ class TecsStatus(metaclass=Metaclass_TecsStatus):
             return False
         if self.throttle_trim != other.throttle_trim:
             return False
-        if self.underspeed_ratio != other.underspeed_ratio:
-            return False
-        if self.fast_descend_ratio != other.fast_descend_ratio:
+        if self.mode != other.mode:
             return False
         return True
 
@@ -316,21 +324,6 @@ class TecsStatus(metaclass=Metaclass_TecsStatus):
             assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
                 "The 'altitude_reference' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
         self._altitude_reference = value
-
-    @builtins.property
-    def altitude_time_constant(self):
-        """Message field 'altitude_time_constant'."""
-        return self._altitude_time_constant
-
-    @altitude_time_constant.setter
-    def altitude_time_constant(self, value):
-        if self._check_fields:
-            assert \
-                isinstance(value, float), \
-                "The 'altitude_time_constant' field must be of type 'float'"
-            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'altitude_time_constant' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
-        self._altitude_time_constant = value
 
     @builtins.property
     def height_rate_reference(self):
@@ -618,31 +611,16 @@ class TecsStatus(metaclass=Metaclass_TecsStatus):
         self._throttle_trim = value
 
     @builtins.property
-    def underspeed_ratio(self):
-        """Message field 'underspeed_ratio'."""
-        return self._underspeed_ratio
+    def mode(self):
+        """Message field 'mode'."""
+        return self._mode
 
-    @underspeed_ratio.setter
-    def underspeed_ratio(self, value):
+    @mode.setter
+    def mode(self, value):
         if self._check_fields:
             assert \
-                isinstance(value, float), \
-                "The 'underspeed_ratio' field must be of type 'float'"
-            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'underspeed_ratio' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
-        self._underspeed_ratio = value
-
-    @builtins.property
-    def fast_descend_ratio(self):
-        """Message field 'fast_descend_ratio'."""
-        return self._fast_descend_ratio
-
-    @fast_descend_ratio.setter
-    def fast_descend_ratio(self, value):
-        if self._check_fields:
-            assert \
-                isinstance(value, float), \
-                "The 'fast_descend_ratio' field must be of type 'float'"
-            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'fast_descend_ratio' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
-        self._fast_descend_ratio = value
+                isinstance(value, int), \
+                "The 'mode' field must be of type 'int'"
+            assert value >= 0 and value < 256, \
+                "The 'mode' field must be an unsigned integer in [0, 255]"
+        self._mode = value

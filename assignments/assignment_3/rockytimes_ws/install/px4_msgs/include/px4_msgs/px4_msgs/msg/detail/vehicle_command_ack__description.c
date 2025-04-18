@@ -11,10 +11,10 @@ px4_msgs__msg__VehicleCommandAck__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x36, 0x03, 0x8d, 0x69, 0xf9, 0xdb, 0x90, 0x98,
-      0x0f, 0xb8, 0xfe, 0x15, 0x4f, 0x27, 0xf2, 0x2d,
-      0xff, 0xed, 0x0c, 0x35, 0xe5, 0x30, 0xb3, 0x24,
-      0x13, 0xcf, 0x04, 0x56, 0xaa, 0x8a, 0x29, 0xe2,
+      0xbf, 0xbd, 0xf4, 0xd5, 0xc0, 0xb7, 0x82, 0x05,
+      0x70, 0x79, 0x61, 0x91, 0xf5, 0x21, 0x1e, 0xe8,
+      0xc4, 0x36, 0xea, 0x09, 0x71, 0xa9, 0xb6, 0x58,
+      0xca, 0x9a, 0x2c, 0x82, 0xed, 0x2c, 0xdb, 0xdb,
     }};
   return &hash;
 }
@@ -104,7 +104,7 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__VehicleCommandAc
   {
     {px4_msgs__msg__VehicleCommandAck__FIELD_NAME__target_component, 16, 16},
     {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT16,
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT8,
       0,
       0,
       {NULL, 0, 0},
@@ -147,8 +147,6 @@ static char toplevel_type_raw_source[] =
   "# Used for acknowledging the vehicle command being received.\n"
   "# Follows the MAVLink COMMAND_ACK message definition\n"
   "\n"
-  "uint32 MESSAGE_VERSION = 0\n"
-  "\n"
   "uint64 timestamp\\t\\t# time since system start (microseconds)\n"
   "\n"
   "# Result cases. This follows the MAVLink MAV_RESULT enum definition\n"
@@ -175,7 +173,7 @@ static char toplevel_type_raw_source[] =
   "uint8 result_param1\\t\\t\\t\\t\\t# Also used as progress[%], it can be set with the reason why the command was denied, or the progress percentage when result is MAV_RESULT_IN_PROGRESS\n"
   "int32 result_param2\\t\\t\\t\\t\\t# Additional parameter of the result, example: which parameter of MAV_CMD_NAV_WAYPOINT caused it to be denied.\n"
   "uint8 target_system\n"
-  "uint16 target_component \\t\\t\\t\\t# Target component / mode executor\n"
+  "uint8 target_component\n"
   "\n"
   "bool from_external\\t\\t\\t\\t\\t# Indicates if the command came from an external source";
 
@@ -191,7 +189,7 @@ px4_msgs__msg__VehicleCommandAck__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__VehicleCommandAck__TYPE_NAME, 30, 30},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 1720, 1720},
+    {toplevel_type_raw_source, 1652, 1652},
   };
   return &source;
 }

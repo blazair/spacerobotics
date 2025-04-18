@@ -26,10 +26,6 @@ module px4_msgs {
       float voltage5v_v;
 
       @verbatim (language="comment", text=
-        "payload rail voltage")
-      float voltage_payload_v;
-
-      @verbatim (language="comment", text=
         "Sensors 3V3 rail voltage")
       float__4 sensors3v3;
 
@@ -68,10 +64,6 @@ module px4_msgs {
       @verbatim (language="comment", text=
         "5V for CAN1/GPS1 valid")
       uint8 can1_gps1_5v_valid;
-
-      @verbatim (language="comment", text=
-        "payload rail voltage is valid")
-      uint8 payload_v_valid;
     };
   };
 };

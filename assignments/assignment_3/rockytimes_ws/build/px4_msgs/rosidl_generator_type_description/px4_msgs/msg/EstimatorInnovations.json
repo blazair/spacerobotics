@@ -134,7 +134,27 @@
           "default_value": ""
         },
         {
+          "name": "aux_vvel",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
           "name": "flow",
+          "type": {
+            "type_id": 58,
+            "capacity": 2,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "terr_flow",
           "type": {
             "type_id": 58,
             "capacity": 2,
@@ -230,7 +250,7 @@
   "type_hashes": [
     {
       "type_name": "px4_msgs/msg/EstimatorInnovations",
-      "hash_string": "RIHS01_32756c14be46da333cb5593f1c3a675f4836013f5f7a942f0a0734e2559a529e"
+      "hash_string": "RIHS01_d5b23bfcc376b63dde8340e25b66fe6e20e52bec351baafa44db776a347d1ac9"
     }
   ]
 }

@@ -63,10 +63,10 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
-  // member: cs_gnss_pos
+  // member: cs_gps
   {
-    out << "cs_gnss_pos: ";
-    rosidl_generator_traits::value_to_yaml(msg.cs_gnss_pos, out);
+    out << "cs_gps: ";
+    rosidl_generator_traits::value_to_yaml(msg.cs_gps, out);
     out << ", ";
   }
 
@@ -203,10 +203,10 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
-  // member: cs_gnss_yaw
+  // member: cs_gps_yaw
   {
-    out << "cs_gnss_yaw: ";
-    rosidl_generator_traits::value_to_yaml(msg.cs_gnss_yaw, out);
+    out << "cs_gps_yaw: ";
+    rosidl_generator_traits::value_to_yaml(msg.cs_gps_yaw, out);
     out << ", ";
   }
 
@@ -238,10 +238,10 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
-  // member: cs_gnss_yaw_fault
+  // member: cs_gps_yaw_fault
   {
-    out << "cs_gnss_yaw_fault: ";
-    rosidl_generator_traits::value_to_yaml(msg.cs_gnss_yaw_fault, out);
+    out << "cs_gps_yaw_fault: ";
+    rosidl_generator_traits::value_to_yaml(msg.cs_gps_yaw_fault, out);
     out << ", ";
   }
 
@@ -291,76 +291,6 @@ inline void to_flow_style_yaml(
   {
     out << "cs_gravity_vector: ";
     rosidl_generator_traits::value_to_yaml(msg.cs_gravity_vector, out);
-    out << ", ";
-  }
-
-  // member: cs_mag
-  {
-    out << "cs_mag: ";
-    rosidl_generator_traits::value_to_yaml(msg.cs_mag, out);
-    out << ", ";
-  }
-
-  // member: cs_ev_yaw_fault
-  {
-    out << "cs_ev_yaw_fault: ";
-    rosidl_generator_traits::value_to_yaml(msg.cs_ev_yaw_fault, out);
-    out << ", ";
-  }
-
-  // member: cs_mag_heading_consistent
-  {
-    out << "cs_mag_heading_consistent: ";
-    rosidl_generator_traits::value_to_yaml(msg.cs_mag_heading_consistent, out);
-    out << ", ";
-  }
-
-  // member: cs_aux_gpos
-  {
-    out << "cs_aux_gpos: ";
-    rosidl_generator_traits::value_to_yaml(msg.cs_aux_gpos, out);
-    out << ", ";
-  }
-
-  // member: cs_rng_terrain
-  {
-    out << "cs_rng_terrain: ";
-    rosidl_generator_traits::value_to_yaml(msg.cs_rng_terrain, out);
-    out << ", ";
-  }
-
-  // member: cs_opt_flow_terrain
-  {
-    out << "cs_opt_flow_terrain: ";
-    rosidl_generator_traits::value_to_yaml(msg.cs_opt_flow_terrain, out);
-    out << ", ";
-  }
-
-  // member: cs_valid_fake_pos
-  {
-    out << "cs_valid_fake_pos: ";
-    rosidl_generator_traits::value_to_yaml(msg.cs_valid_fake_pos, out);
-    out << ", ";
-  }
-
-  // member: cs_constant_pos
-  {
-    out << "cs_constant_pos: ";
-    rosidl_generator_traits::value_to_yaml(msg.cs_constant_pos, out);
-    out << ", ";
-  }
-
-  // member: cs_baro_fault
-  {
-    out << "cs_baro_fault: ";
-    rosidl_generator_traits::value_to_yaml(msg.cs_baro_fault, out);
-    out << ", ";
-  }
-
-  // member: cs_gnss_vel
-  {
-    out << "cs_gnss_vel: ";
-    rosidl_generator_traits::value_to_yaml(msg.cs_gnss_vel, out);
     out << ", ";
   }
 
@@ -431,6 +361,55 @@ inline void to_flow_style_yaml(
   {
     out << "fs_bad_optflow_y: ";
     rosidl_generator_traits::value_to_yaml(msg.fs_bad_optflow_y, out);
+    out << ", ";
+  }
+
+  // member: fs_bad_vel_n
+  {
+    out << "fs_bad_vel_n: ";
+    rosidl_generator_traits::value_to_yaml(msg.fs_bad_vel_n, out);
+    out << ", ";
+  }
+
+  // member: fs_bad_vel_e
+  {
+    out << "fs_bad_vel_e: ";
+    rosidl_generator_traits::value_to_yaml(msg.fs_bad_vel_e, out);
+    out << ", ";
+  }
+
+  // member: fs_bad_vel_d
+  {
+    out << "fs_bad_vel_d: ";
+    rosidl_generator_traits::value_to_yaml(msg.fs_bad_vel_d, out);
+    out << ", ";
+  }
+
+  // member: fs_bad_pos_n
+  {
+    out << "fs_bad_pos_n: ";
+    rosidl_generator_traits::value_to_yaml(msg.fs_bad_pos_n, out);
+    out << ", ";
+  }
+
+  // member: fs_bad_pos_e
+  {
+    out << "fs_bad_pos_e: ";
+    rosidl_generator_traits::value_to_yaml(msg.fs_bad_pos_e, out);
+    out << ", ";
+  }
+
+  // member: fs_bad_pos_d
+  {
+    out << "fs_bad_pos_d: ";
+    rosidl_generator_traits::value_to_yaml(msg.fs_bad_pos_d, out);
+    out << ", ";
+  }
+
+  // member: fs_bad_acc_bias
+  {
+    out << "fs_bad_acc_bias: ";
+    rosidl_generator_traits::value_to_yaml(msg.fs_bad_acc_bias, out);
     out << ", ";
   }
 
@@ -580,13 +559,13 @@ inline void to_block_style_yaml(
     out << "\n";
   }
 
-  // member: cs_gnss_pos
+  // member: cs_gps
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "cs_gnss_pos: ";
-    rosidl_generator_traits::value_to_yaml(msg.cs_gnss_pos, out);
+    out << "cs_gps: ";
+    rosidl_generator_traits::value_to_yaml(msg.cs_gps, out);
     out << "\n";
   }
 
@@ -780,13 +759,13 @@ inline void to_block_style_yaml(
     out << "\n";
   }
 
-  // member: cs_gnss_yaw
+  // member: cs_gps_yaw
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "cs_gnss_yaw: ";
-    rosidl_generator_traits::value_to_yaml(msg.cs_gnss_yaw, out);
+    out << "cs_gps_yaw: ";
+    rosidl_generator_traits::value_to_yaml(msg.cs_gps_yaw, out);
     out << "\n";
   }
 
@@ -830,13 +809,13 @@ inline void to_block_style_yaml(
     out << "\n";
   }
 
-  // member: cs_gnss_yaw_fault
+  // member: cs_gps_yaw_fault
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "cs_gnss_yaw_fault: ";
-    rosidl_generator_traits::value_to_yaml(msg.cs_gnss_yaw_fault, out);
+    out << "cs_gps_yaw_fault: ";
+    rosidl_generator_traits::value_to_yaml(msg.cs_gps_yaw_fault, out);
     out << "\n";
   }
 
@@ -907,106 +886,6 @@ inline void to_block_style_yaml(
     }
     out << "cs_gravity_vector: ";
     rosidl_generator_traits::value_to_yaml(msg.cs_gravity_vector, out);
-    out << "\n";
-  }
-
-  // member: cs_mag
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "cs_mag: ";
-    rosidl_generator_traits::value_to_yaml(msg.cs_mag, out);
-    out << "\n";
-  }
-
-  // member: cs_ev_yaw_fault
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "cs_ev_yaw_fault: ";
-    rosidl_generator_traits::value_to_yaml(msg.cs_ev_yaw_fault, out);
-    out << "\n";
-  }
-
-  // member: cs_mag_heading_consistent
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "cs_mag_heading_consistent: ";
-    rosidl_generator_traits::value_to_yaml(msg.cs_mag_heading_consistent, out);
-    out << "\n";
-  }
-
-  // member: cs_aux_gpos
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "cs_aux_gpos: ";
-    rosidl_generator_traits::value_to_yaml(msg.cs_aux_gpos, out);
-    out << "\n";
-  }
-
-  // member: cs_rng_terrain
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "cs_rng_terrain: ";
-    rosidl_generator_traits::value_to_yaml(msg.cs_rng_terrain, out);
-    out << "\n";
-  }
-
-  // member: cs_opt_flow_terrain
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "cs_opt_flow_terrain: ";
-    rosidl_generator_traits::value_to_yaml(msg.cs_opt_flow_terrain, out);
-    out << "\n";
-  }
-
-  // member: cs_valid_fake_pos
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "cs_valid_fake_pos: ";
-    rosidl_generator_traits::value_to_yaml(msg.cs_valid_fake_pos, out);
-    out << "\n";
-  }
-
-  // member: cs_constant_pos
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "cs_constant_pos: ";
-    rosidl_generator_traits::value_to_yaml(msg.cs_constant_pos, out);
-    out << "\n";
-  }
-
-  // member: cs_baro_fault
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "cs_baro_fault: ";
-    rosidl_generator_traits::value_to_yaml(msg.cs_baro_fault, out);
-    out << "\n";
-  }
-
-  // member: cs_gnss_vel
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "cs_gnss_vel: ";
-    rosidl_generator_traits::value_to_yaml(msg.cs_gnss_vel, out);
     out << "\n";
   }
 
@@ -1107,6 +986,76 @@ inline void to_block_style_yaml(
     }
     out << "fs_bad_optflow_y: ";
     rosidl_generator_traits::value_to_yaml(msg.fs_bad_optflow_y, out);
+    out << "\n";
+  }
+
+  // member: fs_bad_vel_n
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "fs_bad_vel_n: ";
+    rosidl_generator_traits::value_to_yaml(msg.fs_bad_vel_n, out);
+    out << "\n";
+  }
+
+  // member: fs_bad_vel_e
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "fs_bad_vel_e: ";
+    rosidl_generator_traits::value_to_yaml(msg.fs_bad_vel_e, out);
+    out << "\n";
+  }
+
+  // member: fs_bad_vel_d
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "fs_bad_vel_d: ";
+    rosidl_generator_traits::value_to_yaml(msg.fs_bad_vel_d, out);
+    out << "\n";
+  }
+
+  // member: fs_bad_pos_n
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "fs_bad_pos_n: ";
+    rosidl_generator_traits::value_to_yaml(msg.fs_bad_pos_n, out);
+    out << "\n";
+  }
+
+  // member: fs_bad_pos_e
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "fs_bad_pos_e: ";
+    rosidl_generator_traits::value_to_yaml(msg.fs_bad_pos_e, out);
+    out << "\n";
+  }
+
+  // member: fs_bad_pos_d
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "fs_bad_pos_d: ";
+    rosidl_generator_traits::value_to_yaml(msg.fs_bad_pos_d, out);
+    out << "\n";
+  }
+
+  // member: fs_bad_acc_bias
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "fs_bad_acc_bias: ";
+    rosidl_generator_traits::value_to_yaml(msg.fs_bad_acc_bias, out);
     out << "\n";
   }
 

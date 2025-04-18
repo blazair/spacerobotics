@@ -1,0 +1,9 @@
+-- Install configuration: ""
+-- Up-to-date: /home/blazar/workspaces/rockytimes_ws/install/mission/lib/mission/mission.py
+-- Installing: /home/blazar/workspaces/rockytimes_ws/install/mission/lib/mission/aruco_tracker.py
+[31mCMake Error at cmake_install.cmake:46 (file):
+  file INSTALL cannot find
+  "/home/blazar/workspaces/rockytimes_ws/src/mission/scripts/geometry_tracker.py":
+  No such file or directory.
+
+[0m

@@ -39,8 +39,8 @@ cdr_serialize(
   // Member: timestamp
   cdr << ros_message.timestamp;
 
-  // Member: last_at_ok_timestamp
-  cdr << ros_message.last_at_ok_timestamp;
+  // Member: last_heartbeat
+  cdr << ros_message.last_heartbeat;
 
   // Member: tx_buf_write_index
   cdr << ros_message.tx_buf_write_index;
@@ -93,8 +93,8 @@ cdr_deserialize(
   // Member: timestamp
   cdr >> ros_message.timestamp;
 
-  // Member: last_at_ok_timestamp
-  cdr >> ros_message.last_at_ok_timestamp;
+  // Member: last_heartbeat
+  cdr >> ros_message.last_heartbeat;
 
   // Member: tx_buf_write_index
   cdr >> ros_message.tx_buf_write_index;
@@ -179,9 +179,9 @@ get_serialized_size(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Member: last_at_ok_timestamp
+  // Member: last_heartbeat
   {
-    size_t item_size = sizeof(ros_message.last_at_ok_timestamp);
+    size_t item_size = sizeof(ros_message.last_heartbeat);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -307,7 +307,7 @@ max_serialized_size_IridiumsbdStatus(
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
-  // Member: last_at_ok_timestamp
+  // Member: last_heartbeat
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint64_t);
@@ -424,8 +424,8 @@ cdr_serialize_key(
   // Member: timestamp
   cdr << ros_message.timestamp;
 
-  // Member: last_at_ok_timestamp
-  cdr << ros_message.last_at_ok_timestamp;
+  // Member: last_heartbeat
+  cdr << ros_message.last_heartbeat;
 
   // Member: tx_buf_write_index
   cdr << ros_message.tx_buf_write_index;
@@ -489,9 +489,9 @@ get_serialized_size_key(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Member: last_at_ok_timestamp
+  // Member: last_heartbeat
   {
-    size_t item_size = sizeof(ros_message.last_at_ok_timestamp);
+    size_t item_size = sizeof(ros_message.last_heartbeat);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -617,7 +617,7 @@ max_serialized_size_key_IridiumsbdStatus(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
-  // Member: last_at_ok_timestamp
+  // Member: last_heartbeat
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint64_t);

@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "px4_msgs/msg/detail/gimbal_device_set_attitude__type_support.h"
-#include "rosidl_typesupport_interface/macros.h"
 #include "px4_msgs/msg/detail/gimbal_device_set_attitude__functions.h"
 #include "px4_msgs/msg/detail/gimbal_device_set_attitude__struct.h"
+#include "rosidl_typesupport_interface/macros.h"
+#include "px4_msgs/msg/detail/gimbal_device_set_attitude__type_support.h"
 
 #ifdef __cplusplus
 extern "C"

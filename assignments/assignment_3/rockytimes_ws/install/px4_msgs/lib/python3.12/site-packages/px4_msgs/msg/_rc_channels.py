@@ -61,7 +61,6 @@ class Metaclass_RcChannels(type):
         'FUNCTION_FLTBTN_SLOT_5': 25,
         'FUNCTION_FLTBTN_SLOT_6': 26,
         'FUNCTION_ENGAGE_MAIN_MOTOR': 27,
-        'FUNCTION_PAYLOAD_POWER': 28,
         'FUNCTION_FLTBTN_SLOT_COUNT': 6,
     }
 
@@ -119,7 +118,6 @@ class Metaclass_RcChannels(type):
             'FUNCTION_FLTBTN_SLOT_5': cls.__constants['FUNCTION_FLTBTN_SLOT_5'],
             'FUNCTION_FLTBTN_SLOT_6': cls.__constants['FUNCTION_FLTBTN_SLOT_6'],
             'FUNCTION_ENGAGE_MAIN_MOTOR': cls.__constants['FUNCTION_ENGAGE_MAIN_MOTOR'],
-            'FUNCTION_PAYLOAD_POWER': cls.__constants['FUNCTION_PAYLOAD_POWER'],
             'FUNCTION_FLTBTN_SLOT_COUNT': cls.__constants['FUNCTION_FLTBTN_SLOT_COUNT'],
         }
 
@@ -264,11 +262,6 @@ class Metaclass_RcChannels(type):
         return Metaclass_RcChannels.__constants['FUNCTION_ENGAGE_MAIN_MOTOR']
 
     @property
-    def FUNCTION_PAYLOAD_POWER(self):
-        """Message constant 'FUNCTION_PAYLOAD_POWER'."""
-        return Metaclass_RcChannels.__constants['FUNCTION_PAYLOAD_POWER']
-
-    @property
     def FUNCTION_FLTBTN_SLOT_COUNT(self):
         """Message constant 'FUNCTION_FLTBTN_SLOT_COUNT'."""
         return Metaclass_RcChannels.__constants['FUNCTION_FLTBTN_SLOT_COUNT']
@@ -307,7 +300,6 @@ class RcChannels(metaclass=Metaclass_RcChannels):
       FUNCTION_FLTBTN_SLOT_5
       FUNCTION_FLTBTN_SLOT_6
       FUNCTION_ENGAGE_MAIN_MOTOR
-      FUNCTION_PAYLOAD_POWER
       FUNCTION_FLTBTN_SLOT_COUNT
     """
 
@@ -328,7 +320,7 @@ class RcChannels(metaclass=Metaclass_RcChannels):
         'timestamp_last_valid': 'uint64',
         'channels': 'float[18]',
         'channel_count': 'uint8',
-        'function': 'int8[29]',
+        'function': 'int8[28]',
         'rssi': 'uint8',
         'signal_lost': 'boolean',
         'frame_drop_count': 'uint32',
@@ -341,7 +333,7 @@ class RcChannels(metaclass=Metaclass_RcChannels):
         rosidl_parser.definition.BasicType('uint64'),  # noqa: E501
         rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('float'), 18),  # noqa: E501
         rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
-        rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('int8'), 29),  # noqa: E501
+        rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('int8'), 28),  # noqa: E501
         rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint32'),  # noqa: E501
@@ -365,10 +357,10 @@ class RcChannels(metaclass=Metaclass_RcChannels):
             assert self.channels.shape == (18, )
         self.channel_count = kwargs.get('channel_count', int())
         if 'function' not in kwargs:
-            self.function = numpy.zeros(29, dtype=numpy.int8)
+            self.function = numpy.zeros(28, dtype=numpy.int8)
         else:
             self.function = numpy.array(kwargs.get('function'), dtype=numpy.int8)
-            assert self.function.shape == (29, )
+            assert self.function.shape == (28, )
         self.rssi = kwargs.get('rssi', int())
         self.signal_lost = kwargs.get('signal_lost', bool())
         self.frame_drop_count = kwargs.get('frame_drop_count', int())
@@ -513,8 +505,8 @@ class RcChannels(metaclass=Metaclass_RcChannels):
             if isinstance(value, numpy.ndarray):
                 assert value.dtype == numpy.int8, \
                     "The 'function' numpy.ndarray() must have the dtype of 'numpy.int8'"
-                assert value.size == 29, \
-                    "The 'function' numpy.ndarray() must have a size of 29"
+                assert value.size == 28, \
+                    "The 'function' numpy.ndarray() must have a size of 28"
                 self._function = value
                 return
             from collections.abc import Sequence
@@ -527,10 +519,10 @@ class RcChannels(metaclass=Metaclass_RcChannels):
                   isinstance(value, UserList)) and
                  not isinstance(value, str) and
                  not isinstance(value, UserString) and
-                 len(value) == 29 and
+                 len(value) == 28 and
                  all(isinstance(v, int) for v in value) and
                  all(val >= -128 and val < 128 for val in value)), \
-                "The 'function' field must be a set or sequence with length 29 and each value of type 'int' and each integer in [-128, 127]"
+                "The 'function' field must be a set or sequence with length 28 and each value of type 'int' and each integer in [-128, 127]"
         self._function = numpy.array(value, dtype=numpy.int8)
 
     @builtins.property

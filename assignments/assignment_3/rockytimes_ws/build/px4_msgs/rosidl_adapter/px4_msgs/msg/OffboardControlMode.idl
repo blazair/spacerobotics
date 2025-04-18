@@ -22,9 +22,7 @@ module px4_msgs {
 
       boolean body_rate;
 
-      boolean thrust_and_torque;
-
-      boolean direct_actuator;
+      boolean actuator;
     };
   };
 };

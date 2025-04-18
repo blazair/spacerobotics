@@ -48,6 +48,9 @@ cdr_serialize(
   // Member: true_airspeed_m_s
   cdr << ros_message.true_airspeed_m_s;
 
+  // Member: air_temperature_celsius
+  cdr << ros_message.air_temperature_celsius;
+
   // Member: confidence
   cdr << ros_message.confidence;
 
@@ -71,6 +74,9 @@ cdr_deserialize(
 
   // Member: true_airspeed_m_s
   cdr >> ros_message.true_airspeed_m_s;
+
+  // Member: air_temperature_celsius
+  cdr >> ros_message.air_temperature_celsius;
 
   // Member: confidence
   cdr >> ros_message.confidence;
@@ -116,6 +122,13 @@ get_serialized_size(
   // Member: true_airspeed_m_s
   {
     size_t item_size = sizeof(ros_message.true_airspeed_m_s);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: air_temperature_celsius
+  {
+    size_t item_size = sizeof(ros_message.air_temperature_celsius);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -178,6 +191,13 @@ max_serialized_size_Airspeed(
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
+  // Member: air_temperature_celsius
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
   // Member: confidence
   {
     size_t array_size = 1;
@@ -219,6 +239,9 @@ cdr_serialize_key(
 
   // Member: true_airspeed_m_s
   cdr << ros_message.true_airspeed_m_s;
+
+  // Member: air_temperature_celsius
+  cdr << ros_message.air_temperature_celsius;
 
   // Member: confidence
   cdr << ros_message.confidence;
@@ -263,6 +286,13 @@ get_serialized_size_key(
   // Member: true_airspeed_m_s
   {
     size_t item_size = sizeof(ros_message.true_airspeed_m_s);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: air_temperature_celsius
+  {
+    size_t item_size = sizeof(ros_message.air_temperature_celsius);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -321,6 +351,14 @@ max_serialized_size_key_Airspeed(
   }
 
   // Member: true_airspeed_m_s
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Member: air_temperature_celsius
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint32_t);

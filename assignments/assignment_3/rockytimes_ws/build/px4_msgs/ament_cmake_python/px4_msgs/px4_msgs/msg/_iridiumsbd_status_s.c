@@ -59,13 +59,13 @@ bool px4_msgs__msg__iridiumsbd_status__convert_from_py(PyObject * _pymsg, void *
     ros_message->timestamp = PyLong_AsUnsignedLongLong(field);
     Py_DECREF(field);
   }
-  {  // last_at_ok_timestamp
-    PyObject * field = PyObject_GetAttrString(_pymsg, "last_at_ok_timestamp");
+  {  // last_heartbeat
+    PyObject * field = PyObject_GetAttrString(_pymsg, "last_heartbeat");
     if (!field) {
       return false;
     }
     assert(PyLong_Check(field));
-    ros_message->last_at_ok_timestamp = PyLong_AsUnsignedLongLong(field);
+    ros_message->last_heartbeat = PyLong_AsUnsignedLongLong(field);
     Py_DECREF(field);
   }
   {  // tx_buf_write_index
@@ -218,11 +218,11 @@ PyObject * px4_msgs__msg__iridiumsbd_status__convert_to_py(void * raw_ros_messag
       }
     }
   }
-  {  // last_at_ok_timestamp
+  {  // last_heartbeat
     PyObject * field = NULL;
-    field = PyLong_FromUnsignedLongLong(ros_message->last_at_ok_timestamp);
+    field = PyLong_FromUnsignedLongLong(ros_message->last_heartbeat);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "last_at_ok_timestamp", field);
+      int rc = PyObject_SetAttrString(_pymessage, "last_heartbeat", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

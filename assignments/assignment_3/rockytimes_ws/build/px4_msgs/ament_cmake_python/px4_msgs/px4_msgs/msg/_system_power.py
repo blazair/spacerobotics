@@ -137,7 +137,6 @@ class SystemPower(metaclass=Metaclass_SystemPower):
     __slots__ = [
         '_timestamp',
         '_voltage5v_v',
-        '_voltage_payload_v',
         '_sensors3v3',
         '_sensors3v3_valid',
         '_usb_connected',
@@ -148,14 +147,12 @@ class SystemPower(metaclass=Metaclass_SystemPower):
         '_hipower_5v_oc',
         '_comp_5v_valid',
         '_can1_gps1_5v_valid',
-        '_payload_v_valid',
         '_check_fields',
     ]
 
     _fields_and_field_types = {
         'timestamp': 'uint64',
         'voltage5v_v': 'float',
-        'voltage_payload_v': 'float',
         'sensors3v3': 'float[4]',
         'sensors3v3_valid': 'uint8',
         'usb_connected': 'uint8',
@@ -166,7 +163,6 @@ class SystemPower(metaclass=Metaclass_SystemPower):
         'hipower_5v_oc': 'uint8',
         'comp_5v_valid': 'uint8',
         'can1_gps1_5v_valid': 'uint8',
-        'payload_v_valid': 'uint8',
     }
 
     # This attribute is used to store an rosidl_parser.definition variable
@@ -174,9 +170,7 @@ class SystemPower(metaclass=Metaclass_SystemPower):
     SLOT_TYPES = (
         rosidl_parser.definition.BasicType('uint64'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
-        rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('float'), 4),  # noqa: E501
-        rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
@@ -199,7 +193,6 @@ class SystemPower(metaclass=Metaclass_SystemPower):
                 ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.timestamp = kwargs.get('timestamp', int())
         self.voltage5v_v = kwargs.get('voltage5v_v', float())
-        self.voltage_payload_v = kwargs.get('voltage_payload_v', float())
         if 'sensors3v3' not in kwargs:
             self.sensors3v3 = numpy.zeros(4, dtype=numpy.float32)
         else:
@@ -214,7 +207,6 @@ class SystemPower(metaclass=Metaclass_SystemPower):
         self.hipower_5v_oc = kwargs.get('hipower_5v_oc', int())
         self.comp_5v_valid = kwargs.get('comp_5v_valid', int())
         self.can1_gps1_5v_valid = kwargs.get('can1_gps1_5v_valid', int())
-        self.payload_v_valid = kwargs.get('payload_v_valid', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -250,8 +242,6 @@ class SystemPower(metaclass=Metaclass_SystemPower):
             return False
         if self.voltage5v_v != other.voltage5v_v:
             return False
-        if self.voltage_payload_v != other.voltage_payload_v:
-            return False
         if all(self.sensors3v3 != other.sensors3v3):
             return False
         if self.sensors3v3_valid != other.sensors3v3_valid:
@@ -271,8 +261,6 @@ class SystemPower(metaclass=Metaclass_SystemPower):
         if self.comp_5v_valid != other.comp_5v_valid:
             return False
         if self.can1_gps1_5v_valid != other.can1_gps1_5v_valid:
-            return False
-        if self.payload_v_valid != other.payload_v_valid:
             return False
         return True
 
@@ -310,21 +298,6 @@ class SystemPower(metaclass=Metaclass_SystemPower):
             assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
                 "The 'voltage5v_v' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
         self._voltage5v_v = value
-
-    @builtins.property
-    def voltage_payload_v(self):
-        """Message field 'voltage_payload_v'."""
-        return self._voltage_payload_v
-
-    @voltage_payload_v.setter
-    def voltage_payload_v(self, value):
-        if self._check_fields:
-            assert \
-                isinstance(value, float), \
-                "The 'voltage_payload_v' field must be of type 'float'"
-            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'voltage_payload_v' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
-        self._voltage_payload_v = value
 
     @builtins.property
     def sensors3v3(self):
@@ -491,18 +464,3 @@ class SystemPower(metaclass=Metaclass_SystemPower):
             assert value >= 0 and value < 256, \
                 "The 'can1_gps1_5v_valid' field must be an unsigned integer in [0, 255]"
         self._can1_gps1_5v_valid = value
-
-    @builtins.property
-    def payload_v_valid(self):
-        """Message field 'payload_v_valid'."""
-        return self._payload_v_valid
-
-    @payload_v_valid.setter
-    def payload_v_valid(self, value):
-        if self._check_fields:
-            assert \
-                isinstance(value, int), \
-                "The 'payload_v_valid' field must be of type 'int'"
-            assert value >= 0 and value < 256, \
-                "The 'payload_v_valid' field must be an unsigned integer in [0, 255]"
-        self._payload_v_valid = value

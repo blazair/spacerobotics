@@ -60,15 +60,6 @@ cdr_serialize(
   // Member: selected_airspeed_index
   cdr << ros_message.selected_airspeed_index;
 
-  // Member: airspeed_derivative_filtered
-  cdr << ros_message.airspeed_derivative_filtered;
-
-  // Member: throttle_filtered
-  cdr << ros_message.throttle_filtered;
-
-  // Member: pitch_filtered
-  cdr << ros_message.pitch_filtered;
-
   return true;
 }
 
@@ -105,15 +96,6 @@ cdr_deserialize(
 
   // Member: selected_airspeed_index
   cdr >> ros_message.selected_airspeed_index;
-
-  // Member: airspeed_derivative_filtered
-  cdr >> ros_message.airspeed_derivative_filtered;
-
-  // Member: throttle_filtered
-  cdr >> ros_message.throttle_filtered;
-
-  // Member: pitch_filtered
-  cdr >> ros_message.pitch_filtered;
 
   return true;
 }
@@ -184,27 +166,6 @@ get_serialized_size(
   // Member: selected_airspeed_index
   {
     size_t item_size = sizeof(ros_message.selected_airspeed_index);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: airspeed_derivative_filtered
-  {
-    size_t item_size = sizeof(ros_message.airspeed_derivative_filtered);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: throttle_filtered
-  {
-    size_t item_size = sizeof(ros_message.throttle_filtered);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: pitch_filtered
-  {
-    size_t item_size = sizeof(ros_message.pitch_filtered);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -286,27 +247,6 @@ max_serialized_size_AirspeedValidated(
     last_member_size = array_size * sizeof(uint8_t);
     current_alignment += array_size * sizeof(uint8_t);
   }
-  // Member: airspeed_derivative_filtered
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-  // Member: throttle_filtered
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-  // Member: pitch_filtered
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
 
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
@@ -316,7 +256,7 @@ max_serialized_size_AirspeedValidated(
     using DataType = px4_msgs::msg::AirspeedValidated;
     is_plain =
       (
-      offsetof(DataType, pitch_filtered) +
+      offsetof(DataType, selected_airspeed_index) +
       last_member_size
       ) == ret_val;
   }
@@ -353,15 +293,6 @@ cdr_serialize_key(
 
   // Member: selected_airspeed_index
   cdr << ros_message.selected_airspeed_index;
-
-  // Member: airspeed_derivative_filtered
-  cdr << ros_message.airspeed_derivative_filtered;
-
-  // Member: throttle_filtered
-  cdr << ros_message.throttle_filtered;
-
-  // Member: pitch_filtered
-  cdr << ros_message.pitch_filtered;
 
   return true;
 }
@@ -431,27 +362,6 @@ get_serialized_size_key(
   // Member: selected_airspeed_index
   {
     size_t item_size = sizeof(ros_message.selected_airspeed_index);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: airspeed_derivative_filtered
-  {
-    size_t item_size = sizeof(ros_message.airspeed_derivative_filtered);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: throttle_filtered
-  {
-    size_t item_size = sizeof(ros_message.throttle_filtered);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: pitch_filtered
-  {
-    size_t item_size = sizeof(ros_message.pitch_filtered);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -540,30 +450,6 @@ max_serialized_size_key_AirspeedValidated(
     current_alignment += array_size * sizeof(uint8_t);
   }
 
-  // Member: airspeed_derivative_filtered
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Member: throttle_filtered
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Member: pitch_filtered
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
     // All members are plain, and type is not empty.
@@ -572,7 +458,7 @@ max_serialized_size_key_AirspeedValidated(
     using DataType = px4_msgs::msg::AirspeedValidated;
     is_plain =
       (
-      offsetof(DataType, pitch_filtered) +
+      offsetof(DataType, selected_airspeed_index) +
       last_member_size
       ) == ret_val;
   }

@@ -25,10 +25,9 @@ px4_msgs__msg__EstimatorAidSource2d__init(px4_msgs__msg__EstimatorAidSource2d * 
   // observation
   // observation_variance
   // innovation
-  // innovation_filtered
   // innovation_variance
   // test_ratio
-  // test_ratio_filtered
+  // fusion_enabled
   // innovation_rejected
   // fused
   return true;
@@ -48,10 +47,9 @@ px4_msgs__msg__EstimatorAidSource2d__fini(px4_msgs__msg__EstimatorAidSource2d * 
   // observation
   // observation_variance
   // innovation
-  // innovation_filtered
   // innovation_variance
   // test_ratio
-  // test_ratio_filtered
+  // fusion_enabled
   // innovation_rejected
   // fused
 }
@@ -100,12 +98,6 @@ px4_msgs__msg__EstimatorAidSource2d__are_equal(const px4_msgs__msg__EstimatorAid
       return false;
     }
   }
-  // innovation_filtered
-  for (size_t i = 0; i < 2; ++i) {
-    if (lhs->innovation_filtered[i] != rhs->innovation_filtered[i]) {
-      return false;
-    }
-  }
   // innovation_variance
   for (size_t i = 0; i < 2; ++i) {
     if (lhs->innovation_variance[i] != rhs->innovation_variance[i]) {
@@ -118,11 +110,9 @@ px4_msgs__msg__EstimatorAidSource2d__are_equal(const px4_msgs__msg__EstimatorAid
       return false;
     }
   }
-  // test_ratio_filtered
-  for (size_t i = 0; i < 2; ++i) {
-    if (lhs->test_ratio_filtered[i] != rhs->test_ratio_filtered[i]) {
-      return false;
-    }
+  // fusion_enabled
+  if (lhs->fusion_enabled != rhs->fusion_enabled) {
+    return false;
   }
   // innovation_rejected
   if (lhs->innovation_rejected != rhs->innovation_rejected) {
@@ -165,10 +155,6 @@ px4_msgs__msg__EstimatorAidSource2d__copy(
   for (size_t i = 0; i < 2; ++i) {
     output->innovation[i] = input->innovation[i];
   }
-  // innovation_filtered
-  for (size_t i = 0; i < 2; ++i) {
-    output->innovation_filtered[i] = input->innovation_filtered[i];
-  }
   // innovation_variance
   for (size_t i = 0; i < 2; ++i) {
     output->innovation_variance[i] = input->innovation_variance[i];
@@ -177,10 +163,8 @@ px4_msgs__msg__EstimatorAidSource2d__copy(
   for (size_t i = 0; i < 2; ++i) {
     output->test_ratio[i] = input->test_ratio[i];
   }
-  // test_ratio_filtered
-  for (size_t i = 0; i < 2; ++i) {
-    output->test_ratio_filtered[i] = input->test_ratio_filtered[i];
-  }
+  // fusion_enabled
+  output->fusion_enabled = input->fusion_enabled;
   // innovation_rejected
   output->innovation_rejected = input->innovation_rejected;
   // fused

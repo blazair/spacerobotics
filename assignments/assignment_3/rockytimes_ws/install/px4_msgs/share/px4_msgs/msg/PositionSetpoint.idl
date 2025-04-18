@@ -24,12 +24,6 @@ module px4_msgs {
       @verbatim (language="comment", text=
         "do nothing, switch off motors or keep at idle speed (MC)")
       const uint8 SETPOINT_TYPE_IDLE = 5;
-      @verbatim (language="comment", text=
-        "Circular pattern")
-      const uint8 LOITER_TYPE_ORBIT = 0;
-      @verbatim (language="comment", text=
-        "Pattern resembling an 8")
-      const uint8 LOITER_TYPE_FIGUREEIGHT = 1;
     };
     @verbatim (language="comment", text=
       "this file is only used in the position_setpoint triple as a dependency")
@@ -71,36 +65,32 @@ module px4_msgs {
       float alt;
 
       @verbatim (language="comment", text=
-        "yaw (only in hover), in rad [-PI..PI), NaN = leave to flight task")
+        "yaw (only for multirotors), in rad [-PI..PI), NaN = hold current yaw")
       float yaw;
 
       @verbatim (language="comment", text=
-        "loiter major axis radius in m")
-      float loiter_radius;
+        "true if yaw setpoint valid")
+      boolean yaw_valid;
 
       @verbatim (language="comment", text=
-        "loiter minor axis radius (used for non-circular loiter shapes) in m")
-      float loiter_minor_radius;
+        "yawspeed (only for multirotors, in rad/s)")
+      float yawspeed;
+
+      @verbatim (language="comment", text=
+        "true if yawspeed setpoint valid")
+      boolean yawspeed_valid;
+
+      @verbatim (language="comment", text=
+        "loiter radius (only for fixed wing), in m")
+      float loiter_radius;
 
       @verbatim (language="comment", text=
         "loiter direction is clockwise by default and can be changed using this field")
       boolean loiter_direction_counter_clockwise;
 
       @verbatim (language="comment", text=
-        "Orientation of the major axis with respect to true north in rad [-pi,pi)")
-      float loiter_orientation;
-
-      @verbatim (language="comment", text=
-        "loitern pattern to follow")
-      uint8 loiter_pattern;
-
-      @verbatim (language="comment", text=
-        "horizontal acceptance_radius (meters)")
+        "navigation acceptance_radius if we're doing waypoint navigation")
       float acceptance_radius;
-
-      @verbatim (language="comment", text=
-        "vertical acceptance radius, only used for fixed wing guidance, NAN = let guidance choose (meters)")
-      float alt_acceptance_radius;
 
       @verbatim (language="comment", text=
         "the generally desired cruising speed (not a hard constraint)")
@@ -113,6 +103,10 @@ module px4_msgs {
       @verbatim (language="comment", text=
         "the generally desired cruising throttle (not a hard constraint), only has an effect for rover")
       float cruising_throttle;
+
+      @verbatim (language="comment", text=
+        "VTOL: disable (in auto mode) the weather vane feature that turns the nose into the wind")
+      boolean disable_weather_vane;
     };
   };
 };

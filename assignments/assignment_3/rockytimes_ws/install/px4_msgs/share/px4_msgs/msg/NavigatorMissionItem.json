@@ -14,6 +14,16 @@
           "default_value": ""
         },
         {
+          "name": "instance_count",
+          "type": {
+            "type_id": 7,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
           "name": "sequence_current",
           "type": {
             "type_id": 5,
@@ -180,7 +190,7 @@
   "type_hashes": [
     {
       "type_name": "px4_msgs/msg/NavigatorMissionItem",
-      "hash_string": "RIHS01_4a4a745bb93a91d319d9e3a38654828be756bc6747c8cafcb6003f0701da8a9e"
+      "hash_string": "RIHS01_d9505aaf5bb5be0e91ddb645ba0f7806117137d01274559792b164eb92ea5360"
     }
   ]
 }

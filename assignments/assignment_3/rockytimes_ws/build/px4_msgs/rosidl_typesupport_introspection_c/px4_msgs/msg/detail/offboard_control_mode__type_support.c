@@ -31,7 +31,7 @@ void px4_msgs__msg__OffboardControlMode__rosidl_typesupport_introspection_c__Off
   px4_msgs__msg__OffboardControlMode__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__OffboardControlMode__rosidl_typesupport_introspection_c__OffboardControlMode_message_member_array[8] = {
+static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__OffboardControlMode__rosidl_typesupport_introspection_c__OffboardControlMode_message_member_array[7] = {
   {
     "timestamp",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_UINT64,  // type
@@ -141,7 +141,7 @@ static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__Offboard
     NULL  // resize(index) function pointer
   },
   {
-    "thrust_and_torque",  // name
+    "actuator",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
@@ -149,25 +149,7 @@ static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__Offboard
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(px4_msgs__msg__OffboardControlMode, thrust_and_torque),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
-  },
-  {
-    "direct_actuator",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(px4_msgs__msg__OffboardControlMode, direct_actuator),  // bytes offset in struct
+    offsetof(px4_msgs__msg__OffboardControlMode, actuator),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -181,7 +163,7 @@ static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__Offboard
 static const rosidl_typesupport_introspection_c__MessageMembers px4_msgs__msg__OffboardControlMode__rosidl_typesupport_introspection_c__OffboardControlMode_message_members = {
   "px4_msgs__msg",  // message namespace
   "OffboardControlMode",  // message name
-  8,  // number of fields
+  7,  // number of fields
   sizeof(px4_msgs__msg__OffboardControlMode),
   false,  // has_any_key_member_
   px4_msgs__msg__OffboardControlMode__rosidl_typesupport_introspection_c__OffboardControlMode_message_member_array,  // message members

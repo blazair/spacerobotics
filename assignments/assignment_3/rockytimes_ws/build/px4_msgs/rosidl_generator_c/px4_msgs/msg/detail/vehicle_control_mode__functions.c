@@ -23,16 +23,14 @@ px4_msgs__msg__VehicleControlMode__init(px4_msgs__msg__VehicleControlMode * msg)
   // flag_control_manual_enabled
   // flag_control_auto_enabled
   // flag_control_offboard_enabled
-  // flag_control_position_enabled
+  // flag_control_rates_enabled
+  // flag_control_attitude_enabled
+  // flag_control_acceleration_enabled
   // flag_control_velocity_enabled
+  // flag_control_position_enabled
   // flag_control_altitude_enabled
   // flag_control_climb_rate_enabled
-  // flag_control_acceleration_enabled
-  // flag_control_attitude_enabled
-  // flag_control_rates_enabled
-  // flag_control_allocation_enabled
   // flag_control_termination_enabled
-  // source_id
   return true;
 }
 
@@ -48,16 +46,14 @@ px4_msgs__msg__VehicleControlMode__fini(px4_msgs__msg__VehicleControlMode * msg)
   // flag_control_manual_enabled
   // flag_control_auto_enabled
   // flag_control_offboard_enabled
-  // flag_control_position_enabled
+  // flag_control_rates_enabled
+  // flag_control_attitude_enabled
+  // flag_control_acceleration_enabled
   // flag_control_velocity_enabled
+  // flag_control_position_enabled
   // flag_control_altitude_enabled
   // flag_control_climb_rate_enabled
-  // flag_control_acceleration_enabled
-  // flag_control_attitude_enabled
-  // flag_control_rates_enabled
-  // flag_control_allocation_enabled
   // flag_control_termination_enabled
-  // source_id
 }
 
 bool
@@ -90,12 +86,24 @@ px4_msgs__msg__VehicleControlMode__are_equal(const px4_msgs__msg__VehicleControl
   if (lhs->flag_control_offboard_enabled != rhs->flag_control_offboard_enabled) {
     return false;
   }
-  // flag_control_position_enabled
-  if (lhs->flag_control_position_enabled != rhs->flag_control_position_enabled) {
+  // flag_control_rates_enabled
+  if (lhs->flag_control_rates_enabled != rhs->flag_control_rates_enabled) {
+    return false;
+  }
+  // flag_control_attitude_enabled
+  if (lhs->flag_control_attitude_enabled != rhs->flag_control_attitude_enabled) {
+    return false;
+  }
+  // flag_control_acceleration_enabled
+  if (lhs->flag_control_acceleration_enabled != rhs->flag_control_acceleration_enabled) {
     return false;
   }
   // flag_control_velocity_enabled
   if (lhs->flag_control_velocity_enabled != rhs->flag_control_velocity_enabled) {
+    return false;
+  }
+  // flag_control_position_enabled
+  if (lhs->flag_control_position_enabled != rhs->flag_control_position_enabled) {
     return false;
   }
   // flag_control_altitude_enabled
@@ -106,28 +114,8 @@ px4_msgs__msg__VehicleControlMode__are_equal(const px4_msgs__msg__VehicleControl
   if (lhs->flag_control_climb_rate_enabled != rhs->flag_control_climb_rate_enabled) {
     return false;
   }
-  // flag_control_acceleration_enabled
-  if (lhs->flag_control_acceleration_enabled != rhs->flag_control_acceleration_enabled) {
-    return false;
-  }
-  // flag_control_attitude_enabled
-  if (lhs->flag_control_attitude_enabled != rhs->flag_control_attitude_enabled) {
-    return false;
-  }
-  // flag_control_rates_enabled
-  if (lhs->flag_control_rates_enabled != rhs->flag_control_rates_enabled) {
-    return false;
-  }
-  // flag_control_allocation_enabled
-  if (lhs->flag_control_allocation_enabled != rhs->flag_control_allocation_enabled) {
-    return false;
-  }
   // flag_control_termination_enabled
   if (lhs->flag_control_termination_enabled != rhs->flag_control_termination_enabled) {
-    return false;
-  }
-  // source_id
-  if (lhs->source_id != rhs->source_id) {
     return false;
   }
   return true;
@@ -153,26 +141,22 @@ px4_msgs__msg__VehicleControlMode__copy(
   output->flag_control_auto_enabled = input->flag_control_auto_enabled;
   // flag_control_offboard_enabled
   output->flag_control_offboard_enabled = input->flag_control_offboard_enabled;
-  // flag_control_position_enabled
-  output->flag_control_position_enabled = input->flag_control_position_enabled;
+  // flag_control_rates_enabled
+  output->flag_control_rates_enabled = input->flag_control_rates_enabled;
+  // flag_control_attitude_enabled
+  output->flag_control_attitude_enabled = input->flag_control_attitude_enabled;
+  // flag_control_acceleration_enabled
+  output->flag_control_acceleration_enabled = input->flag_control_acceleration_enabled;
   // flag_control_velocity_enabled
   output->flag_control_velocity_enabled = input->flag_control_velocity_enabled;
+  // flag_control_position_enabled
+  output->flag_control_position_enabled = input->flag_control_position_enabled;
   // flag_control_altitude_enabled
   output->flag_control_altitude_enabled = input->flag_control_altitude_enabled;
   // flag_control_climb_rate_enabled
   output->flag_control_climb_rate_enabled = input->flag_control_climb_rate_enabled;
-  // flag_control_acceleration_enabled
-  output->flag_control_acceleration_enabled = input->flag_control_acceleration_enabled;
-  // flag_control_attitude_enabled
-  output->flag_control_attitude_enabled = input->flag_control_attitude_enabled;
-  // flag_control_rates_enabled
-  output->flag_control_rates_enabled = input->flag_control_rates_enabled;
-  // flag_control_allocation_enabled
-  output->flag_control_allocation_enabled = input->flag_control_allocation_enabled;
   // flag_control_termination_enabled
   output->flag_control_termination_enabled = input->flag_control_termination_enabled;
-  // source_id
-  output->source_id = input->source_id;
   return true;
 }
 

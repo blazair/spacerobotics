@@ -52,8 +52,6 @@ typedef struct px4_msgs__msg__NpfgStatus
   float p_gain;
   /// controller time constant
   float time_const;
-  /// estimate of certainty of the correct functionality of the npfg roll setpoint in [0, 1]
-  float can_run_factor;
 } px4_msgs__msg__NpfgStatus;
 
 // Struct for a sequence of px4_msgs__msg__NpfgStatus.

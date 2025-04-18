@@ -54,26 +54,14 @@ cdr_serialize(
   // Member: alt_ellipsoid
   cdr << ros_message.alt_ellipsoid;
 
-  // Member: lat_lon_valid
-  cdr << (ros_message.lat_lon_valid ? true : false);
-
-  // Member: alt_valid
-  cdr << (ros_message.alt_valid ? true : false);
-
   // Member: delta_alt
   cdr << ros_message.delta_alt;
-
-  // Member: delta_terrain
-  cdr << ros_message.delta_terrain;
 
   // Member: lat_lon_reset_counter
   cdr << ros_message.lat_lon_reset_counter;
 
   // Member: alt_reset_counter
   cdr << ros_message.alt_reset_counter;
-
-  // Member: terrain_reset_counter
-  cdr << ros_message.terrain_reset_counter;
 
   // Member: eph
   cdr << ros_message.eph;
@@ -117,34 +105,14 @@ cdr_deserialize(
   // Member: alt_ellipsoid
   cdr >> ros_message.alt_ellipsoid;
 
-  // Member: lat_lon_valid
-  {
-    uint8_t tmp;
-    cdr >> tmp;
-    ros_message.lat_lon_valid = tmp ? true : false;
-  }
-
-  // Member: alt_valid
-  {
-    uint8_t tmp;
-    cdr >> tmp;
-    ros_message.alt_valid = tmp ? true : false;
-  }
-
   // Member: delta_alt
   cdr >> ros_message.delta_alt;
-
-  // Member: delta_terrain
-  cdr >> ros_message.delta_terrain;
 
   // Member: lat_lon_reset_counter
   cdr >> ros_message.lat_lon_reset_counter;
 
   // Member: alt_reset_counter
   cdr >> ros_message.alt_reset_counter;
-
-  // Member: terrain_reset_counter
-  cdr >> ros_message.terrain_reset_counter;
 
   // Member: eph
   cdr >> ros_message.eph;
@@ -228,30 +196,9 @@ get_serialized_size(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Member: lat_lon_valid
-  {
-    size_t item_size = sizeof(ros_message.lat_lon_valid);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: alt_valid
-  {
-    size_t item_size = sizeof(ros_message.alt_valid);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
   // Member: delta_alt
   {
     size_t item_size = sizeof(ros_message.delta_alt);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: delta_terrain
-  {
-    size_t item_size = sizeof(ros_message.delta_terrain);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -266,13 +213,6 @@ get_serialized_size(
   // Member: alt_reset_counter
   {
     size_t item_size = sizeof(ros_message.alt_reset_counter);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: terrain_reset_counter
-  {
-    size_t item_size = sizeof(ros_message.terrain_reset_counter);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -377,26 +317,7 @@ max_serialized_size_VehicleGlobalPosition(
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
-  // Member: lat_lon_valid
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-  // Member: alt_valid
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
   // Member: delta_alt
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-  // Member: delta_terrain
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint32_t);
@@ -410,12 +331,6 @@ max_serialized_size_VehicleGlobalPosition(
     current_alignment += array_size * sizeof(uint8_t);
   }
   // Member: alt_reset_counter
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-  // Member: terrain_reset_counter
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint8_t);
@@ -495,26 +410,14 @@ cdr_serialize_key(
   // Member: alt_ellipsoid
   cdr << ros_message.alt_ellipsoid;
 
-  // Member: lat_lon_valid
-  cdr << (ros_message.lat_lon_valid ? true : false);
-
-  // Member: alt_valid
-  cdr << (ros_message.alt_valid ? true : false);
-
   // Member: delta_alt
   cdr << ros_message.delta_alt;
-
-  // Member: delta_terrain
-  cdr << ros_message.delta_terrain;
 
   // Member: lat_lon_reset_counter
   cdr << ros_message.lat_lon_reset_counter;
 
   // Member: alt_reset_counter
   cdr << ros_message.alt_reset_counter;
-
-  // Member: terrain_reset_counter
-  cdr << ros_message.terrain_reset_counter;
 
   // Member: eph
   cdr << ros_message.eph;
@@ -589,30 +492,9 @@ get_serialized_size_key(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Member: lat_lon_valid
-  {
-    size_t item_size = sizeof(ros_message.lat_lon_valid);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: alt_valid
-  {
-    size_t item_size = sizeof(ros_message.alt_valid);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
   // Member: delta_alt
   {
     size_t item_size = sizeof(ros_message.delta_alt);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: delta_terrain
-  {
-    size_t item_size = sizeof(ros_message.delta_terrain);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -627,13 +509,6 @@ get_serialized_size_key(
   // Member: alt_reset_counter
   {
     size_t item_size = sizeof(ros_message.alt_reset_counter);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: terrain_reset_counter
-  {
-    size_t item_size = sizeof(ros_message.terrain_reset_counter);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -743,29 +618,7 @@ max_serialized_size_key_VehicleGlobalPosition(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
-  // Member: lat_lon_valid
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
-  // Member: alt_valid
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
   // Member: delta_alt
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Member: delta_terrain
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint32_t);
@@ -781,13 +634,6 @@ max_serialized_size_key_VehicleGlobalPosition(
   }
 
   // Member: alt_reset_counter
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
-  // Member: terrain_reset_counter
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint8_t);

@@ -65,9 +65,17 @@ module px4_msgs {
       float__2 aux_hvel;
 
       @verbatim (language="comment", text=
+        "vertical auxiliary velocity innovation from landing target measurement (m/sec) and innovation variance ((m/sec)**2)")
+      float aux_vvel;
+
+      @verbatim (language="comment", text=
         "Optical flow" "\n"
         "flow innvoation (rad/sec) and innovation variance ((rad/sec)**2)")
       float__2 flow;
+
+      @verbatim (language="comment", text=
+        "flow innvoation (rad/sec) and innovation variance computed by the terrain estimator ((rad/sec)**2)")
+      float__2 terr_flow;
 
       @verbatim (language="comment", text=
         "Various" "\n"

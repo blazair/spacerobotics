@@ -57,10 +57,6 @@ module px4_msgs {
       boolean check_fail_max_vert_spd_err;
 
       @verbatim (language="comment", text=
-        "10 : GPS signal is spoofed")
-      boolean check_fail_spoofed_gps;
-
-      @verbatim (language="comment", text=
         "Horizontal position rate magnitude (m/s)")
       float position_drift_rate_horizontal_m_s;
 

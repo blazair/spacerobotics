@@ -11,10 +11,10 @@ px4_msgs__msg__NpfgStatus__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x75, 0x8b, 0x30, 0x1f, 0x03, 0x25, 0x83, 0xb9,
-      0xd3, 0x11, 0x9f, 0x2a, 0xf8, 0x49, 0xa2, 0x2f,
-      0xeb, 0xec, 0xb4, 0x44, 0xc2, 0x7d, 0xaa, 0x28,
-      0x43, 0x72, 0x17, 0x41, 0xad, 0x40, 0x87, 0xca,
+      0x7c, 0xd2, 0xda, 0xc1, 0x5b, 0xb1, 0x20, 0x04,
+      0x53, 0x2f, 0x63, 0x50, 0x78, 0xdf, 0xe3, 0x37,
+      0x7d, 0x10, 0xf0, 0x9d, 0xca, 0x47, 0xda, 0xf5,
+      0xac, 0x7c, 0xda, 0xe7, 0x12, 0x72, 0xd5, 0x64,
     }};
   return &hash;
 }
@@ -46,7 +46,6 @@ static char px4_msgs__msg__NpfgStatus__FIELD_NAME__min_ground_speed_ref[] = "min
 static char px4_msgs__msg__NpfgStatus__FIELD_NAME__adapted_period[] = "adapted_period";
 static char px4_msgs__msg__NpfgStatus__FIELD_NAME__p_gain[] = "p_gain";
 static char px4_msgs__msg__NpfgStatus__FIELD_NAME__time_const[] = "time_const";
-static char px4_msgs__msg__NpfgStatus__FIELD_NAME__can_run_factor[] = "can_run_factor";
 
 static rosidl_runtime_c__type_description__Field px4_msgs__msg__NpfgStatus__FIELDS[] = {
   {
@@ -199,16 +198,6 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__NpfgStatus__FIEL
     },
     {NULL, 0, 0},
   },
-  {
-    {px4_msgs__msg__NpfgStatus__FIELD_NAME__can_run_factor, 14, 14},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
 };
 
 const rosidl_runtime_c__type_description__TypeDescription *
@@ -220,7 +209,7 @@ px4_msgs__msg__NpfgStatus__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {px4_msgs__msg__NpfgStatus__TYPE_NAME, 23, 23},
-      {px4_msgs__msg__NpfgStatus__FIELDS, 16, 16},
+      {px4_msgs__msg__NpfgStatus__FIELDS, 15, 15},
     },
     {NULL, 0, 0},
   };
@@ -246,8 +235,7 @@ static char toplevel_type_raw_source[] =
   "float32 min_ground_speed_ref    # minimum forward ground speed reference [m/s]\n"
   "float32 adapted_period          # adapted period (if auto-tuning enabled) [s]\n"
   "float32 p_gain                  # controller proportional gain [rad/s]\n"
-  "float32 time_const              # controller time constant [s]\n"
-  "float32 can_run_factor \\t \\t# estimate of certainty of the correct functionality of the npfg roll setpoint in [0, 1]";
+  "float32 time_const              # controller time constant [s]";
 
 static char msg_encoding[] = "msg";
 
@@ -261,7 +249,7 @@ px4_msgs__msg__NpfgStatus__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__NpfgStatus__TYPE_NAME, 23, 23},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 1263, 1263},
+    {toplevel_type_raw_source, 1148, 1148},
   };
   return &source;
 }

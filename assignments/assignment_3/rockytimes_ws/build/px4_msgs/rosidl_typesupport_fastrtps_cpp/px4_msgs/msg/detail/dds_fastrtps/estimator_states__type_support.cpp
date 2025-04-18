@@ -116,7 +116,7 @@ get_serialized_size(
 
   // Member: states
   {
-    size_t array_size = 25;
+    size_t array_size = 24;
     size_t item_size = sizeof(ros_message.states[0]);
     current_alignment += array_size * item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
@@ -176,7 +176,7 @@ max_serialized_size_EstimatorStates(
   }
   // Member: states
   {
-    size_t array_size = 25;
+    size_t array_size = 24;
     last_member_size = array_size * sizeof(uint32_t);
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
@@ -268,7 +268,7 @@ get_serialized_size_key(
 
   // Member: states
   {
-    size_t array_size = 25;
+    size_t array_size = 24;
     size_t item_size = sizeof(ros_message.states[0]);
     current_alignment += array_size * item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
@@ -329,7 +329,7 @@ max_serialized_size_key_EstimatorStates(
 
   // Member: states
   {
-    size_t array_size = 25;
+    size_t array_size = 24;
     last_member_size = array_size * sizeof(uint32_t);
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));

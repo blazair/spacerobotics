@@ -81,27 +81,6 @@ inline void to_flow_style_yaml(
   {
     out << "selected_airspeed_index: ";
     rosidl_generator_traits::value_to_yaml(msg.selected_airspeed_index, out);
-    out << ", ";
-  }
-
-  // member: airspeed_derivative_filtered
-  {
-    out << "airspeed_derivative_filtered: ";
-    rosidl_generator_traits::value_to_yaml(msg.airspeed_derivative_filtered, out);
-    out << ", ";
-  }
-
-  // member: throttle_filtered
-  {
-    out << "throttle_filtered: ";
-    rosidl_generator_traits::value_to_yaml(msg.throttle_filtered, out);
-    out << ", ";
-  }
-
-  // member: pitch_filtered
-  {
-    out << "pitch_filtered: ";
-    rosidl_generator_traits::value_to_yaml(msg.pitch_filtered, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -187,36 +166,6 @@ inline void to_block_style_yaml(
     }
     out << "selected_airspeed_index: ";
     rosidl_generator_traits::value_to_yaml(msg.selected_airspeed_index, out);
-    out << "\n";
-  }
-
-  // member: airspeed_derivative_filtered
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "airspeed_derivative_filtered: ";
-    rosidl_generator_traits::value_to_yaml(msg.airspeed_derivative_filtered, out);
-    out << "\n";
-  }
-
-  // member: throttle_filtered
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "throttle_filtered: ";
-    rosidl_generator_traits::value_to_yaml(msg.throttle_filtered, out);
-    out << "\n";
-  }
-
-  // member: pitch_filtered
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "pitch_filtered: ";
-    rosidl_generator_traits::value_to_yaml(msg.pitch_filtered, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)

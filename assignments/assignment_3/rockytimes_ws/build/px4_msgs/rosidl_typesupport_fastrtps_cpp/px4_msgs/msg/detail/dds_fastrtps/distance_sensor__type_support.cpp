@@ -74,9 +74,6 @@ cdr_serialize(
   // Member: orientation
   cdr << ros_message.orientation;
 
-  // Member: mode
-  cdr << ros_message.mode;
-
   return true;
 }
 
@@ -123,9 +120,6 @@ cdr_deserialize(
 
   // Member: orientation
   cdr >> ros_message.orientation;
-
-  // Member: mode
-  cdr >> ros_message.mode;
 
   return true;
 }
@@ -225,13 +219,6 @@ get_serialized_size(
   // Member: orientation
   {
     size_t item_size = sizeof(ros_message.orientation);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: mode
-  {
-    size_t item_size = sizeof(ros_message.mode);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -340,12 +327,6 @@ max_serialized_size_DistanceSensor(
     last_member_size = array_size * sizeof(uint8_t);
     current_alignment += array_size * sizeof(uint8_t);
   }
-  // Member: mode
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
 
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
@@ -355,7 +336,7 @@ max_serialized_size_DistanceSensor(
     using DataType = px4_msgs::msg::DistanceSensor;
     is_plain =
       (
-      offsetof(DataType, mode) +
+      offsetof(DataType, orientation) +
       last_member_size
       ) == ret_val;
   }
@@ -406,9 +387,6 @@ cdr_serialize_key(
 
   // Member: orientation
   cdr << ros_message.orientation;
-
-  // Member: mode
-  cdr << ros_message.mode;
 
   return true;
 }
@@ -507,13 +485,6 @@ get_serialized_size_key(
   // Member: orientation
   {
     size_t item_size = sizeof(ros_message.orientation);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: mode
-  {
-    size_t item_size = sizeof(ros_message.mode);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -633,13 +604,6 @@ max_serialized_size_key_DistanceSensor(
     current_alignment += array_size * sizeof(uint8_t);
   }
 
-  // Member: mode
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
     // All members are plain, and type is not empty.
@@ -648,7 +612,7 @@ max_serialized_size_key_DistanceSensor(
     using DataType = px4_msgs::msg::DistanceSensor;
     is_plain =
       (
-      offsetof(DataType, mode) +
+      offsetof(DataType, orientation) +
       last_member_size
       ) == ret_val;
   }

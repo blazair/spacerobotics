@@ -25,28 +25,20 @@ module px4_msgs {
       float__2 vel_ne;
 
       @verbatim (language="comment", text=
-        "filtered velocity obtained from gyro-compensated and distance-scaled optical flow raw measurements in body frame(m/s)")
-      float__2 vel_body_filtered;
+        "integrated optical flow measurement (rad)")
+      float__2 flow_uncompensated_integral;
 
       @verbatim (language="comment", text=
-        "filtered same as vel_body_filtered but in local frame (m/s)")
-      float__2 vel_ne_filtered;
-
-      @verbatim (language="comment", text=
-        "integrated optical flow measurement (rad/s)")
-      float__2 flow_rate_uncompensated;
-
-      @verbatim (language="comment", text=
-        "integrated optical flow measurement compensated for angular motion (rad/s)")
-      float__2 flow_rate_compensated;
+        "integrated optical flow measurement compensated for angular motion (rad)")
+      float__2 flow_compensated_integral;
 
       @verbatim (language="comment", text=
         "gyro measurement synchronized with flow measurements (rad/s)")
       float__3 gyro_rate;
 
-      float__3 gyro_bias;
-
-      float__3 ref_gyro;
+      @verbatim (language="comment", text=
+        "gyro measurement integrated to flow rate and synchronized with flow measurements (rad)")
+      float__3 gyro_rate_integral;
     };
   };
 };

@@ -37,6 +37,19 @@ px4_msgs__msg__EstimatorEventFlags__init(px4_msgs__msg__EstimatorEventFlags * ms
   // reset_hgt_to_gps
   // reset_hgt_to_rng
   // reset_hgt_to_ev
+  // warning_event_changes
+  // gps_quality_poor
+  // gps_fusion_timout
+  // gps_data_stopped
+  // gps_data_stopped_using_alternate
+  // height_sensor_timeout
+  // stopping_navigation
+  // invalid_accel_bias_cov_reset
+  // bad_yaw_using_gps_course
+  // stopping_mag_use
+  // vision_data_stopped
+  // emergency_yaw_reset_mag_stopped
+  // emergency_yaw_reset_gps_yaw_stopped
   return true;
 }
 
@@ -66,6 +79,19 @@ px4_msgs__msg__EstimatorEventFlags__fini(px4_msgs__msg__EstimatorEventFlags * ms
   // reset_hgt_to_gps
   // reset_hgt_to_rng
   // reset_hgt_to_ev
+  // warning_event_changes
+  // gps_quality_poor
+  // gps_fusion_timout
+  // gps_data_stopped
+  // gps_data_stopped_using_alternate
+  // height_sensor_timeout
+  // stopping_navigation
+  // invalid_accel_bias_cov_reset
+  // bad_yaw_using_gps_course
+  // stopping_mag_use
+  // vision_data_stopped
+  // emergency_yaw_reset_mag_stopped
+  // emergency_yaw_reset_gps_yaw_stopped
 }
 
 bool
@@ -154,6 +180,58 @@ px4_msgs__msg__EstimatorEventFlags__are_equal(const px4_msgs__msg__EstimatorEven
   if (lhs->reset_hgt_to_ev != rhs->reset_hgt_to_ev) {
     return false;
   }
+  // warning_event_changes
+  if (lhs->warning_event_changes != rhs->warning_event_changes) {
+    return false;
+  }
+  // gps_quality_poor
+  if (lhs->gps_quality_poor != rhs->gps_quality_poor) {
+    return false;
+  }
+  // gps_fusion_timout
+  if (lhs->gps_fusion_timout != rhs->gps_fusion_timout) {
+    return false;
+  }
+  // gps_data_stopped
+  if (lhs->gps_data_stopped != rhs->gps_data_stopped) {
+    return false;
+  }
+  // gps_data_stopped_using_alternate
+  if (lhs->gps_data_stopped_using_alternate != rhs->gps_data_stopped_using_alternate) {
+    return false;
+  }
+  // height_sensor_timeout
+  if (lhs->height_sensor_timeout != rhs->height_sensor_timeout) {
+    return false;
+  }
+  // stopping_navigation
+  if (lhs->stopping_navigation != rhs->stopping_navigation) {
+    return false;
+  }
+  // invalid_accel_bias_cov_reset
+  if (lhs->invalid_accel_bias_cov_reset != rhs->invalid_accel_bias_cov_reset) {
+    return false;
+  }
+  // bad_yaw_using_gps_course
+  if (lhs->bad_yaw_using_gps_course != rhs->bad_yaw_using_gps_course) {
+    return false;
+  }
+  // stopping_mag_use
+  if (lhs->stopping_mag_use != rhs->stopping_mag_use) {
+    return false;
+  }
+  // vision_data_stopped
+  if (lhs->vision_data_stopped != rhs->vision_data_stopped) {
+    return false;
+  }
+  // emergency_yaw_reset_mag_stopped
+  if (lhs->emergency_yaw_reset_mag_stopped != rhs->emergency_yaw_reset_mag_stopped) {
+    return false;
+  }
+  // emergency_yaw_reset_gps_yaw_stopped
+  if (lhs->emergency_yaw_reset_gps_yaw_stopped != rhs->emergency_yaw_reset_gps_yaw_stopped) {
+    return false;
+  }
   return true;
 }
 
@@ -205,6 +283,32 @@ px4_msgs__msg__EstimatorEventFlags__copy(
   output->reset_hgt_to_rng = input->reset_hgt_to_rng;
   // reset_hgt_to_ev
   output->reset_hgt_to_ev = input->reset_hgt_to_ev;
+  // warning_event_changes
+  output->warning_event_changes = input->warning_event_changes;
+  // gps_quality_poor
+  output->gps_quality_poor = input->gps_quality_poor;
+  // gps_fusion_timout
+  output->gps_fusion_timout = input->gps_fusion_timout;
+  // gps_data_stopped
+  output->gps_data_stopped = input->gps_data_stopped;
+  // gps_data_stopped_using_alternate
+  output->gps_data_stopped_using_alternate = input->gps_data_stopped_using_alternate;
+  // height_sensor_timeout
+  output->height_sensor_timeout = input->height_sensor_timeout;
+  // stopping_navigation
+  output->stopping_navigation = input->stopping_navigation;
+  // invalid_accel_bias_cov_reset
+  output->invalid_accel_bias_cov_reset = input->invalid_accel_bias_cov_reset;
+  // bad_yaw_using_gps_course
+  output->bad_yaw_using_gps_course = input->bad_yaw_using_gps_course;
+  // stopping_mag_use
+  output->stopping_mag_use = input->stopping_mag_use;
+  // vision_data_stopped
+  output->vision_data_stopped = input->vision_data_stopped;
+  // emergency_yaw_reset_mag_stopped
+  output->emergency_yaw_reset_mag_stopped = input->emergency_yaw_reset_mag_stopped;
+  // emergency_yaw_reset_gps_yaw_stopped
+  output->emergency_yaw_reset_gps_yaw_stopped = input->emergency_yaw_reset_gps_yaw_stopped;
   return true;
 }
 

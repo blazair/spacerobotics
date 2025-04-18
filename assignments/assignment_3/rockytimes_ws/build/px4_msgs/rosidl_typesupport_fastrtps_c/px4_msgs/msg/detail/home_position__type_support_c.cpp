@@ -108,11 +108,6 @@ bool cdr_serialize_px4_msgs__msg__HomePosition(
     cdr << (ros_message->manual_home ? true : false);
   }
 
-  // Field name: update_count
-  {
-    cdr << ros_message->update_count;
-  }
-
   return true;
 }
 
@@ -187,11 +182,6 @@ bool cdr_deserialize_px4_msgs__msg__HomePosition(
     uint8_t tmp;
     cdr >> tmp;
     ros_message->manual_home = tmp ? true : false;
-  }
-
-  // Field name: update_count
-  {
-    cdr >> ros_message->update_count;
   }
 
   return true;
@@ -292,13 +282,6 @@ size_t get_serialized_size_px4_msgs__msg__HomePosition(
   // Field name: manual_home
   {
     size_t item_size = sizeof(ros_message->manual_home);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: update_count
-  {
-    size_t item_size = sizeof(ros_message->update_count);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -417,14 +400,6 @@ size_t max_serialized_size_px4_msgs__msg__HomePosition(
     current_alignment += array_size * sizeof(uint8_t);
   }
 
-  // Field name: update_count
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
 
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
@@ -434,7 +409,7 @@ size_t max_serialized_size_px4_msgs__msg__HomePosition(
     using DataType = px4_msgs__msg__HomePosition;
     is_plain =
       (
-      offsetof(DataType, update_count) +
+      offsetof(DataType, manual_home) +
       last_member_size
       ) == ret_val;
   }
@@ -504,11 +479,6 @@ bool cdr_serialize_key_px4_msgs__msg__HomePosition(
   // Field name: manual_home
   {
     cdr << (ros_message->manual_home ? true : false);
-  }
-
-  // Field name: update_count
-  {
-    cdr << ros_message->update_count;
   }
 
   return true;
@@ -609,13 +579,6 @@ size_t get_serialized_size_key_px4_msgs__msg__HomePosition(
   // Field name: manual_home
   {
     size_t item_size = sizeof(ros_message->manual_home);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: update_count
-  {
-    size_t item_size = sizeof(ros_message->update_count);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -732,14 +695,6 @@ size_t max_serialized_size_key_px4_msgs__msg__HomePosition(
     current_alignment += array_size * sizeof(uint8_t);
   }
 
-  // Field name: update_count
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
     // All members are plain, and type is not empty.
@@ -748,7 +703,7 @@ size_t max_serialized_size_key_px4_msgs__msg__HomePosition(
     using DataType = px4_msgs__msg__HomePosition;
     is_plain =
       (
-      offsetof(DataType, update_count) +
+      offsetof(DataType, manual_home) +
       last_member_size
       ) == ret_val;
   }

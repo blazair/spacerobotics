@@ -39,35 +39,14 @@ cdr_serialize(
   // Member: timestamp
   cdr << ros_message.timestamp;
 
-  // Member: mission_dataman_id
-  cdr << ros_message.mission_dataman_id;
-
-  // Member: fence_dataman_id
-  cdr << ros_message.fence_dataman_id;
-
-  // Member: safepoint_dataman_id
-  cdr << ros_message.safepoint_dataman_id;
+  // Member: dataman_id
+  cdr << ros_message.dataman_id;
 
   // Member: count
   cdr << ros_message.count;
 
   // Member: current_seq
   cdr << ros_message.current_seq;
-
-  // Member: land_start_index
-  cdr << ros_message.land_start_index;
-
-  // Member: land_index
-  cdr << ros_message.land_index;
-
-  // Member: mission_id
-  cdr << ros_message.mission_id;
-
-  // Member: geofence_id
-  cdr << ros_message.geofence_id;
-
-  // Member: safe_points_id
-  cdr << ros_message.safe_points_id;
 
   return true;
 }
@@ -81,35 +60,14 @@ cdr_deserialize(
   // Member: timestamp
   cdr >> ros_message.timestamp;
 
-  // Member: mission_dataman_id
-  cdr >> ros_message.mission_dataman_id;
-
-  // Member: fence_dataman_id
-  cdr >> ros_message.fence_dataman_id;
-
-  // Member: safepoint_dataman_id
-  cdr >> ros_message.safepoint_dataman_id;
+  // Member: dataman_id
+  cdr >> ros_message.dataman_id;
 
   // Member: count
   cdr >> ros_message.count;
 
   // Member: current_seq
   cdr >> ros_message.current_seq;
-
-  // Member: land_start_index
-  cdr >> ros_message.land_start_index;
-
-  // Member: land_index
-  cdr >> ros_message.land_index;
-
-  // Member: mission_id
-  cdr >> ros_message.mission_id;
-
-  // Member: geofence_id
-  cdr >> ros_message.geofence_id;
-
-  // Member: safe_points_id
-  cdr >> ros_message.safe_points_id;
 
   return true;
 }
@@ -135,23 +93,9 @@ get_serialized_size(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Member: mission_dataman_id
+  // Member: dataman_id
   {
-    size_t item_size = sizeof(ros_message.mission_dataman_id);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: fence_dataman_id
-  {
-    size_t item_size = sizeof(ros_message.fence_dataman_id);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: safepoint_dataman_id
-  {
-    size_t item_size = sizeof(ros_message.safepoint_dataman_id);
+    size_t item_size = sizeof(ros_message.dataman_id);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -166,41 +110,6 @@ get_serialized_size(
   // Member: current_seq
   {
     size_t item_size = sizeof(ros_message.current_seq);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: land_start_index
-  {
-    size_t item_size = sizeof(ros_message.land_start_index);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: land_index
-  {
-    size_t item_size = sizeof(ros_message.land_index);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: mission_id
-  {
-    size_t item_size = sizeof(ros_message.mission_id);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: geofence_id
-  {
-    size_t item_size = sizeof(ros_message.geofence_id);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: safe_points_id
-  {
-    size_t item_size = sizeof(ros_message.safe_points_id);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -235,19 +144,7 @@ max_serialized_size_Mission(
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
-  // Member: mission_dataman_id
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-  // Member: fence_dataman_id
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-  // Member: safepoint_dataman_id
+  // Member: dataman_id
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint8_t);
@@ -267,41 +164,6 @@ max_serialized_size_Mission(
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
-  // Member: land_start_index
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-  // Member: land_index
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-  // Member: mission_id
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-  // Member: geofence_id
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-  // Member: safe_points_id
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
 
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
@@ -311,7 +173,7 @@ max_serialized_size_Mission(
     using DataType = px4_msgs::msg::Mission;
     is_plain =
       (
-      offsetof(DataType, safe_points_id) +
+      offsetof(DataType, current_seq) +
       last_member_size
       ) == ret_val;
   }
@@ -328,35 +190,14 @@ cdr_serialize_key(
   // Member: timestamp
   cdr << ros_message.timestamp;
 
-  // Member: mission_dataman_id
-  cdr << ros_message.mission_dataman_id;
-
-  // Member: fence_dataman_id
-  cdr << ros_message.fence_dataman_id;
-
-  // Member: safepoint_dataman_id
-  cdr << ros_message.safepoint_dataman_id;
+  // Member: dataman_id
+  cdr << ros_message.dataman_id;
 
   // Member: count
   cdr << ros_message.count;
 
   // Member: current_seq
   cdr << ros_message.current_seq;
-
-  // Member: land_start_index
-  cdr << ros_message.land_start_index;
-
-  // Member: land_index
-  cdr << ros_message.land_index;
-
-  // Member: mission_id
-  cdr << ros_message.mission_id;
-
-  // Member: geofence_id
-  cdr << ros_message.geofence_id;
-
-  // Member: safe_points_id
-  cdr << ros_message.safe_points_id;
 
   return true;
 }
@@ -381,23 +222,9 @@ get_serialized_size_key(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Member: mission_dataman_id
+  // Member: dataman_id
   {
-    size_t item_size = sizeof(ros_message.mission_dataman_id);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: fence_dataman_id
-  {
-    size_t item_size = sizeof(ros_message.fence_dataman_id);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: safepoint_dataman_id
-  {
-    size_t item_size = sizeof(ros_message.safepoint_dataman_id);
+    size_t item_size = sizeof(ros_message.dataman_id);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -412,41 +239,6 @@ get_serialized_size_key(
   // Member: current_seq
   {
     size_t item_size = sizeof(ros_message.current_seq);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: land_start_index
-  {
-    size_t item_size = sizeof(ros_message.land_start_index);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: land_index
-  {
-    size_t item_size = sizeof(ros_message.land_index);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: mission_id
-  {
-    size_t item_size = sizeof(ros_message.mission_id);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: geofence_id
-  {
-    size_t item_size = sizeof(ros_message.geofence_id);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: safe_points_id
-  {
-    size_t item_size = sizeof(ros_message.safe_points_id);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -481,21 +273,7 @@ max_serialized_size_key_Mission(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
-  // Member: mission_dataman_id
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
-  // Member: fence_dataman_id
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
-  // Member: safepoint_dataman_id
+  // Member: dataman_id
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint8_t);
@@ -518,46 +296,6 @@ max_serialized_size_key_Mission(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
-  // Member: land_start_index
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Member: land_index
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Member: mission_id
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Member: geofence_id
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Member: safe_points_id
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
     // All members are plain, and type is not empty.
@@ -566,7 +304,7 @@ max_serialized_size_key_Mission(
     using DataType = px4_msgs::msg::Mission;
     is_plain =
       (
-      offsetof(DataType, safe_points_id) +
+      offsetof(DataType, current_seq) +
       last_member_size
       ) == ret_val;
   }

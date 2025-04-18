@@ -52,9 +52,13 @@ typedef struct px4_msgs__msg__EstimatorInnovations
   /// Auxiliary velocity
   /// horizontal auxiliary velocity innovation from landing target measurement (m/sec) and innovation variance ((m/sec)**2)
   float aux_hvel[2];
+  /// vertical auxiliary velocity innovation from landing target measurement (m/sec) and innovation variance ((m/sec)**2)
+  float aux_vvel;
   /// Optical flow
   /// flow innvoation (rad/sec) and innovation variance ((rad/sec)**2)
   float flow[2];
+  /// flow innvoation (rad/sec) and innovation variance computed by the terrain estimator ((rad/sec)**2)
+  float terr_flow[2];
   /// Various
   /// heading innovation (rad) and innovation variance (rad**2)
   float heading;

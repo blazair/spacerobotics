@@ -11,10 +11,10 @@ px4_msgs__msg__PositionSetpoint__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x8b, 0x5f, 0xb0, 0x08, 0x15, 0x30, 0xdf, 0x31,
-      0x54, 0x97, 0x74, 0x9d, 0xcf, 0x53, 0x6d, 0xf9,
-      0x3e, 0xe7, 0xf1, 0xbf, 0xbb, 0xfd, 0x37, 0x47,
-      0xeb, 0xa6, 0x27, 0xb3, 0xe0, 0x5d, 0xb5, 0x4f,
+      0xb6, 0x3b, 0x3d, 0x1b, 0x2c, 0x34, 0xa4, 0x05,
+      0x6b, 0xe6, 0x48, 0xa5, 0xb6, 0x2a, 0x1a, 0x93,
+      0x40, 0x28, 0x8e, 0x60, 0x5e, 0x00, 0xf0, 0xec,
+      0x6b, 0x62, 0x8e, 0xec, 0x4d, 0x61, 0xa0, 0x70,
     }};
   return &hash;
 }
@@ -41,16 +41,16 @@ static char px4_msgs__msg__PositionSetpoint__FIELD_NAME__lat[] = "lat";
 static char px4_msgs__msg__PositionSetpoint__FIELD_NAME__lon[] = "lon";
 static char px4_msgs__msg__PositionSetpoint__FIELD_NAME__alt[] = "alt";
 static char px4_msgs__msg__PositionSetpoint__FIELD_NAME__yaw[] = "yaw";
+static char px4_msgs__msg__PositionSetpoint__FIELD_NAME__yaw_valid[] = "yaw_valid";
+static char px4_msgs__msg__PositionSetpoint__FIELD_NAME__yawspeed[] = "yawspeed";
+static char px4_msgs__msg__PositionSetpoint__FIELD_NAME__yawspeed_valid[] = "yawspeed_valid";
 static char px4_msgs__msg__PositionSetpoint__FIELD_NAME__loiter_radius[] = "loiter_radius";
-static char px4_msgs__msg__PositionSetpoint__FIELD_NAME__loiter_minor_radius[] = "loiter_minor_radius";
 static char px4_msgs__msg__PositionSetpoint__FIELD_NAME__loiter_direction_counter_clockwise[] = "loiter_direction_counter_clockwise";
-static char px4_msgs__msg__PositionSetpoint__FIELD_NAME__loiter_orientation[] = "loiter_orientation";
-static char px4_msgs__msg__PositionSetpoint__FIELD_NAME__loiter_pattern[] = "loiter_pattern";
 static char px4_msgs__msg__PositionSetpoint__FIELD_NAME__acceptance_radius[] = "acceptance_radius";
-static char px4_msgs__msg__PositionSetpoint__FIELD_NAME__alt_acceptance_radius[] = "alt_acceptance_radius";
 static char px4_msgs__msg__PositionSetpoint__FIELD_NAME__cruising_speed[] = "cruising_speed";
 static char px4_msgs__msg__PositionSetpoint__FIELD_NAME__gliding_enabled[] = "gliding_enabled";
 static char px4_msgs__msg__PositionSetpoint__FIELD_NAME__cruising_throttle[] = "cruising_throttle";
+static char px4_msgs__msg__PositionSetpoint__FIELD_NAME__disable_weather_vane[] = "disable_weather_vane";
 
 static rosidl_runtime_c__type_description__Field px4_msgs__msg__PositionSetpoint__FIELDS[] = {
   {
@@ -154,7 +154,17 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__PositionSetpoint
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__PositionSetpoint__FIELD_NAME__loiter_radius, 13, 13},
+    {px4_msgs__msg__PositionSetpoint__FIELD_NAME__yaw_valid, 9, 9},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {px4_msgs__msg__PositionSetpoint__FIELD_NAME__yawspeed, 8, 8},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
       0,
@@ -164,7 +174,17 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__PositionSetpoint
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__PositionSetpoint__FIELD_NAME__loiter_minor_radius, 19, 19},
+    {px4_msgs__msg__PositionSetpoint__FIELD_NAME__yawspeed_valid, 14, 14},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {px4_msgs__msg__PositionSetpoint__FIELD_NAME__loiter_radius, 13, 13},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
       0,
@@ -184,37 +204,7 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__PositionSetpoint
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__PositionSetpoint__FIELD_NAME__loiter_orientation, 18, 18},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__PositionSetpoint__FIELD_NAME__loiter_pattern, 14, 14},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT8,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
     {px4_msgs__msg__PositionSetpoint__FIELD_NAME__acceptance_radius, 17, 17},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__PositionSetpoint__FIELD_NAME__alt_acceptance_radius, 21, 21},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
       0,
@@ -247,6 +237,16 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__PositionSetpoint
     {px4_msgs__msg__PositionSetpoint__FIELD_NAME__cruising_throttle, 17, 17},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {px4_msgs__msg__PositionSetpoint__FIELD_NAME__disable_weather_vane, 20, 20},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
       0,
       0,
       {NULL, 0, 0},
@@ -286,9 +286,6 @@ static char toplevel_type_raw_source[] =
   "uint8 SETPOINT_TYPE_LAND=4\\t# land setpoint, altitude must be ignored, descend until landing\n"
   "uint8 SETPOINT_TYPE_IDLE=5\\t# do nothing, switch off motors or keep at idle speed (MC)\n"
   "\n"
-  "uint8 LOITER_TYPE_ORBIT=0 \\t# Circular pattern\n"
-  "uint8 LOITER_TYPE_FIGUREEIGHT=1 # Pattern resembling an 8\n"
-  "\n"
   "bool valid\\t\\t\\t# true if setpoint is valid\n"
   "uint8 type\\t\\t\\t# setpoint type to adjust behavior of position controller\n"
   "\n"
@@ -299,20 +296,22 @@ static char toplevel_type_raw_source[] =
   "float64 lat\\t\\t\\t# latitude, in deg\n"
   "float64 lon\\t\\t\\t# longitude, in deg\n"
   "float32 alt\\t\\t\\t# altitude AMSL, in m\n"
-  "float32 yaw\\t\\t\\t# yaw (only in hover), in rad [-PI..PI), NaN = leave to flight task\n"
+  "float32 yaw\\t\\t\\t# yaw (only for multirotors), in rad [-PI..PI), NaN = hold current yaw\n"
+  "bool yaw_valid\\t\\t\\t# true if yaw setpoint valid\n"
   "\n"
-  "float32 loiter_radius\\t\\t# loiter major axis radius in m\n"
-  "float32 loiter_minor_radius\\t# loiter minor axis radius (used for non-circular loiter shapes) in m\n"
+  "float32 yawspeed\\t\\t# yawspeed (only for multirotors, in rad/s)\n"
+  "bool yawspeed_valid\\t\\t# true if yawspeed setpoint valid\n"
+  "\n"
+  "float32 loiter_radius\\t\\t# loiter radius (only for fixed wing), in m\n"
   "bool loiter_direction_counter_clockwise # loiter direction is clockwise by default and can be changed using this field\n"
-  "float32 loiter_orientation \\t# Orientation of the major axis with respect to true north in rad [-pi,pi)\n"
-  "uint8 \\tloiter_pattern\\t\\t# loitern pattern to follow\n"
   "\n"
-  "float32 acceptance_radius   # horizontal acceptance_radius (meters)\n"
-  "float32 alt_acceptance_radius # vertical acceptance radius, only used for fixed wing guidance, NAN = let guidance choose (meters)\n"
+  "float32 acceptance_radius   # navigation acceptance_radius if we're doing waypoint navigation\n"
   "\n"
   "float32 cruising_speed\\t\\t# the generally desired cruising speed (not a hard constraint)\n"
   "bool gliding_enabled\\t\\t# commands the vehicle to glide if the capability is available (fixed wing only)\n"
-  "float32 cruising_throttle\\t# the generally desired cruising throttle (not a hard constraint), only has an effect for rover";
+  "float32 cruising_throttle\\t# the generally desired cruising throttle (not a hard constraint), only has an effect for rover\n"
+  "\n"
+  "bool disable_weather_vane   # VTOL: disable (in auto mode) the weather vane feature that turns the nose into the wind";
 
 static char msg_encoding[] = "msg";
 
@@ -326,7 +325,7 @@ px4_msgs__msg__PositionSetpoint__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__PositionSetpoint__TYPE_NAME, 29, 29},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 2013, 2013},
+    {toplevel_type_raw_source, 1850, 1850},
   };
   return &source;
 }

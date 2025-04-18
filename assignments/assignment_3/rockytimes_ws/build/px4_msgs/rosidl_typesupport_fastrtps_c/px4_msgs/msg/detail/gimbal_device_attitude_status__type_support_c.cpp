@@ -95,21 +95,6 @@ bool cdr_serialize_px4_msgs__msg__GimbalDeviceAttitudeStatus(
     cdr << ros_message->failure_flags;
   }
 
-  // Field name: delta_yaw
-  {
-    cdr << ros_message->delta_yaw;
-  }
-
-  // Field name: delta_yaw_velocity
-  {
-    cdr << ros_message->delta_yaw_velocity;
-  }
-
-  // Field name: gimbal_device_id
-  {
-    cdr << ros_message->gimbal_device_id;
-  }
-
   // Field name: received_from_mavlink
   {
     cdr << (ros_message->received_from_mavlink ? true : false);
@@ -168,21 +153,6 @@ bool cdr_deserialize_px4_msgs__msg__GimbalDeviceAttitudeStatus(
   // Field name: failure_flags
   {
     cdr >> ros_message->failure_flags;
-  }
-
-  // Field name: delta_yaw
-  {
-    cdr >> ros_message->delta_yaw;
-  }
-
-  // Field name: delta_yaw_velocity
-  {
-    cdr >> ros_message->delta_yaw_velocity;
-  }
-
-  // Field name: gimbal_device_id
-  {
-    cdr >> ros_message->gimbal_device_id;
   }
 
   // Field name: received_from_mavlink
@@ -272,27 +242,6 @@ size_t get_serialized_size_px4_msgs__msg__GimbalDeviceAttitudeStatus(
   // Field name: failure_flags
   {
     size_t item_size = sizeof(ros_message->failure_flags);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: delta_yaw
-  {
-    size_t item_size = sizeof(ros_message->delta_yaw);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: delta_yaw_velocity
-  {
-    size_t item_size = sizeof(ros_message->delta_yaw_velocity);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: gimbal_device_id
-  {
-    size_t item_size = sizeof(ros_message->gimbal_device_id);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -396,29 +345,6 @@ size_t max_serialized_size_px4_msgs__msg__GimbalDeviceAttitudeStatus(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
-  // Field name: delta_yaw
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Field name: delta_yaw_velocity
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Field name: gimbal_device_id
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
   // Field name: received_from_mavlink
   {
     size_t array_size = 1;
@@ -492,21 +418,6 @@ bool cdr_serialize_key_px4_msgs__msg__GimbalDeviceAttitudeStatus(
   // Field name: failure_flags
   {
     cdr << ros_message->failure_flags;
-  }
-
-  // Field name: delta_yaw
-  {
-    cdr << ros_message->delta_yaw;
-  }
-
-  // Field name: delta_yaw_velocity
-  {
-    cdr << ros_message->delta_yaw_velocity;
-  }
-
-  // Field name: gimbal_device_id
-  {
-    cdr << ros_message->gimbal_device_id;
   }
 
   // Field name: received_from_mavlink
@@ -594,27 +505,6 @@ size_t get_serialized_size_key_px4_msgs__msg__GimbalDeviceAttitudeStatus(
   // Field name: failure_flags
   {
     size_t item_size = sizeof(ros_message->failure_flags);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: delta_yaw
-  {
-    size_t item_size = sizeof(ros_message->delta_yaw);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: delta_yaw_velocity
-  {
-    size_t item_size = sizeof(ros_message->delta_yaw_velocity);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: gimbal_device_id
-  {
-    size_t item_size = sizeof(ros_message->gimbal_device_id);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -714,29 +604,6 @@ size_t max_serialized_size_key_px4_msgs__msg__GimbalDeviceAttitudeStatus(
     last_member_size = array_size * sizeof(uint32_t);
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Field name: delta_yaw
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Field name: delta_yaw_velocity
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Field name: gimbal_device_id
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
   }
 
   // Field name: received_from_mavlink

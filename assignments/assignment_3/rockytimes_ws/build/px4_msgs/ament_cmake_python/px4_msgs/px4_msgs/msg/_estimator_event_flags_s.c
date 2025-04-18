@@ -230,6 +230,123 @@ bool px4_msgs__msg__estimator_event_flags__convert_from_py(PyObject * _pymsg, vo
     ros_message->reset_hgt_to_ev = (Py_True == field);
     Py_DECREF(field);
   }
+  {  // warning_event_changes
+    PyObject * field = PyObject_GetAttrString(_pymsg, "warning_event_changes");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->warning_event_changes = PyLong_AsUnsignedLong(field);
+    Py_DECREF(field);
+  }
+  {  // gps_quality_poor
+    PyObject * field = PyObject_GetAttrString(_pymsg, "gps_quality_poor");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->gps_quality_poor = (Py_True == field);
+    Py_DECREF(field);
+  }
+  {  // gps_fusion_timout
+    PyObject * field = PyObject_GetAttrString(_pymsg, "gps_fusion_timout");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->gps_fusion_timout = (Py_True == field);
+    Py_DECREF(field);
+  }
+  {  // gps_data_stopped
+    PyObject * field = PyObject_GetAttrString(_pymsg, "gps_data_stopped");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->gps_data_stopped = (Py_True == field);
+    Py_DECREF(field);
+  }
+  {  // gps_data_stopped_using_alternate
+    PyObject * field = PyObject_GetAttrString(_pymsg, "gps_data_stopped_using_alternate");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->gps_data_stopped_using_alternate = (Py_True == field);
+    Py_DECREF(field);
+  }
+  {  // height_sensor_timeout
+    PyObject * field = PyObject_GetAttrString(_pymsg, "height_sensor_timeout");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->height_sensor_timeout = (Py_True == field);
+    Py_DECREF(field);
+  }
+  {  // stopping_navigation
+    PyObject * field = PyObject_GetAttrString(_pymsg, "stopping_navigation");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->stopping_navigation = (Py_True == field);
+    Py_DECREF(field);
+  }
+  {  // invalid_accel_bias_cov_reset
+    PyObject * field = PyObject_GetAttrString(_pymsg, "invalid_accel_bias_cov_reset");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->invalid_accel_bias_cov_reset = (Py_True == field);
+    Py_DECREF(field);
+  }
+  {  // bad_yaw_using_gps_course
+    PyObject * field = PyObject_GetAttrString(_pymsg, "bad_yaw_using_gps_course");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->bad_yaw_using_gps_course = (Py_True == field);
+    Py_DECREF(field);
+  }
+  {  // stopping_mag_use
+    PyObject * field = PyObject_GetAttrString(_pymsg, "stopping_mag_use");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->stopping_mag_use = (Py_True == field);
+    Py_DECREF(field);
+  }
+  {  // vision_data_stopped
+    PyObject * field = PyObject_GetAttrString(_pymsg, "vision_data_stopped");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->vision_data_stopped = (Py_True == field);
+    Py_DECREF(field);
+  }
+  {  // emergency_yaw_reset_mag_stopped
+    PyObject * field = PyObject_GetAttrString(_pymsg, "emergency_yaw_reset_mag_stopped");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->emergency_yaw_reset_mag_stopped = (Py_True == field);
+    Py_DECREF(field);
+  }
+  {  // emergency_yaw_reset_gps_yaw_stopped
+    PyObject * field = PyObject_GetAttrString(_pymsg, "emergency_yaw_reset_gps_yaw_stopped");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->emergency_yaw_reset_gps_yaw_stopped = (Py_True == field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -466,6 +583,149 @@ PyObject * px4_msgs__msg__estimator_event_flags__convert_to_py(void * raw_ros_me
     field = PyBool_FromLong(ros_message->reset_hgt_to_ev ? 1 : 0);
     {
       int rc = PyObject_SetAttrString(_pymessage, "reset_hgt_to_ev", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // warning_event_changes
+    PyObject * field = NULL;
+    field = PyLong_FromUnsignedLong(ros_message->warning_event_changes);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "warning_event_changes", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // gps_quality_poor
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->gps_quality_poor ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "gps_quality_poor", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // gps_fusion_timout
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->gps_fusion_timout ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "gps_fusion_timout", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // gps_data_stopped
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->gps_data_stopped ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "gps_data_stopped", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // gps_data_stopped_using_alternate
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->gps_data_stopped_using_alternate ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "gps_data_stopped_using_alternate", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // height_sensor_timeout
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->height_sensor_timeout ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "height_sensor_timeout", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // stopping_navigation
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->stopping_navigation ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "stopping_navigation", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // invalid_accel_bias_cov_reset
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->invalid_accel_bias_cov_reset ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "invalid_accel_bias_cov_reset", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // bad_yaw_using_gps_course
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->bad_yaw_using_gps_course ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "bad_yaw_using_gps_course", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // stopping_mag_use
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->stopping_mag_use ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "stopping_mag_use", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // vision_data_stopped
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->vision_data_stopped ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "vision_data_stopped", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // emergency_yaw_reset_mag_stopped
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->emergency_yaw_reset_mag_stopped ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "emergency_yaw_reset_mag_stopped", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // emergency_yaw_reset_gps_yaw_stopped
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->emergency_yaw_reset_gps_yaw_stopped ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "emergency_yaw_reset_gps_yaw_stopped", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

@@ -19,12 +19,6 @@ extern "C"
 
 // Constants defined in the message
 
-/// Constant 'MESSAGE_VERSION'.
-enum
-{
-  px4_msgs__msg__VehicleCommand__MESSAGE_VERSION = 0ul
-};
-
 /// Constant 'VEHICLE_CMD_CUSTOM_0'.
 /**
   * test command
@@ -131,15 +125,6 @@ enum
 enum
 {
   px4_msgs__msg__VehicleCommand__VEHICLE_CMD_DO_ORBIT = 34
-};
-
-/// Constant 'VEHICLE_CMD_DO_FIGUREEIGHT'.
-/**
-  * Start flying on the outline of a figure eight defined by the parameters. |Major Radius [m] |Minor Radius [m] |Velocity [m/s] |Orientation |Latitude/X |Longitude/Y |Altitude/Z |
- */
-enum
-{
-  px4_msgs__msg__VehicleCommand__VEHICLE_CMD_DO_FIGUREEIGHT = 35
 };
 
 /// Constant 'VEHICLE_CMD_NAV_ROI'.
@@ -386,9 +371,6 @@ enum
 };
 
 /// Constant 'VEHICLE_CMD_DO_REPOSITION'.
-/**
-  * Reposition to specific WGS84 GPS position. |Ground speed [m/s] |Bitmask |Loiter radius [m] for planes |Yaw [deg] |Latitude |Longitude |Altitude |
- */
 enum
 {
   px4_msgs__msg__VehicleCommand__VEHICLE_CMD_DO_REPOSITION = 192
@@ -631,15 +613,6 @@ enum
   px4_msgs__msg__VehicleCommand__VEHICLE_CMD_OBLIQUE_SURVEY = 260
 };
 
-/// Constant 'VEHICLE_CMD_DO_SET_STANDARD_MODE'.
-/**
-  * Enable the specified standard MAVLink mode |MAV_STANDARD_MODE|
- */
-enum
-{
-  px4_msgs__msg__VehicleCommand__VEHICLE_CMD_DO_SET_STANDARD_MODE = 262
-};
-
 /// Constant 'VEHICLE_CMD_GIMBAL_DEVICE_INFORMATION'.
 /**
   * Command to ask information about a low level gimbal
@@ -719,15 +692,6 @@ enum
 enum
 {
   px4_msgs__msg__VehicleCommand__VEHICLE_CMD_REQUEST_MESSAGE = 512
-};
-
-/// Constant 'VEHICLE_CMD_REQUEST_CAMERA_INFORMATION'.
-/**
-  * Request camera information (CAMERA_INFORMATION). |0: No action 1: Request camera capabilities| Reserved (all remaining params)| Reserved (default:0)| Reserved (default:0)| Reserved (default:0)| Reserved (default:0)| Reserved (default:0)|
- */
-enum
-{
-  px4_msgs__msg__VehicleCommand__VEHICLE_CMD_REQUEST_CAMERA_INFORMATION = 521
 };
 
 /// Constant 'VEHICLE_CMD_SET_CAMERA_MODE'.
@@ -889,21 +853,6 @@ enum
   px4_msgs__msg__VehicleCommand__VEHICLE_CMD_DO_WINCH = 42600
 };
 
-/// Constant 'VEHICLE_CMD_EXTERNAL_POSITION_ESTIMATE'.
-/**
-  * external reset of estimator global position when deadreckoning
- */
-enum
-{
-  px4_msgs__msg__VehicleCommand__VEHICLE_CMD_EXTERNAL_POSITION_ESTIMATE = 43003
-};
-
-/// Constant 'VEHICLE_CMD_EXTERNAL_WIND_ESTIMATE'.
-enum
-{
-  px4_msgs__msg__VehicleCommand__VEHICLE_CMD_EXTERNAL_WIND_ESTIMATE = 43004
-};
-
 /// Constant 'VEHICLE_CMD_PX4_INTERNAL_START'.
 /**
   * PX4 vehicle commands (beyond 16 bit mavlink commands)
@@ -921,15 +870,6 @@ enum
 enum
 {
   px4_msgs__msg__VehicleCommand__VEHICLE_CMD_SET_GPS_GLOBAL_ORIGIN = 100000ul
-};
-
-/// Constant 'VEHICLE_CMD_SET_NAV_STATE'.
-/**
-  * Change mode by specifying nav_state directly. |nav_state|Empty|Empty|Empty|Empty|Empty|Empty|
- */
-enum
-{
-  px4_msgs__msg__VehicleCommand__VEHICLE_CMD_SET_NAV_STATE = 100001ul
 };
 
 /// Constant 'VEHICLE_MOUNT_MODE_RETRACT'.
@@ -1217,45 +1157,6 @@ enum
   px4_msgs__msg__VehicleCommand__SPEED_TYPE_DESCEND_SPEED = 3
 };
 
-/// Constant 'ORBIT_YAW_BEHAVIOUR_HOLD_FRONT_TO_CIRCLE_CENTER'.
-/**
-  * used as param3 in CMD_DO_ORBIT
- */
-enum
-{
-  px4_msgs__msg__VehicleCommand__ORBIT_YAW_BEHAVIOUR_HOLD_FRONT_TO_CIRCLE_CENTER = 0
-};
-
-/// Constant 'ORBIT_YAW_BEHAVIOUR_HOLD_INITIAL_HEADING'.
-enum
-{
-  px4_msgs__msg__VehicleCommand__ORBIT_YAW_BEHAVIOUR_HOLD_INITIAL_HEADING = 1
-};
-
-/// Constant 'ORBIT_YAW_BEHAVIOUR_UNCONTROLLED'.
-enum
-{
-  px4_msgs__msg__VehicleCommand__ORBIT_YAW_BEHAVIOUR_UNCONTROLLED = 2
-};
-
-/// Constant 'ORBIT_YAW_BEHAVIOUR_HOLD_FRONT_TANGENT_TO_CIRCLE'.
-enum
-{
-  px4_msgs__msg__VehicleCommand__ORBIT_YAW_BEHAVIOUR_HOLD_FRONT_TANGENT_TO_CIRCLE = 3
-};
-
-/// Constant 'ORBIT_YAW_BEHAVIOUR_RC_CONTROLLED'.
-enum
-{
-  px4_msgs__msg__VehicleCommand__ORBIT_YAW_BEHAVIOUR_RC_CONTROLLED = 4
-};
-
-/// Constant 'ORBIT_YAW_BEHAVIOUR_UNCHANGED'.
-enum
-{
-  px4_msgs__msg__VehicleCommand__ORBIT_YAW_BEHAVIOUR_UNCHANGED = 5
-};
-
 /// Constant 'ARMING_ACTION_DISARM'.
 /**
   * used as param1 in ARM_DISARM command
@@ -1292,12 +1193,6 @@ enum
   px4_msgs__msg__VehicleCommand__ORB_QUEUE_LENGTH = 8
 };
 
-/// Constant 'COMPONENT_MODE_EXECUTOR_START'.
-enum
-{
-  px4_msgs__msg__VehicleCommand__COMPONENT_MODE_EXECUTOR_START = 1000
-};
-
 /// Struct defined in msg/VehicleCommand in the package px4_msgs.
 /**
   * Vehicle Command uORB message. Used for commanding a mission / action / etc.
@@ -1329,8 +1224,8 @@ typedef struct px4_msgs__msg__VehicleCommand
   uint8_t target_component;
   /// System sending the command
   uint8_t source_system;
-  /// Component / mode executor sending the command
-  uint16_t source_component;
+  /// Component sending the command
+  uint8_t source_component;
   /// 0: First transmission of this command. 1-255: Confirmation transmissions (e.g. for kill command)
   uint8_t confirmation;
   bool from_external;

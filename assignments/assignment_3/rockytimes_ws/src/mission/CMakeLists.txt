@@ -16,14 +16,10 @@ find_package(rclcpp REQUIRED)
 install(PROGRAMS
   scripts/mission.py
   scripts/aruco_tracker.py
-  scripts/geometry_tracker.py
-  scripts/feature_tracker.py
-  scripts/pose_visualizer.py
   scripts/spiral_trajectory.py
-  scripts/cylinder_landing_node.py
   scripts/estimate.py
   scripts/landing.py
-  scripts/zigzag.py
+  scripts/return.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

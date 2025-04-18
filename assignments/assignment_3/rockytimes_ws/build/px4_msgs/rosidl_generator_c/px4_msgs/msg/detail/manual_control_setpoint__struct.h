@@ -19,12 +19,6 @@ extern "C"
 
 // Constants defined in the message
 
-/// Constant 'MESSAGE_VERSION'.
-enum
-{
-  px4_msgs__msg__ManualControlSetpoint__MESSAGE_VERSION = 0ul
-};
-
 /// Constant 'SOURCE_UNKNOWN'.
 enum
 {
@@ -126,8 +120,6 @@ typedef struct px4_msgs__msg__ManualControlSetpoint
   float aux5;
   float aux6;
   bool sticks_moving;
-  /// From uint16 buttons field of Mavlink manual_control message
-  uint16_t buttons;
 } px4_msgs__msg__ManualControlSetpoint;
 
 // Struct for a sequence of px4_msgs__msg__ManualControlSetpoint.

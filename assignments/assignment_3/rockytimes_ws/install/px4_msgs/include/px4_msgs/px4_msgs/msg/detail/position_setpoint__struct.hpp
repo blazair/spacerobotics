@@ -51,16 +51,16 @@ struct PositionSetpoint_
       this->lon = 0.0;
       this->alt = 0.0f;
       this->yaw = 0.0f;
+      this->yaw_valid = false;
+      this->yawspeed = 0.0f;
+      this->yawspeed_valid = false;
       this->loiter_radius = 0.0f;
-      this->loiter_minor_radius = 0.0f;
       this->loiter_direction_counter_clockwise = false;
-      this->loiter_orientation = 0.0f;
-      this->loiter_pattern = 0;
       this->acceptance_radius = 0.0f;
-      this->alt_acceptance_radius = 0.0f;
       this->cruising_speed = 0.0f;
       this->gliding_enabled = false;
       this->cruising_throttle = 0.0f;
+      this->disable_weather_vane = false;
     }
   }
 
@@ -80,16 +80,16 @@ struct PositionSetpoint_
       this->lon = 0.0;
       this->alt = 0.0f;
       this->yaw = 0.0f;
+      this->yaw_valid = false;
+      this->yawspeed = 0.0f;
+      this->yawspeed_valid = false;
       this->loiter_radius = 0.0f;
-      this->loiter_minor_radius = 0.0f;
       this->loiter_direction_counter_clockwise = false;
-      this->loiter_orientation = 0.0f;
-      this->loiter_pattern = 0;
       this->acceptance_radius = 0.0f;
-      this->alt_acceptance_radius = 0.0f;
       this->cruising_speed = 0.0f;
       this->gliding_enabled = false;
       this->cruising_throttle = 0.0f;
+      this->disable_weather_vane = false;
     }
   }
 
@@ -124,27 +124,24 @@ struct PositionSetpoint_
   using _yaw_type =
     float;
   _yaw_type yaw;
+  using _yaw_valid_type =
+    bool;
+  _yaw_valid_type yaw_valid;
+  using _yawspeed_type =
+    float;
+  _yawspeed_type yawspeed;
+  using _yawspeed_valid_type =
+    bool;
+  _yawspeed_valid_type yawspeed_valid;
   using _loiter_radius_type =
     float;
   _loiter_radius_type loiter_radius;
-  using _loiter_minor_radius_type =
-    float;
-  _loiter_minor_radius_type loiter_minor_radius;
   using _loiter_direction_counter_clockwise_type =
     bool;
   _loiter_direction_counter_clockwise_type loiter_direction_counter_clockwise;
-  using _loiter_orientation_type =
-    float;
-  _loiter_orientation_type loiter_orientation;
-  using _loiter_pattern_type =
-    uint8_t;
-  _loiter_pattern_type loiter_pattern;
   using _acceptance_radius_type =
     float;
   _acceptance_radius_type acceptance_radius;
-  using _alt_acceptance_radius_type =
-    float;
-  _alt_acceptance_radius_type alt_acceptance_radius;
   using _cruising_speed_type =
     float;
   _cruising_speed_type cruising_speed;
@@ -154,6 +151,9 @@ struct PositionSetpoint_
   using _cruising_throttle_type =
     float;
   _cruising_throttle_type cruising_throttle;
+  using _disable_weather_vane_type =
+    bool;
+  _disable_weather_vane_type disable_weather_vane;
 
   // setters for named parameter idiom
   Type & set__timestamp(
@@ -216,16 +216,28 @@ struct PositionSetpoint_
     this->yaw = _arg;
     return *this;
   }
+  Type & set__yaw_valid(
+    const bool & _arg)
+  {
+    this->yaw_valid = _arg;
+    return *this;
+  }
+  Type & set__yawspeed(
+    const float & _arg)
+  {
+    this->yawspeed = _arg;
+    return *this;
+  }
+  Type & set__yawspeed_valid(
+    const bool & _arg)
+  {
+    this->yawspeed_valid = _arg;
+    return *this;
+  }
   Type & set__loiter_radius(
     const float & _arg)
   {
     this->loiter_radius = _arg;
-    return *this;
-  }
-  Type & set__loiter_minor_radius(
-    const float & _arg)
-  {
-    this->loiter_minor_radius = _arg;
     return *this;
   }
   Type & set__loiter_direction_counter_clockwise(
@@ -234,28 +246,10 @@ struct PositionSetpoint_
     this->loiter_direction_counter_clockwise = _arg;
     return *this;
   }
-  Type & set__loiter_orientation(
-    const float & _arg)
-  {
-    this->loiter_orientation = _arg;
-    return *this;
-  }
-  Type & set__loiter_pattern(
-    const uint8_t & _arg)
-  {
-    this->loiter_pattern = _arg;
-    return *this;
-  }
   Type & set__acceptance_radius(
     const float & _arg)
   {
     this->acceptance_radius = _arg;
-    return *this;
-  }
-  Type & set__alt_acceptance_radius(
-    const float & _arg)
-  {
-    this->alt_acceptance_radius = _arg;
     return *this;
   }
   Type & set__cruising_speed(
@@ -276,6 +270,12 @@ struct PositionSetpoint_
     this->cruising_throttle = _arg;
     return *this;
   }
+  Type & set__disable_weather_vane(
+    const bool & _arg)
+  {
+    this->disable_weather_vane = _arg;
+    return *this;
+  }
 
   // constant declarations
   static constexpr uint8_t SETPOINT_TYPE_POSITION =
@@ -290,10 +290,6 @@ struct PositionSetpoint_
     4u;
   static constexpr uint8_t SETPOINT_TYPE_IDLE =
     5u;
-  static constexpr uint8_t LOITER_TYPE_ORBIT =
-    0u;
-  static constexpr uint8_t LOITER_TYPE_FIGUREEIGHT =
-    1u;
 
   // pointer types
   using RawPtr =
@@ -365,25 +361,22 @@ struct PositionSetpoint_
     if (this->yaw != other.yaw) {
       return false;
     }
-    if (this->loiter_radius != other.loiter_radius) {
+    if (this->yaw_valid != other.yaw_valid) {
       return false;
     }
-    if (this->loiter_minor_radius != other.loiter_minor_radius) {
+    if (this->yawspeed != other.yawspeed) {
+      return false;
+    }
+    if (this->yawspeed_valid != other.yawspeed_valid) {
+      return false;
+    }
+    if (this->loiter_radius != other.loiter_radius) {
       return false;
     }
     if (this->loiter_direction_counter_clockwise != other.loiter_direction_counter_clockwise) {
       return false;
     }
-    if (this->loiter_orientation != other.loiter_orientation) {
-      return false;
-    }
-    if (this->loiter_pattern != other.loiter_pattern) {
-      return false;
-    }
     if (this->acceptance_radius != other.acceptance_radius) {
-      return false;
-    }
-    if (this->alt_acceptance_radius != other.alt_acceptance_radius) {
       return false;
     }
     if (this->cruising_speed != other.cruising_speed) {
@@ -393,6 +386,9 @@ struct PositionSetpoint_
       return false;
     }
     if (this->cruising_throttle != other.cruising_throttle) {
+      return false;
+    }
+    if (this->disable_weather_vane != other.disable_weather_vane) {
       return false;
     }
     return true;
@@ -437,16 +433,6 @@ constexpr uint8_t PositionSetpoint_<ContainerAllocator>::SETPOINT_TYPE_LAND;
 // static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint8_t PositionSetpoint_<ContainerAllocator>::SETPOINT_TYPE_IDLE;
-#endif  // __cplusplus < 201703L
-#if __cplusplus < 201703L
-// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
-template<typename ContainerAllocator>
-constexpr uint8_t PositionSetpoint_<ContainerAllocator>::LOITER_TYPE_ORBIT;
-#endif  // __cplusplus < 201703L
-#if __cplusplus < 201703L
-// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
-template<typename ContainerAllocator>
-constexpr uint8_t PositionSetpoint_<ContainerAllocator>::LOITER_TYPE_FIGUREEIGHT;
 #endif  // __cplusplus < 201703L
 
 }  // namespace msg

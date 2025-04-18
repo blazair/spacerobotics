@@ -14,27 +14,7 @@
           "default_value": ""
         },
         {
-          "name": "mission_dataman_id",
-          "type": {
-            "type_id": 3,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "fence_dataman_id",
-          "type": {
-            "type_id": 3,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "safepoint_dataman_id",
+          "name": "dataman_id",
           "type": {
             "type_id": 3,
             "capacity": 0,
@@ -62,56 +42,6 @@
             "nested_type_name": ""
           },
           "default_value": ""
-        },
-        {
-          "name": "land_start_index",
-          "type": {
-            "type_id": 6,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "land_index",
-          "type": {
-            "type_id": 6,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "mission_id",
-          "type": {
-            "type_id": 7,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "geofence_id",
-          "type": {
-            "type_id": 7,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "safe_points_id",
-          "type": {
-            "type_id": 7,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
         }
       ]
     },
@@ -120,7 +50,7 @@
   "type_hashes": [
     {
       "type_name": "px4_msgs/msg/Mission",
-      "hash_string": "RIHS01_25f12413e89ef02fd287f14d22be40ab11275ac780b7f66de4a83810085bdc85"
+      "hash_string": "RIHS01_a8fb12e8aa3fa52529f3ae2493f1df485de4e0584379478fbfbab0c5fc82bb02"
     }
   ]
 }

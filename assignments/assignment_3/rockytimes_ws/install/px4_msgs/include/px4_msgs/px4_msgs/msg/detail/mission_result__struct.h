@@ -19,17 +19,40 @@ extern "C"
 
 // Constants defined in the message
 
+/// Constant 'MISSION_EXECUTION_MODE_NORMAL'.
+/**
+  * Execute the mission according to the planned items
+ */
+enum
+{
+  px4_msgs__msg__MissionResult__MISSION_EXECUTION_MODE_NORMAL = 0
+};
+
+/// Constant 'MISSION_EXECUTION_MODE_REVERSE'.
+/**
+  * Execute the mission in reverse order, ignoring commands and converting all waypoints to normal ones
+ */
+enum
+{
+  px4_msgs__msg__MissionResult__MISSION_EXECUTION_MODE_REVERSE = 1
+};
+
+/// Constant 'MISSION_EXECUTION_MODE_FAST_FORWARD'.
+/**
+  * Execute the mission as fast as possible, for example converting loiter waypoints to normal ones
+ */
+enum
+{
+  px4_msgs__msg__MissionResult__MISSION_EXECUTION_MODE_FAST_FORWARD = 2
+};
+
 /// Struct defined in msg/MissionResult in the package px4_msgs.
 typedef struct px4_msgs__msg__MissionResult
 {
   /// time since system start (microseconds)
   uint64_t timestamp;
-  /// Id for the mission for which the result was generated
-  uint32_t mission_id;
-  /// Id for the corresponding geofence for which the result was generated (used for mission feasibility)
-  uint32_t geofence_id;
-  /// Counter of the home position for which the result was generated (used for mission feasibility)
-  uint32_t home_position_counter;
+  /// Instance count of this mission. Increments monotonically whenever the mission is modified
+  uint32_t instance_count;
   /// Sequence of the mission item which has been reached, default -1
   int32_t seq_reached;
   /// Sequence of the current mission item

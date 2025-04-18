@@ -40,7 +40,7 @@ module px4_msgs {
       const uint16 ADSB_EMITTER_TYPE_SERVICE_SURFACE = 18;
       const uint16 ADSB_EMITTER_TYPE_POINT_OBSTACLE = 19;
       const uint16 ADSB_EMITTER_TYPE_ENUM_END = 20;
-      const uint8 ORB_QUEUE_LENGTH = 16;
+      const uint8 ORB_QUEUE_LENGTH = 8;
     };
     struct TransponderReport {
       @verbatim (language="comment", text=

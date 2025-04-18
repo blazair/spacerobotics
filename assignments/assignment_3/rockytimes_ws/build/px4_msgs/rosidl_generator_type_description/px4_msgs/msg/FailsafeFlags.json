@@ -294,7 +294,7 @@
           "default_value": ""
         },
         {
-          "name": "geofence_breached",
+          "name": "primary_geofence_breached",
           "type": {
             "type_id": 15,
             "capacity": 0,
@@ -354,16 +354,6 @@
           "default_value": ""
         },
         {
-          "name": "navigator_failure",
-          "type": {
-            "type_id": 15,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
           "name": "fd_critical_failure",
           "type": {
             "type_id": 15,
@@ -410,7 +400,7 @@
   "type_hashes": [
     {
       "type_name": "px4_msgs/msg/FailsafeFlags",
-      "hash_string": "RIHS01_a3b231a285771d620f31efa501aa3b440c9e66e95d2950fbe8617056b33d585f"
+      "hash_string": "RIHS01_d3aa9f3d65ba66f2a31b144242fd7bf21e52fe6063231212a5a1bd4b121d6a20"
     }
   ]
 }

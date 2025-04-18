@@ -11,10 +11,10 @@ px4_msgs__msg__VehicleAttitudeSetpoint__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0xb3, 0x26, 0x89, 0xc5, 0x5c, 0xd7, 0xdf, 0xeb,
-      0x33, 0xcb, 0x06, 0xfa, 0xee, 0xf7, 0xc4, 0xa7,
-      0xce, 0xbc, 0x1d, 0x4a, 0x58, 0xac, 0xed, 0xcc,
-      0x73, 0xec, 0x16, 0x95, 0x13, 0x04, 0x66, 0x2b,
+      0x99, 0x5a, 0xe4, 0x2a, 0x83, 0xa1, 0x74, 0x14,
+      0xfb, 0x56, 0x0c, 0x85, 0x9f, 0xef, 0xd6, 0x8d,
+      0xee, 0xe3, 0x51, 0xe8, 0x9f, 0xcf, 0x60, 0xcb,
+      0x37, 0x73, 0x7f, 0x34, 0x2d, 0x95, 0xdf, 0xfd,
     }};
   return &hash;
 }
@@ -32,6 +32,9 @@ static char px4_msgs__msg__VehicleAttitudeSetpoint__TYPE_NAME[] = "px4_msgs/msg/
 
 // Define type names, field names, and default values
 static char px4_msgs__msg__VehicleAttitudeSetpoint__FIELD_NAME__timestamp[] = "timestamp";
+static char px4_msgs__msg__VehicleAttitudeSetpoint__FIELD_NAME__roll_body[] = "roll_body";
+static char px4_msgs__msg__VehicleAttitudeSetpoint__FIELD_NAME__pitch_body[] = "pitch_body";
+static char px4_msgs__msg__VehicleAttitudeSetpoint__FIELD_NAME__yaw_body[] = "yaw_body";
 static char px4_msgs__msg__VehicleAttitudeSetpoint__FIELD_NAME__yaw_sp_move_rate[] = "yaw_sp_move_rate";
 static char px4_msgs__msg__VehicleAttitudeSetpoint__FIELD_NAME__q_d[] = "q_d";
 static char px4_msgs__msg__VehicleAttitudeSetpoint__FIELD_NAME__thrust_body[] = "thrust_body";
@@ -43,6 +46,36 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__VehicleAttitudeS
     {px4_msgs__msg__VehicleAttitudeSetpoint__FIELD_NAME__timestamp, 9, 9},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT64,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {px4_msgs__msg__VehicleAttitudeSetpoint__FIELD_NAME__roll_body, 9, 9},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {px4_msgs__msg__VehicleAttitudeSetpoint__FIELD_NAME__pitch_body, 10, 10},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {px4_msgs__msg__VehicleAttitudeSetpoint__FIELD_NAME__yaw_body, 8, 8},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
       0,
       0,
       {NULL, 0, 0},
@@ -110,7 +143,7 @@ px4_msgs__msg__VehicleAttitudeSetpoint__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {px4_msgs__msg__VehicleAttitudeSetpoint__TYPE_NAME, 36, 36},
-      {px4_msgs__msg__VehicleAttitudeSetpoint__FIELDS, 6, 6},
+      {px4_msgs__msg__VehicleAttitudeSetpoint__FIELDS, 9, 9},
     },
     {NULL, 0, 0},
   };
@@ -121,9 +154,11 @@ px4_msgs__msg__VehicleAttitudeSetpoint__get_type_description(
 }
 
 static char toplevel_type_raw_source[] =
-  "uint32 MESSAGE_VERSION = 0\n"
-  "\n"
   "uint64 timestamp\\t\\t# time since system start (microseconds)\n"
+  "\n"
+  "float32 roll_body\\t\\t# body angle in NED frame (can be NaN for FW)\n"
+  "float32 pitch_body\\t\\t# body angle in NED frame (can be NaN for FW)\n"
+  "float32 yaw_body\\t\\t# body angle in NED frame (can be NaN for FW)\n"
   "\n"
   "float32 yaw_sp_move_rate\\t# rad/s (commanded by user)\n"
   "\n"
@@ -132,7 +167,7 @@ static char toplevel_type_raw_source[] =
   "\n"
   "# For clarification: For multicopters thrust_body[0] and thrust[1] are usually 0 and thrust[2] is the negative throttle demand.\n"
   "# For fixed wings thrust_x is the throttle demand and thrust_y, thrust_z will usually be zero.\n"
-  "float32[3] thrust_body\\t\\t# Normalized thrust command in body FRD frame [-1,1]\n"
+  "float32[3] thrust_body\\t\\t# Normalized thrust command in body NED frame [-1,1]\n"
   "\n"
   "bool reset_integral\\t# Reset roll/pitch/yaw integrals (navigation logic change)\n"
   "\n"
@@ -152,7 +187,7 @@ px4_msgs__msg__VehicleAttitudeSetpoint__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__VehicleAttitudeSetpoint__TYPE_NAME, 36, 36},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 817, 817},
+    {toplevel_type_raw_source, 985, 985},
   };
   return &source;
 }

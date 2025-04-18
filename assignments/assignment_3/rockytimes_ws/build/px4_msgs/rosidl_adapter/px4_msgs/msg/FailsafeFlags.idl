@@ -101,7 +101,7 @@ module px4_msgs {
 
       @verbatim (language="comment", text=
         "Battery" "\n"
-        "Battery warning level (see BatteryStatus.msg)")
+        "Battery warning level")
       uint8 battery_warning;
 
       @verbatim (language="comment", text=
@@ -114,8 +114,8 @@ module px4_msgs {
 
       @verbatim (language="comment", text=
         "Other" "\n"
-        "Geofence breached (one or multiple)")
-      boolean geofence_breached;
+        "Primary Geofence breached")
+      boolean primary_geofence_breached;
 
       @verbatim (language="comment", text=
         "Mission failure")
@@ -136,10 +136,6 @@ module px4_msgs {
       @verbatim (language="comment", text=
         "Local position estimate has dropped below threshold, but is currently still declared valid")
       boolean local_position_accuracy_low;
-
-      @verbatim (language="comment", text=
-        "Navigator failed to execute a mode")
-      boolean navigator_failure;
 
       @verbatim (language="comment", text=
         "Failure detector" "\n"

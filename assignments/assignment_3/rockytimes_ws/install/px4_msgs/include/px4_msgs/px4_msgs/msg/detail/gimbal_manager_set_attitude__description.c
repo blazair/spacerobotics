@@ -197,9 +197,7 @@ static char toplevel_type_raw_source[] =
   "\n"
   "float32 angular_velocity_x\n"
   "float32 angular_velocity_y\n"
-  "float32 angular_velocity_z\n"
-  "\n"
-  "uint8 ORB_QUEUE_LENGTH = 2";
+  "float32 angular_velocity_z";
 
 static char msg_encoding[] = "msg";
 
@@ -213,7 +211,7 @@ px4_msgs__msg__GimbalManagerSetAttitude__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__GimbalManagerSetAttitude__TYPE_NAME, 37, 37},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 516, 516},
+    {toplevel_type_raw_source, 488, 488},
   };
   return &source;
 }

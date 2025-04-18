@@ -46,7 +46,7 @@ struct EstimatorStatusFlags_
       this->control_status_changes = 0ul;
       this->cs_tilt_align = false;
       this->cs_yaw_align = false;
-      this->cs_gnss_pos = false;
+      this->cs_gps = false;
       this->cs_opt_flow = false;
       this->cs_mag_hdg = false;
       this->cs_mag_3d = false;
@@ -66,12 +66,12 @@ struct EstimatorStatusFlags_
       this->cs_fuse_aspd = false;
       this->cs_gnd_effect = false;
       this->cs_rng_stuck = false;
-      this->cs_gnss_yaw = false;
+      this->cs_gps_yaw = false;
       this->cs_mag_aligned_in_flight = false;
       this->cs_ev_vel = false;
       this->cs_synthetic_mag_z = false;
       this->cs_vehicle_at_rest = false;
-      this->cs_gnss_yaw_fault = false;
+      this->cs_gps_yaw_fault = false;
       this->cs_rng_fault = false;
       this->cs_inertial_dead_reckoning = false;
       this->cs_wind_dead_reckoning = false;
@@ -79,16 +79,6 @@ struct EstimatorStatusFlags_
       this->cs_fake_pos = false;
       this->cs_fake_hgt = false;
       this->cs_gravity_vector = false;
-      this->cs_mag = false;
-      this->cs_ev_yaw_fault = false;
-      this->cs_mag_heading_consistent = false;
-      this->cs_aux_gpos = false;
-      this->cs_rng_terrain = false;
-      this->cs_opt_flow_terrain = false;
-      this->cs_valid_fake_pos = false;
-      this->cs_constant_pos = false;
-      this->cs_baro_fault = false;
-      this->cs_gnss_vel = false;
       this->fault_status_changes = 0ul;
       this->fs_bad_mag_x = false;
       this->fs_bad_mag_y = false;
@@ -99,6 +89,13 @@ struct EstimatorStatusFlags_
       this->fs_bad_sideslip = false;
       this->fs_bad_optflow_x = false;
       this->fs_bad_optflow_y = false;
+      this->fs_bad_vel_n = false;
+      this->fs_bad_vel_e = false;
+      this->fs_bad_vel_d = false;
+      this->fs_bad_pos_n = false;
+      this->fs_bad_pos_e = false;
+      this->fs_bad_pos_d = false;
+      this->fs_bad_acc_bias = false;
       this->fs_bad_acc_vertical = false;
       this->fs_bad_acc_clipping = false;
       this->innovation_fault_status_changes = 0ul;
@@ -126,7 +123,7 @@ struct EstimatorStatusFlags_
       this->control_status_changes = 0ul;
       this->cs_tilt_align = false;
       this->cs_yaw_align = false;
-      this->cs_gnss_pos = false;
+      this->cs_gps = false;
       this->cs_opt_flow = false;
       this->cs_mag_hdg = false;
       this->cs_mag_3d = false;
@@ -146,12 +143,12 @@ struct EstimatorStatusFlags_
       this->cs_fuse_aspd = false;
       this->cs_gnd_effect = false;
       this->cs_rng_stuck = false;
-      this->cs_gnss_yaw = false;
+      this->cs_gps_yaw = false;
       this->cs_mag_aligned_in_flight = false;
       this->cs_ev_vel = false;
       this->cs_synthetic_mag_z = false;
       this->cs_vehicle_at_rest = false;
-      this->cs_gnss_yaw_fault = false;
+      this->cs_gps_yaw_fault = false;
       this->cs_rng_fault = false;
       this->cs_inertial_dead_reckoning = false;
       this->cs_wind_dead_reckoning = false;
@@ -159,16 +156,6 @@ struct EstimatorStatusFlags_
       this->cs_fake_pos = false;
       this->cs_fake_hgt = false;
       this->cs_gravity_vector = false;
-      this->cs_mag = false;
-      this->cs_ev_yaw_fault = false;
-      this->cs_mag_heading_consistent = false;
-      this->cs_aux_gpos = false;
-      this->cs_rng_terrain = false;
-      this->cs_opt_flow_terrain = false;
-      this->cs_valid_fake_pos = false;
-      this->cs_constant_pos = false;
-      this->cs_baro_fault = false;
-      this->cs_gnss_vel = false;
       this->fault_status_changes = 0ul;
       this->fs_bad_mag_x = false;
       this->fs_bad_mag_y = false;
@@ -179,6 +166,13 @@ struct EstimatorStatusFlags_
       this->fs_bad_sideslip = false;
       this->fs_bad_optflow_x = false;
       this->fs_bad_optflow_y = false;
+      this->fs_bad_vel_n = false;
+      this->fs_bad_vel_e = false;
+      this->fs_bad_vel_d = false;
+      this->fs_bad_pos_n = false;
+      this->fs_bad_pos_e = false;
+      this->fs_bad_pos_d = false;
+      this->fs_bad_acc_bias = false;
       this->fs_bad_acc_vertical = false;
       this->fs_bad_acc_clipping = false;
       this->innovation_fault_status_changes = 0ul;
@@ -211,9 +205,9 @@ struct EstimatorStatusFlags_
   using _cs_yaw_align_type =
     bool;
   _cs_yaw_align_type cs_yaw_align;
-  using _cs_gnss_pos_type =
+  using _cs_gps_type =
     bool;
-  _cs_gnss_pos_type cs_gnss_pos;
+  _cs_gps_type cs_gps;
   using _cs_opt_flow_type =
     bool;
   _cs_opt_flow_type cs_opt_flow;
@@ -271,9 +265,9 @@ struct EstimatorStatusFlags_
   using _cs_rng_stuck_type =
     bool;
   _cs_rng_stuck_type cs_rng_stuck;
-  using _cs_gnss_yaw_type =
+  using _cs_gps_yaw_type =
     bool;
-  _cs_gnss_yaw_type cs_gnss_yaw;
+  _cs_gps_yaw_type cs_gps_yaw;
   using _cs_mag_aligned_in_flight_type =
     bool;
   _cs_mag_aligned_in_flight_type cs_mag_aligned_in_flight;
@@ -286,9 +280,9 @@ struct EstimatorStatusFlags_
   using _cs_vehicle_at_rest_type =
     bool;
   _cs_vehicle_at_rest_type cs_vehicle_at_rest;
-  using _cs_gnss_yaw_fault_type =
+  using _cs_gps_yaw_fault_type =
     bool;
-  _cs_gnss_yaw_fault_type cs_gnss_yaw_fault;
+  _cs_gps_yaw_fault_type cs_gps_yaw_fault;
   using _cs_rng_fault_type =
     bool;
   _cs_rng_fault_type cs_rng_fault;
@@ -310,36 +304,6 @@ struct EstimatorStatusFlags_
   using _cs_gravity_vector_type =
     bool;
   _cs_gravity_vector_type cs_gravity_vector;
-  using _cs_mag_type =
-    bool;
-  _cs_mag_type cs_mag;
-  using _cs_ev_yaw_fault_type =
-    bool;
-  _cs_ev_yaw_fault_type cs_ev_yaw_fault;
-  using _cs_mag_heading_consistent_type =
-    bool;
-  _cs_mag_heading_consistent_type cs_mag_heading_consistent;
-  using _cs_aux_gpos_type =
-    bool;
-  _cs_aux_gpos_type cs_aux_gpos;
-  using _cs_rng_terrain_type =
-    bool;
-  _cs_rng_terrain_type cs_rng_terrain;
-  using _cs_opt_flow_terrain_type =
-    bool;
-  _cs_opt_flow_terrain_type cs_opt_flow_terrain;
-  using _cs_valid_fake_pos_type =
-    bool;
-  _cs_valid_fake_pos_type cs_valid_fake_pos;
-  using _cs_constant_pos_type =
-    bool;
-  _cs_constant_pos_type cs_constant_pos;
-  using _cs_baro_fault_type =
-    bool;
-  _cs_baro_fault_type cs_baro_fault;
-  using _cs_gnss_vel_type =
-    bool;
-  _cs_gnss_vel_type cs_gnss_vel;
   using _fault_status_changes_type =
     uint32_t;
   _fault_status_changes_type fault_status_changes;
@@ -370,6 +334,27 @@ struct EstimatorStatusFlags_
   using _fs_bad_optflow_y_type =
     bool;
   _fs_bad_optflow_y_type fs_bad_optflow_y;
+  using _fs_bad_vel_n_type =
+    bool;
+  _fs_bad_vel_n_type fs_bad_vel_n;
+  using _fs_bad_vel_e_type =
+    bool;
+  _fs_bad_vel_e_type fs_bad_vel_e;
+  using _fs_bad_vel_d_type =
+    bool;
+  _fs_bad_vel_d_type fs_bad_vel_d;
+  using _fs_bad_pos_n_type =
+    bool;
+  _fs_bad_pos_n_type fs_bad_pos_n;
+  using _fs_bad_pos_e_type =
+    bool;
+  _fs_bad_pos_e_type fs_bad_pos_e;
+  using _fs_bad_pos_d_type =
+    bool;
+  _fs_bad_pos_d_type fs_bad_pos_d;
+  using _fs_bad_acc_bias_type =
+    bool;
+  _fs_bad_acc_bias_type fs_bad_acc_bias;
   using _fs_bad_acc_vertical_type =
     bool;
   _fs_bad_acc_vertical_type fs_bad_acc_vertical;
@@ -441,10 +426,10 @@ struct EstimatorStatusFlags_
     this->cs_yaw_align = _arg;
     return *this;
   }
-  Type & set__cs_gnss_pos(
+  Type & set__cs_gps(
     const bool & _arg)
   {
-    this->cs_gnss_pos = _arg;
+    this->cs_gps = _arg;
     return *this;
   }
   Type & set__cs_opt_flow(
@@ -561,10 +546,10 @@ struct EstimatorStatusFlags_
     this->cs_rng_stuck = _arg;
     return *this;
   }
-  Type & set__cs_gnss_yaw(
+  Type & set__cs_gps_yaw(
     const bool & _arg)
   {
-    this->cs_gnss_yaw = _arg;
+    this->cs_gps_yaw = _arg;
     return *this;
   }
   Type & set__cs_mag_aligned_in_flight(
@@ -591,10 +576,10 @@ struct EstimatorStatusFlags_
     this->cs_vehicle_at_rest = _arg;
     return *this;
   }
-  Type & set__cs_gnss_yaw_fault(
+  Type & set__cs_gps_yaw_fault(
     const bool & _arg)
   {
-    this->cs_gnss_yaw_fault = _arg;
+    this->cs_gps_yaw_fault = _arg;
     return *this;
   }
   Type & set__cs_rng_fault(
@@ -637,66 +622,6 @@ struct EstimatorStatusFlags_
     const bool & _arg)
   {
     this->cs_gravity_vector = _arg;
-    return *this;
-  }
-  Type & set__cs_mag(
-    const bool & _arg)
-  {
-    this->cs_mag = _arg;
-    return *this;
-  }
-  Type & set__cs_ev_yaw_fault(
-    const bool & _arg)
-  {
-    this->cs_ev_yaw_fault = _arg;
-    return *this;
-  }
-  Type & set__cs_mag_heading_consistent(
-    const bool & _arg)
-  {
-    this->cs_mag_heading_consistent = _arg;
-    return *this;
-  }
-  Type & set__cs_aux_gpos(
-    const bool & _arg)
-  {
-    this->cs_aux_gpos = _arg;
-    return *this;
-  }
-  Type & set__cs_rng_terrain(
-    const bool & _arg)
-  {
-    this->cs_rng_terrain = _arg;
-    return *this;
-  }
-  Type & set__cs_opt_flow_terrain(
-    const bool & _arg)
-  {
-    this->cs_opt_flow_terrain = _arg;
-    return *this;
-  }
-  Type & set__cs_valid_fake_pos(
-    const bool & _arg)
-  {
-    this->cs_valid_fake_pos = _arg;
-    return *this;
-  }
-  Type & set__cs_constant_pos(
-    const bool & _arg)
-  {
-    this->cs_constant_pos = _arg;
-    return *this;
-  }
-  Type & set__cs_baro_fault(
-    const bool & _arg)
-  {
-    this->cs_baro_fault = _arg;
-    return *this;
-  }
-  Type & set__cs_gnss_vel(
-    const bool & _arg)
-  {
-    this->cs_gnss_vel = _arg;
     return *this;
   }
   Type & set__fault_status_changes(
@@ -757,6 +682,48 @@ struct EstimatorStatusFlags_
     const bool & _arg)
   {
     this->fs_bad_optflow_y = _arg;
+    return *this;
+  }
+  Type & set__fs_bad_vel_n(
+    const bool & _arg)
+  {
+    this->fs_bad_vel_n = _arg;
+    return *this;
+  }
+  Type & set__fs_bad_vel_e(
+    const bool & _arg)
+  {
+    this->fs_bad_vel_e = _arg;
+    return *this;
+  }
+  Type & set__fs_bad_vel_d(
+    const bool & _arg)
+  {
+    this->fs_bad_vel_d = _arg;
+    return *this;
+  }
+  Type & set__fs_bad_pos_n(
+    const bool & _arg)
+  {
+    this->fs_bad_pos_n = _arg;
+    return *this;
+  }
+  Type & set__fs_bad_pos_e(
+    const bool & _arg)
+  {
+    this->fs_bad_pos_e = _arg;
+    return *this;
+  }
+  Type & set__fs_bad_pos_d(
+    const bool & _arg)
+  {
+    this->fs_bad_pos_d = _arg;
+    return *this;
+  }
+  Type & set__fs_bad_acc_bias(
+    const bool & _arg)
+  {
+    this->fs_bad_acc_bias = _arg;
     return *this;
   }
   Type & set__fs_bad_acc_vertical(
@@ -895,7 +862,7 @@ struct EstimatorStatusFlags_
     if (this->cs_yaw_align != other.cs_yaw_align) {
       return false;
     }
-    if (this->cs_gnss_pos != other.cs_gnss_pos) {
+    if (this->cs_gps != other.cs_gps) {
       return false;
     }
     if (this->cs_opt_flow != other.cs_opt_flow) {
@@ -955,7 +922,7 @@ struct EstimatorStatusFlags_
     if (this->cs_rng_stuck != other.cs_rng_stuck) {
       return false;
     }
-    if (this->cs_gnss_yaw != other.cs_gnss_yaw) {
+    if (this->cs_gps_yaw != other.cs_gps_yaw) {
       return false;
     }
     if (this->cs_mag_aligned_in_flight != other.cs_mag_aligned_in_flight) {
@@ -970,7 +937,7 @@ struct EstimatorStatusFlags_
     if (this->cs_vehicle_at_rest != other.cs_vehicle_at_rest) {
       return false;
     }
-    if (this->cs_gnss_yaw_fault != other.cs_gnss_yaw_fault) {
+    if (this->cs_gps_yaw_fault != other.cs_gps_yaw_fault) {
       return false;
     }
     if (this->cs_rng_fault != other.cs_rng_fault) {
@@ -992,36 +959,6 @@ struct EstimatorStatusFlags_
       return false;
     }
     if (this->cs_gravity_vector != other.cs_gravity_vector) {
-      return false;
-    }
-    if (this->cs_mag != other.cs_mag) {
-      return false;
-    }
-    if (this->cs_ev_yaw_fault != other.cs_ev_yaw_fault) {
-      return false;
-    }
-    if (this->cs_mag_heading_consistent != other.cs_mag_heading_consistent) {
-      return false;
-    }
-    if (this->cs_aux_gpos != other.cs_aux_gpos) {
-      return false;
-    }
-    if (this->cs_rng_terrain != other.cs_rng_terrain) {
-      return false;
-    }
-    if (this->cs_opt_flow_terrain != other.cs_opt_flow_terrain) {
-      return false;
-    }
-    if (this->cs_valid_fake_pos != other.cs_valid_fake_pos) {
-      return false;
-    }
-    if (this->cs_constant_pos != other.cs_constant_pos) {
-      return false;
-    }
-    if (this->cs_baro_fault != other.cs_baro_fault) {
-      return false;
-    }
-    if (this->cs_gnss_vel != other.cs_gnss_vel) {
       return false;
     }
     if (this->fault_status_changes != other.fault_status_changes) {
@@ -1052,6 +989,27 @@ struct EstimatorStatusFlags_
       return false;
     }
     if (this->fs_bad_optflow_y != other.fs_bad_optflow_y) {
+      return false;
+    }
+    if (this->fs_bad_vel_n != other.fs_bad_vel_n) {
+      return false;
+    }
+    if (this->fs_bad_vel_e != other.fs_bad_vel_e) {
+      return false;
+    }
+    if (this->fs_bad_vel_d != other.fs_bad_vel_d) {
+      return false;
+    }
+    if (this->fs_bad_pos_n != other.fs_bad_pos_n) {
+      return false;
+    }
+    if (this->fs_bad_pos_e != other.fs_bad_pos_e) {
+      return false;
+    }
+    if (this->fs_bad_pos_d != other.fs_bad_pos_d) {
+      return false;
+    }
+    if (this->fs_bad_acc_bias != other.fs_bad_acc_bias) {
       return false;
     }
     if (this->fs_bad_acc_vertical != other.fs_bad_acc_vertical) {

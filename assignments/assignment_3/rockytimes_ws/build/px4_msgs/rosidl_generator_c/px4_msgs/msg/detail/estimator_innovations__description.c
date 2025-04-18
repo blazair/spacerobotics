@@ -11,10 +11,10 @@ px4_msgs__msg__EstimatorInnovations__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x32, 0x75, 0x6c, 0x14, 0xbe, 0x46, 0xda, 0x33,
-      0x3c, 0xb5, 0x59, 0x3f, 0x1c, 0x3a, 0x67, 0x5f,
-      0x48, 0x36, 0x01, 0x3f, 0x5f, 0x7a, 0x94, 0x2f,
-      0x0a, 0x07, 0x34, 0xe2, 0x55, 0x9a, 0x52, 0x9e,
+      0xd5, 0xb2, 0x3b, 0xfc, 0xc3, 0x76, 0xb6, 0x3d,
+      0xde, 0x83, 0x40, 0xe2, 0x5b, 0x66, 0xfe, 0x6e,
+      0x20, 0xe5, 0x2b, 0xec, 0x35, 0x1b, 0xaa, 0xfa,
+      0x44, 0xdb, 0x77, 0x6a, 0x34, 0x7d, 0x1a, 0xc9,
     }};
   return &hash;
 }
@@ -44,7 +44,9 @@ static char px4_msgs__msg__EstimatorInnovations__FIELD_NAME__ev_vpos[] = "ev_vpo
 static char px4_msgs__msg__EstimatorInnovations__FIELD_NAME__rng_vpos[] = "rng_vpos";
 static char px4_msgs__msg__EstimatorInnovations__FIELD_NAME__baro_vpos[] = "baro_vpos";
 static char px4_msgs__msg__EstimatorInnovations__FIELD_NAME__aux_hvel[] = "aux_hvel";
+static char px4_msgs__msg__EstimatorInnovations__FIELD_NAME__aux_vvel[] = "aux_vvel";
 static char px4_msgs__msg__EstimatorInnovations__FIELD_NAME__flow[] = "flow";
+static char px4_msgs__msg__EstimatorInnovations__FIELD_NAME__terr_flow[] = "terr_flow";
 static char px4_msgs__msg__EstimatorInnovations__FIELD_NAME__heading[] = "heading";
 static char px4_msgs__msg__EstimatorInnovations__FIELD_NAME__mag_field[] = "mag_field";
 static char px4_msgs__msg__EstimatorInnovations__FIELD_NAME__gravity[] = "gravity";
@@ -186,7 +188,27 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__EstimatorInnovat
     {NULL, 0, 0},
   },
   {
+    {px4_msgs__msg__EstimatorInnovations__FIELD_NAME__aux_vvel, 8, 8},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
     {px4_msgs__msg__EstimatorInnovations__FIELD_NAME__flow, 4, 4},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT_ARRAY,
+      2,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {px4_msgs__msg__EstimatorInnovations__FIELD_NAME__terr_flow, 9, 9},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT_ARRAY,
       2,
@@ -286,7 +308,7 @@ px4_msgs__msg__EstimatorInnovations__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {px4_msgs__msg__EstimatorInnovations__TYPE_NAME, 33, 33},
-      {px4_msgs__msg__EstimatorInnovations__FIELDS, 22, 22},
+      {px4_msgs__msg__EstimatorInnovations__FIELDS, 24, 24},
     },
     {NULL, 0, 0},
   };
@@ -318,9 +340,11 @@ static char toplevel_type_raw_source[] =
   "\n"
   "# Auxiliary velocity\n"
   "float32[2] aux_hvel\\t# horizontal auxiliary velocity innovation from landing target measurement (m/sec) and innovation variance ((m/sec)**2)\n"
+  "float32    aux_vvel\\t# vertical auxiliary velocity innovation from landing target measurement (m/sec) and innovation variance ((m/sec)**2)\n"
   "\n"
   "# Optical flow\n"
   "float32[2] flow\\t\\t# flow innvoation (rad/sec) and innovation variance ((rad/sec)**2)\n"
+  "float32[2] terr_flow\\t# flow innvoation (rad/sec) and innovation variance computed by the terrain estimator ((rad/sec)**2)\n"
   "\n"
   "# Various\n"
   "float32 heading\\t\\t# heading innovation (rad) and innovation variance (rad**2)\n"
@@ -349,7 +373,7 @@ px4_msgs__msg__EstimatorInnovations__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__EstimatorInnovations__TYPE_NAME, 33, 33},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 2369, 2369},
+    {toplevel_type_raw_source, 2629, 2629},
   };
   return &source;
 }

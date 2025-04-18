@@ -14,7 +14,7 @@ module px4_msgs {
       const uint8 ACTION_SWITCH_MODE = 5;
       const uint8 ACTION_VTOL_TRANSITION_TO_MULTICOPTER = 6;
       const uint8 ACTION_VTOL_TRANSITION_TO_FIXEDWING = 7;
-      const uint8 SOURCE_STICK_GESTURE = 0;
+      const uint8 SOURCE_RC_STICK_GESTURE = 0;
       const uint8 SOURCE_RC_SWITCH = 1;
       const uint8 SOURCE_RC_BUTTON = 2;
       const uint8 SOURCE_RC_MODE_SLOT = 3;

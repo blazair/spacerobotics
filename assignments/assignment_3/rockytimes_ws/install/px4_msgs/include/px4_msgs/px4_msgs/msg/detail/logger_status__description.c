@@ -11,10 +11,10 @@ px4_msgs__msg__LoggerStatus__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0xab, 0x86, 0xe3, 0x3d, 0x7e, 0x94, 0xbb, 0x26,
-      0xea, 0x8a, 0x14, 0x6f, 0x2a, 0xc5, 0x55, 0x53,
-      0xf7, 0xe6, 0xdd, 0x42, 0xe2, 0x8e, 0xf8, 0xe2,
-      0xe9, 0xc7, 0x00, 0x98, 0x0d, 0x4b, 0x07, 0x9a,
+      0x46, 0x78, 0xdc, 0x00, 0x56, 0x9e, 0x86, 0xcc,
+      0x0f, 0x95, 0x4f, 0xad, 0x3d, 0xff, 0xeb, 0x09,
+      0x0e, 0x93, 0xab, 0x1c, 0x0e, 0xc0, 0xef, 0x16,
+      0xf9, 0xce, 0x36, 0x29, 0x75, 0x3f, 0x53, 0x9c,
     }};
   return &hash;
 }
@@ -34,7 +34,6 @@ static char px4_msgs__msg__LoggerStatus__TYPE_NAME[] = "px4_msgs/msg/LoggerStatu
 static char px4_msgs__msg__LoggerStatus__FIELD_NAME__timestamp[] = "timestamp";
 static char px4_msgs__msg__LoggerStatus__FIELD_NAME__type[] = "type";
 static char px4_msgs__msg__LoggerStatus__FIELD_NAME__backend[] = "backend";
-static char px4_msgs__msg__LoggerStatus__FIELD_NAME__is_logging[] = "is_logging";
 static char px4_msgs__msg__LoggerStatus__FIELD_NAME__total_written_kb[] = "total_written_kb";
 static char px4_msgs__msg__LoggerStatus__FIELD_NAME__write_rate_kb_s[] = "write_rate_kb_s";
 static char px4_msgs__msg__LoggerStatus__FIELD_NAME__dropouts[] = "dropouts";
@@ -68,16 +67,6 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__LoggerStatus__FI
     {px4_msgs__msg__LoggerStatus__FIELD_NAME__backend, 7, 7},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT8,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__LoggerStatus__FIELD_NAME__is_logging, 10, 10},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
       0,
       0,
       {NULL, 0, 0},
@@ -165,7 +154,7 @@ px4_msgs__msg__LoggerStatus__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {px4_msgs__msg__LoggerStatus__TYPE_NAME, 25, 25},
-      {px4_msgs__msg__LoggerStatus__FIELDS, 11, 11},
+      {px4_msgs__msg__LoggerStatus__FIELDS, 10, 10},
     },
     {NULL, 0, 0},
   };
@@ -186,8 +175,6 @@ static char toplevel_type_raw_source[] =
   "uint8 BACKEND_MAVLINK = 2\n"
   "uint8 BACKEND_ALL     = 3\n"
   "uint8 backend\n"
-  "\n"
-  "bool is_logging\n"
   "\n"
   "float32 total_written_kb       # total written to log in kiloBytes\n"
   "float32 write_rate_kb_s        # write rate in kiloBytes/s\n"
@@ -212,7 +199,7 @@ px4_msgs__msg__LoggerStatus__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__LoggerStatus__TYPE_NAME, 25, 25},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 732, 732},
+    {toplevel_type_raw_source, 715, 715},
   };
   return &source;
 }

@@ -19,17 +19,17 @@ extern "C"
 
 // Constants defined in the message
 
-/// Constant 'MESSAGE_VERSION'.
-enum
-{
-  px4_msgs__msg__VehicleAttitudeSetpoint__MESSAGE_VERSION = 0ul
-};
-
 /// Struct defined in msg/VehicleAttitudeSetpoint in the package px4_msgs.
 typedef struct px4_msgs__msg__VehicleAttitudeSetpoint
 {
   /// time since system start (microseconds)
   uint64_t timestamp;
+  /// body angle in NED frame (can be NaN for FW)
+  float roll_body;
+  /// body angle in NED frame (can be NaN for FW)
+  float pitch_body;
+  /// body angle in NED frame (can be NaN for FW)
+  float yaw_body;
   /// rad/s (commanded by user)
   float yaw_sp_move_rate;
   /// For quaternion-based attitude control
@@ -37,7 +37,7 @@ typedef struct px4_msgs__msg__VehicleAttitudeSetpoint
   float q_d[4];
   /// For clarification: For multicopters thrust_body[0] and thrust[1] are usually 0 and thrust[2] is the negative throttle demand.
   /// For fixed wings thrust_x is the throttle demand and thrust_y, thrust_z will usually be zero.
-  /// Normalized thrust command in body FRD frame [-1,1]
+  /// Normalized thrust command in body NED frame [-1,1]
   float thrust_body[3];
   /// Reset roll/pitch/yaw integrals (navigation logic change)
   bool reset_integral;

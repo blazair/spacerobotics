@@ -80,7 +80,7 @@ size_t px4_msgs__msg__RcChannels__rosidl_typesupport_introspection_c__size_funct
   const void * untyped_member)
 {
   (void)untyped_member;
-  return 29;
+  return 28;
 }
 
 const void * px4_msgs__msg__RcChannels__rosidl_typesupport_introspection_c__get_const_function__RcChannels__function(
@@ -201,7 +201,7 @@ static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__RcChanne
     NULL,  // members of sub message
     false,  // is key
     true,  // is array
-    29,  // array size
+    28,  // array size
     false,  // is upper bound
     offsetof(px4_msgs__msg__RcChannels, function),  // bytes offset in struct
     NULL,  // default value

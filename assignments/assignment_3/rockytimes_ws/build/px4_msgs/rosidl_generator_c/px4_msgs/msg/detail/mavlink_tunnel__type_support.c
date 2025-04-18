@@ -4,9 +4,9 @@
 
 #include <string.h>
 
-#include "rosidl_typesupport_interface/macros.h"
 #include "px4_msgs/msg/detail/mavlink_tunnel__functions.h"
 #include "px4_msgs/msg/detail/mavlink_tunnel__struct.h"
+#include "rosidl_typesupport_interface/macros.h"
 #include "px4_msgs/msg/detail/mavlink_tunnel__type_support.h"
 
 #ifdef __cplusplus

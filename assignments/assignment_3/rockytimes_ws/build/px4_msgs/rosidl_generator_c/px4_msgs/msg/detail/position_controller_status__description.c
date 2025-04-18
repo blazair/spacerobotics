@@ -11,10 +11,10 @@ px4_msgs__msg__PositionControllerStatus__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0xdc, 0xf7, 0x0b, 0x4c, 0x22, 0x8e, 0xe5, 0xc0,
-      0x18, 0x3c, 0xb2, 0xa5, 0xdc, 0x3d, 0x2b, 0x62,
-      0x6f, 0x77, 0x95, 0x06, 0x87, 0x41, 0xce, 0xbd,
-      0xb9, 0xe6, 0xdb, 0xde, 0x2e, 0x56, 0x37, 0x0b,
+      0x7e, 0xee, 0x55, 0x54, 0x04, 0x4b, 0xde, 0x84,
+      0x10, 0x84, 0x5f, 0x4a, 0xb2, 0x15, 0x37, 0xa9,
+      0xd4, 0x63, 0x3a, 0x8c, 0x70, 0xf0, 0x3c, 0x99,
+      0x8f, 0x1b, 0x36, 0xb3, 0x5d, 0x5a, 0xaf, 0x26,
     }};
   return &hash;
 }
@@ -39,6 +39,8 @@ static char px4_msgs__msg__PositionControllerStatus__FIELD_NAME__target_bearing[
 static char px4_msgs__msg__PositionControllerStatus__FIELD_NAME__xtrack_error[] = "xtrack_error";
 static char px4_msgs__msg__PositionControllerStatus__FIELD_NAME__wp_dist[] = "wp_dist";
 static char px4_msgs__msg__PositionControllerStatus__FIELD_NAME__acceptance_radius[] = "acceptance_radius";
+static char px4_msgs__msg__PositionControllerStatus__FIELD_NAME__yaw_acceptance[] = "yaw_acceptance";
+static char px4_msgs__msg__PositionControllerStatus__FIELD_NAME__altitude_acceptance[] = "altitude_acceptance";
 static char px4_msgs__msg__PositionControllerStatus__FIELD_NAME__type[] = "type";
 
 static rosidl_runtime_c__type_description__Field px4_msgs__msg__PositionControllerStatus__FIELDS[] = {
@@ -123,6 +125,26 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__PositionControll
     {NULL, 0, 0},
   },
   {
+    {px4_msgs__msg__PositionControllerStatus__FIELD_NAME__yaw_acceptance, 14, 14},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {px4_msgs__msg__PositionControllerStatus__FIELD_NAME__altitude_acceptance, 19, 19},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
     {px4_msgs__msg__PositionControllerStatus__FIELD_NAME__type, 4, 4},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT8,
@@ -143,7 +165,7 @@ px4_msgs__msg__PositionControllerStatus__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {px4_msgs__msg__PositionControllerStatus__TYPE_NAME, 37, 37},
-      {px4_msgs__msg__PositionControllerStatus__FIELDS, 9, 9},
+      {px4_msgs__msg__PositionControllerStatus__FIELDS, 11, 11},
     },
     {NULL, 0, 0},
   };
@@ -163,6 +185,8 @@ static char toplevel_type_raw_source[] =
   "float32 xtrack_error\\t\\t# Signed track error [m]\n"
   "float32 wp_dist\\t\\t\\t# Distance to active (next) waypoint [m]\n"
   "float32 acceptance_radius\\t# Current horizontal acceptance radius [m]\n"
+  "float32 yaw_acceptance\\t\\t# Yaw acceptance error[rad]\n"
+  "float32 altitude_acceptance\\t# Current vertical acceptance error [m]\n"
   "uint8 type\\t\\t\\t# Current (applied) position setpoint type (see PositionSetpoint.msg)";
 
 static char msg_encoding[] = "msg";
@@ -177,7 +201,7 @@ px4_msgs__msg__PositionControllerStatus__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__PositionControllerStatus__TYPE_NAME, 37, 37},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 521, 521},
+    {toplevel_type_raw_source, 641, 641},
   };
   return &source;
 }

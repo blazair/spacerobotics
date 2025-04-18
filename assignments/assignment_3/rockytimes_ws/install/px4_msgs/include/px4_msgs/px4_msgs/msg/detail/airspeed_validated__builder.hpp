@@ -24,64 +24,16 @@ namespace msg
 namespace builder
 {
 
-class Init_AirspeedValidated_pitch_filtered
-{
-public:
-  explicit Init_AirspeedValidated_pitch_filtered(::px4_msgs::msg::AirspeedValidated & msg)
-  : msg_(msg)
-  {}
-  ::px4_msgs::msg::AirspeedValidated pitch_filtered(::px4_msgs::msg::AirspeedValidated::_pitch_filtered_type arg)
-  {
-    msg_.pitch_filtered = std::move(arg);
-    return std::move(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::AirspeedValidated msg_;
-};
-
-class Init_AirspeedValidated_throttle_filtered
-{
-public:
-  explicit Init_AirspeedValidated_throttle_filtered(::px4_msgs::msg::AirspeedValidated & msg)
-  : msg_(msg)
-  {}
-  Init_AirspeedValidated_pitch_filtered throttle_filtered(::px4_msgs::msg::AirspeedValidated::_throttle_filtered_type arg)
-  {
-    msg_.throttle_filtered = std::move(arg);
-    return Init_AirspeedValidated_pitch_filtered(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::AirspeedValidated msg_;
-};
-
-class Init_AirspeedValidated_airspeed_derivative_filtered
-{
-public:
-  explicit Init_AirspeedValidated_airspeed_derivative_filtered(::px4_msgs::msg::AirspeedValidated & msg)
-  : msg_(msg)
-  {}
-  Init_AirspeedValidated_throttle_filtered airspeed_derivative_filtered(::px4_msgs::msg::AirspeedValidated::_airspeed_derivative_filtered_type arg)
-  {
-    msg_.airspeed_derivative_filtered = std::move(arg);
-    return Init_AirspeedValidated_throttle_filtered(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::AirspeedValidated msg_;
-};
-
 class Init_AirspeedValidated_selected_airspeed_index
 {
 public:
   explicit Init_AirspeedValidated_selected_airspeed_index(::px4_msgs::msg::AirspeedValidated & msg)
   : msg_(msg)
   {}
-  Init_AirspeedValidated_airspeed_derivative_filtered selected_airspeed_index(::px4_msgs::msg::AirspeedValidated::_selected_airspeed_index_type arg)
+  ::px4_msgs::msg::AirspeedValidated selected_airspeed_index(::px4_msgs::msg::AirspeedValidated::_selected_airspeed_index_type arg)
   {
     msg_.selected_airspeed_index = std::move(arg);
-    return Init_AirspeedValidated_airspeed_derivative_filtered(msg_);
+    return std::move(msg_);
   }
 
 private:

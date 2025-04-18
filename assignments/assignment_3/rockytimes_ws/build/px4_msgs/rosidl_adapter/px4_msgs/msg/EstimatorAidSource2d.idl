@@ -5,7 +5,6 @@
 
 module px4_msgs {
   module msg {
-    typedef double double__2[2];
     typedef float float__2[2];
     struct EstimatorAidSource2d {
       @verbatim (language="comment", text=
@@ -22,23 +21,19 @@ module px4_msgs {
 
       uint64 time_last_fuse;
 
-      double__2 observation;
+      float__2 observation;
 
       float__2 observation_variance;
 
       float__2 innovation;
 
-      float__2 innovation_filtered;
-
       float__2 innovation_variance;
 
-      @verbatim (language="comment", text=
-        "normalized innovation squared")
       float__2 test_ratio;
 
       @verbatim (language="comment", text=
-        "signed filtered test ratio")
-      float__2 test_ratio_filtered;
+        "true when measurements are being fused")
+      boolean fusion_enabled;
 
       @verbatim (language="comment", text=
         "true if the observation has been rejected")

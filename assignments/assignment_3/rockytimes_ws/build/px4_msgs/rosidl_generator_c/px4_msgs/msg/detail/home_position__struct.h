@@ -19,12 +19,6 @@ extern "C"
 
 // Constants defined in the message
 
-/// Constant 'MESSAGE_VERSION'.
-enum
-{
-  px4_msgs__msg__HomePosition__MESSAGE_VERSION = 0ul
-};
-
 /// Struct defined in msg/HomePosition in the package px4_msgs.
 /**
   * GPS home position in WGS84 coordinates.
@@ -55,8 +49,6 @@ typedef struct px4_msgs__msg__HomePosition
   bool valid_lpos;
   /// true when home position was set manually
   bool manual_home;
-  /// update counter of the home position
-  uint32_t update_count;
 } px4_msgs__msg__HomePosition;
 
 // Struct for a sequence of px4_msgs__msg__HomePosition.

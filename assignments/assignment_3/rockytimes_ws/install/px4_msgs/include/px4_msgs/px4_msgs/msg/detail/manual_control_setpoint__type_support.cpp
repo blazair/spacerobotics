@@ -38,7 +38,7 @@ void ManualControlSetpoint_fini_function(void * message_memory)
   typed_message->~ManualControlSetpoint();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember ManualControlSetpoint_message_member_array[17] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember ManualControlSetpoint_message_member_array[16] = {
   {
     "timestamp",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT64,  // type
@@ -326,31 +326,13 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember ManualControl
     nullptr,  // fetch(index, &value) function pointer
     nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
-  },
-  {
-    "buttons",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT16,  // type
-    0,  // upper bound of string
-    nullptr,  // members of sub message
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(px4_msgs::msg::ManualControlSetpoint, buttons),  // bytes offset in struct
-    nullptr,  // default value
-    nullptr,  // size() function pointer
-    nullptr,  // get_const(index) function pointer
-    nullptr,  // get(index) function pointer
-    nullptr,  // fetch(index, &value) function pointer
-    nullptr,  // assign(index, value) function pointer
-    nullptr  // resize(index) function pointer
   }
 };
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers ManualControlSetpoint_message_members = {
   "px4_msgs::msg",  // message namespace
   "ManualControlSetpoint",  // message name
-  17,  // number of fields
+  16,  // number of fields
   sizeof(px4_msgs::msg::ManualControlSetpoint),
   false,  // has_any_key_member_
   ManualControlSetpoint_message_member_array,  // message members

@@ -11,10 +11,10 @@ px4_msgs__msg__VehicleStatus__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x82, 0x8b, 0xdd, 0xbb, 0x7d, 0x4c, 0x2a, 0xa6,
-      0xad, 0x93, 0x75, 0x79, 0x55, 0xf6, 0x89, 0x3b,
-      0xe1, 0xec, 0x5d, 0x8f, 0x11, 0x88, 0x5e, 0xc7,
-      0x71, 0x5b, 0xcd, 0xd7, 0x6b, 0x52, 0x26, 0xc9,
+      0xbe, 0x57, 0x90, 0x61, 0x01, 0x20, 0x9e, 0xdf,
+      0xec, 0xd0, 0xa7, 0x11, 0x69, 0x75, 0x2e, 0x17,
+      0x1e, 0xa6, 0x58, 0x4b, 0x46, 0x3a, 0xad, 0x21,
+      0xe5, 0xfa, 0x19, 0xd6, 0x99, 0x9c, 0x6e, 0xf0,
     }};
   return &hash;
 }
@@ -40,15 +40,11 @@ static char px4_msgs__msg__VehicleStatus__FIELD_NAME__latest_disarming_reason[] 
 static char px4_msgs__msg__VehicleStatus__FIELD_NAME__nav_state_timestamp[] = "nav_state_timestamp";
 static char px4_msgs__msg__VehicleStatus__FIELD_NAME__nav_state_user_intention[] = "nav_state_user_intention";
 static char px4_msgs__msg__VehicleStatus__FIELD_NAME__nav_state[] = "nav_state";
-static char px4_msgs__msg__VehicleStatus__FIELD_NAME__executor_in_charge[] = "executor_in_charge";
-static char px4_msgs__msg__VehicleStatus__FIELD_NAME__valid_nav_states_mask[] = "valid_nav_states_mask";
-static char px4_msgs__msg__VehicleStatus__FIELD_NAME__can_set_nav_states_mask[] = "can_set_nav_states_mask";
 static char px4_msgs__msg__VehicleStatus__FIELD_NAME__failure_detector_status[] = "failure_detector_status";
 static char px4_msgs__msg__VehicleStatus__FIELD_NAME__hil_state[] = "hil_state";
 static char px4_msgs__msg__VehicleStatus__FIELD_NAME__vehicle_type[] = "vehicle_type";
 static char px4_msgs__msg__VehicleStatus__FIELD_NAME__failsafe[] = "failsafe";
 static char px4_msgs__msg__VehicleStatus__FIELD_NAME__failsafe_and_user_took_over[] = "failsafe_and_user_took_over";
-static char px4_msgs__msg__VehicleStatus__FIELD_NAME__failsafe_defer_state[] = "failsafe_defer_state";
 static char px4_msgs__msg__VehicleStatus__FIELD_NAME__gcs_connection_lost[] = "gcs_connection_lost";
 static char px4_msgs__msg__VehicleStatus__FIELD_NAME__gcs_connection_lost_counter[] = "gcs_connection_lost_counter";
 static char px4_msgs__msg__VehicleStatus__FIELD_NAME__high_latency_data_link_lost[] = "high_latency_data_link_lost";
@@ -67,6 +63,8 @@ static char px4_msgs__msg__VehicleStatus__FIELD_NAME__open_drone_id_system_prese
 static char px4_msgs__msg__VehicleStatus__FIELD_NAME__open_drone_id_system_healthy[] = "open_drone_id_system_healthy";
 static char px4_msgs__msg__VehicleStatus__FIELD_NAME__parachute_system_present[] = "parachute_system_present";
 static char px4_msgs__msg__VehicleStatus__FIELD_NAME__parachute_system_healthy[] = "parachute_system_healthy";
+static char px4_msgs__msg__VehicleStatus__FIELD_NAME__avoidance_system_required[] = "avoidance_system_required";
+static char px4_msgs__msg__VehicleStatus__FIELD_NAME__avoidance_system_valid[] = "avoidance_system_valid";
 static char px4_msgs__msg__VehicleStatus__FIELD_NAME__rc_calibration_in_progress[] = "rc_calibration_in_progress";
 static char px4_msgs__msg__VehicleStatus__FIELD_NAME__calibration_enabled[] = "calibration_enabled";
 static char px4_msgs__msg__VehicleStatus__FIELD_NAME__pre_flight_checks_pass[] = "pre_flight_checks_pass";
@@ -163,36 +161,6 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__VehicleStatus__F
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__VehicleStatus__FIELD_NAME__executor_in_charge, 18, 18},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT8,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__VehicleStatus__FIELD_NAME__valid_nav_states_mask, 21, 21},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT32,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__VehicleStatus__FIELD_NAME__can_set_nav_states_mask, 23, 23},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT32,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
     {px4_msgs__msg__VehicleStatus__FIELD_NAME__failure_detector_status, 23, 23},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT16,
@@ -236,16 +204,6 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__VehicleStatus__F
     {px4_msgs__msg__VehicleStatus__FIELD_NAME__failsafe_and_user_took_over, 27, 27},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__VehicleStatus__FIELD_NAME__failsafe_defer_state, 20, 20},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT8,
       0,
       0,
       {NULL, 0, 0},
@@ -433,6 +391,26 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__VehicleStatus__F
     {NULL, 0, 0},
   },
   {
+    {px4_msgs__msg__VehicleStatus__FIELD_NAME__avoidance_system_required, 25, 25},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {px4_msgs__msg__VehicleStatus__FIELD_NAME__avoidance_system_valid, 22, 22},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
     {px4_msgs__msg__VehicleStatus__FIELD_NAME__rc_calibration_in_progress, 26, 26},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
@@ -473,7 +451,7 @@ px4_msgs__msg__VehicleStatus__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {px4_msgs__msg__VehicleStatus__TYPE_NAME, 26, 26},
-      {px4_msgs__msg__VehicleStatus__FIELDS, 39, 39},
+      {px4_msgs__msg__VehicleStatus__FIELDS, 37, 37},
     },
     {NULL, 0, 0},
   };
@@ -486,21 +464,24 @@ px4_msgs__msg__VehicleStatus__get_type_description(
 static char toplevel_type_raw_source[] =
   "# Encodes the system state of the vehicle published by commander\n"
   "\n"
-  "uint32 MESSAGE_VERSION = 1\n"
-  "\n"
   "uint64 timestamp # time since system start (microseconds)\n"
   "\n"
   "uint64 armed_time # Arming timestamp (microseconds)\n"
   "uint64 takeoff_time # Takeoff timestamp (microseconds)\n"
   "\n"
   "uint8 arming_state\n"
-  "uint8 ARMING_STATE_DISARMED = 1\n"
-  "uint8 ARMING_STATE_ARMED    = 2\n"
+  "uint8 ARMING_STATE_INIT = 0\n"
+  "uint8 ARMING_STATE_STANDBY = 1\n"
+  "uint8 ARMING_STATE_ARMED = 2\n"
+  "uint8 ARMING_STATE_STANDBY_ERROR = 3\n"
+  "uint8 ARMING_STATE_SHUTDOWN = 4\n"
+  "uint8 ARMING_STATE_IN_AIR_RESTORE = 5\n"
+  "uint8 ARMING_STATE_MAX = 6\n"
   "\n"
   "uint8 latest_arming_reason\n"
   "uint8 latest_disarming_reason\n"
   "uint8 ARM_DISARM_REASON_TRANSITION_TO_STANDBY = 0\n"
-  "uint8 ARM_DISARM_REASON_STICK_GESTURE = 1\n"
+  "uint8 ARM_DISARM_REASON_RC_STICK = 1\n"
   "uint8 ARM_DISARM_REASON_RC_SWITCH = 2\n"
   "uint8 ARM_DISARM_REASON_COMMAND_INTERNAL = 3\n"
   "uint8 ARM_DISARM_REASON_COMMAND_EXTERNAL = 4\n"
@@ -525,37 +506,22 @@ static char toplevel_type_raw_source[] =
   "uint8 NAVIGATION_STATE_AUTO_MISSION = 3         # Auto mission mode\n"
   "uint8 NAVIGATION_STATE_AUTO_LOITER = 4          # Auto loiter mode\n"
   "uint8 NAVIGATION_STATE_AUTO_RTL = 5             # Auto return to launch mode\n"
-  "uint8 NAVIGATION_STATE_POSITION_SLOW = 6\n"
-  "uint8 NAVIGATION_STATE_FREE5 = 7\n"
-  "uint8 NAVIGATION_STATE_FREE4 = 8\n"
-  "uint8 NAVIGATION_STATE_FREE3 = 9\n"
+  "uint8 NAVIGATION_STATE_UNUSED3 = 8              # Free slot\n"
+  "uint8 NAVIGATION_STATE_UNUSED = 9               # Free slot\n"
   "uint8 NAVIGATION_STATE_ACRO = 10                # Acro mode\n"
-  "uint8 NAVIGATION_STATE_FREE2 = 11\n"
+  "uint8 NAVIGATION_STATE_UNUSED1 = 11             # Free slot\n"
   "uint8 NAVIGATION_STATE_DESCEND = 12             # Descend mode (no position control)\n"
   "uint8 NAVIGATION_STATE_TERMINATION = 13         # Termination mode\n"
   "uint8 NAVIGATION_STATE_OFFBOARD = 14\n"
   "uint8 NAVIGATION_STATE_STAB = 15                # Stabilized mode\n"
-  "uint8 NAVIGATION_STATE_FREE1 = 16\n"
+  "uint8 NAVIGATION_STATE_UNUSED2 = 16             # Free slot\n"
   "uint8 NAVIGATION_STATE_AUTO_TAKEOFF = 17        # Takeoff\n"
   "uint8 NAVIGATION_STATE_AUTO_LAND = 18           # Land\n"
   "uint8 NAVIGATION_STATE_AUTO_FOLLOW_TARGET = 19  # Auto Follow\n"
   "uint8 NAVIGATION_STATE_AUTO_PRECLAND = 20       # Precision land with landing target\n"
   "uint8 NAVIGATION_STATE_ORBIT = 21               # Orbit in a circle\n"
   "uint8 NAVIGATION_STATE_AUTO_VTOL_TAKEOFF = 22   # Takeoff, transition, establish loiter\n"
-  "uint8 NAVIGATION_STATE_EXTERNAL1 = 23\n"
-  "uint8 NAVIGATION_STATE_EXTERNAL2 = 24\n"
-  "uint8 NAVIGATION_STATE_EXTERNAL3 = 25\n"
-  "uint8 NAVIGATION_STATE_EXTERNAL4 = 26\n"
-  "uint8 NAVIGATION_STATE_EXTERNAL5 = 27\n"
-  "uint8 NAVIGATION_STATE_EXTERNAL6 = 28\n"
-  "uint8 NAVIGATION_STATE_EXTERNAL7 = 29\n"
-  "uint8 NAVIGATION_STATE_EXTERNAL8 = 30\n"
-  "uint8 NAVIGATION_STATE_MAX = 31\n"
-  "\n"
-  "uint8 executor_in_charge                        # Current mode executor in charge (0=Autopilot)\n"
-  "\n"
-  "uint32 valid_nav_states_mask                    # Bitmask for all valid nav_state values\n"
-  "uint32 can_set_nav_states_mask                  # Bitmask for all modes that a user can select\n"
+  "uint8 NAVIGATION_STATE_MAX = 23\n"
   "\n"
   "# Bitmask of detected failures\n"
   "uint16 failure_detector_status\n"
@@ -573,19 +539,16 @@ static char toplevel_type_raw_source[] =
   "uint8 HIL_STATE_OFF = 0\n"
   "uint8 HIL_STATE_ON = 1\n"
   "\n"
-  "# Current vehicle locomotion method. A vehicle can have different methods (e.g. VTOL transitions from RW to FW method)\n"
+  "# If it's a VTOL, then the value will be VEHICLE_TYPE_ROTARY_WING while flying as a multicopter, and VEHICLE_TYPE_FIXED_WING when flying as a fixed-wing\n"
   "uint8 vehicle_type\n"
-  "uint8 VEHICLE_TYPE_ROTARY_WING = 0\n"
-  "uint8 VEHICLE_TYPE_FIXED_WING = 1\n"
-  "uint8 VEHICLE_TYPE_ROVER = 2\n"
-  "\n"
-  "uint8 FAILSAFE_DEFER_STATE_DISABLED = 0\n"
-  "uint8 FAILSAFE_DEFER_STATE_ENABLED = 1\n"
-  "uint8 FAILSAFE_DEFER_STATE_WOULD_FAILSAFE = 2 # Failsafes deferred, but would trigger a failsafe\n"
+  "uint8 VEHICLE_TYPE_UNKNOWN = 0\n"
+  "uint8 VEHICLE_TYPE_ROTARY_WING = 1\n"
+  "uint8 VEHICLE_TYPE_FIXED_WING = 2\n"
+  "uint8 VEHICLE_TYPE_ROVER = 3\n"
+  "uint8 VEHICLE_TYPE_AIRSHIP = 4\n"
   "\n"
   "bool failsafe # true if system is in failsafe state (e.g.:RTL, Hover, Terminate, ...)\n"
   "bool failsafe_and_user_took_over # true if system is in failsafe state but the user took over control\n"
-  "uint8 failsafe_defer_state # one of FAILSAFE_DEFER_STATE_*\n"
   "\n"
   "# Link loss\n"
   "bool gcs_connection_lost              # datalink to GCS lost\n"
@@ -615,10 +578,14 @@ static char toplevel_type_raw_source[] =
   "bool parachute_system_present\n"
   "bool parachute_system_healthy\n"
   "\n"
+  "bool avoidance_system_required                    # Set to true if avoidance system is enabled via COM_OBS_AVOID parameter\n"
+  "bool avoidance_system_valid                       # Status of the obstacle avoidance system\n"
+  "\n"
   "bool rc_calibration_in_progress\n"
   "bool calibration_enabled\n"
   "\n"
-  "bool pre_flight_checks_pass\\t\\t# true if all checks necessary to arm pass";
+  "bool pre_flight_checks_pass\\t\\t# true if all checks necessary to arm pass\n"
+  "";
 
 static char msg_encoding[] = "msg";
 
@@ -632,7 +599,7 @@ px4_msgs__msg__VehicleStatus__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__VehicleStatus__TYPE_NAME, 26, 26},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 5888, 5888},
+    {toplevel_type_raw_source, 5536, 5536},
   };
   return &source;
 }

@@ -88,32 +88,16 @@ private:
   ::px4_msgs::msg::FailsafeFlags msg_;
 };
 
-class Init_FailsafeFlags_navigator_failure
-{
-public:
-  explicit Init_FailsafeFlags_navigator_failure(::px4_msgs::msg::FailsafeFlags & msg)
-  : msg_(msg)
-  {}
-  Init_FailsafeFlags_fd_critical_failure navigator_failure(::px4_msgs::msg::FailsafeFlags::_navigator_failure_type arg)
-  {
-    msg_.navigator_failure = std::move(arg);
-    return Init_FailsafeFlags_fd_critical_failure(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::FailsafeFlags msg_;
-};
-
 class Init_FailsafeFlags_local_position_accuracy_low
 {
 public:
   explicit Init_FailsafeFlags_local_position_accuracy_low(::px4_msgs::msg::FailsafeFlags & msg)
   : msg_(msg)
   {}
-  Init_FailsafeFlags_navigator_failure local_position_accuracy_low(::px4_msgs::msg::FailsafeFlags::_local_position_accuracy_low_type arg)
+  Init_FailsafeFlags_fd_critical_failure local_position_accuracy_low(::px4_msgs::msg::FailsafeFlags::_local_position_accuracy_low_type arg)
   {
     msg_.local_position_accuracy_low = std::move(arg);
-    return Init_FailsafeFlags_navigator_failure(msg_);
+    return Init_FailsafeFlags_fd_critical_failure(msg_);
   }
 
 private:
@@ -184,15 +168,15 @@ private:
   ::px4_msgs::msg::FailsafeFlags msg_;
 };
 
-class Init_FailsafeFlags_geofence_breached
+class Init_FailsafeFlags_primary_geofence_breached
 {
 public:
-  explicit Init_FailsafeFlags_geofence_breached(::px4_msgs::msg::FailsafeFlags & msg)
+  explicit Init_FailsafeFlags_primary_geofence_breached(::px4_msgs::msg::FailsafeFlags & msg)
   : msg_(msg)
   {}
-  Init_FailsafeFlags_mission_failure geofence_breached(::px4_msgs::msg::FailsafeFlags::_geofence_breached_type arg)
+  Init_FailsafeFlags_mission_failure primary_geofence_breached(::px4_msgs::msg::FailsafeFlags::_primary_geofence_breached_type arg)
   {
-    msg_.geofence_breached = std::move(arg);
+    msg_.primary_geofence_breached = std::move(arg);
     return Init_FailsafeFlags_mission_failure(msg_);
   }
 
@@ -206,10 +190,10 @@ public:
   explicit Init_FailsafeFlags_battery_unhealthy(::px4_msgs::msg::FailsafeFlags & msg)
   : msg_(msg)
   {}
-  Init_FailsafeFlags_geofence_breached battery_unhealthy(::px4_msgs::msg::FailsafeFlags::_battery_unhealthy_type arg)
+  Init_FailsafeFlags_primary_geofence_breached battery_unhealthy(::px4_msgs::msg::FailsafeFlags::_battery_unhealthy_type arg)
   {
     msg_.battery_unhealthy = std::move(arg);
-    return Init_FailsafeFlags_geofence_breached(msg_);
+    return Init_FailsafeFlags_primary_geofence_breached(msg_);
   }
 
 private:

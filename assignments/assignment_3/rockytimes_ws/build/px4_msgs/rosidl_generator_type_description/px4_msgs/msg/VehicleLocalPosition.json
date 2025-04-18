@@ -254,26 +254,6 @@
           "default_value": ""
         },
         {
-          "name": "heading_var",
-          "type": {
-            "type_id": 10,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "unaided_heading",
-          "type": {
-            "type_id": 10,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
           "name": "delta_heading",
           "type": {
             "type_id": 10,
@@ -297,16 +277,6 @@
           "name": "heading_good_for_control",
           "type": {
             "type_id": 15,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "tilt_var",
-          "type": {
-            "type_id": 10,
             "capacity": 0,
             "string_capacity": 0,
             "nested_type_name": ""
@@ -374,16 +344,6 @@
           "default_value": ""
         },
         {
-          "name": "dist_bottom_valid",
-          "type": {
-            "type_id": 15,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
           "name": "dist_bottom",
           "type": {
             "type_id": 10,
@@ -394,29 +354,9 @@
           "default_value": ""
         },
         {
-          "name": "dist_bottom_var",
+          "name": "dist_bottom_valid",
           "type": {
-            "type_id": 10,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "delta_dist_bottom",
-          "type": {
-            "type_id": 10,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "dist_bottom_reset_counter",
-          "type": {
-            "type_id": 3,
+            "type_id": 15,
             "capacity": 0,
             "string_capacity": 0,
             "nested_type_name": ""
@@ -514,17 +454,7 @@
           "default_value": ""
         },
         {
-          "name": "hagl_max_z",
-          "type": {
-            "type_id": 10,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "hagl_max_xy",
+          "name": "hagl_max",
           "type": {
             "type_id": 10,
             "capacity": 0,
@@ -540,7 +470,7 @@
   "type_hashes": [
     {
       "type_name": "px4_msgs/msg/VehicleLocalPosition",
-      "hash_string": "RIHS01_690ad535169297241c696494adbd98bbdc45566645026fe7963513a29a1bf144"
+      "hash_string": "RIHS01_f1bdfb1a3cda989a49bb023a881c64ad75c6ef294e0bbb952f30a1f1b8282a54"
     }
   ]
 }

@@ -72,7 +72,7 @@ bool cdr_serialize_px4_msgs__msg__RcChannels(
 
   // Field name: function
   {
-    size_t size = 29;
+    size_t size = 28;
     auto array_ptr = ros_message->function;
     cdr.serialize_array(array_ptr, size);
   }
@@ -124,7 +124,7 @@ bool cdr_deserialize_px4_msgs__msg__RcChannels(
 
   // Field name: function
   {
-    size_t size = 29;
+    size_t size = 28;
     auto array_ptr = ros_message->function;
     cdr.deserialize_array(array_ptr, size);
   }
@@ -197,7 +197,7 @@ size_t get_serialized_size_px4_msgs__msg__RcChannels(
 
   // Field name: function
   {
-    size_t array_size = 29;
+    size_t array_size = 28;
     auto array_ptr = ros_message->function;
     (void)array_ptr;
     size_t item_size = sizeof(array_ptr[0]);
@@ -281,7 +281,7 @@ size_t max_serialized_size_px4_msgs__msg__RcChannels(
 
   // Field name: function
   {
-    size_t array_size = 29;
+    size_t array_size = 28;
     last_member_size = array_size * sizeof(uint8_t);
     current_alignment += array_size * sizeof(uint8_t);
   }
@@ -353,7 +353,7 @@ bool cdr_serialize_key_px4_msgs__msg__RcChannels(
 
   // Field name: function
   {
-    size_t size = 29;
+    size_t size = 28;
     auto array_ptr = ros_message->function;
     cdr.serialize_array(array_ptr, size);
   }
@@ -424,7 +424,7 @@ size_t get_serialized_size_key_px4_msgs__msg__RcChannels(
 
   // Field name: function
   {
-    size_t array_size = 29;
+    size_t array_size = 28;
     auto array_ptr = ros_message->function;
     (void)array_ptr;
     size_t item_size = sizeof(array_ptr[0]);
@@ -506,7 +506,7 @@ size_t max_serialized_size_key_px4_msgs__msg__RcChannels(
 
   // Field name: function
   {
-    size_t array_size = 29;
+    size_t array_size = 28;
     last_member_size = array_size * sizeof(uint8_t);
     current_alignment += array_size * sizeof(uint8_t);
   }

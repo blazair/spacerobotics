@@ -77,7 +77,6 @@ class EstimatorGpsStatus(metaclass=Metaclass_EstimatorGpsStatus):
         '_check_fail_max_vert_drift',
         '_check_fail_max_horz_spd_err',
         '_check_fail_max_vert_spd_err',
-        '_check_fail_spoofed_gps',
         '_position_drift_rate_horizontal_m_s',
         '_position_drift_rate_vertical_m_s',
         '_filtered_horizontal_speed_m_s',
@@ -98,7 +97,6 @@ class EstimatorGpsStatus(metaclass=Metaclass_EstimatorGpsStatus):
         'check_fail_max_vert_drift': 'boolean',
         'check_fail_max_horz_spd_err': 'boolean',
         'check_fail_max_vert_spd_err': 'boolean',
-        'check_fail_spoofed_gps': 'boolean',
         'position_drift_rate_horizontal_m_s': 'float',
         'position_drift_rate_vertical_m_s': 'float',
         'filtered_horizontal_speed_m_s': 'float',
@@ -109,7 +107,6 @@ class EstimatorGpsStatus(metaclass=Metaclass_EstimatorGpsStatus):
     SLOT_TYPES = (
         rosidl_parser.definition.BasicType('uint64'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint64'),  # noqa: E501
-        rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
@@ -148,7 +145,6 @@ class EstimatorGpsStatus(metaclass=Metaclass_EstimatorGpsStatus):
         self.check_fail_max_vert_drift = kwargs.get('check_fail_max_vert_drift', bool())
         self.check_fail_max_horz_spd_err = kwargs.get('check_fail_max_horz_spd_err', bool())
         self.check_fail_max_vert_spd_err = kwargs.get('check_fail_max_vert_spd_err', bool())
-        self.check_fail_spoofed_gps = kwargs.get('check_fail_spoofed_gps', bool())
         self.position_drift_rate_horizontal_m_s = kwargs.get('position_drift_rate_horizontal_m_s', float())
         self.position_drift_rate_vertical_m_s = kwargs.get('position_drift_rate_vertical_m_s', float())
         self.filtered_horizontal_speed_m_s = kwargs.get('filtered_horizontal_speed_m_s', float())
@@ -208,8 +204,6 @@ class EstimatorGpsStatus(metaclass=Metaclass_EstimatorGpsStatus):
         if self.check_fail_max_horz_spd_err != other.check_fail_max_horz_spd_err:
             return False
         if self.check_fail_max_vert_spd_err != other.check_fail_max_vert_spd_err:
-            return False
-        if self.check_fail_spoofed_gps != other.check_fail_spoofed_gps:
             return False
         if self.position_drift_rate_horizontal_m_s != other.position_drift_rate_horizontal_m_s:
             return False
@@ -396,19 +390,6 @@ class EstimatorGpsStatus(metaclass=Metaclass_EstimatorGpsStatus):
                 isinstance(value, bool), \
                 "The 'check_fail_max_vert_spd_err' field must be of type 'bool'"
         self._check_fail_max_vert_spd_err = value
-
-    @builtins.property
-    def check_fail_spoofed_gps(self):
-        """Message field 'check_fail_spoofed_gps'."""
-        return self._check_fail_spoofed_gps
-
-    @check_fail_spoofed_gps.setter
-    def check_fail_spoofed_gps(self, value):
-        if self._check_fields:
-            assert \
-                isinstance(value, bool), \
-                "The 'check_fail_spoofed_gps' field must be of type 'bool'"
-        self._check_fail_spoofed_gps = value
 
     @builtins.property
     def position_drift_rate_horizontal_m_s(self):

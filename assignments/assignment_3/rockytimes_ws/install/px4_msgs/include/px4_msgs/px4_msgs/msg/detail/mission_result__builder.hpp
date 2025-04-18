@@ -200,48 +200,16 @@ private:
   ::px4_msgs::msg::MissionResult msg_;
 };
 
-class Init_MissionResult_home_position_counter
+class Init_MissionResult_instance_count
 {
 public:
-  explicit Init_MissionResult_home_position_counter(::px4_msgs::msg::MissionResult & msg)
+  explicit Init_MissionResult_instance_count(::px4_msgs::msg::MissionResult & msg)
   : msg_(msg)
   {}
-  Init_MissionResult_seq_reached home_position_counter(::px4_msgs::msg::MissionResult::_home_position_counter_type arg)
+  Init_MissionResult_seq_reached instance_count(::px4_msgs::msg::MissionResult::_instance_count_type arg)
   {
-    msg_.home_position_counter = std::move(arg);
+    msg_.instance_count = std::move(arg);
     return Init_MissionResult_seq_reached(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::MissionResult msg_;
-};
-
-class Init_MissionResult_geofence_id
-{
-public:
-  explicit Init_MissionResult_geofence_id(::px4_msgs::msg::MissionResult & msg)
-  : msg_(msg)
-  {}
-  Init_MissionResult_home_position_counter geofence_id(::px4_msgs::msg::MissionResult::_geofence_id_type arg)
-  {
-    msg_.geofence_id = std::move(arg);
-    return Init_MissionResult_home_position_counter(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::MissionResult msg_;
-};
-
-class Init_MissionResult_mission_id
-{
-public:
-  explicit Init_MissionResult_mission_id(::px4_msgs::msg::MissionResult & msg)
-  : msg_(msg)
-  {}
-  Init_MissionResult_geofence_id mission_id(::px4_msgs::msg::MissionResult::_mission_id_type arg)
-  {
-    msg_.mission_id = std::move(arg);
-    return Init_MissionResult_geofence_id(msg_);
   }
 
 private:
@@ -254,10 +222,10 @@ public:
   Init_MissionResult_timestamp()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_MissionResult_mission_id timestamp(::px4_msgs::msg::MissionResult::_timestamp_type arg)
+  Init_MissionResult_instance_count timestamp(::px4_msgs::msg::MissionResult::_timestamp_type arg)
   {
     msg_.timestamp = std::move(arg);
-    return Init_MissionResult_mission_id(msg_);
+    return Init_MissionResult_instance_count(msg_);
   }
 
 private:

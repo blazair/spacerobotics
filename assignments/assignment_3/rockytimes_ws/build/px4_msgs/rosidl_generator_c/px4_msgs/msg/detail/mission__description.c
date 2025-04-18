@@ -11,10 +11,10 @@ px4_msgs__msg__Mission__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x25, 0xf1, 0x24, 0x13, 0xe8, 0x9e, 0xf0, 0x2f,
-      0xd2, 0x87, 0xf1, 0x4d, 0x22, 0xbe, 0x40, 0xab,
-      0x11, 0x27, 0x5a, 0xc7, 0x80, 0xb7, 0xf6, 0x6d,
-      0xe4, 0xa8, 0x38, 0x10, 0x08, 0x5b, 0xdc, 0x85,
+      0xa8, 0xfb, 0x12, 0xe8, 0xaa, 0x3f, 0xa5, 0x25,
+      0x29, 0xf3, 0xae, 0x24, 0x93, 0xf1, 0xdf, 0x48,
+      0x5d, 0xe4, 0xe0, 0x58, 0x43, 0x79, 0x47, 0x8f,
+      0xbf, 0xba, 0xb0, 0xc5, 0xfc, 0x82, 0xbb, 0x02,
     }};
   return &hash;
 }
@@ -32,16 +32,9 @@ static char px4_msgs__msg__Mission__TYPE_NAME[] = "px4_msgs/msg/Mission";
 
 // Define type names, field names, and default values
 static char px4_msgs__msg__Mission__FIELD_NAME__timestamp[] = "timestamp";
-static char px4_msgs__msg__Mission__FIELD_NAME__mission_dataman_id[] = "mission_dataman_id";
-static char px4_msgs__msg__Mission__FIELD_NAME__fence_dataman_id[] = "fence_dataman_id";
-static char px4_msgs__msg__Mission__FIELD_NAME__safepoint_dataman_id[] = "safepoint_dataman_id";
+static char px4_msgs__msg__Mission__FIELD_NAME__dataman_id[] = "dataman_id";
 static char px4_msgs__msg__Mission__FIELD_NAME__count[] = "count";
 static char px4_msgs__msg__Mission__FIELD_NAME__current_seq[] = "current_seq";
-static char px4_msgs__msg__Mission__FIELD_NAME__land_start_index[] = "land_start_index";
-static char px4_msgs__msg__Mission__FIELD_NAME__land_index[] = "land_index";
-static char px4_msgs__msg__Mission__FIELD_NAME__mission_id[] = "mission_id";
-static char px4_msgs__msg__Mission__FIELD_NAME__geofence_id[] = "geofence_id";
-static char px4_msgs__msg__Mission__FIELD_NAME__safe_points_id[] = "safe_points_id";
 
 static rosidl_runtime_c__type_description__Field px4_msgs__msg__Mission__FIELDS[] = {
   {
@@ -55,27 +48,7 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__Mission__FIELDS[
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__Mission__FIELD_NAME__mission_dataman_id, 18, 18},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT8,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__Mission__FIELD_NAME__fence_dataman_id, 16, 16},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT8,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__Mission__FIELD_NAME__safepoint_dataman_id, 20, 20},
+    {px4_msgs__msg__Mission__FIELD_NAME__dataman_id, 10, 10},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT8,
       0,
@@ -104,56 +77,6 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__Mission__FIELDS[
     },
     {NULL, 0, 0},
   },
-  {
-    {px4_msgs__msg__Mission__FIELD_NAME__land_start_index, 16, 16},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_INT32,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__Mission__FIELD_NAME__land_index, 10, 10},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_INT32,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__Mission__FIELD_NAME__mission_id, 10, 10},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT32,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__Mission__FIELD_NAME__geofence_id, 11, 11},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT32,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__Mission__FIELD_NAME__safe_points_id, 14, 14},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT32,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
 };
 
 const rosidl_runtime_c__type_description__TypeDescription *
@@ -165,7 +88,7 @@ px4_msgs__msg__Mission__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {px4_msgs__msg__Mission__TYPE_NAME, 20, 20},
-      {px4_msgs__msg__Mission__FIELDS, 11, 11},
+      {px4_msgs__msg__Mission__FIELDS, 4, 4},
     },
     {NULL, 0, 0},
   };
@@ -177,19 +100,10 @@ px4_msgs__msg__Mission__get_type_description(
 
 static char toplevel_type_raw_source[] =
   "uint64 timestamp\\t# time since system start (microseconds)\n"
-  "uint8 mission_dataman_id\\t# default 0, there are two offboard storage places in the dataman: 0 or 1\n"
-  "uint8 fence_dataman_id\\t\\t# default 0, there are two offboard storage places in the dataman: 0 or 1\n"
-  "uint8 safepoint_dataman_id\\t# default 0, there are two offboard storage places in the dataman: 0 or 1\n"
+  "uint8 dataman_id\\t# default 0, there are two offboard storage places in the dataman: 0 or 1\n"
   "\n"
   "uint16 count\\t\\t# count of the missions stored in the dataman\n"
-  "int32 current_seq\\t# default -1, start at the one changed latest\n"
-  "\n"
-  "int32 land_start_index  # Index of the land start marker, if unavailable index of the land item, -1 otherwise\n"
-  "int32 land_index \\t# Index of the land item, -1 otherwise\n"
-  "\n"
-  "uint32 mission_id # indicates updates to the mission, reload from dataman if changed\n"
-  "uint32 geofence_id # indicates updates to the geofence, reload from dataman if changed\n"
-  "uint32 safe_points_id # indicates updates to the safe points, reload from dataman if changed";
+  "int32 current_seq\\t# default -1, start at the one changed latest";
 
 static char msg_encoding[] = "msg";
 
@@ -203,7 +117,7 @@ px4_msgs__msg__Mission__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__Mission__TYPE_NAME, 20, 20},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 915, 915},
+    {toplevel_type_raw_source, 274, 274},
   };
   return &source;
 }

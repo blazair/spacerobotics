@@ -11,10 +11,10 @@ px4_msgs__msg__EstimatorGpsStatus__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x3e, 0xc2, 0x71, 0x5b, 0x10, 0x15, 0x74, 0x84,
-      0x2f, 0x90, 0x45, 0xeb, 0x60, 0xf6, 0x12, 0xac,
-      0x52, 0xfc, 0xab, 0x2b, 0xc3, 0x5d, 0x19, 0xf4,
-      0x40, 0x5a, 0xae, 0x18, 0xcb, 0x72, 0x97, 0x85,
+      0xbc, 0x8f, 0xa2, 0x40, 0x52, 0x4c, 0xbf, 0x34,
+      0x23, 0x7f, 0x49, 0xc0, 0xd5, 0x1b, 0x12, 0x8e,
+      0x21, 0xa9, 0xd5, 0x1f, 0x87, 0x0b, 0x98, 0x1b,
+      0x10, 0x40, 0x5c, 0x1c, 0x73, 0x6a, 0x42, 0x8c,
     }};
   return &hash;
 }
@@ -44,7 +44,6 @@ static char px4_msgs__msg__EstimatorGpsStatus__FIELD_NAME__check_fail_max_horz_d
 static char px4_msgs__msg__EstimatorGpsStatus__FIELD_NAME__check_fail_max_vert_drift[] = "check_fail_max_vert_drift";
 static char px4_msgs__msg__EstimatorGpsStatus__FIELD_NAME__check_fail_max_horz_spd_err[] = "check_fail_max_horz_spd_err";
 static char px4_msgs__msg__EstimatorGpsStatus__FIELD_NAME__check_fail_max_vert_spd_err[] = "check_fail_max_vert_spd_err";
-static char px4_msgs__msg__EstimatorGpsStatus__FIELD_NAME__check_fail_spoofed_gps[] = "check_fail_spoofed_gps";
 static char px4_msgs__msg__EstimatorGpsStatus__FIELD_NAME__position_drift_rate_horizontal_m_s[] = "position_drift_rate_horizontal_m_s";
 static char px4_msgs__msg__EstimatorGpsStatus__FIELD_NAME__position_drift_rate_vertical_m_s[] = "position_drift_rate_vertical_m_s";
 static char px4_msgs__msg__EstimatorGpsStatus__FIELD_NAME__filtered_horizontal_speed_m_s[] = "filtered_horizontal_speed_m_s";
@@ -181,16 +180,6 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__EstimatorGpsStat
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__EstimatorGpsStatus__FIELD_NAME__check_fail_spoofed_gps, 22, 22},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
     {px4_msgs__msg__EstimatorGpsStatus__FIELD_NAME__position_drift_rate_horizontal_m_s, 34, 34},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
@@ -231,7 +220,7 @@ px4_msgs__msg__EstimatorGpsStatus__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {px4_msgs__msg__EstimatorGpsStatus__TYPE_NAME, 31, 31},
-      {px4_msgs__msg__EstimatorGpsStatus__FIELDS, 17, 17},
+      {px4_msgs__msg__EstimatorGpsStatus__FIELDS, 16, 16},
     },
     {NULL, 0, 0},
   };
@@ -257,7 +246,6 @@ static char toplevel_type_raw_source[] =
   "bool check_fail_max_vert_drift   # 7 : maximum allowed vertical position drift fail - requires stationary vehicle\n"
   "bool check_fail_max_horz_spd_err # 8 : maximum allowed horizontal speed fail - requires stationary vehicle\n"
   "bool check_fail_max_vert_spd_err # 9 : maximum allowed vertical velocity discrepancy fail\n"
-  "bool check_fail_spoofed_gps      # 10 : GPS signal is spoofed\n"
   "\n"
   "float32 position_drift_rate_horizontal_m_s # Horizontal position rate magnitude (m/s)\n"
   "float32 position_drift_rate_vertical_m_s   # Vertical position rate magnitude (m/s)\n"
@@ -275,7 +263,7 @@ px4_msgs__msg__EstimatorGpsStatus__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__EstimatorGpsStatus__TYPE_NAME, 31, 31},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 1399, 1399},
+    {toplevel_type_raw_source, 1337, 1337},
   };
   return &source;
 }

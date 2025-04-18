@@ -74,15 +74,15 @@ typedef struct px4_msgs__msg__FailsafeFlags
   /// GCS connection lost
   bool gcs_connection_lost;
   /// Battery
-  /// Battery warning level (see BatteryStatus.msg)
+  /// Battery warning level
   uint8_t battery_warning;
   /// Low battery based on remaining flight time
   bool battery_low_remaining_time;
   /// Battery unhealthy
   bool battery_unhealthy;
   /// Other
-  /// Geofence breached (one or multiple)
-  bool geofence_breached;
+  /// Primary Geofence breached
+  bool primary_geofence_breached;
   /// Mission failure
   bool mission_failure;
   /// vehicle in fixed-wing system failure failsafe mode (after quad-chute)
@@ -93,8 +93,6 @@ typedef struct px4_msgs__msg__FailsafeFlags
   bool flight_time_limit_exceeded;
   /// Local position estimate has dropped below threshold, but is currently still declared valid
   bool local_position_accuracy_low;
-  /// Navigator failed to execute a mode
-  bool navigator_failure;
   /// Failure detector
   /// Critical failure (attitude/altitude limit exceeded, or external ATS)
   bool fd_critical_failure;

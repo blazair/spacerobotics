@@ -35,7 +35,7 @@ size_t px4_msgs__msg__EstimatorStates__rosidl_typesupport_introspection_c__size_
   const void * untyped_member)
 {
   (void)untyped_member;
-  return 25;
+  return 24;
 }
 
 const void * px4_msgs__msg__EstimatorStates__rosidl_typesupport_introspection_c__get_const_function__EstimatorStates__states(
@@ -165,7 +165,7 @@ static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__Estimato
     NULL,  // members of sub message
     false,  // is key
     true,  // is array
-    25,  // array size
+    24,  // array size
     false,  // is upper bound
     offsetof(px4_msgs__msg__EstimatorStates, states),  // bytes offset in struct
     NULL,  // default value

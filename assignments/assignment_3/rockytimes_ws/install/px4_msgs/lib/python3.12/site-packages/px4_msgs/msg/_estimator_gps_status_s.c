@@ -167,15 +167,6 @@ bool px4_msgs__msg__estimator_gps_status__convert_from_py(PyObject * _pymsg, voi
     ros_message->check_fail_max_vert_spd_err = (Py_True == field);
     Py_DECREF(field);
   }
-  {  // check_fail_spoofed_gps
-    PyObject * field = PyObject_GetAttrString(_pymsg, "check_fail_spoofed_gps");
-    if (!field) {
-      return false;
-    }
-    assert(PyBool_Check(field));
-    ros_message->check_fail_spoofed_gps = (Py_True == field);
-    Py_DECREF(field);
-  }
   {  // position_drift_rate_horizontal_m_s
     PyObject * field = PyObject_GetAttrString(_pymsg, "position_drift_rate_horizontal_m_s");
     if (!field) {
@@ -362,17 +353,6 @@ PyObject * px4_msgs__msg__estimator_gps_status__convert_to_py(void * raw_ros_mes
     field = PyBool_FromLong(ros_message->check_fail_max_vert_spd_err ? 1 : 0);
     {
       int rc = PyObject_SetAttrString(_pymessage, "check_fail_max_vert_spd_err", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // check_fail_spoofed_gps
-    PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->check_fail_spoofed_gps ? 1 : 0);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "check_fail_spoofed_gps", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

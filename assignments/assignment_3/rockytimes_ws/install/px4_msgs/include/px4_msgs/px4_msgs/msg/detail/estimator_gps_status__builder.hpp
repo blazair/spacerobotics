@@ -72,32 +72,16 @@ private:
   ::px4_msgs::msg::EstimatorGpsStatus msg_;
 };
 
-class Init_EstimatorGpsStatus_check_fail_spoofed_gps
-{
-public:
-  explicit Init_EstimatorGpsStatus_check_fail_spoofed_gps(::px4_msgs::msg::EstimatorGpsStatus & msg)
-  : msg_(msg)
-  {}
-  Init_EstimatorGpsStatus_position_drift_rate_horizontal_m_s check_fail_spoofed_gps(::px4_msgs::msg::EstimatorGpsStatus::_check_fail_spoofed_gps_type arg)
-  {
-    msg_.check_fail_spoofed_gps = std::move(arg);
-    return Init_EstimatorGpsStatus_position_drift_rate_horizontal_m_s(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::EstimatorGpsStatus msg_;
-};
-
 class Init_EstimatorGpsStatus_check_fail_max_vert_spd_err
 {
 public:
   explicit Init_EstimatorGpsStatus_check_fail_max_vert_spd_err(::px4_msgs::msg::EstimatorGpsStatus & msg)
   : msg_(msg)
   {}
-  Init_EstimatorGpsStatus_check_fail_spoofed_gps check_fail_max_vert_spd_err(::px4_msgs::msg::EstimatorGpsStatus::_check_fail_max_vert_spd_err_type arg)
+  Init_EstimatorGpsStatus_position_drift_rate_horizontal_m_s check_fail_max_vert_spd_err(::px4_msgs::msg::EstimatorGpsStatus::_check_fail_max_vert_spd_err_type arg)
   {
     msg_.check_fail_max_vert_spd_err = std::move(arg);
-    return Init_EstimatorGpsStatus_check_fail_spoofed_gps(msg_);
+    return Init_EstimatorGpsStatus_position_drift_rate_horizontal_m_s(msg_);
   }
 
 private:

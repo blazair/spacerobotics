@@ -54,7 +54,9 @@ struct EstimatorInnovations_
       this->rng_vpos = 0.0f;
       this->baro_vpos = 0.0f;
       std::fill<typename std::array<float, 2>::iterator, float>(this->aux_hvel.begin(), this->aux_hvel.end(), 0.0f);
+      this->aux_vvel = 0.0f;
       std::fill<typename std::array<float, 2>::iterator, float>(this->flow.begin(), this->flow.end(), 0.0f);
+      std::fill<typename std::array<float, 2>::iterator, float>(this->terr_flow.begin(), this->terr_flow.end(), 0.0f);
       this->heading = 0.0f;
       std::fill<typename std::array<float, 3>::iterator, float>(this->mag_field.begin(), this->mag_field.end(), 0.0f);
       std::fill<typename std::array<float, 3>::iterator, float>(this->gravity.begin(), this->gravity.end(), 0.0f);
@@ -73,6 +75,7 @@ struct EstimatorInnovations_
     ev_hpos(_alloc),
     aux_hvel(_alloc),
     flow(_alloc),
+    terr_flow(_alloc),
     mag_field(_alloc),
     gravity(_alloc),
     drag(_alloc)
@@ -93,7 +96,9 @@ struct EstimatorInnovations_
       this->rng_vpos = 0.0f;
       this->baro_vpos = 0.0f;
       std::fill<typename std::array<float, 2>::iterator, float>(this->aux_hvel.begin(), this->aux_hvel.end(), 0.0f);
+      this->aux_vvel = 0.0f;
       std::fill<typename std::array<float, 2>::iterator, float>(this->flow.begin(), this->flow.end(), 0.0f);
+      std::fill<typename std::array<float, 2>::iterator, float>(this->terr_flow.begin(), this->terr_flow.end(), 0.0f);
       this->heading = 0.0f;
       std::fill<typename std::array<float, 3>::iterator, float>(this->mag_field.begin(), this->mag_field.end(), 0.0f);
       std::fill<typename std::array<float, 3>::iterator, float>(this->gravity.begin(), this->gravity.end(), 0.0f);
@@ -145,9 +150,15 @@ struct EstimatorInnovations_
   using _aux_hvel_type =
     std::array<float, 2>;
   _aux_hvel_type aux_hvel;
+  using _aux_vvel_type =
+    float;
+  _aux_vvel_type aux_vvel;
   using _flow_type =
     std::array<float, 2>;
   _flow_type flow;
+  using _terr_flow_type =
+    std::array<float, 2>;
+  _terr_flow_type terr_flow;
   using _heading_type =
     float;
   _heading_type heading;
@@ -252,10 +263,22 @@ struct EstimatorInnovations_
     this->aux_hvel = _arg;
     return *this;
   }
+  Type & set__aux_vvel(
+    const float & _arg)
+  {
+    this->aux_vvel = _arg;
+    return *this;
+  }
   Type & set__flow(
     const std::array<float, 2> & _arg)
   {
     this->flow = _arg;
+    return *this;
+  }
+  Type & set__terr_flow(
+    const std::array<float, 2> & _arg)
+  {
+    this->terr_flow = _arg;
     return *this;
   }
   Type & set__heading(
@@ -388,7 +411,13 @@ struct EstimatorInnovations_
     if (this->aux_hvel != other.aux_hvel) {
       return false;
     }
+    if (this->aux_vvel != other.aux_vvel) {
+      return false;
+    }
     if (this->flow != other.flow) {
+      return false;
+    }
+    if (this->terr_flow != other.terr_flow) {
       return false;
     }
     if (this->heading != other.heading) {

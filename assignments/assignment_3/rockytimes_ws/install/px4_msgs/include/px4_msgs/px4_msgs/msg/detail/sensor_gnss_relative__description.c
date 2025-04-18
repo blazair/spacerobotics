@@ -303,8 +303,8 @@ static char toplevel_type_raw_source[] =
   "float32 heading                   # Heading of the relative position vector (radians)\n"
   "float32 heading_accuracy          # Accuracy of heading of the relative position vector (radians)\n"
   "\n"
-  "float32 position_length           # Length of the position vector (m)\n"
-  "float32 accuracy_length           # Accuracy of the position length (m)\n"
+  "float32 position_length\n"
+  "float32 accuracy_length\n"
   "\n"
   "bool gnss_fix_ok                  # GNSS valid fix (i.e within DOP & accuracy masks)\n"
   "bool differential_solution        # differential corrections were applied\n"
@@ -329,7 +329,7 @@ px4_msgs__msg__SensorGnssRelative__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__SensorGnssRelative__TYPE_NAME, 31, 31},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 1978, 1978},
+    {toplevel_type_raw_source, 1884, 1884},
   };
   return &source;
 }

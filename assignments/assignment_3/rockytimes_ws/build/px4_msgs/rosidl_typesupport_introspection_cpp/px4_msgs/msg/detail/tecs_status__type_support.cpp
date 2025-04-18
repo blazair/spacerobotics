@@ -38,7 +38,7 @@ void TecsStatus_fini_function(void * message_memory)
   typed_message->~TecsStatus();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember TecsStatus_message_member_array[25] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember TecsStatus_message_member_array[23] = {
   {
     "timestamp",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT64,  // type
@@ -85,24 +85,6 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember TecsStatus_me
     0,  // array size
     false,  // is upper bound
     offsetof(px4_msgs::msg::TecsStatus, altitude_reference),  // bytes offset in struct
-    nullptr,  // default value
-    nullptr,  // size() function pointer
-    nullptr,  // get_const(index) function pointer
-    nullptr,  // get(index) function pointer
-    nullptr,  // fetch(index, &value) function pointer
-    nullptr,  // assign(index, value) function pointer
-    nullptr  // resize(index) function pointer
-  },
-  {
-    "altitude_time_constant",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
-    0,  // upper bound of string
-    nullptr,  // members of sub message
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(px4_msgs::msg::TecsStatus, altitude_time_constant),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -454,33 +436,15 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember TecsStatus_me
     nullptr  // resize(index) function pointer
   },
   {
-    "underspeed_ratio",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
+    "mode",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT8,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(px4_msgs::msg::TecsStatus, underspeed_ratio),  // bytes offset in struct
-    nullptr,  // default value
-    nullptr,  // size() function pointer
-    nullptr,  // get_const(index) function pointer
-    nullptr,  // get(index) function pointer
-    nullptr,  // fetch(index, &value) function pointer
-    nullptr,  // assign(index, value) function pointer
-    nullptr  // resize(index) function pointer
-  },
-  {
-    "fast_descend_ratio",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
-    0,  // upper bound of string
-    nullptr,  // members of sub message
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(px4_msgs::msg::TecsStatus, fast_descend_ratio),  // bytes offset in struct
+    offsetof(px4_msgs::msg::TecsStatus, mode),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -494,7 +458,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember TecsStatus_me
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers TecsStatus_message_members = {
   "px4_msgs::msg",  // message namespace
   "TecsStatus",  // message name
-  25,  // number of fields
+  23,  // number of fields
   sizeof(px4_msgs::msg::TecsStatus),
   false,  // has_any_key_member_
   TecsStatus_message_member_array,  // message members

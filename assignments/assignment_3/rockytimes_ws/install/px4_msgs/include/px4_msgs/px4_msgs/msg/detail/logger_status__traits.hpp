@@ -49,13 +49,6 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
-  // member: is_logging
-  {
-    out << "is_logging: ";
-    rosidl_generator_traits::value_to_yaml(msg.is_logging, out);
-    out << ", ";
-  }
-
   // member: total_written_kb
   {
     out << "total_written_kb: ";
@@ -137,16 +130,6 @@ inline void to_block_style_yaml(
     }
     out << "backend: ";
     rosidl_generator_traits::value_to_yaml(msg.backend, out);
-    out << "\n";
-  }
-
-  // member: is_logging
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "is_logging: ";
-    rosidl_generator_traits::value_to_yaml(msg.is_logging, out);
     out << "\n";
   }
 

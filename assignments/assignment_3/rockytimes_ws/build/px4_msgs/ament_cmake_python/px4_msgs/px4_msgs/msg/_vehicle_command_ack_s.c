@@ -110,7 +110,7 @@ bool px4_msgs__msg__vehicle_command_ack__convert_from_py(PyObject * _pymsg, void
       return false;
     }
     assert(PyLong_Check(field));
-    ros_message->target_component = (uint16_t)PyLong_AsUnsignedLong(field);
+    ros_message->target_component = (uint8_t)PyLong_AsUnsignedLong(field);
     Py_DECREF(field);
   }
   {  // from_external

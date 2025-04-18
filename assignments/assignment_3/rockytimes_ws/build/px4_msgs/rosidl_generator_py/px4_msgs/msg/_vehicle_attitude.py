@@ -33,7 +33,6 @@ class Metaclass_VehicleAttitude(type):
     _TYPE_SUPPORT = None
 
     __constants = {
-        'MESSAGE_VERSION': 0,
     }
 
     @classmethod
@@ -62,22 +61,11 @@ class Metaclass_VehicleAttitude(type):
         # the message class under "Data and other attributes defined here:"
         # as well as populate each message instance
         return {
-            'MESSAGE_VERSION': cls.__constants['MESSAGE_VERSION'],
         }
-
-    @property
-    def MESSAGE_VERSION(self):
-        """Message constant 'MESSAGE_VERSION'."""
-        return Metaclass_VehicleAttitude.__constants['MESSAGE_VERSION']
 
 
 class VehicleAttitude(metaclass=Metaclass_VehicleAttitude):
-    """
-    Message class 'VehicleAttitude'.
-
-    Constants:
-      MESSAGE_VERSION
-    """
+    """Message class 'VehicleAttitude'."""
 
     __slots__ = [
         '_timestamp',

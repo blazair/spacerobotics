@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "rosidl_typesupport_interface/macros.h"
 #include "px4_msgs/msg/detail/actuator_test__struct.h"
 #include "px4_msgs/msg/detail/actuator_test__functions.h"
 #include "px4_msgs/msg/detail/actuator_test__type_support.h"
+#include "rosidl_typesupport_interface/macros.h"
 
 #ifdef __cplusplus
 extern "C"

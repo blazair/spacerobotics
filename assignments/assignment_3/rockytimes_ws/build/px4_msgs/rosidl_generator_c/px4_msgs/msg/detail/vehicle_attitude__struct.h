@@ -19,16 +19,9 @@ extern "C"
 
 // Constants defined in the message
 
-/// Constant 'MESSAGE_VERSION'.
-enum
-{
-  px4_msgs__msg__VehicleAttitude__MESSAGE_VERSION = 0ul
-};
-
 /// Struct defined in msg/VehicleAttitude in the package px4_msgs.
 /**
   * This is similar to the mavlink message ATTITUDE_QUATERNION, but for onboard use
-  * The quaternion uses the Hamilton convention, and the order is q(w, x, y, z)
  */
 typedef struct px4_msgs__msg__VehicleAttitude
 {

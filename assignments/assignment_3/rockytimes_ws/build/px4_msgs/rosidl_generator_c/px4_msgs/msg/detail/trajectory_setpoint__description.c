@@ -137,8 +137,6 @@ static char toplevel_type_raw_source[] =
   "# Needs to be kinematically consistent and feasible for smooth flight.\n"
   "# setting a value to NaN means the state should not be controlled\n"
   "\n"
-  "uint32 MESSAGE_VERSION = 0\n"
-  "\n"
   "uint64 timestamp # time since system start (microseconds)\n"
   "\n"
   "# NED local world frame\n"
@@ -162,7 +160,7 @@ px4_msgs__msg__TrajectorySetpoint__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__TrajectorySetpoint__TYPE_NAME, 31, 31},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 637, 637},
+    {toplevel_type_raw_source, 609, 609},
   };
   return &source;
 }

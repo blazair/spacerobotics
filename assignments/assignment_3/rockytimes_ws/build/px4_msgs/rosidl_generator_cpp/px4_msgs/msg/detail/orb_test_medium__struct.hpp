@@ -91,8 +91,6 @@ struct OrbTestMedium_
   }
 
   // constant declarations
-  static constexpr uint8_t ORB_QUEUE_LENGTH =
-    16u;
 
   // pointer types
   using RawPtr =
@@ -156,11 +154,6 @@ using OrbTestMedium =
   px4_msgs::msg::OrbTestMedium_<std::allocator<void>>;
 
 // constant definitions
-#if __cplusplus < 201703L
-// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
-template<typename ContainerAllocator>
-constexpr uint8_t OrbTestMedium_<ContainerAllocator>::ORB_QUEUE_LENGTH;
-#endif  // __cplusplus < 201703L
 
 }  // namespace msg
 

@@ -47,8 +47,8 @@ struct VehicleImu_
       this->gyro_device_id = 0ul;
       std::fill<typename std::array<float, 3>::iterator, float>(this->delta_angle.begin(), this->delta_angle.end(), 0.0f);
       std::fill<typename std::array<float, 3>::iterator, float>(this->delta_velocity.begin(), this->delta_velocity.end(), 0.0f);
-      this->delta_angle_dt = 0ul;
-      this->delta_velocity_dt = 0ul;
+      this->delta_angle_dt = 0;
+      this->delta_velocity_dt = 0;
       this->delta_angle_clipping = 0;
       this->delta_velocity_clipping = 0;
       this->accel_calibration_count = 0;
@@ -69,8 +69,8 @@ struct VehicleImu_
       this->gyro_device_id = 0ul;
       std::fill<typename std::array<float, 3>::iterator, float>(this->delta_angle.begin(), this->delta_angle.end(), 0.0f);
       std::fill<typename std::array<float, 3>::iterator, float>(this->delta_velocity.begin(), this->delta_velocity.end(), 0.0f);
-      this->delta_angle_dt = 0ul;
-      this->delta_velocity_dt = 0ul;
+      this->delta_angle_dt = 0;
+      this->delta_velocity_dt = 0;
       this->delta_angle_clipping = 0;
       this->delta_velocity_clipping = 0;
       this->accel_calibration_count = 0;
@@ -98,10 +98,10 @@ struct VehicleImu_
     std::array<float, 3>;
   _delta_velocity_type delta_velocity;
   using _delta_angle_dt_type =
-    uint32_t;
+    uint16_t;
   _delta_angle_dt_type delta_angle_dt;
   using _delta_velocity_dt_type =
-    uint32_t;
+    uint16_t;
   _delta_velocity_dt_type delta_velocity_dt;
   using _delta_angle_clipping_type =
     uint8_t;
@@ -154,13 +154,13 @@ struct VehicleImu_
     return *this;
   }
   Type & set__delta_angle_dt(
-    const uint32_t & _arg)
+    const uint16_t & _arg)
   {
     this->delta_angle_dt = _arg;
     return *this;
   }
   Type & set__delta_velocity_dt(
-    const uint32_t & _arg)
+    const uint16_t & _arg)
   {
     this->delta_velocity_dt = _arg;
     return *this;

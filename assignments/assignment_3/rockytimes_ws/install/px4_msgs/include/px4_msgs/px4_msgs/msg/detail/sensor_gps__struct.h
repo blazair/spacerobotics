@@ -19,51 +19,6 @@ extern "C"
 
 // Constants defined in the message
 
-/// Constant 'FIX_TYPE_NONE'.
-/**
-  * Value 0 is also valid to represent no fix.
- */
-enum
-{
-  px4_msgs__msg__SensorGps__FIX_TYPE_NONE = 1
-};
-
-/// Constant 'FIX_TYPE_2D'.
-enum
-{
-  px4_msgs__msg__SensorGps__FIX_TYPE_2D = 2
-};
-
-/// Constant 'FIX_TYPE_3D'.
-enum
-{
-  px4_msgs__msg__SensorGps__FIX_TYPE_3D = 3
-};
-
-/// Constant 'FIX_TYPE_RTCM_CODE_DIFFERENTIAL'.
-enum
-{
-  px4_msgs__msg__SensorGps__FIX_TYPE_RTCM_CODE_DIFFERENTIAL = 4
-};
-
-/// Constant 'FIX_TYPE_RTK_FLOAT'.
-enum
-{
-  px4_msgs__msg__SensorGps__FIX_TYPE_RTK_FLOAT = 5
-};
-
-/// Constant 'FIX_TYPE_RTK_FIXED'.
-enum
-{
-  px4_msgs__msg__SensorGps__FIX_TYPE_RTK_FIXED = 6
-};
-
-/// Constant 'FIX_TYPE_EXTRAPOLATED'.
-enum
-{
-  px4_msgs__msg__SensorGps__FIX_TYPE_EXTRAPOLATED = 8
-};
-
 /// Constant 'JAMMING_STATE_UNKNOWN'.
 enum
 {
@@ -112,24 +67,6 @@ enum
   px4_msgs__msg__SensorGps__SPOOFING_STATE_MULTIPLE = 3
 };
 
-/// Constant 'RTCM_MSG_USED_UNKNOWN'.
-enum
-{
-  px4_msgs__msg__SensorGps__RTCM_MSG_USED_UNKNOWN = 0
-};
-
-/// Constant 'RTCM_MSG_USED_NOT_USED'.
-enum
-{
-  px4_msgs__msg__SensorGps__RTCM_MSG_USED_NOT_USED = 1
-};
-
-/// Constant 'RTCM_MSG_USED_USED'.
-enum
-{
-  px4_msgs__msg__SensorGps__RTCM_MSG_USED_USED = 2
-};
-
 /// Struct defined in msg/SensorGps in the package px4_msgs.
 /**
   * GPS position in WGS84 coordinates.
@@ -142,19 +79,19 @@ typedef struct px4_msgs__msg__SensorGps
   uint64_t timestamp_sample;
   /// unique device ID for the sensor that does not change between power cycles
   uint32_t device_id;
-  /// Latitude in degrees, allows centimeter level RTK precision
-  double latitude_deg;
-  /// Longitude in degrees, allows centimeter level RTK precision
-  double longitude_deg;
-  /// Altitude above MSL, meters
-  double altitude_msl_m;
-  /// Altitude above Ellipsoid, meters
-  double altitude_ellipsoid_m;
+  /// Latitude in 1E-7 degrees
+  int32_t lat;
+  /// Longitude in 1E-7 degrees
+  int32_t lon;
+  /// Altitude in 1E-3 meters above MSL, (millimetres)
+  int32_t alt;
+  /// Altitude in 1E-3 meters bove Ellipsoid, (millimetres)
+  int32_t alt_ellipsoid;
   /// GPS speed accuracy estimate, (metres/sec)
   float s_variance_m_s;
   /// GPS course accuracy estimate, (radians)
   float c_variance_rad;
-  /// Some applications will not use the value of this field unless it is at least two, so always correctly fill in the fix.
+  /// 0-1: no fix, 2: 2D fix, 3: 3D fix, 4: RTCM code differential, 5: Real-Time Kinematic, float, 6: Real-Time Kinematic, fixed, 8: Extrapolated. Some applications will not use the value of this field unless it is at least two, so always correctly fill in the fix.
   uint8_t fix_type;
   /// GPS horizontal position accuracy (metres)
   float eph;
@@ -202,10 +139,6 @@ typedef struct px4_msgs__msg__SensorGps
   float rtcm_injection_rate;
   /// uorb instance that is being used for RTCM corrections
   uint8_t selected_rtcm_instance;
-  /// RTCM message CRC failure detected
-  bool rtcm_crc_failed;
-  /// Indicates if the RTCM message was used successfully by the receiver
-  uint8_t rtcm_msg_used;
 } px4_msgs__msg__SensorGps;
 
 // Struct for a sequence of px4_msgs__msg__SensorGps.

@@ -98,14 +98,24 @@ bool cdr_serialize_px4_msgs__msg__PositionSetpoint(
     cdr << ros_message->yaw;
   }
 
+  // Field name: yaw_valid
+  {
+    cdr << (ros_message->yaw_valid ? true : false);
+  }
+
+  // Field name: yawspeed
+  {
+    cdr << ros_message->yawspeed;
+  }
+
+  // Field name: yawspeed_valid
+  {
+    cdr << (ros_message->yawspeed_valid ? true : false);
+  }
+
   // Field name: loiter_radius
   {
     cdr << ros_message->loiter_radius;
-  }
-
-  // Field name: loiter_minor_radius
-  {
-    cdr << ros_message->loiter_minor_radius;
   }
 
   // Field name: loiter_direction_counter_clockwise
@@ -113,24 +123,9 @@ bool cdr_serialize_px4_msgs__msg__PositionSetpoint(
     cdr << (ros_message->loiter_direction_counter_clockwise ? true : false);
   }
 
-  // Field name: loiter_orientation
-  {
-    cdr << ros_message->loiter_orientation;
-  }
-
-  // Field name: loiter_pattern
-  {
-    cdr << ros_message->loiter_pattern;
-  }
-
   // Field name: acceptance_radius
   {
     cdr << ros_message->acceptance_radius;
-  }
-
-  // Field name: alt_acceptance_radius
-  {
-    cdr << ros_message->alt_acceptance_radius;
   }
 
   // Field name: cruising_speed
@@ -146,6 +141,11 @@ bool cdr_serialize_px4_msgs__msg__PositionSetpoint(
   // Field name: cruising_throttle
   {
     cdr << ros_message->cruising_throttle;
+  }
+
+  // Field name: disable_weather_vane
+  {
+    cdr << (ros_message->disable_weather_vane ? true : false);
   }
 
   return true;
@@ -208,14 +208,28 @@ bool cdr_deserialize_px4_msgs__msg__PositionSetpoint(
     cdr >> ros_message->yaw;
   }
 
+  // Field name: yaw_valid
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message->yaw_valid = tmp ? true : false;
+  }
+
+  // Field name: yawspeed
+  {
+    cdr >> ros_message->yawspeed;
+  }
+
+  // Field name: yawspeed_valid
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message->yawspeed_valid = tmp ? true : false;
+  }
+
   // Field name: loiter_radius
   {
     cdr >> ros_message->loiter_radius;
-  }
-
-  // Field name: loiter_minor_radius
-  {
-    cdr >> ros_message->loiter_minor_radius;
   }
 
   // Field name: loiter_direction_counter_clockwise
@@ -225,24 +239,9 @@ bool cdr_deserialize_px4_msgs__msg__PositionSetpoint(
     ros_message->loiter_direction_counter_clockwise = tmp ? true : false;
   }
 
-  // Field name: loiter_orientation
-  {
-    cdr >> ros_message->loiter_orientation;
-  }
-
-  // Field name: loiter_pattern
-  {
-    cdr >> ros_message->loiter_pattern;
-  }
-
   // Field name: acceptance_radius
   {
     cdr >> ros_message->acceptance_radius;
-  }
-
-  // Field name: alt_acceptance_radius
-  {
-    cdr >> ros_message->alt_acceptance_radius;
   }
 
   // Field name: cruising_speed
@@ -260,6 +259,13 @@ bool cdr_deserialize_px4_msgs__msg__PositionSetpoint(
   // Field name: cruising_throttle
   {
     cdr >> ros_message->cruising_throttle;
+  }
+
+  // Field name: disable_weather_vane
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message->disable_weather_vane = tmp ? true : false;
   }
 
   return true;
@@ -350,16 +356,30 @@ size_t get_serialized_size_px4_msgs__msg__PositionSetpoint(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: loiter_radius
+  // Field name: yaw_valid
   {
-    size_t item_size = sizeof(ros_message->loiter_radius);
+    size_t item_size = sizeof(ros_message->yaw_valid);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: loiter_minor_radius
+  // Field name: yawspeed
   {
-    size_t item_size = sizeof(ros_message->loiter_minor_radius);
+    size_t item_size = sizeof(ros_message->yawspeed);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: yawspeed_valid
+  {
+    size_t item_size = sizeof(ros_message->yawspeed_valid);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: loiter_radius
+  {
+    size_t item_size = sizeof(ros_message->loiter_radius);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -371,30 +391,9 @@ size_t get_serialized_size_px4_msgs__msg__PositionSetpoint(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: loiter_orientation
-  {
-    size_t item_size = sizeof(ros_message->loiter_orientation);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: loiter_pattern
-  {
-    size_t item_size = sizeof(ros_message->loiter_pattern);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
   // Field name: acceptance_radius
   {
     size_t item_size = sizeof(ros_message->acceptance_radius);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: alt_acceptance_radius
-  {
-    size_t item_size = sizeof(ros_message->alt_acceptance_radius);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -416,6 +415,13 @@ size_t get_serialized_size_px4_msgs__msg__PositionSetpoint(
   // Field name: cruising_throttle
   {
     size_t item_size = sizeof(ros_message->cruising_throttle);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: disable_weather_vane
+  {
+    size_t item_size = sizeof(ros_message->disable_weather_vane);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -520,7 +526,14 @@ size_t max_serialized_size_px4_msgs__msg__PositionSetpoint(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
-  // Field name: loiter_radius
+  // Field name: yaw_valid
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Field name: yawspeed
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint32_t);
@@ -528,7 +541,14 @@ size_t max_serialized_size_px4_msgs__msg__PositionSetpoint(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
-  // Field name: loiter_minor_radius
+  // Field name: yawspeed_valid
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Field name: loiter_radius
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint32_t);
@@ -543,30 +563,7 @@ size_t max_serialized_size_px4_msgs__msg__PositionSetpoint(
     current_alignment += array_size * sizeof(uint8_t);
   }
 
-  // Field name: loiter_orientation
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Field name: loiter_pattern
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
   // Field name: acceptance_radius
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Field name: alt_acceptance_radius
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint32_t);
@@ -597,6 +594,13 @@ size_t max_serialized_size_px4_msgs__msg__PositionSetpoint(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
+  // Field name: disable_weather_vane
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
 
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
@@ -606,7 +610,7 @@ size_t max_serialized_size_px4_msgs__msg__PositionSetpoint(
     using DataType = px4_msgs__msg__PositionSetpoint;
     is_plain =
       (
-      offsetof(DataType, cruising_throttle) +
+      offsetof(DataType, disable_weather_vane) +
       last_member_size
       ) == ret_val;
   }
@@ -668,14 +672,24 @@ bool cdr_serialize_key_px4_msgs__msg__PositionSetpoint(
     cdr << ros_message->yaw;
   }
 
+  // Field name: yaw_valid
+  {
+    cdr << (ros_message->yaw_valid ? true : false);
+  }
+
+  // Field name: yawspeed
+  {
+    cdr << ros_message->yawspeed;
+  }
+
+  // Field name: yawspeed_valid
+  {
+    cdr << (ros_message->yawspeed_valid ? true : false);
+  }
+
   // Field name: loiter_radius
   {
     cdr << ros_message->loiter_radius;
-  }
-
-  // Field name: loiter_minor_radius
-  {
-    cdr << ros_message->loiter_minor_radius;
   }
 
   // Field name: loiter_direction_counter_clockwise
@@ -683,24 +697,9 @@ bool cdr_serialize_key_px4_msgs__msg__PositionSetpoint(
     cdr << (ros_message->loiter_direction_counter_clockwise ? true : false);
   }
 
-  // Field name: loiter_orientation
-  {
-    cdr << ros_message->loiter_orientation;
-  }
-
-  // Field name: loiter_pattern
-  {
-    cdr << ros_message->loiter_pattern;
-  }
-
   // Field name: acceptance_radius
   {
     cdr << ros_message->acceptance_radius;
-  }
-
-  // Field name: alt_acceptance_radius
-  {
-    cdr << ros_message->alt_acceptance_radius;
   }
 
   // Field name: cruising_speed
@@ -716,6 +715,11 @@ bool cdr_serialize_key_px4_msgs__msg__PositionSetpoint(
   // Field name: cruising_throttle
   {
     cdr << ros_message->cruising_throttle;
+  }
+
+  // Field name: disable_weather_vane
+  {
+    cdr << (ros_message->disable_weather_vane ? true : false);
   }
 
   return true;
@@ -806,16 +810,30 @@ size_t get_serialized_size_key_px4_msgs__msg__PositionSetpoint(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: loiter_radius
+  // Field name: yaw_valid
   {
-    size_t item_size = sizeof(ros_message->loiter_radius);
+    size_t item_size = sizeof(ros_message->yaw_valid);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: loiter_minor_radius
+  // Field name: yawspeed
   {
-    size_t item_size = sizeof(ros_message->loiter_minor_radius);
+    size_t item_size = sizeof(ros_message->yawspeed);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: yawspeed_valid
+  {
+    size_t item_size = sizeof(ros_message->yawspeed_valid);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: loiter_radius
+  {
+    size_t item_size = sizeof(ros_message->loiter_radius);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -827,30 +845,9 @@ size_t get_serialized_size_key_px4_msgs__msg__PositionSetpoint(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: loiter_orientation
-  {
-    size_t item_size = sizeof(ros_message->loiter_orientation);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: loiter_pattern
-  {
-    size_t item_size = sizeof(ros_message->loiter_pattern);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
   // Field name: acceptance_radius
   {
     size_t item_size = sizeof(ros_message->acceptance_radius);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: alt_acceptance_radius
-  {
-    size_t item_size = sizeof(ros_message->alt_acceptance_radius);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -872,6 +869,13 @@ size_t get_serialized_size_key_px4_msgs__msg__PositionSetpoint(
   // Field name: cruising_throttle
   {
     size_t item_size = sizeof(ros_message->cruising_throttle);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: disable_weather_vane
+  {
+    size_t item_size = sizeof(ros_message->disable_weather_vane);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -974,7 +978,14 @@ size_t max_serialized_size_key_px4_msgs__msg__PositionSetpoint(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
-  // Field name: loiter_radius
+  // Field name: yaw_valid
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Field name: yawspeed
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint32_t);
@@ -982,7 +993,14 @@ size_t max_serialized_size_key_px4_msgs__msg__PositionSetpoint(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
-  // Field name: loiter_minor_radius
+  // Field name: yawspeed_valid
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Field name: loiter_radius
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint32_t);
@@ -997,30 +1015,7 @@ size_t max_serialized_size_key_px4_msgs__msg__PositionSetpoint(
     current_alignment += array_size * sizeof(uint8_t);
   }
 
-  // Field name: loiter_orientation
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Field name: loiter_pattern
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
   // Field name: acceptance_radius
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Field name: alt_acceptance_radius
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint32_t);
@@ -1051,6 +1046,13 @@ size_t max_serialized_size_key_px4_msgs__msg__PositionSetpoint(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
+  // Field name: disable_weather_vane
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
     // All members are plain, and type is not empty.
@@ -1059,7 +1061,7 @@ size_t max_serialized_size_key_px4_msgs__msg__PositionSetpoint(
     using DataType = px4_msgs__msg__PositionSetpoint;
     is_plain =
       (
-      offsetof(DataType, cruising_throttle) +
+      offsetof(DataType, disable_weather_vane) +
       last_member_size
       ) == ret_val;
   }

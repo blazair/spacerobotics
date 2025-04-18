@@ -35,6 +35,13 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
+  // member: instance_count
+  {
+    out << "instance_count: ";
+    rosidl_generator_traits::value_to_yaml(msg.instance_count, out);
+    out << ", ";
+  }
+
   // member: sequence_current
   {
     out << "sequence_current: ";
@@ -159,6 +166,16 @@ inline void to_block_style_yaml(
     }
     out << "timestamp: ";
     rosidl_generator_traits::value_to_yaml(msg.timestamp, out);
+    out << "\n";
+  }
+
+  // member: instance_count
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "instance_count: ";
+    rosidl_generator_traits::value_to_yaml(msg.instance_count, out);
     out << "\n";
   }
 

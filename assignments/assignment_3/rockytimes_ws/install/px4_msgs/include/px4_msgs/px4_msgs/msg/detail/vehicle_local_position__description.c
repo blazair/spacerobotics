@@ -11,10 +11,10 @@ px4_msgs__msg__VehicleLocalPosition__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x69, 0x0a, 0xd5, 0x35, 0x16, 0x92, 0x97, 0x24,
-      0x1c, 0x69, 0x64, 0x94, 0xad, 0xbd, 0x98, 0xbb,
-      0xdc, 0x45, 0x56, 0x66, 0x45, 0x02, 0x6f, 0xe7,
-      0x96, 0x35, 0x13, 0xa2, 0x9a, 0x1b, 0xf1, 0x44,
+      0xf1, 0xbd, 0xfb, 0x1a, 0x3c, 0xda, 0x98, 0x9a,
+      0x49, 0xbb, 0x02, 0x3a, 0x88, 0x1c, 0x64, 0xad,
+      0x75, 0xc6, 0xef, 0x29, 0x4e, 0x0b, 0xbb, 0x95,
+      0x2f, 0x30, 0xa1, 0xf1, 0xb8, 0x28, 0x2a, 0x54,
     }};
   return &hash;
 }
@@ -56,23 +56,17 @@ static char px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__ax[] = "ax";
 static char px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__ay[] = "ay";
 static char px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__az[] = "az";
 static char px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__heading[] = "heading";
-static char px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__heading_var[] = "heading_var";
-static char px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__unaided_heading[] = "unaided_heading";
 static char px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__delta_heading[] = "delta_heading";
 static char px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__heading_reset_counter[] = "heading_reset_counter";
 static char px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__heading_good_for_control[] = "heading_good_for_control";
-static char px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__tilt_var[] = "tilt_var";
 static char px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__xy_global[] = "xy_global";
 static char px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__z_global[] = "z_global";
 static char px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__ref_timestamp[] = "ref_timestamp";
 static char px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__ref_lat[] = "ref_lat";
 static char px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__ref_lon[] = "ref_lon";
 static char px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__ref_alt[] = "ref_alt";
-static char px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__dist_bottom_valid[] = "dist_bottom_valid";
 static char px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__dist_bottom[] = "dist_bottom";
-static char px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__dist_bottom_var[] = "dist_bottom_var";
-static char px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__delta_dist_bottom[] = "delta_dist_bottom";
-static char px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__dist_bottom_reset_counter[] = "dist_bottom_reset_counter";
+static char px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__dist_bottom_valid[] = "dist_bottom_valid";
 static char px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__dist_bottom_sensor_bitfield[] = "dist_bottom_sensor_bitfield";
 static char px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__eph[] = "eph";
 static char px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__epv[] = "epv";
@@ -82,8 +76,7 @@ static char px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__dead_reckoning[] = 
 static char px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__vxy_max[] = "vxy_max";
 static char px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__vz_max[] = "vz_max";
 static char px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__hagl_min[] = "hagl_min";
-static char px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__hagl_max_z[] = "hagl_max_z";
-static char px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__hagl_max_xy[] = "hagl_max_xy";
+static char px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__hagl_max[] = "hagl_max";
 
 static rosidl_runtime_c__type_description__Field px4_msgs__msg__VehicleLocalPosition__FIELDS[] = {
   {
@@ -337,26 +330,6 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__VehicleLocalPosi
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__heading_var, 11, 11},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__unaided_heading, 15, 15},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
     {px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__delta_heading, 13, 13},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
@@ -380,16 +353,6 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__VehicleLocalPosi
     {px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__heading_good_for_control, 24, 24},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__tilt_var, 8, 8},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
       0,
       0,
       {NULL, 0, 0},
@@ -457,16 +420,6 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__VehicleLocalPosi
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__dist_bottom_valid, 17, 17},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
     {px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__dist_bottom, 11, 11},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
@@ -477,29 +430,9 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__VehicleLocalPosi
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__dist_bottom_var, 15, 15},
+    {px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__dist_bottom_valid, 17, 17},
     {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__delta_dist_bottom, 17, 17},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__dist_bottom_reset_counter, 25, 25},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT8,
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
       0,
       0,
       {NULL, 0, 0},
@@ -597,17 +530,7 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__VehicleLocalPosi
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__hagl_max_z, 10, 10},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__hagl_max_xy, 11, 11},
+    {px4_msgs__msg__VehicleLocalPosition__FIELD_NAME__hagl_max, 8, 8},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
       0,
@@ -627,7 +550,7 @@ px4_msgs__msg__VehicleLocalPosition__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {px4_msgs__msg__VehicleLocalPosition__TYPE_NAME, 33, 33},
-      {px4_msgs__msg__VehicleLocalPosition__FIELDS, 53, 53},
+      {px4_msgs__msg__VehicleLocalPosition__FIELDS, 46, 46},
     },
     {NULL, 0, 0},
   };
@@ -640,8 +563,6 @@ px4_msgs__msg__VehicleLocalPosition__get_type_description(
 static char toplevel_type_raw_source[] =
   "# Fused local position in NED.\n"
   "# The coordinate system origin is the vehicle position at the time when the EKF2-module was started.\n"
-  "\n"
-  "uint32 MESSAGE_VERSION = 0\n"
   "\n"
   "uint64 timestamp\\t\\t\\t# time since system start (microseconds)\n"
   "uint64 timestamp_sample                 # the timestamp of the raw data (microseconds)\n"
@@ -657,10 +578,11 @@ static char toplevel_type_raw_source[] =
   "float32 z\\t\\t\\t\\t# Down position (negative altitude) in NED earth-fixed frame, (metres)\n"
   "\n"
   "# Position reset delta\n"
-  "float32[2] delta_xy\\t\\t\\t# Amount of lateral shift of position estimate in latest reset (in x and y) [m]\n"
-  "uint8 xy_reset_counter\\t\\t\\t# Index of latest lateral position estimate reset\n"
-  "float32 delta_z\\t\\t\\t\\t# Amount of vertical shift of position estimate in latest reset [m]\n"
-  "uint8 z_reset_counter\\t\\t\\t# Index of latest vertical position estimate reset\n"
+  "float32[2] delta_xy\n"
+  "uint8 xy_reset_counter\n"
+  "\n"
+  "float32 delta_z\n"
+  "uint8 z_reset_counter\n"
   "\n"
   "# Velocity in NED frame\n"
   "float32 vx \\t\\t\\t\\t# North velocity in NED earth-fixed frame, (metres/sec)\n"
@@ -669,24 +591,20 @@ static char toplevel_type_raw_source[] =
   "float32 z_deriv\\t\\t\\t\\t# Down position time derivative in NED earth-fixed frame, (metres/sec)\n"
   "\n"
   "# Velocity reset delta\n"
-  "float32[2] delta_vxy\\t\\t\\t# Amount of lateral shift of velocity estimate in latest reset (in x and y) [m/s]\n"
-  "uint8 vxy_reset_counter\\t\\t\\t# Index of latest vertical velocity estimate reset\n"
-  "float32 delta_vz\\t\\t\\t# Amount of vertical shift of velocity estimate in latest reset [m/s]\n"
-  "uint8 vz_reset_counter\\t\\t\\t# Index of latest vertical velocity estimate reset\n"
+  "float32[2] delta_vxy\n"
+  "uint8 vxy_reset_counter\n"
   "\n"
+  "float32 delta_vz\n"
+  "uint8 vz_reset_counter\n"
   "# Acceleration in NED frame\n"
   "float32 ax        # North velocity derivative in NED earth-fixed frame, (metres/sec^2)\n"
   "float32 ay        # East velocity derivative in NED earth-fixed frame, (metres/sec^2)\n"
   "float32 az        # Down velocity derivative in NED earth-fixed frame, (metres/sec^2)\n"
   "\n"
   "float32 heading\\t\\t\\t\\t# Euler yaw angle transforming the tangent plane relative to NED earth-fixed frame, -PI..+PI,  (radians)\n"
-  "float32 heading_var\n"
-  "float32 unaided_heading                 # Same as heading but generated by integrating corrected gyro data only\n"
-  "float32 delta_heading\\t\\t\\t# Heading delta caused by latest heading reset [rad]\n"
-  "uint8 heading_reset_counter\\t\\t# Index of latest heading reset\n"
+  "float32 delta_heading\n"
+  "uint8 heading_reset_counter\n"
   "bool heading_good_for_control\n"
-  "\n"
-  "float32 tilt_var\n"
   "\n"
   "# Position of reference point (local NED frame origin) in global (GPS / WGS84) frame\n"
   "bool xy_global\\t\\t\\t\\t# true if position (x, y) has a valid global reference (ref_lat, ref_lon)\n"
@@ -697,13 +615,8 @@ static char toplevel_type_raw_source[] =
   "float32 ref_alt\\t\\t\\t\\t# Reference altitude AMSL, (metres)\n"
   "\n"
   "# Distance to surface\n"
-  "bool dist_bottom_valid\\t\\t\\t# true if distance to bottom surface is valid\n"
   "float32 dist_bottom\\t\\t\\t# Distance from from bottom surface to ground, (metres)\n"
-  "float32 dist_bottom_var                 # terrain estimate variance (m^2)\n"
-  "\n"
-  "float32 delta_dist_bottom               # Amount of vertical shift of dist bottom estimate in latest reset [m]\n"
-  "uint8 dist_bottom_reset_counter         # Index of latest dist bottom estimate reset\n"
-  "\n"
+  "bool dist_bottom_valid\\t\\t\\t# true if distance to bottom surface is valid\n"
   "uint8 dist_bottom_sensor_bitfield\\t# bitfield indicating what type of sensor is used to estimate dist_bottom\n"
   "uint8 DIST_BOTTOM_SENSOR_NONE = 0\n"
   "uint8 DIST_BOTTOM_SENSOR_RANGE = 1\\t# (1 << 0) a range sensor is used to estimate dist_bottom field\n"
@@ -717,12 +630,10 @@ static char toplevel_type_raw_source[] =
   "bool dead_reckoning                     # True if this position is estimated through dead-reckoning\n"
   "\n"
   "# estimator specified vehicle limits\n"
-  "# set to INFINITY when limiting not required\n"
-  "float32 vxy_max\\t\\t\\t\\t# maximum horizontal speed (meters/sec)\n"
-  "float32 vz_max\\t\\t\\t\\t# maximum vertical speed (meters/sec)\n"
-  "float32 hagl_min\\t\\t\\t# minimum height above ground level (meters)\n"
-  "float32 hagl_max_z\\t\\t\\t# maximum height above ground level for z-control (meters)\n"
-  "float32 hagl_max_xy\\t\\t\\t# maximum height above ground level for xy-control (meters)\n"
+  "float32 vxy_max\\t\\t\\t\\t# maximum horizontal speed - set to 0 when limiting not required (meters/sec)\n"
+  "float32 vz_max\\t\\t\\t\\t# maximum vertical speed - set to 0 when limiting not required (meters/sec)\n"
+  "float32 hagl_min\\t\\t\\t# minimum height above ground level - set to 0 when limiting not required (meters)\n"
+  "float32 hagl_max\\t\\t\\t# maximum height above ground level - set to 0 when limiting not required (meters)\n"
   "\n"
   "# TOPICS vehicle_local_position vehicle_local_position_groundtruth external_ins_local_position\n"
   "# TOPICS estimator_local_position";
@@ -739,7 +650,7 @@ px4_msgs__msg__VehicleLocalPosition__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__VehicleLocalPosition__TYPE_NAME, 33, 33},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 4797, 4797},
+    {toplevel_type_raw_source, 3749, 3749},
   };
   return &source;
 }

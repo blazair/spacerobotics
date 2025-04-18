@@ -32,8 +32,7 @@ typedef struct px4_msgs__msg__OffboardControlMode
   bool acceleration;
   bool attitude;
   bool body_rate;
-  bool thrust_and_torque;
-  bool direct_actuator;
+  bool actuator;
 } px4_msgs__msg__OffboardControlMode;
 
 // Struct for a sequence of px4_msgs__msg__OffboardControlMode.

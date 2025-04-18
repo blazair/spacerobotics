@@ -6,7 +6,6 @@
 module px4_msgs {
   module msg {
     module VehicleCommand_Constants {
-      const uint32 MESSAGE_VERSION = 0;
       @verbatim (language="comment", text=
         "test command")
       const uint16 VEHICLE_CMD_CUSTOM_0 = 0;
@@ -43,9 +42,6 @@ module px4_msgs {
       @verbatim (language="comment", text=
         "Start orbiting on the circumference of a circle defined by the parameters. |Radius [m] |Velocity [m/s] |Yaw behaviour |Empty |Latitude/X |Longitude/Y |Altitude/Z |")
       const uint16 VEHICLE_CMD_DO_ORBIT = 34;
-      @verbatim (language="comment", text=
-        "Start flying on the outline of a figure eight defined by the parameters. |Major Radius [m] |Minor Radius [m] |Velocity [m/s] |Orientation |Latitude/X |Longitude/Y |Altitude/Z |")
-      const uint16 VEHICLE_CMD_DO_FIGUREEIGHT = 35;
       @verbatim (language="comment", text=
         "Sets the region of interest (ROI) for a sensor set or the vehicle itself. This can then be used by the vehicles control system to control the vehicle attitude and the attitude of various sensors such as cameras. |Region of interest mode. (see MAV_ROI enum)| MISSION index/ target ID. (see MAV_ROI enum)| ROI index (allows a vehicle to manage multiple ROI's)| Empty| x the location of the fixed ROI (see MAV_FRAME)| y| z|")
       const uint16 VEHICLE_CMD_NAV_ROI = 80;
@@ -127,8 +123,6 @@ module px4_msgs {
       @verbatim (language="comment", text=
         "Mission command to safely abort an autonomous landing. |Altitude (meters)| Empty| Empty| Empty| Empty| Empty| Empty|")
       const uint16 VEHICLE_CMD_DO_GO_AROUND = 191;
-      @verbatim (language="comment", text=
-        "Reposition to specific WGS84 GPS position. |Ground speed [m/s] |Bitmask |Loiter radius [m] for planes |Yaw [deg] |Latitude |Longitude |Altitude |")
       const uint16 VEHICLE_CMD_DO_REPOSITION = 192;
       const uint16 VEHICLE_CMD_DO_PAUSE_CONTINUE = 193;
       @verbatim (language="comment", text=
@@ -208,9 +202,6 @@ module px4_msgs {
         "Mission command to set a Camera Auto Mount Pivoting Oblique Survey for this flight|Camera trigger distance (meters)| Shutter integration time (ms)| Camera minimum trigger interval| Number of positions| Roll| Pitch| Empty|")
       const uint16 VEHICLE_CMD_OBLIQUE_SURVEY = 260;
       @verbatim (language="comment", text=
-        "Enable the specified standard MAVLink mode |MAV_STANDARD_MODE|")
-      const uint16 VEHICLE_CMD_DO_SET_STANDARD_MODE = 262;
-      @verbatim (language="comment", text=
         "Command to ask information about a low level gimbal")
       const uint16 VEHICLE_CMD_GIMBAL_DEVICE_INFORMATION = 283;
       @verbatim (language="comment", text=
@@ -237,9 +228,6 @@ module px4_msgs {
       @verbatim (language="comment", text=
         "Request to send a single instance of the specified message")
       const uint16 VEHICLE_CMD_REQUEST_MESSAGE = 512;
-      @verbatim (language="comment", text=
-        "Request camera information (CAMERA_INFORMATION). |0: No action 1: Request camera capabilities| Reserved (all remaining params)| Reserved (default:0)| Reserved (default:0)| Reserved (default:0)| Reserved (default:0)| Reserved (default:0)|")
-      const uint16 VEHICLE_CMD_REQUEST_CAMERA_INFORMATION = 521;
       @verbatim (language="comment", text=
         "Set camera capture mode (photo, video, etc.)")
       const uint16 VEHICLE_CMD_SET_CAMERA_MODE = 530;
@@ -293,18 +281,11 @@ module px4_msgs {
         "Command to operate winch.")
       const uint16 VEHICLE_CMD_DO_WINCH = 42600;
       @verbatim (language="comment", text=
-        "external reset of estimator global position when deadreckoning")
-      const uint16 VEHICLE_CMD_EXTERNAL_POSITION_ESTIMATE = 43003;
-      const uint16 VEHICLE_CMD_EXTERNAL_WIND_ESTIMATE = 43004;
-      @verbatim (language="comment", text=
         "PX4 vehicle commands (beyond 16 bit mavlink commands)" "\n"        "start of PX4 internal only vehicle commands (> UINT16_MAX)")
       const uint32 VEHICLE_CMD_PX4_INTERNAL_START = 65537;
       @verbatim (language="comment", text=
         "Sets the GPS coordinates of the vehicle local origin (0,0,0) position. |Empty|Empty|Empty|Empty|Latitude|Longitude|Altitude|")
       const uint32 VEHICLE_CMD_SET_GPS_GLOBAL_ORIGIN = 100000;
-      @verbatim (language="comment", text=
-        "Change mode by specifying nav_state directly. |nav_state|Empty|Empty|Empty|Empty|Empty|Empty|")
-      const uint32 VEHICLE_CMD_SET_NAV_STATE = 100001;
       @verbatim (language="comment", text=
         "Load and keep safe position (Roll,Pitch,Yaw) from permanent memory and stop stabilization |")
       const uint8 VEHICLE_MOUNT_MODE_RETRACT = 0;
@@ -370,14 +351,6 @@ module px4_msgs {
       const uint8 SPEED_TYPE_CLIMB_SPEED = 2;
       const uint8 SPEED_TYPE_DESCEND_SPEED = 3;
       @verbatim (language="comment", text=
-        "used as param3 in CMD_DO_ORBIT")
-      const uint8 ORBIT_YAW_BEHAVIOUR_HOLD_FRONT_TO_CIRCLE_CENTER = 0;
-      const uint8 ORBIT_YAW_BEHAVIOUR_HOLD_INITIAL_HEADING = 1;
-      const uint8 ORBIT_YAW_BEHAVIOUR_UNCONTROLLED = 2;
-      const uint8 ORBIT_YAW_BEHAVIOUR_HOLD_FRONT_TANGENT_TO_CIRCLE = 3;
-      const uint8 ORBIT_YAW_BEHAVIOUR_RC_CONTROLLED = 4;
-      const uint8 ORBIT_YAW_BEHAVIOUR_UNCHANGED = 5;
-      @verbatim (language="comment", text=
         "used as param1 in ARM_DISARM command")
       const int8 ARMING_ACTION_DISARM = 0;
       const int8 ARMING_ACTION_ARM = 1;
@@ -386,7 +359,6 @@ module px4_msgs {
       const uint8 GRIPPER_ACTION_RELEASE = 0;
       const uint8 GRIPPER_ACTION_GRAB = 1;
       const uint8 ORB_QUEUE_LENGTH = 8;
-      const uint16 COMPONENT_MODE_EXECUTOR_START = 1000;
     };
     @verbatim (language="comment", text=
       "Vehicle Command uORB message. Used for commanding a mission / action / etc." "\n"
@@ -441,8 +413,8 @@ module px4_msgs {
       uint8 source_system;
 
       @verbatim (language="comment", text=
-        "Component / mode executor sending the command")
-      uint16 source_component;
+        "Component sending the command")
+      uint8 source_component;
 
       @verbatim (language="comment", text=
         "0: First transmission of this command. 1-255: Confirmation transmissions (e.g. for kill command)")

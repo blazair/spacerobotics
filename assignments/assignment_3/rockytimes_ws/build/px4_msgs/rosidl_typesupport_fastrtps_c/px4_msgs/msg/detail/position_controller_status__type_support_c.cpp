@@ -88,6 +88,16 @@ bool cdr_serialize_px4_msgs__msg__PositionControllerStatus(
     cdr << ros_message->acceptance_radius;
   }
 
+  // Field name: yaw_acceptance
+  {
+    cdr << ros_message->yaw_acceptance;
+  }
+
+  // Field name: altitude_acceptance
+  {
+    cdr << ros_message->altitude_acceptance;
+  }
+
   // Field name: type
   {
     cdr << ros_message->type;
@@ -139,6 +149,16 @@ bool cdr_deserialize_px4_msgs__msg__PositionControllerStatus(
   // Field name: acceptance_radius
   {
     cdr >> ros_message->acceptance_radius;
+  }
+
+  // Field name: yaw_acceptance
+  {
+    cdr >> ros_message->yaw_acceptance;
+  }
+
+  // Field name: altitude_acceptance
+  {
+    cdr >> ros_message->altitude_acceptance;
   }
 
   // Field name: type
@@ -216,6 +236,20 @@ size_t get_serialized_size_px4_msgs__msg__PositionControllerStatus(
   // Field name: acceptance_radius
   {
     size_t item_size = sizeof(ros_message->acceptance_radius);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: yaw_acceptance
+  {
+    size_t item_size = sizeof(ros_message->yaw_acceptance);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: altitude_acceptance
+  {
+    size_t item_size = sizeof(ros_message->altitude_acceptance);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -313,6 +347,22 @@ size_t max_serialized_size_px4_msgs__msg__PositionControllerStatus(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
+  // Field name: yaw_acceptance
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Field name: altitude_acceptance
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
   // Field name: type
   {
     size_t array_size = 1;
@@ -379,6 +429,16 @@ bool cdr_serialize_key_px4_msgs__msg__PositionControllerStatus(
   // Field name: acceptance_radius
   {
     cdr << ros_message->acceptance_radius;
+  }
+
+  // Field name: yaw_acceptance
+  {
+    cdr << ros_message->yaw_acceptance;
+  }
+
+  // Field name: altitude_acceptance
+  {
+    cdr << ros_message->altitude_acceptance;
   }
 
   // Field name: type
@@ -456,6 +516,20 @@ size_t get_serialized_size_key_px4_msgs__msg__PositionControllerStatus(
   // Field name: acceptance_radius
   {
     size_t item_size = sizeof(ros_message->acceptance_radius);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: yaw_acceptance
+  {
+    size_t item_size = sizeof(ros_message->yaw_acceptance);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: altitude_acceptance
+  {
+    size_t item_size = sizeof(ros_message->altitude_acceptance);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -544,6 +618,22 @@ size_t max_serialized_size_key_px4_msgs__msg__PositionControllerStatus(
   }
 
   // Field name: acceptance_radius
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Field name: yaw_acceptance
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Field name: altitude_acceptance
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint32_t);

@@ -49,12 +49,6 @@ enum
   px4_msgs__msg__OrbitStatus__ORBIT_YAW_BEHAVIOUR_RC_CONTROLLED = 4
 };
 
-/// Constant 'ORBIT_YAW_BEHAVIOUR_UNCHANGED'.
-enum
-{
-  px4_msgs__msg__OrbitStatus__ORBIT_YAW_BEHAVIOUR_UNCHANGED = 5
-};
-
 /// Struct defined in msg/OrbitStatus in the package px4_msgs.
 /**
   * ORBIT_YAW_BEHAVIOUR

@@ -100,9 +100,6 @@ px4_msgs__msg__ActuatorMotors__get_type_description(
 
 static char toplevel_type_raw_source[] =
   "# Motor control message\n"
-  "\n"
-  "uint32 MESSAGE_VERSION = 0\n"
-  "\n"
   "uint64 timestamp\\t\\t\\t# time since system start (microseconds)\n"
   "uint64 timestamp_sample\\t    # the timestamp the data this control response is based on was sampled\n"
   "\n"
@@ -127,7 +124,7 @@ px4_msgs__msg__ActuatorMotors__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__ActuatorMotors__TYPE_NAME, 27, 27},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 592, 592},
+    {toplevel_type_raw_source, 563, 563},
   };
   return &source;
 }

@@ -27,7 +27,7 @@ enum
 
 /// Struct defined in msg/LogMessage in the package px4_msgs.
 /**
-  * A logging message, output with PX4_WARN, PX4_ERR, PX4_INFO
+  * A logging message, output with PX4_{WARN,ERR,INFO}
  */
 typedef struct px4_msgs__msg__LogMessage
 {

@@ -122,16 +122,6 @@
             "nested_type_name": ""
           },
           "default_value": ""
-        },
-        {
-          "name": "update_count",
-          "type": {
-            "type_id": 7,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
         }
       ]
     },
@@ -140,7 +130,7 @@
   "type_hashes": [
     {
       "type_name": "px4_msgs/msg/HomePosition",
-      "hash_string": "RIHS01_2ff6c51249703da18ba1bf5d64a8c46c0dcc5219290c4a5ab6b0bc1ae5d00b34"
+      "hash_string": "RIHS01_18303f1731571e00a1d93b07ba5bca9e6dcf2aad989ff66c4550456c42ba3c20"
     }
   ]
 }

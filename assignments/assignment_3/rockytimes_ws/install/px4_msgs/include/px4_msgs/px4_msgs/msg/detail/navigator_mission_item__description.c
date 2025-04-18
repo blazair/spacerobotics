@@ -11,10 +11,10 @@ px4_msgs__msg__NavigatorMissionItem__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x4a, 0x4a, 0x74, 0x5b, 0xb9, 0x3a, 0x91, 0xd3,
-      0x19, 0xd9, 0xe3, 0xa3, 0x86, 0x54, 0x82, 0x8b,
-      0xe7, 0x56, 0xbc, 0x67, 0x47, 0xc8, 0xca, 0xfc,
-      0xb6, 0x00, 0x3f, 0x07, 0x01, 0xda, 0x8a, 0x9e,
+      0xd9, 0x50, 0x5a, 0xaf, 0x5b, 0xb5, 0xbe, 0x0e,
+      0x91, 0xdd, 0xb6, 0x45, 0xba, 0x0f, 0x78, 0x06,
+      0x11, 0x71, 0x37, 0xd0, 0x12, 0x74, 0x55, 0x97,
+      0x92, 0xb1, 0x64, 0xeb, 0x92, 0xea, 0x53, 0x60,
     }};
   return &hash;
 }
@@ -32,6 +32,7 @@ static char px4_msgs__msg__NavigatorMissionItem__TYPE_NAME[] = "px4_msgs/msg/Nav
 
 // Define type names, field names, and default values
 static char px4_msgs__msg__NavigatorMissionItem__FIELD_NAME__timestamp[] = "timestamp";
+static char px4_msgs__msg__NavigatorMissionItem__FIELD_NAME__instance_count[] = "instance_count";
 static char px4_msgs__msg__NavigatorMissionItem__FIELD_NAME__sequence_current[] = "sequence_current";
 static char px4_msgs__msg__NavigatorMissionItem__FIELD_NAME__nav_cmd[] = "nav_cmd";
 static char px4_msgs__msg__NavigatorMissionItem__FIELD_NAME__latitude[] = "latitude";
@@ -54,6 +55,16 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__NavigatorMission
     {px4_msgs__msg__NavigatorMissionItem__FIELD_NAME__timestamp, 9, 9},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT64,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {px4_msgs__msg__NavigatorMissionItem__FIELD_NAME__instance_count, 14, 14},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT32,
       0,
       0,
       {NULL, 0, 0},
@@ -231,7 +242,7 @@ px4_msgs__msg__NavigatorMissionItem__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {px4_msgs__msg__NavigatorMissionItem__TYPE_NAME, 33, 33},
-      {px4_msgs__msg__NavigatorMissionItem__FIELDS, 17, 17},
+      {px4_msgs__msg__NavigatorMissionItem__FIELDS, 18, 18},
     },
     {NULL, 0, 0},
   };
@@ -243,6 +254,8 @@ px4_msgs__msg__NavigatorMissionItem__get_type_description(
 
 static char toplevel_type_raw_source[] =
   "uint64 timestamp                 # time since system start (microseconds)\n"
+  "\n"
+  "uint32 instance_count            # Instance count of this mission. Increments monotonically whenever the mission is modified\n"
   "\n"
   "uint16 sequence_current          # Sequence of the current mission item\n"
   "\n"
@@ -278,7 +291,7 @@ px4_msgs__msg__NavigatorMissionItem__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__NavigatorMissionItem__TYPE_NAME, 33, 33},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 1215, 1215},
+    {toplevel_type_raw_source, 1341, 1341},
   };
   return &source;
 }

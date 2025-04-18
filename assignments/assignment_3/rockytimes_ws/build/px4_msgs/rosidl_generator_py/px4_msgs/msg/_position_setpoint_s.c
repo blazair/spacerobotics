@@ -140,6 +140,33 @@ bool px4_msgs__msg__position_setpoint__convert_from_py(PyObject * _pymsg, void *
     ros_message->yaw = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
+  {  // yaw_valid
+    PyObject * field = PyObject_GetAttrString(_pymsg, "yaw_valid");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->yaw_valid = (Py_True == field);
+    Py_DECREF(field);
+  }
+  {  // yawspeed
+    PyObject * field = PyObject_GetAttrString(_pymsg, "yawspeed");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->yawspeed = (float)PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // yawspeed_valid
+    PyObject * field = PyObject_GetAttrString(_pymsg, "yawspeed_valid");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->yawspeed_valid = (Py_True == field);
+    Py_DECREF(field);
+  }
   {  // loiter_radius
     PyObject * field = PyObject_GetAttrString(_pymsg, "loiter_radius");
     if (!field) {
@@ -147,15 +174,6 @@ bool px4_msgs__msg__position_setpoint__convert_from_py(PyObject * _pymsg, void *
     }
     assert(PyFloat_Check(field));
     ros_message->loiter_radius = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
-  {  // loiter_minor_radius
-    PyObject * field = PyObject_GetAttrString(_pymsg, "loiter_minor_radius");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->loiter_minor_radius = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
   {  // loiter_direction_counter_clockwise
@@ -167,24 +185,6 @@ bool px4_msgs__msg__position_setpoint__convert_from_py(PyObject * _pymsg, void *
     ros_message->loiter_direction_counter_clockwise = (Py_True == field);
     Py_DECREF(field);
   }
-  {  // loiter_orientation
-    PyObject * field = PyObject_GetAttrString(_pymsg, "loiter_orientation");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->loiter_orientation = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
-  {  // loiter_pattern
-    PyObject * field = PyObject_GetAttrString(_pymsg, "loiter_pattern");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->loiter_pattern = (uint8_t)PyLong_AsUnsignedLong(field);
-    Py_DECREF(field);
-  }
   {  // acceptance_radius
     PyObject * field = PyObject_GetAttrString(_pymsg, "acceptance_radius");
     if (!field) {
@@ -192,15 +192,6 @@ bool px4_msgs__msg__position_setpoint__convert_from_py(PyObject * _pymsg, void *
     }
     assert(PyFloat_Check(field));
     ros_message->acceptance_radius = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
-  {  // alt_acceptance_radius
-    PyObject * field = PyObject_GetAttrString(_pymsg, "alt_acceptance_radius");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->alt_acceptance_radius = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
   {  // cruising_speed
@@ -228,6 +219,15 @@ bool px4_msgs__msg__position_setpoint__convert_from_py(PyObject * _pymsg, void *
     }
     assert(PyFloat_Check(field));
     ros_message->cruising_throttle = (float)PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // disable_weather_vane
+    PyObject * field = PyObject_GetAttrString(_pymsg, "disable_weather_vane");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->disable_weather_vane = (Py_True == field);
     Py_DECREF(field);
   }
 
@@ -362,22 +362,44 @@ PyObject * px4_msgs__msg__position_setpoint__convert_to_py(void * raw_ros_messag
       }
     }
   }
-  {  // loiter_radius
+  {  // yaw_valid
     PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->loiter_radius);
+    field = PyBool_FromLong(ros_message->yaw_valid ? 1 : 0);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "loiter_radius", field);
+      int rc = PyObject_SetAttrString(_pymessage, "yaw_valid", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
       }
     }
   }
-  {  // loiter_minor_radius
+  {  // yawspeed
     PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->loiter_minor_radius);
+    field = PyFloat_FromDouble(ros_message->yawspeed);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "loiter_minor_radius", field);
+      int rc = PyObject_SetAttrString(_pymessage, "yawspeed", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // yawspeed_valid
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->yawspeed_valid ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "yawspeed_valid", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // loiter_radius
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->loiter_radius);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "loiter_radius", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
@@ -395,44 +417,11 @@ PyObject * px4_msgs__msg__position_setpoint__convert_to_py(void * raw_ros_messag
       }
     }
   }
-  {  // loiter_orientation
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->loiter_orientation);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "loiter_orientation", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // loiter_pattern
-    PyObject * field = NULL;
-    field = PyLong_FromUnsignedLong(ros_message->loiter_pattern);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "loiter_pattern", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
   {  // acceptance_radius
     PyObject * field = NULL;
     field = PyFloat_FromDouble(ros_message->acceptance_radius);
     {
       int rc = PyObject_SetAttrString(_pymessage, "acceptance_radius", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // alt_acceptance_radius
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->alt_acceptance_radius);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "alt_acceptance_radius", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
@@ -466,6 +455,17 @@ PyObject * px4_msgs__msg__position_setpoint__convert_to_py(void * raw_ros_messag
     field = PyFloat_FromDouble(ros_message->cruising_throttle);
     {
       int rc = PyObject_SetAttrString(_pymessage, "cruising_throttle", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // disable_weather_vane
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->disable_weather_vane ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "disable_weather_vane", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

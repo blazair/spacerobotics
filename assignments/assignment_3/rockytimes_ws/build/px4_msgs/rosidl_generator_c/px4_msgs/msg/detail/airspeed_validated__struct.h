@@ -38,12 +38,6 @@ typedef struct px4_msgs__msg__AirspeedValidated
   bool airspeed_sensor_measurement_valid;
   /// 1-3: airspeed sensor index, 0: groundspeed-windspeed, -1: airspeed invalid
   int8_t selected_airspeed_index;
-  /// filtered indicated airspeed derivative
-  float airspeed_derivative_filtered;
-  /// filtered fixed-wing throttle
-  float throttle_filtered;
-  /// filtered pitch
-  float pitch_filtered;
 } px4_msgs__msg__AirspeedValidated;
 
 // Struct for a sequence of px4_msgs__msg__AirspeedValidated.

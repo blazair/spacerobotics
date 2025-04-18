@@ -42,16 +42,9 @@ struct Mission_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->timestamp = 0ull;
-      this->mission_dataman_id = 0;
-      this->fence_dataman_id = 0;
-      this->safepoint_dataman_id = 0;
+      this->dataman_id = 0;
       this->count = 0;
       this->current_seq = 0l;
-      this->land_start_index = 0l;
-      this->land_index = 0l;
-      this->mission_id = 0ul;
-      this->geofence_id = 0ul;
-      this->safe_points_id = 0ul;
     }
   }
 
@@ -62,16 +55,9 @@ struct Mission_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->timestamp = 0ull;
-      this->mission_dataman_id = 0;
-      this->fence_dataman_id = 0;
-      this->safepoint_dataman_id = 0;
+      this->dataman_id = 0;
       this->count = 0;
       this->current_seq = 0l;
-      this->land_start_index = 0l;
-      this->land_index = 0l;
-      this->mission_id = 0ul;
-      this->geofence_id = 0ul;
-      this->safe_points_id = 0ul;
     }
   }
 
@@ -79,36 +65,15 @@ struct Mission_
   using _timestamp_type =
     uint64_t;
   _timestamp_type timestamp;
-  using _mission_dataman_id_type =
+  using _dataman_id_type =
     uint8_t;
-  _mission_dataman_id_type mission_dataman_id;
-  using _fence_dataman_id_type =
-    uint8_t;
-  _fence_dataman_id_type fence_dataman_id;
-  using _safepoint_dataman_id_type =
-    uint8_t;
-  _safepoint_dataman_id_type safepoint_dataman_id;
+  _dataman_id_type dataman_id;
   using _count_type =
     uint16_t;
   _count_type count;
   using _current_seq_type =
     int32_t;
   _current_seq_type current_seq;
-  using _land_start_index_type =
-    int32_t;
-  _land_start_index_type land_start_index;
-  using _land_index_type =
-    int32_t;
-  _land_index_type land_index;
-  using _mission_id_type =
-    uint32_t;
-  _mission_id_type mission_id;
-  using _geofence_id_type =
-    uint32_t;
-  _geofence_id_type geofence_id;
-  using _safe_points_id_type =
-    uint32_t;
-  _safe_points_id_type safe_points_id;
 
   // setters for named parameter idiom
   Type & set__timestamp(
@@ -117,22 +82,10 @@ struct Mission_
     this->timestamp = _arg;
     return *this;
   }
-  Type & set__mission_dataman_id(
+  Type & set__dataman_id(
     const uint8_t & _arg)
   {
-    this->mission_dataman_id = _arg;
-    return *this;
-  }
-  Type & set__fence_dataman_id(
-    const uint8_t & _arg)
-  {
-    this->fence_dataman_id = _arg;
-    return *this;
-  }
-  Type & set__safepoint_dataman_id(
-    const uint8_t & _arg)
-  {
-    this->safepoint_dataman_id = _arg;
+    this->dataman_id = _arg;
     return *this;
   }
   Type & set__count(
@@ -145,36 +98,6 @@ struct Mission_
     const int32_t & _arg)
   {
     this->current_seq = _arg;
-    return *this;
-  }
-  Type & set__land_start_index(
-    const int32_t & _arg)
-  {
-    this->land_start_index = _arg;
-    return *this;
-  }
-  Type & set__land_index(
-    const int32_t & _arg)
-  {
-    this->land_index = _arg;
-    return *this;
-  }
-  Type & set__mission_id(
-    const uint32_t & _arg)
-  {
-    this->mission_id = _arg;
-    return *this;
-  }
-  Type & set__geofence_id(
-    const uint32_t & _arg)
-  {
-    this->geofence_id = _arg;
-    return *this;
-  }
-  Type & set__safe_points_id(
-    const uint32_t & _arg)
-  {
-    this->safe_points_id = _arg;
     return *this;
   }
 
@@ -223,34 +146,13 @@ struct Mission_
     if (this->timestamp != other.timestamp) {
       return false;
     }
-    if (this->mission_dataman_id != other.mission_dataman_id) {
-      return false;
-    }
-    if (this->fence_dataman_id != other.fence_dataman_id) {
-      return false;
-    }
-    if (this->safepoint_dataman_id != other.safepoint_dataman_id) {
+    if (this->dataman_id != other.dataman_id) {
       return false;
     }
     if (this->count != other.count) {
       return false;
     }
     if (this->current_seq != other.current_seq) {
-      return false;
-    }
-    if (this->land_start_index != other.land_start_index) {
-      return false;
-    }
-    if (this->land_index != other.land_index) {
-      return false;
-    }
-    if (this->mission_id != other.mission_id) {
-      return false;
-    }
-    if (this->geofence_id != other.geofence_id) {
-      return false;
-    }
-    if (this->safe_points_id != other.safe_points_id) {
       return false;
     }
     return true;

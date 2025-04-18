@@ -4,9 +4,9 @@
 
 #include <string.h>
 
+#include "px4_msgs/msg/detail/rtl_time_estimate__functions.h"
 #include "px4_msgs/msg/detail/rtl_time_estimate__struct.h"
 #include "rosidl_typesupport_interface/macros.h"
-#include "px4_msgs/msg/detail/rtl_time_estimate__functions.h"
 #include "px4_msgs/msg/detail/rtl_time_estimate__type_support.h"
 
 #ifdef __cplusplus

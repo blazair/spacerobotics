@@ -28,6 +28,7 @@ enum
 /// Struct defined in msg/GpsDump in the package px4_msgs.
 /**
   * This message is used to dump the raw gps communication to the log.
+  * Set the parameter GPS_DUMP_COMM to 1 to use this.
  */
 typedef struct px4_msgs__msg__GpsDump
 {

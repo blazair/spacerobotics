@@ -38,7 +38,7 @@ void ManualControlSwitches_fini_function(void * message_memory)
   typed_message->~ManualControlSwitches();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember ManualControlSwitches_message_member_array[15] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember ManualControlSwitches_message_member_array[14] = {
   {
     "timestamp",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT64,  // type
@@ -256,24 +256,6 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember ManualControl
     nullptr  // resize(index) function pointer
   },
   {
-    "payload_power_switch",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT8,  // type
-    0,  // upper bound of string
-    nullptr,  // members of sub message
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(px4_msgs::msg::ManualControlSwitches, payload_power_switch),  // bytes offset in struct
-    nullptr,  // default value
-    nullptr,  // size() function pointer
-    nullptr,  // get_const(index) function pointer
-    nullptr,  // get(index) function pointer
-    nullptr,  // fetch(index, &value) function pointer
-    nullptr,  // assign(index, value) function pointer
-    nullptr  // resize(index) function pointer
-  },
-  {
     "engage_main_motor_switch",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT8,  // type
     0,  // upper bound of string
@@ -314,7 +296,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember ManualControl
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers ManualControlSwitches_message_members = {
   "px4_msgs::msg",  // message namespace
   "ManualControlSwitches",  // message name
-  15,  // number of fields
+  14,  // number of fields
   sizeof(px4_msgs::msg::ManualControlSwitches),
   false,  // has_any_key_member_
   ManualControlSwitches_message_member_array,  // message members

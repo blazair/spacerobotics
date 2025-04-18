@@ -4,9 +4,9 @@
 
 #include <string.h>
 
+#include "px4_msgs/msg/detail/ping__type_support.h"
 #include "px4_msgs/msg/detail/ping__functions.h"
 #include "rosidl_typesupport_interface/macros.h"
-#include "px4_msgs/msg/detail/ping__type_support.h"
 #include "px4_msgs/msg/detail/ping__struct.h"
 
 #ifdef __cplusplus

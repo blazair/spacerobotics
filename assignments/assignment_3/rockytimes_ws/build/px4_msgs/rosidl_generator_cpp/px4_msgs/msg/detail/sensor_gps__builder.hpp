@@ -24,48 +24,16 @@ namespace msg
 namespace builder
 {
 
-class Init_SensorGps_rtcm_msg_used
-{
-public:
-  explicit Init_SensorGps_rtcm_msg_used(::px4_msgs::msg::SensorGps & msg)
-  : msg_(msg)
-  {}
-  ::px4_msgs::msg::SensorGps rtcm_msg_used(::px4_msgs::msg::SensorGps::_rtcm_msg_used_type arg)
-  {
-    msg_.rtcm_msg_used = std::move(arg);
-    return std::move(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::SensorGps msg_;
-};
-
-class Init_SensorGps_rtcm_crc_failed
-{
-public:
-  explicit Init_SensorGps_rtcm_crc_failed(::px4_msgs::msg::SensorGps & msg)
-  : msg_(msg)
-  {}
-  Init_SensorGps_rtcm_msg_used rtcm_crc_failed(::px4_msgs::msg::SensorGps::_rtcm_crc_failed_type arg)
-  {
-    msg_.rtcm_crc_failed = std::move(arg);
-    return Init_SensorGps_rtcm_msg_used(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::SensorGps msg_;
-};
-
 class Init_SensorGps_selected_rtcm_instance
 {
 public:
   explicit Init_SensorGps_selected_rtcm_instance(::px4_msgs::msg::SensorGps & msg)
   : msg_(msg)
   {}
-  Init_SensorGps_rtcm_crc_failed selected_rtcm_instance(::px4_msgs::msg::SensorGps::_selected_rtcm_instance_type arg)
+  ::px4_msgs::msg::SensorGps selected_rtcm_instance(::px4_msgs::msg::SensorGps::_selected_rtcm_instance_type arg)
   {
     msg_.selected_rtcm_instance = std::move(arg);
-    return Init_SensorGps_rtcm_crc_failed(msg_);
+    return std::move(msg_);
   }
 
 private:
@@ -472,15 +440,15 @@ private:
   ::px4_msgs::msg::SensorGps msg_;
 };
 
-class Init_SensorGps_altitude_ellipsoid_m
+class Init_SensorGps_alt_ellipsoid
 {
 public:
-  explicit Init_SensorGps_altitude_ellipsoid_m(::px4_msgs::msg::SensorGps & msg)
+  explicit Init_SensorGps_alt_ellipsoid(::px4_msgs::msg::SensorGps & msg)
   : msg_(msg)
   {}
-  Init_SensorGps_s_variance_m_s altitude_ellipsoid_m(::px4_msgs::msg::SensorGps::_altitude_ellipsoid_m_type arg)
+  Init_SensorGps_s_variance_m_s alt_ellipsoid(::px4_msgs::msg::SensorGps::_alt_ellipsoid_type arg)
   {
-    msg_.altitude_ellipsoid_m = std::move(arg);
+    msg_.alt_ellipsoid = std::move(arg);
     return Init_SensorGps_s_variance_m_s(msg_);
   }
 
@@ -488,48 +456,48 @@ private:
   ::px4_msgs::msg::SensorGps msg_;
 };
 
-class Init_SensorGps_altitude_msl_m
+class Init_SensorGps_alt
 {
 public:
-  explicit Init_SensorGps_altitude_msl_m(::px4_msgs::msg::SensorGps & msg)
+  explicit Init_SensorGps_alt(::px4_msgs::msg::SensorGps & msg)
   : msg_(msg)
   {}
-  Init_SensorGps_altitude_ellipsoid_m altitude_msl_m(::px4_msgs::msg::SensorGps::_altitude_msl_m_type arg)
+  Init_SensorGps_alt_ellipsoid alt(::px4_msgs::msg::SensorGps::_alt_type arg)
   {
-    msg_.altitude_msl_m = std::move(arg);
-    return Init_SensorGps_altitude_ellipsoid_m(msg_);
+    msg_.alt = std::move(arg);
+    return Init_SensorGps_alt_ellipsoid(msg_);
   }
 
 private:
   ::px4_msgs::msg::SensorGps msg_;
 };
 
-class Init_SensorGps_longitude_deg
+class Init_SensorGps_lon
 {
 public:
-  explicit Init_SensorGps_longitude_deg(::px4_msgs::msg::SensorGps & msg)
+  explicit Init_SensorGps_lon(::px4_msgs::msg::SensorGps & msg)
   : msg_(msg)
   {}
-  Init_SensorGps_altitude_msl_m longitude_deg(::px4_msgs::msg::SensorGps::_longitude_deg_type arg)
+  Init_SensorGps_alt lon(::px4_msgs::msg::SensorGps::_lon_type arg)
   {
-    msg_.longitude_deg = std::move(arg);
-    return Init_SensorGps_altitude_msl_m(msg_);
+    msg_.lon = std::move(arg);
+    return Init_SensorGps_alt(msg_);
   }
 
 private:
   ::px4_msgs::msg::SensorGps msg_;
 };
 
-class Init_SensorGps_latitude_deg
+class Init_SensorGps_lat
 {
 public:
-  explicit Init_SensorGps_latitude_deg(::px4_msgs::msg::SensorGps & msg)
+  explicit Init_SensorGps_lat(::px4_msgs::msg::SensorGps & msg)
   : msg_(msg)
   {}
-  Init_SensorGps_longitude_deg latitude_deg(::px4_msgs::msg::SensorGps::_latitude_deg_type arg)
+  Init_SensorGps_lon lat(::px4_msgs::msg::SensorGps::_lat_type arg)
   {
-    msg_.latitude_deg = std::move(arg);
-    return Init_SensorGps_longitude_deg(msg_);
+    msg_.lat = std::move(arg);
+    return Init_SensorGps_lon(msg_);
   }
 
 private:
@@ -542,10 +510,10 @@ public:
   explicit Init_SensorGps_device_id(::px4_msgs::msg::SensorGps & msg)
   : msg_(msg)
   {}
-  Init_SensorGps_latitude_deg device_id(::px4_msgs::msg::SensorGps::_device_id_type arg)
+  Init_SensorGps_lat device_id(::px4_msgs::msg::SensorGps::_device_id_type arg)
   {
     msg_.device_id = std::move(arg);
-    return Init_SensorGps_latitude_deg(msg_);
+    return Init_SensorGps_lat(msg_);
   }
 
 private:

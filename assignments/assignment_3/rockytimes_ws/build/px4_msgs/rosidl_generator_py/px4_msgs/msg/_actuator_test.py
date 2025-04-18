@@ -35,7 +35,7 @@ class Metaclass_ActuatorTest(type):
         'MAX_NUM_MOTORS': 12,
         'FUNCTION_SERVO1': 201,
         'MAX_NUM_SERVOS': 8,
-        'ORB_QUEUE_LENGTH': 16,
+        'ORB_QUEUE_LENGTH': 12,
     }
 
     @classmethod

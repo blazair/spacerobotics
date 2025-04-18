@@ -19,7 +19,6 @@ px4_msgs__msg__Ekf2Timestamps__init(px4_msgs__msg__Ekf2Timestamps * msg)
   }
   // timestamp
   // airspeed_timestamp_rel
-  // airspeed_validated_timestamp_rel
   // distance_sensor_timestamp_rel
   // optical_flow_timestamp_rel
   // vehicle_air_data_timestamp_rel
@@ -36,7 +35,6 @@ px4_msgs__msg__Ekf2Timestamps__fini(px4_msgs__msg__Ekf2Timestamps * msg)
   }
   // timestamp
   // airspeed_timestamp_rel
-  // airspeed_validated_timestamp_rel
   // distance_sensor_timestamp_rel
   // optical_flow_timestamp_rel
   // vehicle_air_data_timestamp_rel
@@ -56,10 +54,6 @@ px4_msgs__msg__Ekf2Timestamps__are_equal(const px4_msgs__msg__Ekf2Timestamps * l
   }
   // airspeed_timestamp_rel
   if (lhs->airspeed_timestamp_rel != rhs->airspeed_timestamp_rel) {
-    return false;
-  }
-  // airspeed_validated_timestamp_rel
-  if (lhs->airspeed_validated_timestamp_rel != rhs->airspeed_validated_timestamp_rel) {
     return false;
   }
   // distance_sensor_timestamp_rel
@@ -97,8 +91,6 @@ px4_msgs__msg__Ekf2Timestamps__copy(
   output->timestamp = input->timestamp;
   // airspeed_timestamp_rel
   output->airspeed_timestamp_rel = input->airspeed_timestamp_rel;
-  // airspeed_validated_timestamp_rel
-  output->airspeed_validated_timestamp_rel = input->airspeed_validated_timestamp_rel;
   // distance_sensor_timestamp_rel
   output->distance_sensor_timestamp_rel = input->distance_sensor_timestamp_rel;
   // optical_flow_timestamp_rel

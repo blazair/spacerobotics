@@ -78,14 +78,14 @@ typedef struct px4_msgs__msg__GeofenceResult
 {
   /// time since system start (microseconds)
   uint64_t timestamp;
-  /// true the check for max distance from Home is triggered
-  bool geofence_max_dist_triggered;
-  /// true the check for max altitude above Home is triggered
-  bool geofence_max_alt_triggered;
-  /// true the check for custom inclusion/exclusion geofence(s) is triggered
-  bool geofence_custom_fence_triggered;
-  /// action to take when the geofence is breached
-  uint8_t geofence_action;
+  /// one of geofence_violation_reason_t::*
+  uint8_t geofence_violation_reason;
+  /// true if the primary geofence is breached
+  bool primary_geofence_breached;
+  /// action to take when the primary geofence is breached
+  uint8_t primary_geofence_action;
+  /// true if the geofence requires a valid home position
+  bool home_required;
 } px4_msgs__msg__GeofenceResult;
 
 // Struct for a sequence of px4_msgs__msg__GeofenceResult.

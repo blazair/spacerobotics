@@ -53,7 +53,6 @@ struct HomePosition_
       this->valid_hpos = false;
       this->valid_lpos = false;
       this->manual_home = false;
-      this->update_count = 0ul;
     }
   }
 
@@ -75,7 +74,6 @@ struct HomePosition_
       this->valid_hpos = false;
       this->valid_lpos = false;
       this->manual_home = false;
-      this->update_count = 0ul;
     }
   }
 
@@ -116,9 +114,6 @@ struct HomePosition_
   using _manual_home_type =
     bool;
   _manual_home_type manual_home;
-  using _update_count_type =
-    uint32_t;
-  _update_count_type update_count;
 
   // setters for named parameter idiom
   Type & set__timestamp(
@@ -193,16 +188,8 @@ struct HomePosition_
     this->manual_home = _arg;
     return *this;
   }
-  Type & set__update_count(
-    const uint32_t & _arg)
-  {
-    this->update_count = _arg;
-    return *this;
-  }
 
   // constant declarations
-  static constexpr uint32_t MESSAGE_VERSION =
-    0u;
 
   // pointer types
   using RawPtr =
@@ -280,9 +267,6 @@ struct HomePosition_
     if (this->manual_home != other.manual_home) {
       return false;
     }
-    if (this->update_count != other.update_count) {
-      return false;
-    }
     return true;
   }
   bool operator!=(const HomePosition_ & other) const
@@ -296,11 +280,6 @@ using HomePosition =
   px4_msgs::msg::HomePosition_<std::allocator<void>>;
 
 // constant definitions
-#if __cplusplus < 201703L
-// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
-template<typename ContainerAllocator>
-constexpr uint32_t HomePosition_<ContainerAllocator>::MESSAGE_VERSION;
-#endif  // __cplusplus < 201703L
 
 }  // namespace msg
 

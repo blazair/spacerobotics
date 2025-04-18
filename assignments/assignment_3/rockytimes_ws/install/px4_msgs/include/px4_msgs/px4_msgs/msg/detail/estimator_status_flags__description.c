@@ -11,10 +11,10 @@ px4_msgs__msg__EstimatorStatusFlags__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0xb5, 0x6e, 0xae, 0xe5, 0xfd, 0xb2, 0x1a, 0xa6,
-      0xa6, 0x82, 0x48, 0xa8, 0x9e, 0x0a, 0x41, 0x65,
-      0x72, 0x7d, 0x2c, 0x94, 0xb8, 0xf6, 0x1a, 0x71,
-      0x8f, 0x04, 0x72, 0x46, 0x06, 0xa1, 0x4e, 0x58,
+      0xe3, 0x7f, 0xd2, 0x45, 0x77, 0x32, 0xe9, 0x3c,
+      0x8a, 0xa6, 0xe8, 0x91, 0x91, 0x18, 0xcb, 0xa6,
+      0x0b, 0xa4, 0xca, 0xed, 0x5b, 0x5d, 0x31, 0x81,
+      0x57, 0xa5, 0x2b, 0x08, 0xe8, 0x41, 0x95, 0xaf,
     }};
   return &hash;
 }
@@ -36,7 +36,7 @@ static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__timestamp_sample[] 
 static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__control_status_changes[] = "control_status_changes";
 static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_tilt_align[] = "cs_tilt_align";
 static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_yaw_align[] = "cs_yaw_align";
-static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_gnss_pos[] = "cs_gnss_pos";
+static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_gps[] = "cs_gps";
 static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_opt_flow[] = "cs_opt_flow";
 static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_mag_hdg[] = "cs_mag_hdg";
 static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_mag_3d[] = "cs_mag_3d";
@@ -56,12 +56,12 @@ static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_mag_fault[] = "c
 static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_fuse_aspd[] = "cs_fuse_aspd";
 static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_gnd_effect[] = "cs_gnd_effect";
 static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_rng_stuck[] = "cs_rng_stuck";
-static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_gnss_yaw[] = "cs_gnss_yaw";
+static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_gps_yaw[] = "cs_gps_yaw";
 static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_mag_aligned_in_flight[] = "cs_mag_aligned_in_flight";
 static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_ev_vel[] = "cs_ev_vel";
 static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_synthetic_mag_z[] = "cs_synthetic_mag_z";
 static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_vehicle_at_rest[] = "cs_vehicle_at_rest";
-static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_gnss_yaw_fault[] = "cs_gnss_yaw_fault";
+static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_gps_yaw_fault[] = "cs_gps_yaw_fault";
 static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_rng_fault[] = "cs_rng_fault";
 static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_inertial_dead_reckoning[] = "cs_inertial_dead_reckoning";
 static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_wind_dead_reckoning[] = "cs_wind_dead_reckoning";
@@ -69,16 +69,6 @@ static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_rng_kin_consiste
 static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_fake_pos[] = "cs_fake_pos";
 static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_fake_hgt[] = "cs_fake_hgt";
 static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_gravity_vector[] = "cs_gravity_vector";
-static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_mag[] = "cs_mag";
-static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_ev_yaw_fault[] = "cs_ev_yaw_fault";
-static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_mag_heading_consistent[] = "cs_mag_heading_consistent";
-static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_aux_gpos[] = "cs_aux_gpos";
-static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_rng_terrain[] = "cs_rng_terrain";
-static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_opt_flow_terrain[] = "cs_opt_flow_terrain";
-static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_valid_fake_pos[] = "cs_valid_fake_pos";
-static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_constant_pos[] = "cs_constant_pos";
-static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_baro_fault[] = "cs_baro_fault";
-static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_gnss_vel[] = "cs_gnss_vel";
 static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__fault_status_changes[] = "fault_status_changes";
 static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__fs_bad_mag_x[] = "fs_bad_mag_x";
 static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__fs_bad_mag_y[] = "fs_bad_mag_y";
@@ -89,6 +79,13 @@ static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__fs_bad_airspeed[] =
 static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__fs_bad_sideslip[] = "fs_bad_sideslip";
 static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__fs_bad_optflow_x[] = "fs_bad_optflow_x";
 static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__fs_bad_optflow_y[] = "fs_bad_optflow_y";
+static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__fs_bad_vel_n[] = "fs_bad_vel_n";
+static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__fs_bad_vel_e[] = "fs_bad_vel_e";
+static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__fs_bad_vel_d[] = "fs_bad_vel_d";
+static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__fs_bad_pos_n[] = "fs_bad_pos_n";
+static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__fs_bad_pos_e[] = "fs_bad_pos_e";
+static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__fs_bad_pos_d[] = "fs_bad_pos_d";
+static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__fs_bad_acc_bias[] = "fs_bad_acc_bias";
 static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__fs_bad_acc_vertical[] = "fs_bad_acc_vertical";
 static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__fs_bad_acc_clipping[] = "fs_bad_acc_clipping";
 static char px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__innovation_fault_status_changes[] = "innovation_fault_status_changes";
@@ -155,7 +152,7 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__EstimatorStatusF
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_gnss_pos, 11, 11},
+    {px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_gps, 6, 6},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
       0,
@@ -355,7 +352,7 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__EstimatorStatusF
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_gnss_yaw, 11, 11},
+    {px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_gps_yaw, 10, 10},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
       0,
@@ -405,7 +402,7 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__EstimatorStatusF
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_gnss_yaw_fault, 17, 17},
+    {px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_gps_yaw_fault, 16, 16},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
       0,
@@ -476,106 +473,6 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__EstimatorStatusF
   },
   {
     {px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_gravity_vector, 17, 17},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_mag, 6, 6},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_ev_yaw_fault, 15, 15},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_mag_heading_consistent, 25, 25},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_aux_gpos, 11, 11},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_rng_terrain, 14, 14},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_opt_flow_terrain, 19, 19},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_valid_fake_pos, 17, 17},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_constant_pos, 15, 15},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_baro_fault, 13, 13},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__cs_gnss_vel, 11, 11},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
       0,
@@ -676,6 +573,76 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__EstimatorStatusF
   },
   {
     {px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__fs_bad_optflow_y, 16, 16},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__fs_bad_vel_n, 12, 12},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__fs_bad_vel_e, 12, 12},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__fs_bad_vel_d, 12, 12},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__fs_bad_pos_n, 12, 12},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__fs_bad_pos_e, 12, 12},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__fs_bad_pos_d, 12, 12},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {px4_msgs__msg__EstimatorStatusFlags__FIELD_NAME__fs_bad_acc_bias, 15, 15},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
       0,
@@ -825,7 +792,7 @@ px4_msgs__msg__EstimatorStatusFlags__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {px4_msgs__msg__EstimatorStatusFlags__TYPE_NAME, 33, 33},
-      {px4_msgs__msg__EstimatorStatusFlags__FIELDS, 71, 71},
+      {px4_msgs__msg__EstimatorStatusFlags__FIELDS, 68, 68},
     },
     {NULL, 0, 0},
   };
@@ -844,16 +811,16 @@ static char toplevel_type_raw_source[] =
   "uint32 control_status_changes # number of filter control status (cs) changes\n"
   "bool cs_tilt_align            #  0 - true if the filter tilt alignment is complete\n"
   "bool cs_yaw_align             #  1 - true if the filter yaw alignment is complete\n"
-  "bool cs_gnss_pos              #  2 - true if GNSS position measurement fusion is intended\n"
+  "bool cs_gps                   #  2 - true if GPS measurement fusion is intended\n"
   "bool cs_opt_flow              #  3 - true if optical flow measurements fusion is intended\n"
   "bool cs_mag_hdg               #  4 - true if a simple magnetic yaw heading fusion is intended\n"
   "bool cs_mag_3d                #  5 - true if 3-axis magnetometer measurement fusion is intended\n"
   "bool cs_mag_dec               #  6 - true if synthetic magnetic declination measurements fusion is intended\n"
   "bool cs_in_air                #  7 - true when the vehicle is airborne\n"
   "bool cs_wind                  #  8 - true when wind velocity is being estimated\n"
-  "bool cs_baro_hgt              #  9 - true when baro data is being fused\n"
-  "bool cs_rng_hgt               # 10 - true when range finder data is being fused for height aiding\n"
-  "bool cs_gps_hgt               # 11 - true when GPS altitude is being fused\n"
+  "bool cs_baro_hgt              #  9 - true when baro height is being fused as a primary height reference\n"
+  "bool cs_rng_hgt               # 10 - true when range finder height is being fused as a primary height reference\n"
+  "bool cs_gps_hgt               # 11 - true when GPS height is being fused as a primary height reference\n"
   "bool cs_ev_pos                # 12 - true when local position data fusion from external vision is intended\n"
   "bool cs_ev_yaw                # 13 - true when yaw data from external vision measurements fusion is intended\n"
   "bool cs_ev_hgt                # 14 - true when height data from external vision measurements is being fused\n"
@@ -864,12 +831,12 @@ static char toplevel_type_raw_source[] =
   "bool cs_fuse_aspd             # 19 - true when airspeed measurements are being fused\n"
   "bool cs_gnd_effect            # 20 - true when protection from ground effect induced static pressure rise is active\n"
   "bool cs_rng_stuck             # 21 - true when rng data wasn't ready for more than 10s and new rng values haven't changed enough\n"
-  "bool cs_gnss_yaw              # 22 - true when yaw (not ground course) data fusion from a GPS receiver is intended\n"
+  "bool cs_gps_yaw               # 22 - true when yaw (not ground course) data fusion from a GPS receiver is intended\n"
   "bool cs_mag_aligned_in_flight # 23 - true when the in-flight mag field alignment has been completed\n"
   "bool cs_ev_vel                # 24 - true when local frame velocity data fusion from external vision measurements is intended\n"
   "bool cs_synthetic_mag_z       # 25 - true when we are using a synthesized measurement for the magnetometer Z component\n"
   "bool cs_vehicle_at_rest       # 26 - true when the vehicle is at rest\n"
-  "bool cs_gnss_yaw_fault        # 27 - true when the GNSS heading has been declared faulty and is no longer being used\n"
+  "bool cs_gps_yaw_fault         # 27 - true when the GNSS heading has been declared faulty and is no longer being used\n"
   "bool cs_rng_fault             # 28 - true when the range finder has been declared faulty and is no longer being used\n"
   "bool cs_inertial_dead_reckoning # 29 - true if we are no longer fusing measurements that constrain horizontal velocity drift\n"
   "bool cs_wind_dead_reckoning     # 30 - true if we are navigationg reliant on wind relative measurements\n"
@@ -877,16 +844,6 @@ static char toplevel_type_raw_source[] =
   "bool cs_fake_pos                # 32 - true when fake position measurements are being fused\n"
   "bool cs_fake_hgt                # 33 - true when fake height measurements are being fused\n"
   "bool cs_gravity_vector          # 34 - true when gravity vector measurements are being fused\n"
-  "bool cs_mag                     # 35 - true if 3-axis magnetometer measurement fusion (mag states only) is intended\n"
-  "bool cs_ev_yaw_fault            # 36 - true when the EV heading has been declared faulty and is no longer being used\n"
-  "bool cs_mag_heading_consistent  # 37 - true when the heading obtained from mag data is declared consistent with the filter\n"
-  "bool cs_aux_gpos                # 38 - true if auxiliary global position measurement fusion is intended\n"
-  "bool cs_rng_terrain             # 39 - true if we are fusing range finder data for terrain\n"
-  "bool cs_opt_flow_terrain        # 40 - true if we are fusing flow data for terrain\n"
-  "bool cs_valid_fake_pos          # 41 - true if a valid constant position is being fused\n"
-  "bool cs_constant_pos            # 42 - true if the vehicle is at a constant position\n"
-  "bool cs_baro_fault\\t        # 43 - true when the current baro has been declared faulty and is no longer being used\n"
-  "bool cs_gnss_vel                # 44 - true if GNSS velocity measurement fusion is intended\n"
   "\n"
   "# fault status\n"
   "uint32 fault_status_changes   # number of filter fault status (fs) changes\n"
@@ -899,8 +856,15 @@ static char toplevel_type_raw_source[] =
   "bool fs_bad_sideslip          #  6 - true if fusion of the synthetic sideslip constraint has encountered a numerical error\n"
   "bool fs_bad_optflow_x         #  7 - true if fusion of the optical flow X axis has encountered a numerical error\n"
   "bool fs_bad_optflow_y         #  8 - true if fusion of the optical flow Y axis has encountered a numerical error\n"
-  "bool fs_bad_acc_vertical      # 10 - true if bad vertical accelerometer data has been detected\n"
-  "bool fs_bad_acc_clipping      # 11 - true if delta velocity data contains clipping (asymmetric railing)\n"
+  "bool fs_bad_vel_n             #  9 - true if fusion of the North velocity has encountered a numerical error\n"
+  "bool fs_bad_vel_e             # 10 - true if fusion of the East velocity has encountered a numerical error\n"
+  "bool fs_bad_vel_d             # 11 - true if fusion of the Down velocity has encountered a numerical error\n"
+  "bool fs_bad_pos_n             # 12 - true if fusion of the North position has encountered a numerical error\n"
+  "bool fs_bad_pos_e             # 13 - true if fusion of the East position has encountered a numerical error\n"
+  "bool fs_bad_pos_d             # 14 - true if fusion of the Down position has encountered a numerical error\n"
+  "bool fs_bad_acc_bias          # 15 - true if bad delta velocity bias estimates have been detected\n"
+  "bool fs_bad_acc_vertical      # 16 - true if bad vertical accelerometer data has been detected\n"
+  "bool fs_bad_acc_clipping      # 17 - true if delta velocity data contains clipping (asymmetric railing)\n"
   "\n"
   "\n"
   "# innovation test failures\n"
@@ -928,7 +892,7 @@ px4_msgs__msg__EstimatorStatusFlags__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__EstimatorStatusFlags__TYPE_NAME, 33, 33},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 7265, 7265},
+    {toplevel_type_raw_source, 7058, 7058},
   };
   return &source;
 }

@@ -45,26 +45,20 @@ struct VehicleOpticalFlowVel_
       this->timestamp_sample = 0ull;
       std::fill<typename std::array<float, 2>::iterator, float>(this->vel_body.begin(), this->vel_body.end(), 0.0f);
       std::fill<typename std::array<float, 2>::iterator, float>(this->vel_ne.begin(), this->vel_ne.end(), 0.0f);
-      std::fill<typename std::array<float, 2>::iterator, float>(this->vel_body_filtered.begin(), this->vel_body_filtered.end(), 0.0f);
-      std::fill<typename std::array<float, 2>::iterator, float>(this->vel_ne_filtered.begin(), this->vel_ne_filtered.end(), 0.0f);
-      std::fill<typename std::array<float, 2>::iterator, float>(this->flow_rate_uncompensated.begin(), this->flow_rate_uncompensated.end(), 0.0f);
-      std::fill<typename std::array<float, 2>::iterator, float>(this->flow_rate_compensated.begin(), this->flow_rate_compensated.end(), 0.0f);
+      std::fill<typename std::array<float, 2>::iterator, float>(this->flow_uncompensated_integral.begin(), this->flow_uncompensated_integral.end(), 0.0f);
+      std::fill<typename std::array<float, 2>::iterator, float>(this->flow_compensated_integral.begin(), this->flow_compensated_integral.end(), 0.0f);
       std::fill<typename std::array<float, 3>::iterator, float>(this->gyro_rate.begin(), this->gyro_rate.end(), 0.0f);
-      std::fill<typename std::array<float, 3>::iterator, float>(this->gyro_bias.begin(), this->gyro_bias.end(), 0.0f);
-      std::fill<typename std::array<float, 3>::iterator, float>(this->ref_gyro.begin(), this->ref_gyro.end(), 0.0f);
+      std::fill<typename std::array<float, 3>::iterator, float>(this->gyro_rate_integral.begin(), this->gyro_rate_integral.end(), 0.0f);
     }
   }
 
   explicit VehicleOpticalFlowVel_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   : vel_body(_alloc),
     vel_ne(_alloc),
-    vel_body_filtered(_alloc),
-    vel_ne_filtered(_alloc),
-    flow_rate_uncompensated(_alloc),
-    flow_rate_compensated(_alloc),
+    flow_uncompensated_integral(_alloc),
+    flow_compensated_integral(_alloc),
     gyro_rate(_alloc),
-    gyro_bias(_alloc),
-    ref_gyro(_alloc)
+    gyro_rate_integral(_alloc)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
@@ -73,13 +67,10 @@ struct VehicleOpticalFlowVel_
       this->timestamp_sample = 0ull;
       std::fill<typename std::array<float, 2>::iterator, float>(this->vel_body.begin(), this->vel_body.end(), 0.0f);
       std::fill<typename std::array<float, 2>::iterator, float>(this->vel_ne.begin(), this->vel_ne.end(), 0.0f);
-      std::fill<typename std::array<float, 2>::iterator, float>(this->vel_body_filtered.begin(), this->vel_body_filtered.end(), 0.0f);
-      std::fill<typename std::array<float, 2>::iterator, float>(this->vel_ne_filtered.begin(), this->vel_ne_filtered.end(), 0.0f);
-      std::fill<typename std::array<float, 2>::iterator, float>(this->flow_rate_uncompensated.begin(), this->flow_rate_uncompensated.end(), 0.0f);
-      std::fill<typename std::array<float, 2>::iterator, float>(this->flow_rate_compensated.begin(), this->flow_rate_compensated.end(), 0.0f);
+      std::fill<typename std::array<float, 2>::iterator, float>(this->flow_uncompensated_integral.begin(), this->flow_uncompensated_integral.end(), 0.0f);
+      std::fill<typename std::array<float, 2>::iterator, float>(this->flow_compensated_integral.begin(), this->flow_compensated_integral.end(), 0.0f);
       std::fill<typename std::array<float, 3>::iterator, float>(this->gyro_rate.begin(), this->gyro_rate.end(), 0.0f);
-      std::fill<typename std::array<float, 3>::iterator, float>(this->gyro_bias.begin(), this->gyro_bias.end(), 0.0f);
-      std::fill<typename std::array<float, 3>::iterator, float>(this->ref_gyro.begin(), this->ref_gyro.end(), 0.0f);
+      std::fill<typename std::array<float, 3>::iterator, float>(this->gyro_rate_integral.begin(), this->gyro_rate_integral.end(), 0.0f);
     }
   }
 
@@ -96,27 +87,18 @@ struct VehicleOpticalFlowVel_
   using _vel_ne_type =
     std::array<float, 2>;
   _vel_ne_type vel_ne;
-  using _vel_body_filtered_type =
+  using _flow_uncompensated_integral_type =
     std::array<float, 2>;
-  _vel_body_filtered_type vel_body_filtered;
-  using _vel_ne_filtered_type =
+  _flow_uncompensated_integral_type flow_uncompensated_integral;
+  using _flow_compensated_integral_type =
     std::array<float, 2>;
-  _vel_ne_filtered_type vel_ne_filtered;
-  using _flow_rate_uncompensated_type =
-    std::array<float, 2>;
-  _flow_rate_uncompensated_type flow_rate_uncompensated;
-  using _flow_rate_compensated_type =
-    std::array<float, 2>;
-  _flow_rate_compensated_type flow_rate_compensated;
+  _flow_compensated_integral_type flow_compensated_integral;
   using _gyro_rate_type =
     std::array<float, 3>;
   _gyro_rate_type gyro_rate;
-  using _gyro_bias_type =
+  using _gyro_rate_integral_type =
     std::array<float, 3>;
-  _gyro_bias_type gyro_bias;
-  using _ref_gyro_type =
-    std::array<float, 3>;
-  _ref_gyro_type ref_gyro;
+  _gyro_rate_integral_type gyro_rate_integral;
 
   // setters for named parameter idiom
   Type & set__timestamp(
@@ -143,28 +125,16 @@ struct VehicleOpticalFlowVel_
     this->vel_ne = _arg;
     return *this;
   }
-  Type & set__vel_body_filtered(
+  Type & set__flow_uncompensated_integral(
     const std::array<float, 2> & _arg)
   {
-    this->vel_body_filtered = _arg;
+    this->flow_uncompensated_integral = _arg;
     return *this;
   }
-  Type & set__vel_ne_filtered(
+  Type & set__flow_compensated_integral(
     const std::array<float, 2> & _arg)
   {
-    this->vel_ne_filtered = _arg;
-    return *this;
-  }
-  Type & set__flow_rate_uncompensated(
-    const std::array<float, 2> & _arg)
-  {
-    this->flow_rate_uncompensated = _arg;
-    return *this;
-  }
-  Type & set__flow_rate_compensated(
-    const std::array<float, 2> & _arg)
-  {
-    this->flow_rate_compensated = _arg;
+    this->flow_compensated_integral = _arg;
     return *this;
   }
   Type & set__gyro_rate(
@@ -173,16 +143,10 @@ struct VehicleOpticalFlowVel_
     this->gyro_rate = _arg;
     return *this;
   }
-  Type & set__gyro_bias(
+  Type & set__gyro_rate_integral(
     const std::array<float, 3> & _arg)
   {
-    this->gyro_bias = _arg;
-    return *this;
-  }
-  Type & set__ref_gyro(
-    const std::array<float, 3> & _arg)
-  {
-    this->ref_gyro = _arg;
+    this->gyro_rate_integral = _arg;
     return *this;
   }
 
@@ -240,25 +204,16 @@ struct VehicleOpticalFlowVel_
     if (this->vel_ne != other.vel_ne) {
       return false;
     }
-    if (this->vel_body_filtered != other.vel_body_filtered) {
+    if (this->flow_uncompensated_integral != other.flow_uncompensated_integral) {
       return false;
     }
-    if (this->vel_ne_filtered != other.vel_ne_filtered) {
-      return false;
-    }
-    if (this->flow_rate_uncompensated != other.flow_rate_uncompensated) {
-      return false;
-    }
-    if (this->flow_rate_compensated != other.flow_rate_compensated) {
+    if (this->flow_compensated_integral != other.flow_compensated_integral) {
       return false;
     }
     if (this->gyro_rate != other.gyro_rate) {
       return false;
     }
-    if (this->gyro_bias != other.gyro_bias) {
-      return false;
-    }
-    if (this->ref_gyro != other.ref_gyro) {
+    if (this->gyro_rate_integral != other.gyro_rate_integral) {
       return false;
     }
     return true;

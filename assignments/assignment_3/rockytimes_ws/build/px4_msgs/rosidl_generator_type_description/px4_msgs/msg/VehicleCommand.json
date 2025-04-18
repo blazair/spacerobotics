@@ -126,7 +126,7 @@
         {
           "name": "source_component",
           "type": {
-            "type_id": 5,
+            "type_id": 3,
             "capacity": 0,
             "string_capacity": 0,
             "nested_type_name": ""
@@ -160,7 +160,7 @@
   "type_hashes": [
     {
       "type_name": "px4_msgs/msg/VehicleCommand",
-      "hash_string": "RIHS01_1f0ab537807e2e20e04826633ea2c52e5431bea8eb0187152ff23bd07f1dd30b"
+      "hash_string": "RIHS01_711e7baea874c9aea7a577eeed55c8cede0197101ca24e94a00a7bbc5e7e7815"
     }
   ]
 }

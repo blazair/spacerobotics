@@ -58,11 +58,6 @@ bool cdr_serialize_px4_msgs__msg__Ekf2Timestamps(
     cdr << ros_message->airspeed_timestamp_rel;
   }
 
-  // Field name: airspeed_validated_timestamp_rel
-  {
-    cdr << ros_message->airspeed_validated_timestamp_rel;
-  }
-
   // Field name: distance_sensor_timestamp_rel
   {
     cdr << ros_message->distance_sensor_timestamp_rel;
@@ -104,11 +99,6 @@ bool cdr_deserialize_px4_msgs__msg__Ekf2Timestamps(
   // Field name: airspeed_timestamp_rel
   {
     cdr >> ros_message->airspeed_timestamp_rel;
-  }
-
-  // Field name: airspeed_validated_timestamp_rel
-  {
-    cdr >> ros_message->airspeed_validated_timestamp_rel;
   }
 
   // Field name: distance_sensor_timestamp_rel
@@ -164,13 +154,6 @@ size_t get_serialized_size_px4_msgs__msg__Ekf2Timestamps(
   // Field name: airspeed_timestamp_rel
   {
     size_t item_size = sizeof(ros_message->airspeed_timestamp_rel);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: airspeed_validated_timestamp_rel
-  {
-    size_t item_size = sizeof(ros_message->airspeed_validated_timestamp_rel);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -241,14 +224,6 @@ size_t max_serialized_size_px4_msgs__msg__Ekf2Timestamps(
   }
 
   // Field name: airspeed_timestamp_rel
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint16_t);
-    current_alignment += array_size * sizeof(uint16_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
-  }
-
-  // Field name: airspeed_validated_timestamp_rel
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint16_t);
@@ -327,11 +302,6 @@ bool cdr_serialize_key_px4_msgs__msg__Ekf2Timestamps(
     cdr << ros_message->airspeed_timestamp_rel;
   }
 
-  // Field name: airspeed_validated_timestamp_rel
-  {
-    cdr << ros_message->airspeed_validated_timestamp_rel;
-  }
-
   // Field name: distance_sensor_timestamp_rel
   {
     cdr << ros_message->distance_sensor_timestamp_rel;
@@ -385,13 +355,6 @@ size_t get_serialized_size_key_px4_msgs__msg__Ekf2Timestamps(
   // Field name: airspeed_timestamp_rel
   {
     size_t item_size = sizeof(ros_message->airspeed_timestamp_rel);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: airspeed_validated_timestamp_rel
-  {
-    size_t item_size = sizeof(ros_message->airspeed_validated_timestamp_rel);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -460,14 +423,6 @@ size_t max_serialized_size_key_px4_msgs__msg__Ekf2Timestamps(
   }
 
   // Field name: airspeed_timestamp_rel
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint16_t);
-    current_alignment += array_size * sizeof(uint16_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
-  }
-
-  // Field name: airspeed_validated_timestamp_rel
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint16_t);

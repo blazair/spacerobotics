@@ -31,7 +31,7 @@ void px4_msgs__msg__MissionResult__rosidl_typesupport_introspection_c__MissionRe
   px4_msgs__msg__MissionResult__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__MissionResult__rosidl_typesupport_introspection_c__MissionResult_message_member_array[15] = {
+static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__MissionResult__rosidl_typesupport_introspection_c__MissionResult_message_member_array[13] = {
   {
     "timestamp",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_UINT64,  // type
@@ -51,7 +51,7 @@ static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__MissionR
     NULL  // resize(index) function pointer
   },
   {
-    "mission_id",  // name
+    "instance_count",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_UINT32,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
@@ -59,43 +59,7 @@ static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__MissionR
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(px4_msgs__msg__MissionResult, mission_id),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
-  },
-  {
-    "geofence_id",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_UINT32,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(px4_msgs__msg__MissionResult, geofence_id),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
-  },
-  {
-    "home_position_counter",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_UINT32,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(px4_msgs__msg__MissionResult, home_position_counter),  // bytes offset in struct
+    offsetof(px4_msgs__msg__MissionResult, instance_count),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -307,7 +271,7 @@ static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__MissionR
 static const rosidl_typesupport_introspection_c__MessageMembers px4_msgs__msg__MissionResult__rosidl_typesupport_introspection_c__MissionResult_message_members = {
   "px4_msgs__msg",  // message namespace
   "MissionResult",  // message name
-  15,  // number of fields
+  13,  // number of fields
   sizeof(px4_msgs__msg__MissionResult),
   false,  // has_any_key_member_
   px4_msgs__msg__MissionResult__rosidl_typesupport_introspection_c__MissionResult_message_member_array,  // message members

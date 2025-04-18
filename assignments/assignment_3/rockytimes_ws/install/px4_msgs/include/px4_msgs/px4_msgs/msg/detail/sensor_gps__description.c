@@ -11,10 +11,10 @@ px4_msgs__msg__SensorGps__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0xee, 0x66, 0xc8, 0x64, 0x74, 0xc0, 0xb3, 0x1c,
-      0x6f, 0xc7, 0x74, 0x53, 0xa1, 0x39, 0xb2, 0x17,
-      0x81, 0x8a, 0x06, 0x7e, 0x29, 0xd6, 0x83, 0x7d,
-      0xf7, 0x07, 0x5e, 0x18, 0xfc, 0xe8, 0x27, 0xd7,
+      0x87, 0xdf, 0x2d, 0x73, 0xca, 0x9f, 0xbb, 0xd0,
+      0x60, 0x7b, 0xdc, 0x31, 0x33, 0xc8, 0x44, 0x33,
+      0xb0, 0x9c, 0x58, 0xc6, 0x35, 0x17, 0x8d, 0xcd,
+      0x12, 0xc9, 0xb9, 0xfb, 0xff, 0x0d, 0xdc, 0xba,
     }};
   return &hash;
 }
@@ -34,10 +34,10 @@ static char px4_msgs__msg__SensorGps__TYPE_NAME[] = "px4_msgs/msg/SensorGps";
 static char px4_msgs__msg__SensorGps__FIELD_NAME__timestamp[] = "timestamp";
 static char px4_msgs__msg__SensorGps__FIELD_NAME__timestamp_sample[] = "timestamp_sample";
 static char px4_msgs__msg__SensorGps__FIELD_NAME__device_id[] = "device_id";
-static char px4_msgs__msg__SensorGps__FIELD_NAME__latitude_deg[] = "latitude_deg";
-static char px4_msgs__msg__SensorGps__FIELD_NAME__longitude_deg[] = "longitude_deg";
-static char px4_msgs__msg__SensorGps__FIELD_NAME__altitude_msl_m[] = "altitude_msl_m";
-static char px4_msgs__msg__SensorGps__FIELD_NAME__altitude_ellipsoid_m[] = "altitude_ellipsoid_m";
+static char px4_msgs__msg__SensorGps__FIELD_NAME__lat[] = "lat";
+static char px4_msgs__msg__SensorGps__FIELD_NAME__lon[] = "lon";
+static char px4_msgs__msg__SensorGps__FIELD_NAME__alt[] = "alt";
+static char px4_msgs__msg__SensorGps__FIELD_NAME__alt_ellipsoid[] = "alt_ellipsoid";
 static char px4_msgs__msg__SensorGps__FIELD_NAME__s_variance_m_s[] = "s_variance_m_s";
 static char px4_msgs__msg__SensorGps__FIELD_NAME__c_variance_rad[] = "c_variance_rad";
 static char px4_msgs__msg__SensorGps__FIELD_NAME__fix_type[] = "fix_type";
@@ -64,8 +64,6 @@ static char px4_msgs__msg__SensorGps__FIELD_NAME__heading_offset[] = "heading_of
 static char px4_msgs__msg__SensorGps__FIELD_NAME__heading_accuracy[] = "heading_accuracy";
 static char px4_msgs__msg__SensorGps__FIELD_NAME__rtcm_injection_rate[] = "rtcm_injection_rate";
 static char px4_msgs__msg__SensorGps__FIELD_NAME__selected_rtcm_instance[] = "selected_rtcm_instance";
-static char px4_msgs__msg__SensorGps__FIELD_NAME__rtcm_crc_failed[] = "rtcm_crc_failed";
-static char px4_msgs__msg__SensorGps__FIELD_NAME__rtcm_msg_used[] = "rtcm_msg_used";
 
 static rosidl_runtime_c__type_description__Field px4_msgs__msg__SensorGps__FIELDS[] = {
   {
@@ -99,9 +97,9 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__SensorGps__FIELD
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__SensorGps__FIELD_NAME__latitude_deg, 12, 12},
+    {px4_msgs__msg__SensorGps__FIELD_NAME__lat, 3, 3},
     {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_DOUBLE,
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_INT32,
       0,
       0,
       {NULL, 0, 0},
@@ -109,9 +107,9 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__SensorGps__FIELD
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__SensorGps__FIELD_NAME__longitude_deg, 13, 13},
+    {px4_msgs__msg__SensorGps__FIELD_NAME__lon, 3, 3},
     {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_DOUBLE,
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_INT32,
       0,
       0,
       {NULL, 0, 0},
@@ -119,9 +117,9 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__SensorGps__FIELD
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__SensorGps__FIELD_NAME__altitude_msl_m, 14, 14},
+    {px4_msgs__msg__SensorGps__FIELD_NAME__alt, 3, 3},
     {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_DOUBLE,
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_INT32,
       0,
       0,
       {NULL, 0, 0},
@@ -129,9 +127,9 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__SensorGps__FIELD
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__SensorGps__FIELD_NAME__altitude_ellipsoid_m, 20, 20},
+    {px4_msgs__msg__SensorGps__FIELD_NAME__alt_ellipsoid, 13, 13},
     {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_DOUBLE,
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_INT32,
       0,
       0,
       {NULL, 0, 0},
@@ -398,26 +396,6 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__SensorGps__FIELD
     },
     {NULL, 0, 0},
   },
-  {
-    {px4_msgs__msg__SensorGps__FIELD_NAME__rtcm_crc_failed, 15, 15},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__SensorGps__FIELD_NAME__rtcm_msg_used, 13, 13},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT8,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
 };
 
 const rosidl_runtime_c__type_description__TypeDescription *
@@ -429,7 +407,7 @@ px4_msgs__msg__SensorGps__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {px4_msgs__msg__SensorGps__TYPE_NAME, 22, 22},
-      {px4_msgs__msg__SensorGps__FIELDS, 35, 35},
+      {px4_msgs__msg__SensorGps__FIELDS, 33, 33},
     },
     {NULL, 0, 0},
   };
@@ -447,21 +425,14 @@ static char toplevel_type_raw_source[] =
   "\n"
   "uint32 device_id                # unique device ID for the sensor that does not change between power cycles\n"
   "\n"
-  "float64 latitude_deg\\t\\t# Latitude in degrees, allows centimeter level RTK precision\n"
-  "float64 longitude_deg\\t\\t# Longitude in degrees, allows centimeter level RTK precision\n"
-  "float64 altitude_msl_m\\t\\t# Altitude above MSL, meters\n"
-  "float64 altitude_ellipsoid_m\\t# Altitude above Ellipsoid, meters\n"
+  "int32 lat\\t\\t\\t# Latitude in 1E-7 degrees\n"
+  "int32 lon\\t\\t\\t# Longitude in 1E-7 degrees\n"
+  "int32 alt\\t\\t\\t# Altitude in 1E-3 meters above MSL, (millimetres)\n"
+  "int32 alt_ellipsoid \\t\\t# Altitude in 1E-3 meters bove Ellipsoid, (millimetres)\n"
   "\n"
   "float32 s_variance_m_s\\t\\t# GPS speed accuracy estimate, (metres/sec)\n"
   "float32 c_variance_rad\\t\\t# GPS course accuracy estimate, (radians)\n"
-  "uint8 FIX_TYPE_NONE                   = 1       # Value 0 is also valid to represent no fix.\n"
-  "uint8 FIX_TYPE_2D                     = 2\n"
-  "uint8 FIX_TYPE_3D                     = 3\n"
-  "uint8 FIX_TYPE_RTCM_CODE_DIFFERENTIAL = 4\n"
-  "uint8 FIX_TYPE_RTK_FLOAT              = 5\n"
-  "uint8 FIX_TYPE_RTK_FIXED              = 6\n"
-  "uint8 FIX_TYPE_EXTRAPOLATED           = 8\n"
-  "uint8 fix_type                  # Some applications will not use the value of this field unless it is at least two, so always correctly fill in the fix.\n"
+  "uint8 fix_type # 0-1: no fix, 2: 2D fix, 3: 3D fix, 4: RTCM code differential, 5: Real-Time Kinematic, float, 6: Real-Time Kinematic, fixed, 8: Extrapolated. Some applications will not use the value of this field unless it is at least two, so always correctly fill in the fix.\n"
   "\n"
   "float32 eph\\t\\t\\t# GPS horizontal position accuracy (metres)\n"
   "float32 epv\\t\\t\\t# GPS vertical position accuracy (metres)\n"
@@ -504,13 +475,6 @@ static char toplevel_type_raw_source[] =
   "float32 rtcm_injection_rate\\t# RTCM message injection rate Hz\n"
   "uint8 selected_rtcm_instance\\t# uorb instance that is being used for RTCM corrections\n"
   "\n"
-  "bool rtcm_crc_failed\\t\\t# RTCM message CRC failure detected\n"
-  "\n"
-  "uint8 RTCM_MSG_USED_UNKNOWN = 0\n"
-  "uint8 RTCM_MSG_USED_NOT_USED = 1\n"
-  "uint8 RTCM_MSG_USED_USED = 2\n"
-  "uint8 rtcm_msg_used\\t\\t# Indicates if the RTCM message was used successfully by the receiver\n"
-  "\n"
   "# TOPICS sensor_gps vehicle_gps_position";
 
 static char msg_encoding[] = "msg";
@@ -525,7 +489,7 @@ px4_msgs__msg__SensorGps__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__SensorGps__TYPE_NAME, 22, 22},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 3664, 3664},
+    {toplevel_type_raw_source, 3133, 3133},
   };
   return &source;
 }

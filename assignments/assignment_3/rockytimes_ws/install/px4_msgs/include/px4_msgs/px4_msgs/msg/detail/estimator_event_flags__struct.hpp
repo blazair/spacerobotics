@@ -61,6 +61,19 @@ struct EstimatorEventFlags_
       this->reset_hgt_to_gps = false;
       this->reset_hgt_to_rng = false;
       this->reset_hgt_to_ev = false;
+      this->warning_event_changes = 0ul;
+      this->gps_quality_poor = false;
+      this->gps_fusion_timout = false;
+      this->gps_data_stopped = false;
+      this->gps_data_stopped_using_alternate = false;
+      this->height_sensor_timeout = false;
+      this->stopping_navigation = false;
+      this->invalid_accel_bias_cov_reset = false;
+      this->bad_yaw_using_gps_course = false;
+      this->stopping_mag_use = false;
+      this->vision_data_stopped = false;
+      this->emergency_yaw_reset_mag_stopped = false;
+      this->emergency_yaw_reset_gps_yaw_stopped = false;
     }
   }
 
@@ -90,6 +103,19 @@ struct EstimatorEventFlags_
       this->reset_hgt_to_gps = false;
       this->reset_hgt_to_rng = false;
       this->reset_hgt_to_ev = false;
+      this->warning_event_changes = 0ul;
+      this->gps_quality_poor = false;
+      this->gps_fusion_timout = false;
+      this->gps_data_stopped = false;
+      this->gps_data_stopped_using_alternate = false;
+      this->height_sensor_timeout = false;
+      this->stopping_navigation = false;
+      this->invalid_accel_bias_cov_reset = false;
+      this->bad_yaw_using_gps_course = false;
+      this->stopping_mag_use = false;
+      this->vision_data_stopped = false;
+      this->emergency_yaw_reset_mag_stopped = false;
+      this->emergency_yaw_reset_gps_yaw_stopped = false;
     }
   }
 
@@ -154,6 +180,45 @@ struct EstimatorEventFlags_
   using _reset_hgt_to_ev_type =
     bool;
   _reset_hgt_to_ev_type reset_hgt_to_ev;
+  using _warning_event_changes_type =
+    uint32_t;
+  _warning_event_changes_type warning_event_changes;
+  using _gps_quality_poor_type =
+    bool;
+  _gps_quality_poor_type gps_quality_poor;
+  using _gps_fusion_timout_type =
+    bool;
+  _gps_fusion_timout_type gps_fusion_timout;
+  using _gps_data_stopped_type =
+    bool;
+  _gps_data_stopped_type gps_data_stopped;
+  using _gps_data_stopped_using_alternate_type =
+    bool;
+  _gps_data_stopped_using_alternate_type gps_data_stopped_using_alternate;
+  using _height_sensor_timeout_type =
+    bool;
+  _height_sensor_timeout_type height_sensor_timeout;
+  using _stopping_navigation_type =
+    bool;
+  _stopping_navigation_type stopping_navigation;
+  using _invalid_accel_bias_cov_reset_type =
+    bool;
+  _invalid_accel_bias_cov_reset_type invalid_accel_bias_cov_reset;
+  using _bad_yaw_using_gps_course_type =
+    bool;
+  _bad_yaw_using_gps_course_type bad_yaw_using_gps_course;
+  using _stopping_mag_use_type =
+    bool;
+  _stopping_mag_use_type stopping_mag_use;
+  using _vision_data_stopped_type =
+    bool;
+  _vision_data_stopped_type vision_data_stopped;
+  using _emergency_yaw_reset_mag_stopped_type =
+    bool;
+  _emergency_yaw_reset_mag_stopped_type emergency_yaw_reset_mag_stopped;
+  using _emergency_yaw_reset_gps_yaw_stopped_type =
+    bool;
+  _emergency_yaw_reset_gps_yaw_stopped_type emergency_yaw_reset_gps_yaw_stopped;
 
   // setters for named parameter idiom
   Type & set__timestamp(
@@ -276,6 +341,84 @@ struct EstimatorEventFlags_
     this->reset_hgt_to_ev = _arg;
     return *this;
   }
+  Type & set__warning_event_changes(
+    const uint32_t & _arg)
+  {
+    this->warning_event_changes = _arg;
+    return *this;
+  }
+  Type & set__gps_quality_poor(
+    const bool & _arg)
+  {
+    this->gps_quality_poor = _arg;
+    return *this;
+  }
+  Type & set__gps_fusion_timout(
+    const bool & _arg)
+  {
+    this->gps_fusion_timout = _arg;
+    return *this;
+  }
+  Type & set__gps_data_stopped(
+    const bool & _arg)
+  {
+    this->gps_data_stopped = _arg;
+    return *this;
+  }
+  Type & set__gps_data_stopped_using_alternate(
+    const bool & _arg)
+  {
+    this->gps_data_stopped_using_alternate = _arg;
+    return *this;
+  }
+  Type & set__height_sensor_timeout(
+    const bool & _arg)
+  {
+    this->height_sensor_timeout = _arg;
+    return *this;
+  }
+  Type & set__stopping_navigation(
+    const bool & _arg)
+  {
+    this->stopping_navigation = _arg;
+    return *this;
+  }
+  Type & set__invalid_accel_bias_cov_reset(
+    const bool & _arg)
+  {
+    this->invalid_accel_bias_cov_reset = _arg;
+    return *this;
+  }
+  Type & set__bad_yaw_using_gps_course(
+    const bool & _arg)
+  {
+    this->bad_yaw_using_gps_course = _arg;
+    return *this;
+  }
+  Type & set__stopping_mag_use(
+    const bool & _arg)
+  {
+    this->stopping_mag_use = _arg;
+    return *this;
+  }
+  Type & set__vision_data_stopped(
+    const bool & _arg)
+  {
+    this->vision_data_stopped = _arg;
+    return *this;
+  }
+  Type & set__emergency_yaw_reset_mag_stopped(
+    const bool & _arg)
+  {
+    this->emergency_yaw_reset_mag_stopped = _arg;
+    return *this;
+  }
+  Type & set__emergency_yaw_reset_gps_yaw_stopped(
+    const bool & _arg)
+  {
+    this->emergency_yaw_reset_gps_yaw_stopped = _arg;
+    return *this;
+  }
 
   // constant declarations
 
@@ -377,6 +520,45 @@ struct EstimatorEventFlags_
       return false;
     }
     if (this->reset_hgt_to_ev != other.reset_hgt_to_ev) {
+      return false;
+    }
+    if (this->warning_event_changes != other.warning_event_changes) {
+      return false;
+    }
+    if (this->gps_quality_poor != other.gps_quality_poor) {
+      return false;
+    }
+    if (this->gps_fusion_timout != other.gps_fusion_timout) {
+      return false;
+    }
+    if (this->gps_data_stopped != other.gps_data_stopped) {
+      return false;
+    }
+    if (this->gps_data_stopped_using_alternate != other.gps_data_stopped_using_alternate) {
+      return false;
+    }
+    if (this->height_sensor_timeout != other.height_sensor_timeout) {
+      return false;
+    }
+    if (this->stopping_navigation != other.stopping_navigation) {
+      return false;
+    }
+    if (this->invalid_accel_bias_cov_reset != other.invalid_accel_bias_cov_reset) {
+      return false;
+    }
+    if (this->bad_yaw_using_gps_course != other.bad_yaw_using_gps_course) {
+      return false;
+    }
+    if (this->stopping_mag_use != other.stopping_mag_use) {
+      return false;
+    }
+    if (this->vision_data_stopped != other.vision_data_stopped) {
+      return false;
+    }
+    if (this->emergency_yaw_reset_mag_stopped != other.emergency_yaw_reset_mag_stopped) {
+      return false;
+    }
+    if (this->emergency_yaw_reset_gps_yaw_stopped != other.emergency_yaw_reset_gps_yaw_stopped) {
       return false;
     }
     return true;

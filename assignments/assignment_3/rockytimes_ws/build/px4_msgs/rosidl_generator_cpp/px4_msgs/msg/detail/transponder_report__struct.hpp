@@ -281,7 +281,7 @@ struct TransponderReport_
   static constexpr uint16_t ADSB_EMITTER_TYPE_ENUM_END =
     20u;
   static constexpr uint8_t ORB_QUEUE_LENGTH =
-    16u;
+    8u;
 
   // pointer types
   using RawPtr =

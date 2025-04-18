@@ -56,9 +56,6 @@ module px4_msgs {
       @verbatim (language="comment", text=
         "MAV_SENSOR_ROTATION_CUSTOM")
       const uint8 ROTATION_CUSTOM = 100;
-      const uint8 MODE_UNKNOWN = 0;
-      const uint8 MODE_ENABLED = 1;
-      const uint8 MODE_DISABLED = 2;
     };
     @verbatim (language="comment", text=
       "DISTANCE_SENSOR message data")
@@ -110,8 +107,6 @@ module px4_msgs {
       @verbatim (language="comment", text=
         "Direction the sensor faces from MAV_SENSOR_ORIENTATION enum")
       uint8 orientation;
-
-      uint8 mode;
     };
   };
 };

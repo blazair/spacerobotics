@@ -6,9 +6,6 @@
 module px4_msgs {
   module msg {
     typedef uint8 uint8__64[64];
-    module OrbTestMedium_Constants {
-      const uint8 ORB_QUEUE_LENGTH = 16;
-    };
     struct OrbTestMedium {
       @verbatim (language="comment", text=
         "time since system start (microseconds)")

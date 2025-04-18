@@ -24,8 +24,8 @@ typedef struct px4_msgs__msg__IridiumsbdStatus
 {
   /// time since system start (microseconds)
   uint64_t timestamp;
-  /// timestamp of the last "OK" received after the "AT" command
-  uint64_t last_at_ok_timestamp;
+  /// timestamp of the last successful sbd session
+  uint64_t last_heartbeat;
   /// current size of the tx buffer
   uint16_t tx_buf_write_index;
   /// the rx buffer is parsed up to that index

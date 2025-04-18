@@ -118,7 +118,7 @@ struct ActionRequest_
     6u;
   static constexpr uint8_t ACTION_VTOL_TRANSITION_TO_FIXEDWING =
     7u;
-  static constexpr uint8_t SOURCE_STICK_GESTURE =
+  static constexpr uint8_t SOURCE_RC_STICK_GESTURE =
     0u;
   static constexpr uint8_t SOURCE_RC_SWITCH =
     1u;
@@ -235,7 +235,7 @@ constexpr uint8_t ActionRequest_<ContainerAllocator>::ACTION_VTOL_TRANSITION_TO_
 #if __cplusplus < 201703L
 // static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
-constexpr uint8_t ActionRequest_<ContainerAllocator>::SOURCE_STICK_GESTURE;
+constexpr uint8_t ActionRequest_<ContainerAllocator>::SOURCE_RC_STICK_GESTURE;
 #endif  // __cplusplus < 201703L
 #if __cplusplus < 201703L
 // static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17

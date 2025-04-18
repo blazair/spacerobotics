@@ -11,10 +11,10 @@ px4_msgs__msg__VehicleOpticalFlowVel__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0xe9, 0x0f, 0x7f, 0x0b, 0x44, 0x74, 0x7c, 0xf7,
-      0x14, 0x0e, 0xbb, 0xf7, 0xc7, 0x6c, 0xdf, 0x33,
-      0x4b, 0x14, 0x3b, 0xaa, 0x28, 0x7a, 0x02, 0x98,
-      0x3f, 0x0e, 0x44, 0xb0, 0x19, 0xc1, 0x3b, 0x56,
+      0xe4, 0x43, 0x86, 0xcf, 0xd8, 0x3a, 0x48, 0x02,
+      0xec, 0x40, 0xb8, 0x2e, 0x72, 0x76, 0xf3, 0x64,
+      0xec, 0x8f, 0x20, 0x7a, 0x63, 0x38, 0xa4, 0xd8,
+      0xdb, 0x3b, 0xfa, 0xdd, 0xc4, 0x87, 0x7d, 0xb3,
     }};
   return &hash;
 }
@@ -35,13 +35,10 @@ static char px4_msgs__msg__VehicleOpticalFlowVel__FIELD_NAME__timestamp[] = "tim
 static char px4_msgs__msg__VehicleOpticalFlowVel__FIELD_NAME__timestamp_sample[] = "timestamp_sample";
 static char px4_msgs__msg__VehicleOpticalFlowVel__FIELD_NAME__vel_body[] = "vel_body";
 static char px4_msgs__msg__VehicleOpticalFlowVel__FIELD_NAME__vel_ne[] = "vel_ne";
-static char px4_msgs__msg__VehicleOpticalFlowVel__FIELD_NAME__vel_body_filtered[] = "vel_body_filtered";
-static char px4_msgs__msg__VehicleOpticalFlowVel__FIELD_NAME__vel_ne_filtered[] = "vel_ne_filtered";
-static char px4_msgs__msg__VehicleOpticalFlowVel__FIELD_NAME__flow_rate_uncompensated[] = "flow_rate_uncompensated";
-static char px4_msgs__msg__VehicleOpticalFlowVel__FIELD_NAME__flow_rate_compensated[] = "flow_rate_compensated";
+static char px4_msgs__msg__VehicleOpticalFlowVel__FIELD_NAME__flow_uncompensated_integral[] = "flow_uncompensated_integral";
+static char px4_msgs__msg__VehicleOpticalFlowVel__FIELD_NAME__flow_compensated_integral[] = "flow_compensated_integral";
 static char px4_msgs__msg__VehicleOpticalFlowVel__FIELD_NAME__gyro_rate[] = "gyro_rate";
-static char px4_msgs__msg__VehicleOpticalFlowVel__FIELD_NAME__gyro_bias[] = "gyro_bias";
-static char px4_msgs__msg__VehicleOpticalFlowVel__FIELD_NAME__ref_gyro[] = "ref_gyro";
+static char px4_msgs__msg__VehicleOpticalFlowVel__FIELD_NAME__gyro_rate_integral[] = "gyro_rate_integral";
 
 static rosidl_runtime_c__type_description__Field px4_msgs__msg__VehicleOpticalFlowVel__FIELDS[] = {
   {
@@ -85,7 +82,7 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__VehicleOpticalFl
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__VehicleOpticalFlowVel__FIELD_NAME__vel_body_filtered, 17, 17},
+    {px4_msgs__msg__VehicleOpticalFlowVel__FIELD_NAME__flow_uncompensated_integral, 27, 27},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT_ARRAY,
       2,
@@ -95,27 +92,7 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__VehicleOpticalFl
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__VehicleOpticalFlowVel__FIELD_NAME__vel_ne_filtered, 15, 15},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT_ARRAY,
-      2,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__VehicleOpticalFlowVel__FIELD_NAME__flow_rate_uncompensated, 23, 23},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT_ARRAY,
-      2,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__VehicleOpticalFlowVel__FIELD_NAME__flow_rate_compensated, 21, 21},
+    {px4_msgs__msg__VehicleOpticalFlowVel__FIELD_NAME__flow_compensated_integral, 25, 25},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT_ARRAY,
       2,
@@ -135,17 +112,7 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__VehicleOpticalFl
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__VehicleOpticalFlowVel__FIELD_NAME__gyro_bias, 9, 9},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT_ARRAY,
-      3,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__VehicleOpticalFlowVel__FIELD_NAME__ref_gyro, 8, 8},
+    {px4_msgs__msg__VehicleOpticalFlowVel__FIELD_NAME__gyro_rate_integral, 18, 18},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT_ARRAY,
       3,
@@ -165,7 +132,7 @@ px4_msgs__msg__VehicleOpticalFlowVel__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {px4_msgs__msg__VehicleOpticalFlowVel__TYPE_NAME, 34, 34},
-      {px4_msgs__msg__VehicleOpticalFlowVel__FIELDS, 11, 11},
+      {px4_msgs__msg__VehicleOpticalFlowVel__FIELDS, 8, 8},
     },
     {NULL, 0, 0},
   };
@@ -182,16 +149,11 @@ static char toplevel_type_raw_source[] =
   "float32[2] vel_body                    # velocity obtained from gyro-compensated and distance-scaled optical flow raw measurements in body frame(m/s)\n"
   "float32[2] vel_ne                      # same as vel_body but in local frame (m/s)\n"
   "\n"
-  "float32[2] vel_body_filtered           # filtered velocity obtained from gyro-compensated and distance-scaled optical flow raw measurements in body frame(m/s)\n"
-  "float32[2] vel_ne_filtered             # filtered same as vel_body_filtered but in local frame (m/s)\n"
-  "\n"
-  "float32[2] flow_rate_uncompensated     # integrated optical flow measurement (rad/s)\n"
-  "float32[2] flow_rate_compensated       # integrated optical flow measurement compensated for angular motion (rad/s)\n"
+  "float32[2] flow_uncompensated_integral # integrated optical flow measurement (rad)\n"
+  "float32[2] flow_compensated_integral   # integrated optical flow measurement compensated for angular motion (rad)\n"
   "\n"
   "float32[3] gyro_rate                   # gyro measurement synchronized with flow measurements (rad/s)\n"
-  "\n"
-  "float32[3] gyro_bias\n"
-  "float32[3] ref_gyro\n"
+  "float32[3] gyro_rate_integral          # gyro measurement integrated to flow rate and synchronized with flow measurements (rad)\n"
   "\n"
   "# TOPICS estimator_optical_flow_vel vehicle_optical_flow_vel";
 
@@ -207,7 +169,7 @@ px4_msgs__msg__VehicleOpticalFlowVel__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__VehicleOpticalFlowVel__TYPE_NAME, 34, 34},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 1070, 1070},
+    {toplevel_type_raw_source, 891, 891},
   };
   return &source;
 }

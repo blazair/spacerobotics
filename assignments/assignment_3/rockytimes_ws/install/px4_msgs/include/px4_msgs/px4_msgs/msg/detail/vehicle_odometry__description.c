@@ -199,9 +199,6 @@ px4_msgs__msg__VehicleOdometry__get_type_description(
 
 static char toplevel_type_raw_source[] =
   "# Vehicle odometry data. Fits ROS REP 147 for aerial vehicles\n"
-  "\n"
-  "uint32 MESSAGE_VERSION = 0\n"
-  "\n"
   "uint64 timestamp\\t\\t# time since system start (microseconds)\n"
   "uint64 timestamp_sample\n"
   "\n"
@@ -245,7 +242,7 @@ px4_msgs__msg__VehicleOdometry__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__VehicleOdometry__TYPE_NAME, 28, 28},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 1419, 1419},
+    {toplevel_type_raw_source, 1390, 1390},
   };
   return &source;
 }

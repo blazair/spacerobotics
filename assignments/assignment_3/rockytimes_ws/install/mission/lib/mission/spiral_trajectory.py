@@ -4,12 +4,13 @@ Spiral to Hover Node
 
 Flight sequence:
   1. TAKEOFF: The drone takes off to the first altitude (2 m).
-  2. LOOP: It performs circular loops at altitudes: 2, 4, 6, 8, 10, and 12 m.
+  2. LOOP: It performs circular loops at altitudes: 2, 4, 6, 8, 10, and 12 m with a smaller loop radius.
   3. RETURN: The drone returns to the origin (x=0, y=0) at 12 m.
-  4. CLIMB: It then climbs from 12 m to 20 m while staying at the origin.
-  5. HOVER: Finally, the drone hovers at 20 m altitude.
+  4. CLIMB: It then climbs from 12 m to 14 m while staying at the origin.
+  5. HOVER: Finally, the drone hovers at 14 m altitude while moving side-to-side along the y axis.
+     It first goes to y = +3 m, waits there for 5 seconds, then moves to y = –3 m and holds.
   
-Note: This node only handles flight until a stable hover at 20 m.
+Note: This node only handles flight until a stable hover with the desired side-to-side motion.
 """
 
 import rclpy
@@ -51,13 +52,18 @@ class SpiralToHover(Node):
         
         self.start_time = time.time()
         self.loop_start_time = None
+        self.hover_start_time = None  # To track when hover begins
+        
+        # Hover phase variables for discrete side-to-side motion
+        self.hover_phase = None  # will be set to "first_side" then "second_side"
+        self.hover_timer = None
 
         # Flight parameters
         self.altitude_steps = [2.0, 4.0, 6.0, 8.0, 10.0, 12.0]  # altitudes for loops (meters)
         self.current_loop = 0
         self.loop_duration = 20.0  # seconds per loop
-        self.RADIUS = 15.0         # circle radius (meters)
-        self.climb_altitude = 20.0  # target altitude after climb (meters)
+        self.RADIUS = 10.0         # reduced circle radius for shorter spirals
+        self.climb_altitude = 14.0  # target altitude after climb (changed from 16 m)
         
         # State machine: "TAKEOFF" → "LOOP" → "RETURN" → "CLIMB" → "HOVER"
         self.state = "TAKEOFF"
@@ -193,14 +199,27 @@ class SpiralToHover(Node):
         elif self.state == "CLIMB":
             self.publish_setpoint(0.0, 0.0, -self.climb_altitude, 0.0)
             if self.is_at_altitude(self.climb_altitude):
-                self.get_logger().info(f"Reached climb altitude of {self.climb_altitude} m. Transitioning to HOVER state.")
+                self.get_logger().info(f"Reached climb altitude of {self.climb_altitude} m. Transitioning to HOVER state with side-to-side motion.")
+                self.hover_start_time = time.time()
+                # Initialize hover phase to move to the first side (y = +3 m)
+                self.hover_phase = "first_side"
+                self.hover_timer = time.time()
                 self.state = "HOVER"
             else:
-                self.get_logger().info("Climbing to 20 m...")
+                self.get_logger().info(f"Climbing to {self.climb_altitude} m...")
         elif self.state == "HOVER":
-            # Maintain hover at the origin at 20 m altitude.
-            self.publish_setpoint(0.0, 0.0, -self.climb_altitude, 0.0)
-            self.get_logger().info("Hovering at 20 m altitude.")
+            # In HOVER state, move along the y axis.
+            # First go to y = +3 m, wait 5 seconds, then go to y = -3 m and hold.
+            if self.hover_phase == "first_side":
+                self.publish_setpoint(0.0, 3.0, -self.climb_altitude, 0.0)
+                self.get_logger().info("Hovering at 14 m: moving to y = +3 m")
+                if time.time() - self.hover_timer >= 5.0:
+                    self.hover_phase = "second_side"
+                    self.hover_timer = time.time()
+            elif self.hover_phase == "second_side":
+                self.publish_setpoint(0.0, -3.0, -self.climb_altitude, 0.0)
+                self.get_logger().info("Hovering at 14 m: moving to y = -3 m")
+                # Once on the second side, hold the position (no further toggling)
         
         self.offboard_setpoint_counter += 1
 

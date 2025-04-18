@@ -84,16 +84,6 @@
           "default_value": ""
         },
         {
-          "name": "innovation_filtered",
-          "type": {
-            "type_id": 58,
-            "capacity": 3,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
           "name": "innovation_variance",
           "type": {
             "type_id": 58,
@@ -114,10 +104,10 @@
           "default_value": ""
         },
         {
-          "name": "test_ratio_filtered",
+          "name": "fusion_enabled",
           "type": {
-            "type_id": 58,
-            "capacity": 3,
+            "type_id": 15,
+            "capacity": 0,
             "string_capacity": 0,
             "nested_type_name": ""
           },
@@ -150,7 +140,7 @@
   "type_hashes": [
     {
       "type_name": "px4_msgs/msg/EstimatorAidSource3d",
-      "hash_string": "RIHS01_6bb505e258e8a64e81bb069219a0ac79b1e546a38d082345de445e5e576fe9ab"
+      "hash_string": "RIHS01_a8cc39fa1dd3f125bbe0cf2ef6b3a78202f09eda8b8411b25b95724ae0a9b62d"
     }
   ]
 }

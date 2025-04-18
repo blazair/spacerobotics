@@ -16,7 +16,7 @@ def generate_launch_description():
     # Set Gazebo model and resource paths
     gz_model_path = os.path.join(pkg_share, 'models')
 
-    # # Set initial drone pose
+    # Set initial drone pose
     os.environ['PX4_GZ_MODEL_POSE'] = "0,0,0.1,0,0,0"
     
     # Add launch argument for PX4-Autopilot path
@@ -81,7 +81,6 @@ def generate_launch_description():
             
             # Front Depth Camera
             '/depth_camera@sensor_msgs/msg/Image[gz.msgs.Image',
-            # '/depth_camera/depth_image@sensor_msgs/msg/Image[gz.msgs.Image',
             '/depth_camera/points@sensor_msgs/msg/PointCloud2[gz.msgs.PointCloudPacked',
             '/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo',
             
@@ -91,7 +90,6 @@ def generate_launch_description():
             
             # Clock and Odometry
             '/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock',
-            # '/model/x500_depth_mono_0/odometry_with_covariance@nav_msgs/msg/Odometry[gz.msgs.OdometryWithCovariance',
         ],
         remappings=[
             # Front RGB Camera remappings
@@ -100,16 +98,12 @@ def generate_launch_description():
             
             # Front Depth Camera remappings
             ('/depth_camera', '/drone/front_depth'),
-            # ('/depth_camera/depth_image', '/drone/front_depth/depth'),
             ('/depth_camera/points', '/drone/front_depth/points'),
             ('/camera_info', '/drone/front_depth/camera_info'),
             
             # Down Mono Camera remappings
             ('/mono_camera', '/drone/down_mono'),
             ('/mono_camera/camera_info', '/drone/down_mono/camera_info'),
-            
-            # Odometry remapping
-            # ('/model/x500_depth_mono_0/odometry_with_covariance', '/fmu/out/vehicle_odometry'),
         ],
         output='screen'
     )
@@ -121,7 +115,7 @@ def generate_launch_description():
             description='Use simulation (Gazebo) clock if true'),
         DeclareLaunchArgument(
             'px4_autopilot_path',
-            default_value=os.environ.get('HOME', '/home/' + os.environ.get('USER', 'user')) + '/PX4-Autopilot',
+            default_value=os.path.join(os.environ.get('HOME', '/home/' + os.environ.get('USER', 'user')), 'PX4-Autopilot'),
             description='Path to PX4-Autopilot directory'),
         px4_sitl,
         TimerAction(
@@ -135,7 +129,6 @@ def generate_launch_description():
         TimerAction(
             period=3.0,
             actions=[bridge]
-        )
-    ]) 
-
+        ),
+    ])
 

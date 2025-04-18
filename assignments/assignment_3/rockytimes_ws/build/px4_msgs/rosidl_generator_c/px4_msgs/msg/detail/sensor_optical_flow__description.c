@@ -225,7 +225,7 @@ static char toplevel_type_raw_source[] =
   "\n"
   "uint32 device_id               # unique device ID for the sensor that does not change between power cycles\n"
   "\n"
-  "float32[2] pixel_flow          # (radians) optical flow in radians where a positive value is produced by a RH rotation of the sensor about the body axis\n"
+  "float32[2] pixel_flow          # (radians) optical flow in radians where a positive value is produced by a RH rotation about the body axis\n"
   "\n"
   "float32[3] delta_angle         # (radians) accumulated gyro radians where a positive value is produced by a RH rotation about the body axis. Set to NaN if flow sensor does not have 3-axis gyro data.\n"
   "bool delta_angle_available\n"
@@ -263,7 +263,7 @@ px4_msgs__msg__SensorOpticalFlow__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__SensorOpticalFlow__TYPE_NAME, 30, 30},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 1384, 1384},
+    {toplevel_type_raw_source, 1370, 1370},
   };
   return &source;
 }

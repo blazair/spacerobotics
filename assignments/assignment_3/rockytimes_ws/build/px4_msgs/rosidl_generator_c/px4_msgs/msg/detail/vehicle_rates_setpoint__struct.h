@@ -19,18 +19,12 @@ extern "C"
 
 // Constants defined in the message
 
-/// Constant 'MESSAGE_VERSION'.
-enum
-{
-  px4_msgs__msg__VehicleRatesSetpoint__MESSAGE_VERSION = 0ul
-};
-
 /// Struct defined in msg/VehicleRatesSetpoint in the package px4_msgs.
 typedef struct px4_msgs__msg__VehicleRatesSetpoint
 {
   /// time since system start (microseconds)
   uint64_t timestamp;
-  /// body angular rates in FRD frame
+  /// body angular rates in NED frame
   /// [rad/s] roll rate setpoint
   float roll;
   /// pitch rate setpoint

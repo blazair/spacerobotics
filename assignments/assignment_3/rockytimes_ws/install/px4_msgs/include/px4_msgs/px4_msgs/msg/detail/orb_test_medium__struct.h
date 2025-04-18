@@ -19,12 +19,6 @@ extern "C"
 
 // Constants defined in the message
 
-/// Constant 'ORB_QUEUE_LENGTH'.
-enum
-{
-  px4_msgs__msg__OrbTestMedium__ORB_QUEUE_LENGTH = 16
-};
-
 /// Struct defined in msg/OrbTestMedium in the package px4_msgs.
 typedef struct px4_msgs__msg__OrbTestMedium
 {

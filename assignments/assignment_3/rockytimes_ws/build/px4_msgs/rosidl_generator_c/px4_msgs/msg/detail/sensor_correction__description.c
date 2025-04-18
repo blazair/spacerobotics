@@ -11,10 +11,10 @@ px4_msgs__msg__SensorCorrection__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x30, 0x81, 0x96, 0xfe, 0x5e, 0xe9, 0xcf, 0xc3,
-      0x76, 0x96, 0x20, 0x8d, 0xbb, 0x17, 0x54, 0x64,
-      0x76, 0xe8, 0x91, 0x59, 0xb6, 0x83, 0xf8, 0x84,
-      0xf9, 0x91, 0x19, 0x0b, 0x78, 0xd3, 0xf0, 0xde,
+      0x38, 0x3b, 0xdc, 0x56, 0xbf, 0x27, 0xec, 0x9d,
+      0xcc, 0xc9, 0x8d, 0xcc, 0xa6, 0x89, 0xf8, 0x66,
+      0x9e, 0xbc, 0xc5, 0x3c, 0xed, 0xbd, 0x31, 0x3c,
+      0x50, 0x99, 0x76, 0xe1, 0x49, 0xd5, 0x81, 0x9e,
     }};
   return &hash;
 }
@@ -32,24 +32,18 @@ static char px4_msgs__msg__SensorCorrection__TYPE_NAME[] = "px4_msgs/msg/SensorC
 
 // Define type names, field names, and default values
 static char px4_msgs__msg__SensorCorrection__FIELD_NAME__timestamp[] = "timestamp";
-static char px4_msgs__msg__SensorCorrection__FIELD_NAME__accel_device_ids[] = "accel_device_ids";
-static char px4_msgs__msg__SensorCorrection__FIELD_NAME__accel_temperature[] = "accel_temperature";
-static char px4_msgs__msg__SensorCorrection__FIELD_NAME__accel_offset_0[] = "accel_offset_0";
-static char px4_msgs__msg__SensorCorrection__FIELD_NAME__accel_offset_1[] = "accel_offset_1";
-static char px4_msgs__msg__SensorCorrection__FIELD_NAME__accel_offset_2[] = "accel_offset_2";
-static char px4_msgs__msg__SensorCorrection__FIELD_NAME__accel_offset_3[] = "accel_offset_3";
 static char px4_msgs__msg__SensorCorrection__FIELD_NAME__gyro_device_ids[] = "gyro_device_ids";
 static char px4_msgs__msg__SensorCorrection__FIELD_NAME__gyro_temperature[] = "gyro_temperature";
 static char px4_msgs__msg__SensorCorrection__FIELD_NAME__gyro_offset_0[] = "gyro_offset_0";
 static char px4_msgs__msg__SensorCorrection__FIELD_NAME__gyro_offset_1[] = "gyro_offset_1";
 static char px4_msgs__msg__SensorCorrection__FIELD_NAME__gyro_offset_2[] = "gyro_offset_2";
 static char px4_msgs__msg__SensorCorrection__FIELD_NAME__gyro_offset_3[] = "gyro_offset_3";
-static char px4_msgs__msg__SensorCorrection__FIELD_NAME__mag_device_ids[] = "mag_device_ids";
-static char px4_msgs__msg__SensorCorrection__FIELD_NAME__mag_temperature[] = "mag_temperature";
-static char px4_msgs__msg__SensorCorrection__FIELD_NAME__mag_offset_0[] = "mag_offset_0";
-static char px4_msgs__msg__SensorCorrection__FIELD_NAME__mag_offset_1[] = "mag_offset_1";
-static char px4_msgs__msg__SensorCorrection__FIELD_NAME__mag_offset_2[] = "mag_offset_2";
-static char px4_msgs__msg__SensorCorrection__FIELD_NAME__mag_offset_3[] = "mag_offset_3";
+static char px4_msgs__msg__SensorCorrection__FIELD_NAME__accel_device_ids[] = "accel_device_ids";
+static char px4_msgs__msg__SensorCorrection__FIELD_NAME__accel_temperature[] = "accel_temperature";
+static char px4_msgs__msg__SensorCorrection__FIELD_NAME__accel_offset_0[] = "accel_offset_0";
+static char px4_msgs__msg__SensorCorrection__FIELD_NAME__accel_offset_1[] = "accel_offset_1";
+static char px4_msgs__msg__SensorCorrection__FIELD_NAME__accel_offset_2[] = "accel_offset_2";
+static char px4_msgs__msg__SensorCorrection__FIELD_NAME__accel_offset_3[] = "accel_offset_3";
 static char px4_msgs__msg__SensorCorrection__FIELD_NAME__baro_device_ids[] = "baro_device_ids";
 static char px4_msgs__msg__SensorCorrection__FIELD_NAME__baro_temperature[] = "baro_temperature";
 static char px4_msgs__msg__SensorCorrection__FIELD_NAME__baro_offset_0[] = "baro_offset_0";
@@ -63,66 +57,6 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__SensorCorrection
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT64,
       0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__SensorCorrection__FIELD_NAME__accel_device_ids, 16, 16},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT32_ARRAY,
-      4,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__SensorCorrection__FIELD_NAME__accel_temperature, 17, 17},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT_ARRAY,
-      4,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__SensorCorrection__FIELD_NAME__accel_offset_0, 14, 14},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT_ARRAY,
-      3,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__SensorCorrection__FIELD_NAME__accel_offset_1, 14, 14},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT_ARRAY,
-      3,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__SensorCorrection__FIELD_NAME__accel_offset_2, 14, 14},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT_ARRAY,
-      3,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__SensorCorrection__FIELD_NAME__accel_offset_3, 14, 14},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT_ARRAY,
-      3,
       0,
       {NULL, 0, 0},
     },
@@ -189,7 +123,7 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__SensorCorrection
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__SensorCorrection__FIELD_NAME__mag_device_ids, 14, 14},
+    {px4_msgs__msg__SensorCorrection__FIELD_NAME__accel_device_ids, 16, 16},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT32_ARRAY,
       4,
@@ -199,7 +133,7 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__SensorCorrection
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__SensorCorrection__FIELD_NAME__mag_temperature, 15, 15},
+    {px4_msgs__msg__SensorCorrection__FIELD_NAME__accel_temperature, 17, 17},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT_ARRAY,
       4,
@@ -209,7 +143,7 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__SensorCorrection
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__SensorCorrection__FIELD_NAME__mag_offset_0, 12, 12},
+    {px4_msgs__msg__SensorCorrection__FIELD_NAME__accel_offset_0, 14, 14},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT_ARRAY,
       3,
@@ -219,7 +153,7 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__SensorCorrection
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__SensorCorrection__FIELD_NAME__mag_offset_1, 12, 12},
+    {px4_msgs__msg__SensorCorrection__FIELD_NAME__accel_offset_1, 14, 14},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT_ARRAY,
       3,
@@ -229,7 +163,7 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__SensorCorrection
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__SensorCorrection__FIELD_NAME__mag_offset_2, 12, 12},
+    {px4_msgs__msg__SensorCorrection__FIELD_NAME__accel_offset_2, 14, 14},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT_ARRAY,
       3,
@@ -239,7 +173,7 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__SensorCorrection
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__SensorCorrection__FIELD_NAME__mag_offset_3, 12, 12},
+    {px4_msgs__msg__SensorCorrection__FIELD_NAME__accel_offset_3, 14, 14},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT_ARRAY,
       3,
@@ -319,7 +253,7 @@ px4_msgs__msg__SensorCorrection__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {px4_msgs__msg__SensorCorrection__TYPE_NAME, 29, 29},
-      {px4_msgs__msg__SensorCorrection__FIELDS, 25, 25},
+      {px4_msgs__msg__SensorCorrection__FIELDS, 19, 19},
     },
     {NULL, 0, 0},
   };
@@ -336,15 +270,6 @@ static char toplevel_type_raw_source[] =
   "\n"
   "uint64 timestamp\\t\\t# time since system start (microseconds)\n"
   "\n"
-  "# Corrections for acceleromter acceleration outputs where corrected_accel = raw_accel * accel_scale + accel_offset\n"
-  "# Note the corrections are in the sensor frame and must be applied before the sensor data is rotated into body frame\n"
-  "uint32[4] accel_device_ids\n"
-  "float32[4] accel_temperature\n"
-  "float32[3] accel_offset_0\\t# accelerometer 0 offsets in the FRD board frame XYZ-axis in m/s^s\n"
-  "float32[3] accel_offset_1\\t# accelerometer 1 offsets in the FRD board frame XYZ-axis in m/s^s\n"
-  "float32[3] accel_offset_2\\t# accelerometer 2 offsets in the FRD board frame XYZ-axis in m/s^s\n"
-  "float32[3] accel_offset_3\\t# accelerometer 3 offsets in the FRD board frame XYZ-axis in m/s^s\n"
-  "\n"
   "# Corrections for gyro angular rate outputs where corrected_rate = raw_rate * gyro_scale + gyro_offset\n"
   "# Note the corrections are in the sensor frame and must be applied before the sensor data is rotated into body frame\n"
   "uint32[4] gyro_device_ids\n"
@@ -354,14 +279,14 @@ static char toplevel_type_raw_source[] =
   "float32[3] gyro_offset_2\\t# gyro 2 XYZ offsets in the sensor frame in rad/s\n"
   "float32[3] gyro_offset_3\\t# gyro 3 XYZ offsets in the sensor frame in rad/s\n"
   "\n"
-  "# Corrections for magnetometer measurement outputs where corrected_mag = raw_mag * mag_scale + mag_offset\n"
+  "# Corrections for acceleromter acceleration outputs where corrected_accel = raw_accel * accel_scale + accel_offset\n"
   "# Note the corrections are in the sensor frame and must be applied before the sensor data is rotated into body frame\n"
-  "uint32[4] mag_device_ids\n"
-  "float32[4] mag_temperature\n"
-  "float32[3] mag_offset_0\\t# magnetometer 0 offsets in the FRD board frame XYZ-axis in m/s^s\n"
-  "float32[3] mag_offset_1\\t# magnetometer 1 offsets in the FRD board frame XYZ-axis in m/s^s\n"
-  "float32[3] mag_offset_2\\t# magnetometer 2 offsets in the FRD board frame XYZ-axis in m/s^s\n"
-  "float32[3] mag_offset_3\\t# magnetometer 3 offsets in the FRD board frame XYZ-axis in m/s^s\n"
+  "uint32[4] accel_device_ids\n"
+  "float32[4] accel_temperature\n"
+  "float32[3] accel_offset_0\\t# accelerometer 0 offsets in the FRD board frame XYZ-axis in m/s^s\n"
+  "float32[3] accel_offset_1\\t# accelerometer 1 offsets in the FRD board frame XYZ-axis in m/s^s\n"
+  "float32[3] accel_offset_2\\t# accelerometer 2 offsets in the FRD board frame XYZ-axis in m/s^s\n"
+  "float32[3] accel_offset_3\\t# accelerometer 3 offsets in the FRD board frame XYZ-axis in m/s^s\n"
   "\n"
   "# Corrections for barometric pressure outputs where corrected_pressure = raw_pressure * pressure_scale + pressure_offset\n"
   "# Note the corrections are in the sensor frame and must be applied before the sensor data is rotated into body frame\n"
@@ -384,7 +309,7 @@ px4_msgs__msg__SensorCorrection__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__SensorCorrection__TYPE_NAME, 29, 29},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 2631, 2631},
+    {toplevel_type_raw_source, 1995, 1995},
   };
   return &source;
 }

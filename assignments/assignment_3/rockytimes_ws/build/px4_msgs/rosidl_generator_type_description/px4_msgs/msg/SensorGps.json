@@ -34,9 +34,9 @@
           "default_value": ""
         },
         {
-          "name": "latitude_deg",
+          "name": "lat",
           "type": {
-            "type_id": 11,
+            "type_id": 6,
             "capacity": 0,
             "string_capacity": 0,
             "nested_type_name": ""
@@ -44,9 +44,9 @@
           "default_value": ""
         },
         {
-          "name": "longitude_deg",
+          "name": "lon",
           "type": {
-            "type_id": 11,
+            "type_id": 6,
             "capacity": 0,
             "string_capacity": 0,
             "nested_type_name": ""
@@ -54,9 +54,9 @@
           "default_value": ""
         },
         {
-          "name": "altitude_msl_m",
+          "name": "alt",
           "type": {
-            "type_id": 11,
+            "type_id": 6,
             "capacity": 0,
             "string_capacity": 0,
             "nested_type_name": ""
@@ -64,9 +64,9 @@
           "default_value": ""
         },
         {
-          "name": "altitude_ellipsoid_m",
+          "name": "alt_ellipsoid",
           "type": {
-            "type_id": 11,
+            "type_id": 6,
             "capacity": 0,
             "string_capacity": 0,
             "nested_type_name": ""
@@ -332,26 +332,6 @@
             "nested_type_name": ""
           },
           "default_value": ""
-        },
-        {
-          "name": "rtcm_crc_failed",
-          "type": {
-            "type_id": 15,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "rtcm_msg_used",
-          "type": {
-            "type_id": 3,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
         }
       ]
     },
@@ -360,7 +340,7 @@
   "type_hashes": [
     {
       "type_name": "px4_msgs/msg/SensorGps",
-      "hash_string": "RIHS01_ee66c86474c0b31c6fc77453a139b217818a067e29d6837df7075e18fce827d7"
+      "hash_string": "RIHS01_87df2d73ca9fbbd0607bdc3133c84433b09c58c635178dcd12c9b9fbff0ddcba"
     }
   ]
 }

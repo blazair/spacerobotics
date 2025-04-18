@@ -38,17 +38,14 @@ module px4_msgs {
         "9 : maximum allowed vertical velocity discrepancy fail")
       const uint8 GPS_CHECK_FAIL_MAX_VERT_SPD_ERR = 9;
       @verbatim (language="comment", text=
-        "10 : GPS signal is spoofed")
-      const uint8 GPS_CHECK_FAIL_SPOOFED = 10;
-      @verbatim (language="comment", text=
         "0 - true if the filter tilt alignment is complete")
       const uint8 CS_TILT_ALIGN = 0;
       @verbatim (language="comment", text=
         "1 - true if the filter yaw alignment is complete")
       const uint8 CS_YAW_ALIGN = 1;
       @verbatim (language="comment", text=
-        "2 - true if GNSS position measurements are being fused")
-      const uint8 CS_GNSS_POS = 2;
+        "2 - true if GPS measurements are being fused")
+      const uint8 CS_GPS = 2;
       @verbatim (language="comment", text=
         "3 - true if optical flow measurements are being fused")
       const uint8 CS_OPT_FLOW = 3;
@@ -68,13 +65,13 @@ module px4_msgs {
         "8 - true when wind velocity is being estimated")
       const uint8 CS_WIND = 8;
       @verbatim (language="comment", text=
-        "9 - true when baro data is being fused")
+        "9 - true when baro height is being fused as a primary height reference")
       const uint8 CS_BARO_HGT = 9;
       @verbatim (language="comment", text=
-        "10 - true when range finder data is being fused for height aiding")
+        "10 - true when range finder height is being fused as a primary height reference")
       const uint8 CS_RNG_HGT = 10;
       @verbatim (language="comment", text=
-        "11 - true when GPS altitude is being fused")
+        "11 - true when GPS height is being fused as a primary height reference")
       const uint8 CS_GPS_HGT = 11;
       @verbatim (language="comment", text=
         "12 - true when local position data from external vision is being fused")
@@ -127,9 +124,6 @@ module px4_msgs {
       @verbatim (language="comment", text=
         "28 - true when the range finder has been declared faulty and is no longer being used")
       const uint8 CS_RNG_FAULT = 28;
-      @verbatim (language="comment", text=
-        "44 - true if GNSS velocity measurements are being fused")
-      const uint8 CS_GNSS_VEL = 44;
     };
     struct EstimatorStatus {
       @verbatim (language="comment", text=
@@ -183,31 +177,47 @@ module px4_msgs {
       float pos_vert_accuracy;
 
       @verbatim (language="comment", text=
-        "low-pass filtered ratio of the largest heading innovation component to the innovation test limit")
-      float hdg_test_ratio;
+        "Bitmask to indicate pass/fail status of innovation consistency checks")
+      uint16 innovation_check_flags;
 
       @verbatim (language="comment", text=
-        "low-pass filtered ratio of the largest velocity innovation component to the innovation test limit")
+        "0 - true if velocity observations have been rejected" "\n"
+        "1 - true if horizontal position observations have been rejected" "\n"
+        "2 - true if true if vertical position observations have been rejected" "\n"
+        "3 - true if the X magnetometer observation has been rejected" "\n"
+        "4 - true if the Y magnetometer observation has been rejected" "\n"
+        "5 - true if the Z magnetometer observation has been rejected" "\n"
+        "6 - true if the yaw observation has been rejected" "\n"
+        "7 - true if the airspeed observation has been rejected" "\n"
+        "8 - true if the synthetic sideslip observation has been rejected" "\n"
+        "9 - true if the height above ground observation has been rejected" "\n"
+        "10 - true if the X optical flow observation has been rejected" "\n"
+        "11 - true if the Y optical flow observation has been rejected" "\n"
+        "ratio of the largest magnetometer innovation component to the innovation test limit")
+      float mag_test_ratio;
+
+      @verbatim (language="comment", text=
+        "ratio of the largest velocity innovation component to the innovation test limit")
       float vel_test_ratio;
 
       @verbatim (language="comment", text=
-        "low-pass filtered ratio of the largest horizontal position innovation component to the innovation test limit")
+        "ratio of the largest horizontal position innovation component to the innovation test limit")
       float pos_test_ratio;
 
       @verbatim (language="comment", text=
-        "low-pass filtered ratio of the vertical position innovation to the innovation test limit")
+        "ratio of the vertical position innovation to the innovation test limit")
       float hgt_test_ratio;
 
       @verbatim (language="comment", text=
-        "low-pass filtered ratio of the true airspeed innovation to the innovation test limit")
+        "ratio of the true airspeed innovation to the innovation test limit")
       float tas_test_ratio;
 
       @verbatim (language="comment", text=
-        "low-pass filtered ratio of the height above ground innovation to the innovation test limit")
+        "ratio of the height above ground innovation to the innovation test limit")
       float hagl_test_ratio;
 
       @verbatim (language="comment", text=
-        "low-pass filtered ratio of the synthetic sideslip innovation to the innovation test limit")
+        "ratio of the synthetic sideslip innovation to the innovation test limit")
       float beta_test_ratio;
 
       @verbatim (language="comment", text=
@@ -252,13 +262,11 @@ module px4_msgs {
 
       boolean pre_flt_fail_innov_heading;
 
-      boolean pre_flt_fail_innov_height;
-
-      boolean pre_flt_fail_innov_pos_horiz;
-
       boolean pre_flt_fail_innov_vel_horiz;
 
       boolean pre_flt_fail_innov_vel_vert;
+
+      boolean pre_flt_fail_innov_height;
 
       boolean pre_flt_fail_mag_field_disturbed;
 
@@ -278,14 +286,6 @@ module px4_msgs {
       @verbatim (language="comment", text=
         "Bitmask to indicate timeout flags (vel, pos, hgt)")
       uint8 timeout_flags;
-
-      float mag_inclination_deg;
-
-      float mag_inclination_ref_deg;
-
-      float mag_strength_gs;
-
-      float mag_strength_ref_gs;
     };
   };
 };

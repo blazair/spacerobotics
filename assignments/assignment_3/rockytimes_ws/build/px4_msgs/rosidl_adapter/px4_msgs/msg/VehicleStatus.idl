@@ -6,11 +6,15 @@
 module px4_msgs {
   module msg {
     module VehicleStatus_Constants {
-      const uint32 MESSAGE_VERSION = 1;
-      const uint8 ARMING_STATE_DISARMED = 1;
+      const uint8 ARMING_STATE_INIT = 0;
+      const uint8 ARMING_STATE_STANDBY = 1;
       const uint8 ARMING_STATE_ARMED = 2;
+      const uint8 ARMING_STATE_STANDBY_ERROR = 3;
+      const uint8 ARMING_STATE_SHUTDOWN = 4;
+      const uint8 ARMING_STATE_IN_AIR_RESTORE = 5;
+      const uint8 ARMING_STATE_MAX = 6;
       const uint8 ARM_DISARM_REASON_TRANSITION_TO_STANDBY = 0;
-      const uint8 ARM_DISARM_REASON_STICK_GESTURE = 1;
+      const uint8 ARM_DISARM_REASON_RC_STICK = 1;
       const uint8 ARM_DISARM_REASON_RC_SWITCH = 2;
       const uint8 ARM_DISARM_REASON_COMMAND_INTERNAL = 3;
       const uint8 ARM_DISARM_REASON_COMMAND_EXTERNAL = 4;
@@ -41,14 +45,18 @@ module px4_msgs {
       @verbatim (language="comment", text=
         "Auto return to launch mode")
       const uint8 NAVIGATION_STATE_AUTO_RTL = 5;
-      const uint8 NAVIGATION_STATE_POSITION_SLOW = 6;
-      const uint8 NAVIGATION_STATE_FREE5 = 7;
-      const uint8 NAVIGATION_STATE_FREE4 = 8;
-      const uint8 NAVIGATION_STATE_FREE3 = 9;
+      @verbatim (language="comment", text=
+        "Free slot")
+      const uint8 NAVIGATION_STATE_UNUSED3 = 8;
+      @verbatim (language="comment", text=
+        "Free slot")
+      const uint8 NAVIGATION_STATE_UNUSED = 9;
       @verbatim (language="comment", text=
         "Acro mode")
       const uint8 NAVIGATION_STATE_ACRO = 10;
-      const uint8 NAVIGATION_STATE_FREE2 = 11;
+      @verbatim (language="comment", text=
+        "Free slot")
+      const uint8 NAVIGATION_STATE_UNUSED1 = 11;
       @verbatim (language="comment", text=
         "Descend mode (no position control)")
       const uint8 NAVIGATION_STATE_DESCEND = 12;
@@ -59,7 +67,9 @@ module px4_msgs {
       @verbatim (language="comment", text=
         "Stabilized mode")
       const uint8 NAVIGATION_STATE_STAB = 15;
-      const uint8 NAVIGATION_STATE_FREE1 = 16;
+      @verbatim (language="comment", text=
+        "Free slot")
+      const uint8 NAVIGATION_STATE_UNUSED2 = 16;
       @verbatim (language="comment", text=
         "Takeoff")
       const uint8 NAVIGATION_STATE_AUTO_TAKEOFF = 17;
@@ -78,15 +88,7 @@ module px4_msgs {
       @verbatim (language="comment", text=
         "Takeoff, transition, establish loiter")
       const uint8 NAVIGATION_STATE_AUTO_VTOL_TAKEOFF = 22;
-      const uint8 NAVIGATION_STATE_EXTERNAL1 = 23;
-      const uint8 NAVIGATION_STATE_EXTERNAL2 = 24;
-      const uint8 NAVIGATION_STATE_EXTERNAL3 = 25;
-      const uint8 NAVIGATION_STATE_EXTERNAL4 = 26;
-      const uint8 NAVIGATION_STATE_EXTERNAL5 = 27;
-      const uint8 NAVIGATION_STATE_EXTERNAL6 = 28;
-      const uint8 NAVIGATION_STATE_EXTERNAL7 = 29;
-      const uint8 NAVIGATION_STATE_EXTERNAL8 = 30;
-      const uint8 NAVIGATION_STATE_MAX = 31;
+      const uint8 NAVIGATION_STATE_MAX = 23;
       const uint16 FAILURE_NONE = 0;
       @verbatim (language="comment", text=
         "(1 << 0)")
@@ -114,14 +116,11 @@ module px4_msgs {
       const uint16 FAILURE_MOTOR = 128;
       const uint8 HIL_STATE_OFF = 0;
       const uint8 HIL_STATE_ON = 1;
-      const uint8 VEHICLE_TYPE_ROTARY_WING = 0;
-      const uint8 VEHICLE_TYPE_FIXED_WING = 1;
-      const uint8 VEHICLE_TYPE_ROVER = 2;
-      const uint8 FAILSAFE_DEFER_STATE_DISABLED = 0;
-      const uint8 FAILSAFE_DEFER_STATE_ENABLED = 1;
-      @verbatim (language="comment", text=
-        "Failsafes deferred, but would trigger a failsafe")
-      const uint8 FAILSAFE_DEFER_STATE_WOULD_FAILSAFE = 2;
+      const uint8 VEHICLE_TYPE_UNKNOWN = 0;
+      const uint8 VEHICLE_TYPE_ROTARY_WING = 1;
+      const uint8 VEHICLE_TYPE_FIXED_WING = 2;
+      const uint8 VEHICLE_TYPE_ROVER = 3;
+      const uint8 VEHICLE_TYPE_AIRSHIP = 4;
     };
     @verbatim (language="comment", text=
       "Encodes the system state of the vehicle published by commander")
@@ -157,25 +156,13 @@ module px4_msgs {
       uint8 nav_state;
 
       @verbatim (language="comment", text=
-        "Current mode executor in charge (0=Autopilot)")
-      uint8 executor_in_charge;
-
-      @verbatim (language="comment", text=
-        "Bitmask for all valid nav_state values")
-      uint32 valid_nav_states_mask;
-
-      @verbatim (language="comment", text=
-        "Bitmask for all modes that a user can select")
-      uint32 can_set_nav_states_mask;
-
-      @verbatim (language="comment", text=
         "Bitmask of detected failures")
       uint16 failure_detector_status;
 
       uint8 hil_state;
 
       @verbatim (language="comment", text=
-        "Current vehicle locomotion method. A vehicle can have different methods (e.g. VTOL transitions from RW to FW method)")
+        "If it's a VTOL, then the value will be VEHICLE_TYPE_ROTARY_WING while flying as a multicopter, and VEHICLE_TYPE_FIXED_WING when flying as a fixed-wing")
       uint8 vehicle_type;
 
       @verbatim (language="comment", text=
@@ -185,10 +172,6 @@ module px4_msgs {
       @verbatim (language="comment", text=
         "true if system is in failsafe state but the user took over control")
       boolean failsafe_and_user_took_over;
-
-      @verbatim (language="comment", text=
-        "one of FAILSAFE_DEFER_STATE_*")
-      uint8 failsafe_defer_state;
 
       @verbatim (language="comment", text=
         "Link loss" "\n"
@@ -256,6 +239,14 @@ module px4_msgs {
       boolean parachute_system_present;
 
       boolean parachute_system_healthy;
+
+      @verbatim (language="comment", text=
+        "Set to true if avoidance system is enabled via COM_OBS_AVOID parameter")
+      boolean avoidance_system_required;
+
+      @verbatim (language="comment", text=
+        "Status of the obstacle avoidance system")
+      boolean avoidance_system_valid;
 
       boolean rc_calibration_in_progress;
 

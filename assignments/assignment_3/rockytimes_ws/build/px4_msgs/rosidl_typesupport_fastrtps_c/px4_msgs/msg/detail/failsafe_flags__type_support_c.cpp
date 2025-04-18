@@ -193,9 +193,9 @@ bool cdr_serialize_px4_msgs__msg__FailsafeFlags(
     cdr << (ros_message->battery_unhealthy ? true : false);
   }
 
-  // Field name: geofence_breached
+  // Field name: primary_geofence_breached
   {
-    cdr << (ros_message->geofence_breached ? true : false);
+    cdr << (ros_message->primary_geofence_breached ? true : false);
   }
 
   // Field name: mission_failure
@@ -221,11 +221,6 @@ bool cdr_serialize_px4_msgs__msg__FailsafeFlags(
   // Field name: local_position_accuracy_low
   {
     cdr << (ros_message->local_position_accuracy_low ? true : false);
-  }
-
-  // Field name: navigator_failure
-  {
-    cdr << (ros_message->navigator_failure ? true : false);
   }
 
   // Field name: fd_critical_failure
@@ -429,11 +424,11 @@ bool cdr_deserialize_px4_msgs__msg__FailsafeFlags(
     ros_message->battery_unhealthy = tmp ? true : false;
   }
 
-  // Field name: geofence_breached
+  // Field name: primary_geofence_breached
   {
     uint8_t tmp;
     cdr >> tmp;
-    ros_message->geofence_breached = tmp ? true : false;
+    ros_message->primary_geofence_breached = tmp ? true : false;
   }
 
   // Field name: mission_failure
@@ -469,13 +464,6 @@ bool cdr_deserialize_px4_msgs__msg__FailsafeFlags(
     uint8_t tmp;
     cdr >> tmp;
     ros_message->local_position_accuracy_low = tmp ? true : false;
-  }
-
-  // Field name: navigator_failure
-  {
-    uint8_t tmp;
-    cdr >> tmp;
-    ros_message->navigator_failure = tmp ? true : false;
   }
 
   // Field name: fd_critical_failure
@@ -727,9 +715,9 @@ size_t get_serialized_size_px4_msgs__msg__FailsafeFlags(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: geofence_breached
+  // Field name: primary_geofence_breached
   {
-    size_t item_size = sizeof(ros_message->geofence_breached);
+    size_t item_size = sizeof(ros_message->primary_geofence_breached);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -765,13 +753,6 @@ size_t get_serialized_size_px4_msgs__msg__FailsafeFlags(
   // Field name: local_position_accuracy_low
   {
     size_t item_size = sizeof(ros_message->local_position_accuracy_low);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: navigator_failure
-  {
-    size_t item_size = sizeof(ros_message->navigator_failure);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -1043,7 +1024,7 @@ size_t max_serialized_size_px4_msgs__msg__FailsafeFlags(
     current_alignment += array_size * sizeof(uint8_t);
   }
 
-  // Field name: geofence_breached
+  // Field name: primary_geofence_breached
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint8_t);
@@ -1079,13 +1060,6 @@ size_t max_serialized_size_px4_msgs__msg__FailsafeFlags(
   }
 
   // Field name: local_position_accuracy_low
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
-  // Field name: navigator_failure
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint8_t);
@@ -1286,9 +1260,9 @@ bool cdr_serialize_key_px4_msgs__msg__FailsafeFlags(
     cdr << (ros_message->battery_unhealthy ? true : false);
   }
 
-  // Field name: geofence_breached
+  // Field name: primary_geofence_breached
   {
-    cdr << (ros_message->geofence_breached ? true : false);
+    cdr << (ros_message->primary_geofence_breached ? true : false);
   }
 
   // Field name: mission_failure
@@ -1314,11 +1288,6 @@ bool cdr_serialize_key_px4_msgs__msg__FailsafeFlags(
   // Field name: local_position_accuracy_low
   {
     cdr << (ros_message->local_position_accuracy_low ? true : false);
-  }
-
-  // Field name: navigator_failure
-  {
-    cdr << (ros_message->navigator_failure ? true : false);
   }
 
   // Field name: fd_critical_failure
@@ -1562,9 +1531,9 @@ size_t get_serialized_size_key_px4_msgs__msg__FailsafeFlags(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: geofence_breached
+  // Field name: primary_geofence_breached
   {
-    size_t item_size = sizeof(ros_message->geofence_breached);
+    size_t item_size = sizeof(ros_message->primary_geofence_breached);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -1600,13 +1569,6 @@ size_t get_serialized_size_key_px4_msgs__msg__FailsafeFlags(
   // Field name: local_position_accuracy_low
   {
     size_t item_size = sizeof(ros_message->local_position_accuracy_low);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: navigator_failure
-  {
-    size_t item_size = sizeof(ros_message->navigator_failure);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -1876,7 +1838,7 @@ size_t max_serialized_size_key_px4_msgs__msg__FailsafeFlags(
     current_alignment += array_size * sizeof(uint8_t);
   }
 
-  // Field name: geofence_breached
+  // Field name: primary_geofence_breached
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint8_t);
@@ -1912,13 +1874,6 @@ size_t max_serialized_size_key_px4_msgs__msg__FailsafeFlags(
   }
 
   // Field name: local_position_accuracy_low
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
-  // Field name: navigator_failure
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint8_t);

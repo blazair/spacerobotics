@@ -25,9 +25,6 @@ px4_msgs__msg__AirspeedValidated__init(px4_msgs__msg__AirspeedValidated * msg)
   // true_ground_minus_wind_m_s
   // airspeed_sensor_measurement_valid
   // selected_airspeed_index
-  // airspeed_derivative_filtered
-  // throttle_filtered
-  // pitch_filtered
   return true;
 }
 
@@ -45,9 +42,6 @@ px4_msgs__msg__AirspeedValidated__fini(px4_msgs__msg__AirspeedValidated * msg)
   // true_ground_minus_wind_m_s
   // airspeed_sensor_measurement_valid
   // selected_airspeed_index
-  // airspeed_derivative_filtered
-  // throttle_filtered
-  // pitch_filtered
 }
 
 bool
@@ -88,18 +82,6 @@ px4_msgs__msg__AirspeedValidated__are_equal(const px4_msgs__msg__AirspeedValidat
   if (lhs->selected_airspeed_index != rhs->selected_airspeed_index) {
     return false;
   }
-  // airspeed_derivative_filtered
-  if (lhs->airspeed_derivative_filtered != rhs->airspeed_derivative_filtered) {
-    return false;
-  }
-  // throttle_filtered
-  if (lhs->throttle_filtered != rhs->throttle_filtered) {
-    return false;
-  }
-  // pitch_filtered
-  if (lhs->pitch_filtered != rhs->pitch_filtered) {
-    return false;
-  }
   return true;
 }
 
@@ -127,12 +109,6 @@ px4_msgs__msg__AirspeedValidated__copy(
   output->airspeed_sensor_measurement_valid = input->airspeed_sensor_measurement_valid;
   // selected_airspeed_index
   output->selected_airspeed_index = input->selected_airspeed_index;
-  // airspeed_derivative_filtered
-  output->airspeed_derivative_filtered = input->airspeed_derivative_filtered;
-  // throttle_filtered
-  output->throttle_filtered = input->throttle_filtered;
-  // pitch_filtered
-  output->pitch_filtered = input->pitch_filtered;
   return true;
 }
 

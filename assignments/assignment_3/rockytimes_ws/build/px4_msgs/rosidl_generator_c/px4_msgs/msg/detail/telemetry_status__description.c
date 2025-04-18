@@ -11,10 +11,10 @@ px4_msgs__msg__TelemetryStatus__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x49, 0x9c, 0x3a, 0xca, 0x7b, 0x08, 0x4d, 0x83,
-      0xb7, 0xd5, 0xbb, 0x8b, 0xa9, 0xc2, 0xb1, 0x75,
-      0xf5, 0x42, 0x10, 0x44, 0x65, 0xbd, 0x4d, 0x3e,
-      0xb4, 0x0d, 0xd8, 0x21, 0xb4, 0x9f, 0xde, 0x23,
+      0x02, 0x7e, 0xac, 0xd8, 0xa1, 0xd1, 0xdb, 0x2d,
+      0x82, 0x4b, 0x4d, 0x27, 0x09, 0x0a, 0xfd, 0x8e,
+      0xdf, 0xeb, 0xf4, 0x4f, 0x5e, 0xf6, 0x27, 0x66,
+      0x90, 0x8e, 0xf3, 0xc3, 0x1f, 0x91, 0x05, 0x63,
     }};
   return &hash;
 }
@@ -63,10 +63,12 @@ static char px4_msgs__msg__TelemetryStatus__FIELD_NAME__heartbeat_type_open_dron
 static char px4_msgs__msg__TelemetryStatus__FIELD_NAME__heartbeat_component_telemetry_radio[] = "heartbeat_component_telemetry_radio";
 static char px4_msgs__msg__TelemetryStatus__FIELD_NAME__heartbeat_component_log[] = "heartbeat_component_log";
 static char px4_msgs__msg__TelemetryStatus__FIELD_NAME__heartbeat_component_osd[] = "heartbeat_component_osd";
+static char px4_msgs__msg__TelemetryStatus__FIELD_NAME__heartbeat_component_obstacle_avoidance[] = "heartbeat_component_obstacle_avoidance";
 static char px4_msgs__msg__TelemetryStatus__FIELD_NAME__heartbeat_component_vio[] = "heartbeat_component_vio";
 static char px4_msgs__msg__TelemetryStatus__FIELD_NAME__heartbeat_component_pairing_manager[] = "heartbeat_component_pairing_manager";
 static char px4_msgs__msg__TelemetryStatus__FIELD_NAME__heartbeat_component_udp_bridge[] = "heartbeat_component_udp_bridge";
 static char px4_msgs__msg__TelemetryStatus__FIELD_NAME__heartbeat_component_uart_bridge[] = "heartbeat_component_uart_bridge";
+static char px4_msgs__msg__TelemetryStatus__FIELD_NAME__avoidance_system_healthy[] = "avoidance_system_healthy";
 static char px4_msgs__msg__TelemetryStatus__FIELD_NAME__open_drone_id_system_healthy[] = "open_drone_id_system_healthy";
 static char px4_msgs__msg__TelemetryStatus__FIELD_NAME__parachute_system_healthy[] = "parachute_system_healthy";
 
@@ -392,6 +394,16 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__TelemetryStatus_
     {NULL, 0, 0},
   },
   {
+    {px4_msgs__msg__TelemetryStatus__FIELD_NAME__heartbeat_component_obstacle_avoidance, 38, 38},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
     {px4_msgs__msg__TelemetryStatus__FIELD_NAME__heartbeat_component_vio, 23, 23},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
@@ -432,6 +444,16 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__TelemetryStatus_
     {NULL, 0, 0},
   },
   {
+    {px4_msgs__msg__TelemetryStatus__FIELD_NAME__avoidance_system_healthy, 24, 24},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
     {px4_msgs__msg__TelemetryStatus__FIELD_NAME__open_drone_id_system_healthy, 28, 28},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
@@ -462,7 +484,7 @@ px4_msgs__msg__TelemetryStatus__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {px4_msgs__msg__TelemetryStatus__TYPE_NAME, 28, 28},
-      {px4_msgs__msg__TelemetryStatus__FIELDS, 38, 38},
+      {px4_msgs__msg__TelemetryStatus__FIELDS, 40, 40},
     },
     {NULL, 0, 0},
   };
@@ -526,12 +548,14 @@ static char toplevel_type_raw_source[] =
   "bool heartbeat_component_telemetry_radio    # MAV_COMP_ID_TELEMETRY_RADIO\n"
   "bool heartbeat_component_log                # MAV_COMP_ID_LOG\n"
   "bool heartbeat_component_osd                # MAV_COMP_ID_OSD\n"
+  "bool heartbeat_component_obstacle_avoidance # MAV_COMP_ID_OBSTACLE_AVOIDANCE\n"
   "bool heartbeat_component_vio                # MAV_COMP_ID_VISUAL_INERTIAL_ODOMETRY\n"
   "bool heartbeat_component_pairing_manager    # MAV_COMP_ID_PAIRING_MANAGER\n"
   "bool heartbeat_component_udp_bridge         # MAV_COMP_ID_UDP_BRIDGE\n"
   "bool heartbeat_component_uart_bridge        # MAV_COMP_ID_UART_BRIDGE\n"
   "\n"
   "# Misc component health\n"
+  "bool avoidance_system_healthy\n"
   "bool open_drone_id_system_healthy\n"
   "bool parachute_system_healthy";
 
@@ -547,7 +571,7 @@ px4_msgs__msg__TelemetryStatus__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__TelemetryStatus__TYPE_NAME, 28, 28},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 2400, 2400},
+    {toplevel_type_raw_source, 2507, 2507},
   };
   return &source;
 }

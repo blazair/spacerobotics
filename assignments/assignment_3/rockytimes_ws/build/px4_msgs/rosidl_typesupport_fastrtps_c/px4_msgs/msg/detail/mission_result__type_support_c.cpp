@@ -53,19 +53,9 @@ bool cdr_serialize_px4_msgs__msg__MissionResult(
     cdr << ros_message->timestamp;
   }
 
-  // Field name: mission_id
+  // Field name: instance_count
   {
-    cdr << ros_message->mission_id;
-  }
-
-  // Field name: geofence_id
-  {
-    cdr << ros_message->geofence_id;
-  }
-
-  // Field name: home_position_counter
-  {
-    cdr << ros_message->home_position_counter;
+    cdr << ros_message->instance_count;
   }
 
   // Field name: seq_reached
@@ -136,19 +126,9 @@ bool cdr_deserialize_px4_msgs__msg__MissionResult(
     cdr >> ros_message->timestamp;
   }
 
-  // Field name: mission_id
+  // Field name: instance_count
   {
-    cdr >> ros_message->mission_id;
-  }
-
-  // Field name: geofence_id
-  {
-    cdr >> ros_message->geofence_id;
-  }
-
-  // Field name: home_position_counter
-  {
-    cdr >> ros_message->home_position_counter;
+    cdr >> ros_message->instance_count;
   }
 
   // Field name: seq_reached
@@ -241,23 +221,9 @@ size_t get_serialized_size_px4_msgs__msg__MissionResult(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: mission_id
+  // Field name: instance_count
   {
-    size_t item_size = sizeof(ros_message->mission_id);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: geofence_id
-  {
-    size_t item_size = sizeof(ros_message->geofence_id);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: home_position_counter
-  {
-    size_t item_size = sizeof(ros_message->home_position_counter);
+    size_t item_size = sizeof(ros_message->instance_count);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -369,23 +335,7 @@ size_t max_serialized_size_px4_msgs__msg__MissionResult(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
-  // Field name: mission_id
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Field name: geofence_id
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Field name: home_position_counter
+  // Field name: instance_count
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint32_t);
@@ -501,19 +451,9 @@ bool cdr_serialize_key_px4_msgs__msg__MissionResult(
     cdr << ros_message->timestamp;
   }
 
-  // Field name: mission_id
+  // Field name: instance_count
   {
-    cdr << ros_message->mission_id;
-  }
-
-  // Field name: geofence_id
-  {
-    cdr << ros_message->geofence_id;
-  }
-
-  // Field name: home_position_counter
-  {
-    cdr << ros_message->home_position_counter;
+    cdr << ros_message->instance_count;
   }
 
   // Field name: seq_reached
@@ -596,23 +536,9 @@ size_t get_serialized_size_key_px4_msgs__msg__MissionResult(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: mission_id
+  // Field name: instance_count
   {
-    size_t item_size = sizeof(ros_message->mission_id);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: geofence_id
-  {
-    size_t item_size = sizeof(ros_message->geofence_id);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: home_position_counter
-  {
-    size_t item_size = sizeof(ros_message->home_position_counter);
+    size_t item_size = sizeof(ros_message->instance_count);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -722,23 +648,7 @@ size_t max_serialized_size_key_px4_msgs__msg__MissionResult(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
-  // Field name: mission_id
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Field name: geofence_id
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Field name: home_position_counter
+  // Field name: instance_count
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint32_t);

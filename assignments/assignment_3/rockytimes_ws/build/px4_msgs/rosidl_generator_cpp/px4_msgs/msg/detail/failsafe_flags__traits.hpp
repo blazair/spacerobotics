@@ -231,10 +231,10 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
-  // member: geofence_breached
+  // member: primary_geofence_breached
   {
-    out << "geofence_breached: ";
-    rosidl_generator_traits::value_to_yaml(msg.geofence_breached, out);
+    out << "primary_geofence_breached: ";
+    rosidl_generator_traits::value_to_yaml(msg.primary_geofence_breached, out);
     out << ", ";
   }
 
@@ -270,13 +270,6 @@ inline void to_flow_style_yaml(
   {
     out << "local_position_accuracy_low: ";
     rosidl_generator_traits::value_to_yaml(msg.local_position_accuracy_low, out);
-    out << ", ";
-  }
-
-  // member: navigator_failure
-  {
-    out << "navigator_failure: ";
-    rosidl_generator_traits::value_to_yaml(msg.navigator_failure, out);
     out << ", ";
   }
 
@@ -603,13 +596,13 @@ inline void to_block_style_yaml(
     out << "\n";
   }
 
-  // member: geofence_breached
+  // member: primary_geofence_breached
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "geofence_breached: ";
-    rosidl_generator_traits::value_to_yaml(msg.geofence_breached, out);
+    out << "primary_geofence_breached: ";
+    rosidl_generator_traits::value_to_yaml(msg.primary_geofence_breached, out);
     out << "\n";
   }
 
@@ -660,16 +653,6 @@ inline void to_block_style_yaml(
     }
     out << "local_position_accuracy_low: ";
     rosidl_generator_traits::value_to_yaml(msg.local_position_accuracy_low, out);
-    out << "\n";
-  }
-
-  // member: navigator_failure
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "navigator_failure: ";
-    rosidl_generator_traits::value_to_yaml(msg.navigator_failure, out);
     out << "\n";
   }
 

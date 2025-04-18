@@ -19,12 +19,6 @@ extern "C"
 
 // Constants defined in the message
 
-/// Constant 'MESSAGE_VERSION'.
-enum
-{
-  px4_msgs__msg__TrajectorySetpoint__MESSAGE_VERSION = 0ul
-};
-
 /// Struct defined in msg/TrajectorySetpoint in the package px4_msgs.
 /**
   * Trajectory setpoint in NED frame

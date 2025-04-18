@@ -84,7 +84,17 @@
           "default_value": ""
         },
         {
-          "name": "hdg_test_ratio",
+          "name": "innovation_check_flags",
+          "type": {
+            "type_id": 5,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "mag_test_ratio",
           "type": {
             "type_id": 10,
             "capacity": 0,
@@ -234,26 +244,6 @@
           "default_value": ""
         },
         {
-          "name": "pre_flt_fail_innov_height",
-          "type": {
-            "type_id": 15,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "pre_flt_fail_innov_pos_horiz",
-          "type": {
-            "type_id": 15,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
           "name": "pre_flt_fail_innov_vel_horiz",
           "type": {
             "type_id": 15,
@@ -265,6 +255,16 @@
         },
         {
           "name": "pre_flt_fail_innov_vel_vert",
+          "type": {
+            "type_id": 15,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "pre_flt_fail_innov_height",
           "type": {
             "type_id": 15,
             "capacity": 0,
@@ -342,46 +342,6 @@
             "nested_type_name": ""
           },
           "default_value": ""
-        },
-        {
-          "name": "mag_inclination_deg",
-          "type": {
-            "type_id": 10,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "mag_inclination_ref_deg",
-          "type": {
-            "type_id": 10,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "mag_strength_gs",
-          "type": {
-            "type_id": 10,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "mag_strength_ref_gs",
-          "type": {
-            "type_id": 10,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
         }
       ]
     },
@@ -390,7 +350,7 @@
   "type_hashes": [
     {
       "type_name": "px4_msgs/msg/EstimatorStatus",
-      "hash_string": "RIHS01_11f432e77e7396c6ccf0c64d6556809b1e9aec4cf4812bcb569913792ce9965b"
+      "hash_string": "RIHS01_717331cbd4e0fc998740a70ebc398913dde280a26236b5277f34f38ded342536"
     }
   ]
 }

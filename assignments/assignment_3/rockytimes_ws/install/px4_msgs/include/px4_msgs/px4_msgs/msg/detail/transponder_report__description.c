@@ -269,7 +269,7 @@ static char toplevel_type_raw_source[] =
   "uint16 ADSB_EMITTER_TYPE_POINT_OBSTACLE=19\n"
   "uint16 ADSB_EMITTER_TYPE_ENUM_END=20\n"
   "\n"
-  "uint8 ORB_QUEUE_LENGTH = 16";
+  "uint8 ORB_QUEUE_LENGTH = 8";
 
 static char msg_encoding[] = "msg";
 
@@ -283,7 +283,7 @@ px4_msgs__msg__TransponderReport__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__TransponderReport__TYPE_NAME, 30, 30},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 1956, 1956},
+    {toplevel_type_raw_source, 1955, 1955},
   };
   return &source;
 }

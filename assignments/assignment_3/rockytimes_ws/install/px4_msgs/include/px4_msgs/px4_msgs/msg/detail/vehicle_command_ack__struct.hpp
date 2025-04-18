@@ -89,7 +89,7 @@ struct VehicleCommandAck_
     uint8_t;
   _target_system_type target_system;
   using _target_component_type =
-    uint16_t;
+    uint8_t;
   _target_component_type target_component;
   using _from_external_type =
     bool;
@@ -133,7 +133,7 @@ struct VehicleCommandAck_
     return *this;
   }
   Type & set__target_component(
-    const uint16_t & _arg)
+    const uint8_t & _arg)
   {
     this->target_component = _arg;
     return *this;
@@ -146,8 +146,6 @@ struct VehicleCommandAck_
   }
 
   // constant declarations
-  static constexpr uint32_t MESSAGE_VERSION =
-    0u;
   static constexpr uint8_t VEHICLE_CMD_RESULT_ACCEPTED =
     0u;
   static constexpr uint8_t VEHICLE_CMD_RESULT_TEMPORARILY_REJECTED =
@@ -254,11 +252,6 @@ using VehicleCommandAck =
   px4_msgs::msg::VehicleCommandAck_<std::allocator<void>>;
 
 // constant definitions
-#if __cplusplus < 201703L
-// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
-template<typename ContainerAllocator>
-constexpr uint32_t VehicleCommandAck_<ContainerAllocator>::MESSAGE_VERSION;
-#endif  // __cplusplus < 201703L
 #if __cplusplus < 201703L
 // static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>

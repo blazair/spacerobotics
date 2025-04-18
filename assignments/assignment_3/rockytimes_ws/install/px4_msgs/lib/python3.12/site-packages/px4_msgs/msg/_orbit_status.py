@@ -34,7 +34,6 @@ class Metaclass_OrbitStatus(type):
         'ORBIT_YAW_BEHAVIOUR_UNCONTROLLED': 2,
         'ORBIT_YAW_BEHAVIOUR_HOLD_FRONT_TANGENT_TO_CIRCLE': 3,
         'ORBIT_YAW_BEHAVIOUR_RC_CONTROLLED': 4,
-        'ORBIT_YAW_BEHAVIOUR_UNCHANGED': 5,
     }
 
     @classmethod
@@ -68,7 +67,6 @@ class Metaclass_OrbitStatus(type):
             'ORBIT_YAW_BEHAVIOUR_UNCONTROLLED': cls.__constants['ORBIT_YAW_BEHAVIOUR_UNCONTROLLED'],
             'ORBIT_YAW_BEHAVIOUR_HOLD_FRONT_TANGENT_TO_CIRCLE': cls.__constants['ORBIT_YAW_BEHAVIOUR_HOLD_FRONT_TANGENT_TO_CIRCLE'],
             'ORBIT_YAW_BEHAVIOUR_RC_CONTROLLED': cls.__constants['ORBIT_YAW_BEHAVIOUR_RC_CONTROLLED'],
-            'ORBIT_YAW_BEHAVIOUR_UNCHANGED': cls.__constants['ORBIT_YAW_BEHAVIOUR_UNCHANGED'],
         }
 
     @property
@@ -96,11 +94,6 @@ class Metaclass_OrbitStatus(type):
         """Message constant 'ORBIT_YAW_BEHAVIOUR_RC_CONTROLLED'."""
         return Metaclass_OrbitStatus.__constants['ORBIT_YAW_BEHAVIOUR_RC_CONTROLLED']
 
-    @property
-    def ORBIT_YAW_BEHAVIOUR_UNCHANGED(self):
-        """Message constant 'ORBIT_YAW_BEHAVIOUR_UNCHANGED'."""
-        return Metaclass_OrbitStatus.__constants['ORBIT_YAW_BEHAVIOUR_UNCHANGED']
-
 
 class OrbitStatus(metaclass=Metaclass_OrbitStatus):
     """
@@ -112,7 +105,6 @@ class OrbitStatus(metaclass=Metaclass_OrbitStatus):
       ORBIT_YAW_BEHAVIOUR_UNCONTROLLED
       ORBIT_YAW_BEHAVIOUR_HOLD_FRONT_TANGENT_TO_CIRCLE
       ORBIT_YAW_BEHAVIOUR_RC_CONTROLLED
-      ORBIT_YAW_BEHAVIOUR_UNCHANGED
     """
 
     __slots__ = [

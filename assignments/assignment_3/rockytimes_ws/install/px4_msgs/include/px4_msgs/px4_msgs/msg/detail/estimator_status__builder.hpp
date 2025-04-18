@@ -24,80 +24,16 @@ namespace msg
 namespace builder
 {
 
-class Init_EstimatorStatus_mag_strength_ref_gs
-{
-public:
-  explicit Init_EstimatorStatus_mag_strength_ref_gs(::px4_msgs::msg::EstimatorStatus & msg)
-  : msg_(msg)
-  {}
-  ::px4_msgs::msg::EstimatorStatus mag_strength_ref_gs(::px4_msgs::msg::EstimatorStatus::_mag_strength_ref_gs_type arg)
-  {
-    msg_.mag_strength_ref_gs = std::move(arg);
-    return std::move(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::EstimatorStatus msg_;
-};
-
-class Init_EstimatorStatus_mag_strength_gs
-{
-public:
-  explicit Init_EstimatorStatus_mag_strength_gs(::px4_msgs::msg::EstimatorStatus & msg)
-  : msg_(msg)
-  {}
-  Init_EstimatorStatus_mag_strength_ref_gs mag_strength_gs(::px4_msgs::msg::EstimatorStatus::_mag_strength_gs_type arg)
-  {
-    msg_.mag_strength_gs = std::move(arg);
-    return Init_EstimatorStatus_mag_strength_ref_gs(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::EstimatorStatus msg_;
-};
-
-class Init_EstimatorStatus_mag_inclination_ref_deg
-{
-public:
-  explicit Init_EstimatorStatus_mag_inclination_ref_deg(::px4_msgs::msg::EstimatorStatus & msg)
-  : msg_(msg)
-  {}
-  Init_EstimatorStatus_mag_strength_gs mag_inclination_ref_deg(::px4_msgs::msg::EstimatorStatus::_mag_inclination_ref_deg_type arg)
-  {
-    msg_.mag_inclination_ref_deg = std::move(arg);
-    return Init_EstimatorStatus_mag_strength_gs(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::EstimatorStatus msg_;
-};
-
-class Init_EstimatorStatus_mag_inclination_deg
-{
-public:
-  explicit Init_EstimatorStatus_mag_inclination_deg(::px4_msgs::msg::EstimatorStatus & msg)
-  : msg_(msg)
-  {}
-  Init_EstimatorStatus_mag_inclination_ref_deg mag_inclination_deg(::px4_msgs::msg::EstimatorStatus::_mag_inclination_deg_type arg)
-  {
-    msg_.mag_inclination_deg = std::move(arg);
-    return Init_EstimatorStatus_mag_inclination_ref_deg(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::EstimatorStatus msg_;
-};
-
 class Init_EstimatorStatus_timeout_flags
 {
 public:
   explicit Init_EstimatorStatus_timeout_flags(::px4_msgs::msg::EstimatorStatus & msg)
   : msg_(msg)
   {}
-  Init_EstimatorStatus_mag_inclination_deg timeout_flags(::px4_msgs::msg::EstimatorStatus::_timeout_flags_type arg)
+  ::px4_msgs::msg::EstimatorStatus timeout_flags(::px4_msgs::msg::EstimatorStatus::_timeout_flags_type arg)
   {
     msg_.timeout_flags = std::move(arg);
-    return Init_EstimatorStatus_mag_inclination_deg(msg_);
+    return std::move(msg_);
   }
 
 private:
@@ -200,16 +136,32 @@ private:
   ::px4_msgs::msg::EstimatorStatus msg_;
 };
 
+class Init_EstimatorStatus_pre_flt_fail_innov_height
+{
+public:
+  explicit Init_EstimatorStatus_pre_flt_fail_innov_height(::px4_msgs::msg::EstimatorStatus & msg)
+  : msg_(msg)
+  {}
+  Init_EstimatorStatus_pre_flt_fail_mag_field_disturbed pre_flt_fail_innov_height(::px4_msgs::msg::EstimatorStatus::_pre_flt_fail_innov_height_type arg)
+  {
+    msg_.pre_flt_fail_innov_height = std::move(arg);
+    return Init_EstimatorStatus_pre_flt_fail_mag_field_disturbed(msg_);
+  }
+
+private:
+  ::px4_msgs::msg::EstimatorStatus msg_;
+};
+
 class Init_EstimatorStatus_pre_flt_fail_innov_vel_vert
 {
 public:
   explicit Init_EstimatorStatus_pre_flt_fail_innov_vel_vert(::px4_msgs::msg::EstimatorStatus & msg)
   : msg_(msg)
   {}
-  Init_EstimatorStatus_pre_flt_fail_mag_field_disturbed pre_flt_fail_innov_vel_vert(::px4_msgs::msg::EstimatorStatus::_pre_flt_fail_innov_vel_vert_type arg)
+  Init_EstimatorStatus_pre_flt_fail_innov_height pre_flt_fail_innov_vel_vert(::px4_msgs::msg::EstimatorStatus::_pre_flt_fail_innov_vel_vert_type arg)
   {
     msg_.pre_flt_fail_innov_vel_vert = std::move(arg);
-    return Init_EstimatorStatus_pre_flt_fail_mag_field_disturbed(msg_);
+    return Init_EstimatorStatus_pre_flt_fail_innov_height(msg_);
   }
 
 private:
@@ -232,48 +184,16 @@ private:
   ::px4_msgs::msg::EstimatorStatus msg_;
 };
 
-class Init_EstimatorStatus_pre_flt_fail_innov_pos_horiz
-{
-public:
-  explicit Init_EstimatorStatus_pre_flt_fail_innov_pos_horiz(::px4_msgs::msg::EstimatorStatus & msg)
-  : msg_(msg)
-  {}
-  Init_EstimatorStatus_pre_flt_fail_innov_vel_horiz pre_flt_fail_innov_pos_horiz(::px4_msgs::msg::EstimatorStatus::_pre_flt_fail_innov_pos_horiz_type arg)
-  {
-    msg_.pre_flt_fail_innov_pos_horiz = std::move(arg);
-    return Init_EstimatorStatus_pre_flt_fail_innov_vel_horiz(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::EstimatorStatus msg_;
-};
-
-class Init_EstimatorStatus_pre_flt_fail_innov_height
-{
-public:
-  explicit Init_EstimatorStatus_pre_flt_fail_innov_height(::px4_msgs::msg::EstimatorStatus & msg)
-  : msg_(msg)
-  {}
-  Init_EstimatorStatus_pre_flt_fail_innov_pos_horiz pre_flt_fail_innov_height(::px4_msgs::msg::EstimatorStatus::_pre_flt_fail_innov_height_type arg)
-  {
-    msg_.pre_flt_fail_innov_height = std::move(arg);
-    return Init_EstimatorStatus_pre_flt_fail_innov_pos_horiz(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::EstimatorStatus msg_;
-};
-
 class Init_EstimatorStatus_pre_flt_fail_innov_heading
 {
 public:
   explicit Init_EstimatorStatus_pre_flt_fail_innov_heading(::px4_msgs::msg::EstimatorStatus & msg)
   : msg_(msg)
   {}
-  Init_EstimatorStatus_pre_flt_fail_innov_height pre_flt_fail_innov_heading(::px4_msgs::msg::EstimatorStatus::_pre_flt_fail_innov_heading_type arg)
+  Init_EstimatorStatus_pre_flt_fail_innov_vel_horiz pre_flt_fail_innov_heading(::px4_msgs::msg::EstimatorStatus::_pre_flt_fail_innov_heading_type arg)
   {
     msg_.pre_flt_fail_innov_heading = std::move(arg);
-    return Init_EstimatorStatus_pre_flt_fail_innov_height(msg_);
+    return Init_EstimatorStatus_pre_flt_fail_innov_vel_horiz(msg_);
   }
 
 private:
@@ -488,16 +408,32 @@ private:
   ::px4_msgs::msg::EstimatorStatus msg_;
 };
 
-class Init_EstimatorStatus_hdg_test_ratio
+class Init_EstimatorStatus_mag_test_ratio
 {
 public:
-  explicit Init_EstimatorStatus_hdg_test_ratio(::px4_msgs::msg::EstimatorStatus & msg)
+  explicit Init_EstimatorStatus_mag_test_ratio(::px4_msgs::msg::EstimatorStatus & msg)
   : msg_(msg)
   {}
-  Init_EstimatorStatus_vel_test_ratio hdg_test_ratio(::px4_msgs::msg::EstimatorStatus::_hdg_test_ratio_type arg)
+  Init_EstimatorStatus_vel_test_ratio mag_test_ratio(::px4_msgs::msg::EstimatorStatus::_mag_test_ratio_type arg)
   {
-    msg_.hdg_test_ratio = std::move(arg);
+    msg_.mag_test_ratio = std::move(arg);
     return Init_EstimatorStatus_vel_test_ratio(msg_);
+  }
+
+private:
+  ::px4_msgs::msg::EstimatorStatus msg_;
+};
+
+class Init_EstimatorStatus_innovation_check_flags
+{
+public:
+  explicit Init_EstimatorStatus_innovation_check_flags(::px4_msgs::msg::EstimatorStatus & msg)
+  : msg_(msg)
+  {}
+  Init_EstimatorStatus_mag_test_ratio innovation_check_flags(::px4_msgs::msg::EstimatorStatus::_innovation_check_flags_type arg)
+  {
+    msg_.innovation_check_flags = std::move(arg);
+    return Init_EstimatorStatus_mag_test_ratio(msg_);
   }
 
 private:
@@ -510,10 +446,10 @@ public:
   explicit Init_EstimatorStatus_pos_vert_accuracy(::px4_msgs::msg::EstimatorStatus & msg)
   : msg_(msg)
   {}
-  Init_EstimatorStatus_hdg_test_ratio pos_vert_accuracy(::px4_msgs::msg::EstimatorStatus::_pos_vert_accuracy_type arg)
+  Init_EstimatorStatus_innovation_check_flags pos_vert_accuracy(::px4_msgs::msg::EstimatorStatus::_pos_vert_accuracy_type arg)
   {
     msg_.pos_vert_accuracy = std::move(arg);
-    return Init_EstimatorStatus_hdg_test_ratio(msg_);
+    return Init_EstimatorStatus_innovation_check_flags(msg_);
   }
 
 private:

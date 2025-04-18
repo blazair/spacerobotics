@@ -120,208 +120,16 @@ private:
   ::px4_msgs::msg::SensorCorrection msg_;
 };
 
-class Init_SensorCorrection_mag_offset_3
-{
-public:
-  explicit Init_SensorCorrection_mag_offset_3(::px4_msgs::msg::SensorCorrection & msg)
-  : msg_(msg)
-  {}
-  Init_SensorCorrection_baro_device_ids mag_offset_3(::px4_msgs::msg::SensorCorrection::_mag_offset_3_type arg)
-  {
-    msg_.mag_offset_3 = std::move(arg);
-    return Init_SensorCorrection_baro_device_ids(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::SensorCorrection msg_;
-};
-
-class Init_SensorCorrection_mag_offset_2
-{
-public:
-  explicit Init_SensorCorrection_mag_offset_2(::px4_msgs::msg::SensorCorrection & msg)
-  : msg_(msg)
-  {}
-  Init_SensorCorrection_mag_offset_3 mag_offset_2(::px4_msgs::msg::SensorCorrection::_mag_offset_2_type arg)
-  {
-    msg_.mag_offset_2 = std::move(arg);
-    return Init_SensorCorrection_mag_offset_3(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::SensorCorrection msg_;
-};
-
-class Init_SensorCorrection_mag_offset_1
-{
-public:
-  explicit Init_SensorCorrection_mag_offset_1(::px4_msgs::msg::SensorCorrection & msg)
-  : msg_(msg)
-  {}
-  Init_SensorCorrection_mag_offset_2 mag_offset_1(::px4_msgs::msg::SensorCorrection::_mag_offset_1_type arg)
-  {
-    msg_.mag_offset_1 = std::move(arg);
-    return Init_SensorCorrection_mag_offset_2(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::SensorCorrection msg_;
-};
-
-class Init_SensorCorrection_mag_offset_0
-{
-public:
-  explicit Init_SensorCorrection_mag_offset_0(::px4_msgs::msg::SensorCorrection & msg)
-  : msg_(msg)
-  {}
-  Init_SensorCorrection_mag_offset_1 mag_offset_0(::px4_msgs::msg::SensorCorrection::_mag_offset_0_type arg)
-  {
-    msg_.mag_offset_0 = std::move(arg);
-    return Init_SensorCorrection_mag_offset_1(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::SensorCorrection msg_;
-};
-
-class Init_SensorCorrection_mag_temperature
-{
-public:
-  explicit Init_SensorCorrection_mag_temperature(::px4_msgs::msg::SensorCorrection & msg)
-  : msg_(msg)
-  {}
-  Init_SensorCorrection_mag_offset_0 mag_temperature(::px4_msgs::msg::SensorCorrection::_mag_temperature_type arg)
-  {
-    msg_.mag_temperature = std::move(arg);
-    return Init_SensorCorrection_mag_offset_0(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::SensorCorrection msg_;
-};
-
-class Init_SensorCorrection_mag_device_ids
-{
-public:
-  explicit Init_SensorCorrection_mag_device_ids(::px4_msgs::msg::SensorCorrection & msg)
-  : msg_(msg)
-  {}
-  Init_SensorCorrection_mag_temperature mag_device_ids(::px4_msgs::msg::SensorCorrection::_mag_device_ids_type arg)
-  {
-    msg_.mag_device_ids = std::move(arg);
-    return Init_SensorCorrection_mag_temperature(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::SensorCorrection msg_;
-};
-
-class Init_SensorCorrection_gyro_offset_3
-{
-public:
-  explicit Init_SensorCorrection_gyro_offset_3(::px4_msgs::msg::SensorCorrection & msg)
-  : msg_(msg)
-  {}
-  Init_SensorCorrection_mag_device_ids gyro_offset_3(::px4_msgs::msg::SensorCorrection::_gyro_offset_3_type arg)
-  {
-    msg_.gyro_offset_3 = std::move(arg);
-    return Init_SensorCorrection_mag_device_ids(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::SensorCorrection msg_;
-};
-
-class Init_SensorCorrection_gyro_offset_2
-{
-public:
-  explicit Init_SensorCorrection_gyro_offset_2(::px4_msgs::msg::SensorCorrection & msg)
-  : msg_(msg)
-  {}
-  Init_SensorCorrection_gyro_offset_3 gyro_offset_2(::px4_msgs::msg::SensorCorrection::_gyro_offset_2_type arg)
-  {
-    msg_.gyro_offset_2 = std::move(arg);
-    return Init_SensorCorrection_gyro_offset_3(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::SensorCorrection msg_;
-};
-
-class Init_SensorCorrection_gyro_offset_1
-{
-public:
-  explicit Init_SensorCorrection_gyro_offset_1(::px4_msgs::msg::SensorCorrection & msg)
-  : msg_(msg)
-  {}
-  Init_SensorCorrection_gyro_offset_2 gyro_offset_1(::px4_msgs::msg::SensorCorrection::_gyro_offset_1_type arg)
-  {
-    msg_.gyro_offset_1 = std::move(arg);
-    return Init_SensorCorrection_gyro_offset_2(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::SensorCorrection msg_;
-};
-
-class Init_SensorCorrection_gyro_offset_0
-{
-public:
-  explicit Init_SensorCorrection_gyro_offset_0(::px4_msgs::msg::SensorCorrection & msg)
-  : msg_(msg)
-  {}
-  Init_SensorCorrection_gyro_offset_1 gyro_offset_0(::px4_msgs::msg::SensorCorrection::_gyro_offset_0_type arg)
-  {
-    msg_.gyro_offset_0 = std::move(arg);
-    return Init_SensorCorrection_gyro_offset_1(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::SensorCorrection msg_;
-};
-
-class Init_SensorCorrection_gyro_temperature
-{
-public:
-  explicit Init_SensorCorrection_gyro_temperature(::px4_msgs::msg::SensorCorrection & msg)
-  : msg_(msg)
-  {}
-  Init_SensorCorrection_gyro_offset_0 gyro_temperature(::px4_msgs::msg::SensorCorrection::_gyro_temperature_type arg)
-  {
-    msg_.gyro_temperature = std::move(arg);
-    return Init_SensorCorrection_gyro_offset_0(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::SensorCorrection msg_;
-};
-
-class Init_SensorCorrection_gyro_device_ids
-{
-public:
-  explicit Init_SensorCorrection_gyro_device_ids(::px4_msgs::msg::SensorCorrection & msg)
-  : msg_(msg)
-  {}
-  Init_SensorCorrection_gyro_temperature gyro_device_ids(::px4_msgs::msg::SensorCorrection::_gyro_device_ids_type arg)
-  {
-    msg_.gyro_device_ids = std::move(arg);
-    return Init_SensorCorrection_gyro_temperature(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::SensorCorrection msg_;
-};
-
 class Init_SensorCorrection_accel_offset_3
 {
 public:
   explicit Init_SensorCorrection_accel_offset_3(::px4_msgs::msg::SensorCorrection & msg)
   : msg_(msg)
   {}
-  Init_SensorCorrection_gyro_device_ids accel_offset_3(::px4_msgs::msg::SensorCorrection::_accel_offset_3_type arg)
+  Init_SensorCorrection_baro_device_ids accel_offset_3(::px4_msgs::msg::SensorCorrection::_accel_offset_3_type arg)
   {
     msg_.accel_offset_3 = std::move(arg);
-    return Init_SensorCorrection_gyro_device_ids(msg_);
+    return Init_SensorCorrection_baro_device_ids(msg_);
   }
 
 private:
@@ -408,16 +216,112 @@ private:
   ::px4_msgs::msg::SensorCorrection msg_;
 };
 
+class Init_SensorCorrection_gyro_offset_3
+{
+public:
+  explicit Init_SensorCorrection_gyro_offset_3(::px4_msgs::msg::SensorCorrection & msg)
+  : msg_(msg)
+  {}
+  Init_SensorCorrection_accel_device_ids gyro_offset_3(::px4_msgs::msg::SensorCorrection::_gyro_offset_3_type arg)
+  {
+    msg_.gyro_offset_3 = std::move(arg);
+    return Init_SensorCorrection_accel_device_ids(msg_);
+  }
+
+private:
+  ::px4_msgs::msg::SensorCorrection msg_;
+};
+
+class Init_SensorCorrection_gyro_offset_2
+{
+public:
+  explicit Init_SensorCorrection_gyro_offset_2(::px4_msgs::msg::SensorCorrection & msg)
+  : msg_(msg)
+  {}
+  Init_SensorCorrection_gyro_offset_3 gyro_offset_2(::px4_msgs::msg::SensorCorrection::_gyro_offset_2_type arg)
+  {
+    msg_.gyro_offset_2 = std::move(arg);
+    return Init_SensorCorrection_gyro_offset_3(msg_);
+  }
+
+private:
+  ::px4_msgs::msg::SensorCorrection msg_;
+};
+
+class Init_SensorCorrection_gyro_offset_1
+{
+public:
+  explicit Init_SensorCorrection_gyro_offset_1(::px4_msgs::msg::SensorCorrection & msg)
+  : msg_(msg)
+  {}
+  Init_SensorCorrection_gyro_offset_2 gyro_offset_1(::px4_msgs::msg::SensorCorrection::_gyro_offset_1_type arg)
+  {
+    msg_.gyro_offset_1 = std::move(arg);
+    return Init_SensorCorrection_gyro_offset_2(msg_);
+  }
+
+private:
+  ::px4_msgs::msg::SensorCorrection msg_;
+};
+
+class Init_SensorCorrection_gyro_offset_0
+{
+public:
+  explicit Init_SensorCorrection_gyro_offset_0(::px4_msgs::msg::SensorCorrection & msg)
+  : msg_(msg)
+  {}
+  Init_SensorCorrection_gyro_offset_1 gyro_offset_0(::px4_msgs::msg::SensorCorrection::_gyro_offset_0_type arg)
+  {
+    msg_.gyro_offset_0 = std::move(arg);
+    return Init_SensorCorrection_gyro_offset_1(msg_);
+  }
+
+private:
+  ::px4_msgs::msg::SensorCorrection msg_;
+};
+
+class Init_SensorCorrection_gyro_temperature
+{
+public:
+  explicit Init_SensorCorrection_gyro_temperature(::px4_msgs::msg::SensorCorrection & msg)
+  : msg_(msg)
+  {}
+  Init_SensorCorrection_gyro_offset_0 gyro_temperature(::px4_msgs::msg::SensorCorrection::_gyro_temperature_type arg)
+  {
+    msg_.gyro_temperature = std::move(arg);
+    return Init_SensorCorrection_gyro_offset_0(msg_);
+  }
+
+private:
+  ::px4_msgs::msg::SensorCorrection msg_;
+};
+
+class Init_SensorCorrection_gyro_device_ids
+{
+public:
+  explicit Init_SensorCorrection_gyro_device_ids(::px4_msgs::msg::SensorCorrection & msg)
+  : msg_(msg)
+  {}
+  Init_SensorCorrection_gyro_temperature gyro_device_ids(::px4_msgs::msg::SensorCorrection::_gyro_device_ids_type arg)
+  {
+    msg_.gyro_device_ids = std::move(arg);
+    return Init_SensorCorrection_gyro_temperature(msg_);
+  }
+
+private:
+  ::px4_msgs::msg::SensorCorrection msg_;
+};
+
 class Init_SensorCorrection_timestamp
 {
 public:
   Init_SensorCorrection_timestamp()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_SensorCorrection_accel_device_ids timestamp(::px4_msgs::msg::SensorCorrection::_timestamp_type arg)
+  Init_SensorCorrection_gyro_device_ids timestamp(::px4_msgs::msg::SensorCorrection::_timestamp_type arg)
   {
     msg_.timestamp = std::move(arg);
-    return Init_SensorCorrection_accel_device_ids(msg_);
+    return Init_SensorCorrection_gyro_device_ids(msg_);
   }
 
 private:

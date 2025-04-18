@@ -100,13 +100,15 @@ px4_msgs__msg__GpsDump__get_type_description(
 
 static char toplevel_type_raw_source[] =
   "# This message is used to dump the raw gps communication to the log.\n"
+  "# Set the parameter GPS_DUMP_COMM to 1 to use this.\n"
   "\n"
-  "uint64 timestamp # time since system start (microseconds)\n"
+  "uint64 timestamp\\t\\t# time since system start (microseconds)\n"
   "\n"
-  "uint8 instance   # Instance of GNSS receiver\n"
-  "uint8 len        # length of data, MSB bit set = message to the gps device,\n"
-  "                 # clear = message from the device\n"
-  "uint8[79] data   # data to write to the log\n"
+  "uint8 instance \\t\\t# Instance of GNSS receiver\n"
+  "\n"
+  "uint8 len\\t\\t\\t# length of data, MSB bit set = message to the gps device,\n"
+  "\\t\\t\\t\\t# clear = message from the device\n"
+  "uint8[79] data\\t\\t# data to write to the log\n"
   "\n"
   "uint8 ORB_QUEUE_LENGTH = 8";
 
@@ -122,7 +124,7 @@ px4_msgs__msg__GpsDump__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__GpsDump__TYPE_NAME, 20, 20},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 373, 373},
+    {toplevel_type_raw_source, 408, 408},
   };
   return &source;
 }

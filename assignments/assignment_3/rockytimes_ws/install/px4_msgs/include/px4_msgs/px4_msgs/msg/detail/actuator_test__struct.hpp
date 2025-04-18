@@ -126,7 +126,7 @@ struct ActuatorTest_
   static constexpr uint8_t MAX_NUM_SERVOS =
     8u;
   static constexpr uint8_t ORB_QUEUE_LENGTH =
-    16u;
+    12u;
 
   // pointer types
   using RawPtr =

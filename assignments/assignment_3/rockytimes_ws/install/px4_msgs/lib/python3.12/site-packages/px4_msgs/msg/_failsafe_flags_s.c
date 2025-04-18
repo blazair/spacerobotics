@@ -311,13 +311,13 @@ bool px4_msgs__msg__failsafe_flags__convert_from_py(PyObject * _pymsg, void * _r
     ros_message->battery_unhealthy = (Py_True == field);
     Py_DECREF(field);
   }
-  {  // geofence_breached
-    PyObject * field = PyObject_GetAttrString(_pymsg, "geofence_breached");
+  {  // primary_geofence_breached
+    PyObject * field = PyObject_GetAttrString(_pymsg, "primary_geofence_breached");
     if (!field) {
       return false;
     }
     assert(PyBool_Check(field));
-    ros_message->geofence_breached = (Py_True == field);
+    ros_message->primary_geofence_breached = (Py_True == field);
     Py_DECREF(field);
   }
   {  // mission_failure
@@ -363,15 +363,6 @@ bool px4_msgs__msg__failsafe_flags__convert_from_py(PyObject * _pymsg, void * _r
     }
     assert(PyBool_Check(field));
     ros_message->local_position_accuracy_low = (Py_True == field);
-    Py_DECREF(field);
-  }
-  {  // navigator_failure
-    PyObject * field = PyObject_GetAttrString(_pymsg, "navigator_failure");
-    if (!field) {
-      return false;
-    }
-    assert(PyBool_Check(field));
-    ros_message->navigator_failure = (Py_True == field);
     Py_DECREF(field);
   }
   {  // fd_critical_failure
@@ -751,11 +742,11 @@ PyObject * px4_msgs__msg__failsafe_flags__convert_to_py(void * raw_ros_message)
       }
     }
   }
-  {  // geofence_breached
+  {  // primary_geofence_breached
     PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->geofence_breached ? 1 : 0);
+    field = PyBool_FromLong(ros_message->primary_geofence_breached ? 1 : 0);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "geofence_breached", field);
+      int rc = PyObject_SetAttrString(_pymessage, "primary_geofence_breached", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
@@ -811,17 +802,6 @@ PyObject * px4_msgs__msg__failsafe_flags__convert_to_py(void * raw_ros_message)
     field = PyBool_FromLong(ros_message->local_position_accuracy_low ? 1 : 0);
     {
       int rc = PyObject_SetAttrString(_pymessage, "local_position_accuracy_low", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // navigator_failure
-    PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->navigator_failure ? 1 : 0);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "navigator_failure", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

@@ -24,16 +24,6 @@
           "default_value": ""
         },
         {
-          "name": "voltage_payload_v",
-          "type": {
-            "type_id": 10,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
           "name": "sensors3v3",
           "type": {
             "type_id": 58,
@@ -132,16 +122,6 @@
             "nested_type_name": ""
           },
           "default_value": ""
-        },
-        {
-          "name": "payload_v_valid",
-          "type": {
-            "type_id": 3,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
         }
       ]
     },
@@ -150,7 +130,7 @@
   "type_hashes": [
     {
       "type_name": "px4_msgs/msg/SystemPower",
-      "hash_string": "RIHS01_0e21976e6f9e06e13ec0948198e084e05ba87767ffaaf9b2c3fdbcf29b222352"
+      "hash_string": "RIHS01_db596aed2f1d20296810ce545fecebc046a694b96ff4ab42f65c0b255df219c6"
     }
   ]
 }

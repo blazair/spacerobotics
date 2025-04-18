@@ -308,24 +308,6 @@ bool px4_msgs__msg__vehicle_local_position__convert_from_py(PyObject * _pymsg, v
     ros_message->heading = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
-  {  // heading_var
-    PyObject * field = PyObject_GetAttrString(_pymsg, "heading_var");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->heading_var = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
-  {  // unaided_heading
-    PyObject * field = PyObject_GetAttrString(_pymsg, "unaided_heading");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->unaided_heading = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
   {  // delta_heading
     PyObject * field = PyObject_GetAttrString(_pymsg, "delta_heading");
     if (!field) {
@@ -351,15 +333,6 @@ bool px4_msgs__msg__vehicle_local_position__convert_from_py(PyObject * _pymsg, v
     }
     assert(PyBool_Check(field));
     ros_message->heading_good_for_control = (Py_True == field);
-    Py_DECREF(field);
-  }
-  {  // tilt_var
-    PyObject * field = PyObject_GetAttrString(_pymsg, "tilt_var");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->tilt_var = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
   {  // xy_global
@@ -416,15 +389,6 @@ bool px4_msgs__msg__vehicle_local_position__convert_from_py(PyObject * _pymsg, v
     ros_message->ref_alt = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
-  {  // dist_bottom_valid
-    PyObject * field = PyObject_GetAttrString(_pymsg, "dist_bottom_valid");
-    if (!field) {
-      return false;
-    }
-    assert(PyBool_Check(field));
-    ros_message->dist_bottom_valid = (Py_True == field);
-    Py_DECREF(field);
-  }
   {  // dist_bottom
     PyObject * field = PyObject_GetAttrString(_pymsg, "dist_bottom");
     if (!field) {
@@ -434,31 +398,13 @@ bool px4_msgs__msg__vehicle_local_position__convert_from_py(PyObject * _pymsg, v
     ros_message->dist_bottom = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
-  {  // dist_bottom_var
-    PyObject * field = PyObject_GetAttrString(_pymsg, "dist_bottom_var");
+  {  // dist_bottom_valid
+    PyObject * field = PyObject_GetAttrString(_pymsg, "dist_bottom_valid");
     if (!field) {
       return false;
     }
-    assert(PyFloat_Check(field));
-    ros_message->dist_bottom_var = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
-  {  // delta_dist_bottom
-    PyObject * field = PyObject_GetAttrString(_pymsg, "delta_dist_bottom");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->delta_dist_bottom = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
-  {  // dist_bottom_reset_counter
-    PyObject * field = PyObject_GetAttrString(_pymsg, "dist_bottom_reset_counter");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->dist_bottom_reset_counter = (uint8_t)PyLong_AsUnsignedLong(field);
+    assert(PyBool_Check(field));
+    ros_message->dist_bottom_valid = (Py_True == field);
     Py_DECREF(field);
   }
   {  // dist_bottom_sensor_bitfield
@@ -542,22 +488,13 @@ bool px4_msgs__msg__vehicle_local_position__convert_from_py(PyObject * _pymsg, v
     ros_message->hagl_min = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
-  {  // hagl_max_z
-    PyObject * field = PyObject_GetAttrString(_pymsg, "hagl_max_z");
+  {  // hagl_max
+    PyObject * field = PyObject_GetAttrString(_pymsg, "hagl_max");
     if (!field) {
       return false;
     }
     assert(PyFloat_Check(field));
-    ros_message->hagl_max_z = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
-  {  // hagl_max_xy
-    PyObject * field = PyObject_GetAttrString(_pymsg, "hagl_max_xy");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->hagl_max_xy = (float)PyFloat_AS_DOUBLE(field);
+    ros_message->hagl_max = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
 
@@ -871,28 +808,6 @@ PyObject * px4_msgs__msg__vehicle_local_position__convert_to_py(void * raw_ros_m
       }
     }
   }
-  {  // heading_var
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->heading_var);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "heading_var", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // unaided_heading
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->unaided_heading);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "unaided_heading", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
   {  // delta_heading
     PyObject * field = NULL;
     field = PyFloat_FromDouble(ros_message->delta_heading);
@@ -920,17 +835,6 @@ PyObject * px4_msgs__msg__vehicle_local_position__convert_to_py(void * raw_ros_m
     field = PyBool_FromLong(ros_message->heading_good_for_control ? 1 : 0);
     {
       int rc = PyObject_SetAttrString(_pymessage, "heading_good_for_control", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // tilt_var
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->tilt_var);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "tilt_var", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
@@ -1003,17 +907,6 @@ PyObject * px4_msgs__msg__vehicle_local_position__convert_to_py(void * raw_ros_m
       }
     }
   }
-  {  // dist_bottom_valid
-    PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->dist_bottom_valid ? 1 : 0);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "dist_bottom_valid", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
   {  // dist_bottom
     PyObject * field = NULL;
     field = PyFloat_FromDouble(ros_message->dist_bottom);
@@ -1025,33 +918,11 @@ PyObject * px4_msgs__msg__vehicle_local_position__convert_to_py(void * raw_ros_m
       }
     }
   }
-  {  // dist_bottom_var
+  {  // dist_bottom_valid
     PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->dist_bottom_var);
+    field = PyBool_FromLong(ros_message->dist_bottom_valid ? 1 : 0);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "dist_bottom_var", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // delta_dist_bottom
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->delta_dist_bottom);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "delta_dist_bottom", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // dist_bottom_reset_counter
-    PyObject * field = NULL;
-    field = PyLong_FromUnsignedLong(ros_message->dist_bottom_reset_counter);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "dist_bottom_reset_counter", field);
+      int rc = PyObject_SetAttrString(_pymessage, "dist_bottom_valid", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
@@ -1157,22 +1028,11 @@ PyObject * px4_msgs__msg__vehicle_local_position__convert_to_py(void * raw_ros_m
       }
     }
   }
-  {  // hagl_max_z
+  {  // hagl_max
     PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->hagl_max_z);
+    field = PyFloat_FromDouble(ros_message->hagl_max);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "hagl_max_z", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // hagl_max_xy
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->hagl_max_xy);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "hagl_max_xy", field);
+      int rc = PyObject_SetAttrString(_pymessage, "hagl_max", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

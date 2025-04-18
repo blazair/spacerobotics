@@ -24,16 +24,6 @@
           "default_value": ""
         },
         {
-          "name": "airspeed_validated_timestamp_rel",
-          "type": {
-            "type_id": 4,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
           "name": "distance_sensor_timestamp_rel",
           "type": {
             "type_id": 4,
@@ -90,7 +80,7 @@
   "type_hashes": [
     {
       "type_name": "px4_msgs/msg/Ekf2Timestamps",
-      "hash_string": "RIHS01_5aceea904dd3e5614a8b4291690c29e44de4b7f5f6d0903a78dfa1e34befb9a7"
+      "hash_string": "RIHS01_d029460396534ffb699110da1b0b14767dea0e4ca5bfde1489a12731729e1671"
     }
   ]
 }

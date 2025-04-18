@@ -14,7 +14,7 @@
           "default_value": ""
         },
         {
-          "name": "rpm_estimate",
+          "name": "indicated_frequency_rpm",
           "type": {
             "type_id": 10,
             "capacity": 0,
@@ -24,7 +24,7 @@
           "default_value": ""
         },
         {
-          "name": "rpm_raw",
+          "name": "estimated_accurancy_rpm",
           "type": {
             "type_id": 10,
             "capacity": 0,
@@ -40,7 +40,7 @@
   "type_hashes": [
     {
       "type_name": "px4_msgs/msg/Rpm",
-      "hash_string": "RIHS01_31d1af67e5e0950a9cfedb1d95f58546ae6c756049f1fd108ed4fd33de4f3506"
+      "hash_string": "RIHS01_764350b0fffd1081f761c97a295c954ba13db9c6eba20a013127b7610627b4e5"
     }
   ]
 }

@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "rosidl_typesupport_interface/macros.h"
-#include "px4_msgs/msg/detail/vehicle_angular_velocity__type_support.h"
-#include "px4_msgs/msg/detail/vehicle_angular_velocity__functions.h"
 #include "px4_msgs/msg/detail/vehicle_angular_velocity__struct.h"
+#include "px4_msgs/msg/detail/vehicle_angular_velocity__type_support.h"
+#include "rosidl_typesupport_interface/macros.h"
+#include "px4_msgs/msg/detail/vehicle_angular_velocity__functions.h"
 
 #ifdef __cplusplus
 extern "C"

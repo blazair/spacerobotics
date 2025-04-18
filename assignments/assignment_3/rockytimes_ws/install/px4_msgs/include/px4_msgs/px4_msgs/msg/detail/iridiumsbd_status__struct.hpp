@@ -42,7 +42,7 @@ struct IridiumsbdStatus_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->timestamp = 0ull;
-      this->last_at_ok_timestamp = 0ull;
+      this->last_heartbeat = 0ull;
       this->tx_buf_write_index = 0;
       this->rx_buf_read_index = 0;
       this->rx_buf_end_index = 0;
@@ -66,7 +66,7 @@ struct IridiumsbdStatus_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->timestamp = 0ull;
-      this->last_at_ok_timestamp = 0ull;
+      this->last_heartbeat = 0ull;
       this->tx_buf_write_index = 0;
       this->rx_buf_read_index = 0;
       this->rx_buf_end_index = 0;
@@ -87,9 +87,9 @@ struct IridiumsbdStatus_
   using _timestamp_type =
     uint64_t;
   _timestamp_type timestamp;
-  using _last_at_ok_timestamp_type =
+  using _last_heartbeat_type =
     uint64_t;
-  _last_at_ok_timestamp_type last_at_ok_timestamp;
+  _last_heartbeat_type last_heartbeat;
   using _tx_buf_write_index_type =
     uint16_t;
   _tx_buf_write_index_type tx_buf_write_index;
@@ -137,10 +137,10 @@ struct IridiumsbdStatus_
     this->timestamp = _arg;
     return *this;
   }
-  Type & set__last_at_ok_timestamp(
+  Type & set__last_heartbeat(
     const uint64_t & _arg)
   {
-    this->last_at_ok_timestamp = _arg;
+    this->last_heartbeat = _arg;
     return *this;
   }
   Type & set__tx_buf_write_index(
@@ -267,7 +267,7 @@ struct IridiumsbdStatus_
     if (this->timestamp != other.timestamp) {
       return false;
     }
-    if (this->last_at_ok_timestamp != other.last_at_ok_timestamp) {
+    if (this->last_heartbeat != other.last_heartbeat) {
       return false;
     }
     if (this->tx_buf_write_index != other.tx_buf_write_index) {

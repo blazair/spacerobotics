@@ -11,10 +11,10 @@ px4_msgs__msg__TecsStatus__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x70, 0xba, 0xac, 0xd1, 0xf7, 0xb4, 0x90, 0xea,
-      0xfc, 0x33, 0x12, 0x8c, 0x84, 0x62, 0x74, 0xd8,
-      0x07, 0x02, 0x78, 0x44, 0xc4, 0x0b, 0x57, 0x3b,
-      0xb1, 0x0b, 0xa0, 0xcf, 0x1d, 0x43, 0xce, 0x3b,
+      0x7b, 0x55, 0x98, 0xc2, 0xdd, 0xc8, 0xe5, 0x13,
+      0x07, 0x07, 0x3a, 0x0d, 0x59, 0x1f, 0xf9, 0x1c,
+      0xa1, 0x21, 0xe4, 0x81, 0x85, 0x13, 0x19, 0x4a,
+      0xc3, 0x34, 0xea, 0x69, 0x34, 0x5e, 0x5b, 0xae,
     }};
   return &hash;
 }
@@ -34,7 +34,6 @@ static char px4_msgs__msg__TecsStatus__TYPE_NAME[] = "px4_msgs/msg/TecsStatus";
 static char px4_msgs__msg__TecsStatus__FIELD_NAME__timestamp[] = "timestamp";
 static char px4_msgs__msg__TecsStatus__FIELD_NAME__altitude_sp[] = "altitude_sp";
 static char px4_msgs__msg__TecsStatus__FIELD_NAME__altitude_reference[] = "altitude_reference";
-static char px4_msgs__msg__TecsStatus__FIELD_NAME__altitude_time_constant[] = "altitude_time_constant";
 static char px4_msgs__msg__TecsStatus__FIELD_NAME__height_rate_reference[] = "height_rate_reference";
 static char px4_msgs__msg__TecsStatus__FIELD_NAME__height_rate_direct[] = "height_rate_direct";
 static char px4_msgs__msg__TecsStatus__FIELD_NAME__height_rate_setpoint[] = "height_rate_setpoint";
@@ -54,8 +53,7 @@ static char px4_msgs__msg__TecsStatus__FIELD_NAME__pitch_integ[] = "pitch_integ"
 static char px4_msgs__msg__TecsStatus__FIELD_NAME__throttle_sp[] = "throttle_sp";
 static char px4_msgs__msg__TecsStatus__FIELD_NAME__pitch_sp_rad[] = "pitch_sp_rad";
 static char px4_msgs__msg__TecsStatus__FIELD_NAME__throttle_trim[] = "throttle_trim";
-static char px4_msgs__msg__TecsStatus__FIELD_NAME__underspeed_ratio[] = "underspeed_ratio";
-static char px4_msgs__msg__TecsStatus__FIELD_NAME__fast_descend_ratio[] = "fast_descend_ratio";
+static char px4_msgs__msg__TecsStatus__FIELD_NAME__mode[] = "mode";
 
 static rosidl_runtime_c__type_description__Field px4_msgs__msg__TecsStatus__FIELDS[] = {
   {
@@ -80,16 +78,6 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__TecsStatus__FIEL
   },
   {
     {px4_msgs__msg__TecsStatus__FIELD_NAME__altitude_reference, 18, 18},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__TecsStatus__FIELD_NAME__altitude_time_constant, 22, 22},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
       0,
@@ -289,19 +277,9 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__TecsStatus__FIEL
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__TecsStatus__FIELD_NAME__underspeed_ratio, 16, 16},
+    {px4_msgs__msg__TecsStatus__FIELD_NAME__mode, 4, 4},
     {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__TecsStatus__FIELD_NAME__fast_descend_ratio, 18, 18},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT8,
       0,
       0,
       {NULL, 0, 0},
@@ -319,7 +297,7 @@ px4_msgs__msg__TecsStatus__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {px4_msgs__msg__TecsStatus__TYPE_NAME, 23, 23},
-      {px4_msgs__msg__TecsStatus__FIELDS, 25, 25},
+      {px4_msgs__msg__TecsStatus__FIELDS, 23, 23},
     },
     {NULL, 0, 0},
   };
@@ -334,7 +312,6 @@ static char toplevel_type_raw_source[] =
   "\n"
   "float32 altitude_sp\\t\\t\\t# Altitude setpoint AMSL [m]\n"
   "float32 altitude_reference\\t\\t# Altitude setpoint reference AMSL [m]\n"
-  "float32 altitude_time_constant\\t\\t# Time constant of the altitude tracker [s]\n"
   "float32 height_rate_reference\\t\\t# Height rate setpoint reference [m/s]\n"
   "float32 height_rate_direct\\t\\t# Direct height rate setpoint from velocity reference generator [m/s]\n"
   "float32 height_rate_setpoint\\t\\t# Height rate setpoint [m/s]\n"
@@ -359,8 +336,10 @@ static char toplevel_type_raw_source[] =
   "float32 pitch_sp_rad\\t\\t\\t# Current pitch setpoint [rad]\n"
   "float32 throttle_trim\\t\\t\\t# estimated throttle value [0,1] required to fly level at equivalent_airspeed_sp in the current atmospheric conditions\n"
   "\n"
-  "float32 underspeed_ratio\\t\\t# 0: no underspeed, 1: maximal underspeed. Controller takes measures to avoid stall proportional to ratio if >0.\n"
-  "float32 fast_descend_ratio \\t\\t#  value indicating if fast descend mode is enabled with ramp up and ramp down [0-1]";
+  "# TECS mode\n"
+  "uint8 mode\n"
+  "uint8 TECS_MODE_NORMAL = 0\n"
+  "uint8 TECS_MODE_UNDERSPEED = 1";
 
 static char msg_encoding[] = "msg";
 
@@ -374,7 +353,7 @@ px4_msgs__msg__TecsStatus__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__TecsStatus__TYPE_NAME, 23, 23},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 1843, 1843},
+    {toplevel_type_raw_source, 1595, 1595},
   };
   return &source;
 }

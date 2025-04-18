@@ -65,15 +65,15 @@ class Rpm(metaclass=Metaclass_Rpm):
 
     __slots__ = [
         '_timestamp',
-        '_rpm_estimate',
-        '_rpm_raw',
+        '_indicated_frequency_rpm',
+        '_estimated_accurancy_rpm',
         '_check_fields',
     ]
 
     _fields_and_field_types = {
         'timestamp': 'uint64',
-        'rpm_estimate': 'float',
-        'rpm_raw': 'float',
+        'indicated_frequency_rpm': 'float',
+        'estimated_accurancy_rpm': 'float',
     }
 
     # This attribute is used to store an rosidl_parser.definition variable
@@ -94,8 +94,8 @@ class Rpm(metaclass=Metaclass_Rpm):
                 'Invalid arguments passed to constructor: %s' % \
                 ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.timestamp = kwargs.get('timestamp', int())
-        self.rpm_estimate = kwargs.get('rpm_estimate', float())
-        self.rpm_raw = kwargs.get('rpm_raw', float())
+        self.indicated_frequency_rpm = kwargs.get('indicated_frequency_rpm', float())
+        self.estimated_accurancy_rpm = kwargs.get('estimated_accurancy_rpm', float())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -129,9 +129,9 @@ class Rpm(metaclass=Metaclass_Rpm):
             return False
         if self.timestamp != other.timestamp:
             return False
-        if self.rpm_estimate != other.rpm_estimate:
+        if self.indicated_frequency_rpm != other.indicated_frequency_rpm:
             return False
-        if self.rpm_raw != other.rpm_raw:
+        if self.estimated_accurancy_rpm != other.estimated_accurancy_rpm:
             return False
         return True
 
@@ -156,31 +156,31 @@ class Rpm(metaclass=Metaclass_Rpm):
         self._timestamp = value
 
     @builtins.property
-    def rpm_estimate(self):
-        """Message field 'rpm_estimate'."""
-        return self._rpm_estimate
+    def indicated_frequency_rpm(self):
+        """Message field 'indicated_frequency_rpm'."""
+        return self._indicated_frequency_rpm
 
-    @rpm_estimate.setter
-    def rpm_estimate(self, value):
+    @indicated_frequency_rpm.setter
+    def indicated_frequency_rpm(self, value):
         if self._check_fields:
             assert \
                 isinstance(value, float), \
-                "The 'rpm_estimate' field must be of type 'float'"
+                "The 'indicated_frequency_rpm' field must be of type 'float'"
             assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'rpm_estimate' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
-        self._rpm_estimate = value
+                "The 'indicated_frequency_rpm' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._indicated_frequency_rpm = value
 
     @builtins.property
-    def rpm_raw(self):
-        """Message field 'rpm_raw'."""
-        return self._rpm_raw
+    def estimated_accurancy_rpm(self):
+        """Message field 'estimated_accurancy_rpm'."""
+        return self._estimated_accurancy_rpm
 
-    @rpm_raw.setter
-    def rpm_raw(self, value):
+    @estimated_accurancy_rpm.setter
+    def estimated_accurancy_rpm(self, value):
         if self._check_fields:
             assert \
                 isinstance(value, float), \
-                "The 'rpm_raw' field must be of type 'float'"
+                "The 'estimated_accurancy_rpm' field must be of type 'float'"
             assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'rpm_raw' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
-        self._rpm_raw = value
+                "The 'estimated_accurancy_rpm' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._estimated_accurancy_rpm = value

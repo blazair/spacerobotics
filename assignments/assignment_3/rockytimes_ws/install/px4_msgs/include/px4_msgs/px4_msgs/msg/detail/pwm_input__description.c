@@ -99,10 +99,10 @@ px4_msgs__msg__PwmInput__get_type_description(
 }
 
 static char toplevel_type_raw_source[] =
-  "uint64 timestamp   # Time since system start (microseconds)\n"
-  "uint64 error_count # Timer overcapture error flag (AUX5 or MAIN5)\n"
-  "uint32 pulse_width # Pulse width, timer counts (microseconds)\n"
-  "uint32 period      # Period, timer counts (microseconds)";
+  "uint64 timestamp\\t# Time since system start (microseconds)\n"
+  "uint64 error_count\\t# Timer overcapture error flag (AUX5 or MAIN5)\n"
+  "uint32 pulse_width\\t# Pulse width, timer counts\n"
+  "uint32 period\\t\\t# Period, timer counts";
 
 static char msg_encoding[] = "msg";
 
@@ -116,7 +116,7 @@ px4_msgs__msg__PwmInput__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__PwmInput__TYPE_NAME, 21, 21},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 245, 245},
+    {toplevel_type_raw_source, 209, 209},
   };
   return &source;
 }

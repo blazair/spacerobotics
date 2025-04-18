@@ -63,24 +63,24 @@ bool cdr_serialize_px4_msgs__msg__SensorGps(
     cdr << ros_message->device_id;
   }
 
-  // Field name: latitude_deg
+  // Field name: lat
   {
-    cdr << ros_message->latitude_deg;
+    cdr << ros_message->lat;
   }
 
-  // Field name: longitude_deg
+  // Field name: lon
   {
-    cdr << ros_message->longitude_deg;
+    cdr << ros_message->lon;
   }
 
-  // Field name: altitude_msl_m
+  // Field name: alt
   {
-    cdr << ros_message->altitude_msl_m;
+    cdr << ros_message->alt;
   }
 
-  // Field name: altitude_ellipsoid_m
+  // Field name: alt_ellipsoid
   {
-    cdr << ros_message->altitude_ellipsoid_m;
+    cdr << ros_message->alt_ellipsoid;
   }
 
   // Field name: s_variance_m_s
@@ -213,16 +213,6 @@ bool cdr_serialize_px4_msgs__msg__SensorGps(
     cdr << ros_message->selected_rtcm_instance;
   }
 
-  // Field name: rtcm_crc_failed
-  {
-    cdr << (ros_message->rtcm_crc_failed ? true : false);
-  }
-
-  // Field name: rtcm_msg_used
-  {
-    cdr << ros_message->rtcm_msg_used;
-  }
-
   return true;
 }
 
@@ -246,24 +236,24 @@ bool cdr_deserialize_px4_msgs__msg__SensorGps(
     cdr >> ros_message->device_id;
   }
 
-  // Field name: latitude_deg
+  // Field name: lat
   {
-    cdr >> ros_message->latitude_deg;
+    cdr >> ros_message->lat;
   }
 
-  // Field name: longitude_deg
+  // Field name: lon
   {
-    cdr >> ros_message->longitude_deg;
+    cdr >> ros_message->lon;
   }
 
-  // Field name: altitude_msl_m
+  // Field name: alt
   {
-    cdr >> ros_message->altitude_msl_m;
+    cdr >> ros_message->alt;
   }
 
-  // Field name: altitude_ellipsoid_m
+  // Field name: alt_ellipsoid
   {
-    cdr >> ros_message->altitude_ellipsoid_m;
+    cdr >> ros_message->alt_ellipsoid;
   }
 
   // Field name: s_variance_m_s
@@ -398,18 +388,6 @@ bool cdr_deserialize_px4_msgs__msg__SensorGps(
     cdr >> ros_message->selected_rtcm_instance;
   }
 
-  // Field name: rtcm_crc_failed
-  {
-    uint8_t tmp;
-    cdr >> tmp;
-    ros_message->rtcm_crc_failed = tmp ? true : false;
-  }
-
-  // Field name: rtcm_msg_used
-  {
-    cdr >> ros_message->rtcm_msg_used;
-  }
-
   return true;
 }  // NOLINT(readability/fn_size)
 
@@ -449,30 +427,30 @@ size_t get_serialized_size_px4_msgs__msg__SensorGps(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: latitude_deg
+  // Field name: lat
   {
-    size_t item_size = sizeof(ros_message->latitude_deg);
+    size_t item_size = sizeof(ros_message->lat);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: longitude_deg
+  // Field name: lon
   {
-    size_t item_size = sizeof(ros_message->longitude_deg);
+    size_t item_size = sizeof(ros_message->lon);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: altitude_msl_m
+  // Field name: alt
   {
-    size_t item_size = sizeof(ros_message->altitude_msl_m);
+    size_t item_size = sizeof(ros_message->alt);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: altitude_ellipsoid_m
+  // Field name: alt_ellipsoid
   {
-    size_t item_size = sizeof(ros_message->altitude_ellipsoid_m);
+    size_t item_size = sizeof(ros_message->alt_ellipsoid);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -659,20 +637,6 @@ size_t get_serialized_size_px4_msgs__msg__SensorGps(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: rtcm_crc_failed
-  {
-    size_t item_size = sizeof(ros_message->rtcm_crc_failed);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: rtcm_msg_used
-  {
-    size_t item_size = sizeof(ros_message->rtcm_msg_used);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
   return current_alignment - initial_alignment;
 }
 
@@ -719,36 +683,36 @@ size_t max_serialized_size_px4_msgs__msg__SensorGps(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
-  // Field name: latitude_deg
+  // Field name: lat
   {
     size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint64_t);
-    current_alignment += array_size * sizeof(uint64_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
-  // Field name: longitude_deg
+  // Field name: lon
   {
     size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint64_t);
-    current_alignment += array_size * sizeof(uint64_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
-  // Field name: altitude_msl_m
+  // Field name: alt
   {
     size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint64_t);
-    current_alignment += array_size * sizeof(uint64_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
-  // Field name: altitude_ellipsoid_m
+  // Field name: alt_ellipsoid
   {
     size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint64_t);
-    current_alignment += array_size * sizeof(uint64_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
   // Field name: s_variance_m_s
@@ -953,20 +917,6 @@ size_t max_serialized_size_px4_msgs__msg__SensorGps(
     current_alignment += array_size * sizeof(uint8_t);
   }
 
-  // Field name: rtcm_crc_failed
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
-  // Field name: rtcm_msg_used
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
 
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
@@ -976,7 +926,7 @@ size_t max_serialized_size_px4_msgs__msg__SensorGps(
     using DataType = px4_msgs__msg__SensorGps;
     is_plain =
       (
-      offsetof(DataType, rtcm_msg_used) +
+      offsetof(DataType, selected_rtcm_instance) +
       last_member_size
       ) == ret_val;
   }
@@ -1003,24 +953,24 @@ bool cdr_serialize_key_px4_msgs__msg__SensorGps(
     cdr << ros_message->device_id;
   }
 
-  // Field name: latitude_deg
+  // Field name: lat
   {
-    cdr << ros_message->latitude_deg;
+    cdr << ros_message->lat;
   }
 
-  // Field name: longitude_deg
+  // Field name: lon
   {
-    cdr << ros_message->longitude_deg;
+    cdr << ros_message->lon;
   }
 
-  // Field name: altitude_msl_m
+  // Field name: alt
   {
-    cdr << ros_message->altitude_msl_m;
+    cdr << ros_message->alt;
   }
 
-  // Field name: altitude_ellipsoid_m
+  // Field name: alt_ellipsoid
   {
-    cdr << ros_message->altitude_ellipsoid_m;
+    cdr << ros_message->alt_ellipsoid;
   }
 
   // Field name: s_variance_m_s
@@ -1153,16 +1103,6 @@ bool cdr_serialize_key_px4_msgs__msg__SensorGps(
     cdr << ros_message->selected_rtcm_instance;
   }
 
-  // Field name: rtcm_crc_failed
-  {
-    cdr << (ros_message->rtcm_crc_failed ? true : false);
-  }
-
-  // Field name: rtcm_msg_used
-  {
-    cdr << ros_message->rtcm_msg_used;
-  }
-
   return true;
 }
 
@@ -1202,30 +1142,30 @@ size_t get_serialized_size_key_px4_msgs__msg__SensorGps(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: latitude_deg
+  // Field name: lat
   {
-    size_t item_size = sizeof(ros_message->latitude_deg);
+    size_t item_size = sizeof(ros_message->lat);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: longitude_deg
+  // Field name: lon
   {
-    size_t item_size = sizeof(ros_message->longitude_deg);
+    size_t item_size = sizeof(ros_message->lon);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: altitude_msl_m
+  // Field name: alt
   {
-    size_t item_size = sizeof(ros_message->altitude_msl_m);
+    size_t item_size = sizeof(ros_message->alt);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: altitude_ellipsoid_m
+  // Field name: alt_ellipsoid
   {
-    size_t item_size = sizeof(ros_message->altitude_ellipsoid_m);
+    size_t item_size = sizeof(ros_message->alt_ellipsoid);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -1412,20 +1352,6 @@ size_t get_serialized_size_key_px4_msgs__msg__SensorGps(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: rtcm_crc_failed
-  {
-    size_t item_size = sizeof(ros_message->rtcm_crc_failed);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: rtcm_msg_used
-  {
-    size_t item_size = sizeof(ros_message->rtcm_msg_used);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
   return current_alignment - initial_alignment;
 }
 
@@ -1470,36 +1396,36 @@ size_t max_serialized_size_key_px4_msgs__msg__SensorGps(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
-  // Field name: latitude_deg
+  // Field name: lat
   {
     size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint64_t);
-    current_alignment += array_size * sizeof(uint64_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
-  // Field name: longitude_deg
+  // Field name: lon
   {
     size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint64_t);
-    current_alignment += array_size * sizeof(uint64_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
-  // Field name: altitude_msl_m
+  // Field name: alt
   {
     size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint64_t);
-    current_alignment += array_size * sizeof(uint64_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
-  // Field name: altitude_ellipsoid_m
+  // Field name: alt_ellipsoid
   {
     size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint64_t);
-    current_alignment += array_size * sizeof(uint64_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
   // Field name: s_variance_m_s
@@ -1704,20 +1630,6 @@ size_t max_serialized_size_key_px4_msgs__msg__SensorGps(
     current_alignment += array_size * sizeof(uint8_t);
   }
 
-  // Field name: rtcm_crc_failed
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
-  // Field name: rtcm_msg_used
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
     // All members are plain, and type is not empty.
@@ -1726,7 +1638,7 @@ size_t max_serialized_size_key_px4_msgs__msg__SensorGps(
     using DataType = px4_msgs__msg__SensorGps;
     is_plain =
       (
-      offsetof(DataType, rtcm_msg_used) +
+      offsetof(DataType, selected_rtcm_instance) +
       last_member_size
       ) == ret_val;
   }

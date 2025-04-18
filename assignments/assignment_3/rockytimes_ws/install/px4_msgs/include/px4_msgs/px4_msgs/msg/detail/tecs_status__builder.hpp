@@ -24,32 +24,16 @@ namespace msg
 namespace builder
 {
 
-class Init_TecsStatus_fast_descend_ratio
+class Init_TecsStatus_mode
 {
 public:
-  explicit Init_TecsStatus_fast_descend_ratio(::px4_msgs::msg::TecsStatus & msg)
+  explicit Init_TecsStatus_mode(::px4_msgs::msg::TecsStatus & msg)
   : msg_(msg)
   {}
-  ::px4_msgs::msg::TecsStatus fast_descend_ratio(::px4_msgs::msg::TecsStatus::_fast_descend_ratio_type arg)
+  ::px4_msgs::msg::TecsStatus mode(::px4_msgs::msg::TecsStatus::_mode_type arg)
   {
-    msg_.fast_descend_ratio = std::move(arg);
+    msg_.mode = std::move(arg);
     return std::move(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::TecsStatus msg_;
-};
-
-class Init_TecsStatus_underspeed_ratio
-{
-public:
-  explicit Init_TecsStatus_underspeed_ratio(::px4_msgs::msg::TecsStatus & msg)
-  : msg_(msg)
-  {}
-  Init_TecsStatus_fast_descend_ratio underspeed_ratio(::px4_msgs::msg::TecsStatus::_underspeed_ratio_type arg)
-  {
-    msg_.underspeed_ratio = std::move(arg);
-    return Init_TecsStatus_fast_descend_ratio(msg_);
   }
 
 private:
@@ -62,10 +46,10 @@ public:
   explicit Init_TecsStatus_throttle_trim(::px4_msgs::msg::TecsStatus & msg)
   : msg_(msg)
   {}
-  Init_TecsStatus_underspeed_ratio throttle_trim(::px4_msgs::msg::TecsStatus::_throttle_trim_type arg)
+  Init_TecsStatus_mode throttle_trim(::px4_msgs::msg::TecsStatus::_throttle_trim_type arg)
   {
     msg_.throttle_trim = std::move(arg);
-    return Init_TecsStatus_underspeed_ratio(msg_);
+    return Init_TecsStatus_mode(msg_);
   }
 
 private:
@@ -360,32 +344,16 @@ private:
   ::px4_msgs::msg::TecsStatus msg_;
 };
 
-class Init_TecsStatus_altitude_time_constant
-{
-public:
-  explicit Init_TecsStatus_altitude_time_constant(::px4_msgs::msg::TecsStatus & msg)
-  : msg_(msg)
-  {}
-  Init_TecsStatus_height_rate_reference altitude_time_constant(::px4_msgs::msg::TecsStatus::_altitude_time_constant_type arg)
-  {
-    msg_.altitude_time_constant = std::move(arg);
-    return Init_TecsStatus_height_rate_reference(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::TecsStatus msg_;
-};
-
 class Init_TecsStatus_altitude_reference
 {
 public:
   explicit Init_TecsStatus_altitude_reference(::px4_msgs::msg::TecsStatus & msg)
   : msg_(msg)
   {}
-  Init_TecsStatus_altitude_time_constant altitude_reference(::px4_msgs::msg::TecsStatus::_altitude_reference_type arg)
+  Init_TecsStatus_height_rate_reference altitude_reference(::px4_msgs::msg::TecsStatus::_altitude_reference_type arg)
   {
     msg_.altitude_reference = std::move(arg);
-    return Init_TecsStatus_altitude_time_constant(msg_);
+    return Init_TecsStatus_height_rate_reference(msg_);
   }
 
 private:

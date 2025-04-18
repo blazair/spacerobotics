@@ -27,6 +27,9 @@ class Metaclass_MissionResult(type):
     _TYPE_SUPPORT = None
 
     __constants = {
+        'MISSION_EXECUTION_MODE_NORMAL': 0,
+        'MISSION_EXECUTION_MODE_REVERSE': 1,
+        'MISSION_EXECUTION_MODE_FAST_FORWARD': 2,
     }
 
     @classmethod
@@ -55,17 +58,40 @@ class Metaclass_MissionResult(type):
         # the message class under "Data and other attributes defined here:"
         # as well as populate each message instance
         return {
+            'MISSION_EXECUTION_MODE_NORMAL': cls.__constants['MISSION_EXECUTION_MODE_NORMAL'],
+            'MISSION_EXECUTION_MODE_REVERSE': cls.__constants['MISSION_EXECUTION_MODE_REVERSE'],
+            'MISSION_EXECUTION_MODE_FAST_FORWARD': cls.__constants['MISSION_EXECUTION_MODE_FAST_FORWARD'],
         }
+
+    @property
+    def MISSION_EXECUTION_MODE_NORMAL(self):
+        """Message constant 'MISSION_EXECUTION_MODE_NORMAL'."""
+        return Metaclass_MissionResult.__constants['MISSION_EXECUTION_MODE_NORMAL']
+
+    @property
+    def MISSION_EXECUTION_MODE_REVERSE(self):
+        """Message constant 'MISSION_EXECUTION_MODE_REVERSE'."""
+        return Metaclass_MissionResult.__constants['MISSION_EXECUTION_MODE_REVERSE']
+
+    @property
+    def MISSION_EXECUTION_MODE_FAST_FORWARD(self):
+        """Message constant 'MISSION_EXECUTION_MODE_FAST_FORWARD'."""
+        return Metaclass_MissionResult.__constants['MISSION_EXECUTION_MODE_FAST_FORWARD']
 
 
 class MissionResult(metaclass=Metaclass_MissionResult):
-    """Message class 'MissionResult'."""
+    """
+    Message class 'MissionResult'.
+
+    Constants:
+      MISSION_EXECUTION_MODE_NORMAL
+      MISSION_EXECUTION_MODE_REVERSE
+      MISSION_EXECUTION_MODE_FAST_FORWARD
+    """
 
     __slots__ = [
         '_timestamp',
-        '_mission_id',
-        '_geofence_id',
-        '_home_position_counter',
+        '_instance_count',
         '_seq_reached',
         '_seq_current',
         '_seq_total',
@@ -82,9 +108,7 @@ class MissionResult(metaclass=Metaclass_MissionResult):
 
     _fields_and_field_types = {
         'timestamp': 'uint64',
-        'mission_id': 'uint32',
-        'geofence_id': 'uint32',
-        'home_position_counter': 'uint32',
+        'instance_count': 'uint32',
         'seq_reached': 'int32',
         'seq_current': 'uint16',
         'seq_total': 'uint16',
@@ -102,8 +126,6 @@ class MissionResult(metaclass=Metaclass_MissionResult):
     # related to the data type of each of the components the message.
     SLOT_TYPES = (
         rosidl_parser.definition.BasicType('uint64'),  # noqa: E501
-        rosidl_parser.definition.BasicType('uint32'),  # noqa: E501
-        rosidl_parser.definition.BasicType('uint32'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint32'),  # noqa: E501
         rosidl_parser.definition.BasicType('int32'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint16'),  # noqa: E501
@@ -128,9 +150,7 @@ class MissionResult(metaclass=Metaclass_MissionResult):
                 'Invalid arguments passed to constructor: %s' % \
                 ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.timestamp = kwargs.get('timestamp', int())
-        self.mission_id = kwargs.get('mission_id', int())
-        self.geofence_id = kwargs.get('geofence_id', int())
-        self.home_position_counter = kwargs.get('home_position_counter', int())
+        self.instance_count = kwargs.get('instance_count', int())
         self.seq_reached = kwargs.get('seq_reached', int())
         self.seq_current = kwargs.get('seq_current', int())
         self.seq_total = kwargs.get('seq_total', int())
@@ -175,11 +195,7 @@ class MissionResult(metaclass=Metaclass_MissionResult):
             return False
         if self.timestamp != other.timestamp:
             return False
-        if self.mission_id != other.mission_id:
-            return False
-        if self.geofence_id != other.geofence_id:
-            return False
-        if self.home_position_counter != other.home_position_counter:
+        if self.instance_count != other.instance_count:
             return False
         if self.seq_reached != other.seq_reached:
             return False
@@ -226,49 +242,19 @@ class MissionResult(metaclass=Metaclass_MissionResult):
         self._timestamp = value
 
     @builtins.property
-    def mission_id(self):
-        """Message field 'mission_id'."""
-        return self._mission_id
+    def instance_count(self):
+        """Message field 'instance_count'."""
+        return self._instance_count
 
-    @mission_id.setter
-    def mission_id(self, value):
+    @instance_count.setter
+    def instance_count(self, value):
         if self._check_fields:
             assert \
                 isinstance(value, int), \
-                "The 'mission_id' field must be of type 'int'"
+                "The 'instance_count' field must be of type 'int'"
             assert value >= 0 and value < 4294967296, \
-                "The 'mission_id' field must be an unsigned integer in [0, 4294967295]"
-        self._mission_id = value
-
-    @builtins.property
-    def geofence_id(self):
-        """Message field 'geofence_id'."""
-        return self._geofence_id
-
-    @geofence_id.setter
-    def geofence_id(self, value):
-        if self._check_fields:
-            assert \
-                isinstance(value, int), \
-                "The 'geofence_id' field must be of type 'int'"
-            assert value >= 0 and value < 4294967296, \
-                "The 'geofence_id' field must be an unsigned integer in [0, 4294967295]"
-        self._geofence_id = value
-
-    @builtins.property
-    def home_position_counter(self):
-        """Message field 'home_position_counter'."""
-        return self._home_position_counter
-
-    @home_position_counter.setter
-    def home_position_counter(self, value):
-        if self._check_fields:
-            assert \
-                isinstance(value, int), \
-                "The 'home_position_counter' field must be of type 'int'"
-            assert value >= 0 and value < 4294967296, \
-                "The 'home_position_counter' field must be an unsigned integer in [0, 4294967295]"
-        self._home_position_counter = value
+                "The 'instance_count' field must be an unsigned integer in [0, 4294967295]"
+        self._instance_count = value
 
     @builtins.property
     def seq_reached(self):

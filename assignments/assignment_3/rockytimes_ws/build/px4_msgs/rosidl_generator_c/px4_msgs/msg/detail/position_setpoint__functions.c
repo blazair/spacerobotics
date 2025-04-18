@@ -27,16 +27,16 @@ px4_msgs__msg__PositionSetpoint__init(px4_msgs__msg__PositionSetpoint * msg)
   // lon
   // alt
   // yaw
+  // yaw_valid
+  // yawspeed
+  // yawspeed_valid
   // loiter_radius
-  // loiter_minor_radius
   // loiter_direction_counter_clockwise
-  // loiter_orientation
-  // loiter_pattern
   // acceptance_radius
-  // alt_acceptance_radius
   // cruising_speed
   // gliding_enabled
   // cruising_throttle
+  // disable_weather_vane
   return true;
 }
 
@@ -56,16 +56,16 @@ px4_msgs__msg__PositionSetpoint__fini(px4_msgs__msg__PositionSetpoint * msg)
   // lon
   // alt
   // yaw
+  // yaw_valid
+  // yawspeed
+  // yawspeed_valid
   // loiter_radius
-  // loiter_minor_radius
   // loiter_direction_counter_clockwise
-  // loiter_orientation
-  // loiter_pattern
   // acceptance_radius
-  // alt_acceptance_radius
   // cruising_speed
   // gliding_enabled
   // cruising_throttle
+  // disable_weather_vane
 }
 
 bool
@@ -114,32 +114,28 @@ px4_msgs__msg__PositionSetpoint__are_equal(const px4_msgs__msg__PositionSetpoint
   if (lhs->yaw != rhs->yaw) {
     return false;
   }
-  // loiter_radius
-  if (lhs->loiter_radius != rhs->loiter_radius) {
+  // yaw_valid
+  if (lhs->yaw_valid != rhs->yaw_valid) {
     return false;
   }
-  // loiter_minor_radius
-  if (lhs->loiter_minor_radius != rhs->loiter_minor_radius) {
+  // yawspeed
+  if (lhs->yawspeed != rhs->yawspeed) {
+    return false;
+  }
+  // yawspeed_valid
+  if (lhs->yawspeed_valid != rhs->yawspeed_valid) {
+    return false;
+  }
+  // loiter_radius
+  if (lhs->loiter_radius != rhs->loiter_radius) {
     return false;
   }
   // loiter_direction_counter_clockwise
   if (lhs->loiter_direction_counter_clockwise != rhs->loiter_direction_counter_clockwise) {
     return false;
   }
-  // loiter_orientation
-  if (lhs->loiter_orientation != rhs->loiter_orientation) {
-    return false;
-  }
-  // loiter_pattern
-  if (lhs->loiter_pattern != rhs->loiter_pattern) {
-    return false;
-  }
   // acceptance_radius
   if (lhs->acceptance_radius != rhs->acceptance_radius) {
-    return false;
-  }
-  // alt_acceptance_radius
-  if (lhs->alt_acceptance_radius != rhs->alt_acceptance_radius) {
     return false;
   }
   // cruising_speed
@@ -152,6 +148,10 @@ px4_msgs__msg__PositionSetpoint__are_equal(const px4_msgs__msg__PositionSetpoint
   }
   // cruising_throttle
   if (lhs->cruising_throttle != rhs->cruising_throttle) {
+    return false;
+  }
+  // disable_weather_vane
+  if (lhs->disable_weather_vane != rhs->disable_weather_vane) {
     return false;
   }
   return true;
@@ -185,26 +185,26 @@ px4_msgs__msg__PositionSetpoint__copy(
   output->alt = input->alt;
   // yaw
   output->yaw = input->yaw;
+  // yaw_valid
+  output->yaw_valid = input->yaw_valid;
+  // yawspeed
+  output->yawspeed = input->yawspeed;
+  // yawspeed_valid
+  output->yawspeed_valid = input->yawspeed_valid;
   // loiter_radius
   output->loiter_radius = input->loiter_radius;
-  // loiter_minor_radius
-  output->loiter_minor_radius = input->loiter_minor_radius;
   // loiter_direction_counter_clockwise
   output->loiter_direction_counter_clockwise = input->loiter_direction_counter_clockwise;
-  // loiter_orientation
-  output->loiter_orientation = input->loiter_orientation;
-  // loiter_pattern
-  output->loiter_pattern = input->loiter_pattern;
   // acceptance_radius
   output->acceptance_radius = input->acceptance_radius;
-  // alt_acceptance_radius
-  output->alt_acceptance_radius = input->alt_acceptance_radius;
   // cruising_speed
   output->cruising_speed = input->cruising_speed;
   // gliding_enabled
   output->gliding_enabled = input->gliding_enabled;
   // cruising_throttle
   output->cruising_throttle = input->cruising_throttle;
+  // disable_weather_vane
+  output->disable_weather_vane = input->disable_weather_vane;
   return true;
 }
 

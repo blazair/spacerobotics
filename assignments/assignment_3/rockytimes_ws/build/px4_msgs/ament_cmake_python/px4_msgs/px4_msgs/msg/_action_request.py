@@ -35,7 +35,7 @@ class Metaclass_ActionRequest(type):
         'ACTION_SWITCH_MODE': 5,
         'ACTION_VTOL_TRANSITION_TO_MULTICOPTER': 6,
         'ACTION_VTOL_TRANSITION_TO_FIXEDWING': 7,
-        'SOURCE_STICK_GESTURE': 0,
+        'SOURCE_RC_STICK_GESTURE': 0,
         'SOURCE_RC_SWITCH': 1,
         'SOURCE_RC_BUTTON': 2,
         'SOURCE_RC_MODE_SLOT': 3,
@@ -75,7 +75,7 @@ class Metaclass_ActionRequest(type):
             'ACTION_SWITCH_MODE': cls.__constants['ACTION_SWITCH_MODE'],
             'ACTION_VTOL_TRANSITION_TO_MULTICOPTER': cls.__constants['ACTION_VTOL_TRANSITION_TO_MULTICOPTER'],
             'ACTION_VTOL_TRANSITION_TO_FIXEDWING': cls.__constants['ACTION_VTOL_TRANSITION_TO_FIXEDWING'],
-            'SOURCE_STICK_GESTURE': cls.__constants['SOURCE_STICK_GESTURE'],
+            'SOURCE_RC_STICK_GESTURE': cls.__constants['SOURCE_RC_STICK_GESTURE'],
             'SOURCE_RC_SWITCH': cls.__constants['SOURCE_RC_SWITCH'],
             'SOURCE_RC_BUTTON': cls.__constants['SOURCE_RC_BUTTON'],
             'SOURCE_RC_MODE_SLOT': cls.__constants['SOURCE_RC_MODE_SLOT'],
@@ -122,9 +122,9 @@ class Metaclass_ActionRequest(type):
         return Metaclass_ActionRequest.__constants['ACTION_VTOL_TRANSITION_TO_FIXEDWING']
 
     @property
-    def SOURCE_STICK_GESTURE(self):
-        """Message constant 'SOURCE_STICK_GESTURE'."""
-        return Metaclass_ActionRequest.__constants['SOURCE_STICK_GESTURE']
+    def SOURCE_RC_STICK_GESTURE(self):
+        """Message constant 'SOURCE_RC_STICK_GESTURE'."""
+        return Metaclass_ActionRequest.__constants['SOURCE_RC_STICK_GESTURE']
 
     @property
     def SOURCE_RC_SWITCH(self):
@@ -155,7 +155,7 @@ class ActionRequest(metaclass=Metaclass_ActionRequest):
       ACTION_SWITCH_MODE
       ACTION_VTOL_TRANSITION_TO_MULTICOPTER
       ACTION_VTOL_TRANSITION_TO_FIXEDWING
-      SOURCE_STICK_GESTURE
+      SOURCE_RC_STICK_GESTURE
       SOURCE_RC_SWITCH
       SOURCE_RC_BUTTON
       SOURCE_RC_MODE_SLOT

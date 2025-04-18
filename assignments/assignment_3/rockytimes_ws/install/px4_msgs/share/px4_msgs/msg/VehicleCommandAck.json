@@ -66,7 +66,7 @@
         {
           "name": "target_component",
           "type": {
-            "type_id": 5,
+            "type_id": 3,
             "capacity": 0,
             "string_capacity": 0,
             "nested_type_name": ""
@@ -90,7 +90,7 @@
   "type_hashes": [
     {
       "type_name": "px4_msgs/msg/VehicleCommandAck",
-      "hash_string": "RIHS01_36038d69f9db90980fb8fe154f27f22dffed0c35e530b32413cf0456aa8a29e2"
+      "hash_string": "RIHS01_bfbdf4d5c0b7820570796191f5211ee8c436ea0971a9b658ca9a2c82ed2cdbdb"
     }
   ]
 }

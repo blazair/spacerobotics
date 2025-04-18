@@ -11,10 +11,10 @@ px4_msgs__msg__OffboardControlMode__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0xe8, 0x74, 0x63, 0xf2, 0x52, 0xf3, 0x20, 0xd2,
-      0xf1, 0x97, 0xd1, 0xfe, 0xad, 0xd6, 0x43, 0xb8,
-      0x64, 0x5e, 0x5e, 0xf5, 0x3a, 0x2b, 0x15, 0x8d,
-      0xcc, 0xfd, 0xf1, 0x13, 0x72, 0xe0, 0x0f, 0x9f,
+      0xa7, 0x17, 0x67, 0x01, 0x56, 0x81, 0xb0, 0x0b,
+      0x6f, 0x6e, 0xc9, 0x15, 0x02, 0x73, 0x0a, 0xe3,
+      0x91, 0x03, 0x7b, 0x9d, 0x93, 0xf2, 0xc3, 0x75,
+      0xb9, 0x74, 0xe2, 0xbb, 0xb5, 0xce, 0x16, 0x42,
     }};
   return &hash;
 }
@@ -37,8 +37,7 @@ static char px4_msgs__msg__OffboardControlMode__FIELD_NAME__velocity[] = "veloci
 static char px4_msgs__msg__OffboardControlMode__FIELD_NAME__acceleration[] = "acceleration";
 static char px4_msgs__msg__OffboardControlMode__FIELD_NAME__attitude[] = "attitude";
 static char px4_msgs__msg__OffboardControlMode__FIELD_NAME__body_rate[] = "body_rate";
-static char px4_msgs__msg__OffboardControlMode__FIELD_NAME__thrust_and_torque[] = "thrust_and_torque";
-static char px4_msgs__msg__OffboardControlMode__FIELD_NAME__direct_actuator[] = "direct_actuator";
+static char px4_msgs__msg__OffboardControlMode__FIELD_NAME__actuator[] = "actuator";
 
 static rosidl_runtime_c__type_description__Field px4_msgs__msg__OffboardControlMode__FIELDS[] = {
   {
@@ -102,17 +101,7 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__OffboardControlM
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__OffboardControlMode__FIELD_NAME__thrust_and_torque, 17, 17},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__OffboardControlMode__FIELD_NAME__direct_actuator, 15, 15},
+    {px4_msgs__msg__OffboardControlMode__FIELD_NAME__actuator, 8, 8},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
       0,
@@ -132,7 +121,7 @@ px4_msgs__msg__OffboardControlMode__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {px4_msgs__msg__OffboardControlMode__TYPE_NAME, 32, 32},
-      {px4_msgs__msg__OffboardControlMode__FIELDS, 8, 8},
+      {px4_msgs__msg__OffboardControlMode__FIELDS, 7, 7},
     },
     {NULL, 0, 0},
   };
@@ -152,8 +141,7 @@ static char toplevel_type_raw_source[] =
   "bool acceleration\n"
   "bool attitude\n"
   "bool body_rate\n"
-  "bool thrust_and_torque\n"
-  "bool direct_actuator";
+  "bool actuator";
 
 static char msg_encoding[] = "msg";
 
@@ -167,7 +155,7 @@ px4_msgs__msg__OffboardControlMode__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__OffboardControlMode__TYPE_NAME, 32, 32},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 205, 205},
+    {toplevel_type_raw_source, 175, 175},
   };
   return &source;
 }

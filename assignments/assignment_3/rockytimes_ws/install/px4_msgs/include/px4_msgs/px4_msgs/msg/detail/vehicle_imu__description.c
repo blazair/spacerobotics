@@ -11,10 +11,10 @@ px4_msgs__msg__VehicleImu__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0xfe, 0x91, 0x6c, 0xbe, 0xa4, 0x4a, 0x1f, 0x27,
-      0x73, 0x88, 0xc7, 0xd8, 0xc3, 0xd1, 0xd5, 0xc7,
-      0xac, 0x01, 0xbb, 0x02, 0x0e, 0xa0, 0x9e, 0x16,
-      0xa9, 0x40, 0xd5, 0x88, 0x02, 0x83, 0x4c, 0x25,
+      0x96, 0x49, 0x04, 0x8e, 0x92, 0xed, 0x6a, 0x21,
+      0x44, 0x5a, 0x2c, 0x5f, 0x77, 0xcb, 0x68, 0x05,
+      0xb8, 0x3b, 0x3c, 0x4b, 0x5d, 0x5a, 0x70, 0xf4,
+      0x38, 0x27, 0x7c, 0x37, 0x38, 0x97, 0xc8, 0x22,
     }};
   return &hash;
 }
@@ -108,7 +108,7 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__VehicleImu__FIEL
   {
     {px4_msgs__msg__VehicleImu__FIELD_NAME__delta_angle_dt, 14, 14},
     {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT32,
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT16,
       0,
       0,
       {NULL, 0, 0},
@@ -118,7 +118,7 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__VehicleImu__FIEL
   {
     {px4_msgs__msg__VehicleImu__FIELD_NAME__delta_velocity_dt, 17, 17},
     {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT32,
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT16,
       0,
       0,
       {NULL, 0, 0},
@@ -198,8 +198,8 @@ static char toplevel_type_raw_source[] =
   "float32[3] delta_angle          # delta angle about the FRD body frame XYZ-axis in rad over the integration time frame (delta_angle_dt)\n"
   "float32[3] delta_velocity       # delta velocity in the FRD body frame XYZ-axis in m/s over the integration time frame (delta_velocity_dt)\n"
   "\n"
-  "uint32 delta_angle_dt           # integration period in microseconds\n"
-  "uint32 delta_velocity_dt        # integration period in microseconds\n"
+  "uint16 delta_angle_dt           # integration period in microseconds\n"
+  "uint16 delta_velocity_dt        # integration period in microseconds\n"
   "\n"
   "uint8 CLIPPING_X = 1\n"
   "uint8 CLIPPING_Y = 2\n"

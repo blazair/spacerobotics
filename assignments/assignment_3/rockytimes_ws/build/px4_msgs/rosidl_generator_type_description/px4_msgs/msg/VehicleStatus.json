@@ -94,36 +94,6 @@
           "default_value": ""
         },
         {
-          "name": "executor_in_charge",
-          "type": {
-            "type_id": 3,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "valid_nav_states_mask",
-          "type": {
-            "type_id": 7,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "can_set_nav_states_mask",
-          "type": {
-            "type_id": 7,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
           "name": "failure_detector_status",
           "type": {
             "type_id": 5,
@@ -167,16 +137,6 @@
           "name": "failsafe_and_user_took_over",
           "type": {
             "type_id": 15,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "failsafe_defer_state",
-          "type": {
-            "type_id": 3,
             "capacity": 0,
             "string_capacity": 0,
             "nested_type_name": ""
@@ -364,6 +324,26 @@
           "default_value": ""
         },
         {
+          "name": "avoidance_system_required",
+          "type": {
+            "type_id": 15,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "avoidance_system_valid",
+          "type": {
+            "type_id": 15,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
           "name": "rc_calibration_in_progress",
           "type": {
             "type_id": 15,
@@ -400,7 +380,7 @@
   "type_hashes": [
     {
       "type_name": "px4_msgs/msg/VehicleStatus",
-      "hash_string": "RIHS01_828bddbb7d4c2aa6ad93757955f6893be1ec5d8f11885ec7715bcdd76b5226c9"
+      "hash_string": "RIHS01_be57906101209edfecd0a71169752e171ea6584b463aad21e5fa19d6999c6ef0"
     }
   ]
 }

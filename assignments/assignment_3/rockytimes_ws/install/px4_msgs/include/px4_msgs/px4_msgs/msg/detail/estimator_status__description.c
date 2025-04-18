@@ -11,10 +11,10 @@ px4_msgs__msg__EstimatorStatus__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x11, 0xf4, 0x32, 0xe7, 0x7e, 0x73, 0x96, 0xc6,
-      0xcc, 0xf0, 0xc6, 0x4d, 0x65, 0x56, 0x80, 0x9b,
-      0x1e, 0x9a, 0xec, 0x4c, 0xf4, 0x81, 0x2b, 0xcb,
-      0x56, 0x99, 0x13, 0x79, 0x2c, 0xe9, 0x96, 0x5b,
+      0x71, 0x73, 0x31, 0xcb, 0xd4, 0xe0, 0xfc, 0x99,
+      0x87, 0x40, 0xa7, 0x0e, 0xbc, 0x39, 0x89, 0x13,
+      0xdd, 0xe2, 0x80, 0xa2, 0x62, 0x36, 0xb5, 0x27,
+      0x7f, 0x34, 0xf3, 0x8d, 0xed, 0x34, 0x25, 0x36,
     }};
   return &hash;
 }
@@ -39,7 +39,8 @@ static char px4_msgs__msg__EstimatorStatus__FIELD_NAME__control_mode_flags[] = "
 static char px4_msgs__msg__EstimatorStatus__FIELD_NAME__filter_fault_flags[] = "filter_fault_flags";
 static char px4_msgs__msg__EstimatorStatus__FIELD_NAME__pos_horiz_accuracy[] = "pos_horiz_accuracy";
 static char px4_msgs__msg__EstimatorStatus__FIELD_NAME__pos_vert_accuracy[] = "pos_vert_accuracy";
-static char px4_msgs__msg__EstimatorStatus__FIELD_NAME__hdg_test_ratio[] = "hdg_test_ratio";
+static char px4_msgs__msg__EstimatorStatus__FIELD_NAME__innovation_check_flags[] = "innovation_check_flags";
+static char px4_msgs__msg__EstimatorStatus__FIELD_NAME__mag_test_ratio[] = "mag_test_ratio";
 static char px4_msgs__msg__EstimatorStatus__FIELD_NAME__vel_test_ratio[] = "vel_test_ratio";
 static char px4_msgs__msg__EstimatorStatus__FIELD_NAME__pos_test_ratio[] = "pos_test_ratio";
 static char px4_msgs__msg__EstimatorStatus__FIELD_NAME__hgt_test_ratio[] = "hgt_test_ratio";
@@ -54,10 +55,9 @@ static char px4_msgs__msg__EstimatorStatus__FIELD_NAME__reset_count_pod_d[] = "r
 static char px4_msgs__msg__EstimatorStatus__FIELD_NAME__reset_count_quat[] = "reset_count_quat";
 static char px4_msgs__msg__EstimatorStatus__FIELD_NAME__time_slip[] = "time_slip";
 static char px4_msgs__msg__EstimatorStatus__FIELD_NAME__pre_flt_fail_innov_heading[] = "pre_flt_fail_innov_heading";
-static char px4_msgs__msg__EstimatorStatus__FIELD_NAME__pre_flt_fail_innov_height[] = "pre_flt_fail_innov_height";
-static char px4_msgs__msg__EstimatorStatus__FIELD_NAME__pre_flt_fail_innov_pos_horiz[] = "pre_flt_fail_innov_pos_horiz";
 static char px4_msgs__msg__EstimatorStatus__FIELD_NAME__pre_flt_fail_innov_vel_horiz[] = "pre_flt_fail_innov_vel_horiz";
 static char px4_msgs__msg__EstimatorStatus__FIELD_NAME__pre_flt_fail_innov_vel_vert[] = "pre_flt_fail_innov_vel_vert";
+static char px4_msgs__msg__EstimatorStatus__FIELD_NAME__pre_flt_fail_innov_height[] = "pre_flt_fail_innov_height";
 static char px4_msgs__msg__EstimatorStatus__FIELD_NAME__pre_flt_fail_mag_field_disturbed[] = "pre_flt_fail_mag_field_disturbed";
 static char px4_msgs__msg__EstimatorStatus__FIELD_NAME__accel_device_id[] = "accel_device_id";
 static char px4_msgs__msg__EstimatorStatus__FIELD_NAME__gyro_device_id[] = "gyro_device_id";
@@ -65,10 +65,6 @@ static char px4_msgs__msg__EstimatorStatus__FIELD_NAME__baro_device_id[] = "baro
 static char px4_msgs__msg__EstimatorStatus__FIELD_NAME__mag_device_id[] = "mag_device_id";
 static char px4_msgs__msg__EstimatorStatus__FIELD_NAME__health_flags[] = "health_flags";
 static char px4_msgs__msg__EstimatorStatus__FIELD_NAME__timeout_flags[] = "timeout_flags";
-static char px4_msgs__msg__EstimatorStatus__FIELD_NAME__mag_inclination_deg[] = "mag_inclination_deg";
-static char px4_msgs__msg__EstimatorStatus__FIELD_NAME__mag_inclination_ref_deg[] = "mag_inclination_ref_deg";
-static char px4_msgs__msg__EstimatorStatus__FIELD_NAME__mag_strength_gs[] = "mag_strength_gs";
-static char px4_msgs__msg__EstimatorStatus__FIELD_NAME__mag_strength_ref_gs[] = "mag_strength_ref_gs";
 
 static rosidl_runtime_c__type_description__Field px4_msgs__msg__EstimatorStatus__FIELDS[] = {
   {
@@ -152,7 +148,17 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__EstimatorStatus_
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__EstimatorStatus__FIELD_NAME__hdg_test_ratio, 14, 14},
+    {px4_msgs__msg__EstimatorStatus__FIELD_NAME__innovation_check_flags, 22, 22},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT16,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {px4_msgs__msg__EstimatorStatus__FIELD_NAME__mag_test_ratio, 14, 14},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
       0,
@@ -302,26 +308,6 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__EstimatorStatus_
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__EstimatorStatus__FIELD_NAME__pre_flt_fail_innov_height, 25, 25},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__EstimatorStatus__FIELD_NAME__pre_flt_fail_innov_pos_horiz, 28, 28},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
     {px4_msgs__msg__EstimatorStatus__FIELD_NAME__pre_flt_fail_innov_vel_horiz, 28, 28},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
@@ -333,6 +319,16 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__EstimatorStatus_
   },
   {
     {px4_msgs__msg__EstimatorStatus__FIELD_NAME__pre_flt_fail_innov_vel_vert, 27, 27},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {px4_msgs__msg__EstimatorStatus__FIELD_NAME__pre_flt_fail_innov_height, 25, 25},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
       0,
@@ -411,46 +407,6 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__EstimatorStatus_
     },
     {NULL, 0, 0},
   },
-  {
-    {px4_msgs__msg__EstimatorStatus__FIELD_NAME__mag_inclination_deg, 19, 19},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__EstimatorStatus__FIELD_NAME__mag_inclination_ref_deg, 23, 23},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__EstimatorStatus__FIELD_NAME__mag_strength_gs, 15, 15},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__EstimatorStatus__FIELD_NAME__mag_strength_ref_gs, 19, 19},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
 };
 
 const rosidl_runtime_c__type_description__TypeDescription *
@@ -462,7 +418,7 @@ px4_msgs__msg__EstimatorStatus__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {px4_msgs__msg__EstimatorStatus__TYPE_NAME, 28, 28},
-      {px4_msgs__msg__EstimatorStatus__FIELDS, 38, 38},
+      {px4_msgs__msg__EstimatorStatus__FIELDS, 34, 34},
     },
     {NULL, 0, 0},
   };
@@ -490,21 +446,20 @@ static char toplevel_type_raw_source[] =
   "uint8 GPS_CHECK_FAIL_MAX_VERT_DRIFT = 7\\t\\t# 7 : maximum allowed vertical position drift fail - requires stationary vehicle\n"
   "uint8 GPS_CHECK_FAIL_MAX_HORZ_SPD_ERR = 8\\t# 8 : maximum allowed horizontal speed fail - requires stationary vehicle\n"
   "uint8 GPS_CHECK_FAIL_MAX_VERT_SPD_ERR = 9\\t# 9 : maximum allowed vertical velocity discrepancy fail\n"
-  "uint8 GPS_CHECK_FAIL_SPOOFED = 10\\t\\t# 10 : GPS signal is spoofed\n"
   "\n"
   "uint64 control_mode_flags\\t# Bitmask to indicate EKF logic state\n"
   "uint8 CS_TILT_ALIGN = 0\\t\\t# 0 - true if the filter tilt alignment is complete\n"
   "uint8 CS_YAW_ALIGN = 1\\t\\t# 1 - true if the filter yaw alignment is complete\n"
-  "uint8 CS_GNSS_POS = 2\\t\\t# 2 - true if GNSS position measurements are being fused\n"
+  "uint8 CS_GPS = 2\\t\\t# 2 - true if GPS measurements are being fused\n"
   "uint8 CS_OPT_FLOW = 3\\t\\t# 3 - true if optical flow measurements are being fused\n"
   "uint8 CS_MAG_HDG = 4\\t\\t# 4 - true if a simple magnetic yaw heading is being fused\n"
   "uint8 CS_MAG_3D = 5\\t\\t# 5 - true if 3-axis magnetometer measurement are being fused\n"
   "uint8 CS_MAG_DEC = 6\\t\\t# 6 - true if synthetic magnetic declination measurements are being fused\n"
   "uint8 CS_IN_AIR = 7\\t\\t# 7 - true when thought to be airborne\n"
   "uint8 CS_WIND = 8\\t\\t# 8 - true when wind velocity is being estimated\n"
-  "uint8 CS_BARO_HGT = 9\\t\\t# 9 - true when baro data is being fused\n"
-  "uint8 CS_RNG_HGT = 10\\t\\t# 10 - true when range finder data is being fused for height aiding\n"
-  "uint8 CS_GPS_HGT = 11\\t\\t# 11 - true when GPS altitude is being fused\n"
+  "uint8 CS_BARO_HGT = 9\\t\\t# 9 - true when baro height is being fused as a primary height reference\n"
+  "uint8 CS_RNG_HGT = 10\\t\\t# 10 - true when range finder height is being fused as a primary height reference\n"
+  "uint8 CS_GPS_HGT = 11\\t\\t# 11 - true when GPS height is being fused as a primary height reference\n"
   "uint8 CS_EV_POS = 12\\t\\t# 12 - true when local position data from external vision is being fused\n"
   "uint8 CS_EV_YAW = 13\\t\\t# 13 - true when yaw data from external vision measurements is being fused\n"
   "uint8 CS_EV_HGT = 14\\t\\t# 14 - true when height data from external vision measurements is being fused\n"
@@ -522,7 +477,6 @@ static char toplevel_type_raw_source[] =
   "uint8 CS_VEHICLE_AT_REST = 26\\t# 26 - true when the vehicle is at rest\n"
   "uint8 CS_GPS_YAW_FAULT = 27\\t# 27 - true when the GNSS heading has been declared faulty and is no longer being used\n"
   "uint8 CS_RNG_FAULT = 28\\t\\t# 28 - true when the range finder has been declared faulty and is no longer being used\n"
-  "uint8 CS_GNSS_VEL = 44\\t\\t# 44 - true if GNSS velocity measurements are being fused\n"
   "\n"
   "uint32 filter_fault_flags\\t# Bitmask to indicate EKF internal faults\n"
   "# 0 - true if the fusion of the magnetometer X-axis has encountered a numerical error\n"
@@ -546,14 +500,27 @@ static char toplevel_type_raw_source[] =
   "\n"
   "float32 pos_horiz_accuracy # 1-Sigma estimated horizontal position accuracy relative to the estimators origin (m)\n"
   "float32 pos_vert_accuracy # 1-Sigma estimated vertical position accuracy relative to the estimators origin (m)\n"
+  "uint16 innovation_check_flags # Bitmask to indicate pass/fail status of innovation consistency checks\n"
+  "# 0 - true if velocity observations have been rejected\n"
+  "# 1 - true if horizontal position observations have been rejected\n"
+  "# 2 - true if true if vertical position observations have been rejected\n"
+  "# 3 - true if the X magnetometer observation has been rejected\n"
+  "# 4 - true if the Y magnetometer observation has been rejected\n"
+  "# 5 - true if the Z magnetometer observation has been rejected\n"
+  "# 6 - true if the yaw observation has been rejected\n"
+  "# 7 - true if the airspeed observation has been rejected\n"
+  "# 8 - true if the synthetic sideslip observation has been rejected\n"
+  "# 9 - true if the height above ground observation has been rejected\n"
+  "# 10 - true if the X optical flow observation has been rejected\n"
+  "# 11 - true if the Y optical flow observation has been rejected\n"
   "\n"
-  "float32 hdg_test_ratio # low-pass filtered ratio of the largest heading innovation component to the innovation test limit\n"
-  "float32 vel_test_ratio # low-pass filtered ratio of the largest velocity innovation component to the innovation test limit\n"
-  "float32 pos_test_ratio # low-pass filtered ratio of the largest horizontal position innovation component to the innovation test limit\n"
-  "float32 hgt_test_ratio # low-pass filtered ratio of the vertical position innovation to the innovation test limit\n"
-  "float32 tas_test_ratio # low-pass filtered ratio of the true airspeed innovation to the innovation test limit\n"
-  "float32 hagl_test_ratio # low-pass filtered ratio of the height above ground innovation to the innovation test limit\n"
-  "float32 beta_test_ratio # low-pass filtered ratio of the synthetic sideslip innovation to the innovation test limit\n"
+  "float32 mag_test_ratio # ratio of the largest magnetometer innovation component to the innovation test limit\n"
+  "float32 vel_test_ratio # ratio of the largest velocity innovation component to the innovation test limit\n"
+  "float32 pos_test_ratio # ratio of the largest horizontal position innovation component to the innovation test limit\n"
+  "float32 hgt_test_ratio # ratio of the vertical position innovation to the innovation test limit\n"
+  "float32 tas_test_ratio # ratio of the true airspeed innovation to the innovation test limit\n"
+  "float32 hagl_test_ratio # ratio of the height above ground innovation to the innovation test limit\n"
+  "float32 beta_test_ratio # ratio of the synthetic sideslip innovation to the innovation test limit\n"
   "\n"
   "uint16 solution_status_flags # Bitmask indicating which filter kinematic state outputs are valid for flight control use.\n"
   "# 0 - True if the attitude estimate is good\n"
@@ -578,10 +545,9 @@ static char toplevel_type_raw_source[] =
   "float32 time_slip # cumulative amount of time in seconds that the EKF inertial calculation has slipped relative to system time\n"
   "\n"
   "bool pre_flt_fail_innov_heading\n"
-  "bool pre_flt_fail_innov_height\n"
-  "bool pre_flt_fail_innov_pos_horiz\n"
   "bool pre_flt_fail_innov_vel_horiz\n"
   "bool pre_flt_fail_innov_vel_vert\n"
+  "bool pre_flt_fail_innov_height\n"
   "bool pre_flt_fail_mag_field_disturbed\n"
   "\n"
   "uint32 accel_device_id\n"
@@ -591,12 +557,7 @@ static char toplevel_type_raw_source[] =
   "\n"
   "# legacy local position estimator (LPE) flags\n"
   "uint8 health_flags\\t\\t# Bitmask to indicate sensor health states (vel, pos, hgt)\n"
-  "uint8 timeout_flags\\t\\t# Bitmask to indicate timeout flags (vel, pos, hgt)\n"
-  "\n"
-  "float32 mag_inclination_deg\n"
-  "float32 mag_inclination_ref_deg\n"
-  "float32 mag_strength_gs\n"
-  "float32 mag_strength_ref_gs";
+  "uint8 timeout_flags\\t\\t# Bitmask to indicate timeout flags (vel, pos, hgt)";
 
 static char msg_encoding[] = "msg";
 
@@ -610,7 +571,7 @@ px4_msgs__msg__EstimatorStatus__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__EstimatorStatus__TYPE_NAME, 28, 28},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 9036, 9036},
+    {toplevel_type_raw_source, 9537, 9537},
   };
   return &source;
 }

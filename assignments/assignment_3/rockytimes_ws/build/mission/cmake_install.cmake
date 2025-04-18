@@ -46,14 +46,10 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/mission" TYPE PROGRAM FILES
     "/home/blazar/workspaces/rockytimes_ws/src/mission/scripts/mission.py"
     "/home/blazar/workspaces/rockytimes_ws/src/mission/scripts/aruco_tracker.py"
-    "/home/blazar/workspaces/rockytimes_ws/src/mission/scripts/geometry_tracker.py"
-    "/home/blazar/workspaces/rockytimes_ws/src/mission/scripts/feature_tracker.py"
-    "/home/blazar/workspaces/rockytimes_ws/src/mission/scripts/pose_visualizer.py"
     "/home/blazar/workspaces/rockytimes_ws/src/mission/scripts/spiral_trajectory.py"
-    "/home/blazar/workspaces/rockytimes_ws/src/mission/scripts/cylinder_landing_node.py"
     "/home/blazar/workspaces/rockytimes_ws/src/mission/scripts/estimate.py"
     "/home/blazar/workspaces/rockytimes_ws/src/mission/scripts/landing.py"
-    "/home/blazar/workspaces/rockytimes_ws/src/mission/scripts/zigzag.py"
+    "/home/blazar/workspaces/rockytimes_ws/src/mission/scripts/return.py"
     )
 endif()
 

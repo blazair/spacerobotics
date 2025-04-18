@@ -31,7 +31,7 @@ void px4_msgs__msg__EstimatorGpsStatus__rosidl_typesupport_introspection_c__Esti
   px4_msgs__msg__EstimatorGpsStatus__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__EstimatorGpsStatus__rosidl_typesupport_introspection_c__EstimatorGpsStatus_message_member_array[17] = {
+static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__EstimatorGpsStatus__rosidl_typesupport_introspection_c__EstimatorGpsStatus_message_member_array[16] = {
   {
     "timestamp",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_UINT64,  // type
@@ -267,24 +267,6 @@ static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__Estimato
     NULL  // resize(index) function pointer
   },
   {
-    "check_fail_spoofed_gps",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(px4_msgs__msg__EstimatorGpsStatus, check_fail_spoofed_gps),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
-  },
-  {
     "position_drift_rate_horizontal_m_s",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
     0,  // upper bound of string
@@ -343,7 +325,7 @@ static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__Estimato
 static const rosidl_typesupport_introspection_c__MessageMembers px4_msgs__msg__EstimatorGpsStatus__rosidl_typesupport_introspection_c__EstimatorGpsStatus_message_members = {
   "px4_msgs__msg",  // message namespace
   "EstimatorGpsStatus",  // message name
-  17,  // number of fields
+  16,  // number of fields
   sizeof(px4_msgs__msg__EstimatorGpsStatus),
   false,  // has_any_key_member_
   px4_msgs__msg__EstimatorGpsStatus__rosidl_typesupport_introspection_c__EstimatorGpsStatus_message_member_array,  // message members

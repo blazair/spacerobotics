@@ -91,27 +91,6 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
-  // member: executor_in_charge
-  {
-    out << "executor_in_charge: ";
-    rosidl_generator_traits::value_to_yaml(msg.executor_in_charge, out);
-    out << ", ";
-  }
-
-  // member: valid_nav_states_mask
-  {
-    out << "valid_nav_states_mask: ";
-    rosidl_generator_traits::value_to_yaml(msg.valid_nav_states_mask, out);
-    out << ", ";
-  }
-
-  // member: can_set_nav_states_mask
-  {
-    out << "can_set_nav_states_mask: ";
-    rosidl_generator_traits::value_to_yaml(msg.can_set_nav_states_mask, out);
-    out << ", ";
-  }
-
   // member: failure_detector_status
   {
     out << "failure_detector_status: ";
@@ -144,13 +123,6 @@ inline void to_flow_style_yaml(
   {
     out << "failsafe_and_user_took_over: ";
     rosidl_generator_traits::value_to_yaml(msg.failsafe_and_user_took_over, out);
-    out << ", ";
-  }
-
-  // member: failsafe_defer_state
-  {
-    out << "failsafe_defer_state: ";
-    rosidl_generator_traits::value_to_yaml(msg.failsafe_defer_state, out);
     out << ", ";
   }
 
@@ -277,6 +249,20 @@ inline void to_flow_style_yaml(
   {
     out << "parachute_system_healthy: ";
     rosidl_generator_traits::value_to_yaml(msg.parachute_system_healthy, out);
+    out << ", ";
+  }
+
+  // member: avoidance_system_required
+  {
+    out << "avoidance_system_required: ";
+    rosidl_generator_traits::value_to_yaml(msg.avoidance_system_required, out);
+    out << ", ";
+  }
+
+  // member: avoidance_system_valid
+  {
+    out << "avoidance_system_valid: ";
+    rosidl_generator_traits::value_to_yaml(msg.avoidance_system_valid, out);
     out << ", ";
   }
 
@@ -396,36 +382,6 @@ inline void to_block_style_yaml(
     out << "\n";
   }
 
-  // member: executor_in_charge
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "executor_in_charge: ";
-    rosidl_generator_traits::value_to_yaml(msg.executor_in_charge, out);
-    out << "\n";
-  }
-
-  // member: valid_nav_states_mask
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "valid_nav_states_mask: ";
-    rosidl_generator_traits::value_to_yaml(msg.valid_nav_states_mask, out);
-    out << "\n";
-  }
-
-  // member: can_set_nav_states_mask
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "can_set_nav_states_mask: ";
-    rosidl_generator_traits::value_to_yaml(msg.can_set_nav_states_mask, out);
-    out << "\n";
-  }
-
   // member: failure_detector_status
   {
     if (indentation > 0) {
@@ -473,16 +429,6 @@ inline void to_block_style_yaml(
     }
     out << "failsafe_and_user_took_over: ";
     rosidl_generator_traits::value_to_yaml(msg.failsafe_and_user_took_over, out);
-    out << "\n";
-  }
-
-  // member: failsafe_defer_state
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "failsafe_defer_state: ";
-    rosidl_generator_traits::value_to_yaml(msg.failsafe_defer_state, out);
     out << "\n";
   }
 
@@ -663,6 +609,26 @@ inline void to_block_style_yaml(
     }
     out << "parachute_system_healthy: ";
     rosidl_generator_traits::value_to_yaml(msg.parachute_system_healthy, out);
+    out << "\n";
+  }
+
+  // member: avoidance_system_required
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "avoidance_system_required: ";
+    rosidl_generator_traits::value_to_yaml(msg.avoidance_system_required, out);
+    out << "\n";
+  }
+
+  // member: avoidance_system_valid
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "avoidance_system_valid: ";
+    rosidl_generator_traits::value_to_yaml(msg.avoidance_system_valid, out);
     out << "\n";
   }
 

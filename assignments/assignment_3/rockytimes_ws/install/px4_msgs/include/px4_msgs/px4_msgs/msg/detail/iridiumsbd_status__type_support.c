@@ -51,7 +51,7 @@ static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__Iridiums
     NULL  // resize(index) function pointer
   },
   {
-    "last_at_ok_timestamp",  // name
+    "last_heartbeat",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_UINT64,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
@@ -59,7 +59,7 @@ static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__Iridiums
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(px4_msgs__msg__IridiumsbdStatus, last_at_ok_timestamp),  // bytes offset in struct
+    offsetof(px4_msgs__msg__IridiumsbdStatus, last_heartbeat),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer

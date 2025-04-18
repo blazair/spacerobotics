@@ -65,6 +65,7 @@ class NavigatorMissionItem(metaclass=Metaclass_NavigatorMissionItem):
 
     __slots__ = [
         '_timestamp',
+        '_instance_count',
         '_sequence_current',
         '_nav_cmd',
         '_latitude',
@@ -86,6 +87,7 @@ class NavigatorMissionItem(metaclass=Metaclass_NavigatorMissionItem):
 
     _fields_and_field_types = {
         'timestamp': 'uint64',
+        'instance_count': 'uint32',
         'sequence_current': 'uint16',
         'nav_cmd': 'uint16',
         'latitude': 'float',
@@ -108,6 +110,7 @@ class NavigatorMissionItem(metaclass=Metaclass_NavigatorMissionItem):
     # related to the data type of each of the components the message.
     SLOT_TYPES = (
         rosidl_parser.definition.BasicType('uint64'),  # noqa: E501
+        rosidl_parser.definition.BasicType('uint32'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint16'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint16'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
@@ -136,6 +139,7 @@ class NavigatorMissionItem(metaclass=Metaclass_NavigatorMissionItem):
                 'Invalid arguments passed to constructor: %s' % \
                 ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.timestamp = kwargs.get('timestamp', int())
+        self.instance_count = kwargs.get('instance_count', int())
         self.sequence_current = kwargs.get('sequence_current', int())
         self.nav_cmd = kwargs.get('nav_cmd', int())
         self.latitude = kwargs.get('latitude', float())
@@ -184,6 +188,8 @@ class NavigatorMissionItem(metaclass=Metaclass_NavigatorMissionItem):
         if not isinstance(other, self.__class__):
             return False
         if self.timestamp != other.timestamp:
+            return False
+        if self.instance_count != other.instance_count:
             return False
         if self.sequence_current != other.sequence_current:
             return False
@@ -238,6 +244,21 @@ class NavigatorMissionItem(metaclass=Metaclass_NavigatorMissionItem):
             assert value >= 0 and value < 18446744073709551616, \
                 "The 'timestamp' field must be an unsigned integer in [0, 18446744073709551615]"
         self._timestamp = value
+
+    @builtins.property
+    def instance_count(self):
+        """Message field 'instance_count'."""
+        return self._instance_count
+
+    @instance_count.setter
+    def instance_count(self, value):
+        if self._check_fields:
+            assert \
+                isinstance(value, int), \
+                "The 'instance_count' field must be of type 'int'"
+            assert value >= 0 and value < 4294967296, \
+                "The 'instance_count' field must be an unsigned integer in [0, 4294967295]"
+        self._instance_count = value
 
     @builtins.property
     def sequence_current(self):

@@ -130,7 +130,7 @@ static char toplevel_type_raw_source[] =
   "                   \\t\\t\\t\\t# and NaN maps to disarmed (stop the motors)\n"
   "uint32 timeout_ms\\t\\t\\t\\t# timeout in ms after which to exit test mode (if 0, do not time out)\n"
   "\n"
-  "uint8 ORB_QUEUE_LENGTH = 16                     # >= MAX_NUM_MOTORS to support code in esc_calibration";
+  "uint8 ORB_QUEUE_LENGTH = 12                     # same as MAX_NUM_MOTORS to support code in esc_calibration";
 
 static char msg_encoding[] = "msg";
 
@@ -144,7 +144,7 @@ px4_msgs__msg__ActuatorTest__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__ActuatorTest__TYPE_NAME, 25, 25},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 927, 927},
+    {toplevel_type_raw_source, 932, 932},
   };
   return &source;
 }

@@ -67,10 +67,10 @@ enum
   px4_msgs__msg__ActionRequest__ACTION_VTOL_TRANSITION_TO_FIXEDWING = 7
 };
 
-/// Constant 'SOURCE_STICK_GESTURE'.
+/// Constant 'SOURCE_RC_STICK_GESTURE'.
 enum
 {
-  px4_msgs__msg__ActionRequest__SOURCE_STICK_GESTURE = 0
+  px4_msgs__msg__ActionRequest__SOURCE_RC_STICK_GESTURE = 0
 };
 
 /// Constant 'SOURCE_RC_SWITCH'.

@@ -111,12 +111,12 @@ bool px4_msgs__msg__estimator_aid_source2d__convert_from_py(PyObject * _pymsg, v
       PyArrayObject * seq_field = (PyArrayObject *)field;
       Py_INCREF(seq_field);
       assert(PyArray_NDIM(seq_field) == 1);
-      assert(PyArray_TYPE(seq_field) == NPY_FLOAT64);
+      assert(PyArray_TYPE(seq_field) == NPY_FLOAT32);
       Py_ssize_t size = 2;
-      double * dest = ros_message->observation;
+      float * dest = ros_message->observation;
       for (Py_ssize_t i = 0; i < size; ++i) {
-        double tmp = *(npy_float64 *)PyArray_GETPTR1(seq_field, i);
-        memcpy(&dest[i], &tmp, sizeof(double));
+        float tmp = *(npy_float32 *)PyArray_GETPTR1(seq_field, i);
+        memcpy(&dest[i], &tmp, sizeof(float));
       }
       Py_DECREF(seq_field);
     }
@@ -162,30 +162,6 @@ bool px4_msgs__msg__estimator_aid_source2d__convert_from_py(PyObject * _pymsg, v
       assert(PyArray_TYPE(seq_field) == NPY_FLOAT32);
       Py_ssize_t size = 2;
       float * dest = ros_message->innovation;
-      for (Py_ssize_t i = 0; i < size; ++i) {
-        float tmp = *(npy_float32 *)PyArray_GETPTR1(seq_field, i);
-        memcpy(&dest[i], &tmp, sizeof(float));
-      }
-      Py_DECREF(seq_field);
-    }
-    Py_DECREF(field);
-  }
-  {  // innovation_filtered
-    PyObject * field = PyObject_GetAttrString(_pymsg, "innovation_filtered");
-    if (!field) {
-      return false;
-    }
-    {
-      // TODO(dirk-thomas) use a better way to check the type before casting
-      assert(field->ob_type != NULL);
-      assert(field->ob_type->tp_name != NULL);
-      assert(strcmp(field->ob_type->tp_name, "numpy.ndarray") == 0);
-      PyArrayObject * seq_field = (PyArrayObject *)field;
-      Py_INCREF(seq_field);
-      assert(PyArray_NDIM(seq_field) == 1);
-      assert(PyArray_TYPE(seq_field) == NPY_FLOAT32);
-      Py_ssize_t size = 2;
-      float * dest = ros_message->innovation_filtered;
       for (Py_ssize_t i = 0; i < size; ++i) {
         float tmp = *(npy_float32 *)PyArray_GETPTR1(seq_field, i);
         memcpy(&dest[i], &tmp, sizeof(float));
@@ -242,28 +218,13 @@ bool px4_msgs__msg__estimator_aid_source2d__convert_from_py(PyObject * _pymsg, v
     }
     Py_DECREF(field);
   }
-  {  // test_ratio_filtered
-    PyObject * field = PyObject_GetAttrString(_pymsg, "test_ratio_filtered");
+  {  // fusion_enabled
+    PyObject * field = PyObject_GetAttrString(_pymsg, "fusion_enabled");
     if (!field) {
       return false;
     }
-    {
-      // TODO(dirk-thomas) use a better way to check the type before casting
-      assert(field->ob_type != NULL);
-      assert(field->ob_type->tp_name != NULL);
-      assert(strcmp(field->ob_type->tp_name, "numpy.ndarray") == 0);
-      PyArrayObject * seq_field = (PyArrayObject *)field;
-      Py_INCREF(seq_field);
-      assert(PyArray_NDIM(seq_field) == 1);
-      assert(PyArray_TYPE(seq_field) == NPY_FLOAT32);
-      Py_ssize_t size = 2;
-      float * dest = ros_message->test_ratio_filtered;
-      for (Py_ssize_t i = 0; i < size; ++i) {
-        float tmp = *(npy_float32 *)PyArray_GETPTR1(seq_field, i);
-        memcpy(&dest[i], &tmp, sizeof(float));
-      }
-      Py_DECREF(seq_field);
-    }
+    assert(PyBool_Check(field));
+    ros_message->fusion_enabled = (Py_True == field);
     Py_DECREF(field);
   }
   {  // innovation_rejected
@@ -372,11 +333,11 @@ PyObject * px4_msgs__msg__estimator_aid_source2d__convert_to_py(void * raw_ros_m
     assert(strcmp(field->ob_type->tp_name, "numpy.ndarray") == 0);
     PyArrayObject * seq_field = (PyArrayObject *)field;
     assert(PyArray_NDIM(seq_field) == 1);
-    assert(PyArray_TYPE(seq_field) == NPY_FLOAT64);
-    assert(sizeof(npy_float64) == sizeof(double));
-    npy_float64 * dst = (npy_float64 *)PyArray_GETPTR1(seq_field, 0);
-    double * src = &(ros_message->observation[0]);
-    memcpy(dst, src, 2 * sizeof(double));
+    assert(PyArray_TYPE(seq_field) == NPY_FLOAT32);
+    assert(sizeof(npy_float32) == sizeof(float));
+    npy_float32 * dst = (npy_float32 *)PyArray_GETPTR1(seq_field, 0);
+    float * src = &(ros_message->observation[0]);
+    memcpy(dst, src, 2 * sizeof(float));
     Py_DECREF(field);
   }
   {  // observation_variance
@@ -412,24 +373,6 @@ PyObject * px4_msgs__msg__estimator_aid_source2d__convert_to_py(void * raw_ros_m
     assert(sizeof(npy_float32) == sizeof(float));
     npy_float32 * dst = (npy_float32 *)PyArray_GETPTR1(seq_field, 0);
     float * src = &(ros_message->innovation[0]);
-    memcpy(dst, src, 2 * sizeof(float));
-    Py_DECREF(field);
-  }
-  {  // innovation_filtered
-    PyObject * field = NULL;
-    field = PyObject_GetAttrString(_pymessage, "innovation_filtered");
-    if (!field) {
-      return NULL;
-    }
-    assert(field->ob_type != NULL);
-    assert(field->ob_type->tp_name != NULL);
-    assert(strcmp(field->ob_type->tp_name, "numpy.ndarray") == 0);
-    PyArrayObject * seq_field = (PyArrayObject *)field;
-    assert(PyArray_NDIM(seq_field) == 1);
-    assert(PyArray_TYPE(seq_field) == NPY_FLOAT32);
-    assert(sizeof(npy_float32) == sizeof(float));
-    npy_float32 * dst = (npy_float32 *)PyArray_GETPTR1(seq_field, 0);
-    float * src = &(ros_message->innovation_filtered[0]);
     memcpy(dst, src, 2 * sizeof(float));
     Py_DECREF(field);
   }
@@ -469,23 +412,16 @@ PyObject * px4_msgs__msg__estimator_aid_source2d__convert_to_py(void * raw_ros_m
     memcpy(dst, src, 2 * sizeof(float));
     Py_DECREF(field);
   }
-  {  // test_ratio_filtered
+  {  // fusion_enabled
     PyObject * field = NULL;
-    field = PyObject_GetAttrString(_pymessage, "test_ratio_filtered");
-    if (!field) {
-      return NULL;
+    field = PyBool_FromLong(ros_message->fusion_enabled ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "fusion_enabled", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
     }
-    assert(field->ob_type != NULL);
-    assert(field->ob_type->tp_name != NULL);
-    assert(strcmp(field->ob_type->tp_name, "numpy.ndarray") == 0);
-    PyArrayObject * seq_field = (PyArrayObject *)field;
-    assert(PyArray_NDIM(seq_field) == 1);
-    assert(PyArray_TYPE(seq_field) == NPY_FLOAT32);
-    assert(sizeof(npy_float32) == sizeof(float));
-    npy_float32 * dst = (npy_float32 *)PyArray_GETPTR1(seq_field, 0);
-    float * src = &(ros_message->test_ratio_filtered[0]);
-    memcpy(dst, src, 2 * sizeof(float));
-    Py_DECREF(field);
   }
   {  // innovation_rejected
     PyObject * field = NULL;

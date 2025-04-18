@@ -104,22 +104,13 @@ bool px4_msgs__msg__offboard_control_mode__convert_from_py(PyObject * _pymsg, vo
     ros_message->body_rate = (Py_True == field);
     Py_DECREF(field);
   }
-  {  // thrust_and_torque
-    PyObject * field = PyObject_GetAttrString(_pymsg, "thrust_and_torque");
+  {  // actuator
+    PyObject * field = PyObject_GetAttrString(_pymsg, "actuator");
     if (!field) {
       return false;
     }
     assert(PyBool_Check(field));
-    ros_message->thrust_and_torque = (Py_True == field);
-    Py_DECREF(field);
-  }
-  {  // direct_actuator
-    PyObject * field = PyObject_GetAttrString(_pymsg, "direct_actuator");
-    if (!field) {
-      return false;
-    }
-    assert(PyBool_Check(field));
-    ros_message->direct_actuator = (Py_True == field);
+    ros_message->actuator = (Py_True == field);
     Py_DECREF(field);
   }
 
@@ -210,22 +201,11 @@ PyObject * px4_msgs__msg__offboard_control_mode__convert_to_py(void * raw_ros_me
       }
     }
   }
-  {  // thrust_and_torque
+  {  // actuator
     PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->thrust_and_torque ? 1 : 0);
+    field = PyBool_FromLong(ros_message->actuator ? 1 : 0);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "thrust_and_torque", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // direct_actuator
-    PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->direct_actuator ? 1 : 0);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "direct_actuator", field);
+      int rc = PyObject_SetAttrString(_pymessage, "actuator", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

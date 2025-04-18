@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "rosidl_typesupport_interface/macros.h"
 #include "px4_msgs/msg/detail/landing_gear_wheel__functions.h"
-#include "px4_msgs/msg/detail/landing_gear_wheel__type_support.h"
 #include "px4_msgs/msg/detail/landing_gear_wheel__struct.h"
+#include "px4_msgs/msg/detail/landing_gear_wheel__type_support.h"
+#include "rosidl_typesupport_interface/macros.h"
 
 #ifdef __cplusplus
 extern "C"

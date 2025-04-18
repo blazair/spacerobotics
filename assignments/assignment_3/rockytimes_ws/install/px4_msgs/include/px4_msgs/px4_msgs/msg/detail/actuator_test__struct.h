@@ -64,11 +64,11 @@ enum
 
 /// Constant 'ORB_QUEUE_LENGTH'.
 /**
-  * >= MAX_NUM_MOTORS to support code in esc_calibration
+  * same as MAX_NUM_MOTORS to support code in esc_calibration
  */
 enum
 {
-  px4_msgs__msg__ActuatorTest__ORB_QUEUE_LENGTH = 16
+  px4_msgs__msg__ActuatorTest__ORB_QUEUE_LENGTH = 12
 };
 
 /// Struct defined in msg/ActuatorTest in the package px4_msgs.

@@ -88,7 +88,7 @@ px4_msgs__msg__LogMessage__get_type_description(
 }
 
 static char toplevel_type_raw_source[] =
-  "# A logging message, output with PX4_WARN, PX4_ERR, PX4_INFO\n"
+  "# A logging message, output with PX4_{WARN,ERR,INFO}\n"
   "\n"
   "uint64 timestamp\\t\\t# time since system start (microseconds)\n"
   "\n"
@@ -109,7 +109,7 @@ px4_msgs__msg__LogMessage__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__LogMessage__TYPE_NAME, 23, 23},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 239, 239},
+    {toplevel_type_raw_source, 231, 231},
   };
   return &source;
 }

@@ -38,7 +38,7 @@ void VehicleGlobalPosition_fini_function(void * message_memory)
   typed_message->~VehicleGlobalPosition();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember VehicleGlobalPosition_message_member_array[18] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember VehicleGlobalPosition_message_member_array[14] = {
   {
     "timestamp",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT64,  // type
@@ -148,42 +148,6 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember VehicleGlobal
     nullptr  // resize(index) function pointer
   },
   {
-    "lat_lon_valid",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_BOOLEAN,  // type
-    0,  // upper bound of string
-    nullptr,  // members of sub message
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(px4_msgs::msg::VehicleGlobalPosition, lat_lon_valid),  // bytes offset in struct
-    nullptr,  // default value
-    nullptr,  // size() function pointer
-    nullptr,  // get_const(index) function pointer
-    nullptr,  // get(index) function pointer
-    nullptr,  // fetch(index, &value) function pointer
-    nullptr,  // assign(index, value) function pointer
-    nullptr  // resize(index) function pointer
-  },
-  {
-    "alt_valid",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_BOOLEAN,  // type
-    0,  // upper bound of string
-    nullptr,  // members of sub message
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(px4_msgs::msg::VehicleGlobalPosition, alt_valid),  // bytes offset in struct
-    nullptr,  // default value
-    nullptr,  // size() function pointer
-    nullptr,  // get_const(index) function pointer
-    nullptr,  // get(index) function pointer
-    nullptr,  // fetch(index, &value) function pointer
-    nullptr,  // assign(index, value) function pointer
-    nullptr  // resize(index) function pointer
-  },
-  {
     "delta_alt",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
     0,  // upper bound of string
@@ -193,24 +157,6 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember VehicleGlobal
     0,  // array size
     false,  // is upper bound
     offsetof(px4_msgs::msg::VehicleGlobalPosition, delta_alt),  // bytes offset in struct
-    nullptr,  // default value
-    nullptr,  // size() function pointer
-    nullptr,  // get_const(index) function pointer
-    nullptr,  // get(index) function pointer
-    nullptr,  // fetch(index, &value) function pointer
-    nullptr,  // assign(index, value) function pointer
-    nullptr  // resize(index) function pointer
-  },
-  {
-    "delta_terrain",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
-    0,  // upper bound of string
-    nullptr,  // members of sub message
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(px4_msgs::msg::VehicleGlobalPosition, delta_terrain),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -247,24 +193,6 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember VehicleGlobal
     0,  // array size
     false,  // is upper bound
     offsetof(px4_msgs::msg::VehicleGlobalPosition, alt_reset_counter),  // bytes offset in struct
-    nullptr,  // default value
-    nullptr,  // size() function pointer
-    nullptr,  // get_const(index) function pointer
-    nullptr,  // get(index) function pointer
-    nullptr,  // fetch(index, &value) function pointer
-    nullptr,  // assign(index, value) function pointer
-    nullptr  // resize(index) function pointer
-  },
-  {
-    "terrain_reset_counter",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT8,  // type
-    0,  // upper bound of string
-    nullptr,  // members of sub message
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(px4_msgs::msg::VehicleGlobalPosition, terrain_reset_counter),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -368,7 +296,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember VehicleGlobal
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers VehicleGlobalPosition_message_members = {
   "px4_msgs::msg",  // message namespace
   "VehicleGlobalPosition",  // message name
-  18,  // number of fields
+  14,  // number of fields
   sizeof(px4_msgs::msg::VehicleGlobalPosition),
   false,  // has_any_key_member_
   VehicleGlobalPosition_message_member_array,  // message members

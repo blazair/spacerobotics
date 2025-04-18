@@ -59,6 +59,15 @@ bool px4_msgs__msg__navigator_mission_item__convert_from_py(PyObject * _pymsg, v
     ros_message->timestamp = PyLong_AsUnsignedLongLong(field);
     Py_DECREF(field);
   }
+  {  // instance_count
+    PyObject * field = PyObject_GetAttrString(_pymsg, "instance_count");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->instance_count = PyLong_AsUnsignedLong(field);
+    Py_DECREF(field);
+  }
   {  // sequence_current
     PyObject * field = PyObject_GetAttrString(_pymsg, "sequence_current");
     if (!field) {
@@ -230,6 +239,17 @@ PyObject * px4_msgs__msg__navigator_mission_item__convert_to_py(void * raw_ros_m
     field = PyLong_FromUnsignedLongLong(ros_message->timestamp);
     {
       int rc = PyObject_SetAttrString(_pymessage, "timestamp", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // instance_count
+    PyObject * field = NULL;
+    field = PyLong_FromUnsignedLong(ros_message->instance_count);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "instance_count", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

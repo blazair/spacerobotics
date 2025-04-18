@@ -46,13 +46,12 @@ px4_msgs__msg__FailsafeFlags__init(px4_msgs__msg__FailsafeFlags * msg)
   // battery_warning
   // battery_low_remaining_time
   // battery_unhealthy
-  // geofence_breached
+  // primary_geofence_breached
   // mission_failure
   // vtol_fixed_wing_system_failure
   // wind_limit_exceeded
   // flight_time_limit_exceeded
   // local_position_accuracy_low
-  // navigator_failure
   // fd_critical_failure
   // fd_esc_arming_failure
   // fd_imbalanced_prop
@@ -95,13 +94,12 @@ px4_msgs__msg__FailsafeFlags__fini(px4_msgs__msg__FailsafeFlags * msg)
   // battery_warning
   // battery_low_remaining_time
   // battery_unhealthy
-  // geofence_breached
+  // primary_geofence_breached
   // mission_failure
   // vtol_fixed_wing_system_failure
   // wind_limit_exceeded
   // flight_time_limit_exceeded
   // local_position_accuracy_low
-  // navigator_failure
   // fd_critical_failure
   // fd_esc_arming_failure
   // fd_imbalanced_prop
@@ -230,8 +228,8 @@ px4_msgs__msg__FailsafeFlags__are_equal(const px4_msgs__msg__FailsafeFlags * lhs
   if (lhs->battery_unhealthy != rhs->battery_unhealthy) {
     return false;
   }
-  // geofence_breached
-  if (lhs->geofence_breached != rhs->geofence_breached) {
+  // primary_geofence_breached
+  if (lhs->primary_geofence_breached != rhs->primary_geofence_breached) {
     return false;
   }
   // mission_failure
@@ -252,10 +250,6 @@ px4_msgs__msg__FailsafeFlags__are_equal(const px4_msgs__msg__FailsafeFlags * lhs
   }
   // local_position_accuracy_low
   if (lhs->local_position_accuracy_low != rhs->local_position_accuracy_low) {
-    return false;
-  }
-  // navigator_failure
-  if (lhs->navigator_failure != rhs->navigator_failure) {
     return false;
   }
   // fd_critical_failure
@@ -343,8 +337,8 @@ px4_msgs__msg__FailsafeFlags__copy(
   output->battery_low_remaining_time = input->battery_low_remaining_time;
   // battery_unhealthy
   output->battery_unhealthy = input->battery_unhealthy;
-  // geofence_breached
-  output->geofence_breached = input->geofence_breached;
+  // primary_geofence_breached
+  output->primary_geofence_breached = input->primary_geofence_breached;
   // mission_failure
   output->mission_failure = input->mission_failure;
   // vtol_fixed_wing_system_failure
@@ -355,8 +349,6 @@ px4_msgs__msg__FailsafeFlags__copy(
   output->flight_time_limit_exceeded = input->flight_time_limit_exceeded;
   // local_position_accuracy_low
   output->local_position_accuracy_low = input->local_position_accuracy_low;
-  // navigator_failure
-  output->navigator_failure = input->navigator_failure;
   // fd_critical_failure
   output->fd_critical_failure = input->fd_critical_failure;
   // fd_esc_arming_failure

@@ -185,15 +185,6 @@ bool px4_msgs__msg__npfg_status__convert_from_py(PyObject * _pymsg, void * _ros_
     ros_message->time_const = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
-  {  // can_run_factor
-    PyObject * field = PyObject_GetAttrString(_pymsg, "can_run_factor");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->can_run_factor = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
 
   return true;
 }
@@ -375,17 +366,6 @@ PyObject * px4_msgs__msg__npfg_status__convert_to_py(void * raw_ros_message)
     field = PyFloat_FromDouble(ros_message->time_const);
     {
       int rc = PyObject_SetAttrString(_pymessage, "time_const", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // can_run_factor
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->can_run_factor);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "can_run_factor", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

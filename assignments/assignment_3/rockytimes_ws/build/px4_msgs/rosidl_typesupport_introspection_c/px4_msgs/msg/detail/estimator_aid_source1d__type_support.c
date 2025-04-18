@@ -31,7 +31,7 @@ void px4_msgs__msg__EstimatorAidSource1d__rosidl_typesupport_introspection_c__Es
   px4_msgs__msg__EstimatorAidSource1d__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__EstimatorAidSource1d__rosidl_typesupport_introspection_c__EstimatorAidSource1d_message_member_array[14] = {
+static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__EstimatorAidSource1d__rosidl_typesupport_introspection_c__EstimatorAidSource1d_message_member_array[13] = {
   {
     "timestamp",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_UINT64,  // type
@@ -177,24 +177,6 @@ static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__Estimato
     NULL  // resize(index) function pointer
   },
   {
-    "innovation_filtered",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(px4_msgs__msg__EstimatorAidSource1d, innovation_filtered),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
-  },
-  {
     "innovation_variance",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
     0,  // upper bound of string
@@ -231,15 +213,15 @@ static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__Estimato
     NULL  // resize(index) function pointer
   },
   {
-    "test_ratio_filtered",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
+    "fusion_enabled",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(px4_msgs__msg__EstimatorAidSource1d, test_ratio_filtered),  // bytes offset in struct
+    offsetof(px4_msgs__msg__EstimatorAidSource1d, fusion_enabled),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -289,7 +271,7 @@ static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__Estimato
 static const rosidl_typesupport_introspection_c__MessageMembers px4_msgs__msg__EstimatorAidSource1d__rosidl_typesupport_introspection_c__EstimatorAidSource1d_message_members = {
   "px4_msgs__msg",  // message namespace
   "EstimatorAidSource1d",  // message name
-  14,  // number of fields
+  13,  // number of fields
   sizeof(px4_msgs__msg__EstimatorAidSource1d),
   false,  // has_any_key_member_
   px4_msgs__msg__EstimatorAidSource1d__rosidl_typesupport_introspection_c__EstimatorAidSource1d_message_member_array,  // message members

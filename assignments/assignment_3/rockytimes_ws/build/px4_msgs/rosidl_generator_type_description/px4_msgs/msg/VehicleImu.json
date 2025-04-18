@@ -66,7 +66,7 @@
         {
           "name": "delta_angle_dt",
           "type": {
-            "type_id": 7,
+            "type_id": 5,
             "capacity": 0,
             "string_capacity": 0,
             "nested_type_name": ""
@@ -76,7 +76,7 @@
         {
           "name": "delta_velocity_dt",
           "type": {
-            "type_id": 7,
+            "type_id": 5,
             "capacity": 0,
             "string_capacity": 0,
             "nested_type_name": ""
@@ -130,7 +130,7 @@
   "type_hashes": [
     {
       "type_name": "px4_msgs/msg/VehicleImu",
-      "hash_string": "RIHS01_fe916cbea44a1f277388c7d8c3d1d5c7ac01bb020ea09e16a940d58802834c25"
+      "hash_string": "RIHS01_9649048e92ed6a21445a2c5f77cb6805b83b3c4b5d5a70f438277c373897c822"
     }
   ]
 }

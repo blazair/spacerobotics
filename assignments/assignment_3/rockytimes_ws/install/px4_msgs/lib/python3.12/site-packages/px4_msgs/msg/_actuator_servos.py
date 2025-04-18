@@ -32,7 +32,6 @@ class Metaclass_ActuatorServos(type):
     _TYPE_SUPPORT = None
 
     __constants = {
-        'MESSAGE_VERSION': 0,
         'NUM_CONTROLS': 8,
     }
 
@@ -62,14 +61,8 @@ class Metaclass_ActuatorServos(type):
         # the message class under "Data and other attributes defined here:"
         # as well as populate each message instance
         return {
-            'MESSAGE_VERSION': cls.__constants['MESSAGE_VERSION'],
             'NUM_CONTROLS': cls.__constants['NUM_CONTROLS'],
         }
-
-    @property
-    def MESSAGE_VERSION(self):
-        """Message constant 'MESSAGE_VERSION'."""
-        return Metaclass_ActuatorServos.__constants['MESSAGE_VERSION']
 
     @property
     def NUM_CONTROLS(self):
@@ -82,7 +75,6 @@ class ActuatorServos(metaclass=Metaclass_ActuatorServos):
     Message class 'ActuatorServos'.
 
     Constants:
-      MESSAGE_VERSION
       NUM_CONTROLS
     """
 

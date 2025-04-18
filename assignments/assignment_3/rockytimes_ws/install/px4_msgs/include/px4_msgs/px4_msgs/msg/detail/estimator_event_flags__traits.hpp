@@ -165,6 +165,97 @@ inline void to_flow_style_yaml(
   {
     out << "reset_hgt_to_ev: ";
     rosidl_generator_traits::value_to_yaml(msg.reset_hgt_to_ev, out);
+    out << ", ";
+  }
+
+  // member: warning_event_changes
+  {
+    out << "warning_event_changes: ";
+    rosidl_generator_traits::value_to_yaml(msg.warning_event_changes, out);
+    out << ", ";
+  }
+
+  // member: gps_quality_poor
+  {
+    out << "gps_quality_poor: ";
+    rosidl_generator_traits::value_to_yaml(msg.gps_quality_poor, out);
+    out << ", ";
+  }
+
+  // member: gps_fusion_timout
+  {
+    out << "gps_fusion_timout: ";
+    rosidl_generator_traits::value_to_yaml(msg.gps_fusion_timout, out);
+    out << ", ";
+  }
+
+  // member: gps_data_stopped
+  {
+    out << "gps_data_stopped: ";
+    rosidl_generator_traits::value_to_yaml(msg.gps_data_stopped, out);
+    out << ", ";
+  }
+
+  // member: gps_data_stopped_using_alternate
+  {
+    out << "gps_data_stopped_using_alternate: ";
+    rosidl_generator_traits::value_to_yaml(msg.gps_data_stopped_using_alternate, out);
+    out << ", ";
+  }
+
+  // member: height_sensor_timeout
+  {
+    out << "height_sensor_timeout: ";
+    rosidl_generator_traits::value_to_yaml(msg.height_sensor_timeout, out);
+    out << ", ";
+  }
+
+  // member: stopping_navigation
+  {
+    out << "stopping_navigation: ";
+    rosidl_generator_traits::value_to_yaml(msg.stopping_navigation, out);
+    out << ", ";
+  }
+
+  // member: invalid_accel_bias_cov_reset
+  {
+    out << "invalid_accel_bias_cov_reset: ";
+    rosidl_generator_traits::value_to_yaml(msg.invalid_accel_bias_cov_reset, out);
+    out << ", ";
+  }
+
+  // member: bad_yaw_using_gps_course
+  {
+    out << "bad_yaw_using_gps_course: ";
+    rosidl_generator_traits::value_to_yaml(msg.bad_yaw_using_gps_course, out);
+    out << ", ";
+  }
+
+  // member: stopping_mag_use
+  {
+    out << "stopping_mag_use: ";
+    rosidl_generator_traits::value_to_yaml(msg.stopping_mag_use, out);
+    out << ", ";
+  }
+
+  // member: vision_data_stopped
+  {
+    out << "vision_data_stopped: ";
+    rosidl_generator_traits::value_to_yaml(msg.vision_data_stopped, out);
+    out << ", ";
+  }
+
+  // member: emergency_yaw_reset_mag_stopped
+  {
+    out << "emergency_yaw_reset_mag_stopped: ";
+    rosidl_generator_traits::value_to_yaml(msg.emergency_yaw_reset_mag_stopped, out);
+    out << ", ";
+  }
+
+  // member: emergency_yaw_reset_gps_yaw_stopped
+  {
+    out << "emergency_yaw_reset_gps_yaw_stopped: ";
+    rosidl_generator_traits::value_to_yaml(msg.emergency_yaw_reset_gps_yaw_stopped, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -370,6 +461,136 @@ inline void to_block_style_yaml(
     }
     out << "reset_hgt_to_ev: ";
     rosidl_generator_traits::value_to_yaml(msg.reset_hgt_to_ev, out);
+    out << "\n";
+  }
+
+  // member: warning_event_changes
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "warning_event_changes: ";
+    rosidl_generator_traits::value_to_yaml(msg.warning_event_changes, out);
+    out << "\n";
+  }
+
+  // member: gps_quality_poor
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "gps_quality_poor: ";
+    rosidl_generator_traits::value_to_yaml(msg.gps_quality_poor, out);
+    out << "\n";
+  }
+
+  // member: gps_fusion_timout
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "gps_fusion_timout: ";
+    rosidl_generator_traits::value_to_yaml(msg.gps_fusion_timout, out);
+    out << "\n";
+  }
+
+  // member: gps_data_stopped
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "gps_data_stopped: ";
+    rosidl_generator_traits::value_to_yaml(msg.gps_data_stopped, out);
+    out << "\n";
+  }
+
+  // member: gps_data_stopped_using_alternate
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "gps_data_stopped_using_alternate: ";
+    rosidl_generator_traits::value_to_yaml(msg.gps_data_stopped_using_alternate, out);
+    out << "\n";
+  }
+
+  // member: height_sensor_timeout
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "height_sensor_timeout: ";
+    rosidl_generator_traits::value_to_yaml(msg.height_sensor_timeout, out);
+    out << "\n";
+  }
+
+  // member: stopping_navigation
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "stopping_navigation: ";
+    rosidl_generator_traits::value_to_yaml(msg.stopping_navigation, out);
+    out << "\n";
+  }
+
+  // member: invalid_accel_bias_cov_reset
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "invalid_accel_bias_cov_reset: ";
+    rosidl_generator_traits::value_to_yaml(msg.invalid_accel_bias_cov_reset, out);
+    out << "\n";
+  }
+
+  // member: bad_yaw_using_gps_course
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "bad_yaw_using_gps_course: ";
+    rosidl_generator_traits::value_to_yaml(msg.bad_yaw_using_gps_course, out);
+    out << "\n";
+  }
+
+  // member: stopping_mag_use
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "stopping_mag_use: ";
+    rosidl_generator_traits::value_to_yaml(msg.stopping_mag_use, out);
+    out << "\n";
+  }
+
+  // member: vision_data_stopped
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "vision_data_stopped: ";
+    rosidl_generator_traits::value_to_yaml(msg.vision_data_stopped, out);
+    out << "\n";
+  }
+
+  // member: emergency_yaw_reset_mag_stopped
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "emergency_yaw_reset_mag_stopped: ";
+    rosidl_generator_traits::value_to_yaml(msg.emergency_yaw_reset_mag_stopped, out);
+    out << "\n";
+  }
+
+  // member: emergency_yaw_reset_gps_yaw_stopped
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "emergency_yaw_reset_gps_yaw_stopped: ";
+    rosidl_generator_traits::value_to_yaml(msg.emergency_yaw_reset_gps_yaw_stopped, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)

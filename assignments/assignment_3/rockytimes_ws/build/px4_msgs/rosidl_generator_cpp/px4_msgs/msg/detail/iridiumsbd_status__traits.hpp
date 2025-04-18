@@ -35,10 +35,10 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
-  // member: last_at_ok_timestamp
+  // member: last_heartbeat
   {
-    out << "last_at_ok_timestamp: ";
-    rosidl_generator_traits::value_to_yaml(msg.last_at_ok_timestamp, out);
+    out << "last_heartbeat: ";
+    rosidl_generator_traits::value_to_yaml(msg.last_heartbeat, out);
     out << ", ";
   }
 
@@ -148,13 +148,13 @@ inline void to_block_style_yaml(
     out << "\n";
   }
 
-  // member: last_at_ok_timestamp
+  // member: last_heartbeat
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "last_at_ok_timestamp: ";
-    rosidl_generator_traits::value_to_yaml(msg.last_at_ok_timestamp, out);
+    out << "last_heartbeat: ";
+    rosidl_generator_traits::value_to_yaml(msg.last_heartbeat, out);
     out << "\n";
   }
 

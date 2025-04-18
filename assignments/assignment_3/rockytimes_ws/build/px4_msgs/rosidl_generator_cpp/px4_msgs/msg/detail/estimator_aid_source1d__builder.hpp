@@ -56,15 +56,15 @@ private:
   ::px4_msgs::msg::EstimatorAidSource1d msg_;
 };
 
-class Init_EstimatorAidSource1d_test_ratio_filtered
+class Init_EstimatorAidSource1d_fusion_enabled
 {
 public:
-  explicit Init_EstimatorAidSource1d_test_ratio_filtered(::px4_msgs::msg::EstimatorAidSource1d & msg)
+  explicit Init_EstimatorAidSource1d_fusion_enabled(::px4_msgs::msg::EstimatorAidSource1d & msg)
   : msg_(msg)
   {}
-  Init_EstimatorAidSource1d_innovation_rejected test_ratio_filtered(::px4_msgs::msg::EstimatorAidSource1d::_test_ratio_filtered_type arg)
+  Init_EstimatorAidSource1d_innovation_rejected fusion_enabled(::px4_msgs::msg::EstimatorAidSource1d::_fusion_enabled_type arg)
   {
-    msg_.test_ratio_filtered = std::move(arg);
+    msg_.fusion_enabled = std::move(arg);
     return Init_EstimatorAidSource1d_innovation_rejected(msg_);
   }
 
@@ -78,10 +78,10 @@ public:
   explicit Init_EstimatorAidSource1d_test_ratio(::px4_msgs::msg::EstimatorAidSource1d & msg)
   : msg_(msg)
   {}
-  Init_EstimatorAidSource1d_test_ratio_filtered test_ratio(::px4_msgs::msg::EstimatorAidSource1d::_test_ratio_type arg)
+  Init_EstimatorAidSource1d_fusion_enabled test_ratio(::px4_msgs::msg::EstimatorAidSource1d::_test_ratio_type arg)
   {
     msg_.test_ratio = std::move(arg);
-    return Init_EstimatorAidSource1d_test_ratio_filtered(msg_);
+    return Init_EstimatorAidSource1d_fusion_enabled(msg_);
   }
 
 private:
@@ -104,32 +104,16 @@ private:
   ::px4_msgs::msg::EstimatorAidSource1d msg_;
 };
 
-class Init_EstimatorAidSource1d_innovation_filtered
-{
-public:
-  explicit Init_EstimatorAidSource1d_innovation_filtered(::px4_msgs::msg::EstimatorAidSource1d & msg)
-  : msg_(msg)
-  {}
-  Init_EstimatorAidSource1d_innovation_variance innovation_filtered(::px4_msgs::msg::EstimatorAidSource1d::_innovation_filtered_type arg)
-  {
-    msg_.innovation_filtered = std::move(arg);
-    return Init_EstimatorAidSource1d_innovation_variance(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::EstimatorAidSource1d msg_;
-};
-
 class Init_EstimatorAidSource1d_innovation
 {
 public:
   explicit Init_EstimatorAidSource1d_innovation(::px4_msgs::msg::EstimatorAidSource1d & msg)
   : msg_(msg)
   {}
-  Init_EstimatorAidSource1d_innovation_filtered innovation(::px4_msgs::msg::EstimatorAidSource1d::_innovation_type arg)
+  Init_EstimatorAidSource1d_innovation_variance innovation(::px4_msgs::msg::EstimatorAidSource1d::_innovation_type arg)
   {
     msg_.innovation = std::move(arg);
-    return Init_EstimatorAidSource1d_innovation_filtered(msg_);
+    return Init_EstimatorAidSource1d_innovation_variance(msg_);
   }
 
 private:

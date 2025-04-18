@@ -266,6 +266,44 @@ void assign_function__EstimatorInnovations__flow(
   item = value;
 }
 
+size_t size_function__EstimatorInnovations__terr_flow(const void * untyped_member)
+{
+  (void)untyped_member;
+  return 2;
+}
+
+const void * get_const_function__EstimatorInnovations__terr_flow(const void * untyped_member, size_t index)
+{
+  const auto & member =
+    *reinterpret_cast<const std::array<float, 2> *>(untyped_member);
+  return &member[index];
+}
+
+void * get_function__EstimatorInnovations__terr_flow(void * untyped_member, size_t index)
+{
+  auto & member =
+    *reinterpret_cast<std::array<float, 2> *>(untyped_member);
+  return &member[index];
+}
+
+void fetch_function__EstimatorInnovations__terr_flow(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const auto & item = *reinterpret_cast<const float *>(
+    get_const_function__EstimatorInnovations__terr_flow(untyped_member, index));
+  auto & value = *reinterpret_cast<float *>(untyped_value);
+  value = item;
+}
+
+void assign_function__EstimatorInnovations__terr_flow(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  auto & item = *reinterpret_cast<float *>(
+    get_function__EstimatorInnovations__terr_flow(untyped_member, index));
+  const auto & value = *reinterpret_cast<const float *>(untyped_value);
+  item = value;
+}
+
 size_t size_function__EstimatorInnovations__mag_field(const void * untyped_member)
 {
   (void)untyped_member;
@@ -380,7 +418,7 @@ void assign_function__EstimatorInnovations__drag(
   item = value;
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember EstimatorInnovations_message_member_array[22] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember EstimatorInnovations_message_member_array[24] = {
   {
     "timestamp",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT64,  // type
@@ -616,6 +654,24 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember EstimatorInno
     nullptr  // resize(index) function pointer
   },
   {
+    "aux_vvel",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is key
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(px4_msgs::msg::EstimatorInnovations, aux_vvel),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
     "flow",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
     0,  // upper bound of string
@@ -631,6 +687,24 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember EstimatorInno
     get_function__EstimatorInnovations__flow,  // get(index) function pointer
     fetch_function__EstimatorInnovations__flow,  // fetch(index, &value) function pointer
     assign_function__EstimatorInnovations__flow,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "terr_flow",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is key
+    true,  // is array
+    2,  // array size
+    false,  // is upper bound
+    offsetof(px4_msgs::msg::EstimatorInnovations, terr_flow),  // bytes offset in struct
+    nullptr,  // default value
+    size_function__EstimatorInnovations__terr_flow,  // size() function pointer
+    get_const_function__EstimatorInnovations__terr_flow,  // get_const(index) function pointer
+    get_function__EstimatorInnovations__terr_flow,  // get(index) function pointer
+    fetch_function__EstimatorInnovations__terr_flow,  // fetch(index, &value) function pointer
+    assign_function__EstimatorInnovations__terr_flow,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
   },
   {
@@ -782,7 +856,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember EstimatorInno
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers EstimatorInnovations_message_members = {
   "px4_msgs::msg",  // message namespace
   "EstimatorInnovations",  // message name
-  22,  // number of fields
+  24,  // number of fields
   sizeof(px4_msgs::msg::EstimatorInnovations),
   false,  // has_any_key_member_
   EstimatorInnovations_message_member_array,  // message members

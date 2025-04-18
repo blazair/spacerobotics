@@ -104,24 +104,6 @@ bool px4_msgs__msg__vehicle_global_position__convert_from_py(PyObject * _pymsg, 
     ros_message->alt_ellipsoid = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
-  {  // lat_lon_valid
-    PyObject * field = PyObject_GetAttrString(_pymsg, "lat_lon_valid");
-    if (!field) {
-      return false;
-    }
-    assert(PyBool_Check(field));
-    ros_message->lat_lon_valid = (Py_True == field);
-    Py_DECREF(field);
-  }
-  {  // alt_valid
-    PyObject * field = PyObject_GetAttrString(_pymsg, "alt_valid");
-    if (!field) {
-      return false;
-    }
-    assert(PyBool_Check(field));
-    ros_message->alt_valid = (Py_True == field);
-    Py_DECREF(field);
-  }
   {  // delta_alt
     PyObject * field = PyObject_GetAttrString(_pymsg, "delta_alt");
     if (!field) {
@@ -129,15 +111,6 @@ bool px4_msgs__msg__vehicle_global_position__convert_from_py(PyObject * _pymsg, 
     }
     assert(PyFloat_Check(field));
     ros_message->delta_alt = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
-  {  // delta_terrain
-    PyObject * field = PyObject_GetAttrString(_pymsg, "delta_terrain");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->delta_terrain = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
   {  // lat_lon_reset_counter
@@ -156,15 +129,6 @@ bool px4_msgs__msg__vehicle_global_position__convert_from_py(PyObject * _pymsg, 
     }
     assert(PyLong_Check(field));
     ros_message->alt_reset_counter = (uint8_t)PyLong_AsUnsignedLong(field);
-    Py_DECREF(field);
-  }
-  {  // terrain_reset_counter
-    PyObject * field = PyObject_GetAttrString(_pymsg, "terrain_reset_counter");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->terrain_reset_counter = (uint8_t)PyLong_AsUnsignedLong(field);
     Py_DECREF(field);
   }
   {  // eph
@@ -300,44 +264,11 @@ PyObject * px4_msgs__msg__vehicle_global_position__convert_to_py(void * raw_ros_
       }
     }
   }
-  {  // lat_lon_valid
-    PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->lat_lon_valid ? 1 : 0);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "lat_lon_valid", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // alt_valid
-    PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->alt_valid ? 1 : 0);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "alt_valid", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
   {  // delta_alt
     PyObject * field = NULL;
     field = PyFloat_FromDouble(ros_message->delta_alt);
     {
       int rc = PyObject_SetAttrString(_pymessage, "delta_alt", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // delta_terrain
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->delta_terrain);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "delta_terrain", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
@@ -360,17 +291,6 @@ PyObject * px4_msgs__msg__vehicle_global_position__convert_to_py(void * raw_ros_
     field = PyLong_FromUnsignedLong(ros_message->alt_reset_counter);
     {
       int rc = PyObject_SetAttrString(_pymessage, "alt_reset_counter", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // terrain_reset_counter
-    PyObject * field = NULL;
-    field = PyLong_FromUnsignedLong(ros_message->terrain_reset_counter);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "terrain_reset_counter", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

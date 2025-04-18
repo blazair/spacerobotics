@@ -42,8 +42,8 @@ struct Rpm_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->timestamp = 0ull;
-      this->rpm_estimate = 0.0f;
-      this->rpm_raw = 0.0f;
+      this->indicated_frequency_rpm = 0.0f;
+      this->estimated_accurancy_rpm = 0.0f;
     }
   }
 
@@ -54,8 +54,8 @@ struct Rpm_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->timestamp = 0ull;
-      this->rpm_estimate = 0.0f;
-      this->rpm_raw = 0.0f;
+      this->indicated_frequency_rpm = 0.0f;
+      this->estimated_accurancy_rpm = 0.0f;
     }
   }
 
@@ -63,12 +63,12 @@ struct Rpm_
   using _timestamp_type =
     uint64_t;
   _timestamp_type timestamp;
-  using _rpm_estimate_type =
+  using _indicated_frequency_rpm_type =
     float;
-  _rpm_estimate_type rpm_estimate;
-  using _rpm_raw_type =
+  _indicated_frequency_rpm_type indicated_frequency_rpm;
+  using _estimated_accurancy_rpm_type =
     float;
-  _rpm_raw_type rpm_raw;
+  _estimated_accurancy_rpm_type estimated_accurancy_rpm;
 
   // setters for named parameter idiom
   Type & set__timestamp(
@@ -77,16 +77,16 @@ struct Rpm_
     this->timestamp = _arg;
     return *this;
   }
-  Type & set__rpm_estimate(
+  Type & set__indicated_frequency_rpm(
     const float & _arg)
   {
-    this->rpm_estimate = _arg;
+    this->indicated_frequency_rpm = _arg;
     return *this;
   }
-  Type & set__rpm_raw(
+  Type & set__estimated_accurancy_rpm(
     const float & _arg)
   {
-    this->rpm_raw = _arg;
+    this->estimated_accurancy_rpm = _arg;
     return *this;
   }
 
@@ -135,10 +135,10 @@ struct Rpm_
     if (this->timestamp != other.timestamp) {
       return false;
     }
-    if (this->rpm_estimate != other.rpm_estimate) {
+    if (this->indicated_frequency_rpm != other.indicated_frequency_rpm) {
       return false;
     }
-    if (this->rpm_raw != other.rpm_raw) {
+    if (this->estimated_accurancy_rpm != other.estimated_accurancy_rpm) {
       return false;
     }
     return true;

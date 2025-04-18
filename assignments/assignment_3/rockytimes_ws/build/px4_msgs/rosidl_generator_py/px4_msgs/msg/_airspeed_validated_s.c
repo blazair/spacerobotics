@@ -122,33 +122,6 @@ bool px4_msgs__msg__airspeed_validated__convert_from_py(PyObject * _pymsg, void 
     ros_message->selected_airspeed_index = (int8_t)PyLong_AsLong(field);
     Py_DECREF(field);
   }
-  {  // airspeed_derivative_filtered
-    PyObject * field = PyObject_GetAttrString(_pymsg, "airspeed_derivative_filtered");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->airspeed_derivative_filtered = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
-  {  // throttle_filtered
-    PyObject * field = PyObject_GetAttrString(_pymsg, "throttle_filtered");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->throttle_filtered = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
-  {  // pitch_filtered
-    PyObject * field = PyObject_GetAttrString(_pymsg, "pitch_filtered");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->pitch_filtered = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
 
   return true;
 }
@@ -253,39 +226,6 @@ PyObject * px4_msgs__msg__airspeed_validated__convert_to_py(void * raw_ros_messa
     field = PyLong_FromLong(ros_message->selected_airspeed_index);
     {
       int rc = PyObject_SetAttrString(_pymessage, "selected_airspeed_index", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // airspeed_derivative_filtered
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->airspeed_derivative_filtered);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "airspeed_derivative_filtered", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // throttle_filtered
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->throttle_filtered);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "throttle_filtered", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // pitch_filtered
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->pitch_filtered);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "pitch_filtered", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

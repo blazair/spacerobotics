@@ -324,6 +324,16 @@
           "default_value": ""
         },
         {
+          "name": "heartbeat_component_obstacle_avoidance",
+          "type": {
+            "type_id": 15,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
           "name": "heartbeat_component_vio",
           "type": {
             "type_id": 15,
@@ -364,6 +374,16 @@
           "default_value": ""
         },
         {
+          "name": "avoidance_system_healthy",
+          "type": {
+            "type_id": 15,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
           "name": "open_drone_id_system_healthy",
           "type": {
             "type_id": 15,
@@ -390,7 +410,7 @@
   "type_hashes": [
     {
       "type_name": "px4_msgs/msg/TelemetryStatus",
-      "hash_string": "RIHS01_499c3aca7b084d83b7d5bb8ba9c2b175f542104465bd4d3eb40dd821b49fde23"
+      "hash_string": "RIHS01_027eacd8a1d1db2d824b4d27090afd8edfebf44f5ef62766908ef3c31f910563"
     }
   ]
 }

@@ -104,32 +104,16 @@ private:
   ::px4_msgs::msg::VehicleGlobalPosition msg_;
 };
 
-class Init_VehicleGlobalPosition_terrain_reset_counter
-{
-public:
-  explicit Init_VehicleGlobalPosition_terrain_reset_counter(::px4_msgs::msg::VehicleGlobalPosition & msg)
-  : msg_(msg)
-  {}
-  Init_VehicleGlobalPosition_eph terrain_reset_counter(::px4_msgs::msg::VehicleGlobalPosition::_terrain_reset_counter_type arg)
-  {
-    msg_.terrain_reset_counter = std::move(arg);
-    return Init_VehicleGlobalPosition_eph(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::VehicleGlobalPosition msg_;
-};
-
 class Init_VehicleGlobalPosition_alt_reset_counter
 {
 public:
   explicit Init_VehicleGlobalPosition_alt_reset_counter(::px4_msgs::msg::VehicleGlobalPosition & msg)
   : msg_(msg)
   {}
-  Init_VehicleGlobalPosition_terrain_reset_counter alt_reset_counter(::px4_msgs::msg::VehicleGlobalPosition::_alt_reset_counter_type arg)
+  Init_VehicleGlobalPosition_eph alt_reset_counter(::px4_msgs::msg::VehicleGlobalPosition::_alt_reset_counter_type arg)
   {
     msg_.alt_reset_counter = std::move(arg);
-    return Init_VehicleGlobalPosition_terrain_reset_counter(msg_);
+    return Init_VehicleGlobalPosition_eph(msg_);
   }
 
 private:
@@ -152,64 +136,16 @@ private:
   ::px4_msgs::msg::VehicleGlobalPosition msg_;
 };
 
-class Init_VehicleGlobalPosition_delta_terrain
-{
-public:
-  explicit Init_VehicleGlobalPosition_delta_terrain(::px4_msgs::msg::VehicleGlobalPosition & msg)
-  : msg_(msg)
-  {}
-  Init_VehicleGlobalPosition_lat_lon_reset_counter delta_terrain(::px4_msgs::msg::VehicleGlobalPosition::_delta_terrain_type arg)
-  {
-    msg_.delta_terrain = std::move(arg);
-    return Init_VehicleGlobalPosition_lat_lon_reset_counter(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::VehicleGlobalPosition msg_;
-};
-
 class Init_VehicleGlobalPosition_delta_alt
 {
 public:
   explicit Init_VehicleGlobalPosition_delta_alt(::px4_msgs::msg::VehicleGlobalPosition & msg)
   : msg_(msg)
   {}
-  Init_VehicleGlobalPosition_delta_terrain delta_alt(::px4_msgs::msg::VehicleGlobalPosition::_delta_alt_type arg)
+  Init_VehicleGlobalPosition_lat_lon_reset_counter delta_alt(::px4_msgs::msg::VehicleGlobalPosition::_delta_alt_type arg)
   {
     msg_.delta_alt = std::move(arg);
-    return Init_VehicleGlobalPosition_delta_terrain(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::VehicleGlobalPosition msg_;
-};
-
-class Init_VehicleGlobalPosition_alt_valid
-{
-public:
-  explicit Init_VehicleGlobalPosition_alt_valid(::px4_msgs::msg::VehicleGlobalPosition & msg)
-  : msg_(msg)
-  {}
-  Init_VehicleGlobalPosition_delta_alt alt_valid(::px4_msgs::msg::VehicleGlobalPosition::_alt_valid_type arg)
-  {
-    msg_.alt_valid = std::move(arg);
-    return Init_VehicleGlobalPosition_delta_alt(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::VehicleGlobalPosition msg_;
-};
-
-class Init_VehicleGlobalPosition_lat_lon_valid
-{
-public:
-  explicit Init_VehicleGlobalPosition_lat_lon_valid(::px4_msgs::msg::VehicleGlobalPosition & msg)
-  : msg_(msg)
-  {}
-  Init_VehicleGlobalPosition_alt_valid lat_lon_valid(::px4_msgs::msg::VehicleGlobalPosition::_lat_lon_valid_type arg)
-  {
-    msg_.lat_lon_valid = std::move(arg);
-    return Init_VehicleGlobalPosition_alt_valid(msg_);
+    return Init_VehicleGlobalPosition_lat_lon_reset_counter(msg_);
   }
 
 private:
@@ -222,10 +158,10 @@ public:
   explicit Init_VehicleGlobalPosition_alt_ellipsoid(::px4_msgs::msg::VehicleGlobalPosition & msg)
   : msg_(msg)
   {}
-  Init_VehicleGlobalPosition_lat_lon_valid alt_ellipsoid(::px4_msgs::msg::VehicleGlobalPosition::_alt_ellipsoid_type arg)
+  Init_VehicleGlobalPosition_delta_alt alt_ellipsoid(::px4_msgs::msg::VehicleGlobalPosition::_alt_ellipsoid_type arg)
   {
     msg_.alt_ellipsoid = std::move(arg);
-    return Init_VehicleGlobalPosition_lat_lon_valid(msg_);
+    return Init_VehicleGlobalPosition_delta_alt(msg_);
   }
 
 private:

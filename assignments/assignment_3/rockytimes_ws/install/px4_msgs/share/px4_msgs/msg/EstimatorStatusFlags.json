@@ -54,7 +54,7 @@
           "default_value": ""
         },
         {
-          "name": "cs_gnss_pos",
+          "name": "cs_gps",
           "type": {
             "type_id": 15,
             "capacity": 0,
@@ -254,7 +254,7 @@
           "default_value": ""
         },
         {
-          "name": "cs_gnss_yaw",
+          "name": "cs_gps_yaw",
           "type": {
             "type_id": 15,
             "capacity": 0,
@@ -304,7 +304,7 @@
           "default_value": ""
         },
         {
-          "name": "cs_gnss_yaw_fault",
+          "name": "cs_gps_yaw_fault",
           "type": {
             "type_id": 15,
             "capacity": 0,
@@ -375,106 +375,6 @@
         },
         {
           "name": "cs_gravity_vector",
-          "type": {
-            "type_id": 15,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "cs_mag",
-          "type": {
-            "type_id": 15,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "cs_ev_yaw_fault",
-          "type": {
-            "type_id": 15,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "cs_mag_heading_consistent",
-          "type": {
-            "type_id": 15,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "cs_aux_gpos",
-          "type": {
-            "type_id": 15,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "cs_rng_terrain",
-          "type": {
-            "type_id": 15,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "cs_opt_flow_terrain",
-          "type": {
-            "type_id": 15,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "cs_valid_fake_pos",
-          "type": {
-            "type_id": 15,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "cs_constant_pos",
-          "type": {
-            "type_id": 15,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "cs_baro_fault",
-          "type": {
-            "type_id": 15,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "cs_gnss_vel",
           "type": {
             "type_id": 15,
             "capacity": 0,
@@ -575,6 +475,76 @@
         },
         {
           "name": "fs_bad_optflow_y",
+          "type": {
+            "type_id": 15,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "fs_bad_vel_n",
+          "type": {
+            "type_id": 15,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "fs_bad_vel_e",
+          "type": {
+            "type_id": 15,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "fs_bad_vel_d",
+          "type": {
+            "type_id": 15,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "fs_bad_pos_n",
+          "type": {
+            "type_id": 15,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "fs_bad_pos_e",
+          "type": {
+            "type_id": 15,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "fs_bad_pos_d",
+          "type": {
+            "type_id": 15,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "fs_bad_acc_bias",
           "type": {
             "type_id": 15,
             "capacity": 0,
@@ -720,7 +690,7 @@
   "type_hashes": [
     {
       "type_name": "px4_msgs/msg/EstimatorStatusFlags",
-      "hash_string": "RIHS01_b56eaee5fdb21aa6a68248a89e0a4165727d2c94b8f61a718f04724606a14e58"
+      "hash_string": "RIHS01_e37fd2457732e93c8aa6e8919118cba60ba4caed5b5d318157a52b08e84195af"
     }
   ]
 }

@@ -94,36 +94,6 @@
           "default_value": ""
         },
         {
-          "name": "delta_yaw",
-          "type": {
-            "type_id": 10,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "delta_yaw_velocity",
-          "type": {
-            "type_id": 10,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "gimbal_device_id",
-          "type": {
-            "type_id": 3,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
           "name": "received_from_mavlink",
           "type": {
             "type_id": 15,
@@ -140,7 +110,7 @@
   "type_hashes": [
     {
       "type_name": "px4_msgs/msg/GimbalDeviceAttitudeStatus",
-      "hash_string": "RIHS01_3a57507951e55388c7d48bbce2cc644f824a135a57b38e2d6750b0e63101197b"
+      "hash_string": "RIHS01_9cf5404f4f560e348c038cd332185bead0df3bee311b5c8f9b140810eff92861"
     }
   ]
 }

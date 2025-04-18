@@ -89,9 +89,6 @@ px4_msgs__msg__VtolVehicleStatus__get_type_description(
 
 static char toplevel_type_raw_source[] =
   "# VEHICLE_VTOL_STATE, should match 1:1 MAVLinks's MAV_VTOL_STATE\n"
-  "\n"
-  "uint32 MESSAGE_VERSION = 0\n"
-  "\n"
   "uint8 VEHICLE_VTOL_STATE_UNDEFINED = 0\n"
   "uint8 VEHICLE_VTOL_STATE_TRANSITION_TO_FW = 1\n"
   "uint8 VEHICLE_VTOL_STATE_TRANSITION_TO_MC = 2\n"
@@ -116,7 +113,7 @@ px4_msgs__msg__VtolVehicleStatus__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__VtolVehicleStatus__TYPE_NAME, 30, 30},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 534, 534},
+    {toplevel_type_raw_source, 505, 505},
   };
   return &source;
 }

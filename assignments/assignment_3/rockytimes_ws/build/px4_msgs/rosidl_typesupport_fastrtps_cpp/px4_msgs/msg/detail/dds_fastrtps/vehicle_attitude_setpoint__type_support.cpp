@@ -39,6 +39,15 @@ cdr_serialize(
   // Member: timestamp
   cdr << ros_message.timestamp;
 
+  // Member: roll_body
+  cdr << ros_message.roll_body;
+
+  // Member: pitch_body
+  cdr << ros_message.pitch_body;
+
+  // Member: yaw_body
+  cdr << ros_message.yaw_body;
+
   // Member: yaw_sp_move_rate
   cdr << ros_message.yaw_sp_move_rate;
 
@@ -69,6 +78,15 @@ cdr_deserialize(
 {
   // Member: timestamp
   cdr >> ros_message.timestamp;
+
+  // Member: roll_body
+  cdr >> ros_message.roll_body;
+
+  // Member: pitch_body
+  cdr >> ros_message.pitch_body;
+
+  // Member: yaw_body
+  cdr >> ros_message.yaw_body;
 
   // Member: yaw_sp_move_rate
   cdr >> ros_message.yaw_sp_move_rate;
@@ -117,6 +135,27 @@ get_serialized_size(
   // Member: timestamp
   {
     size_t item_size = sizeof(ros_message.timestamp);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: roll_body
+  {
+    size_t item_size = sizeof(ros_message.roll_body);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: pitch_body
+  {
+    size_t item_size = sizeof(ros_message.pitch_body);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: yaw_body
+  {
+    size_t item_size = sizeof(ros_message.yaw_body);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -188,6 +227,27 @@ max_serialized_size_VehicleAttitudeSetpoint(
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
+  // Member: roll_body
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // Member: pitch_body
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // Member: yaw_body
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
   // Member: yaw_sp_move_rate
   {
     size_t array_size = 1;
@@ -247,6 +307,15 @@ cdr_serialize_key(
   // Member: timestamp
   cdr << ros_message.timestamp;
 
+  // Member: roll_body
+  cdr << ros_message.roll_body;
+
+  // Member: pitch_body
+  cdr << ros_message.pitch_body;
+
+  // Member: yaw_body
+  cdr << ros_message.yaw_body;
+
   // Member: yaw_sp_move_rate
   cdr << ros_message.yaw_sp_move_rate;
 
@@ -285,6 +354,27 @@ get_serialized_size_key(
   // Member: timestamp
   {
     size_t item_size = sizeof(ros_message.timestamp);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: roll_body
+  {
+    size_t item_size = sizeof(ros_message.roll_body);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: pitch_body
+  {
+    size_t item_size = sizeof(ros_message.pitch_body);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: yaw_body
+  {
+    size_t item_size = sizeof(ros_message.yaw_body);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -354,6 +444,30 @@ max_serialized_size_key_VehicleAttitudeSetpoint(
     last_member_size = array_size * sizeof(uint64_t);
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
+  // Member: roll_body
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Member: pitch_body
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Member: yaw_body
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
   // Member: yaw_sp_move_rate

@@ -59,31 +59,13 @@ bool px4_msgs__msg__mission_result__convert_from_py(PyObject * _pymsg, void * _r
     ros_message->timestamp = PyLong_AsUnsignedLongLong(field);
     Py_DECREF(field);
   }
-  {  // mission_id
-    PyObject * field = PyObject_GetAttrString(_pymsg, "mission_id");
+  {  // instance_count
+    PyObject * field = PyObject_GetAttrString(_pymsg, "instance_count");
     if (!field) {
       return false;
     }
     assert(PyLong_Check(field));
-    ros_message->mission_id = PyLong_AsUnsignedLong(field);
-    Py_DECREF(field);
-  }
-  {  // geofence_id
-    PyObject * field = PyObject_GetAttrString(_pymsg, "geofence_id");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->geofence_id = PyLong_AsUnsignedLong(field);
-    Py_DECREF(field);
-  }
-  {  // home_position_counter
-    PyObject * field = PyObject_GetAttrString(_pymsg, "home_position_counter");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->home_position_counter = PyLong_AsUnsignedLong(field);
+    ros_message->instance_count = PyLong_AsUnsignedLong(field);
     Py_DECREF(field);
   }
   {  // seq_reached
@@ -218,33 +200,11 @@ PyObject * px4_msgs__msg__mission_result__convert_to_py(void * raw_ros_message)
       }
     }
   }
-  {  // mission_id
+  {  // instance_count
     PyObject * field = NULL;
-    field = PyLong_FromUnsignedLong(ros_message->mission_id);
+    field = PyLong_FromUnsignedLong(ros_message->instance_count);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "mission_id", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // geofence_id
-    PyObject * field = NULL;
-    field = PyLong_FromUnsignedLong(ros_message->geofence_id);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "geofence_id", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // home_position_counter
-    PyObject * field = NULL;
-    field = PyLong_FromUnsignedLong(ros_message->home_position_counter);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "home_position_counter", field);
+      int rc = PyObject_SetAttrString(_pymessage, "instance_count", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

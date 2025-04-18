@@ -112,7 +112,7 @@ static char toplevel_type_raw_source[] =
   "uint8 ACTION_VTOL_TRANSITION_TO_FIXEDWING = 7\n"
   "\n"
   "uint8 source # how the request was triggered\n"
-  "uint8 SOURCE_STICK_GESTURE = 0\n"
+  "uint8 SOURCE_RC_STICK_GESTURE = 0\n"
   "uint8 SOURCE_RC_SWITCH = 1\n"
   "uint8 SOURCE_RC_BUTTON = 2\n"
   "uint8 SOURCE_RC_MODE_SLOT = 3\n"
@@ -131,7 +131,7 @@ px4_msgs__msg__ActionRequest__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__ActionRequest__TYPE_NAME, 26, 26},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 615, 615},
+    {toplevel_type_raw_source, 618, 618},
   };
   return &source;
 }

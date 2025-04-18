@@ -111,9 +111,6 @@ px4_msgs__msg__VehicleAttitude__get_type_description(
 
 static char toplevel_type_raw_source[] =
   "# This is similar to the mavlink message ATTITUDE_QUATERNION, but for onboard use\n"
-  "# The quaternion uses the Hamilton convention, and the order is q(w, x, y, z)\n"
-  "\n"
-  "uint32 MESSAGE_VERSION = 0\n"
   "\n"
   "uint64 timestamp                # time since system start (microseconds)\n"
   "\n"
@@ -138,7 +135,7 @@ px4_msgs__msg__VehicleAttitude__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__VehicleAttitude__TYPE_NAME, 28, 28},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 700, 700},
+    {toplevel_type_raw_source, 594, 594},
   };
   return &source;
 }

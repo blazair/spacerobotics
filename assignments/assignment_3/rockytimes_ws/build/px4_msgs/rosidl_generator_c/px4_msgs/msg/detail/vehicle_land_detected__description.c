@@ -198,8 +198,6 @@ px4_msgs__msg__VehicleLandDetected__get_type_description(
 }
 
 static char toplevel_type_raw_source[] =
-  "uint32 MESSAGE_VERSION = 0\n"
-  "\n"
   "uint64 timestamp\\t# time since system start (microseconds)\n"
   "\n"
   "bool freefall\\t\\t# true if vehicle is currently in free-fall\n"
@@ -232,7 +230,7 @@ px4_msgs__msg__VehicleLandDetected__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__VehicleLandDetected__TYPE_NAME, 32, 32},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 800, 800},
+    {toplevel_type_raw_source, 772, 772},
   };
   return &source;
 }

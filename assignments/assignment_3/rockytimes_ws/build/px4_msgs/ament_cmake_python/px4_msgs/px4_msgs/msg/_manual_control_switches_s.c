@@ -158,15 +158,6 @@ bool px4_msgs__msg__manual_control_switches__convert_from_py(PyObject * _pymsg, 
     ros_message->video_switch = (uint8_t)PyLong_AsUnsignedLong(field);
     Py_DECREF(field);
   }
-  {  // payload_power_switch
-    PyObject * field = PyObject_GetAttrString(_pymsg, "payload_power_switch");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->payload_power_switch = (uint8_t)PyLong_AsUnsignedLong(field);
-    Py_DECREF(field);
-  }
   {  // engage_main_motor_switch
     PyObject * field = PyObject_GetAttrString(_pymsg, "engage_main_motor_switch");
     if (!field) {
@@ -333,17 +324,6 @@ PyObject * px4_msgs__msg__manual_control_switches__convert_to_py(void * raw_ros_
     field = PyLong_FromUnsignedLong(ros_message->video_switch);
     {
       int rc = PyObject_SetAttrString(_pymessage, "video_switch", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // payload_power_switch
-    PyObject * field = NULL;
-    field = PyLong_FromUnsignedLong(ros_message->payload_power_switch);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "payload_power_switch", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

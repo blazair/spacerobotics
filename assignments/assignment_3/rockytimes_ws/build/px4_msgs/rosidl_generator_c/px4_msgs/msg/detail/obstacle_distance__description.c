@@ -164,7 +164,7 @@ static char toplevel_type_raw_source[] =
   "uint16 min_distance # Minimum distance the sensor can measure in centimeters.\n"
   "uint16 max_distance # Maximum distance the sensor can measure in centimeters.\n"
   "\n"
-  "float32 angle_offset # Relative angle offset of the 0-index element in the distances array. Value of 0 corresponds to forward. Positive is clockwise direction, negative is counter-clockwise.\n"
+  "float32 angle_offset # Relative angle offset of the 0-index element in the distances array. Value of 0 corresponds to forward. Positive values are offsets to the right.\n"
   "\n"
   "# TOPICS obstacle_distance obstacle_distance_fused";
 
@@ -180,7 +180,7 @@ px4_msgs__msg__ObstacleDistance__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__ObstacleDistance__TYPE_NAME, 29, 29},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 1426, 1426},
+    {toplevel_type_raw_source, 1404, 1404},
   };
   return &source;
 }

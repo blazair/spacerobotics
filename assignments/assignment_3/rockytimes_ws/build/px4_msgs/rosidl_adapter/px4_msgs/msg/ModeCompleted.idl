@@ -6,7 +6,6 @@
 module px4_msgs {
   module msg {
     module ModeCompleted_Constants {
-      const uint32 MESSAGE_VERSION = 0;
       const uint8 RESULT_SUCCESS = 0;
       @verbatim (language="comment", text=
         ": reserved" "\n"        " Mode failed (generic error)")
@@ -14,7 +13,6 @@ module px4_msgs {
     };
     @verbatim (language="comment", text=
       "Mode completion result, published by an active mode." "\n"
-      "The possible values of nav_state are defined in the VehicleStatus msg." "\n"
       "Note that this is not always published (e.g. when a user switches modes or on" "\n"
       "failsafe activation)")
     struct ModeCompleted {
@@ -27,7 +25,7 @@ module px4_msgs {
       uint8 result;
 
       @verbatim (language="comment", text=
-        "Source mode (values in VehicleStatus)")
+        "Source mode")
       uint8 nav_state;
     };
   };

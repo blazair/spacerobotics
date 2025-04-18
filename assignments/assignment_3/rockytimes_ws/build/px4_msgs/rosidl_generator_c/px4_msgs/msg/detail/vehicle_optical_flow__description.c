@@ -185,7 +185,7 @@ static char toplevel_type_raw_source[] =
   "\n"
   "float32[2] pixel_flow          # (radians) accumulated optical flow in radians where a positive value is produced by a RH rotation about the body axis\n"
   "\n"
-  "float32[3] delta_angle         # (radians) accumulated gyro radians where a positive value is produced by a RH rotation of the sensor about the body axis. (NAN if unavailable)\n"
+  "float32[3] delta_angle         # (radians) accumulated gyro radians where a positive value is produced by a RH rotation about the body axis. (NAN if unavailable)\n"
   "\n"
   "float32 distance_m             # (meters) Distance to the center of the flow field (NAN if unavailable)\n"
   "\n"
@@ -210,7 +210,7 @@ px4_msgs__msg__VehicleOpticalFlow__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__VehicleOpticalFlow__TYPE_NAME, 31, 31},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 1256, 1256},
+    {toplevel_type_raw_source, 1242, 1242},
   };
   return &source;
 }

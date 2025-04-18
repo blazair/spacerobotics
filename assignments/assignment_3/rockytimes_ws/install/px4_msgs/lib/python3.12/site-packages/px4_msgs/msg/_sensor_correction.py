@@ -16,24 +16,18 @@ import builtins  # noqa: E402, I100
 
 import math  # noqa: E402, I100
 
-# Member 'accel_device_ids'
-# Member 'accel_temperature'
-# Member 'accel_offset_0'
-# Member 'accel_offset_1'
-# Member 'accel_offset_2'
-# Member 'accel_offset_3'
 # Member 'gyro_device_ids'
 # Member 'gyro_temperature'
 # Member 'gyro_offset_0'
 # Member 'gyro_offset_1'
 # Member 'gyro_offset_2'
 # Member 'gyro_offset_3'
-# Member 'mag_device_ids'
-# Member 'mag_temperature'
-# Member 'mag_offset_0'
-# Member 'mag_offset_1'
-# Member 'mag_offset_2'
-# Member 'mag_offset_3'
+# Member 'accel_device_ids'
+# Member 'accel_temperature'
+# Member 'accel_offset_0'
+# Member 'accel_offset_1'
+# Member 'accel_offset_2'
+# Member 'accel_offset_3'
 # Member 'baro_device_ids'
 # Member 'baro_temperature'
 import numpy  # noqa: E402, I100
@@ -87,24 +81,18 @@ class SensorCorrection(metaclass=Metaclass_SensorCorrection):
 
     __slots__ = [
         '_timestamp',
-        '_accel_device_ids',
-        '_accel_temperature',
-        '_accel_offset_0',
-        '_accel_offset_1',
-        '_accel_offset_2',
-        '_accel_offset_3',
         '_gyro_device_ids',
         '_gyro_temperature',
         '_gyro_offset_0',
         '_gyro_offset_1',
         '_gyro_offset_2',
         '_gyro_offset_3',
-        '_mag_device_ids',
-        '_mag_temperature',
-        '_mag_offset_0',
-        '_mag_offset_1',
-        '_mag_offset_2',
-        '_mag_offset_3',
+        '_accel_device_ids',
+        '_accel_temperature',
+        '_accel_offset_0',
+        '_accel_offset_1',
+        '_accel_offset_2',
+        '_accel_offset_3',
         '_baro_device_ids',
         '_baro_temperature',
         '_baro_offset_0',
@@ -116,24 +104,18 @@ class SensorCorrection(metaclass=Metaclass_SensorCorrection):
 
     _fields_and_field_types = {
         'timestamp': 'uint64',
-        'accel_device_ids': 'uint32[4]',
-        'accel_temperature': 'float[4]',
-        'accel_offset_0': 'float[3]',
-        'accel_offset_1': 'float[3]',
-        'accel_offset_2': 'float[3]',
-        'accel_offset_3': 'float[3]',
         'gyro_device_ids': 'uint32[4]',
         'gyro_temperature': 'float[4]',
         'gyro_offset_0': 'float[3]',
         'gyro_offset_1': 'float[3]',
         'gyro_offset_2': 'float[3]',
         'gyro_offset_3': 'float[3]',
-        'mag_device_ids': 'uint32[4]',
-        'mag_temperature': 'float[4]',
-        'mag_offset_0': 'float[3]',
-        'mag_offset_1': 'float[3]',
-        'mag_offset_2': 'float[3]',
-        'mag_offset_3': 'float[3]',
+        'accel_device_ids': 'uint32[4]',
+        'accel_temperature': 'float[4]',
+        'accel_offset_0': 'float[3]',
+        'accel_offset_1': 'float[3]',
+        'accel_offset_2': 'float[3]',
+        'accel_offset_3': 'float[3]',
         'baro_device_ids': 'uint32[4]',
         'baro_temperature': 'float[4]',
         'baro_offset_0': 'float',
@@ -146,12 +128,6 @@ class SensorCorrection(metaclass=Metaclass_SensorCorrection):
     # related to the data type of each of the components the message.
     SLOT_TYPES = (
         rosidl_parser.definition.BasicType('uint64'),  # noqa: E501
-        rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('uint32'), 4),  # noqa: E501
-        rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('float'), 4),  # noqa: E501
-        rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('float'), 3),  # noqa: E501
-        rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('float'), 3),  # noqa: E501
-        rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('float'), 3),  # noqa: E501
-        rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('float'), 3),  # noqa: E501
         rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('uint32'), 4),  # noqa: E501
         rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('float'), 4),  # noqa: E501
         rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('float'), 3),  # noqa: E501
@@ -182,36 +158,6 @@ class SensorCorrection(metaclass=Metaclass_SensorCorrection):
                 'Invalid arguments passed to constructor: %s' % \
                 ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.timestamp = kwargs.get('timestamp', int())
-        if 'accel_device_ids' not in kwargs:
-            self.accel_device_ids = numpy.zeros(4, dtype=numpy.uint32)
-        else:
-            self.accel_device_ids = numpy.array(kwargs.get('accel_device_ids'), dtype=numpy.uint32)
-            assert self.accel_device_ids.shape == (4, )
-        if 'accel_temperature' not in kwargs:
-            self.accel_temperature = numpy.zeros(4, dtype=numpy.float32)
-        else:
-            self.accel_temperature = numpy.array(kwargs.get('accel_temperature'), dtype=numpy.float32)
-            assert self.accel_temperature.shape == (4, )
-        if 'accel_offset_0' not in kwargs:
-            self.accel_offset_0 = numpy.zeros(3, dtype=numpy.float32)
-        else:
-            self.accel_offset_0 = numpy.array(kwargs.get('accel_offset_0'), dtype=numpy.float32)
-            assert self.accel_offset_0.shape == (3, )
-        if 'accel_offset_1' not in kwargs:
-            self.accel_offset_1 = numpy.zeros(3, dtype=numpy.float32)
-        else:
-            self.accel_offset_1 = numpy.array(kwargs.get('accel_offset_1'), dtype=numpy.float32)
-            assert self.accel_offset_1.shape == (3, )
-        if 'accel_offset_2' not in kwargs:
-            self.accel_offset_2 = numpy.zeros(3, dtype=numpy.float32)
-        else:
-            self.accel_offset_2 = numpy.array(kwargs.get('accel_offset_2'), dtype=numpy.float32)
-            assert self.accel_offset_2.shape == (3, )
-        if 'accel_offset_3' not in kwargs:
-            self.accel_offset_3 = numpy.zeros(3, dtype=numpy.float32)
-        else:
-            self.accel_offset_3 = numpy.array(kwargs.get('accel_offset_3'), dtype=numpy.float32)
-            assert self.accel_offset_3.shape == (3, )
         if 'gyro_device_ids' not in kwargs:
             self.gyro_device_ids = numpy.zeros(4, dtype=numpy.uint32)
         else:
@@ -242,36 +188,36 @@ class SensorCorrection(metaclass=Metaclass_SensorCorrection):
         else:
             self.gyro_offset_3 = numpy.array(kwargs.get('gyro_offset_3'), dtype=numpy.float32)
             assert self.gyro_offset_3.shape == (3, )
-        if 'mag_device_ids' not in kwargs:
-            self.mag_device_ids = numpy.zeros(4, dtype=numpy.uint32)
+        if 'accel_device_ids' not in kwargs:
+            self.accel_device_ids = numpy.zeros(4, dtype=numpy.uint32)
         else:
-            self.mag_device_ids = numpy.array(kwargs.get('mag_device_ids'), dtype=numpy.uint32)
-            assert self.mag_device_ids.shape == (4, )
-        if 'mag_temperature' not in kwargs:
-            self.mag_temperature = numpy.zeros(4, dtype=numpy.float32)
+            self.accel_device_ids = numpy.array(kwargs.get('accel_device_ids'), dtype=numpy.uint32)
+            assert self.accel_device_ids.shape == (4, )
+        if 'accel_temperature' not in kwargs:
+            self.accel_temperature = numpy.zeros(4, dtype=numpy.float32)
         else:
-            self.mag_temperature = numpy.array(kwargs.get('mag_temperature'), dtype=numpy.float32)
-            assert self.mag_temperature.shape == (4, )
-        if 'mag_offset_0' not in kwargs:
-            self.mag_offset_0 = numpy.zeros(3, dtype=numpy.float32)
+            self.accel_temperature = numpy.array(kwargs.get('accel_temperature'), dtype=numpy.float32)
+            assert self.accel_temperature.shape == (4, )
+        if 'accel_offset_0' not in kwargs:
+            self.accel_offset_0 = numpy.zeros(3, dtype=numpy.float32)
         else:
-            self.mag_offset_0 = numpy.array(kwargs.get('mag_offset_0'), dtype=numpy.float32)
-            assert self.mag_offset_0.shape == (3, )
-        if 'mag_offset_1' not in kwargs:
-            self.mag_offset_1 = numpy.zeros(3, dtype=numpy.float32)
+            self.accel_offset_0 = numpy.array(kwargs.get('accel_offset_0'), dtype=numpy.float32)
+            assert self.accel_offset_0.shape == (3, )
+        if 'accel_offset_1' not in kwargs:
+            self.accel_offset_1 = numpy.zeros(3, dtype=numpy.float32)
         else:
-            self.mag_offset_1 = numpy.array(kwargs.get('mag_offset_1'), dtype=numpy.float32)
-            assert self.mag_offset_1.shape == (3, )
-        if 'mag_offset_2' not in kwargs:
-            self.mag_offset_2 = numpy.zeros(3, dtype=numpy.float32)
+            self.accel_offset_1 = numpy.array(kwargs.get('accel_offset_1'), dtype=numpy.float32)
+            assert self.accel_offset_1.shape == (3, )
+        if 'accel_offset_2' not in kwargs:
+            self.accel_offset_2 = numpy.zeros(3, dtype=numpy.float32)
         else:
-            self.mag_offset_2 = numpy.array(kwargs.get('mag_offset_2'), dtype=numpy.float32)
-            assert self.mag_offset_2.shape == (3, )
-        if 'mag_offset_3' not in kwargs:
-            self.mag_offset_3 = numpy.zeros(3, dtype=numpy.float32)
+            self.accel_offset_2 = numpy.array(kwargs.get('accel_offset_2'), dtype=numpy.float32)
+            assert self.accel_offset_2.shape == (3, )
+        if 'accel_offset_3' not in kwargs:
+            self.accel_offset_3 = numpy.zeros(3, dtype=numpy.float32)
         else:
-            self.mag_offset_3 = numpy.array(kwargs.get('mag_offset_3'), dtype=numpy.float32)
-            assert self.mag_offset_3.shape == (3, )
+            self.accel_offset_3 = numpy.array(kwargs.get('accel_offset_3'), dtype=numpy.float32)
+            assert self.accel_offset_3.shape == (3, )
         if 'baro_device_ids' not in kwargs:
             self.baro_device_ids = numpy.zeros(4, dtype=numpy.uint32)
         else:
@@ -319,18 +265,6 @@ class SensorCorrection(metaclass=Metaclass_SensorCorrection):
             return False
         if self.timestamp != other.timestamp:
             return False
-        if all(self.accel_device_ids != other.accel_device_ids):
-            return False
-        if all(self.accel_temperature != other.accel_temperature):
-            return False
-        if all(self.accel_offset_0 != other.accel_offset_0):
-            return False
-        if all(self.accel_offset_1 != other.accel_offset_1):
-            return False
-        if all(self.accel_offset_2 != other.accel_offset_2):
-            return False
-        if all(self.accel_offset_3 != other.accel_offset_3):
-            return False
         if all(self.gyro_device_ids != other.gyro_device_ids):
             return False
         if all(self.gyro_temperature != other.gyro_temperature):
@@ -343,17 +277,17 @@ class SensorCorrection(metaclass=Metaclass_SensorCorrection):
             return False
         if all(self.gyro_offset_3 != other.gyro_offset_3):
             return False
-        if all(self.mag_device_ids != other.mag_device_ids):
+        if all(self.accel_device_ids != other.accel_device_ids):
             return False
-        if all(self.mag_temperature != other.mag_temperature):
+        if all(self.accel_temperature != other.accel_temperature):
             return False
-        if all(self.mag_offset_0 != other.mag_offset_0):
+        if all(self.accel_offset_0 != other.accel_offset_0):
             return False
-        if all(self.mag_offset_1 != other.mag_offset_1):
+        if all(self.accel_offset_1 != other.accel_offset_1):
             return False
-        if all(self.mag_offset_2 != other.mag_offset_2):
+        if all(self.accel_offset_2 != other.accel_offset_2):
             return False
-        if all(self.mag_offset_3 != other.mag_offset_3):
+        if all(self.accel_offset_3 != other.accel_offset_3):
             return False
         if all(self.baro_device_ids != other.baro_device_ids):
             return False
@@ -388,192 +322,6 @@ class SensorCorrection(metaclass=Metaclass_SensorCorrection):
             assert value >= 0 and value < 18446744073709551616, \
                 "The 'timestamp' field must be an unsigned integer in [0, 18446744073709551615]"
         self._timestamp = value
-
-    @builtins.property
-    def accel_device_ids(self):
-        """Message field 'accel_device_ids'."""
-        return self._accel_device_ids
-
-    @accel_device_ids.setter
-    def accel_device_ids(self, value):
-        if self._check_fields:
-            if isinstance(value, numpy.ndarray):
-                assert value.dtype == numpy.uint32, \
-                    "The 'accel_device_ids' numpy.ndarray() must have the dtype of 'numpy.uint32'"
-                assert value.size == 4, \
-                    "The 'accel_device_ids' numpy.ndarray() must have a size of 4"
-                self._accel_device_ids = value
-                return
-            from collections.abc import Sequence
-            from collections.abc import Set
-            from collections import UserList
-            from collections import UserString
-            assert \
-                ((isinstance(value, Sequence) or
-                  isinstance(value, Set) or
-                  isinstance(value, UserList)) and
-                 not isinstance(value, str) and
-                 not isinstance(value, UserString) and
-                 len(value) == 4 and
-                 all(isinstance(v, int) for v in value) and
-                 all(val >= 0 and val < 4294967296 for val in value)), \
-                "The 'accel_device_ids' field must be a set or sequence with length 4 and each value of type 'int' and each unsigned integer in [0, 4294967295]"
-        self._accel_device_ids = numpy.array(value, dtype=numpy.uint32)
-
-    @builtins.property
-    def accel_temperature(self):
-        """Message field 'accel_temperature'."""
-        return self._accel_temperature
-
-    @accel_temperature.setter
-    def accel_temperature(self, value):
-        if self._check_fields:
-            if isinstance(value, numpy.ndarray):
-                assert value.dtype == numpy.float32, \
-                    "The 'accel_temperature' numpy.ndarray() must have the dtype of 'numpy.float32'"
-                assert value.size == 4, \
-                    "The 'accel_temperature' numpy.ndarray() must have a size of 4"
-                self._accel_temperature = value
-                return
-            from collections.abc import Sequence
-            from collections.abc import Set
-            from collections import UserList
-            from collections import UserString
-            assert \
-                ((isinstance(value, Sequence) or
-                  isinstance(value, Set) or
-                  isinstance(value, UserList)) and
-                 not isinstance(value, str) and
-                 not isinstance(value, UserString) and
-                 len(value) == 4 and
-                 all(isinstance(v, float) for v in value) and
-                 all(not (val < -3.402823466e+38 or val > 3.402823466e+38) or math.isinf(val) for val in value)), \
-                "The 'accel_temperature' field must be a set or sequence with length 4 and each value of type 'float' and each float in [-340282346600000016151267322115014000640.000000, 340282346600000016151267322115014000640.000000]"
-        self._accel_temperature = numpy.array(value, dtype=numpy.float32)
-
-    @builtins.property
-    def accel_offset_0(self):
-        """Message field 'accel_offset_0'."""
-        return self._accel_offset_0
-
-    @accel_offset_0.setter
-    def accel_offset_0(self, value):
-        if self._check_fields:
-            if isinstance(value, numpy.ndarray):
-                assert value.dtype == numpy.float32, \
-                    "The 'accel_offset_0' numpy.ndarray() must have the dtype of 'numpy.float32'"
-                assert value.size == 3, \
-                    "The 'accel_offset_0' numpy.ndarray() must have a size of 3"
-                self._accel_offset_0 = value
-                return
-            from collections.abc import Sequence
-            from collections.abc import Set
-            from collections import UserList
-            from collections import UserString
-            assert \
-                ((isinstance(value, Sequence) or
-                  isinstance(value, Set) or
-                  isinstance(value, UserList)) and
-                 not isinstance(value, str) and
-                 not isinstance(value, UserString) and
-                 len(value) == 3 and
-                 all(isinstance(v, float) for v in value) and
-                 all(not (val < -3.402823466e+38 or val > 3.402823466e+38) or math.isinf(val) for val in value)), \
-                "The 'accel_offset_0' field must be a set or sequence with length 3 and each value of type 'float' and each float in [-340282346600000016151267322115014000640.000000, 340282346600000016151267322115014000640.000000]"
-        self._accel_offset_0 = numpy.array(value, dtype=numpy.float32)
-
-    @builtins.property
-    def accel_offset_1(self):
-        """Message field 'accel_offset_1'."""
-        return self._accel_offset_1
-
-    @accel_offset_1.setter
-    def accel_offset_1(self, value):
-        if self._check_fields:
-            if isinstance(value, numpy.ndarray):
-                assert value.dtype == numpy.float32, \
-                    "The 'accel_offset_1' numpy.ndarray() must have the dtype of 'numpy.float32'"
-                assert value.size == 3, \
-                    "The 'accel_offset_1' numpy.ndarray() must have a size of 3"
-                self._accel_offset_1 = value
-                return
-            from collections.abc import Sequence
-            from collections.abc import Set
-            from collections import UserList
-            from collections import UserString
-            assert \
-                ((isinstance(value, Sequence) or
-                  isinstance(value, Set) or
-                  isinstance(value, UserList)) and
-                 not isinstance(value, str) and
-                 not isinstance(value, UserString) and
-                 len(value) == 3 and
-                 all(isinstance(v, float) for v in value) and
-                 all(not (val < -3.402823466e+38 or val > 3.402823466e+38) or math.isinf(val) for val in value)), \
-                "The 'accel_offset_1' field must be a set or sequence with length 3 and each value of type 'float' and each float in [-340282346600000016151267322115014000640.000000, 340282346600000016151267322115014000640.000000]"
-        self._accel_offset_1 = numpy.array(value, dtype=numpy.float32)
-
-    @builtins.property
-    def accel_offset_2(self):
-        """Message field 'accel_offset_2'."""
-        return self._accel_offset_2
-
-    @accel_offset_2.setter
-    def accel_offset_2(self, value):
-        if self._check_fields:
-            if isinstance(value, numpy.ndarray):
-                assert value.dtype == numpy.float32, \
-                    "The 'accel_offset_2' numpy.ndarray() must have the dtype of 'numpy.float32'"
-                assert value.size == 3, \
-                    "The 'accel_offset_2' numpy.ndarray() must have a size of 3"
-                self._accel_offset_2 = value
-                return
-            from collections.abc import Sequence
-            from collections.abc import Set
-            from collections import UserList
-            from collections import UserString
-            assert \
-                ((isinstance(value, Sequence) or
-                  isinstance(value, Set) or
-                  isinstance(value, UserList)) and
-                 not isinstance(value, str) and
-                 not isinstance(value, UserString) and
-                 len(value) == 3 and
-                 all(isinstance(v, float) for v in value) and
-                 all(not (val < -3.402823466e+38 or val > 3.402823466e+38) or math.isinf(val) for val in value)), \
-                "The 'accel_offset_2' field must be a set or sequence with length 3 and each value of type 'float' and each float in [-340282346600000016151267322115014000640.000000, 340282346600000016151267322115014000640.000000]"
-        self._accel_offset_2 = numpy.array(value, dtype=numpy.float32)
-
-    @builtins.property
-    def accel_offset_3(self):
-        """Message field 'accel_offset_3'."""
-        return self._accel_offset_3
-
-    @accel_offset_3.setter
-    def accel_offset_3(self, value):
-        if self._check_fields:
-            if isinstance(value, numpy.ndarray):
-                assert value.dtype == numpy.float32, \
-                    "The 'accel_offset_3' numpy.ndarray() must have the dtype of 'numpy.float32'"
-                assert value.size == 3, \
-                    "The 'accel_offset_3' numpy.ndarray() must have a size of 3"
-                self._accel_offset_3 = value
-                return
-            from collections.abc import Sequence
-            from collections.abc import Set
-            from collections import UserList
-            from collections import UserString
-            assert \
-                ((isinstance(value, Sequence) or
-                  isinstance(value, Set) or
-                  isinstance(value, UserList)) and
-                 not isinstance(value, str) and
-                 not isinstance(value, UserString) and
-                 len(value) == 3 and
-                 all(isinstance(v, float) for v in value) and
-                 all(not (val < -3.402823466e+38 or val > 3.402823466e+38) or math.isinf(val) for val in value)), \
-                "The 'accel_offset_3' field must be a set or sequence with length 3 and each value of type 'float' and each float in [-340282346600000016151267322115014000640.000000, 340282346600000016151267322115014000640.000000]"
-        self._accel_offset_3 = numpy.array(value, dtype=numpy.float32)
 
     @builtins.property
     def gyro_device_ids(self):
@@ -762,19 +510,19 @@ class SensorCorrection(metaclass=Metaclass_SensorCorrection):
         self._gyro_offset_3 = numpy.array(value, dtype=numpy.float32)
 
     @builtins.property
-    def mag_device_ids(self):
-        """Message field 'mag_device_ids'."""
-        return self._mag_device_ids
+    def accel_device_ids(self):
+        """Message field 'accel_device_ids'."""
+        return self._accel_device_ids
 
-    @mag_device_ids.setter
-    def mag_device_ids(self, value):
+    @accel_device_ids.setter
+    def accel_device_ids(self, value):
         if self._check_fields:
             if isinstance(value, numpy.ndarray):
                 assert value.dtype == numpy.uint32, \
-                    "The 'mag_device_ids' numpy.ndarray() must have the dtype of 'numpy.uint32'"
+                    "The 'accel_device_ids' numpy.ndarray() must have the dtype of 'numpy.uint32'"
                 assert value.size == 4, \
-                    "The 'mag_device_ids' numpy.ndarray() must have a size of 4"
-                self._mag_device_ids = value
+                    "The 'accel_device_ids' numpy.ndarray() must have a size of 4"
+                self._accel_device_ids = value
                 return
             from collections.abc import Sequence
             from collections.abc import Set
@@ -789,23 +537,23 @@ class SensorCorrection(metaclass=Metaclass_SensorCorrection):
                  len(value) == 4 and
                  all(isinstance(v, int) for v in value) and
                  all(val >= 0 and val < 4294967296 for val in value)), \
-                "The 'mag_device_ids' field must be a set or sequence with length 4 and each value of type 'int' and each unsigned integer in [0, 4294967295]"
-        self._mag_device_ids = numpy.array(value, dtype=numpy.uint32)
+                "The 'accel_device_ids' field must be a set or sequence with length 4 and each value of type 'int' and each unsigned integer in [0, 4294967295]"
+        self._accel_device_ids = numpy.array(value, dtype=numpy.uint32)
 
     @builtins.property
-    def mag_temperature(self):
-        """Message field 'mag_temperature'."""
-        return self._mag_temperature
+    def accel_temperature(self):
+        """Message field 'accel_temperature'."""
+        return self._accel_temperature
 
-    @mag_temperature.setter
-    def mag_temperature(self, value):
+    @accel_temperature.setter
+    def accel_temperature(self, value):
         if self._check_fields:
             if isinstance(value, numpy.ndarray):
                 assert value.dtype == numpy.float32, \
-                    "The 'mag_temperature' numpy.ndarray() must have the dtype of 'numpy.float32'"
+                    "The 'accel_temperature' numpy.ndarray() must have the dtype of 'numpy.float32'"
                 assert value.size == 4, \
-                    "The 'mag_temperature' numpy.ndarray() must have a size of 4"
-                self._mag_temperature = value
+                    "The 'accel_temperature' numpy.ndarray() must have a size of 4"
+                self._accel_temperature = value
                 return
             from collections.abc import Sequence
             from collections.abc import Set
@@ -820,23 +568,23 @@ class SensorCorrection(metaclass=Metaclass_SensorCorrection):
                  len(value) == 4 and
                  all(isinstance(v, float) for v in value) and
                  all(not (val < -3.402823466e+38 or val > 3.402823466e+38) or math.isinf(val) for val in value)), \
-                "The 'mag_temperature' field must be a set or sequence with length 4 and each value of type 'float' and each float in [-340282346600000016151267322115014000640.000000, 340282346600000016151267322115014000640.000000]"
-        self._mag_temperature = numpy.array(value, dtype=numpy.float32)
+                "The 'accel_temperature' field must be a set or sequence with length 4 and each value of type 'float' and each float in [-340282346600000016151267322115014000640.000000, 340282346600000016151267322115014000640.000000]"
+        self._accel_temperature = numpy.array(value, dtype=numpy.float32)
 
     @builtins.property
-    def mag_offset_0(self):
-        """Message field 'mag_offset_0'."""
-        return self._mag_offset_0
+    def accel_offset_0(self):
+        """Message field 'accel_offset_0'."""
+        return self._accel_offset_0
 
-    @mag_offset_0.setter
-    def mag_offset_0(self, value):
+    @accel_offset_0.setter
+    def accel_offset_0(self, value):
         if self._check_fields:
             if isinstance(value, numpy.ndarray):
                 assert value.dtype == numpy.float32, \
-                    "The 'mag_offset_0' numpy.ndarray() must have the dtype of 'numpy.float32'"
+                    "The 'accel_offset_0' numpy.ndarray() must have the dtype of 'numpy.float32'"
                 assert value.size == 3, \
-                    "The 'mag_offset_0' numpy.ndarray() must have a size of 3"
-                self._mag_offset_0 = value
+                    "The 'accel_offset_0' numpy.ndarray() must have a size of 3"
+                self._accel_offset_0 = value
                 return
             from collections.abc import Sequence
             from collections.abc import Set
@@ -851,23 +599,23 @@ class SensorCorrection(metaclass=Metaclass_SensorCorrection):
                  len(value) == 3 and
                  all(isinstance(v, float) for v in value) and
                  all(not (val < -3.402823466e+38 or val > 3.402823466e+38) or math.isinf(val) for val in value)), \
-                "The 'mag_offset_0' field must be a set or sequence with length 3 and each value of type 'float' and each float in [-340282346600000016151267322115014000640.000000, 340282346600000016151267322115014000640.000000]"
-        self._mag_offset_0 = numpy.array(value, dtype=numpy.float32)
+                "The 'accel_offset_0' field must be a set or sequence with length 3 and each value of type 'float' and each float in [-340282346600000016151267322115014000640.000000, 340282346600000016151267322115014000640.000000]"
+        self._accel_offset_0 = numpy.array(value, dtype=numpy.float32)
 
     @builtins.property
-    def mag_offset_1(self):
-        """Message field 'mag_offset_1'."""
-        return self._mag_offset_1
+    def accel_offset_1(self):
+        """Message field 'accel_offset_1'."""
+        return self._accel_offset_1
 
-    @mag_offset_1.setter
-    def mag_offset_1(self, value):
+    @accel_offset_1.setter
+    def accel_offset_1(self, value):
         if self._check_fields:
             if isinstance(value, numpy.ndarray):
                 assert value.dtype == numpy.float32, \
-                    "The 'mag_offset_1' numpy.ndarray() must have the dtype of 'numpy.float32'"
+                    "The 'accel_offset_1' numpy.ndarray() must have the dtype of 'numpy.float32'"
                 assert value.size == 3, \
-                    "The 'mag_offset_1' numpy.ndarray() must have a size of 3"
-                self._mag_offset_1 = value
+                    "The 'accel_offset_1' numpy.ndarray() must have a size of 3"
+                self._accel_offset_1 = value
                 return
             from collections.abc import Sequence
             from collections.abc import Set
@@ -882,23 +630,23 @@ class SensorCorrection(metaclass=Metaclass_SensorCorrection):
                  len(value) == 3 and
                  all(isinstance(v, float) for v in value) and
                  all(not (val < -3.402823466e+38 or val > 3.402823466e+38) or math.isinf(val) for val in value)), \
-                "The 'mag_offset_1' field must be a set or sequence with length 3 and each value of type 'float' and each float in [-340282346600000016151267322115014000640.000000, 340282346600000016151267322115014000640.000000]"
-        self._mag_offset_1 = numpy.array(value, dtype=numpy.float32)
+                "The 'accel_offset_1' field must be a set or sequence with length 3 and each value of type 'float' and each float in [-340282346600000016151267322115014000640.000000, 340282346600000016151267322115014000640.000000]"
+        self._accel_offset_1 = numpy.array(value, dtype=numpy.float32)
 
     @builtins.property
-    def mag_offset_2(self):
-        """Message field 'mag_offset_2'."""
-        return self._mag_offset_2
+    def accel_offset_2(self):
+        """Message field 'accel_offset_2'."""
+        return self._accel_offset_2
 
-    @mag_offset_2.setter
-    def mag_offset_2(self, value):
+    @accel_offset_2.setter
+    def accel_offset_2(self, value):
         if self._check_fields:
             if isinstance(value, numpy.ndarray):
                 assert value.dtype == numpy.float32, \
-                    "The 'mag_offset_2' numpy.ndarray() must have the dtype of 'numpy.float32'"
+                    "The 'accel_offset_2' numpy.ndarray() must have the dtype of 'numpy.float32'"
                 assert value.size == 3, \
-                    "The 'mag_offset_2' numpy.ndarray() must have a size of 3"
-                self._mag_offset_2 = value
+                    "The 'accel_offset_2' numpy.ndarray() must have a size of 3"
+                self._accel_offset_2 = value
                 return
             from collections.abc import Sequence
             from collections.abc import Set
@@ -913,23 +661,23 @@ class SensorCorrection(metaclass=Metaclass_SensorCorrection):
                  len(value) == 3 and
                  all(isinstance(v, float) for v in value) and
                  all(not (val < -3.402823466e+38 or val > 3.402823466e+38) or math.isinf(val) for val in value)), \
-                "The 'mag_offset_2' field must be a set or sequence with length 3 and each value of type 'float' and each float in [-340282346600000016151267322115014000640.000000, 340282346600000016151267322115014000640.000000]"
-        self._mag_offset_2 = numpy.array(value, dtype=numpy.float32)
+                "The 'accel_offset_2' field must be a set or sequence with length 3 and each value of type 'float' and each float in [-340282346600000016151267322115014000640.000000, 340282346600000016151267322115014000640.000000]"
+        self._accel_offset_2 = numpy.array(value, dtype=numpy.float32)
 
     @builtins.property
-    def mag_offset_3(self):
-        """Message field 'mag_offset_3'."""
-        return self._mag_offset_3
+    def accel_offset_3(self):
+        """Message field 'accel_offset_3'."""
+        return self._accel_offset_3
 
-    @mag_offset_3.setter
-    def mag_offset_3(self, value):
+    @accel_offset_3.setter
+    def accel_offset_3(self, value):
         if self._check_fields:
             if isinstance(value, numpy.ndarray):
                 assert value.dtype == numpy.float32, \
-                    "The 'mag_offset_3' numpy.ndarray() must have the dtype of 'numpy.float32'"
+                    "The 'accel_offset_3' numpy.ndarray() must have the dtype of 'numpy.float32'"
                 assert value.size == 3, \
-                    "The 'mag_offset_3' numpy.ndarray() must have a size of 3"
-                self._mag_offset_3 = value
+                    "The 'accel_offset_3' numpy.ndarray() must have a size of 3"
+                self._accel_offset_3 = value
                 return
             from collections.abc import Sequence
             from collections.abc import Set
@@ -944,8 +692,8 @@ class SensorCorrection(metaclass=Metaclass_SensorCorrection):
                  len(value) == 3 and
                  all(isinstance(v, float) for v in value) and
                  all(not (val < -3.402823466e+38 or val > 3.402823466e+38) or math.isinf(val) for val in value)), \
-                "The 'mag_offset_3' field must be a set or sequence with length 3 and each value of type 'float' and each float in [-340282346600000016151267322115014000640.000000, 340282346600000016151267322115014000640.000000]"
-        self._mag_offset_3 = numpy.array(value, dtype=numpy.float32)
+                "The 'accel_offset_3' field must be a set or sequence with length 3 and each value of type 'float' and each float in [-340282346600000016151267322115014000640.000000, 340282346600000016151267322115014000640.000000]"
+        self._accel_offset_3 = numpy.array(value, dtype=numpy.float32)
 
     @builtins.property
     def baro_device_ids(self):

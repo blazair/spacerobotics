@@ -79,7 +79,7 @@ class EstimatorStates(metaclass=Metaclass_EstimatorStates):
     _fields_and_field_types = {
         'timestamp': 'uint64',
         'timestamp_sample': 'uint64',
-        'states': 'float[25]',
+        'states': 'float[24]',
         'n_states': 'uint8',
         'covariances': 'float[24]',
     }
@@ -89,7 +89,7 @@ class EstimatorStates(metaclass=Metaclass_EstimatorStates):
     SLOT_TYPES = (
         rosidl_parser.definition.BasicType('uint64'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint64'),  # noqa: E501
-        rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('float'), 25),  # noqa: E501
+        rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('float'), 24),  # noqa: E501
         rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
         rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('float'), 24),  # noqa: E501
     )
@@ -106,10 +106,10 @@ class EstimatorStates(metaclass=Metaclass_EstimatorStates):
         self.timestamp = kwargs.get('timestamp', int())
         self.timestamp_sample = kwargs.get('timestamp_sample', int())
         if 'states' not in kwargs:
-            self.states = numpy.zeros(25, dtype=numpy.float32)
+            self.states = numpy.zeros(24, dtype=numpy.float32)
         else:
             self.states = numpy.array(kwargs.get('states'), dtype=numpy.float32)
-            assert self.states.shape == (25, )
+            assert self.states.shape == (24, )
         self.n_states = kwargs.get('n_states', int())
         if 'covariances' not in kwargs:
             self.covariances = numpy.zeros(24, dtype=numpy.float32)
@@ -205,8 +205,8 @@ class EstimatorStates(metaclass=Metaclass_EstimatorStates):
             if isinstance(value, numpy.ndarray):
                 assert value.dtype == numpy.float32, \
                     "The 'states' numpy.ndarray() must have the dtype of 'numpy.float32'"
-                assert value.size == 25, \
-                    "The 'states' numpy.ndarray() must have a size of 25"
+                assert value.size == 24, \
+                    "The 'states' numpy.ndarray() must have a size of 24"
                 self._states = value
                 return
             from collections.abc import Sequence
@@ -219,10 +219,10 @@ class EstimatorStates(metaclass=Metaclass_EstimatorStates):
                   isinstance(value, UserList)) and
                  not isinstance(value, str) and
                  not isinstance(value, UserString) and
-                 len(value) == 25 and
+                 len(value) == 24 and
                  all(isinstance(v, float) for v in value) and
                  all(not (val < -3.402823466e+38 or val > 3.402823466e+38) or math.isinf(val) for val in value)), \
-                "The 'states' field must be a set or sequence with length 25 and each value of type 'float' and each float in [-340282346600000016151267322115014000640.000000, 340282346600000016151267322115014000640.000000]"
+                "The 'states' field must be a set or sequence with length 24 and each value of type 'float' and each float in [-340282346600000016151267322115014000640.000000, 340282346600000016151267322115014000640.000000]"
         self._states = numpy.array(value, dtype=numpy.float32)
 
     @builtins.property

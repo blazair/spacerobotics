@@ -18,24 +18,18 @@ px4_msgs__msg__SensorCorrection__init(px4_msgs__msg__SensorCorrection * msg)
     return false;
   }
   // timestamp
-  // accel_device_ids
-  // accel_temperature
-  // accel_offset_0
-  // accel_offset_1
-  // accel_offset_2
-  // accel_offset_3
   // gyro_device_ids
   // gyro_temperature
   // gyro_offset_0
   // gyro_offset_1
   // gyro_offset_2
   // gyro_offset_3
-  // mag_device_ids
-  // mag_temperature
-  // mag_offset_0
-  // mag_offset_1
-  // mag_offset_2
-  // mag_offset_3
+  // accel_device_ids
+  // accel_temperature
+  // accel_offset_0
+  // accel_offset_1
+  // accel_offset_2
+  // accel_offset_3
   // baro_device_ids
   // baro_temperature
   // baro_offset_0
@@ -52,24 +46,18 @@ px4_msgs__msg__SensorCorrection__fini(px4_msgs__msg__SensorCorrection * msg)
     return;
   }
   // timestamp
-  // accel_device_ids
-  // accel_temperature
-  // accel_offset_0
-  // accel_offset_1
-  // accel_offset_2
-  // accel_offset_3
   // gyro_device_ids
   // gyro_temperature
   // gyro_offset_0
   // gyro_offset_1
   // gyro_offset_2
   // gyro_offset_3
-  // mag_device_ids
-  // mag_temperature
-  // mag_offset_0
-  // mag_offset_1
-  // mag_offset_2
-  // mag_offset_3
+  // accel_device_ids
+  // accel_temperature
+  // accel_offset_0
+  // accel_offset_1
+  // accel_offset_2
+  // accel_offset_3
   // baro_device_ids
   // baro_temperature
   // baro_offset_0
@@ -87,42 +75,6 @@ px4_msgs__msg__SensorCorrection__are_equal(const px4_msgs__msg__SensorCorrection
   // timestamp
   if (lhs->timestamp != rhs->timestamp) {
     return false;
-  }
-  // accel_device_ids
-  for (size_t i = 0; i < 4; ++i) {
-    if (lhs->accel_device_ids[i] != rhs->accel_device_ids[i]) {
-      return false;
-    }
-  }
-  // accel_temperature
-  for (size_t i = 0; i < 4; ++i) {
-    if (lhs->accel_temperature[i] != rhs->accel_temperature[i]) {
-      return false;
-    }
-  }
-  // accel_offset_0
-  for (size_t i = 0; i < 3; ++i) {
-    if (lhs->accel_offset_0[i] != rhs->accel_offset_0[i]) {
-      return false;
-    }
-  }
-  // accel_offset_1
-  for (size_t i = 0; i < 3; ++i) {
-    if (lhs->accel_offset_1[i] != rhs->accel_offset_1[i]) {
-      return false;
-    }
-  }
-  // accel_offset_2
-  for (size_t i = 0; i < 3; ++i) {
-    if (lhs->accel_offset_2[i] != rhs->accel_offset_2[i]) {
-      return false;
-    }
-  }
-  // accel_offset_3
-  for (size_t i = 0; i < 3; ++i) {
-    if (lhs->accel_offset_3[i] != rhs->accel_offset_3[i]) {
-      return false;
-    }
   }
   // gyro_device_ids
   for (size_t i = 0; i < 4; ++i) {
@@ -160,39 +112,39 @@ px4_msgs__msg__SensorCorrection__are_equal(const px4_msgs__msg__SensorCorrection
       return false;
     }
   }
-  // mag_device_ids
+  // accel_device_ids
   for (size_t i = 0; i < 4; ++i) {
-    if (lhs->mag_device_ids[i] != rhs->mag_device_ids[i]) {
+    if (lhs->accel_device_ids[i] != rhs->accel_device_ids[i]) {
       return false;
     }
   }
-  // mag_temperature
+  // accel_temperature
   for (size_t i = 0; i < 4; ++i) {
-    if (lhs->mag_temperature[i] != rhs->mag_temperature[i]) {
+    if (lhs->accel_temperature[i] != rhs->accel_temperature[i]) {
       return false;
     }
   }
-  // mag_offset_0
+  // accel_offset_0
   for (size_t i = 0; i < 3; ++i) {
-    if (lhs->mag_offset_0[i] != rhs->mag_offset_0[i]) {
+    if (lhs->accel_offset_0[i] != rhs->accel_offset_0[i]) {
       return false;
     }
   }
-  // mag_offset_1
+  // accel_offset_1
   for (size_t i = 0; i < 3; ++i) {
-    if (lhs->mag_offset_1[i] != rhs->mag_offset_1[i]) {
+    if (lhs->accel_offset_1[i] != rhs->accel_offset_1[i]) {
       return false;
     }
   }
-  // mag_offset_2
+  // accel_offset_2
   for (size_t i = 0; i < 3; ++i) {
-    if (lhs->mag_offset_2[i] != rhs->mag_offset_2[i]) {
+    if (lhs->accel_offset_2[i] != rhs->accel_offset_2[i]) {
       return false;
     }
   }
-  // mag_offset_3
+  // accel_offset_3
   for (size_t i = 0; i < 3; ++i) {
-    if (lhs->mag_offset_3[i] != rhs->mag_offset_3[i]) {
+    if (lhs->accel_offset_3[i] != rhs->accel_offset_3[i]) {
       return false;
     }
   }
@@ -237,30 +189,6 @@ px4_msgs__msg__SensorCorrection__copy(
   }
   // timestamp
   output->timestamp = input->timestamp;
-  // accel_device_ids
-  for (size_t i = 0; i < 4; ++i) {
-    output->accel_device_ids[i] = input->accel_device_ids[i];
-  }
-  // accel_temperature
-  for (size_t i = 0; i < 4; ++i) {
-    output->accel_temperature[i] = input->accel_temperature[i];
-  }
-  // accel_offset_0
-  for (size_t i = 0; i < 3; ++i) {
-    output->accel_offset_0[i] = input->accel_offset_0[i];
-  }
-  // accel_offset_1
-  for (size_t i = 0; i < 3; ++i) {
-    output->accel_offset_1[i] = input->accel_offset_1[i];
-  }
-  // accel_offset_2
-  for (size_t i = 0; i < 3; ++i) {
-    output->accel_offset_2[i] = input->accel_offset_2[i];
-  }
-  // accel_offset_3
-  for (size_t i = 0; i < 3; ++i) {
-    output->accel_offset_3[i] = input->accel_offset_3[i];
-  }
   // gyro_device_ids
   for (size_t i = 0; i < 4; ++i) {
     output->gyro_device_ids[i] = input->gyro_device_ids[i];
@@ -285,29 +213,29 @@ px4_msgs__msg__SensorCorrection__copy(
   for (size_t i = 0; i < 3; ++i) {
     output->gyro_offset_3[i] = input->gyro_offset_3[i];
   }
-  // mag_device_ids
+  // accel_device_ids
   for (size_t i = 0; i < 4; ++i) {
-    output->mag_device_ids[i] = input->mag_device_ids[i];
+    output->accel_device_ids[i] = input->accel_device_ids[i];
   }
-  // mag_temperature
+  // accel_temperature
   for (size_t i = 0; i < 4; ++i) {
-    output->mag_temperature[i] = input->mag_temperature[i];
+    output->accel_temperature[i] = input->accel_temperature[i];
   }
-  // mag_offset_0
+  // accel_offset_0
   for (size_t i = 0; i < 3; ++i) {
-    output->mag_offset_0[i] = input->mag_offset_0[i];
+    output->accel_offset_0[i] = input->accel_offset_0[i];
   }
-  // mag_offset_1
+  // accel_offset_1
   for (size_t i = 0; i < 3; ++i) {
-    output->mag_offset_1[i] = input->mag_offset_1[i];
+    output->accel_offset_1[i] = input->accel_offset_1[i];
   }
-  // mag_offset_2
+  // accel_offset_2
   for (size_t i = 0; i < 3; ++i) {
-    output->mag_offset_2[i] = input->mag_offset_2[i];
+    output->accel_offset_2[i] = input->accel_offset_2[i];
   }
-  // mag_offset_3
+  // accel_offset_3
   for (size_t i = 0; i < 3; ++i) {
-    output->mag_offset_3[i] = input->mag_offset_3[i];
+    output->accel_offset_3[i] = input->accel_offset_3[i];
   }
   // baro_device_ids
   for (size_t i = 0; i < 4; ++i) {

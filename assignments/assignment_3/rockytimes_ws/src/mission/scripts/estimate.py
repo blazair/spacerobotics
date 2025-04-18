@@ -1,303 +1,229 @@
 #!/usr/bin/env python3
+
+"""
+Auto‐Takeoff Cylinder Estimation Mission
+
+This node will:
+  1. ARM & switch to OFFBOARD automatically on startup.
+  2. TAKEOFF to z = –5 m (vertical), then fly to (15,0,–5).
+  3. CIRCLE at radius = 15 m, altitude = –5 m.
+Meanwhile:
+  • Continuously subscribe to /drone/front_rgb and /drone/front_depth.
+  • Segment, find the largest contour, compute real‑world width/height.
+  • Draw bounding box + size text and log each detection.
+"""
+
+import math
+import time
+
 import rclpy
 from rclpy.node import Node
-import math, time
-from px4_msgs.msg import OffboardControlMode, TrajectorySetpoint, VehicleCommand
-from std_msgs.msg import Float64
-from sensor_msgs.msg import Image
-from cv_bridge import CvBridge
 from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy
 
+from sensor_msgs.msg import Image, CameraInfo
+from px4_msgs.msg import (
+    VehicleOdometry,
+    OffboardControlMode,
+    VehicleCommand,
+    TrajectorySetpoint
+)
+from cv_bridge import CvBridge
 import cv2
 import numpy as np
-from sklearn.cluster import KMeans
+from message_filters import Subscriber, ApproximateTimeSynchronizer
 
-import matplotlib.pyplot as plt
-import statistics
 
-class CircleFlightCylinderEstimator(Node):
+class AutoCylinderEstimate(Node):
     def __init__(self):
-        super().__init__('circle_flight_cylinder_estimator')
-        self.get_logger().info("CircleFlightCylinderEstimator node starting.")
+        super().__init__('auto_cylinder_estimate')
 
-        # --- Offboard Flight Setup ---
-        qos_profile = QoSProfile(
+        qos = QoSProfile(
             reliability=ReliabilityPolicy.BEST_EFFORT,
             durability=DurabilityPolicy.TRANSIENT_LOCAL,
             history=HistoryPolicy.KEEP_LAST,
             depth=1
         )
-        self.offboard_control_mode_pub = self.create_publisher(
-            OffboardControlMode, '/fmu/in/offboard_control_mode', qos_profile)
-        self.trajectory_setpoint_pub = self.create_publisher(
-            TrajectorySetpoint, '/fmu/in/trajectory_setpoint', qos_profile)
-        self.vehicle_command_pub = self.create_publisher(
-            VehicleCommand, '/fmu/in/vehicle_command', qos_profile)
-        self.gimbal_yaw_pub = self.create_publisher(Float64, '/model/gimbal_yaw', 10)
 
-        # Flight parameters
-        self.takeoff_alt = 6.0         # meters
-        self.hover_radius = 15.0       # drone will hover at a fixed position 15m from origin
-        # We'll set the hover position to [15, 0, -6] in a NED system.
-        self.hover_position = [self.hover_radius, 0.0, -self.takeoff_alt]
-        # Yaw is set so that the drone faces the origin.
-        self.hover_yaw = math.atan2(-0.0, -(self.hover_radius))  # should be pi
+        # Publishers
+        self.offb_pub = self.create_publisher(OffboardControlMode, '/fmu/in/offboard_control_mode', qos)
+        self.traj_pub = self.create_publisher(TrajectorySetpoint,   '/fmu/in/trajectory_setpoint',   qos)
+        self.cmd_pub  = self.create_publisher(VehicleCommand,       '/fmu/in/vehicle_command',       qos)
 
-        self.state = "TAKEOFF"
-        self.flight_start_time = time.time()
+        # Subscribers
+        self.odom_sub    = self.create_subscription(VehicleOdometry, '/fmu/out/vehicle_odometry',    self.odom_cb,    qos)
+        self.caminfo_sub = self.create_subscription(CameraInfo,     '/drone/front_depth/camera_info', self.caminfo_cb, 10)
 
-        # --- Image Processing Setup ---
+        # RGB+Depth sync
+        rgb_sub   = Subscriber(self, Image, '/drone/front_rgb')
+        depth_sub = Subscriber(self, Image, '/drone/front_depth')
+        ats = ApproximateTimeSynchronizer([rgb_sub, depth_sub], queue_size=10, slop=0.1)
+        ats.registerCallback(self.image_cb)
+
+        # State
+        self.state = "ARM_OFFBOARD"   # first thing: arm & offboard
+        self.offb_counter = 0
+
+        # Takeoff stages: 0 = vertical, 1 = move out
+        self.takeoff_stage = 0
+
+        # Drone pose
+        self.position = [0.0, 0.0, 0.0]
+
+        # Camera intrinsics
+        self.fx = self.fy = None
         self.bridge = CvBridge()
-        self.rgb_image = None
-        self.depth_image = None
-        # Correct subscription usage: (message type, topic name, callback, QoS)
-        self.rgb_sub = self.create_subscription(
-            Image, '/drone/front_rgb', self.rgb_callback, QoSProfile(depth=1))
-        self.depth_sub = self.create_subscription(
-            Image, '/drone/front_depth', self.depth_callback, QoSProfile(depth=1))
 
-        # Camera intrinsics (example values; adjust as needed)
-        self.fx, self.fy = 525.0, 525.0
-        self.cx, self.cy = 319.5, 239.5
+        # Circle params
+        self.circle_radius = 15.0
+        self.altitude      = -5.0
+        self.circle_speed  = -0.02
+        self.theta         = 0.0
 
-        # For feature detection: ORB detector.
-        self.orb = cv2.ORB_create(nfeatures=500)
-        
-        # Measurements storage for live plotting.
-        self.frame_count = 0
-        self.times = []
-        self.cyl1_heights = []
-        self.cyl1_widths = []
-        self.cyl2_heights = []
-        self.cyl2_widths = []
+        # Estimation params
+        self.lower_hsv = np.array([0, 0, 110])
+        self.upper_hsv = np.array([180, 40, 180])
+        self.min_area  = 5000
 
-        # Set up live Matplotlib plots.
-        plt.ion()
-        self.fig, (self.ax_height, self.ax_width) = plt.subplots(2, 1, figsize=(8,6))
-        self.ax_height.set_title("Cylinder Height (m)")
-        self.ax_height.set_xlabel("Frame")
-        self.ax_height.set_ylabel("Height (m)")
-        self.ax_width.set_title("Cylinder Width (m)")
-        self.ax_width.set_xlabel("Frame")
-        self.ax_width.set_ylabel("Width (m)")
+        # OpenCV windows
+        cv2.namedWindow('Detection', cv2.WINDOW_NORMAL)
+        cv2.namedWindow('Mask',      cv2.WINDOW_NORMAL)
 
-        # Create timers: one for flight control and one for image processing.
-        self.flight_timer = self.create_timer(0.05, self.flight_timer_callback)
-        self.image_timer = self.create_timer(0.5, self.image_timer_callback)
+        # Run at 10 Hz
+        self.create_timer(0.1, self.timer_cb)
 
-    # ------------------ Flight Control (Hover) ------------------
-    def flight_timer_callback(self):
-        self.publish_offboard_mode()
-        if self.state == "TAKEOFF":
-            # Command takeoff to our desired hover position.
-            sp = TrajectorySetpoint()
-            sp.position = self.hover_position  # e.g., [15, 0, -6]
-            sp.yaw = self.hover_yaw           # should face the origin.
-            sp.timestamp = int(self.get_clock().now().nanoseconds / 1000)
-            self.trajectory_setpoint_pub.publish(sp)
-            if time.time() - self.flight_start_time > 5.0:
-                self.get_logger().info("Takeoff complete. Switching to HOVER mode.")
-                self.state = "HOVER"
-                self.flight_start_time = time.time()
-                self.arm_drone()
-                self.engage_offboard_mode()
-        elif self.state == "HOVER":
-            # Maintain hover at fixed position.
-            sp = TrajectorySetpoint()
-            sp.position = self.hover_position
-            sp.yaw = self.hover_yaw
-            sp.timestamp = int(self.get_clock().now().nanoseconds / 1000)
-            self.trajectory_setpoint_pub.publish(sp)
-            # Ensure camera (gimbal) faces the origin.
-            gimbal_msg = Float64()
-            gimbal_msg.data = self.hover_yaw
-            self.gimbal_yaw_pub.publish(gimbal_msg)
-    
-    def publish_offboard_mode(self):
-        mode_msg = OffboardControlMode()
-        mode_msg.position = True
-        mode_msg.timestamp = int(self.get_clock().now().nanoseconds / 1000)
-        self.offboard_control_mode_pub.publish(mode_msg)
+    def odom_cb(self, msg: VehicleOdometry):
+        self.position = [msg.position[0], msg.position[1], msg.position[2]]
 
-    def arm_drone(self):
-        cmd = VehicleCommand()
-        cmd.command = VehicleCommand.VEHICLE_CMD_COMPONENT_ARM_DISARM
-        cmd.param1 = 1.0
-        cmd.target_system = 1
-        cmd.target_component = 1
-        cmd.source_system = 1
-        cmd.source_component = 1
-        cmd.from_external = True
-        cmd.timestamp = int(self.get_clock().now().nanoseconds / 1000)
-        self.vehicle_command_pub.publish(cmd)
-        self.get_logger().info("Arm command sent.")
+    def caminfo_cb(self, msg: CameraInfo):
+        # grab intrinsics once
+        self.fx, self.fy = msg.k[0], msg.k[4]
+        self.get_logger().info("Camera intrinsics received")
+        self.destroy_subscription(self.caminfo_sub)
 
-    def engage_offboard_mode(self):
-        cmd = VehicleCommand()
-        cmd.command = VehicleCommand.VEHICLE_CMD_DO_SET_MODE
-        cmd.param1 = 1.0
-        cmd.param2 = 6.0  # Offboard mode number.
-        cmd.target_system = 1
-        cmd.target_component = 1
-        cmd.source_system = 1
-        cmd.source_component = 1
-        cmd.from_external = True
-        cmd.timestamp = int(self.get_clock().now().nanoseconds / 1000)
-        self.vehicle_command_pub.publish(cmd)
-        self.get_logger().info("Offboard mode engaged.")
+    def image_cb(self, rgb_msg: Image, depth_msg: Image):
+        rgb   = self.bridge.imgmsg_to_cv2(rgb_msg,   'bgr8')
+        depth = self.bridge.imgmsg_to_cv2(depth_msg, 'passthrough').astype(np.float32)
+        depth[depth == 0] = np.nan
 
-    # ------------------ Image Processing for Cylinder Detection ------------------
-    def rgb_callback(self, msg):
-        try:
-            self.rgb_image = self.bridge.imgmsg_to_cv2(msg, "bgr8")
-        except Exception as e:
-            self.get_logger().error("RGB conversion error: " + str(e))
-
-    def depth_callback(self, msg):
-        try:
-            self.depth_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding="32FC1")
-        except Exception as e:
-            self.get_logger().error("Depth conversion error: " + str(e))
-
-    def image_timer_callback(self):
-        if self.rgb_image is None or self.depth_image is None:
-            return
-
-        # Use ORB to detect features in the RGB image.
-        gray = cv2.cvtColor(self.rgb_image, cv2.COLOR_BGR2GRAY)
-        keypoints = self.orb.detect(gray, None)
-        if len(keypoints) < 2:
-            self.get_logger().info("Not enough keypoints detected.")
-            cv2.imshow("Cylinder Estimation Overlay", self.rgb_image)
+        # need intrinsics
+        if self.fx is None:
+            cv2.imshow('Detection', rgb)
             cv2.waitKey(1)
             return
 
-        # Cluster keypoints into 2 groups using KMeans.
-        pts = np.array([kp.pt for kp in keypoints])
-        try:
-            kmeans = KMeans(n_clusters=2, random_state=0).fit(pts)
-        except Exception as e:
-            self.get_logger().error("KMeans error: " + str(e))
-            return
-        labels = kmeans.labels_
+        # mask by color + depth
+        hsv        = cv2.cvtColor(rgb, cv2.COLOR_BGR2HSV)
+        cm         = cv2.inRange(hsv, self.lower_hsv, self.upper_hsv) > 0
+        dm         = (depth > 1.0) & (depth < 30.0)
+        mask       = (cm & dm).astype(np.uint8)*255
+        mask_clean = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, np.ones((5,5),np.uint8))
 
-        boxes = []
-        for i in range(2):
-            cluster_pts = pts[labels == i]
-            if cluster_pts.size == 0:
-                continue
-            # Compute bounding box around the cluster.
-            x_min = int(np.min(cluster_pts[:, 0]))
-            y_min = int(np.min(cluster_pts[:, 1]))
-            x_max = int(np.max(cluster_pts[:, 0]))
-            y_max = int(np.max(cluster_pts[:, 1]))
-            # Optionally, expand the box by a fixed margin (e.g. 10 pixels) to better cover the cylinder.
-            margin = 10
-            x_min = max(x_min - margin, 0)
-            y_min = max(y_min - margin, 0)
-            x_max = x_max + margin
-            y_max = y_max + margin
-            boxes.append((x_min, y_min, x_max - x_min, y_max - y_min))
+        cnts, _ = cv2.findContours(mask_clean, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+        large   = [c for c in cnts if cv2.contourArea(c) > self.min_area]
 
-        # Sort boxes left-to-right by x-coordinate.
-        boxes.sort(key=lambda b: b[0])
-        annotated = self.rgb_image.copy()
-        measurements = []
-        for idx, box in enumerate(boxes):
-            x, y, w, h = box
-            color = (0, 255, 0) if idx == 0 else (0, 0, 255)
-            cv2.rectangle(annotated, (x, y), (x + w, y + h), color, 2)
-            # Get ROI from the depth image.
-            roi = self.depth_image[y:y + h, x:x + w]
-            valid = roi[(roi > 0) & (~np.isnan(roi))]
-            if valid.size == 0:
-                continue
-            # Remove the multiplication by 0.001 since the depth values are already in meters.
-            median_depth = float(np.median(valid))
-            # Convert bounding box dimensions (in pixels) to real-world dimensions.
-            phys_width = (w * median_depth) / self.fx
-            phys_height = (h * median_depth) / self.fy
-            measurements.append({
-                "box": box,
-                "depth": median_depth,
-                "width": phys_width,
-                "height": phys_height
-            })
-            label_text = f"{'Cylinder' if len(boxes)==1 else ('Left' if idx==0 else 'Right')}: {phys_height:.2f}m x {phys_width:.2f}m"
-            cv2.putText(annotated, label_text, (x, y - 10),
-                        cv2.FONT_HERSHEY_SIMPLEX, 0.6, color, 2)
-            self.get_logger().info(label_text)
+        overlay = rgb.copy()
+        if large:
+            c = max(large, key=cv2.contourArea)
+            x,y,w,h = cv2.boundingRect(c)
+            roi = depth[y:y+h, x:x+w]
+            vals = roi[np.isfinite(roi)]
+            if vals.size>0:
+                Z   = float(np.median(vals))
+                w_m = (w * Z)/self.fx
+                h_m = (h * Z)/self.fy
 
-        if len(measurements) >= 1:  # now we assume one cylinder if only one is detected.
-            self.frame_count += 1
-            self.times.append(self.frame_count)
-            # If two boxes detected, assign first to cylinder1 and second to cylinder2.
-            if len(measurements) >= 2:
-                self.cyl1_heights.append(measurements[0]["height"])
-                self.cyl1_widths.append(measurements[0]["width"])
-                self.cyl2_heights.append(measurements[1]["height"])
-                self.cyl2_widths.append(measurements[1]["width"])
-            else:
-                # If only one is detected, store it for cylinder1.
-                self.cyl1_heights.append(measurements[0]["height"])
-                self.cyl1_widths.append(measurements[0]["width"])
-            self.update_plots()
+                cv2.rectangle(overlay, (x,y), (x+w,y+h), (0,255,0), 2)
+                cv2.putText(
+                    overlay,
+                    f"{w_m:.2f}m x {h_m:.2f}m",
+                    (x, y-10),
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0,255,0), 2
+                )
+                self.get_logger().info(f"Detected cylinder: W={w_m:.2f} H={h_m:.2f} D={Z:.2f}")
 
-        cv2.imshow("Cylinder Estimation Overlay", annotated)
+        cv2.imshow('Detection', overlay)
+        cv2.imshow('Mask', mask_clean)
         cv2.waitKey(1)
 
-    def update_plots(self):
-        self.ax_height.cla()
-        self.ax_width.cla()
-        if self.cyl1_heights:
-            self.ax_height.plot(self.times[:len(self.cyl1_heights)], self.cyl1_heights, 'g.-', label="Cylinder 1 Height")
-        if self.cyl2_heights:
-            self.ax_height.plot(self.times[:len(self.cyl2_heights)], self.cyl2_heights, 'r.-', label="Cylinder 2 Height")
-        self.ax_height.set_title("Cylinder Height (m)")
-        self.ax_height.set_xlabel("Frame")
-        self.ax_height.set_ylabel("Height (m)")
-        self.ax_height.legend()
+    def timer_cb(self):
+        # publish offboard control mode
+        self.publish_offboard()
 
-        if self.cyl1_widths:
-            self.ax_width.plot(self.times[:len(self.cyl1_widths)], self.cyl1_widths, 'g.-', label="Cylinder 1 Width")
-        if self.cyl2_widths:
-            self.ax_width.plot(self.times[:len(self.cyl2_widths)], self.cyl2_widths, 'r.-', label="Cylinder 2 Width")
-        self.ax_width.set_title("Cylinder Width (m)")
-        self.ax_width.set_xlabel("Frame")
-        self.ax_width.set_ylabel("Width (m)")
-        self.ax_width.legend()
+        # auto arm & offboard
+        if self.offb_counter == 10:
+            self.send_cmd(VehicleCommand.VEHICLE_CMD_DO_SET_MODE,        1.0, 6.0)
+            self.send_cmd(VehicleCommand.VEHICLE_CMD_COMPONENT_ARM_DISARM,1.0)
 
-        self.fig.tight_layout()
-        plt.pause(0.001)
+        # state machine
+        if self.state == "ARM_OFFBOARD":
+            # immediately go to takeoff stage
+            self.state = "ARM_TAKEOFF"
 
-    def shutdown_hook(self):
-        if self.cyl1_heights:
-            median_h1 = statistics.median(self.cyl1_heights)
-            median_w1 = statistics.median(self.cyl1_widths)
-            self.get_logger().info(f"Final Cylinder 1: Height = {median_h1:.2f} m, Width = {median_w1:.2f} m")
-        else:
-            self.get_logger().info("No measurements for Cylinder 1.")
-        if self.cyl2_heights:
-            median_h2 = statistics.median(self.cyl2_heights)
-            median_w2 = statistics.median(self.cyl2_widths)
-            self.get_logger().info(f"Final Cylinder 2: Height = {median_h2:.2f} m, Width = {median_w2:.2f} m")
-        else:
-            self.get_logger().info("No measurements for Cylinder 2.")
-        rclpy.shutdown()
-        cv2.destroyAllWindows()
-        plt.close('all')
+        elif self.state == "ARM_TAKEOFF":
+            if self.takeoff_stage == 0:
+                # vertical takeoff
+                target_z = self.altitude
+                self.publish_setpoint(0, 0, target_z, 0)
+                if abs(self.position[2] - target_z) < 0.5:
+                    self.takeoff_stage = 1
+            else:
+                # move to circle start
+                self.publish_setpoint(self.circle_radius, 0, self.altitude, 0)
+                if math.hypot(self.position[0]-self.circle_radius,
+                              self.position[1]) < 0.5:
+                    self.get_logger().info("Reached circle start → CIRCLE")
+                    self.state = "CIRCLE"
+
+        elif self.state == "CIRCLE":
+            # perform circle
+            x = self.circle_radius * math.cos(self.theta)
+            y = self.circle_radius * math.sin(self.theta)
+            z = self.altitude
+            yaw = math.atan2(-y, -x)  # face center
+            self.publish_setpoint(x, y, z, yaw)
+            self.theta += self.circle_speed
+
+        self.offb_counter += 1
+
+    def publish_offboard(self):
+        m = OffboardControlMode()
+        m.position  = True
+        m.timestamp = self.get_clock().now().nanoseconds // 1000
+        self.offb_pub.publish(m)
+
+    def publish_setpoint(self, x, y, z, yaw):
+        sp = TrajectorySetpoint()
+        sp.position  = [float(x), float(y), float(z)]
+        sp.yaw       = float(yaw)
+        sp.timestamp = self.get_clock().now().nanoseconds // 1000
+        self.traj_pub.publish(sp)
+
+    def send_cmd(self, cmd, p1=0.0, p2=0.0):
+        m = VehicleCommand()
+        m.command         = cmd
+        m.param1          = float(p1)
+        m.param2          = float(p2)
+        m.target_system   = 1
+        m.target_component= 1
+        m.source_system   = 1
+        m.source_component= 1
+        m.from_external   = True
+        m.timestamp       = self.get_clock().now().nanoseconds // 1000
+        self.cmd_pub.publish(m)
+
 
 def main(args=None):
     rclpy.init(args=args)
-    node = CircleFlightCylinderEstimator()
+    node = AutoCylinderEstimate()
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:
-        node.get_logger().info("Interrupted by user.")
+        pass
     finally:
-        node.shutdown_hook()
         node.destroy_node()
         rclpy.shutdown()
+        cv2.destroyAllWindows()
+
 
 if __name__ == '__main__':
     main()

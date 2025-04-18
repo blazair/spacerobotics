@@ -45,12 +45,8 @@ module px4_msgs {
         "Accuracy of heading of the relative position vector (radians)")
       float heading_accuracy;
 
-      @verbatim (language="comment", text=
-        "Length of the position vector (m)")
       float position_length;
 
-      @verbatim (language="comment", text=
-        "Accuracy of the position length (m)")
       float accuracy_length;
 
       @verbatim (language="comment", text=

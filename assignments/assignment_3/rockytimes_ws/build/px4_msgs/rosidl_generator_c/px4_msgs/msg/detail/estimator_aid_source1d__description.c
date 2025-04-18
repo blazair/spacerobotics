@@ -11,10 +11,10 @@ px4_msgs__msg__EstimatorAidSource1d__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x2d, 0xb7, 0x64, 0x87, 0x28, 0x59, 0x03, 0x3d,
-      0xe7, 0x98, 0xde, 0x02, 0xcd, 0x64, 0xc9, 0x64,
-      0x85, 0x3a, 0x9e, 0x28, 0x93, 0xba, 0x55, 0x86,
-      0x99, 0xf8, 0x1e, 0xd1, 0x86, 0x21, 0x1b, 0x2a,
+      0x58, 0x83, 0xbe, 0x52, 0xcb, 0x45, 0x01, 0x7f,
+      0xa7, 0x05, 0xa0, 0x51, 0xa9, 0x35, 0xb6, 0xcb,
+      0x30, 0x64, 0xc2, 0x12, 0xdf, 0x6e, 0x4f, 0x98,
+      0x23, 0x45, 0x3c, 0x18, 0xaf, 0x8b, 0x9a, 0xc3,
     }};
   return &hash;
 }
@@ -39,10 +39,9 @@ static char px4_msgs__msg__EstimatorAidSource1d__FIELD_NAME__time_last_fuse[] = 
 static char px4_msgs__msg__EstimatorAidSource1d__FIELD_NAME__observation[] = "observation";
 static char px4_msgs__msg__EstimatorAidSource1d__FIELD_NAME__observation_variance[] = "observation_variance";
 static char px4_msgs__msg__EstimatorAidSource1d__FIELD_NAME__innovation[] = "innovation";
-static char px4_msgs__msg__EstimatorAidSource1d__FIELD_NAME__innovation_filtered[] = "innovation_filtered";
 static char px4_msgs__msg__EstimatorAidSource1d__FIELD_NAME__innovation_variance[] = "innovation_variance";
 static char px4_msgs__msg__EstimatorAidSource1d__FIELD_NAME__test_ratio[] = "test_ratio";
-static char px4_msgs__msg__EstimatorAidSource1d__FIELD_NAME__test_ratio_filtered[] = "test_ratio_filtered";
+static char px4_msgs__msg__EstimatorAidSource1d__FIELD_NAME__fusion_enabled[] = "fusion_enabled";
 static char px4_msgs__msg__EstimatorAidSource1d__FIELD_NAME__innovation_rejected[] = "innovation_rejected";
 static char px4_msgs__msg__EstimatorAidSource1d__FIELD_NAME__fused[] = "fused";
 
@@ -128,16 +127,6 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__EstimatorAidSour
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__EstimatorAidSource1d__FIELD_NAME__innovation_filtered, 19, 19},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
     {px4_msgs__msg__EstimatorAidSource1d__FIELD_NAME__innovation_variance, 19, 19},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
@@ -158,9 +147,9 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__EstimatorAidSour
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__EstimatorAidSource1d__FIELD_NAME__test_ratio_filtered, 19, 19},
+    {px4_msgs__msg__EstimatorAidSource1d__FIELD_NAME__fusion_enabled, 14, 14},
     {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
       0,
       0,
       {NULL, 0, 0},
@@ -198,7 +187,7 @@ px4_msgs__msg__EstimatorAidSource1d__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {px4_msgs__msg__EstimatorAidSource1d__TYPE_NAME, 33, 33},
-      {px4_msgs__msg__EstimatorAidSource1d__FIELDS, 14, 14},
+      {px4_msgs__msg__EstimatorAidSource1d__FIELDS, 13, 13},
     },
     {NULL, 0, 0},
   };
@@ -222,20 +211,17 @@ static char toplevel_type_raw_source[] =
   "float32 observation_variance\n"
   "\n"
   "float32 innovation\n"
-  "float32 innovation_filtered\n"
-  "\n"
   "float32 innovation_variance\n"
+  "float32 test_ratio\n"
   "\n"
-  "float32 test_ratio           # normalized innovation squared\n"
-  "float32 test_ratio_filtered  # signed filtered test ratio\n"
-  "\n"
+  "bool fusion_enabled          # true when measurements are being fused\n"
   "bool innovation_rejected     # true if the observation has been rejected\n"
   "bool fused                   # true if the sample was successfully fused\n"
   "\n"
   "# TOPICS estimator_aid_src_baro_hgt estimator_aid_src_ev_hgt estimator_aid_src_gnss_hgt estimator_aid_src_rng_hgt\n"
   "# TOPICS estimator_aid_src_airspeed estimator_aid_src_sideslip\n"
   "# TOPICS estimator_aid_src_fake_hgt\n"
-  "# TOPICS estimator_aid_src_gnss_yaw estimator_aid_src_ev_yaw";
+  "# TOPICS estimator_aid_src_mag_heading estimator_aid_src_gnss_yaw estimator_aid_src_ev_yaw";
 
 static char msg_encoding[] = "msg";
 
@@ -249,7 +235,7 @@ px4_msgs__msg__EstimatorAidSource1d__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__EstimatorAidSource1d__TYPE_NAME, 33, 33},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 882, 882},
+    {toplevel_type_raw_source, 852, 852},
   };
   return &source;
 }

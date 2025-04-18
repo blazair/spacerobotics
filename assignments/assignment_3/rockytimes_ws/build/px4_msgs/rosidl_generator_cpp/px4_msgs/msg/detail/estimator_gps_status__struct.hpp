@@ -54,7 +54,6 @@ struct EstimatorGpsStatus_
       this->check_fail_max_vert_drift = false;
       this->check_fail_max_horz_spd_err = false;
       this->check_fail_max_vert_spd_err = false;
-      this->check_fail_spoofed_gps = false;
       this->position_drift_rate_horizontal_m_s = 0.0f;
       this->position_drift_rate_vertical_m_s = 0.0f;
       this->filtered_horizontal_speed_m_s = 0.0f;
@@ -80,7 +79,6 @@ struct EstimatorGpsStatus_
       this->check_fail_max_vert_drift = false;
       this->check_fail_max_horz_spd_err = false;
       this->check_fail_max_vert_spd_err = false;
-      this->check_fail_spoofed_gps = false;
       this->position_drift_rate_horizontal_m_s = 0.0f;
       this->position_drift_rate_vertical_m_s = 0.0f;
       this->filtered_horizontal_speed_m_s = 0.0f;
@@ -127,9 +125,6 @@ struct EstimatorGpsStatus_
   using _check_fail_max_vert_spd_err_type =
     bool;
   _check_fail_max_vert_spd_err_type check_fail_max_vert_spd_err;
-  using _check_fail_spoofed_gps_type =
-    bool;
-  _check_fail_spoofed_gps_type check_fail_spoofed_gps;
   using _position_drift_rate_horizontal_m_s_type =
     float;
   _position_drift_rate_horizontal_m_s_type position_drift_rate_horizontal_m_s;
@@ -217,12 +212,6 @@ struct EstimatorGpsStatus_
     const bool & _arg)
   {
     this->check_fail_max_vert_spd_err = _arg;
-    return *this;
-  }
-  Type & set__check_fail_spoofed_gps(
-    const bool & _arg)
-  {
-    this->check_fail_spoofed_gps = _arg;
     return *this;
   }
   Type & set__position_drift_rate_horizontal_m_s(
@@ -323,9 +312,6 @@ struct EstimatorGpsStatus_
       return false;
     }
     if (this->check_fail_max_vert_spd_err != other.check_fail_max_vert_spd_err) {
-      return false;
-    }
-    if (this->check_fail_spoofed_gps != other.check_fail_spoofed_gps) {
       return false;
     }
     if (this->position_drift_rate_horizontal_m_s != other.position_drift_rate_horizontal_m_s) {

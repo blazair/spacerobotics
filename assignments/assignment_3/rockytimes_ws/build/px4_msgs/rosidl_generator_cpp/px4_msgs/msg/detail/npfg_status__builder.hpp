@@ -24,32 +24,16 @@ namespace msg
 namespace builder
 {
 
-class Init_NpfgStatus_can_run_factor
-{
-public:
-  explicit Init_NpfgStatus_can_run_factor(::px4_msgs::msg::NpfgStatus & msg)
-  : msg_(msg)
-  {}
-  ::px4_msgs::msg::NpfgStatus can_run_factor(::px4_msgs::msg::NpfgStatus::_can_run_factor_type arg)
-  {
-    msg_.can_run_factor = std::move(arg);
-    return std::move(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::NpfgStatus msg_;
-};
-
 class Init_NpfgStatus_time_const
 {
 public:
   explicit Init_NpfgStatus_time_const(::px4_msgs::msg::NpfgStatus & msg)
   : msg_(msg)
   {}
-  Init_NpfgStatus_can_run_factor time_const(::px4_msgs::msg::NpfgStatus::_time_const_type arg)
+  ::px4_msgs::msg::NpfgStatus time_const(::px4_msgs::msg::NpfgStatus::_time_const_type arg)
   {
     msg_.time_const = std::move(arg);
-    return Init_NpfgStatus_can_run_factor(msg_);
+    return std::move(msg_);
   }
 
 private:

@@ -34,16 +34,6 @@
           "default_value": ""
         },
         {
-          "name": "is_logging",
-          "type": {
-            "type_id": 15,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
           "name": "total_written_kb",
           "type": {
             "type_id": 10,
@@ -120,7 +110,7 @@
   "type_hashes": [
     {
       "type_name": "px4_msgs/msg/LoggerStatus",
-      "hash_string": "RIHS01_ab86e33d7e94bb26ea8a146f2ac55553f7e6dd42e28ef8e2e9c700980d4b079a"
+      "hash_string": "RIHS01_4678dc00569e86cc0f954fad3dffeb090e93ab1c0ec0ef16f9ce3629753f539c"
     }
   ]
 }

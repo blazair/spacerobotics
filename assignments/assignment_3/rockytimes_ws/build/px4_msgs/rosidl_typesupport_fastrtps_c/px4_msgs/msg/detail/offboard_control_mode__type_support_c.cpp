@@ -78,14 +78,9 @@ bool cdr_serialize_px4_msgs__msg__OffboardControlMode(
     cdr << (ros_message->body_rate ? true : false);
   }
 
-  // Field name: thrust_and_torque
+  // Field name: actuator
   {
-    cdr << (ros_message->thrust_and_torque ? true : false);
-  }
-
-  // Field name: direct_actuator
-  {
-    cdr << (ros_message->direct_actuator ? true : false);
+    cdr << (ros_message->actuator ? true : false);
   }
 
   return true;
@@ -136,18 +131,11 @@ bool cdr_deserialize_px4_msgs__msg__OffboardControlMode(
     ros_message->body_rate = tmp ? true : false;
   }
 
-  // Field name: thrust_and_torque
+  // Field name: actuator
   {
     uint8_t tmp;
     cdr >> tmp;
-    ros_message->thrust_and_torque = tmp ? true : false;
-  }
-
-  // Field name: direct_actuator
-  {
-    uint8_t tmp;
-    cdr >> tmp;
-    ros_message->direct_actuator = tmp ? true : false;
+    ros_message->actuator = tmp ? true : false;
   }
 
   return true;
@@ -210,16 +198,9 @@ size_t get_serialized_size_px4_msgs__msg__OffboardControlMode(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: thrust_and_torque
+  // Field name: actuator
   {
-    size_t item_size = sizeof(ros_message->thrust_and_torque);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: direct_actuator
-  {
-    size_t item_size = sizeof(ros_message->direct_actuator);
+    size_t item_size = sizeof(ros_message->actuator);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -289,14 +270,7 @@ size_t max_serialized_size_px4_msgs__msg__OffboardControlMode(
     current_alignment += array_size * sizeof(uint8_t);
   }
 
-  // Field name: thrust_and_torque
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
-  // Field name: direct_actuator
+  // Field name: actuator
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint8_t);
@@ -312,7 +286,7 @@ size_t max_serialized_size_px4_msgs__msg__OffboardControlMode(
     using DataType = px4_msgs__msg__OffboardControlMode;
     is_plain =
       (
-      offsetof(DataType, direct_actuator) +
+      offsetof(DataType, actuator) +
       last_member_size
       ) == ret_val;
   }
@@ -354,14 +328,9 @@ bool cdr_serialize_key_px4_msgs__msg__OffboardControlMode(
     cdr << (ros_message->body_rate ? true : false);
   }
 
-  // Field name: thrust_and_torque
+  // Field name: actuator
   {
-    cdr << (ros_message->thrust_and_torque ? true : false);
-  }
-
-  // Field name: direct_actuator
-  {
-    cdr << (ros_message->direct_actuator ? true : false);
+    cdr << (ros_message->actuator ? true : false);
   }
 
   return true;
@@ -424,16 +393,9 @@ size_t get_serialized_size_key_px4_msgs__msg__OffboardControlMode(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: thrust_and_torque
+  // Field name: actuator
   {
-    size_t item_size = sizeof(ros_message->thrust_and_torque);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: direct_actuator
-  {
-    size_t item_size = sizeof(ros_message->direct_actuator);
+    size_t item_size = sizeof(ros_message->actuator);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -501,14 +463,7 @@ size_t max_serialized_size_key_px4_msgs__msg__OffboardControlMode(
     current_alignment += array_size * sizeof(uint8_t);
   }
 
-  // Field name: thrust_and_torque
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
-  // Field name: direct_actuator
+  // Field name: actuator
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint8_t);
@@ -523,7 +478,7 @@ size_t max_serialized_size_key_px4_msgs__msg__OffboardControlMode(
     using DataType = px4_msgs__msg__OffboardControlMode;
     is_plain =
       (
-      offsetof(DataType, direct_actuator) +
+      offsetof(DataType, actuator) +
       last_member_size
       ) == ret_val;
   }

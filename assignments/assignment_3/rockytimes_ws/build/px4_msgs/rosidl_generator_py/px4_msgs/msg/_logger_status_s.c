@@ -77,15 +77,6 @@ bool px4_msgs__msg__logger_status__convert_from_py(PyObject * _pymsg, void * _ro
     ros_message->backend = (uint8_t)PyLong_AsUnsignedLong(field);
     Py_DECREF(field);
   }
-  {  // is_logging
-    PyObject * field = PyObject_GetAttrString(_pymsg, "is_logging");
-    if (!field) {
-      return false;
-    }
-    assert(PyBool_Check(field));
-    ros_message->is_logging = (Py_True == field);
-    Py_DECREF(field);
-  }
   {  // total_written_kb
     PyObject * field = PyObject_GetAttrString(_pymsg, "total_written_kb");
     if (!field) {
@@ -198,17 +189,6 @@ PyObject * px4_msgs__msg__logger_status__convert_to_py(void * raw_ros_message)
     field = PyLong_FromUnsignedLong(ros_message->backend);
     {
       int rc = PyObject_SetAttrString(_pymessage, "backend", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // is_logging
-    PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->is_logging ? 1 : 0);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "is_logging", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

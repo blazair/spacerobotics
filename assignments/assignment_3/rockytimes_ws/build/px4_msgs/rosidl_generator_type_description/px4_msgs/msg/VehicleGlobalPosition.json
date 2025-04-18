@@ -64,37 +64,7 @@
           "default_value": ""
         },
         {
-          "name": "lat_lon_valid",
-          "type": {
-            "type_id": 15,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "alt_valid",
-          "type": {
-            "type_id": 15,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
           "name": "delta_alt",
-          "type": {
-            "type_id": 10,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "delta_terrain",
           "type": {
             "type_id": 10,
             "capacity": 0,
@@ -115,16 +85,6 @@
         },
         {
           "name": "alt_reset_counter",
-          "type": {
-            "type_id": 3,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "terrain_reset_counter",
           "type": {
             "type_id": 3,
             "capacity": 0,
@@ -190,7 +150,7 @@
   "type_hashes": [
     {
       "type_name": "px4_msgs/msg/VehicleGlobalPosition",
-      "hash_string": "RIHS01_cf9a06f6a8c328f7200984e3aabc0fb76fde3b1fa693baff68ebaf162d2fdc60"
+      "hash_string": "RIHS01_160a8873f31679f2f1c12b61bda9525d8546ca969f9c536152b47c351c531449"
     }
   ]
 }

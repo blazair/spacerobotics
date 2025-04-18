@@ -69,7 +69,7 @@ px4_msgs__msg__RcChannels__are_equal(const px4_msgs__msg__RcChannels * lhs, cons
     return false;
   }
   // function
-  for (size_t i = 0; i < 29; ++i) {
+  for (size_t i = 0; i < 28; ++i) {
     if (lhs->function[i] != rhs->function[i]) {
       return false;
     }
@@ -108,7 +108,7 @@ px4_msgs__msg__RcChannels__copy(
   // channel_count
   output->channel_count = input->channel_count;
   // function
-  for (size_t i = 0; i < 29; ++i) {
+  for (size_t i = 0; i < 28; ++i) {
     output->function[i] = input->function[i];
   }
   // rssi

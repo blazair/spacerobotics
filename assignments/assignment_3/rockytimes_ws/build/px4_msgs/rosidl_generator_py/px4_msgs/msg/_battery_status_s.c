@@ -80,6 +80,15 @@ bool px4_msgs__msg__battery_status__convert_from_py(PyObject * _pymsg, void * _r
     ros_message->voltage_v = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
+  {  // voltage_filtered_v
+    PyObject * field = PyObject_GetAttrString(_pymsg, "voltage_filtered_v");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->voltage_filtered_v = (float)PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
   {  // current_a
     PyObject * field = PyObject_GetAttrString(_pymsg, "current_a");
     if (!field) {
@@ -87,6 +96,15 @@ bool px4_msgs__msg__battery_status__convert_from_py(PyObject * _pymsg, void * _r
     }
     assert(PyFloat_Check(field));
     ros_message->current_a = (float)PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // current_filtered_a
+    PyObject * field = PyObject_GetAttrString(_pymsg, "current_filtered_a");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->current_filtered_a = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
   {  // current_average_a
@@ -311,6 +329,15 @@ bool px4_msgs__msg__battery_status__convert_from_py(PyObject * _pymsg, void * _r
     ros_message->faults = (uint16_t)PyLong_AsUnsignedLong(field);
     Py_DECREF(field);
   }
+  {  // custom_faults
+    PyObject * field = PyObject_GetAttrString(_pymsg, "custom_faults");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->custom_faults = PyLong_AsUnsignedLong(field);
+    Py_DECREF(field);
+  }
   {  // warning
     PyObject * field = PyObject_GetAttrString(_pymsg, "warning");
     if (!field) {
@@ -318,6 +345,33 @@ bool px4_msgs__msg__battery_status__convert_from_py(PyObject * _pymsg, void * _r
     }
     assert(PyLong_Check(field));
     ros_message->warning = (uint8_t)PyLong_AsUnsignedLong(field);
+    Py_DECREF(field);
+  }
+  {  // mode
+    PyObject * field = PyObject_GetAttrString(_pymsg, "mode");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->mode = (uint8_t)PyLong_AsUnsignedLong(field);
+    Py_DECREF(field);
+  }
+  {  // average_power
+    PyObject * field = PyObject_GetAttrString(_pymsg, "average_power");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->average_power = (float)PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // available_energy
+    PyObject * field = PyObject_GetAttrString(_pymsg, "available_energy");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->available_energy = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
   {  // full_charge_capacity_wh
@@ -338,6 +392,24 @@ bool px4_msgs__msg__battery_status__convert_from_py(PyObject * _pymsg, void * _r
     ros_message->remaining_capacity_wh = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
+  {  // design_capacity
+    PyObject * field = PyObject_GetAttrString(_pymsg, "design_capacity");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->design_capacity = (float)PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // average_time_to_full
+    PyObject * field = PyObject_GetAttrString(_pymsg, "average_time_to_full");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->average_time_to_full = (uint16_t)PyLong_AsUnsignedLong(field);
+    Py_DECREF(field);
+  }
   {  // over_discharge_count
     PyObject * field = PyObject_GetAttrString(_pymsg, "over_discharge_count");
     if (!field) {
@@ -354,69 +426,6 @@ bool px4_msgs__msg__battery_status__convert_from_py(PyObject * _pymsg, void * _r
     }
     assert(PyFloat_Check(field));
     ros_message->nominal_voltage = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
-  {  // internal_resistance_estimate
-    PyObject * field = PyObject_GetAttrString(_pymsg, "internal_resistance_estimate");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->internal_resistance_estimate = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
-  {  // ocv_estimate
-    PyObject * field = PyObject_GetAttrString(_pymsg, "ocv_estimate");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->ocv_estimate = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
-  {  // ocv_estimate_filtered
-    PyObject * field = PyObject_GetAttrString(_pymsg, "ocv_estimate_filtered");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->ocv_estimate_filtered = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
-  {  // volt_based_soc_estimate
-    PyObject * field = PyObject_GetAttrString(_pymsg, "volt_based_soc_estimate");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->volt_based_soc_estimate = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
-  {  // voltage_prediction
-    PyObject * field = PyObject_GetAttrString(_pymsg, "voltage_prediction");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->voltage_prediction = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
-  {  // prediction_error
-    PyObject * field = PyObject_GetAttrString(_pymsg, "prediction_error");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->prediction_error = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
-  {  // estimation_covariance_norm
-    PyObject * field = PyObject_GetAttrString(_pymsg, "estimation_covariance_norm");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->estimation_covariance_norm = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
 
@@ -474,11 +483,33 @@ PyObject * px4_msgs__msg__battery_status__convert_to_py(void * raw_ros_message)
       }
     }
   }
+  {  // voltage_filtered_v
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->voltage_filtered_v);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "voltage_filtered_v", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
   {  // current_a
     PyObject * field = NULL;
     field = PyFloat_FromDouble(ros_message->current_a);
     {
       int rc = PyObject_SetAttrString(_pymessage, "current_a", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // current_filtered_a
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->current_filtered_a);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "current_filtered_a", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
@@ -745,11 +776,55 @@ PyObject * px4_msgs__msg__battery_status__convert_to_py(void * raw_ros_message)
       }
     }
   }
+  {  // custom_faults
+    PyObject * field = NULL;
+    field = PyLong_FromUnsignedLong(ros_message->custom_faults);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "custom_faults", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
   {  // warning
     PyObject * field = NULL;
     field = PyLong_FromUnsignedLong(ros_message->warning);
     {
       int rc = PyObject_SetAttrString(_pymessage, "warning", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // mode
+    PyObject * field = NULL;
+    field = PyLong_FromUnsignedLong(ros_message->mode);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "mode", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // average_power
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->average_power);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "average_power", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // available_energy
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->available_energy);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "available_energy", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
@@ -778,6 +853,28 @@ PyObject * px4_msgs__msg__battery_status__convert_to_py(void * raw_ros_message)
       }
     }
   }
+  {  // design_capacity
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->design_capacity);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "design_capacity", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // average_time_to_full
+    PyObject * field = NULL;
+    field = PyLong_FromUnsignedLong(ros_message->average_time_to_full);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "average_time_to_full", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
   {  // over_discharge_count
     PyObject * field = NULL;
     field = PyLong_FromUnsignedLong(ros_message->over_discharge_count);
@@ -794,83 +891,6 @@ PyObject * px4_msgs__msg__battery_status__convert_to_py(void * raw_ros_message)
     field = PyFloat_FromDouble(ros_message->nominal_voltage);
     {
       int rc = PyObject_SetAttrString(_pymessage, "nominal_voltage", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // internal_resistance_estimate
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->internal_resistance_estimate);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "internal_resistance_estimate", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // ocv_estimate
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->ocv_estimate);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "ocv_estimate", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // ocv_estimate_filtered
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->ocv_estimate_filtered);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "ocv_estimate_filtered", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // volt_based_soc_estimate
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->volt_based_soc_estimate);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "volt_based_soc_estimate", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // voltage_prediction
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->voltage_prediction);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "voltage_prediction", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // prediction_error
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->prediction_error);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "prediction_error", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // estimation_covariance_norm
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->estimation_covariance_norm);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "estimation_covariance_norm", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

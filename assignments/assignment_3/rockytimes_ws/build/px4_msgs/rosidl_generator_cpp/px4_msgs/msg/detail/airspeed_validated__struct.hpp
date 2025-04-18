@@ -49,9 +49,6 @@ struct AirspeedValidated_
       this->true_ground_minus_wind_m_s = 0.0f;
       this->airspeed_sensor_measurement_valid = false;
       this->selected_airspeed_index = 0;
-      this->airspeed_derivative_filtered = 0.0f;
-      this->throttle_filtered = 0.0f;
-      this->pitch_filtered = 0.0f;
     }
   }
 
@@ -69,9 +66,6 @@ struct AirspeedValidated_
       this->true_ground_minus_wind_m_s = 0.0f;
       this->airspeed_sensor_measurement_valid = false;
       this->selected_airspeed_index = 0;
-      this->airspeed_derivative_filtered = 0.0f;
-      this->throttle_filtered = 0.0f;
-      this->pitch_filtered = 0.0f;
     }
   }
 
@@ -100,15 +94,6 @@ struct AirspeedValidated_
   using _selected_airspeed_index_type =
     int8_t;
   _selected_airspeed_index_type selected_airspeed_index;
-  using _airspeed_derivative_filtered_type =
-    float;
-  _airspeed_derivative_filtered_type airspeed_derivative_filtered;
-  using _throttle_filtered_type =
-    float;
-  _throttle_filtered_type throttle_filtered;
-  using _pitch_filtered_type =
-    float;
-  _pitch_filtered_type pitch_filtered;
 
   // setters for named parameter idiom
   Type & set__timestamp(
@@ -157,24 +142,6 @@ struct AirspeedValidated_
     const int8_t & _arg)
   {
     this->selected_airspeed_index = _arg;
-    return *this;
-  }
-  Type & set__airspeed_derivative_filtered(
-    const float & _arg)
-  {
-    this->airspeed_derivative_filtered = _arg;
-    return *this;
-  }
-  Type & set__throttle_filtered(
-    const float & _arg)
-  {
-    this->throttle_filtered = _arg;
-    return *this;
-  }
-  Type & set__pitch_filtered(
-    const float & _arg)
-  {
-    this->pitch_filtered = _arg;
     return *this;
   }
 
@@ -242,15 +209,6 @@ struct AirspeedValidated_
       return false;
     }
     if (this->selected_airspeed_index != other.selected_airspeed_index) {
-      return false;
-    }
-    if (this->airspeed_derivative_filtered != other.airspeed_derivative_filtered) {
-      return false;
-    }
-    if (this->throttle_filtered != other.throttle_filtered) {
-      return false;
-    }
-    if (this->pitch_filtered != other.pitch_filtered) {
       return false;
     }
     return true;

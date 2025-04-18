@@ -11,10 +11,10 @@ px4_msgs__msg__HomePosition__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x2f, 0xf6, 0xc5, 0x12, 0x49, 0x70, 0x3d, 0xa1,
-      0x8b, 0xa1, 0xbf, 0x5d, 0x64, 0xa8, 0xc4, 0x6c,
-      0x0d, 0xcc, 0x52, 0x19, 0x29, 0x0c, 0x4a, 0x5a,
-      0xb6, 0xb0, 0xbc, 0x1a, 0xe5, 0xd0, 0x0b, 0x34,
+      0x18, 0x30, 0x3f, 0x17, 0x31, 0x57, 0x1e, 0x00,
+      0xa1, 0xd9, 0x3b, 0x07, 0xba, 0x5b, 0xca, 0x9e,
+      0x6d, 0xcf, 0x2a, 0xad, 0x98, 0x9f, 0xf6, 0x6c,
+      0x45, 0x50, 0x45, 0x6c, 0x42, 0xba, 0x3c, 0x20,
     }};
   return &hash;
 }
@@ -43,7 +43,6 @@ static char px4_msgs__msg__HomePosition__FIELD_NAME__valid_alt[] = "valid_alt";
 static char px4_msgs__msg__HomePosition__FIELD_NAME__valid_hpos[] = "valid_hpos";
 static char px4_msgs__msg__HomePosition__FIELD_NAME__valid_lpos[] = "valid_lpos";
 static char px4_msgs__msg__HomePosition__FIELD_NAME__manual_home[] = "manual_home";
-static char px4_msgs__msg__HomePosition__FIELD_NAME__update_count[] = "update_count";
 
 static rosidl_runtime_c__type_description__Field px4_msgs__msg__HomePosition__FIELDS[] = {
   {
@@ -166,16 +165,6 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__HomePosition__FI
     },
     {NULL, 0, 0},
   },
-  {
-    {px4_msgs__msg__HomePosition__FIELD_NAME__update_count, 12, 12},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT32,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
 };
 
 const rosidl_runtime_c__type_description__TypeDescription *
@@ -187,7 +176,7 @@ px4_msgs__msg__HomePosition__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {px4_msgs__msg__HomePosition__TYPE_NAME, 25, 25},
-      {px4_msgs__msg__HomePosition__FIELDS, 13, 13},
+      {px4_msgs__msg__HomePosition__FIELDS, 12, 12},
     },
     {NULL, 0, 0},
   };
@@ -199,8 +188,6 @@ px4_msgs__msg__HomePosition__get_type_description(
 
 static char toplevel_type_raw_source[] =
   "# GPS home position in WGS84 coordinates.\n"
-  "\n"
-  "uint32 MESSAGE_VERSION = 0\n"
   "\n"
   "uint64 timestamp\\t\\t\\t# time since system start (microseconds)\n"
   "\n"
@@ -218,9 +205,7 @@ static char toplevel_type_raw_source[] =
   "bool valid_hpos\\t\\t# true when the latitude and longitude have been set\n"
   "bool valid_lpos\\t\\t# true when the local position (xyz) has been set\n"
   "\n"
-  "bool manual_home\\t# true when home position was set manually\n"
-  "\n"
-  "uint32 update_count \\t# update counter of the home position";
+  "bool manual_home\\t# true when home position was set manually";
 
 static char msg_encoding[] = "msg";
 
@@ -234,7 +219,7 @@ px4_msgs__msg__HomePosition__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__HomePosition__TYPE_NAME, 25, 25},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 717, 717},
+    {toplevel_type_raw_source, 629, 629},
   };
   return &source;
 }

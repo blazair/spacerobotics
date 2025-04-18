@@ -20,7 +20,6 @@ px4_msgs__msg__TecsStatus__init(px4_msgs__msg__TecsStatus * msg)
   // timestamp
   // altitude_sp
   // altitude_reference
-  // altitude_time_constant
   // height_rate_reference
   // height_rate_direct
   // height_rate_setpoint
@@ -40,8 +39,7 @@ px4_msgs__msg__TecsStatus__init(px4_msgs__msg__TecsStatus * msg)
   // throttle_sp
   // pitch_sp_rad
   // throttle_trim
-  // underspeed_ratio
-  // fast_descend_ratio
+  // mode
   return true;
 }
 
@@ -54,7 +52,6 @@ px4_msgs__msg__TecsStatus__fini(px4_msgs__msg__TecsStatus * msg)
   // timestamp
   // altitude_sp
   // altitude_reference
-  // altitude_time_constant
   // height_rate_reference
   // height_rate_direct
   // height_rate_setpoint
@@ -74,8 +71,7 @@ px4_msgs__msg__TecsStatus__fini(px4_msgs__msg__TecsStatus * msg)
   // throttle_sp
   // pitch_sp_rad
   // throttle_trim
-  // underspeed_ratio
-  // fast_descend_ratio
+  // mode
 }
 
 bool
@@ -94,10 +90,6 @@ px4_msgs__msg__TecsStatus__are_equal(const px4_msgs__msg__TecsStatus * lhs, cons
   }
   // altitude_reference
   if (lhs->altitude_reference != rhs->altitude_reference) {
-    return false;
-  }
-  // altitude_time_constant
-  if (lhs->altitude_time_constant != rhs->altitude_time_constant) {
     return false;
   }
   // height_rate_reference
@@ -176,12 +168,8 @@ px4_msgs__msg__TecsStatus__are_equal(const px4_msgs__msg__TecsStatus * lhs, cons
   if (lhs->throttle_trim != rhs->throttle_trim) {
     return false;
   }
-  // underspeed_ratio
-  if (lhs->underspeed_ratio != rhs->underspeed_ratio) {
-    return false;
-  }
-  // fast_descend_ratio
-  if (lhs->fast_descend_ratio != rhs->fast_descend_ratio) {
+  // mode
+  if (lhs->mode != rhs->mode) {
     return false;
   }
   return true;
@@ -201,8 +189,6 @@ px4_msgs__msg__TecsStatus__copy(
   output->altitude_sp = input->altitude_sp;
   // altitude_reference
   output->altitude_reference = input->altitude_reference;
-  // altitude_time_constant
-  output->altitude_time_constant = input->altitude_time_constant;
   // height_rate_reference
   output->height_rate_reference = input->height_rate_reference;
   // height_rate_direct
@@ -241,10 +227,8 @@ px4_msgs__msg__TecsStatus__copy(
   output->pitch_sp_rad = input->pitch_sp_rad;
   // throttle_trim
   output->throttle_trim = input->throttle_trim;
-  // underspeed_ratio
-  output->underspeed_ratio = input->underspeed_ratio;
-  // fast_descend_ratio
-  output->fast_descend_ratio = input->fast_descend_ratio;
+  // mode
+  output->mode = input->mode;
   return true;
 }
 

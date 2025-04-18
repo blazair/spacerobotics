@@ -79,7 +79,6 @@ class NpfgStatus(metaclass=Metaclass_NpfgStatus):
         '_adapted_period',
         '_p_gain',
         '_time_const',
-        '_can_run_factor',
         '_check_fields',
     ]
 
@@ -99,7 +98,6 @@ class NpfgStatus(metaclass=Metaclass_NpfgStatus):
         'adapted_period': 'float',
         'p_gain': 'float',
         'time_const': 'float',
-        'can_run_factor': 'float',
     }
 
     # This attribute is used to store an rosidl_parser.definition variable
@@ -107,7 +105,6 @@ class NpfgStatus(metaclass=Metaclass_NpfgStatus):
     SLOT_TYPES = (
         rosidl_parser.definition.BasicType('uint64'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
-        rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
@@ -147,7 +144,6 @@ class NpfgStatus(metaclass=Metaclass_NpfgStatus):
         self.adapted_period = kwargs.get('adapted_period', float())
         self.p_gain = kwargs.get('p_gain', float())
         self.time_const = kwargs.get('time_const', float())
-        self.can_run_factor = kwargs.get('can_run_factor', float())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -208,8 +204,6 @@ class NpfgStatus(metaclass=Metaclass_NpfgStatus):
         if self.p_gain != other.p_gain:
             return False
         if self.time_const != other.time_const:
-            return False
-        if self.can_run_factor != other.can_run_factor:
             return False
         return True
 
@@ -442,18 +436,3 @@ class NpfgStatus(metaclass=Metaclass_NpfgStatus):
             assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
                 "The 'time_const' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
         self._time_const = value
-
-    @builtins.property
-    def can_run_factor(self):
-        """Message field 'can_run_factor'."""
-        return self._can_run_factor
-
-    @can_run_factor.setter
-    def can_run_factor(self, value):
-        if self._check_fields:
-            assert \
-                isinstance(value, float), \
-                "The 'can_run_factor' field must be of type 'float'"
-            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'can_run_factor' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
-        self._can_run_factor = value

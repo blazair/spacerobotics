@@ -47,13 +47,9 @@ struct VehicleGlobalPosition_
       this->lon = 0.0;
       this->alt = 0.0f;
       this->alt_ellipsoid = 0.0f;
-      this->lat_lon_valid = false;
-      this->alt_valid = false;
       this->delta_alt = 0.0f;
-      this->delta_terrain = 0.0f;
       this->lat_lon_reset_counter = 0;
       this->alt_reset_counter = 0;
-      this->terrain_reset_counter = 0;
       this->eph = 0.0f;
       this->epv = 0.0f;
       this->terrain_alt = 0.0f;
@@ -74,13 +70,9 @@ struct VehicleGlobalPosition_
       this->lon = 0.0;
       this->alt = 0.0f;
       this->alt_ellipsoid = 0.0f;
-      this->lat_lon_valid = false;
-      this->alt_valid = false;
       this->delta_alt = 0.0f;
-      this->delta_terrain = 0.0f;
       this->lat_lon_reset_counter = 0;
       this->alt_reset_counter = 0;
-      this->terrain_reset_counter = 0;
       this->eph = 0.0f;
       this->epv = 0.0f;
       this->terrain_alt = 0.0f;
@@ -108,27 +100,15 @@ struct VehicleGlobalPosition_
   using _alt_ellipsoid_type =
     float;
   _alt_ellipsoid_type alt_ellipsoid;
-  using _lat_lon_valid_type =
-    bool;
-  _lat_lon_valid_type lat_lon_valid;
-  using _alt_valid_type =
-    bool;
-  _alt_valid_type alt_valid;
   using _delta_alt_type =
     float;
   _delta_alt_type delta_alt;
-  using _delta_terrain_type =
-    float;
-  _delta_terrain_type delta_terrain;
   using _lat_lon_reset_counter_type =
     uint8_t;
   _lat_lon_reset_counter_type lat_lon_reset_counter;
   using _alt_reset_counter_type =
     uint8_t;
   _alt_reset_counter_type alt_reset_counter;
-  using _terrain_reset_counter_type =
-    uint8_t;
-  _terrain_reset_counter_type terrain_reset_counter;
   using _eph_type =
     float;
   _eph_type eph;
@@ -182,28 +162,10 @@ struct VehicleGlobalPosition_
     this->alt_ellipsoid = _arg;
     return *this;
   }
-  Type & set__lat_lon_valid(
-    const bool & _arg)
-  {
-    this->lat_lon_valid = _arg;
-    return *this;
-  }
-  Type & set__alt_valid(
-    const bool & _arg)
-  {
-    this->alt_valid = _arg;
-    return *this;
-  }
   Type & set__delta_alt(
     const float & _arg)
   {
     this->delta_alt = _arg;
-    return *this;
-  }
-  Type & set__delta_terrain(
-    const float & _arg)
-  {
-    this->delta_terrain = _arg;
     return *this;
   }
   Type & set__lat_lon_reset_counter(
@@ -216,12 +178,6 @@ struct VehicleGlobalPosition_
     const uint8_t & _arg)
   {
     this->alt_reset_counter = _arg;
-    return *this;
-  }
-  Type & set__terrain_reset_counter(
-    const uint8_t & _arg)
-  {
-    this->terrain_reset_counter = _arg;
     return *this;
   }
   Type & set__eph(
@@ -256,8 +212,6 @@ struct VehicleGlobalPosition_
   }
 
   // constant declarations
-  static constexpr uint32_t MESSAGE_VERSION =
-    0u;
 
   // pointer types
   using RawPtr =
@@ -317,25 +271,13 @@ struct VehicleGlobalPosition_
     if (this->alt_ellipsoid != other.alt_ellipsoid) {
       return false;
     }
-    if (this->lat_lon_valid != other.lat_lon_valid) {
-      return false;
-    }
-    if (this->alt_valid != other.alt_valid) {
-      return false;
-    }
     if (this->delta_alt != other.delta_alt) {
-      return false;
-    }
-    if (this->delta_terrain != other.delta_terrain) {
       return false;
     }
     if (this->lat_lon_reset_counter != other.lat_lon_reset_counter) {
       return false;
     }
     if (this->alt_reset_counter != other.alt_reset_counter) {
-      return false;
-    }
-    if (this->terrain_reset_counter != other.terrain_reset_counter) {
       return false;
     }
     if (this->eph != other.eph) {
@@ -366,11 +308,6 @@ using VehicleGlobalPosition =
   px4_msgs::msg::VehicleGlobalPosition_<std::allocator<void>>;
 
 // constant definitions
-#if __cplusplus < 201703L
-// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
-template<typename ContainerAllocator>
-constexpr uint32_t VehicleGlobalPosition_<ContainerAllocator>::MESSAGE_VERSION;
-#endif  // __cplusplus < 201703L
 
 }  // namespace msg
 

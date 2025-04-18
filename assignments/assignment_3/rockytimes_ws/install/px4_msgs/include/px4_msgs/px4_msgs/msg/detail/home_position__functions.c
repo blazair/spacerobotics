@@ -29,7 +29,6 @@ px4_msgs__msg__HomePosition__init(px4_msgs__msg__HomePosition * msg)
   // valid_hpos
   // valid_lpos
   // manual_home
-  // update_count
   return true;
 }
 
@@ -51,7 +50,6 @@ px4_msgs__msg__HomePosition__fini(px4_msgs__msg__HomePosition * msg)
   // valid_hpos
   // valid_lpos
   // manual_home
-  // update_count
 }
 
 bool
@@ -108,10 +106,6 @@ px4_msgs__msg__HomePosition__are_equal(const px4_msgs__msg__HomePosition * lhs, 
   if (lhs->manual_home != rhs->manual_home) {
     return false;
   }
-  // update_count
-  if (lhs->update_count != rhs->update_count) {
-    return false;
-  }
   return true;
 }
 
@@ -147,8 +141,6 @@ px4_msgs__msg__HomePosition__copy(
   output->valid_lpos = input->valid_lpos;
   // manual_home
   output->manual_home = input->manual_home;
-  // update_count
-  output->update_count = input->update_count;
   return true;
 }
 

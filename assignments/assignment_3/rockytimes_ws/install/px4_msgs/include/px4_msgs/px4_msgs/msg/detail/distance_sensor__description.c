@@ -11,10 +11,10 @@ px4_msgs__msg__DistanceSensor__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0xa8, 0x45, 0x7d, 0x64, 0x9d, 0xbc, 0xc7, 0x26,
-      0xdc, 0xe2, 0x55, 0x8c, 0xf8, 0xa5, 0x73, 0x2d,
-      0xc0, 0xb7, 0x4d, 0x51, 0x8b, 0xdb, 0x5e, 0x89,
-      0x24, 0x8c, 0x0c, 0x51, 0x5e, 0x8f, 0x80, 0xf5,
+      0x68, 0xfd, 0xa9, 0xf7, 0xcb, 0xef, 0x94, 0x79,
+      0xd4, 0xbf, 0x17, 0x00, 0x8c, 0xb2, 0x6b, 0xf5,
+      0xfa, 0x36, 0x92, 0x61, 0xeb, 0x0f, 0x41, 0xb6,
+      0x2e, 0xdd, 0x06, 0xb8, 0x00, 0x8b, 0xea, 0x62,
     }};
   return &hash;
 }
@@ -43,7 +43,6 @@ static char px4_msgs__msg__DistanceSensor__FIELD_NAME__h_fov[] = "h_fov";
 static char px4_msgs__msg__DistanceSensor__FIELD_NAME__v_fov[] = "v_fov";
 static char px4_msgs__msg__DistanceSensor__FIELD_NAME__q[] = "q";
 static char px4_msgs__msg__DistanceSensor__FIELD_NAME__orientation[] = "orientation";
-static char px4_msgs__msg__DistanceSensor__FIELD_NAME__mode[] = "mode";
 
 static rosidl_runtime_c__type_description__Field px4_msgs__msg__DistanceSensor__FIELDS[] = {
   {
@@ -166,16 +165,6 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__DistanceSensor__
     },
     {NULL, 0, 0},
   },
-  {
-    {px4_msgs__msg__DistanceSensor__FIELD_NAME__mode, 4, 4},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT8,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
 };
 
 const rosidl_runtime_c__type_description__TypeDescription *
@@ -187,7 +176,7 @@ px4_msgs__msg__DistanceSensor__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {px4_msgs__msg__DistanceSensor__TYPE_NAME, 27, 27},
-      {px4_msgs__msg__DistanceSensor__FIELDS, 13, 13},
+      {px4_msgs__msg__DistanceSensor__FIELDS, 12, 12},
     },
     {NULL, 0, 0},
   };
@@ -239,12 +228,7 @@ static char toplevel_type_raw_source[] =
   "uint8 ROTATION_UPWARD_FACING   = 24 # MAV_SENSOR_ROTATION_PITCH_90\n"
   "uint8 ROTATION_DOWNWARD_FACING = 25 # MAV_SENSOR_ROTATION_PITCH_270\n"
   "\n"
-  "uint8 ROTATION_CUSTOM          = 100 # MAV_SENSOR_ROTATION_CUSTOM\n"
-  "\n"
-  "uint8 mode\n"
-  "uint8 MODE_UNKNOWN  = 0\n"
-  "uint8 MODE_ENABLED  = 1\n"
-  "uint8 MODE_DISABLED = 2";
+  "uint8 ROTATION_CUSTOM          = 100 # MAV_SENSOR_ROTATION_CUSTOM";
 
 static char msg_encoding[] = "msg";
 
@@ -258,7 +242,7 @@ px4_msgs__msg__DistanceSensor__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__DistanceSensor__TYPE_NAME, 27, 27},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 2124, 2124},
+    {toplevel_type_raw_source, 2040, 2040},
   };
   return &source;
 }

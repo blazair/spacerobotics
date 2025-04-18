@@ -11,10 +11,10 @@ px4_msgs__msg__VehicleCommand__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x1f, 0x0a, 0xb5, 0x37, 0x80, 0x7e, 0x2e, 0x20,
-      0xe0, 0x48, 0x26, 0x63, 0x3e, 0xa2, 0xc5, 0x2e,
-      0x54, 0x31, 0xbe, 0xa8, 0xeb, 0x01, 0x87, 0x15,
-      0x2f, 0xf2, 0x3b, 0xd0, 0x7f, 0x1d, 0xd3, 0x0b,
+      0x71, 0x1e, 0x7b, 0xae, 0xa8, 0x74, 0xc9, 0xae,
+      0xa7, 0xa5, 0x77, 0xee, 0xed, 0x55, 0xc8, 0xce,
+      0xde, 0x01, 0x97, 0x10, 0x1c, 0xa2, 0x4e, 0x94,
+      0xa0, 0x0a, 0x7b, 0xbc, 0x5e, 0x7e, 0x78, 0x15,
     }};
   return &hash;
 }
@@ -171,7 +171,7 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__VehicleCommand__
   {
     {px4_msgs__msg__VehicleCommand__FIELD_NAME__source_component, 16, 16},
     {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT16,
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT8,
       0,
       0,
       {NULL, 0, 0},
@@ -223,8 +223,6 @@ static char toplevel_type_raw_source[] =
   "# Vehicle Command uORB message. Used for commanding a mission / action / etc.\n"
   "# Follows the MAVLink COMMAND_INT / COMMAND_LONG definition\n"
   "\n"
-  "uint32 MESSAGE_VERSION = 0\n"
-  "\n"
   "uint64 timestamp\\t\\t\\t\\t\\t# time since system start (microseconds)\n"
   "\n"
   "uint16 VEHICLE_CMD_CUSTOM_0 = 0\\t\\t\\t\\t# test command\n"
@@ -239,7 +237,6 @@ static char toplevel_type_raw_source[] =
   "uint16 VEHICLE_CMD_NAV_TAKEOFF = 22\\t\\t\\t# Takeoff from ground / hand |Minimum pitch (if airspeed sensor present), desired pitch without sensor| Empty| Empty| Yaw angle (if magnetometer present), ignored without magnetometer| Latitude| Longitude| Altitude|\n"
   "uint16 VEHICLE_CMD_NAV_PRECLAND = 23\\t\\t\\t# Attempt a precision landing\n"
   "uint16 VEHICLE_CMD_DO_ORBIT = 34\\t\\t\\t# Start orbiting on the circumference of a circle defined by the parameters. |Radius [m] |Velocity [m/s] |Yaw behaviour |Empty |Latitude/X |Longitude/Y |Altitude/Z |\n"
-  "uint16 VEHICLE_CMD_DO_FIGUREEIGHT = 35        \\t\\t# Start flying on the outline of a figure eight defined by the parameters. |Major Radius [m] |Minor Radius [m] |Velocity [m/s] |Orientation |Latitude/X |Longitude/Y |Altitude/Z |\n"
   "uint16 VEHICLE_CMD_NAV_ROI = 80\\t\\t\\t\\t# Sets the region of interest (ROI) for a sensor set or the vehicle itself. This can then be used by the vehicles control system to control the vehicle attitude and the attitude of various sensors such as cameras. |Region of interest mode. (see MAV_ROI enum)| MISSION index/ target ID. (see MAV_ROI enum)| ROI index (allows a vehicle to manage multiple ROI's)| Empty| x the location of the fixed ROI (see MAV_FRAME)| y| z|\n"
   "uint16 VEHICLE_CMD_NAV_PATHPLANNING = 81\\t\\t# Control autonomous path planning on the MAV. |0: Disable local obstacle avoidance / local path planning (without resetting map), 1: Enable local path planning, 2: Enable and reset local path planning| 0: Disable full path planning (without resetting map), 1: Enable, 2: Enable and reset map/occupancy grid, 3: Enable and reset planned route, but not occupancy grid| Empty| Yaw angle at goal, in compass degrees, [0..360]| Latitude/X of goal| Longitude/Y of goal| Altitude/Z of goal|\n"
   "uint16 VEHICLE_CMD_NAV_VTOL_TAKEOFF = 84\\t\\t# Takeoff from ground / hand and transition to fixed wing |Minimum pitch (if airspeed sensor present), desired pitch without sensor| Empty| Empty| Yaw angle (if magnetometer present), ignored without magnetometer| Latitude| Longitude| Altitude|\n"
@@ -267,7 +264,7 @@ static char toplevel_type_raw_source[] =
   "uint16 VEHICLE_CMD_DO_SET_ACTUATOR = 187\\t\\t# Sets actuators (e.g. servos) to a desired value. |Actuator 1| Actuator 2| Actuator 3| Actuator 4| Actuator 5| Actuator 6| Index|\n"
   "uint16 VEHICLE_CMD_DO_LAND_START = 189\\t\\t\\t# Mission command to perform a landing. This is used as a marker in a mission to tell the autopilot where a sequence of mission items that represents a landing starts. It may also be sent via a COMMAND_LONG to trigger a landing, in which case the nearest (geographically) landing sequence in the mission will be used. The Latitude/Longitude is optional, and may be set to 0/0 if not needed. If specified then it will be used to help find the closest landing sequence. |Empty| Empty| Empty| Empty| Latitude| Longitude| Empty|\n"
   "uint16 VEHICLE_CMD_DO_GO_AROUND = 191\\t\\t\\t# Mission command to safely abort an autonomous landing. |Altitude (meters)| Empty| Empty| Empty| Empty| Empty| Empty|\n"
-  "uint16 VEHICLE_CMD_DO_REPOSITION = 192\\t\\t\\t# Reposition to specific WGS84 GPS position. |Ground speed [m/s] |Bitmask |Loiter radius [m] for planes |Yaw\\t[deg] |Latitude\\t|Longitude |Altitude |\n"
+  "uint16 VEHICLE_CMD_DO_REPOSITION = 192\n"
   "uint16 VEHICLE_CMD_DO_PAUSE_CONTINUE = 193\n"
   "uint16 VEHICLE_CMD_DO_SET_ROI_LOCATION = 195\\t\\t# Sets the region of interest (ROI) to a location. This can then be used by the vehicles control system to control the vehicle attitude and the attitude of various sensors such as cameras. |Empty| Empty| Empty| Empty| Latitude| Longitude| Altitude|\n"
   "uint16 VEHICLE_CMD_DO_SET_ROI_WPNEXT_OFFSET = 196 \\t# Sets the region of interest (ROI) to be toward next waypoint, with optional pitch/roll/yaw offset. This can then be used by the vehicles control system to control the vehicle attitude and the attitude of various sensors such as cameras. |Empty| Empty| Empty| Empty| pitch offset from next waypoint| roll offset from next waypoint| yaw offset from next waypoint|\n"
@@ -295,7 +292,6 @@ static char toplevel_type_raw_source[] =
   "uint16 VEHICLE_CMD_PREFLIGHT_STORAGE = 245\\t\\t# Request storage of different parameter values and logs. This command will be only accepted if in pre-flight mode. |Parameter storage: 0: READ FROM FLASH/EEPROM, 1: WRITE CURRENT TO FLASH/EEPROM| Mission storage: 0: READ FROM FLASH/EEPROM, 1: WRITE CURRENT TO FLASH/EEPROM| Reserved| Reserved| Empty| Empty| Empty|\n"
   "uint16 VEHICLE_CMD_PREFLIGHT_REBOOT_SHUTDOWN = 246\\t# Request the reboot or shutdown of system components. |0: Do nothing for autopilot, 1: Reboot autopilot, 2: Shutdown autopilot.| 0: Do nothing for onboard computer, 1: Reboot onboard computer, 2: Shutdown onboard computer.| Reserved| Reserved| Empty| Empty| Empty|\n"
   "uint16 VEHICLE_CMD_OBLIQUE_SURVEY=260\\t\\t\\t# Mission command to set a Camera Auto Mount Pivoting Oblique Survey for this flight|Camera trigger distance (meters)| Shutter integration time (ms)| Camera minimum trigger interval| Number of positions| Roll| Pitch| Empty|\n"
-  "uint16 VEHICLE_CMD_DO_SET_STANDARD_MODE=262\\t\\t# Enable the specified standard MAVLink mode |MAV_STANDARD_MODE|\n"
   "uint16 VEHICLE_CMD_GIMBAL_DEVICE_INFORMATION = 283\\t# Command to ask information about a low level gimbal\n"
   "\n"
   "uint16 VEHICLE_CMD_MISSION_START = 300\\t\\t\\t# start running a mission |first_item: the first mission item to run| last_item:  the last mission item to run (after this item is run, the mission ends)|\n"
@@ -306,7 +302,6 @@ static char toplevel_type_raw_source[] =
   "uint16 VEHICLE_CMD_INJECT_FAILURE = 420\\t\\t\\t# Inject artificial failure for testing purposes\n"
   "uint16 VEHICLE_CMD_START_RX_PAIR = 500\\t\\t\\t# Starts receiver pairing |0:Spektrum| 0:Spektrum DSM2, 1:Spektrum DSMX|\n"
   "uint16 VEHICLE_CMD_REQUEST_MESSAGE = 512    \\t\\t# Request to send a single instance of the specified message\n"
-  "uint16 VEHICLE_CMD_REQUEST_CAMERA_INFORMATION = 521     # Request camera information (CAMERA_INFORMATION). |0: No action 1: Request camera capabilities| Reserved (all remaining params)| Reserved (default:0)| Reserved (default:0)| Reserved (default:0)| Reserved (default:0)| Reserved (default:0)|\n"
   "uint16 VEHICLE_CMD_SET_CAMERA_MODE = 530\\t\\t# Set camera capture mode (photo, video, etc.)\n"
   "uint16 VEHICLE_CMD_SET_CAMERA_ZOOM = 531\\t\\t# Set camera zoom\n"
   "uint16 VEHICLE_CMD_SET_CAMERA_FOCUS = 532\n"
@@ -326,13 +321,9 @@ static char toplevel_type_raw_source[] =
   "uint16 VEHICLE_CMD_FIXED_MAG_CAL_YAW = 42006            # Magnetometer calibration based on provided known yaw. This allows for fast calibration using WMM field tables in the vehicle, given only the known yaw of the vehicle. If Latitude and longitude are both zero then use the current vehicle location.\n"
   "uint16 VEHICLE_CMD_DO_WINCH = 42600\\t\\t\\t# Command to operate winch.\n"
   "\n"
-  "uint16 VEHICLE_CMD_EXTERNAL_POSITION_ESTIMATE = 43003 # external reset of estimator global position when deadreckoning\n"
-  "uint16 VEHICLE_CMD_EXTERNAL_WIND_ESTIMATE = 43004\n"
-  "\n"
   "# PX4 vehicle commands (beyond 16 bit mavlink commands)\n"
   "uint32 VEHICLE_CMD_PX4_INTERNAL_START    = 65537        # start of PX4 internal only vehicle commands (> UINT16_MAX)\n"
   "uint32 VEHICLE_CMD_SET_GPS_GLOBAL_ORIGIN = 100000       # Sets the GPS coordinates of the vehicle local origin (0,0,0) position. |Empty|Empty|Empty|Empty|Latitude|Longitude|Altitude|\n"
-  "uint32 VEHICLE_CMD_SET_NAV_STATE = 100001               # Change mode by specifying nav_state directly. |nav_state|Empty|Empty|Empty|Empty|Empty|Empty|\n"
   "\n"
   "uint8 VEHICLE_MOUNT_MODE_RETRACT = 0\\t\\t\\t# Load and keep safe position (Roll,Pitch,Yaw) from permanent memory and stop stabilization |\n"
   "uint8 VEHICLE_MOUNT_MODE_NEUTRAL = 1\\t\\t\\t# Load and keep neutral position (Roll,Pitch,Yaw) from permanent memory. |\n"
@@ -383,14 +374,6 @@ static char toplevel_type_raw_source[] =
   "uint8 SPEED_TYPE_CLIMB_SPEED = 2\n"
   "uint8 SPEED_TYPE_DESCEND_SPEED = 3\n"
   "\n"
-  "# used as param3 in CMD_DO_ORBIT\n"
-  "uint8 ORBIT_YAW_BEHAVIOUR_HOLD_FRONT_TO_CIRCLE_CENTER = 0\n"
-  "uint8 ORBIT_YAW_BEHAVIOUR_HOLD_INITIAL_HEADING = 1\n"
-  "uint8 ORBIT_YAW_BEHAVIOUR_UNCONTROLLED = 2\n"
-  "uint8 ORBIT_YAW_BEHAVIOUR_HOLD_FRONT_TANGENT_TO_CIRCLE = 3\n"
-  "uint8 ORBIT_YAW_BEHAVIOUR_RC_CONTROLLED = 4\n"
-  "uint8 ORBIT_YAW_BEHAVIOUR_UNCHANGED = 5\n"
-  "\n"
   "# used as param1 in ARM_DISARM command\n"
   "int8 ARMING_ACTION_DISARM = 0\n"
   "int8 ARMING_ACTION_ARM = 1\n"
@@ -412,13 +395,11 @@ static char toplevel_type_raw_source[] =
   "uint8 target_system\\t\\t# System which should execute the command\n"
   "uint8 target_component\\t\\t# Component which should execute the command, 0 for all components\n"
   "uint8 source_system\\t\\t# System sending the command\n"
-  "uint16 source_component\\t# Component / mode executor sending the command\n"
+  "uint8 source_component\\t\\t# Component sending the command\n"
   "uint8 confirmation\\t\\t# 0: First transmission of this command. 1-255: Confirmation transmissions (e.g. for kill command)\n"
   "bool from_external\n"
   "\n"
-  "uint16 COMPONENT_MODE_EXECUTOR_START = 1000\n"
-  "\n"
-  "# TOPICS vehicle_command gimbal_v1_command vehicle_command_mode_executor";
+  "# TOPICS vehicle_command gimbal_v1_command";
 
 static char msg_encoding[] = "msg";
 
@@ -432,7 +413,7 @@ px4_msgs__msg__VehicleCommand__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__VehicleCommand__TYPE_NAME, 27, 27},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 24728, 24728},
+    {toplevel_type_raw_source, 23175, 23175},
   };
   return &source;
 }

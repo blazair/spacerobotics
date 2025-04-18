@@ -129,9 +129,9 @@ bool cdr_serialize_px4_msgs__msg__GimbalDeviceInformation(
     cdr << ros_message->yaw_max;
   }
 
-  // Field name: gimbal_device_id
+  // Field name: gimbal_device_compid
   {
-    cdr << ros_message->gimbal_device_id;
+    cdr << ros_message->gimbal_device_compid;
   }
 
   return true;
@@ -223,9 +223,9 @@ bool cdr_deserialize_px4_msgs__msg__GimbalDeviceInformation(
     cdr >> ros_message->yaw_max;
   }
 
-  // Field name: gimbal_device_id
+  // Field name: gimbal_device_compid
   {
-    cdr >> ros_message->gimbal_device_id;
+    cdr >> ros_message->gimbal_device_compid;
   }
 
   return true;
@@ -360,9 +360,9 @@ size_t get_serialized_size_px4_msgs__msg__GimbalDeviceInformation(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: gimbal_device_id
+  // Field name: gimbal_device_compid
   {
-    size_t item_size = sizeof(ros_message->gimbal_device_id);
+    size_t item_size = sizeof(ros_message->gimbal_device_compid);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -506,7 +506,7 @@ size_t max_serialized_size_px4_msgs__msg__GimbalDeviceInformation(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
-  // Field name: gimbal_device_id
+  // Field name: gimbal_device_compid
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint8_t);
@@ -522,7 +522,7 @@ size_t max_serialized_size_px4_msgs__msg__GimbalDeviceInformation(
     using DataType = px4_msgs__msg__GimbalDeviceInformation;
     is_plain =
       (
-      offsetof(DataType, gimbal_device_id) +
+      offsetof(DataType, gimbal_device_compid) +
       last_member_size
       ) == ret_val;
   }
@@ -615,9 +615,9 @@ bool cdr_serialize_key_px4_msgs__msg__GimbalDeviceInformation(
     cdr << ros_message->yaw_max;
   }
 
-  // Field name: gimbal_device_id
+  // Field name: gimbal_device_compid
   {
-    cdr << ros_message->gimbal_device_id;
+    cdr << ros_message->gimbal_device_compid;
   }
 
   return true;
@@ -752,9 +752,9 @@ size_t get_serialized_size_key_px4_msgs__msg__GimbalDeviceInformation(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: gimbal_device_id
+  // Field name: gimbal_device_compid
   {
-    size_t item_size = sizeof(ros_message->gimbal_device_id);
+    size_t item_size = sizeof(ros_message->gimbal_device_compid);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -896,7 +896,7 @@ size_t max_serialized_size_key_px4_msgs__msg__GimbalDeviceInformation(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
-  // Field name: gimbal_device_id
+  // Field name: gimbal_device_compid
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint8_t);
@@ -911,7 +911,7 @@ size_t max_serialized_size_key_px4_msgs__msg__GimbalDeviceInformation(
     using DataType = px4_msgs__msg__GimbalDeviceInformation;
     is_plain =
       (
-      offsetof(DataType, gimbal_device_id) +
+      offsetof(DataType, gimbal_device_compid) +
       last_member_size
       ) == ret_val;
   }

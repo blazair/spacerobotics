@@ -150,7 +150,17 @@
             "default_value": ""
           },
           {
-            "name": "loiter_radius",
+            "name": "yaw_valid",
+            "type": {
+              "type_id": 15,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "yawspeed",
             "type": {
               "type_id": 10,
               "capacity": 0,
@@ -160,7 +170,17 @@
             "default_value": ""
           },
           {
-            "name": "loiter_minor_radius",
+            "name": "yawspeed_valid",
+            "type": {
+              "type_id": 15,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "loiter_radius",
             "type": {
               "type_id": 10,
               "capacity": 0,
@@ -180,37 +200,7 @@
             "default_value": ""
           },
           {
-            "name": "loiter_orientation",
-            "type": {
-              "type_id": 10,
-              "capacity": 0,
-              "string_capacity": 0,
-              "nested_type_name": ""
-            },
-            "default_value": ""
-          },
-          {
-            "name": "loiter_pattern",
-            "type": {
-              "type_id": 3,
-              "capacity": 0,
-              "string_capacity": 0,
-              "nested_type_name": ""
-            },
-            "default_value": ""
-          },
-          {
             "name": "acceptance_radius",
-            "type": {
-              "type_id": 10,
-              "capacity": 0,
-              "string_capacity": 0,
-              "nested_type_name": ""
-            },
-            "default_value": ""
-          },
-          {
-            "name": "alt_acceptance_radius",
             "type": {
               "type_id": 10,
               "capacity": 0,
@@ -248,6 +238,16 @@
               "nested_type_name": ""
             },
             "default_value": ""
+          },
+          {
+            "name": "disable_weather_vane",
+            "type": {
+              "type_id": 15,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
           }
         ]
       }
@@ -256,11 +256,11 @@
   "type_hashes": [
     {
       "type_name": "px4_msgs/msg/PositionSetpointTriplet",
-      "hash_string": "RIHS01_e05aa5eb29374ce845899062b5810cc8487743bb95a976094821c1d0312e45aa"
+      "hash_string": "RIHS01_22bc52f3ad1ed57ed4fecaa0abd21b4a0119d656f46f9bd33070ecf1f287d12a"
     },
     {
       "type_name": "px4_msgs/msg/PositionSetpoint",
-      "hash_string": "RIHS01_8b5fb0081530df315497749dcf536df93ee7f1bfbbfd3747eba627b3e05db54f"
+      "hash_string": "RIHS01_b63b3d1b2c34a4056be648a5b62a1a9340288e605e00f0ec6b628eec4d61a070"
     }
   ]
 }

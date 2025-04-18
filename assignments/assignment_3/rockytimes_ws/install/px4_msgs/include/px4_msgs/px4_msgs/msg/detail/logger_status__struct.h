@@ -62,7 +62,6 @@ typedef struct px4_msgs__msg__LoggerStatus
   uint64_t timestamp;
   uint8_t type;
   uint8_t backend;
-  bool is_logging;
   /// total written to log in kiloBytes
   float total_written_kb;
   /// write rate in kiloBytes/s

@@ -174,6 +174,13 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
+  // member: aux_vvel
+  {
+    out << "aux_vvel: ";
+    rosidl_generator_traits::value_to_yaml(msg.aux_vvel, out);
+    out << ", ";
+  }
+
   // member: flow
   {
     if (msg.flow.size() == 0) {
@@ -182,6 +189,24 @@ inline void to_flow_style_yaml(
       out << "flow: [";
       size_t pending_items = msg.flow.size();
       for (auto item : msg.flow) {
+        rosidl_generator_traits::value_to_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
+    out << ", ";
+  }
+
+  // member: terr_flow
+  {
+    if (msg.terr_flow.size() == 0) {
+      out << "terr_flow: []";
+    } else {
+      out << "terr_flow: [";
+      size_t pending_items = msg.terr_flow.size();
+      for (auto item : msg.terr_flow) {
         rosidl_generator_traits::value_to_yaml(item, out);
         if (--pending_items > 0) {
           out << ", ";
@@ -466,6 +491,16 @@ inline void to_block_style_yaml(
     }
   }
 
+  // member: aux_vvel
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "aux_vvel: ";
+    rosidl_generator_traits::value_to_yaml(msg.aux_vvel, out);
+    out << "\n";
+  }
+
   // member: flow
   {
     if (indentation > 0) {
@@ -476,6 +511,26 @@ inline void to_block_style_yaml(
     } else {
       out << "flow:\n";
       for (auto item : msg.flow) {
+        if (indentation > 0) {
+          out << std::string(indentation, ' ');
+        }
+        out << "- ";
+        rosidl_generator_traits::value_to_yaml(item, out);
+        out << "\n";
+      }
+    }
+  }
+
+  // member: terr_flow
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    if (msg.terr_flow.size() == 0) {
+      out << "terr_flow: []\n";
+    } else {
+      out << "terr_flow:\n";
+      for (auto item : msg.terr_flow) {
         if (indentation > 0) {
           out << std::string(indentation, ' ');
         }

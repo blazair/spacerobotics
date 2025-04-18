@@ -59,31 +59,13 @@ bool px4_msgs__msg__mission__convert_from_py(PyObject * _pymsg, void * _ros_mess
     ros_message->timestamp = PyLong_AsUnsignedLongLong(field);
     Py_DECREF(field);
   }
-  {  // mission_dataman_id
-    PyObject * field = PyObject_GetAttrString(_pymsg, "mission_dataman_id");
+  {  // dataman_id
+    PyObject * field = PyObject_GetAttrString(_pymsg, "dataman_id");
     if (!field) {
       return false;
     }
     assert(PyLong_Check(field));
-    ros_message->mission_dataman_id = (uint8_t)PyLong_AsUnsignedLong(field);
-    Py_DECREF(field);
-  }
-  {  // fence_dataman_id
-    PyObject * field = PyObject_GetAttrString(_pymsg, "fence_dataman_id");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->fence_dataman_id = (uint8_t)PyLong_AsUnsignedLong(field);
-    Py_DECREF(field);
-  }
-  {  // safepoint_dataman_id
-    PyObject * field = PyObject_GetAttrString(_pymsg, "safepoint_dataman_id");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->safepoint_dataman_id = (uint8_t)PyLong_AsUnsignedLong(field);
+    ros_message->dataman_id = (uint8_t)PyLong_AsUnsignedLong(field);
     Py_DECREF(field);
   }
   {  // count
@@ -102,51 +84,6 @@ bool px4_msgs__msg__mission__convert_from_py(PyObject * _pymsg, void * _ros_mess
     }
     assert(PyLong_Check(field));
     ros_message->current_seq = (int32_t)PyLong_AsLong(field);
-    Py_DECREF(field);
-  }
-  {  // land_start_index
-    PyObject * field = PyObject_GetAttrString(_pymsg, "land_start_index");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->land_start_index = (int32_t)PyLong_AsLong(field);
-    Py_DECREF(field);
-  }
-  {  // land_index
-    PyObject * field = PyObject_GetAttrString(_pymsg, "land_index");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->land_index = (int32_t)PyLong_AsLong(field);
-    Py_DECREF(field);
-  }
-  {  // mission_id
-    PyObject * field = PyObject_GetAttrString(_pymsg, "mission_id");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->mission_id = PyLong_AsUnsignedLong(field);
-    Py_DECREF(field);
-  }
-  {  // geofence_id
-    PyObject * field = PyObject_GetAttrString(_pymsg, "geofence_id");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->geofence_id = PyLong_AsUnsignedLong(field);
-    Py_DECREF(field);
-  }
-  {  // safe_points_id
-    PyObject * field = PyObject_GetAttrString(_pymsg, "safe_points_id");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->safe_points_id = PyLong_AsUnsignedLong(field);
     Py_DECREF(field);
   }
 
@@ -182,33 +119,11 @@ PyObject * px4_msgs__msg__mission__convert_to_py(void * raw_ros_message)
       }
     }
   }
-  {  // mission_dataman_id
+  {  // dataman_id
     PyObject * field = NULL;
-    field = PyLong_FromUnsignedLong(ros_message->mission_dataman_id);
+    field = PyLong_FromUnsignedLong(ros_message->dataman_id);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "mission_dataman_id", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // fence_dataman_id
-    PyObject * field = NULL;
-    field = PyLong_FromUnsignedLong(ros_message->fence_dataman_id);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "fence_dataman_id", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // safepoint_dataman_id
-    PyObject * field = NULL;
-    field = PyLong_FromUnsignedLong(ros_message->safepoint_dataman_id);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "safepoint_dataman_id", field);
+      int rc = PyObject_SetAttrString(_pymessage, "dataman_id", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
@@ -231,61 +146,6 @@ PyObject * px4_msgs__msg__mission__convert_to_py(void * raw_ros_message)
     field = PyLong_FromLong(ros_message->current_seq);
     {
       int rc = PyObject_SetAttrString(_pymessage, "current_seq", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // land_start_index
-    PyObject * field = NULL;
-    field = PyLong_FromLong(ros_message->land_start_index);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "land_start_index", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // land_index
-    PyObject * field = NULL;
-    field = PyLong_FromLong(ros_message->land_index);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "land_index", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // mission_id
-    PyObject * field = NULL;
-    field = PyLong_FromUnsignedLong(ros_message->mission_id);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "mission_id", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // geofence_id
-    PyObject * field = NULL;
-    field = PyLong_FromUnsignedLong(ros_message->geofence_id);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "geofence_id", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // safe_points_id
-    PyObject * field = NULL;
-    field = PyLong_FromUnsignedLong(ros_message->safe_points_id);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "safe_points_id", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

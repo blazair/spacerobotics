@@ -11,10 +11,10 @@ px4_msgs__msg__Airspeed__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x27, 0xf7, 0x74, 0x06, 0x2e, 0xbd, 0x92, 0xe8,
-      0x4e, 0x22, 0x17, 0x3f, 0xdf, 0x17, 0x29, 0x3e,
-      0x77, 0x6c, 0x85, 0x66, 0xac, 0x89, 0x2f, 0xa1,
-      0x27, 0xfc, 0x78, 0xdc, 0x8b, 0x57, 0x1c, 0x55,
+      0xbc, 0xe8, 0x89, 0x34, 0x9e, 0x90, 0x80, 0xc4,
+      0x65, 0xdb, 0xf6, 0x4a, 0x93, 0x32, 0x2a, 0x80,
+      0xb7, 0x3e, 0xa4, 0x92, 0xc1, 0x9c, 0x7f, 0x0b,
+      0x8b, 0x5c, 0xe1, 0x71, 0x04, 0x09, 0x63, 0x86,
     }};
   return &hash;
 }
@@ -35,6 +35,7 @@ static char px4_msgs__msg__Airspeed__FIELD_NAME__timestamp[] = "timestamp";
 static char px4_msgs__msg__Airspeed__FIELD_NAME__timestamp_sample[] = "timestamp_sample";
 static char px4_msgs__msg__Airspeed__FIELD_NAME__indicated_airspeed_m_s[] = "indicated_airspeed_m_s";
 static char px4_msgs__msg__Airspeed__FIELD_NAME__true_airspeed_m_s[] = "true_airspeed_m_s";
+static char px4_msgs__msg__Airspeed__FIELD_NAME__air_temperature_celsius[] = "air_temperature_celsius";
 static char px4_msgs__msg__Airspeed__FIELD_NAME__confidence[] = "confidence";
 
 static rosidl_runtime_c__type_description__Field px4_msgs__msg__Airspeed__FIELDS[] = {
@@ -79,6 +80,16 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__Airspeed__FIELDS
     {NULL, 0, 0},
   },
   {
+    {px4_msgs__msg__Airspeed__FIELD_NAME__air_temperature_celsius, 23, 23},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
     {px4_msgs__msg__Airspeed__FIELD_NAME__confidence, 10, 10},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
@@ -99,7 +110,7 @@ px4_msgs__msg__Airspeed__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {px4_msgs__msg__Airspeed__TYPE_NAME, 21, 21},
-      {px4_msgs__msg__Airspeed__FIELDS, 5, 5},
+      {px4_msgs__msg__Airspeed__FIELDS, 6, 6},
     },
     {NULL, 0, 0},
   };
@@ -117,6 +128,8 @@ static char toplevel_type_raw_source[] =
   "\n"
   "float32 true_airspeed_m_s        # true filtered airspeed in m/s\n"
   "\n"
+  "float32 air_temperature_celsius  # air temperature in degrees Celsius, -1000 if unknown\n"
+  "\n"
   "float32 confidence               # confidence value from 0 to 1 for this sensor";
 
 static char msg_encoding[] = "msg";
@@ -131,7 +144,7 @@ px4_msgs__msg__Airspeed__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__Airspeed__TYPE_NAME, 21, 21},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 307, 307},
+    {toplevel_type_raw_source, 396, 396},
   };
   return &source;
 }

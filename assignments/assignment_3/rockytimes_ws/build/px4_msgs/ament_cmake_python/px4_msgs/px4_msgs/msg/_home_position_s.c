@@ -158,15 +158,6 @@ bool px4_msgs__msg__home_position__convert_from_py(PyObject * _pymsg, void * _ro
     ros_message->manual_home = (Py_True == field);
     Py_DECREF(field);
   }
-  {  // update_count
-    PyObject * field = PyObject_GetAttrString(_pymsg, "update_count");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->update_count = PyLong_AsUnsignedLong(field);
-    Py_DECREF(field);
-  }
 
   return true;
 }
@@ -315,17 +306,6 @@ PyObject * px4_msgs__msg__home_position__convert_to_py(void * raw_ros_message)
     field = PyBool_FromLong(ros_message->manual_home ? 1 : 0);
     {
       int rc = PyObject_SetAttrString(_pymessage, "manual_home", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // update_count
-    PyObject * field = NULL;
-    field = PyLong_FromUnsignedLong(ros_message->update_count);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "update_count", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

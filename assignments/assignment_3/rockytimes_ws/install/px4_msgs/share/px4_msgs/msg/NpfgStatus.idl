@@ -76,10 +76,6 @@ module px4_msgs {
         "controller time constant")
       @unit (value="s")
       float time_const;
-
-      @verbatim (language="comment", text=
-        "estimate of certainty of the correct functionality of the npfg roll setpoint in [0, 1]")
-      float can_run_factor;
     };
   };
 };

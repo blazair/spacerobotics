@@ -122,16 +122,6 @@
             "nested_type_name": ""
           },
           "default_value": ""
-        },
-        {
-          "name": "mode",
-          "type": {
-            "type_id": 3,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
         }
       ]
     },
@@ -140,7 +130,7 @@
   "type_hashes": [
     {
       "type_name": "px4_msgs/msg/DistanceSensor",
-      "hash_string": "RIHS01_a8457d649dbcc726dce2558cf8a5732dc0b74d518bdb5e89248c0c515e8f80f5"
+      "hash_string": "RIHS01_68fda9f7cbef9479d4bf17008cb26bf5fa369261eb0f41b62edd06b8008bea62"
     }
   ]
 }

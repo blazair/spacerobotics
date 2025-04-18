@@ -10,7 +10,7 @@ module px4_msgs {
       const uint8 ORB_QUEUE_LENGTH = 4;
     };
     @verbatim (language="comment", text=
-      "A logging message, output with PX4_WARN, PX4_ERR, PX4_INFO")
+      "A logging message, output with PX4_{WARN,ERR,INFO}")
     struct LogMessage {
       @verbatim (language="comment", text=
         "time since system start (microseconds)")

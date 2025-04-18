@@ -60,7 +60,7 @@ bool cdr_serialize_px4_msgs__msg__EstimatorStates(
 
   // Field name: states
   {
-    size_t size = 25;
+    size_t size = 24;
     auto array_ptr = ros_message->states;
     cdr.serialize_array(array_ptr, size);
   }
@@ -97,7 +97,7 @@ bool cdr_deserialize_px4_msgs__msg__EstimatorStates(
 
   // Field name: states
   {
-    size_t size = 25;
+    size_t size = 24;
     auto array_ptr = ros_message->states;
     cdr.deserialize_array(array_ptr, size);
   }
@@ -148,7 +148,7 @@ size_t get_serialized_size_px4_msgs__msg__EstimatorStates(
 
   // Field name: states
   {
-    size_t array_size = 25;
+    size_t array_size = 24;
     auto array_ptr = ros_message->states;
     (void)array_ptr;
     size_t item_size = sizeof(array_ptr[0]);
@@ -213,7 +213,7 @@ size_t max_serialized_size_px4_msgs__msg__EstimatorStates(
 
   // Field name: states
   {
-    size_t array_size = 25;
+    size_t array_size = 24;
     last_member_size = array_size * sizeof(uint32_t);
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
@@ -267,7 +267,7 @@ bool cdr_serialize_key_px4_msgs__msg__EstimatorStates(
 
   // Field name: states
   {
-    size_t size = 25;
+    size_t size = 24;
     auto array_ptr = ros_message->states;
     cdr.serialize_array(array_ptr, size);
   }
@@ -318,7 +318,7 @@ size_t get_serialized_size_key_px4_msgs__msg__EstimatorStates(
 
   // Field name: states
   {
-    size_t array_size = 25;
+    size_t array_size = 24;
     auto array_ptr = ros_message->states;
     (void)array_ptr;
     size_t item_size = sizeof(array_ptr[0]);
@@ -381,7 +381,7 @@ size_t max_serialized_size_key_px4_msgs__msg__EstimatorStates(
 
   // Field name: states
   {
-    size_t array_size = 25;
+    size_t array_size = 24;
     last_member_size = array_size * sizeof(uint32_t);
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));

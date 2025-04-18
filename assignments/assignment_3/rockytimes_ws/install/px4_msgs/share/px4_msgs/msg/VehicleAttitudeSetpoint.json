@@ -14,6 +14,36 @@
           "default_value": ""
         },
         {
+          "name": "roll_body",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "pitch_body",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "yaw_body",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
           "name": "yaw_sp_move_rate",
           "type": {
             "type_id": 10,
@@ -70,7 +100,7 @@
   "type_hashes": [
     {
       "type_name": "px4_msgs/msg/VehicleAttitudeSetpoint",
-      "hash_string": "RIHS01_b32689c55cd7dfeb33cb06faeef7c4a7cebc1d4a58acedcc73ec16951304662b"
+      "hash_string": "RIHS01_995ae42a83a17414fb560c859fefd68deee351e89fcf60cb37737f342d95dffd"
     }
   ]
 }

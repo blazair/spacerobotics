@@ -1,20 +1,23 @@
 # Encodes the system state of the vehicle published by commander
 
-uint32 MESSAGE_VERSION = 1
-
 uint64 timestamp # time since system start (microseconds)
 
 uint64 armed_time # Arming timestamp (microseconds)
 uint64 takeoff_time # Takeoff timestamp (microseconds)
 
 uint8 arming_state
-uint8 ARMING_STATE_DISARMED = 1
-uint8 ARMING_STATE_ARMED    = 2
+uint8 ARMING_STATE_INIT = 0
+uint8 ARMING_STATE_STANDBY = 1
+uint8 ARMING_STATE_ARMED = 2
+uint8 ARMING_STATE_STANDBY_ERROR = 3
+uint8 ARMING_STATE_SHUTDOWN = 4
+uint8 ARMING_STATE_IN_AIR_RESTORE = 5
+uint8 ARMING_STATE_MAX = 6
 
 uint8 latest_arming_reason
 uint8 latest_disarming_reason
 uint8 ARM_DISARM_REASON_TRANSITION_TO_STANDBY = 0
-uint8 ARM_DISARM_REASON_STICK_GESTURE = 1
+uint8 ARM_DISARM_REASON_RC_STICK = 1
 uint8 ARM_DISARM_REASON_RC_SWITCH = 2
 uint8 ARM_DISARM_REASON_COMMAND_INTERNAL = 3
 uint8 ARM_DISARM_REASON_COMMAND_EXTERNAL = 4
@@ -39,37 +42,22 @@ uint8 NAVIGATION_STATE_POSCTL = 2               # Position control mode
 uint8 NAVIGATION_STATE_AUTO_MISSION = 3         # Auto mission mode
 uint8 NAVIGATION_STATE_AUTO_LOITER = 4          # Auto loiter mode
 uint8 NAVIGATION_STATE_AUTO_RTL = 5             # Auto return to launch mode
-uint8 NAVIGATION_STATE_POSITION_SLOW = 6
-uint8 NAVIGATION_STATE_FREE5 = 7
-uint8 NAVIGATION_STATE_FREE4 = 8
-uint8 NAVIGATION_STATE_FREE3 = 9
+uint8 NAVIGATION_STATE_UNUSED3 = 8              # Free slot
+uint8 NAVIGATION_STATE_UNUSED = 9               # Free slot
 uint8 NAVIGATION_STATE_ACRO = 10                # Acro mode
-uint8 NAVIGATION_STATE_FREE2 = 11
+uint8 NAVIGATION_STATE_UNUSED1 = 11             # Free slot
 uint8 NAVIGATION_STATE_DESCEND = 12             # Descend mode (no position control)
 uint8 NAVIGATION_STATE_TERMINATION = 13         # Termination mode
 uint8 NAVIGATION_STATE_OFFBOARD = 14
 uint8 NAVIGATION_STATE_STAB = 15                # Stabilized mode
-uint8 NAVIGATION_STATE_FREE1 = 16
+uint8 NAVIGATION_STATE_UNUSED2 = 16             # Free slot
 uint8 NAVIGATION_STATE_AUTO_TAKEOFF = 17        # Takeoff
 uint8 NAVIGATION_STATE_AUTO_LAND = 18           # Land
 uint8 NAVIGATION_STATE_AUTO_FOLLOW_TARGET = 19  # Auto Follow
 uint8 NAVIGATION_STATE_AUTO_PRECLAND = 20       # Precision land with landing target
 uint8 NAVIGATION_STATE_ORBIT = 21               # Orbit in a circle
 uint8 NAVIGATION_STATE_AUTO_VTOL_TAKEOFF = 22   # Takeoff, transition, establish loiter
-uint8 NAVIGATION_STATE_EXTERNAL1 = 23
-uint8 NAVIGATION_STATE_EXTERNAL2 = 24
-uint8 NAVIGATION_STATE_EXTERNAL3 = 25
-uint8 NAVIGATION_STATE_EXTERNAL4 = 26
-uint8 NAVIGATION_STATE_EXTERNAL5 = 27
-uint8 NAVIGATION_STATE_EXTERNAL6 = 28
-uint8 NAVIGATION_STATE_EXTERNAL7 = 29
-uint8 NAVIGATION_STATE_EXTERNAL8 = 30
-uint8 NAVIGATION_STATE_MAX = 31
-
-uint8 executor_in_charge                        # Current mode executor in charge (0=Autopilot)
-
-uint32 valid_nav_states_mask                    # Bitmask for all valid nav_state values
-uint32 can_set_nav_states_mask                  # Bitmask for all modes that a user can select
+uint8 NAVIGATION_STATE_MAX = 23
 
 # Bitmask of detected failures
 uint16 failure_detector_status
@@ -87,19 +75,16 @@ uint8 hil_state
 uint8 HIL_STATE_OFF = 0
 uint8 HIL_STATE_ON = 1
 
-# Current vehicle locomotion method. A vehicle can have different methods (e.g. VTOL transitions from RW to FW method)
+# If it's a VTOL, then the value will be VEHICLE_TYPE_ROTARY_WING while flying as a multicopter, and VEHICLE_TYPE_FIXED_WING when flying as a fixed-wing
 uint8 vehicle_type
-uint8 VEHICLE_TYPE_ROTARY_WING = 0
-uint8 VEHICLE_TYPE_FIXED_WING = 1
-uint8 VEHICLE_TYPE_ROVER = 2
-
-uint8 FAILSAFE_DEFER_STATE_DISABLED = 0
-uint8 FAILSAFE_DEFER_STATE_ENABLED = 1
-uint8 FAILSAFE_DEFER_STATE_WOULD_FAILSAFE = 2 # Failsafes deferred, but would trigger a failsafe
+uint8 VEHICLE_TYPE_UNKNOWN = 0
+uint8 VEHICLE_TYPE_ROTARY_WING = 1
+uint8 VEHICLE_TYPE_FIXED_WING = 2
+uint8 VEHICLE_TYPE_ROVER = 3
+uint8 VEHICLE_TYPE_AIRSHIP = 4
 
 bool failsafe # true if system is in failsafe state (e.g.:RTL, Hover, Terminate, ...)
 bool failsafe_and_user_took_over # true if system is in failsafe state but the user took over control
-uint8 failsafe_defer_state # one of FAILSAFE_DEFER_STATE_*
 
 # Link loss
 bool gcs_connection_lost              # datalink to GCS lost
@@ -129,7 +114,11 @@ bool open_drone_id_system_healthy
 bool parachute_system_present
 bool parachute_system_healthy
 
+bool avoidance_system_required                    # Set to true if avoidance system is enabled via COM_OBS_AVOID parameter
+bool avoidance_system_valid                       # Status of the obstacle avoidance system
+
 bool rc_calibration_in_progress
 bool calibration_enabled
 
 bool pre_flight_checks_pass		# true if all checks necessary to arm pass
+

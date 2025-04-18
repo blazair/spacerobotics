@@ -99,7 +99,6 @@ px4_msgs__msg__VehicleAngularVelocity__get_type_description(
 }
 
 static char toplevel_type_raw_source[] =
-  "uint32 MESSAGE_VERSION = 0\n"
   "\n"
   "uint64 timestamp          # time since system start (microseconds)\n"
   "uint64 timestamp_sample   # timestamp of the data sample on which this message is based (microseconds)\n"
@@ -122,7 +121,7 @@ px4_msgs__msg__VehicleAngularVelocity__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__VehicleAngularVelocity__TYPE_NAME, 35, 35},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 461, 461},
+    {toplevel_type_raw_source, 434, 434},
   };
   return &source;
 }

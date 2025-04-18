@@ -61,7 +61,7 @@ class Metaclass_TransponderReport(type):
         'ADSB_EMITTER_TYPE_SERVICE_SURFACE': 18,
         'ADSB_EMITTER_TYPE_POINT_OBSTACLE': 19,
         'ADSB_EMITTER_TYPE_ENUM_END': 20,
-        'ORB_QUEUE_LENGTH': 16,
+        'ORB_QUEUE_LENGTH': 8,
     }
 
     @classmethod

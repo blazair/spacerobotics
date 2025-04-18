@@ -18,10 +18,10 @@ px4_msgs__msg__GeofenceResult__init(px4_msgs__msg__GeofenceResult * msg)
     return false;
   }
   // timestamp
-  // geofence_max_dist_triggered
-  // geofence_max_alt_triggered
-  // geofence_custom_fence_triggered
-  // geofence_action
+  // geofence_violation_reason
+  // primary_geofence_breached
+  // primary_geofence_action
+  // home_required
   return true;
 }
 
@@ -32,10 +32,10 @@ px4_msgs__msg__GeofenceResult__fini(px4_msgs__msg__GeofenceResult * msg)
     return;
   }
   // timestamp
-  // geofence_max_dist_triggered
-  // geofence_max_alt_triggered
-  // geofence_custom_fence_triggered
-  // geofence_action
+  // geofence_violation_reason
+  // primary_geofence_breached
+  // primary_geofence_action
+  // home_required
 }
 
 bool
@@ -48,20 +48,20 @@ px4_msgs__msg__GeofenceResult__are_equal(const px4_msgs__msg__GeofenceResult * l
   if (lhs->timestamp != rhs->timestamp) {
     return false;
   }
-  // geofence_max_dist_triggered
-  if (lhs->geofence_max_dist_triggered != rhs->geofence_max_dist_triggered) {
+  // geofence_violation_reason
+  if (lhs->geofence_violation_reason != rhs->geofence_violation_reason) {
     return false;
   }
-  // geofence_max_alt_triggered
-  if (lhs->geofence_max_alt_triggered != rhs->geofence_max_alt_triggered) {
+  // primary_geofence_breached
+  if (lhs->primary_geofence_breached != rhs->primary_geofence_breached) {
     return false;
   }
-  // geofence_custom_fence_triggered
-  if (lhs->geofence_custom_fence_triggered != rhs->geofence_custom_fence_triggered) {
+  // primary_geofence_action
+  if (lhs->primary_geofence_action != rhs->primary_geofence_action) {
     return false;
   }
-  // geofence_action
-  if (lhs->geofence_action != rhs->geofence_action) {
+  // home_required
+  if (lhs->home_required != rhs->home_required) {
     return false;
   }
   return true;
@@ -77,14 +77,14 @@ px4_msgs__msg__GeofenceResult__copy(
   }
   // timestamp
   output->timestamp = input->timestamp;
-  // geofence_max_dist_triggered
-  output->geofence_max_dist_triggered = input->geofence_max_dist_triggered;
-  // geofence_max_alt_triggered
-  output->geofence_max_alt_triggered = input->geofence_max_alt_triggered;
-  // geofence_custom_fence_triggered
-  output->geofence_custom_fence_triggered = input->geofence_custom_fence_triggered;
-  // geofence_action
-  output->geofence_action = input->geofence_action;
+  // geofence_violation_reason
+  output->geofence_violation_reason = input->geofence_violation_reason;
+  // primary_geofence_breached
+  output->primary_geofence_breached = input->primary_geofence_breached;
+  // primary_geofence_action
+  output->primary_geofence_action = input->primary_geofence_action;
+  // home_required
+  output->home_required = input->home_required;
   return true;
 }
 

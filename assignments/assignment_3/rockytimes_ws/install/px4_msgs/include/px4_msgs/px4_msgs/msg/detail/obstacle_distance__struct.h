@@ -81,7 +81,7 @@ typedef struct px4_msgs__msg__ObstacleDistance
   uint16_t min_distance;
   /// Maximum distance the sensor can measure in centimeters.
   uint16_t max_distance;
-  /// Relative angle offset of the 0-index element in the distances array. Value of 0 corresponds to forward. Positive is clockwise direction, negative is counter-clockwise.
+  /// Relative angle offset of the 0-index element in the distances array. Value of 0 corresponds to forward. Positive values are offsets to the right.
   float angle_offset;
 } px4_msgs__msg__ObstacleDistance;
 

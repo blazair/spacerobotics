@@ -29,13 +29,6 @@ class Metaclass_SensorGps(type):
     _TYPE_SUPPORT = None
 
     __constants = {
-        'FIX_TYPE_NONE': 1,
-        'FIX_TYPE_2D': 2,
-        'FIX_TYPE_3D': 3,
-        'FIX_TYPE_RTCM_CODE_DIFFERENTIAL': 4,
-        'FIX_TYPE_RTK_FLOAT': 5,
-        'FIX_TYPE_RTK_FIXED': 6,
-        'FIX_TYPE_EXTRAPOLATED': 8,
         'JAMMING_STATE_UNKNOWN': 0,
         'JAMMING_STATE_OK': 1,
         'JAMMING_STATE_WARNING': 2,
@@ -44,9 +37,6 @@ class Metaclass_SensorGps(type):
         'SPOOFING_STATE_NONE': 1,
         'SPOOFING_STATE_INDICATED': 2,
         'SPOOFING_STATE_MULTIPLE': 3,
-        'RTCM_MSG_USED_UNKNOWN': 0,
-        'RTCM_MSG_USED_NOT_USED': 1,
-        'RTCM_MSG_USED_USED': 2,
     }
 
     @classmethod
@@ -75,13 +65,6 @@ class Metaclass_SensorGps(type):
         # the message class under "Data and other attributes defined here:"
         # as well as populate each message instance
         return {
-            'FIX_TYPE_NONE': cls.__constants['FIX_TYPE_NONE'],
-            'FIX_TYPE_2D': cls.__constants['FIX_TYPE_2D'],
-            'FIX_TYPE_3D': cls.__constants['FIX_TYPE_3D'],
-            'FIX_TYPE_RTCM_CODE_DIFFERENTIAL': cls.__constants['FIX_TYPE_RTCM_CODE_DIFFERENTIAL'],
-            'FIX_TYPE_RTK_FLOAT': cls.__constants['FIX_TYPE_RTK_FLOAT'],
-            'FIX_TYPE_RTK_FIXED': cls.__constants['FIX_TYPE_RTK_FIXED'],
-            'FIX_TYPE_EXTRAPOLATED': cls.__constants['FIX_TYPE_EXTRAPOLATED'],
             'JAMMING_STATE_UNKNOWN': cls.__constants['JAMMING_STATE_UNKNOWN'],
             'JAMMING_STATE_OK': cls.__constants['JAMMING_STATE_OK'],
             'JAMMING_STATE_WARNING': cls.__constants['JAMMING_STATE_WARNING'],
@@ -90,45 +73,7 @@ class Metaclass_SensorGps(type):
             'SPOOFING_STATE_NONE': cls.__constants['SPOOFING_STATE_NONE'],
             'SPOOFING_STATE_INDICATED': cls.__constants['SPOOFING_STATE_INDICATED'],
             'SPOOFING_STATE_MULTIPLE': cls.__constants['SPOOFING_STATE_MULTIPLE'],
-            'RTCM_MSG_USED_UNKNOWN': cls.__constants['RTCM_MSG_USED_UNKNOWN'],
-            'RTCM_MSG_USED_NOT_USED': cls.__constants['RTCM_MSG_USED_NOT_USED'],
-            'RTCM_MSG_USED_USED': cls.__constants['RTCM_MSG_USED_USED'],
         }
-
-    @property
-    def FIX_TYPE_NONE(self):
-        """Message constant 'FIX_TYPE_NONE'."""
-        return Metaclass_SensorGps.__constants['FIX_TYPE_NONE']
-
-    @property
-    def FIX_TYPE_2D(self):
-        """Message constant 'FIX_TYPE_2D'."""
-        return Metaclass_SensorGps.__constants['FIX_TYPE_2D']
-
-    @property
-    def FIX_TYPE_3D(self):
-        """Message constant 'FIX_TYPE_3D'."""
-        return Metaclass_SensorGps.__constants['FIX_TYPE_3D']
-
-    @property
-    def FIX_TYPE_RTCM_CODE_DIFFERENTIAL(self):
-        """Message constant 'FIX_TYPE_RTCM_CODE_DIFFERENTIAL'."""
-        return Metaclass_SensorGps.__constants['FIX_TYPE_RTCM_CODE_DIFFERENTIAL']
-
-    @property
-    def FIX_TYPE_RTK_FLOAT(self):
-        """Message constant 'FIX_TYPE_RTK_FLOAT'."""
-        return Metaclass_SensorGps.__constants['FIX_TYPE_RTK_FLOAT']
-
-    @property
-    def FIX_TYPE_RTK_FIXED(self):
-        """Message constant 'FIX_TYPE_RTK_FIXED'."""
-        return Metaclass_SensorGps.__constants['FIX_TYPE_RTK_FIXED']
-
-    @property
-    def FIX_TYPE_EXTRAPOLATED(self):
-        """Message constant 'FIX_TYPE_EXTRAPOLATED'."""
-        return Metaclass_SensorGps.__constants['FIX_TYPE_EXTRAPOLATED']
 
     @property
     def JAMMING_STATE_UNKNOWN(self):
@@ -170,34 +115,12 @@ class Metaclass_SensorGps(type):
         """Message constant 'SPOOFING_STATE_MULTIPLE'."""
         return Metaclass_SensorGps.__constants['SPOOFING_STATE_MULTIPLE']
 
-    @property
-    def RTCM_MSG_USED_UNKNOWN(self):
-        """Message constant 'RTCM_MSG_USED_UNKNOWN'."""
-        return Metaclass_SensorGps.__constants['RTCM_MSG_USED_UNKNOWN']
-
-    @property
-    def RTCM_MSG_USED_NOT_USED(self):
-        """Message constant 'RTCM_MSG_USED_NOT_USED'."""
-        return Metaclass_SensorGps.__constants['RTCM_MSG_USED_NOT_USED']
-
-    @property
-    def RTCM_MSG_USED_USED(self):
-        """Message constant 'RTCM_MSG_USED_USED'."""
-        return Metaclass_SensorGps.__constants['RTCM_MSG_USED_USED']
-
 
 class SensorGps(metaclass=Metaclass_SensorGps):
     """
     Message class 'SensorGps'.
 
     Constants:
-      FIX_TYPE_NONE
-      FIX_TYPE_2D
-      FIX_TYPE_3D
-      FIX_TYPE_RTCM_CODE_DIFFERENTIAL
-      FIX_TYPE_RTK_FLOAT
-      FIX_TYPE_RTK_FIXED
-      FIX_TYPE_EXTRAPOLATED
       JAMMING_STATE_UNKNOWN
       JAMMING_STATE_OK
       JAMMING_STATE_WARNING
@@ -206,19 +129,16 @@ class SensorGps(metaclass=Metaclass_SensorGps):
       SPOOFING_STATE_NONE
       SPOOFING_STATE_INDICATED
       SPOOFING_STATE_MULTIPLE
-      RTCM_MSG_USED_UNKNOWN
-      RTCM_MSG_USED_NOT_USED
-      RTCM_MSG_USED_USED
     """
 
     __slots__ = [
         '_timestamp',
         '_timestamp_sample',
         '_device_id',
-        '_latitude_deg',
-        '_longitude_deg',
-        '_altitude_msl_m',
-        '_altitude_ellipsoid_m',
+        '_lat',
+        '_lon',
+        '_alt',
+        '_alt_ellipsoid',
         '_s_variance_m_s',
         '_c_variance_rad',
         '_fix_type',
@@ -245,8 +165,6 @@ class SensorGps(metaclass=Metaclass_SensorGps):
         '_heading_accuracy',
         '_rtcm_injection_rate',
         '_selected_rtcm_instance',
-        '_rtcm_crc_failed',
-        '_rtcm_msg_used',
         '_check_fields',
     ]
 
@@ -254,10 +172,10 @@ class SensorGps(metaclass=Metaclass_SensorGps):
         'timestamp': 'uint64',
         'timestamp_sample': 'uint64',
         'device_id': 'uint32',
-        'latitude_deg': 'double',
-        'longitude_deg': 'double',
-        'altitude_msl_m': 'double',
-        'altitude_ellipsoid_m': 'double',
+        'lat': 'int32',
+        'lon': 'int32',
+        'alt': 'int32',
+        'alt_ellipsoid': 'int32',
         's_variance_m_s': 'float',
         'c_variance_rad': 'float',
         'fix_type': 'uint8',
@@ -284,8 +202,6 @@ class SensorGps(metaclass=Metaclass_SensorGps):
         'heading_accuracy': 'float',
         'rtcm_injection_rate': 'float',
         'selected_rtcm_instance': 'uint8',
-        'rtcm_crc_failed': 'boolean',
-        'rtcm_msg_used': 'uint8',
     }
 
     # This attribute is used to store an rosidl_parser.definition variable
@@ -294,10 +210,10 @@ class SensorGps(metaclass=Metaclass_SensorGps):
         rosidl_parser.definition.BasicType('uint64'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint64'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint32'),  # noqa: E501
-        rosidl_parser.definition.BasicType('double'),  # noqa: E501
-        rosidl_parser.definition.BasicType('double'),  # noqa: E501
-        rosidl_parser.definition.BasicType('double'),  # noqa: E501
-        rosidl_parser.definition.BasicType('double'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int32'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int32'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int32'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int32'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
@@ -324,8 +240,6 @@ class SensorGps(metaclass=Metaclass_SensorGps):
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
-        rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
-        rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -340,10 +254,10 @@ class SensorGps(metaclass=Metaclass_SensorGps):
         self.timestamp = kwargs.get('timestamp', int())
         self.timestamp_sample = kwargs.get('timestamp_sample', int())
         self.device_id = kwargs.get('device_id', int())
-        self.latitude_deg = kwargs.get('latitude_deg', float())
-        self.longitude_deg = kwargs.get('longitude_deg', float())
-        self.altitude_msl_m = kwargs.get('altitude_msl_m', float())
-        self.altitude_ellipsoid_m = kwargs.get('altitude_ellipsoid_m', float())
+        self.lat = kwargs.get('lat', int())
+        self.lon = kwargs.get('lon', int())
+        self.alt = kwargs.get('alt', int())
+        self.alt_ellipsoid = kwargs.get('alt_ellipsoid', int())
         self.s_variance_m_s = kwargs.get('s_variance_m_s', float())
         self.c_variance_rad = kwargs.get('c_variance_rad', float())
         self.fix_type = kwargs.get('fix_type', int())
@@ -370,8 +284,6 @@ class SensorGps(metaclass=Metaclass_SensorGps):
         self.heading_accuracy = kwargs.get('heading_accuracy', float())
         self.rtcm_injection_rate = kwargs.get('rtcm_injection_rate', float())
         self.selected_rtcm_instance = kwargs.get('selected_rtcm_instance', int())
-        self.rtcm_crc_failed = kwargs.get('rtcm_crc_failed', bool())
-        self.rtcm_msg_used = kwargs.get('rtcm_msg_used', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -409,13 +321,13 @@ class SensorGps(metaclass=Metaclass_SensorGps):
             return False
         if self.device_id != other.device_id:
             return False
-        if self.latitude_deg != other.latitude_deg:
+        if self.lat != other.lat:
             return False
-        if self.longitude_deg != other.longitude_deg:
+        if self.lon != other.lon:
             return False
-        if self.altitude_msl_m != other.altitude_msl_m:
+        if self.alt != other.alt:
             return False
-        if self.altitude_ellipsoid_m != other.altitude_ellipsoid_m:
+        if self.alt_ellipsoid != other.alt_ellipsoid:
             return False
         if self.s_variance_m_s != other.s_variance_m_s:
             return False
@@ -468,10 +380,6 @@ class SensorGps(metaclass=Metaclass_SensorGps):
         if self.rtcm_injection_rate != other.rtcm_injection_rate:
             return False
         if self.selected_rtcm_instance != other.selected_rtcm_instance:
-            return False
-        if self.rtcm_crc_failed != other.rtcm_crc_failed:
-            return False
-        if self.rtcm_msg_used != other.rtcm_msg_used:
             return False
         return True
 
@@ -526,64 +434,64 @@ class SensorGps(metaclass=Metaclass_SensorGps):
         self._device_id = value
 
     @builtins.property
-    def latitude_deg(self):
-        """Message field 'latitude_deg'."""
-        return self._latitude_deg
+    def lat(self):
+        """Message field 'lat'."""
+        return self._lat
 
-    @latitude_deg.setter
-    def latitude_deg(self, value):
+    @lat.setter
+    def lat(self, value):
         if self._check_fields:
             assert \
-                isinstance(value, float), \
-                "The 'latitude_deg' field must be of type 'float'"
-            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
-                "The 'latitude_deg' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
-        self._latitude_deg = value
+                isinstance(value, int), \
+                "The 'lat' field must be of type 'int'"
+            assert value >= -2147483648 and value < 2147483648, \
+                "The 'lat' field must be an integer in [-2147483648, 2147483647]"
+        self._lat = value
 
     @builtins.property
-    def longitude_deg(self):
-        """Message field 'longitude_deg'."""
-        return self._longitude_deg
+    def lon(self):
+        """Message field 'lon'."""
+        return self._lon
 
-    @longitude_deg.setter
-    def longitude_deg(self, value):
+    @lon.setter
+    def lon(self, value):
         if self._check_fields:
             assert \
-                isinstance(value, float), \
-                "The 'longitude_deg' field must be of type 'float'"
-            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
-                "The 'longitude_deg' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
-        self._longitude_deg = value
+                isinstance(value, int), \
+                "The 'lon' field must be of type 'int'"
+            assert value >= -2147483648 and value < 2147483648, \
+                "The 'lon' field must be an integer in [-2147483648, 2147483647]"
+        self._lon = value
 
     @builtins.property
-    def altitude_msl_m(self):
-        """Message field 'altitude_msl_m'."""
-        return self._altitude_msl_m
+    def alt(self):
+        """Message field 'alt'."""
+        return self._alt
 
-    @altitude_msl_m.setter
-    def altitude_msl_m(self, value):
+    @alt.setter
+    def alt(self, value):
         if self._check_fields:
             assert \
-                isinstance(value, float), \
-                "The 'altitude_msl_m' field must be of type 'float'"
-            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
-                "The 'altitude_msl_m' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
-        self._altitude_msl_m = value
+                isinstance(value, int), \
+                "The 'alt' field must be of type 'int'"
+            assert value >= -2147483648 and value < 2147483648, \
+                "The 'alt' field must be an integer in [-2147483648, 2147483647]"
+        self._alt = value
 
     @builtins.property
-    def altitude_ellipsoid_m(self):
-        """Message field 'altitude_ellipsoid_m'."""
-        return self._altitude_ellipsoid_m
+    def alt_ellipsoid(self):
+        """Message field 'alt_ellipsoid'."""
+        return self._alt_ellipsoid
 
-    @altitude_ellipsoid_m.setter
-    def altitude_ellipsoid_m(self, value):
+    @alt_ellipsoid.setter
+    def alt_ellipsoid(self, value):
         if self._check_fields:
             assert \
-                isinstance(value, float), \
-                "The 'altitude_ellipsoid_m' field must be of type 'float'"
-            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
-                "The 'altitude_ellipsoid_m' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
-        self._altitude_ellipsoid_m = value
+                isinstance(value, int), \
+                "The 'alt_ellipsoid' field must be of type 'int'"
+            assert value >= -2147483648 and value < 2147483648, \
+                "The 'alt_ellipsoid' field must be an integer in [-2147483648, 2147483647]"
+        self._alt_ellipsoid = value
 
     @builtins.property
     def s_variance_m_s(self):
@@ -972,31 +880,3 @@ class SensorGps(metaclass=Metaclass_SensorGps):
             assert value >= 0 and value < 256, \
                 "The 'selected_rtcm_instance' field must be an unsigned integer in [0, 255]"
         self._selected_rtcm_instance = value
-
-    @builtins.property
-    def rtcm_crc_failed(self):
-        """Message field 'rtcm_crc_failed'."""
-        return self._rtcm_crc_failed
-
-    @rtcm_crc_failed.setter
-    def rtcm_crc_failed(self, value):
-        if self._check_fields:
-            assert \
-                isinstance(value, bool), \
-                "The 'rtcm_crc_failed' field must be of type 'bool'"
-        self._rtcm_crc_failed = value
-
-    @builtins.property
-    def rtcm_msg_used(self):
-        """Message field 'rtcm_msg_used'."""
-        return self._rtcm_msg_used
-
-    @rtcm_msg_used.setter
-    def rtcm_msg_used(self, value):
-        if self._check_fields:
-            assert \
-                isinstance(value, int), \
-                "The 'rtcm_msg_used' field must be of type 'int'"
-            assert value >= 0 and value < 256, \
-                "The 'rtcm_msg_used' field must be an unsigned integer in [0, 255]"
-        self._rtcm_msg_used = value

@@ -237,38 +237,10 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_a
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_airspeed_wind_s.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_airspeed_wind_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_airspeed_wind_s.c.s
 
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_arming_check_reply_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_arming_check_reply_s.c.o: rosidl_generator_py/px4_msgs/msg/_arming_check_reply_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_arming_check_reply_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_arming_check_reply_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_arming_check_reply_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_arming_check_reply_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_arming_check_reply_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_arming_check_reply_s.c
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_arming_check_reply_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_arming_check_reply_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_arming_check_reply_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_arming_check_reply_s.c.i
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_arming_check_reply_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_arming_check_reply_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_arming_check_reply_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_arming_check_reply_s.c.s
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_arming_check_request_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_arming_check_request_s.c.o: rosidl_generator_py/px4_msgs/msg/_arming_check_request_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_arming_check_request_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_arming_check_request_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_arming_check_request_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_arming_check_request_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_arming_check_request_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_arming_check_request_s.c
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_arming_check_request_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_arming_check_request_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_arming_check_request_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_arming_check_request_s.c.i
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_arming_check_request_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_arming_check_request_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_arming_check_request_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_arming_check_request_s.c.s
-
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_autotune_attitude_control_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_autotune_attitude_control_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_autotune_attitude_control_status_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_autotune_attitude_control_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_autotune_attitude_control_status_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_autotune_attitude_control_status_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_autotune_attitude_control_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_autotune_attitude_control_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_autotune_attitude_control_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_autotune_attitude_control_status_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_autotune_attitude_control_status_s.c.i: cmake_force
@@ -282,7 +254,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_a
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_battery_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_battery_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_battery_status_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_battery_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_battery_status_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_battery_status_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_battery_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_battery_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_battery_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_battery_status_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_battery_status_s.c.i: cmake_force
@@ -296,7 +268,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_b
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_button_event_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_button_event_s.c.o: rosidl_generator_py/px4_msgs/msg/_button_event_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_button_event_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_button_event_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_button_event_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_button_event_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_button_event_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_button_event_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_button_event_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_button_event_s.c.i: cmake_force
@@ -310,7 +282,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_b
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_camera_capture_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_camera_capture_s.c.o: rosidl_generator_py/px4_msgs/msg/_camera_capture_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_camera_capture_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_camera_capture_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_camera_capture_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_camera_capture_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_camera_capture_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_camera_capture_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_camera_capture_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_camera_capture_s.c.i: cmake_force
@@ -324,7 +296,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_camera_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_camera_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_camera_status_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_camera_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_camera_status_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_camera_status_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_camera_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_camera_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_camera_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_camera_status_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_camera_status_s.c.i: cmake_force
@@ -338,7 +310,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_camera_trigger_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_camera_trigger_s.c.o: rosidl_generator_py/px4_msgs/msg/_camera_trigger_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_camera_trigger_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_camera_trigger_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_camera_trigger_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_camera_trigger_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_camera_trigger_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_camera_trigger_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_camera_trigger_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_camera_trigger_s.c.i: cmake_force
@@ -349,24 +321,10 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_c
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_camera_trigger_s.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_camera_trigger_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_camera_trigger_s.c.s
 
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.c
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.c.i
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.c.s
-
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_cellular_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_cellular_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_cellular_status_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_cellular_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_cellular_status_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_cellular_status_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_cellular_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_cellular_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_cellular_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_cellular_status_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_cellular_status_s.c.i: cmake_force
@@ -380,7 +338,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_collision_constraints_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_collision_constraints_s.c.o: rosidl_generator_py/px4_msgs/msg/_collision_constraints_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_collision_constraints_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_collision_constraints_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_collision_constraints_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_collision_constraints_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_collision_constraints_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_collision_constraints_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_collision_constraints_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_collision_constraints_s.c.i: cmake_force
@@ -391,24 +349,24 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_c
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_collision_constraints_s.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_collision_constraints_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_collision_constraints_s.c.s
 
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_config_overrides_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_config_overrides_s.c.o: rosidl_generator_py/px4_msgs/msg/_config_overrides_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_config_overrides_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_config_overrides_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_config_overrides_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_config_overrides_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_config_overrides_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_config_overrides_s.c
+CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_collision_report_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
+CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_collision_report_s.c.o: rosidl_generator_py/px4_msgs/msg/_collision_report_s.c
+CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_collision_report_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_collision_report_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_collision_report_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_collision_report_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_collision_report_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_collision_report_s.c
 
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_config_overrides_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_config_overrides_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_config_overrides_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_config_overrides_s.c.i
+CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_collision_report_s.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_collision_report_s.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_collision_report_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_collision_report_s.c.i
 
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_config_overrides_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_config_overrides_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_config_overrides_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_config_overrides_s.c.s
+CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_collision_report_s.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_collision_report_s.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_collision_report_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_collision_report_s.c.s
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_control_allocator_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_control_allocator_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_control_allocator_status_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_control_allocator_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_control_allocator_status_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_control_allocator_status_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_control_allocator_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_control_allocator_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_control_allocator_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_control_allocator_status_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_control_allocator_status_s.c.i: cmake_force
@@ -422,7 +380,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_cpuload_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_cpuload_s.c.o: rosidl_generator_py/px4_msgs/msg/_cpuload_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_cpuload_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_cpuload_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_cpuload_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_cpuload_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_cpuload_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_cpuload_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_cpuload_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_cpuload_s.c.i: cmake_force
@@ -433,38 +391,10 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_c
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_cpuload_s.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_cpuload_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_cpuload_s.c.s
 
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_dataman_request_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_dataman_request_s.c.o: rosidl_generator_py/px4_msgs/msg/_dataman_request_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_dataman_request_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_dataman_request_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_dataman_request_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_dataman_request_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_dataman_request_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_dataman_request_s.c
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_dataman_request_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_dataman_request_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_dataman_request_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_dataman_request_s.c.i
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_dataman_request_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_dataman_request_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_dataman_request_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_dataman_request_s.c.s
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_dataman_response_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_dataman_response_s.c.o: rosidl_generator_py/px4_msgs/msg/_dataman_response_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_dataman_response_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_dataman_response_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_dataman_response_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_dataman_response_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_dataman_response_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_dataman_response_s.c
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_dataman_response_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_dataman_response_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_dataman_response_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_dataman_response_s.c.i
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_dataman_response_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_dataman_response_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_dataman_response_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_dataman_response_s.c.s
-
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_array_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_array_s.c.o: rosidl_generator_py/px4_msgs/msg/_debug_array_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_array_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_array_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_array_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_array_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_array_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_array_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_debug_array_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_array_s.c.i: cmake_force
@@ -478,7 +408,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_d
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_key_value_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_key_value_s.c.o: rosidl_generator_py/px4_msgs/msg/_debug_key_value_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_key_value_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_key_value_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_key_value_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_key_value_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_key_value_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_key_value_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_debug_key_value_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_key_value_s.c.i: cmake_force
@@ -492,7 +422,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_d
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_value_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_value_s.c.o: rosidl_generator_py/px4_msgs/msg/_debug_value_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_value_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_value_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_value_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_value_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_value_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_value_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_debug_value_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_value_s.c.i: cmake_force
@@ -506,7 +436,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_d
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_vect_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_vect_s.c.o: rosidl_generator_py/px4_msgs/msg/_debug_vect_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_vect_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_vect_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_vect_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_vect_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_vect_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_vect_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_debug_vect_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_vect_s.c.i: cmake_force
@@ -520,7 +450,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_d
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_differential_pressure_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_differential_pressure_s.c.o: rosidl_generator_py/px4_msgs/msg/_differential_pressure_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_differential_pressure_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_differential_pressure_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_differential_pressure_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_differential_pressure_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_differential_pressure_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_differential_pressure_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_differential_pressure_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_differential_pressure_s.c.i: cmake_force
@@ -534,7 +464,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_d
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_distance_sensor_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_distance_sensor_s.c.o: rosidl_generator_py/px4_msgs/msg/_distance_sensor_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_distance_sensor_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_distance_sensor_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_distance_sensor_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_distance_sensor_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_distance_sensor_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_distance_sensor_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_distance_sensor_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_distance_sensor_s.c.i: cmake_force
@@ -545,24 +475,10 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_d
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_distance_sensor_s.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_distance_sensor_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_distance_sensor_s.c.s
 
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_distance_sensor_mode_change_request_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_distance_sensor_mode_change_request_s.c.o: rosidl_generator_py/px4_msgs/msg/_distance_sensor_mode_change_request_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_distance_sensor_mode_change_request_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_distance_sensor_mode_change_request_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_distance_sensor_mode_change_request_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_distance_sensor_mode_change_request_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_distance_sensor_mode_change_request_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_distance_sensor_mode_change_request_s.c
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_distance_sensor_mode_change_request_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_distance_sensor_mode_change_request_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_distance_sensor_mode_change_request_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_distance_sensor_mode_change_request_s.c.i
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_distance_sensor_mode_change_request_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_distance_sensor_mode_change_request_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_distance_sensor_mode_change_request_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_distance_sensor_mode_change_request_s.c.s
-
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ekf2_timestamps_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ekf2_timestamps_s.c.o: rosidl_generator_py/px4_msgs/msg/_ekf2_timestamps_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ekf2_timestamps_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ekf2_timestamps_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ekf2_timestamps_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ekf2_timestamps_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ekf2_timestamps_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ekf2_timestamps_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_ekf2_timestamps_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ekf2_timestamps_s.c.i: cmake_force
@@ -576,7 +492,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_e
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_esc_report_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_esc_report_s.c.o: rosidl_generator_py/px4_msgs/msg/_esc_report_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_esc_report_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_esc_report_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_esc_report_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_esc_report_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_esc_report_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_esc_report_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_esc_report_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_esc_report_s.c.i: cmake_force
@@ -590,7 +506,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_e
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_esc_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_esc_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_esc_status_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_esc_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_esc_status_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_esc_status_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_esc_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_esc_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_esc_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_esc_status_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_esc_status_s.c.i: cmake_force
@@ -604,7 +520,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_e
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_aid_source1d_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_aid_source1d_s.c.o: rosidl_generator_py/px4_msgs/msg/_estimator_aid_source1d_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_aid_source1d_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_aid_source1d_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_aid_source1d_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_aid_source1d_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_aid_source1d_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_aid_source1d_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_estimator_aid_source1d_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_aid_source1d_s.c.i: cmake_force
@@ -618,7 +534,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_e
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_aid_source2d_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_aid_source2d_s.c.o: rosidl_generator_py/px4_msgs/msg/_estimator_aid_source2d_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_aid_source2d_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_aid_source2d_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_aid_source2d_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_aid_source2d_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_aid_source2d_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_aid_source2d_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_estimator_aid_source2d_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_aid_source2d_s.c.i: cmake_force
@@ -632,7 +548,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_e
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_aid_source3d_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_aid_source3d_s.c.o: rosidl_generator_py/px4_msgs/msg/_estimator_aid_source3d_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_aid_source3d_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_aid_source3d_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_aid_source3d_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_aid_source3d_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_aid_source3d_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_aid_source3d_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_estimator_aid_source3d_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_aid_source3d_s.c.i: cmake_force
@@ -646,7 +562,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_e
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_bias_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_bias_s.c.o: rosidl_generator_py/px4_msgs/msg/_estimator_bias_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_bias_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_bias_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_bias_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_bias_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_bias_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_bias_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_estimator_bias_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_bias_s.c.i: cmake_force
@@ -660,7 +576,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_e
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_bias3d_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_bias3d_s.c.o: rosidl_generator_py/px4_msgs/msg/_estimator_bias3d_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_bias3d_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_bias3d_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_bias3d_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_bias3d_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_bias3d_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_bias3d_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_estimator_bias3d_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_bias3d_s.c.i: cmake_force
@@ -674,7 +590,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_e
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_event_flags_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_event_flags_s.c.o: rosidl_generator_py/px4_msgs/msg/_estimator_event_flags_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_event_flags_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_event_flags_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_event_flags_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_event_flags_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_event_flags_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_event_flags_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_estimator_event_flags_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_event_flags_s.c.i: cmake_force
@@ -688,7 +604,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_e
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_gps_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_gps_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_estimator_gps_status_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_gps_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_gps_status_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_gps_status_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_gps_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_gps_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_gps_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_estimator_gps_status_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_gps_status_s.c.i: cmake_force
@@ -702,7 +618,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_e
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_innovations_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_innovations_s.c.o: rosidl_generator_py/px4_msgs/msg/_estimator_innovations_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_innovations_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_innovations_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_innovations_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_innovations_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_innovations_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_innovations_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_estimator_innovations_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_innovations_s.c.i: cmake_force
@@ -716,7 +632,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_e
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_selector_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_selector_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_estimator_selector_status_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_selector_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_selector_status_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_selector_status_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_selector_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_selector_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_selector_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_estimator_selector_status_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_selector_status_s.c.i: cmake_force
@@ -730,7 +646,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_e
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_sensor_bias_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_sensor_bias_s.c.o: rosidl_generator_py/px4_msgs/msg/_estimator_sensor_bias_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_sensor_bias_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_sensor_bias_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_sensor_bias_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_sensor_bias_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_sensor_bias_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_sensor_bias_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_estimator_sensor_bias_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_sensor_bias_s.c.i: cmake_force
@@ -744,7 +660,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_e
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_states_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_states_s.c.o: rosidl_generator_py/px4_msgs/msg/_estimator_states_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_states_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_states_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_states_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_states_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_states_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_states_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_estimator_states_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_states_s.c.i: cmake_force
@@ -758,7 +674,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_e
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_estimator_status_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_status_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_status_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_estimator_status_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_status_s.c.i: cmake_force
@@ -772,7 +688,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_e
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_status_flags_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_status_flags_s.c.o: rosidl_generator_py/px4_msgs/msg/_estimator_status_flags_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_status_flags_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_status_flags_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_status_flags_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_status_flags_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_status_flags_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_status_flags_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_estimator_status_flags_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_estimator_status_flags_s.c.i: cmake_force
@@ -786,7 +702,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_e
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_event_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_event_s.c.o: rosidl_generator_py/px4_msgs/msg/_event_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_event_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_event_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_event_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_event_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_event_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_event_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_event_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_event_s.c.i: cmake_force
@@ -800,7 +716,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_e
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_failsafe_flags_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_failsafe_flags_s.c.o: rosidl_generator_py/px4_msgs/msg/_failsafe_flags_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_failsafe_flags_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_failsafe_flags_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_failsafe_flags_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_failsafe_flags_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_failsafe_flags_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_failsafe_flags_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_failsafe_flags_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_failsafe_flags_s.c.i: cmake_force
@@ -814,7 +730,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_f
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_failure_detector_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_failure_detector_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_failure_detector_status_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_failure_detector_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_failure_detector_status_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_failure_detector_status_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_failure_detector_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_failure_detector_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_failure_detector_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_failure_detector_status_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_failure_detector_status_s.c.i: cmake_force
@@ -825,38 +741,10 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_f
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_failure_detector_status_s.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_failure_detector_status_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_failure_detector_status_s.c.s
 
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_figure_eight_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_figure_eight_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_figure_eight_status_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_figure_eight_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_figure_eight_status_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_figure_eight_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_figure_eight_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_figure_eight_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_figure_eight_status_s.c
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_figure_eight_status_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_figure_eight_status_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_figure_eight_status_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_figure_eight_status_s.c.i
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_figure_eight_status_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_figure_eight_status_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_figure_eight_status_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_figure_eight_status_s.c.s
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_flight_phase_estimation_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_flight_phase_estimation_s.c.o: rosidl_generator_py/px4_msgs/msg/_flight_phase_estimation_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_flight_phase_estimation_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_flight_phase_estimation_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_flight_phase_estimation_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_flight_phase_estimation_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_flight_phase_estimation_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_flight_phase_estimation_s.c
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_flight_phase_estimation_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_flight_phase_estimation_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_flight_phase_estimation_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_flight_phase_estimation_s.c.i
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_flight_phase_estimation_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_flight_phase_estimation_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_flight_phase_estimation_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_flight_phase_estimation_s.c.s
-
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_follow_target_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_follow_target_s.c.o: rosidl_generator_py/px4_msgs/msg/_follow_target_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_follow_target_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_follow_target_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_follow_target_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_follow_target_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_follow_target_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_follow_target_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_follow_target_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_follow_target_s.c.i: cmake_force
@@ -870,7 +758,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_f
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_follow_target_estimator_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_follow_target_estimator_s.c.o: rosidl_generator_py/px4_msgs/msg/_follow_target_estimator_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_follow_target_estimator_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_follow_target_estimator_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_follow_target_estimator_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_follow_target_estimator_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_follow_target_estimator_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_follow_target_estimator_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_follow_target_estimator_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_follow_target_estimator_s.c.i: cmake_force
@@ -884,7 +772,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_f
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_follow_target_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_follow_target_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_follow_target_status_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_follow_target_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_follow_target_status_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_follow_target_status_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_follow_target_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_follow_target_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_follow_target_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_follow_target_status_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_follow_target_status_s.c.i: cmake_force
@@ -895,24 +783,10 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_f
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_follow_target_status_s.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_follow_target_status_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_follow_target_status_s.c.s
 
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_fuel_tank_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_fuel_tank_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_fuel_tank_status_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_fuel_tank_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_fuel_tank_status_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_fuel_tank_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_fuel_tank_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_fuel_tank_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_fuel_tank_status_s.c
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_fuel_tank_status_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_fuel_tank_status_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_fuel_tank_status_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_fuel_tank_status_s.c.i
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_fuel_tank_status_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_fuel_tank_status_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_fuel_tank_status_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_fuel_tank_status_s.c.s
-
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_generator_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_generator_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_generator_status_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_generator_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_generator_status_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_generator_status_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_generator_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_generator_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_generator_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_generator_status_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_generator_status_s.c.i: cmake_force
@@ -926,7 +800,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_g
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_geofence_result_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_geofence_result_s.c.o: rosidl_generator_py/px4_msgs/msg/_geofence_result_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_geofence_result_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_geofence_result_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_geofence_result_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_geofence_result_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_geofence_result_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_geofence_result_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_geofence_result_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_geofence_result_s.c.i: cmake_force
@@ -937,24 +811,10 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_g
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_geofence_result_s.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_geofence_result_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_geofence_result_s.c.s
 
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_geofence_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_geofence_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_geofence_status_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_geofence_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_geofence_status_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_geofence_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_geofence_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_geofence_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_geofence_status_s.c
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_geofence_status_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_geofence_status_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_geofence_status_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_geofence_status_s.c.i
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_geofence_status_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_geofence_status_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_geofence_status_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_geofence_status_s.c.s
-
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_controls_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_controls_s.c.o: rosidl_generator_py/px4_msgs/msg/_gimbal_controls_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_controls_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_controls_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_controls_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_controls_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_controls_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_controls_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_gimbal_controls_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_controls_s.c.i: cmake_force
@@ -968,7 +828,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_g
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_device_attitude_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_device_attitude_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_gimbal_device_attitude_status_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_device_attitude_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_device_attitude_status_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_device_attitude_status_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_device_attitude_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_device_attitude_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_device_attitude_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_gimbal_device_attitude_status_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_device_attitude_status_s.c.i: cmake_force
@@ -982,7 +842,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_g
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_device_information_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_device_information_s.c.o: rosidl_generator_py/px4_msgs/msg/_gimbal_device_information_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_device_information_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_device_information_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_device_information_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_device_information_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_device_information_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_device_information_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_gimbal_device_information_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_device_information_s.c.i: cmake_force
@@ -996,7 +856,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_g
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_device_set_attitude_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_device_set_attitude_s.c.o: rosidl_generator_py/px4_msgs/msg/_gimbal_device_set_attitude_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_device_set_attitude_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_device_set_attitude_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_device_set_attitude_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_device_set_attitude_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_device_set_attitude_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_device_set_attitude_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_gimbal_device_set_attitude_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_device_set_attitude_s.c.i: cmake_force
@@ -1010,7 +870,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_g
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_information_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_information_s.c.o: rosidl_generator_py/px4_msgs/msg/_gimbal_manager_information_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_information_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_information_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_information_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_information_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_information_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_information_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_information_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_information_s.c.i: cmake_force
@@ -1024,7 +884,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_g
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_set_attitude_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_set_attitude_s.c.o: rosidl_generator_py/px4_msgs/msg/_gimbal_manager_set_attitude_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_set_attitude_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_set_attitude_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_set_attitude_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_set_attitude_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_set_attitude_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_set_attitude_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_set_attitude_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_set_attitude_s.c.i: cmake_force
@@ -1038,7 +898,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_g
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_set_manual_control_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_set_manual_control_s.c.o: rosidl_generator_py/px4_msgs/msg/_gimbal_manager_set_manual_control_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_set_manual_control_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_set_manual_control_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_set_manual_control_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_set_manual_control_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_set_manual_control_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_set_manual_control_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_set_manual_control_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_set_manual_control_s.c.i: cmake_force
@@ -1052,7 +912,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_g
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_gimbal_manager_status_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_status_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_status_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_status_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_status_s.c.i: cmake_force
@@ -1063,80 +923,10 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_g
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_status_s.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_status_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_status_s.c.s
 
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_goto_setpoint_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_goto_setpoint_s.c.o: rosidl_generator_py/px4_msgs/msg/_goto_setpoint_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_goto_setpoint_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_goto_setpoint_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_goto_setpoint_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_goto_setpoint_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_goto_setpoint_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_goto_setpoint_s.c
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_goto_setpoint_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_goto_setpoint_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_goto_setpoint_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_goto_setpoint_s.c.i
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_goto_setpoint_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_goto_setpoint_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_goto_setpoint_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_goto_setpoint_s.c.s
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_config_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_config_s.c.o: rosidl_generator_py/px4_msgs/msg/_gpio_config_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_config_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_config_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_config_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_config_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_config_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_gpio_config_s.c
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_config_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_config_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_gpio_config_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_config_s.c.i
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_config_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_config_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_gpio_config_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_config_s.c.s
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_in_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_in_s.c.o: rosidl_generator_py/px4_msgs/msg/_gpio_in_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_in_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_in_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_in_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_in_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_in_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_gpio_in_s.c
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_in_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_in_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_gpio_in_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_in_s.c.i
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_in_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_in_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_gpio_in_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_in_s.c.s
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_out_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_out_s.c.o: rosidl_generator_py/px4_msgs/msg/_gpio_out_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_out_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_out_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_out_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_out_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_out_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_gpio_out_s.c
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_out_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_out_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_gpio_out_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_out_s.c.i
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_out_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_out_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_gpio_out_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_out_s.c.s
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_request_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_request_s.c.o: rosidl_generator_py/px4_msgs/msg/_gpio_request_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_request_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_request_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_request_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_request_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_request_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_gpio_request_s.c
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_request_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_request_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_gpio_request_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_request_s.c.i
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_request_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_request_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_gpio_request_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_request_s.c.s
-
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gps_dump_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gps_dump_s.c.o: rosidl_generator_py/px4_msgs/msg/_gps_dump_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gps_dump_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gps_dump_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gps_dump_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gps_dump_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gps_dump_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gps_dump_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_gps_dump_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gps_dump_s.c.i: cmake_force
@@ -1150,7 +940,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_g
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gps_inject_data_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gps_inject_data_s.c.o: rosidl_generator_py/px4_msgs/msg/_gps_inject_data_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gps_inject_data_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gps_inject_data_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gps_inject_data_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gps_inject_data_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gps_inject_data_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gps_inject_data_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_gps_inject_data_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gps_inject_data_s.c.i: cmake_force
@@ -1164,7 +954,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_g
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gripper_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gripper_s.c.o: rosidl_generator_py/px4_msgs/msg/_gripper_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gripper_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gripper_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gripper_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gripper_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gripper_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gripper_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_gripper_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gripper_s.c.i: cmake_force
@@ -1178,7 +968,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_g
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_health_report_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_health_report_s.c.o: rosidl_generator_py/px4_msgs/msg/_health_report_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_health_report_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_health_report_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_health_report_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_health_report_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_health_report_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_health_report_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_health_report_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_health_report_s.c.i: cmake_force
@@ -1192,7 +982,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_h
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_heater_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_heater_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_heater_status_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_heater_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_heater_status_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_heater_status_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_heater_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_heater_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_heater_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_heater_status_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_heater_status_s.c.i: cmake_force
@@ -1206,7 +996,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_h
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_home_position_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_home_position_s.c.o: rosidl_generator_py/px4_msgs/msg/_home_position_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_home_position_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_home_position_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_home_position_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_home_position_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_home_position_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_home_position_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_home_position_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_home_position_s.c.i: cmake_force
@@ -1220,7 +1010,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_h
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_hover_thrust_estimate_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_hover_thrust_estimate_s.c.o: rosidl_generator_py/px4_msgs/msg/_hover_thrust_estimate_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_hover_thrust_estimate_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_hover_thrust_estimate_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_hover_thrust_estimate_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_hover_thrust_estimate_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_hover_thrust_estimate_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_hover_thrust_estimate_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_hover_thrust_estimate_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_hover_thrust_estimate_s.c.i: cmake_force
@@ -1234,7 +1024,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_h
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_input_rc_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_input_rc_s.c.o: rosidl_generator_py/px4_msgs/msg/_input_rc_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_input_rc_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_input_rc_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_input_rc_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_input_rc_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_input_rc_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_input_rc_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_input_rc_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_input_rc_s.c.i: cmake_force
@@ -1245,24 +1035,10 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_i
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_input_rc_s.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_input_rc_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_input_rc_s.c.s
 
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_internal_combustion_engine_control_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_internal_combustion_engine_control_s.c.o: rosidl_generator_py/px4_msgs/msg/_internal_combustion_engine_control_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_internal_combustion_engine_control_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_internal_combustion_engine_control_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_internal_combustion_engine_control_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_internal_combustion_engine_control_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_internal_combustion_engine_control_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_internal_combustion_engine_control_s.c
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_internal_combustion_engine_control_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_internal_combustion_engine_control_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_internal_combustion_engine_control_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_internal_combustion_engine_control_s.c.i
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_internal_combustion_engine_control_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_internal_combustion_engine_control_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_internal_combustion_engine_control_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_internal_combustion_engine_control_s.c.s
-
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_internal_combustion_engine_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_internal_combustion_engine_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_internal_combustion_engine_status_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_internal_combustion_engine_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_internal_combustion_engine_status_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_internal_combustion_engine_status_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_internal_combustion_engine_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_internal_combustion_engine_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_internal_combustion_engine_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_internal_combustion_engine_status_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_internal_combustion_engine_status_s.c.i: cmake_force
@@ -1276,7 +1052,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_i
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_iridiumsbd_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_iridiumsbd_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_iridiumsbd_status_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_iridiumsbd_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_iridiumsbd_status_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_iridiumsbd_status_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_iridiumsbd_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_iridiumsbd_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_iridiumsbd_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_iridiumsbd_status_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_iridiumsbd_status_s.c.i: cmake_force
@@ -1290,7 +1066,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_i
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_irlock_report_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_irlock_report_s.c.o: rosidl_generator_py/px4_msgs/msg/_irlock_report_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_irlock_report_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_irlock_report_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_irlock_report_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_irlock_report_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_irlock_report_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_irlock_report_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_irlock_report_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_irlock_report_s.c.i: cmake_force
@@ -1304,7 +1080,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_i
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_landing_gear_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_landing_gear_s.c.o: rosidl_generator_py/px4_msgs/msg/_landing_gear_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_landing_gear_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_landing_gear_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_landing_gear_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_landing_gear_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_landing_gear_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_landing_gear_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_landing_gear_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_landing_gear_s.c.i: cmake_force
@@ -1318,7 +1094,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_l
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_landing_gear_wheel_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_landing_gear_wheel_s.c.o: rosidl_generator_py/px4_msgs/msg/_landing_gear_wheel_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_landing_gear_wheel_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_landing_gear_wheel_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_landing_gear_wheel_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_landing_gear_wheel_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_landing_gear_wheel_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_landing_gear_wheel_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_landing_gear_wheel_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_landing_gear_wheel_s.c.i: cmake_force
@@ -1332,7 +1108,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_l
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_landing_target_innovations_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_landing_target_innovations_s.c.o: rosidl_generator_py/px4_msgs/msg/_landing_target_innovations_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_landing_target_innovations_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_landing_target_innovations_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_landing_target_innovations_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_landing_target_innovations_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_landing_target_innovations_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_landing_target_innovations_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_landing_target_innovations_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_landing_target_innovations_s.c.i: cmake_force
@@ -1346,7 +1122,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_l
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_landing_target_pose_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_landing_target_pose_s.c.o: rosidl_generator_py/px4_msgs/msg/_landing_target_pose_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_landing_target_pose_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_landing_target_pose_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_landing_target_pose_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_landing_target_pose_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_landing_target_pose_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_landing_target_pose_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_landing_target_pose_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_landing_target_pose_s.c.i: cmake_force
@@ -1360,7 +1136,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_l
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_launch_detection_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_launch_detection_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_launch_detection_status_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_launch_detection_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_launch_detection_status_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_launch_detection_status_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_launch_detection_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_launch_detection_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_launch_detection_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_launch_detection_status_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_launch_detection_status_s.c.i: cmake_force
@@ -1374,7 +1150,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_l
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_led_control_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_led_control_s.c.o: rosidl_generator_py/px4_msgs/msg/_led_control_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_led_control_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_led_control_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_led_control_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_led_control_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_led_control_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_led_control_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_led_control_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_led_control_s.c.i: cmake_force
@@ -1388,7 +1164,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_l
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_log_message_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_log_message_s.c.o: rosidl_generator_py/px4_msgs/msg/_log_message_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_log_message_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_log_message_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_log_message_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_log_message_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_log_message_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_log_message_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_log_message_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_log_message_s.c.i: cmake_force
@@ -1402,7 +1178,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_l
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_logger_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_logger_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_logger_status_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_logger_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_logger_status_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_logger_status_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_logger_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_logger_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_logger_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_logger_status_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_logger_status_s.c.i: cmake_force
@@ -1416,7 +1192,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_l
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mag_worker_data_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mag_worker_data_s.c.o: rosidl_generator_py/px4_msgs/msg/_mag_worker_data_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mag_worker_data_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mag_worker_data_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mag_worker_data_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mag_worker_data_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mag_worker_data_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mag_worker_data_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_mag_worker_data_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mag_worker_data_s.c.i: cmake_force
@@ -1430,7 +1206,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_m
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_magnetometer_bias_estimate_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_magnetometer_bias_estimate_s.c.o: rosidl_generator_py/px4_msgs/msg/_magnetometer_bias_estimate_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_magnetometer_bias_estimate_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_magnetometer_bias_estimate_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_magnetometer_bias_estimate_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_magnetometer_bias_estimate_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_magnetometer_bias_estimate_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_magnetometer_bias_estimate_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_magnetometer_bias_estimate_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_magnetometer_bias_estimate_s.c.i: cmake_force
@@ -1444,7 +1220,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_m
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_manual_control_setpoint_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_manual_control_setpoint_s.c.o: rosidl_generator_py/px4_msgs/msg/_manual_control_setpoint_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_manual_control_setpoint_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_manual_control_setpoint_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_manual_control_setpoint_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_manual_control_setpoint_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_manual_control_setpoint_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_manual_control_setpoint_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_manual_control_setpoint_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_manual_control_setpoint_s.c.i: cmake_force
@@ -1458,7 +1234,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_m
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_manual_control_switches_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_manual_control_switches_s.c.o: rosidl_generator_py/px4_msgs/msg/_manual_control_switches_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_manual_control_switches_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_manual_control_switches_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_manual_control_switches_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_manual_control_switches_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_manual_control_switches_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_manual_control_switches_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_manual_control_switches_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_manual_control_switches_s.c.i: cmake_force
@@ -1472,7 +1248,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_m
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mavlink_log_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mavlink_log_s.c.o: rosidl_generator_py/px4_msgs/msg/_mavlink_log_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mavlink_log_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mavlink_log_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mavlink_log_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mavlink_log_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mavlink_log_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mavlink_log_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_mavlink_log_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mavlink_log_s.c.i: cmake_force
@@ -1486,7 +1262,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_m
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mavlink_tunnel_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mavlink_tunnel_s.c.o: rosidl_generator_py/px4_msgs/msg/_mavlink_tunnel_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mavlink_tunnel_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mavlink_tunnel_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mavlink_tunnel_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mavlink_tunnel_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mavlink_tunnel_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mavlink_tunnel_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_mavlink_tunnel_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mavlink_tunnel_s.c.i: cmake_force
@@ -1497,38 +1273,10 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_m
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mavlink_tunnel_s.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_mavlink_tunnel_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mavlink_tunnel_s.c.s
 
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_message_format_request_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_message_format_request_s.c.o: rosidl_generator_py/px4_msgs/msg/_message_format_request_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_message_format_request_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_message_format_request_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_message_format_request_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_message_format_request_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_message_format_request_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_message_format_request_s.c
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_message_format_request_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_message_format_request_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_message_format_request_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_message_format_request_s.c.i
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_message_format_request_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_message_format_request_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_message_format_request_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_message_format_request_s.c.s
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_message_format_response_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_message_format_response_s.c.o: rosidl_generator_py/px4_msgs/msg/_message_format_response_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_message_format_response_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_message_format_response_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_message_format_response_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_message_format_response_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_message_format_response_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_message_format_response_s.c
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_message_format_response_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_message_format_response_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_message_format_response_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_message_format_response_s.c.i
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_message_format_response_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_message_format_response_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_message_format_response_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_message_format_response_s.c.s
-
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mission_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mission_s.c.o: rosidl_generator_py/px4_msgs/msg/_mission_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mission_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mission_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mission_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mission_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mission_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mission_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_mission_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mission_s.c.i: cmake_force
@@ -1542,7 +1290,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_m
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mission_result_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mission_result_s.c.o: rosidl_generator_py/px4_msgs/msg/_mission_result_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mission_result_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mission_result_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mission_result_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mission_result_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mission_result_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mission_result_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_mission_result_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mission_result_s.c.i: cmake_force
@@ -1556,7 +1304,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_m
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mode_completed_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mode_completed_s.c.o: rosidl_generator_py/px4_msgs/msg/_mode_completed_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mode_completed_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mode_completed_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mode_completed_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mode_completed_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mode_completed_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mode_completed_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_mode_completed_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mode_completed_s.c.i: cmake_force
@@ -1570,7 +1318,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_m
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mount_orientation_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mount_orientation_s.c.o: rosidl_generator_py/px4_msgs/msg/_mount_orientation_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mount_orientation_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mount_orientation_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mount_orientation_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mount_orientation_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mount_orientation_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mount_orientation_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_mount_orientation_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mount_orientation_s.c.i: cmake_force
@@ -1584,7 +1332,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_m
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_navigator_mission_item_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_navigator_mission_item_s.c.o: rosidl_generator_py/px4_msgs/msg/_navigator_mission_item_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_navigator_mission_item_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_navigator_mission_item_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_navigator_mission_item_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_navigator_mission_item_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_navigator_mission_item_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_navigator_mission_item_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_navigator_mission_item_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_navigator_mission_item_s.c.i: cmake_force
@@ -1595,24 +1343,10 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_n
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_navigator_mission_item_s.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_navigator_mission_item_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_navigator_mission_item_s.c.s
 
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_navigator_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_navigator_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_navigator_status_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_navigator_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_navigator_status_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_navigator_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_navigator_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_navigator_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_navigator_status_s.c
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_navigator_status_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_navigator_status_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_navigator_status_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_navigator_status_s.c.i
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_navigator_status_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_navigator_status_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_navigator_status_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_navigator_status_s.c.s
-
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_normalized_unsigned_setpoint_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_normalized_unsigned_setpoint_s.c.o: rosidl_generator_py/px4_msgs/msg/_normalized_unsigned_setpoint_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_normalized_unsigned_setpoint_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_normalized_unsigned_setpoint_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_normalized_unsigned_setpoint_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_normalized_unsigned_setpoint_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_normalized_unsigned_setpoint_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_normalized_unsigned_setpoint_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_normalized_unsigned_setpoint_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_normalized_unsigned_setpoint_s.c.i: cmake_force
@@ -1626,7 +1360,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_n
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_npfg_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_npfg_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_npfg_status_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_npfg_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_npfg_status_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_npfg_status_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_npfg_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_npfg_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_npfg_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_npfg_status_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_npfg_status_s.c.i: cmake_force
@@ -1640,7 +1374,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_n
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_obstacle_distance_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_obstacle_distance_s.c.o: rosidl_generator_py/px4_msgs/msg/_obstacle_distance_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_obstacle_distance_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_obstacle_distance_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_obstacle_distance_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_obstacle_distance_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_obstacle_distance_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_obstacle_distance_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_obstacle_distance_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_obstacle_distance_s.c.i: cmake_force
@@ -1654,7 +1388,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_o
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_offboard_control_mode_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_offboard_control_mode_s.c.o: rosidl_generator_py/px4_msgs/msg/_offboard_control_mode_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_offboard_control_mode_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_114) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_offboard_control_mode_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_offboard_control_mode_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_offboard_control_mode_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_offboard_control_mode_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_offboard_control_mode_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_offboard_control_mode_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_offboard_control_mode_s.c.i: cmake_force
@@ -1668,7 +1402,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_o
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_onboard_computer_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_onboard_computer_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_onboard_computer_status_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_onboard_computer_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_115) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_onboard_computer_status_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_onboard_computer_status_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_onboard_computer_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_onboard_computer_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_onboard_computer_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_onboard_computer_status_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_onboard_computer_status_s.c.i: cmake_force
@@ -1679,66 +1413,10 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_o
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_onboard_computer_status_s.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_onboard_computer_status_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_onboard_computer_status_s.c.s
 
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_arm_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_arm_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_open_drone_id_arm_status_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_arm_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_116) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_arm_status_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_arm_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_arm_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_arm_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_open_drone_id_arm_status_s.c
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_arm_status_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_arm_status_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_open_drone_id_arm_status_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_arm_status_s.c.i
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_arm_status_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_arm_status_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_open_drone_id_arm_status_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_arm_status_s.c.s
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_operator_id_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_operator_id_s.c.o: rosidl_generator_py/px4_msgs/msg/_open_drone_id_operator_id_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_operator_id_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_operator_id_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_operator_id_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_operator_id_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_operator_id_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_open_drone_id_operator_id_s.c
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_operator_id_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_operator_id_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_open_drone_id_operator_id_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_operator_id_s.c.i
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_operator_id_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_operator_id_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_open_drone_id_operator_id_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_operator_id_s.c.s
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_self_id_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_self_id_s.c.o: rosidl_generator_py/px4_msgs/msg/_open_drone_id_self_id_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_self_id_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_self_id_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_self_id_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_self_id_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_self_id_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_open_drone_id_self_id_s.c
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_self_id_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_self_id_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_open_drone_id_self_id_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_self_id_s.c.i
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_self_id_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_self_id_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_open_drone_id_self_id_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_self_id_s.c.s
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_system_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_system_s.c.o: rosidl_generator_py/px4_msgs/msg/_open_drone_id_system_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_system_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_system_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_system_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_system_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_system_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_open_drone_id_system_s.c
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_system_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_system_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_open_drone_id_system_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_system_s.c.i
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_system_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_system_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_open_drone_id_system_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_system_s.c.s
-
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orb_test_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orb_test_s.c.o: rosidl_generator_py/px4_msgs/msg/_orb_test_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orb_test_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orb_test_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orb_test_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orb_test_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orb_test_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orb_test_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_orb_test_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orb_test_s.c.i: cmake_force
@@ -1752,7 +1430,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_o
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orb_test_large_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orb_test_large_s.c.o: rosidl_generator_py/px4_msgs/msg/_orb_test_large_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orb_test_large_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orb_test_large_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orb_test_large_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orb_test_large_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orb_test_large_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orb_test_large_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_orb_test_large_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orb_test_large_s.c.i: cmake_force
@@ -1766,7 +1444,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_o
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orb_test_medium_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orb_test_medium_s.c.o: rosidl_generator_py/px4_msgs/msg/_orb_test_medium_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orb_test_medium_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_122) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orb_test_medium_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orb_test_medium_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orb_test_medium_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orb_test_medium_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orb_test_medium_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_orb_test_medium_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orb_test_medium_s.c.i: cmake_force
@@ -1780,7 +1458,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_o
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orbit_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orbit_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_orbit_status_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orbit_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_123) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orbit_status_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orbit_status_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orbit_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orbit_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orbit_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_orbit_status_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orbit_status_s.c.i: cmake_force
@@ -1791,66 +1469,10 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_o
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orbit_status_s.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_orbit_status_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orbit_status_s.c.s
 
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_reset_request_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_reset_request_s.c.o: rosidl_generator_py/px4_msgs/msg/_parameter_reset_request_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_reset_request_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_124) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_reset_request_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_reset_request_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_reset_request_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_reset_request_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_parameter_reset_request_s.c
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_reset_request_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_reset_request_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_parameter_reset_request_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_reset_request_s.c.i
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_reset_request_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_reset_request_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_parameter_reset_request_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_reset_request_s.c.s
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_used_request_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_used_request_s.c.o: rosidl_generator_py/px4_msgs/msg/_parameter_set_used_request_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_used_request_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_used_request_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_used_request_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_used_request_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_used_request_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_parameter_set_used_request_s.c
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_used_request_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_used_request_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_parameter_set_used_request_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_used_request_s.c.i
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_used_request_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_used_request_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_parameter_set_used_request_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_used_request_s.c.s
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_value_request_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_value_request_s.c.o: rosidl_generator_py/px4_msgs/msg/_parameter_set_value_request_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_value_request_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_126) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_value_request_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_value_request_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_value_request_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_value_request_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_parameter_set_value_request_s.c
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_value_request_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_value_request_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_parameter_set_value_request_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_value_request_s.c.i
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_value_request_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_value_request_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_parameter_set_value_request_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_value_request_s.c.s
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_value_response_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_value_response_s.c.o: rosidl_generator_py/px4_msgs/msg/_parameter_set_value_response_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_value_response_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_127) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_value_response_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_value_response_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_value_response_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_value_response_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_parameter_set_value_response_s.c
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_value_response_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_value_response_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_parameter_set_value_response_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_value_response_s.c.i
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_value_response_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_value_response_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_parameter_set_value_response_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_value_response_s.c.s
-
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_update_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_update_s.c.o: rosidl_generator_py/px4_msgs/msg/_parameter_update_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_update_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_128) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_update_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_update_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_update_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_update_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_update_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_parameter_update_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_update_s.c.i: cmake_force
@@ -1864,7 +1486,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_p
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ping_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ping_s.c.o: rosidl_generator_py/px4_msgs/msg/_ping_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ping_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_129) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ping_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ping_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ping_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ping_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ping_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_ping_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ping_s.c.i: cmake_force
@@ -1878,7 +1500,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_p
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_position_controller_landing_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_position_controller_landing_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_position_controller_landing_status_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_position_controller_landing_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_130) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_position_controller_landing_status_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_position_controller_landing_status_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_position_controller_landing_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_position_controller_landing_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_position_controller_landing_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_position_controller_landing_status_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_position_controller_landing_status_s.c.i: cmake_force
@@ -1892,7 +1514,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_p
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_position_controller_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_position_controller_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_position_controller_status_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_position_controller_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_131) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_position_controller_status_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_position_controller_status_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_position_controller_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_position_controller_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_position_controller_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_position_controller_status_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_position_controller_status_s.c.i: cmake_force
@@ -1906,7 +1528,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_p
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_position_setpoint_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_position_setpoint_s.c.o: rosidl_generator_py/px4_msgs/msg/_position_setpoint_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_position_setpoint_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_132) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_position_setpoint_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_position_setpoint_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_position_setpoint_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_position_setpoint_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_position_setpoint_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_position_setpoint_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_position_setpoint_s.c.i: cmake_force
@@ -1920,7 +1542,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_p
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_position_setpoint_triplet_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_position_setpoint_triplet_s.c.o: rosidl_generator_py/px4_msgs/msg/_position_setpoint_triplet_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_position_setpoint_triplet_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_133) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_position_setpoint_triplet_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_position_setpoint_triplet_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_position_setpoint_triplet_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_position_setpoint_triplet_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_position_setpoint_triplet_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_position_setpoint_triplet_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_position_setpoint_triplet_s.c.i: cmake_force
@@ -1934,7 +1556,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_p
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_power_button_state_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_power_button_state_s.c.o: rosidl_generator_py/px4_msgs/msg/_power_button_state_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_power_button_state_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_134) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_power_button_state_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_power_button_state_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_power_button_state_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_power_button_state_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_power_button_state_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_power_button_state_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_power_button_state_s.c.i: cmake_force
@@ -1948,7 +1570,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_p
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_power_monitor_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_power_monitor_s.c.o: rosidl_generator_py/px4_msgs/msg/_power_monitor_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_power_monitor_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_135) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_power_monitor_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_power_monitor_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_power_monitor_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_power_monitor_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_power_monitor_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_power_monitor_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_power_monitor_s.c.i: cmake_force
@@ -1962,7 +1584,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_p
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_pps_capture_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_pps_capture_s.c.o: rosidl_generator_py/px4_msgs/msg/_pps_capture_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_pps_capture_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_136) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_pps_capture_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_pps_capture_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_pps_capture_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_pps_capture_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_pps_capture_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_pps_capture_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_pps_capture_s.c.i: cmake_force
@@ -1973,24 +1595,10 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_p
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_pps_capture_s.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_pps_capture_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_pps_capture_s.c.s
 
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_pure_pursuit_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_pure_pursuit_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_pure_pursuit_status_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_pure_pursuit_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_137) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_pure_pursuit_status_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_pure_pursuit_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_pure_pursuit_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_pure_pursuit_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_pure_pursuit_status_s.c
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_pure_pursuit_status_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_pure_pursuit_status_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_pure_pursuit_status_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_pure_pursuit_status_s.c.i
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_pure_pursuit_status_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_pure_pursuit_status_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_pure_pursuit_status_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_pure_pursuit_status_s.c.s
-
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_pwm_input_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_pwm_input_s.c.o: rosidl_generator_py/px4_msgs/msg/_pwm_input_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_pwm_input_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_138) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_pwm_input_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_pwm_input_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_pwm_input_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_pwm_input_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_pwm_input_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_pwm_input_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_pwm_input_s.c.i: cmake_force
@@ -2004,7 +1612,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_p
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_px4io_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_px4io_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_px4io_status_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_px4io_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_139) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_px4io_status_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_px4io_status_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_px4io_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_px4io_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_px4io_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_px4io_status_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_px4io_status_s.c.i: cmake_force
@@ -2018,7 +1626,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_p
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_qshell_req_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_qshell_req_s.c.o: rosidl_generator_py/px4_msgs/msg/_qshell_req_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_qshell_req_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_140) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_qshell_req_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_qshell_req_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_qshell_req_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_qshell_req_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_qshell_req_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_qshell_req_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_qshell_req_s.c.i: cmake_force
@@ -2032,7 +1640,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_q
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_qshell_retval_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_qshell_retval_s.c.o: rosidl_generator_py/px4_msgs/msg/_qshell_retval_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_qshell_retval_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_141) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_qshell_retval_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_qshell_retval_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_qshell_retval_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_qshell_retval_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_qshell_retval_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_qshell_retval_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_qshell_retval_s.c.i: cmake_force
@@ -2046,7 +1654,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_q
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_radio_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_radio_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_radio_status_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_radio_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_142) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_radio_status_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_114) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_radio_status_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_radio_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_radio_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_radio_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_radio_status_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_radio_status_s.c.i: cmake_force
@@ -2060,7 +1668,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_r
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rate_ctrl_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rate_ctrl_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_rate_ctrl_status_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rate_ctrl_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_143) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rate_ctrl_status_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_115) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rate_ctrl_status_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rate_ctrl_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rate_ctrl_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rate_ctrl_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_rate_ctrl_status_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rate_ctrl_status_s.c.i: cmake_force
@@ -2074,7 +1682,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_r
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rc_channels_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rc_channels_s.c.o: rosidl_generator_py/px4_msgs/msg/_rc_channels_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rc_channels_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_144) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rc_channels_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_116) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rc_channels_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rc_channels_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rc_channels_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rc_channels_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_rc_channels_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rc_channels_s.c.i: cmake_force
@@ -2088,7 +1696,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_r
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rc_parameter_map_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rc_parameter_map_s.c.o: rosidl_generator_py/px4_msgs/msg/_rc_parameter_map_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rc_parameter_map_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_145) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rc_parameter_map_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rc_parameter_map_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rc_parameter_map_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rc_parameter_map_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rc_parameter_map_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_rc_parameter_map_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rc_parameter_map_s.c.i: cmake_force
@@ -2099,136 +1707,10 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_r
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rc_parameter_map_s.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_rc_parameter_map_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rc_parameter_map_s.c.s
 
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_register_ext_component_reply_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_register_ext_component_reply_s.c.o: rosidl_generator_py/px4_msgs/msg/_register_ext_component_reply_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_register_ext_component_reply_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_146) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_register_ext_component_reply_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_register_ext_component_reply_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_register_ext_component_reply_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_register_ext_component_reply_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_register_ext_component_reply_s.c
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_register_ext_component_reply_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_register_ext_component_reply_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_register_ext_component_reply_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_register_ext_component_reply_s.c.i
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_register_ext_component_reply_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_register_ext_component_reply_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_register_ext_component_reply_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_register_ext_component_reply_s.c.s
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_register_ext_component_request_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_register_ext_component_request_s.c.o: rosidl_generator_py/px4_msgs/msg/_register_ext_component_request_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_register_ext_component_request_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_147) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_register_ext_component_request_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_register_ext_component_request_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_register_ext_component_request_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_register_ext_component_request_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_register_ext_component_request_s.c
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_register_ext_component_request_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_register_ext_component_request_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_register_ext_component_request_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_register_ext_component_request_s.c.i
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_register_ext_component_request_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_register_ext_component_request_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_register_ext_component_request_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_register_ext_component_request_s.c.s
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_attitude_setpoint_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_attitude_setpoint_s.c.o: rosidl_generator_py/px4_msgs/msg/_rover_attitude_setpoint_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_attitude_setpoint_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_148) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_attitude_setpoint_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_attitude_setpoint_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_attitude_setpoint_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_attitude_setpoint_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_rover_attitude_setpoint_s.c
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_attitude_setpoint_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_attitude_setpoint_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_rover_attitude_setpoint_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_attitude_setpoint_s.c.i
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_attitude_setpoint_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_attitude_setpoint_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_rover_attitude_setpoint_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_attitude_setpoint_s.c.s
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_attitude_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_attitude_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_rover_attitude_status_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_attitude_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_149) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_attitude_status_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_attitude_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_attitude_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_attitude_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_rover_attitude_status_s.c
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_attitude_status_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_attitude_status_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_rover_attitude_status_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_attitude_status_s.c.i
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_attitude_status_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_attitude_status_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_rover_attitude_status_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_attitude_status_s.c.s
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_rate_setpoint_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_rate_setpoint_s.c.o: rosidl_generator_py/px4_msgs/msg/_rover_rate_setpoint_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_rate_setpoint_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_150) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_rate_setpoint_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_rate_setpoint_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_rate_setpoint_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_rate_setpoint_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_rover_rate_setpoint_s.c
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_rate_setpoint_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_rate_setpoint_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_rover_rate_setpoint_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_rate_setpoint_s.c.i
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_rate_setpoint_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_rate_setpoint_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_rover_rate_setpoint_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_rate_setpoint_s.c.s
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_rate_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_rate_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_rover_rate_status_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_rate_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_151) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_rate_status_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_rate_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_rate_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_rate_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_rover_rate_status_s.c
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_rate_status_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_rate_status_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_rover_rate_status_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_rate_status_s.c.i
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_rate_status_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_rate_status_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_rover_rate_status_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_rate_status_s.c.s
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_steering_setpoint_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_steering_setpoint_s.c.o: rosidl_generator_py/px4_msgs/msg/_rover_steering_setpoint_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_steering_setpoint_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_152) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_steering_setpoint_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_steering_setpoint_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_steering_setpoint_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_steering_setpoint_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_rover_steering_setpoint_s.c
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_steering_setpoint_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_steering_setpoint_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_rover_steering_setpoint_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_steering_setpoint_s.c.i
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_steering_setpoint_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_steering_setpoint_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_rover_steering_setpoint_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_steering_setpoint_s.c.s
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_throttle_setpoint_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_throttle_setpoint_s.c.o: rosidl_generator_py/px4_msgs/msg/_rover_throttle_setpoint_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_throttle_setpoint_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_153) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_throttle_setpoint_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_throttle_setpoint_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_throttle_setpoint_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_throttle_setpoint_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_rover_throttle_setpoint_s.c
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_throttle_setpoint_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_throttle_setpoint_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_rover_throttle_setpoint_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_throttle_setpoint_s.c.i
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_throttle_setpoint_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_throttle_setpoint_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_rover_throttle_setpoint_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_throttle_setpoint_s.c.s
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_velocity_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_velocity_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_rover_velocity_status_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_velocity_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_154) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_velocity_status_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_velocity_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_velocity_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_velocity_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_rover_velocity_status_s.c
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_velocity_status_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_velocity_status_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_rover_velocity_status_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_velocity_status_s.c.i
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_velocity_status_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_velocity_status_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_rover_velocity_status_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_velocity_status_s.c.s
-
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rpm_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rpm_s.c.o: rosidl_generator_py/px4_msgs/msg/_rpm_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rpm_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_155) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rpm_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rpm_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rpm_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rpm_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rpm_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_rpm_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rpm_s.c.i: cmake_force
@@ -2239,24 +1721,10 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_r
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rpm_s.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_rpm_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rpm_s.c.s
 
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rtl_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rtl_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_rtl_status_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rtl_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_156) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rtl_status_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rtl_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rtl_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rtl_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_rtl_status_s.c
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rtl_status_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rtl_status_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_rtl_status_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rtl_status_s.c.i
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rtl_status_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rtl_status_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_rtl_status_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rtl_status_s.c.s
-
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rtl_time_estimate_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rtl_time_estimate_s.c.o: rosidl_generator_py/px4_msgs/msg/_rtl_time_estimate_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rtl_time_estimate_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_157) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rtl_time_estimate_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rtl_time_estimate_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rtl_time_estimate_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rtl_time_estimate_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rtl_time_estimate_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_rtl_time_estimate_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rtl_time_estimate_s.c.i: cmake_force
@@ -2270,7 +1738,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_r
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_satellite_info_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_satellite_info_s.c.o: rosidl_generator_py/px4_msgs/msg/_satellite_info_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_satellite_info_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_158) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_satellite_info_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_satellite_info_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_satellite_info_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_satellite_info_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_satellite_info_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_satellite_info_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_satellite_info_s.c.i: cmake_force
@@ -2284,7 +1752,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_s
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_accel_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_accel_s.c.o: rosidl_generator_py/px4_msgs/msg/_sensor_accel_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_accel_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_159) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_accel_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_accel_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_accel_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_accel_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_accel_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_sensor_accel_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_accel_s.c.i: cmake_force
@@ -2298,7 +1766,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_s
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_accel_fifo_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_accel_fifo_s.c.o: rosidl_generator_py/px4_msgs/msg/_sensor_accel_fifo_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_accel_fifo_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_160) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_accel_fifo_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_122) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_accel_fifo_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_accel_fifo_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_accel_fifo_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_accel_fifo_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_sensor_accel_fifo_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_accel_fifo_s.c.i: cmake_force
@@ -2309,24 +1777,10 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_s
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_accel_fifo_s.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_sensor_accel_fifo_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_accel_fifo_s.c.s
 
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_airflow_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_airflow_s.c.o: rosidl_generator_py/px4_msgs/msg/_sensor_airflow_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_airflow_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_161) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_airflow_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_airflow_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_airflow_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_airflow_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_sensor_airflow_s.c
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_airflow_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_airflow_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_sensor_airflow_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_airflow_s.c.i
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_airflow_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_airflow_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_sensor_airflow_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_airflow_s.c.s
-
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_baro_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_baro_s.c.o: rosidl_generator_py/px4_msgs/msg/_sensor_baro_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_baro_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_162) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_baro_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_123) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_baro_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_baro_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_baro_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_baro_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_sensor_baro_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_baro_s.c.i: cmake_force
@@ -2340,7 +1794,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_s
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_combined_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_combined_s.c.o: rosidl_generator_py/px4_msgs/msg/_sensor_combined_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_combined_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_163) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_combined_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_124) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_combined_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_combined_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_combined_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_combined_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_sensor_combined_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_combined_s.c.i: cmake_force
@@ -2354,7 +1808,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_s
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_correction_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_correction_s.c.o: rosidl_generator_py/px4_msgs/msg/_sensor_correction_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_correction_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_164) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_correction_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_correction_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_correction_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_correction_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_correction_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_sensor_correction_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_correction_s.c.i: cmake_force
@@ -2368,7 +1822,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_s
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gnss_relative_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gnss_relative_s.c.o: rosidl_generator_py/px4_msgs/msg/_sensor_gnss_relative_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gnss_relative_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_165) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gnss_relative_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_126) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gnss_relative_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gnss_relative_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gnss_relative_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gnss_relative_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_sensor_gnss_relative_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gnss_relative_s.c.i: cmake_force
@@ -2382,7 +1836,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_s
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gps_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gps_s.c.o: rosidl_generator_py/px4_msgs/msg/_sensor_gps_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gps_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_166) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gps_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_127) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gps_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gps_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gps_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gps_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_sensor_gps_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gps_s.c.i: cmake_force
@@ -2396,7 +1850,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_s
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gyro_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gyro_s.c.o: rosidl_generator_py/px4_msgs/msg/_sensor_gyro_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gyro_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_167) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gyro_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_128) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gyro_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gyro_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gyro_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gyro_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_sensor_gyro_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gyro_s.c.i: cmake_force
@@ -2410,7 +1864,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_s
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gyro_fft_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gyro_fft_s.c.o: rosidl_generator_py/px4_msgs/msg/_sensor_gyro_fft_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gyro_fft_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_168) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gyro_fft_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_129) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gyro_fft_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gyro_fft_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gyro_fft_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gyro_fft_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_sensor_gyro_fft_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gyro_fft_s.c.i: cmake_force
@@ -2424,7 +1878,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_s
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gyro_fifo_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gyro_fifo_s.c.o: rosidl_generator_py/px4_msgs/msg/_sensor_gyro_fifo_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gyro_fifo_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_169) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gyro_fifo_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_130) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gyro_fifo_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gyro_fifo_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gyro_fifo_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gyro_fifo_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_sensor_gyro_fifo_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_gyro_fifo_s.c.i: cmake_force
@@ -2438,7 +1892,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_s
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_hygrometer_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_hygrometer_s.c.o: rosidl_generator_py/px4_msgs/msg/_sensor_hygrometer_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_hygrometer_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_170) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_hygrometer_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_131) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_hygrometer_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_hygrometer_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_hygrometer_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_hygrometer_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_sensor_hygrometer_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_hygrometer_s.c.i: cmake_force
@@ -2452,7 +1906,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_s
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_mag_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_mag_s.c.o: rosidl_generator_py/px4_msgs/msg/_sensor_mag_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_mag_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_171) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_mag_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_132) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_mag_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_mag_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_mag_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_mag_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_sensor_mag_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_mag_s.c.i: cmake_force
@@ -2466,7 +1920,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_s
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_optical_flow_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_optical_flow_s.c.o: rosidl_generator_py/px4_msgs/msg/_sensor_optical_flow_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_optical_flow_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_172) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_optical_flow_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_133) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_optical_flow_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_optical_flow_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_optical_flow_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_optical_flow_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_sensor_optical_flow_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_optical_flow_s.c.i: cmake_force
@@ -2480,7 +1934,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_s
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_preflight_mag_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_preflight_mag_s.c.o: rosidl_generator_py/px4_msgs/msg/_sensor_preflight_mag_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_preflight_mag_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_173) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_preflight_mag_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_134) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_preflight_mag_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_preflight_mag_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_preflight_mag_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_preflight_mag_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_sensor_preflight_mag_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_preflight_mag_s.c.i: cmake_force
@@ -2494,7 +1948,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_s
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_selection_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_selection_s.c.o: rosidl_generator_py/px4_msgs/msg/_sensor_selection_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_selection_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_174) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_selection_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_135) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_selection_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_selection_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_selection_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_selection_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_sensor_selection_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_selection_s.c.i: cmake_force
@@ -2508,7 +1962,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_s
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_uwb_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_uwb_s.c.o: rosidl_generator_py/px4_msgs/msg/_sensor_uwb_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_uwb_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_175) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_uwb_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_136) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_uwb_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_uwb_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_uwb_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_uwb_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_sensor_uwb_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_uwb_s.c.i: cmake_force
@@ -2522,7 +1976,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_s
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensors_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensors_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_sensors_status_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensors_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_176) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensors_status_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_137) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensors_status_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensors_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensors_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensors_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_sensors_status_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensors_status_s.c.i: cmake_force
@@ -2536,7 +1990,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_s
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensors_status_imu_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensors_status_imu_s.c.o: rosidl_generator_py/px4_msgs/msg/_sensors_status_imu_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensors_status_imu_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_177) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensors_status_imu_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_138) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensors_status_imu_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensors_status_imu_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensors_status_imu_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensors_status_imu_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_sensors_status_imu_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensors_status_imu_s.c.i: cmake_force
@@ -2550,7 +2004,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_s
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_system_power_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_system_power_s.c.o: rosidl_generator_py/px4_msgs/msg/_system_power_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_system_power_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_178) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_system_power_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_139) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_system_power_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_system_power_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_system_power_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_system_power_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_system_power_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_system_power_s.c.i: cmake_force
@@ -2564,7 +2018,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_s
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_takeoff_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_takeoff_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_takeoff_status_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_takeoff_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_179) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_takeoff_status_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_140) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_takeoff_status_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_takeoff_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_takeoff_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_takeoff_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_takeoff_status_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_takeoff_status_s.c.i: cmake_force
@@ -2578,7 +2032,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_t
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_task_stack_info_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_task_stack_info_s.c.o: rosidl_generator_py/px4_msgs/msg/_task_stack_info_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_task_stack_info_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_180) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_task_stack_info_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_141) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_task_stack_info_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_task_stack_info_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_task_stack_info_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_task_stack_info_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_task_stack_info_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_task_stack_info_s.c.i: cmake_force
@@ -2592,7 +2046,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_t
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_tecs_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_tecs_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_tecs_status_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_tecs_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_181) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_tecs_status_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_142) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_tecs_status_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_tecs_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_tecs_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_tecs_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_tecs_status_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_tecs_status_s.c.i: cmake_force
@@ -2606,7 +2060,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_t
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_telemetry_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_telemetry_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_telemetry_status_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_telemetry_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_182) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_telemetry_status_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_143) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_telemetry_status_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_telemetry_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_telemetry_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_telemetry_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_telemetry_status_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_telemetry_status_s.c.i: cmake_force
@@ -2620,7 +2074,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_t
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_tiltrotor_extra_controls_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_tiltrotor_extra_controls_s.c.o: rosidl_generator_py/px4_msgs/msg/_tiltrotor_extra_controls_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_tiltrotor_extra_controls_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_183) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_tiltrotor_extra_controls_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_144) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_tiltrotor_extra_controls_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_tiltrotor_extra_controls_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_tiltrotor_extra_controls_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_tiltrotor_extra_controls_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_tiltrotor_extra_controls_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_tiltrotor_extra_controls_s.c.i: cmake_force
@@ -2634,7 +2088,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_t
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_timesync_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_timesync_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_timesync_status_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_timesync_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_184) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_timesync_status_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_145) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_timesync_status_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_timesync_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_timesync_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_timesync_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_timesync_status_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_timesync_status_s.c.i: cmake_force
@@ -2645,10 +2099,24 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_t
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_timesync_status_s.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_timesync_status_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_timesync_status_s.c.s
 
+CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_bezier_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
+CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_bezier_s.c.o: rosidl_generator_py/px4_msgs/msg/_trajectory_bezier_s.c
+CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_bezier_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_146) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_bezier_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_bezier_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_bezier_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_bezier_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_trajectory_bezier_s.c
+
+CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_bezier_s.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_bezier_s.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_trajectory_bezier_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_bezier_s.c.i
+
+CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_bezier_s.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_bezier_s.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_trajectory_bezier_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_bezier_s.c.s
+
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_setpoint_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_setpoint_s.c.o: rosidl_generator_py/px4_msgs/msg/_trajectory_setpoint_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_setpoint_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_185) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_setpoint_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_147) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_setpoint_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_setpoint_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_setpoint_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_setpoint_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_trajectory_setpoint_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_setpoint_s.c.i: cmake_force
@@ -2659,10 +2127,24 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_t
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_setpoint_s.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_trajectory_setpoint_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_setpoint_s.c.s
 
+CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_waypoint_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
+CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_waypoint_s.c.o: rosidl_generator_py/px4_msgs/msg/_trajectory_waypoint_s.c
+CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_waypoint_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_148) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_waypoint_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_waypoint_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_waypoint_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_waypoint_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_trajectory_waypoint_s.c
+
+CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_waypoint_s.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_waypoint_s.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_trajectory_waypoint_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_waypoint_s.c.i
+
+CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_waypoint_s.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_waypoint_s.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_trajectory_waypoint_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_waypoint_s.c.s
+
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_transponder_report_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_transponder_report_s.c.o: rosidl_generator_py/px4_msgs/msg/_transponder_report_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_transponder_report_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_186) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_transponder_report_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_149) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_transponder_report_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_transponder_report_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_transponder_report_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_transponder_report_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_transponder_report_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_transponder_report_s.c.i: cmake_force
@@ -2676,7 +2158,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_t
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_tune_control_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_tune_control_s.c.o: rosidl_generator_py/px4_msgs/msg/_tune_control_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_tune_control_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_187) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_tune_control_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_150) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_tune_control_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_tune_control_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_tune_control_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_tune_control_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_tune_control_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_tune_control_s.c.i: cmake_force
@@ -2690,7 +2172,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_t
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_uavcan_parameter_request_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_uavcan_parameter_request_s.c.o: rosidl_generator_py/px4_msgs/msg/_uavcan_parameter_request_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_uavcan_parameter_request_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_188) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_uavcan_parameter_request_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_151) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_uavcan_parameter_request_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_uavcan_parameter_request_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_uavcan_parameter_request_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_uavcan_parameter_request_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_uavcan_parameter_request_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_uavcan_parameter_request_s.c.i: cmake_force
@@ -2704,7 +2186,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_u
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_uavcan_parameter_value_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_uavcan_parameter_value_s.c.o: rosidl_generator_py/px4_msgs/msg/_uavcan_parameter_value_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_uavcan_parameter_value_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_189) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_uavcan_parameter_value_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_152) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_uavcan_parameter_value_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_uavcan_parameter_value_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_uavcan_parameter_value_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_uavcan_parameter_value_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_uavcan_parameter_value_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_uavcan_parameter_value_s.c.i: cmake_force
@@ -2718,7 +2200,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_u
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ulog_stream_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ulog_stream_s.c.o: rosidl_generator_py/px4_msgs/msg/_ulog_stream_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ulog_stream_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_190) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ulog_stream_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_153) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ulog_stream_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ulog_stream_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ulog_stream_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ulog_stream_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_ulog_stream_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ulog_stream_s.c.i: cmake_force
@@ -2732,7 +2214,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_u
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ulog_stream_ack_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ulog_stream_ack_s.c.o: rosidl_generator_py/px4_msgs/msg/_ulog_stream_ack_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ulog_stream_ack_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_191) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ulog_stream_ack_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_154) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ulog_stream_ack_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ulog_stream_ack_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ulog_stream_ack_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ulog_stream_ack_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_ulog_stream_ack_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ulog_stream_ack_s.c.i: cmake_force
@@ -2743,24 +2225,10 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_u
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ulog_stream_ack_s.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_ulog_stream_ack_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ulog_stream_ack_s.c.s
 
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_unregister_ext_component_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_unregister_ext_component_s.c.o: rosidl_generator_py/px4_msgs/msg/_unregister_ext_component_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_unregister_ext_component_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_192) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_unregister_ext_component_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_unregister_ext_component_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_unregister_ext_component_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_unregister_ext_component_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_unregister_ext_component_s.c
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_unregister_ext_component_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_unregister_ext_component_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_unregister_ext_component_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_unregister_ext_component_s.c.i
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_unregister_ext_component_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_unregister_ext_component_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_unregister_ext_component_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_unregister_ext_component_s.c.s
-
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_acceleration_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_acceleration_s.c.o: rosidl_generator_py/px4_msgs/msg/_vehicle_acceleration_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_acceleration_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_193) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_acceleration_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_155) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_acceleration_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_acceleration_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_acceleration_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_acceleration_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_vehicle_acceleration_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_acceleration_s.c.i: cmake_force
@@ -2774,7 +2242,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_v
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_air_data_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_air_data_s.c.o: rosidl_generator_py/px4_msgs/msg/_vehicle_air_data_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_air_data_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_194) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_air_data_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_156) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_air_data_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_air_data_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_air_data_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_air_data_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_vehicle_air_data_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_air_data_s.c.i: cmake_force
@@ -2788,7 +2256,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_v
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_angular_acceleration_setpoint_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_angular_acceleration_setpoint_s.c.o: rosidl_generator_py/px4_msgs/msg/_vehicle_angular_acceleration_setpoint_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_angular_acceleration_setpoint_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_195) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_angular_acceleration_setpoint_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_157) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_angular_acceleration_setpoint_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_angular_acceleration_setpoint_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_angular_acceleration_setpoint_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_angular_acceleration_setpoint_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_vehicle_angular_acceleration_setpoint_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_angular_acceleration_setpoint_s.c.i: cmake_force
@@ -2802,7 +2270,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_v
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_angular_velocity_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_angular_velocity_s.c.o: rosidl_generator_py/px4_msgs/msg/_vehicle_angular_velocity_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_angular_velocity_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_196) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_angular_velocity_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_158) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_angular_velocity_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_angular_velocity_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_angular_velocity_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_angular_velocity_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_vehicle_angular_velocity_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_angular_velocity_s.c.i: cmake_force
@@ -2816,7 +2284,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_v
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_attitude_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_attitude_s.c.o: rosidl_generator_py/px4_msgs/msg/_vehicle_attitude_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_attitude_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_197) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_attitude_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_159) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_attitude_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_attitude_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_attitude_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_attitude_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_vehicle_attitude_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_attitude_s.c.i: cmake_force
@@ -2830,7 +2298,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_v
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_attitude_setpoint_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_attitude_setpoint_s.c.o: rosidl_generator_py/px4_msgs/msg/_vehicle_attitude_setpoint_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_attitude_setpoint_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_198) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_attitude_setpoint_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_160) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_attitude_setpoint_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_attitude_setpoint_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_attitude_setpoint_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_attitude_setpoint_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_vehicle_attitude_setpoint_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_attitude_setpoint_s.c.i: cmake_force
@@ -2844,7 +2312,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_v
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_command_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_command_s.c.o: rosidl_generator_py/px4_msgs/msg/_vehicle_command_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_command_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_199) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_command_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_161) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_command_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_command_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_command_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_command_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_vehicle_command_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_command_s.c.i: cmake_force
@@ -2858,7 +2326,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_v
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_command_ack_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_command_ack_s.c.o: rosidl_generator_py/px4_msgs/msg/_vehicle_command_ack_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_command_ack_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_200) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_command_ack_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_162) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_command_ack_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_command_ack_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_command_ack_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_command_ack_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_vehicle_command_ack_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_command_ack_s.c.i: cmake_force
@@ -2872,7 +2340,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_v
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_constraints_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_constraints_s.c.o: rosidl_generator_py/px4_msgs/msg/_vehicle_constraints_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_constraints_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_201) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_constraints_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_163) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_constraints_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_constraints_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_constraints_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_constraints_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_vehicle_constraints_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_constraints_s.c.i: cmake_force
@@ -2886,7 +2354,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_v
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_control_mode_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_control_mode_s.c.o: rosidl_generator_py/px4_msgs/msg/_vehicle_control_mode_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_control_mode_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_202) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_control_mode_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_164) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_control_mode_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_control_mode_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_control_mode_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_control_mode_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_vehicle_control_mode_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_control_mode_s.c.i: cmake_force
@@ -2900,7 +2368,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_v
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_global_position_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_global_position_s.c.o: rosidl_generator_py/px4_msgs/msg/_vehicle_global_position_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_global_position_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_203) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_global_position_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_165) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_global_position_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_global_position_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_global_position_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_global_position_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_vehicle_global_position_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_global_position_s.c.i: cmake_force
@@ -2914,7 +2382,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_v
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_imu_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_imu_s.c.o: rosidl_generator_py/px4_msgs/msg/_vehicle_imu_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_imu_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_204) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_imu_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_166) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_imu_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_imu_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_imu_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_imu_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_vehicle_imu_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_imu_s.c.i: cmake_force
@@ -2928,7 +2396,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_v
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_imu_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_imu_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_vehicle_imu_status_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_imu_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_205) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_imu_status_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_167) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_imu_status_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_imu_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_imu_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_imu_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_vehicle_imu_status_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_imu_status_s.c.i: cmake_force
@@ -2942,7 +2410,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_v
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_land_detected_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_land_detected_s.c.o: rosidl_generator_py/px4_msgs/msg/_vehicle_land_detected_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_land_detected_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_206) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_land_detected_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_168) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_land_detected_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_land_detected_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_land_detected_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_land_detected_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_vehicle_land_detected_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_land_detected_s.c.i: cmake_force
@@ -2956,7 +2424,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_v
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_local_position_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_local_position_s.c.o: rosidl_generator_py/px4_msgs/msg/_vehicle_local_position_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_local_position_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_207) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_local_position_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_169) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_local_position_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_local_position_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_local_position_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_local_position_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_vehicle_local_position_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_local_position_s.c.i: cmake_force
@@ -2970,7 +2438,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_v
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_local_position_setpoint_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_local_position_setpoint_s.c.o: rosidl_generator_py/px4_msgs/msg/_vehicle_local_position_setpoint_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_local_position_setpoint_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_208) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_local_position_setpoint_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_170) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_local_position_setpoint_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_local_position_setpoint_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_local_position_setpoint_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_local_position_setpoint_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_vehicle_local_position_setpoint_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_local_position_setpoint_s.c.i: cmake_force
@@ -2984,7 +2452,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_v
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_magnetometer_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_magnetometer_s.c.o: rosidl_generator_py/px4_msgs/msg/_vehicle_magnetometer_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_magnetometer_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_209) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_magnetometer_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_171) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_magnetometer_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_magnetometer_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_magnetometer_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_magnetometer_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_vehicle_magnetometer_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_magnetometer_s.c.i: cmake_force
@@ -2998,7 +2466,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_v
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_odometry_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_odometry_s.c.o: rosidl_generator_py/px4_msgs/msg/_vehicle_odometry_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_odometry_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_210) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_odometry_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_172) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_odometry_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_odometry_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_odometry_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_odometry_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_vehicle_odometry_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_odometry_s.c.i: cmake_force
@@ -3012,7 +2480,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_v
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_optical_flow_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_optical_flow_s.c.o: rosidl_generator_py/px4_msgs/msg/_vehicle_optical_flow_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_optical_flow_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_211) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_optical_flow_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_173) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_optical_flow_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_optical_flow_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_optical_flow_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_optical_flow_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_vehicle_optical_flow_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_optical_flow_s.c.i: cmake_force
@@ -3026,7 +2494,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_v
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_optical_flow_vel_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_optical_flow_vel_s.c.o: rosidl_generator_py/px4_msgs/msg/_vehicle_optical_flow_vel_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_optical_flow_vel_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_212) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_optical_flow_vel_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_174) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_optical_flow_vel_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_optical_flow_vel_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_optical_flow_vel_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_optical_flow_vel_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_vehicle_optical_flow_vel_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_optical_flow_vel_s.c.i: cmake_force
@@ -3040,7 +2508,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_v
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_rates_setpoint_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_rates_setpoint_s.c.o: rosidl_generator_py/px4_msgs/msg/_vehicle_rates_setpoint_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_rates_setpoint_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_213) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_rates_setpoint_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_175) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_rates_setpoint_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_rates_setpoint_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_rates_setpoint_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_rates_setpoint_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_vehicle_rates_setpoint_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_rates_setpoint_s.c.i: cmake_force
@@ -3054,7 +2522,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_v
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_roi_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_roi_s.c.o: rosidl_generator_py/px4_msgs/msg/_vehicle_roi_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_roi_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_214) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_roi_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_176) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_roi_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_roi_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_roi_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_roi_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_vehicle_roi_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_roi_s.c.i: cmake_force
@@ -3068,7 +2536,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_v
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_vehicle_status_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_215) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_status_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_177) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_status_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_vehicle_status_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_status_s.c.i: cmake_force
@@ -3082,7 +2550,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_v
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_thrust_setpoint_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_thrust_setpoint_s.c.o: rosidl_generator_py/px4_msgs/msg/_vehicle_thrust_setpoint_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_thrust_setpoint_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_216) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_thrust_setpoint_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_178) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_thrust_setpoint_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_thrust_setpoint_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_thrust_setpoint_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_thrust_setpoint_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_vehicle_thrust_setpoint_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_thrust_setpoint_s.c.i: cmake_force
@@ -3096,7 +2564,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_v
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_torque_setpoint_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_torque_setpoint_s.c.o: rosidl_generator_py/px4_msgs/msg/_vehicle_torque_setpoint_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_torque_setpoint_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_217) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_torque_setpoint_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_179) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_torque_setpoint_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_torque_setpoint_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_torque_setpoint_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_torque_setpoint_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_vehicle_torque_setpoint_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_torque_setpoint_s.c.i: cmake_force
@@ -3107,24 +2575,38 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_v
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_torque_setpoint_s.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_vehicle_torque_setpoint_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_torque_setpoint_s.c.s
 
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_velocity_limits_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_velocity_limits_s.c.o: rosidl_generator_py/px4_msgs/msg/_velocity_limits_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_velocity_limits_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_218) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_velocity_limits_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_velocity_limits_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_velocity_limits_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_velocity_limits_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_velocity_limits_s.c
+CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_trajectory_bezier_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
+CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_trajectory_bezier_s.c.o: rosidl_generator_py/px4_msgs/msg/_vehicle_trajectory_bezier_s.c
+CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_trajectory_bezier_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_180) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_trajectory_bezier_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_trajectory_bezier_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_trajectory_bezier_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_trajectory_bezier_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_vehicle_trajectory_bezier_s.c
 
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_velocity_limits_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_velocity_limits_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_velocity_limits_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_velocity_limits_s.c.i
+CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_trajectory_bezier_s.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_trajectory_bezier_s.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_vehicle_trajectory_bezier_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_trajectory_bezier_s.c.i
 
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_velocity_limits_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_velocity_limits_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_velocity_limits_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_velocity_limits_s.c.s
+CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_trajectory_bezier_s.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_trajectory_bezier_s.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_vehicle_trajectory_bezier_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_trajectory_bezier_s.c.s
+
+CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_trajectory_waypoint_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
+CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_trajectory_waypoint_s.c.o: rosidl_generator_py/px4_msgs/msg/_vehicle_trajectory_waypoint_s.c
+CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_trajectory_waypoint_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_181) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_trajectory_waypoint_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_trajectory_waypoint_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_trajectory_waypoint_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_trajectory_waypoint_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_vehicle_trajectory_waypoint_s.c
+
+CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_trajectory_waypoint_s.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_trajectory_waypoint_s.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_vehicle_trajectory_waypoint_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_trajectory_waypoint_s.c.i
+
+CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_trajectory_waypoint_s.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_trajectory_waypoint_s.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_vehicle_trajectory_waypoint_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_trajectory_waypoint_s.c.s
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vtol_vehicle_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vtol_vehicle_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_vtol_vehicle_status_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vtol_vehicle_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_219) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vtol_vehicle_status_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_182) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vtol_vehicle_status_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vtol_vehicle_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vtol_vehicle_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vtol_vehicle_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_vtol_vehicle_status_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vtol_vehicle_status_s.c.i: cmake_force
@@ -3135,24 +2617,10 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_v
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vtol_vehicle_status_s.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_vtol_vehicle_status_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vtol_vehicle_status_s.c.s
 
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_wheel_encoders_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_wheel_encoders_s.c.o: rosidl_generator_py/px4_msgs/msg/_wheel_encoders_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_wheel_encoders_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_220) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_wheel_encoders_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_wheel_encoders_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_wheel_encoders_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_wheel_encoders_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_wheel_encoders_s.c
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_wheel_encoders_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_wheel_encoders_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_wheel_encoders_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_wheel_encoders_s.c.i
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_wheel_encoders_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_wheel_encoders_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_wheel_encoders_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_wheel_encoders_s.c.s
-
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_wind_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_wind_s.c.o: rosidl_generator_py/px4_msgs/msg/_wind_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_wind_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_221) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_wind_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_183) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_wind_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_wind_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_wind_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_wind_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_wind_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_wind_s.c.i: cmake_force
@@ -3166,7 +2634,7 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_w
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_yaw_estimator_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_yaw_estimator_status_s.c.o: rosidl_generator_py/px4_msgs/msg/_yaw_estimator_status_s.c
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_yaw_estimator_status_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_222) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_yaw_estimator_status_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_184) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_yaw_estimator_status_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_yaw_estimator_status_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_yaw_estimator_status_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_yaw_estimator_status_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_yaw_estimator_status_s.c
 
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_yaw_estimator_status_s.c.i: cmake_force
@@ -3176,20 +2644,6 @@ CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_y
 CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_yaw_estimator_status_s.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_yaw_estimator_status_s.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/msg/_yaw_estimator_status_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_yaw_estimator_status_s.c.s
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/srv/_vehicle_command_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/srv/_vehicle_command_s.c.o: rosidl_generator_py/px4_msgs/srv/_vehicle_command_s.c
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/srv/_vehicle_command_s.c.o: CMakeFiles/px4_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_223) "Building C object CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/srv/_vehicle_command_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/srv/_vehicle_command_s.c.o -MF CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/srv/_vehicle_command_s.c.o.d -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/srv/_vehicle_command_s.c.o -c /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/srv/_vehicle_command_s.c
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/srv/_vehicle_command_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/srv/_vehicle_command_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/srv/_vehicle_command_s.c > CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/srv/_vehicle_command_s.c.i
-
-CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/srv/_vehicle_command_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/srv/_vehicle_command_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/rosidl_generator_py/px4_msgs/srv/_vehicle_command_s.c -o CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/srv/_vehicle_command_s.c.s
 
 # Object files for target px4_msgs__rosidl_generator_py
 px4_msgs__rosidl_generator_py_OBJECTS = \
@@ -3205,29 +2659,23 @@ px4_msgs__rosidl_generator_py_OBJECTS = \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_airspeed_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_airspeed_validated_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_airspeed_wind_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_arming_check_reply_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_arming_check_request_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_autotune_attitude_control_status_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_battery_status_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_button_event_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_camera_capture_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_camera_status_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_camera_trigger_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_cellular_status_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_collision_constraints_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_config_overrides_s.c.o" \
+"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_collision_report_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_control_allocator_status_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_cpuload_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_dataman_request_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_dataman_response_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_array_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_key_value_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_value_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_vect_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_differential_pressure_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_distance_sensor_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_distance_sensor_mode_change_request_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ekf2_timestamps_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_esc_report_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_esc_status_s.c.o" \
@@ -3247,15 +2695,11 @@ px4_msgs__rosidl_generator_py_OBJECTS = \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_event_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_failsafe_flags_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_failure_detector_status_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_figure_eight_status_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_flight_phase_estimation_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_follow_target_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_follow_target_estimator_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_follow_target_status_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_fuel_tank_status_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_generator_status_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_geofence_result_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_geofence_status_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_controls_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_device_attitude_status_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_device_information_s.c.o" \
@@ -3264,11 +2708,6 @@ px4_msgs__rosidl_generator_py_OBJECTS = \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_set_attitude_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_set_manual_control_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_status_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_goto_setpoint_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_config_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_in_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_out_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_request_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gps_dump_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gps_inject_data_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gripper_s.c.o" \
@@ -3277,7 +2716,6 @@ px4_msgs__rosidl_generator_py_OBJECTS = \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_home_position_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_hover_thrust_estimate_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_input_rc_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_internal_combustion_engine_control_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_internal_combustion_engine_status_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_iridiumsbd_status_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_irlock_report_s.c.o" \
@@ -3295,31 +2733,20 @@ px4_msgs__rosidl_generator_py_OBJECTS = \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_manual_control_switches_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mavlink_log_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mavlink_tunnel_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_message_format_request_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_message_format_response_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mission_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mission_result_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mode_completed_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mount_orientation_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_navigator_mission_item_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_navigator_status_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_normalized_unsigned_setpoint_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_npfg_status_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_obstacle_distance_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_offboard_control_mode_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_onboard_computer_status_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_arm_status_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_operator_id_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_self_id_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_system_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orb_test_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orb_test_large_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orb_test_medium_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orbit_status_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_reset_request_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_used_request_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_value_request_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_value_response_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_update_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ping_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_position_controller_landing_status_s.c.o" \
@@ -3329,7 +2756,6 @@ px4_msgs__rosidl_generator_py_OBJECTS = \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_power_button_state_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_power_monitor_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_pps_capture_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_pure_pursuit_status_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_pwm_input_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_px4io_status_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_qshell_req_s.c.o" \
@@ -3338,22 +2764,11 @@ px4_msgs__rosidl_generator_py_OBJECTS = \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rate_ctrl_status_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rc_channels_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rc_parameter_map_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_register_ext_component_reply_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_register_ext_component_request_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_attitude_setpoint_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_attitude_status_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_rate_setpoint_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_rate_status_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_steering_setpoint_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_throttle_setpoint_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_velocity_status_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rpm_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rtl_status_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rtl_time_estimate_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_satellite_info_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_accel_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_accel_fifo_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_airflow_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_baro_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_combined_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_correction_s.c.o" \
@@ -3377,14 +2792,15 @@ px4_msgs__rosidl_generator_py_OBJECTS = \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_telemetry_status_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_tiltrotor_extra_controls_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_timesync_status_s.c.o" \
+"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_bezier_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_setpoint_s.c.o" \
+"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_waypoint_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_transponder_report_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_tune_control_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_uavcan_parameter_request_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_uavcan_parameter_value_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ulog_stream_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ulog_stream_ack_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_unregister_ext_component_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_acceleration_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_air_data_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_angular_acceleration_setpoint_s.c.o" \
@@ -3410,12 +2826,11 @@ px4_msgs__rosidl_generator_py_OBJECTS = \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_status_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_thrust_setpoint_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_torque_setpoint_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_velocity_limits_s.c.o" \
+"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_trajectory_bezier_s.c.o" \
+"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_trajectory_waypoint_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vtol_vehicle_status_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_wheel_encoders_s.c.o" \
 "CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_wind_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_yaw_estimator_status_s.c.o" \
-"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/srv/_vehicle_command_s.c.o"
+"CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_yaw_estimator_status_s.c.o"
 
 # External object files for target px4_msgs__rosidl_generator_py
 px4_msgs__rosidl_generator_py_EXTERNAL_OBJECTS =
@@ -3432,29 +2847,23 @@ libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.di
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_airspeed_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_airspeed_validated_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_airspeed_wind_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_arming_check_reply_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_arming_check_request_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_autotune_attitude_control_status_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_battery_status_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_button_event_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_camera_capture_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_camera_status_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_camera_trigger_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_can_interface_status_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_cellular_status_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_collision_constraints_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_config_overrides_s.c.o
+libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_collision_report_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_control_allocator_status_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_cpuload_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_dataman_request_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_dataman_response_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_array_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_key_value_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_value_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_debug_vect_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_differential_pressure_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_distance_sensor_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_distance_sensor_mode_change_request_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ekf2_timestamps_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_esc_report_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_esc_status_s.c.o
@@ -3474,15 +2883,11 @@ libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.di
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_event_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_failsafe_flags_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_failure_detector_status_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_figure_eight_status_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_flight_phase_estimation_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_follow_target_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_follow_target_estimator_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_follow_target_status_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_fuel_tank_status_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_generator_status_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_geofence_result_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_geofence_status_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_controls_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_device_attitude_status_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_device_information_s.c.o
@@ -3491,11 +2896,6 @@ libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.di
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_set_attitude_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_set_manual_control_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gimbal_manager_status_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_goto_setpoint_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_config_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_in_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_out_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gpio_request_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gps_dump_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gps_inject_data_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_gripper_s.c.o
@@ -3504,7 +2904,6 @@ libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.di
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_home_position_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_hover_thrust_estimate_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_input_rc_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_internal_combustion_engine_control_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_internal_combustion_engine_status_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_iridiumsbd_status_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_irlock_report_s.c.o
@@ -3522,31 +2921,20 @@ libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.di
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_manual_control_switches_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mavlink_log_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mavlink_tunnel_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_message_format_request_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_message_format_response_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mission_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mission_result_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mode_completed_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_mount_orientation_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_navigator_mission_item_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_navigator_status_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_normalized_unsigned_setpoint_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_npfg_status_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_obstacle_distance_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_offboard_control_mode_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_onboard_computer_status_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_arm_status_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_operator_id_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_self_id_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_open_drone_id_system_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orb_test_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orb_test_large_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orb_test_medium_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_orbit_status_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_reset_request_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_used_request_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_value_request_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_set_value_response_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_parameter_update_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ping_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_position_controller_landing_status_s.c.o
@@ -3556,7 +2944,6 @@ libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.di
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_power_button_state_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_power_monitor_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_pps_capture_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_pure_pursuit_status_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_pwm_input_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_px4io_status_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_qshell_req_s.c.o
@@ -3565,22 +2952,11 @@ libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.di
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rate_ctrl_status_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rc_channels_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rc_parameter_map_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_register_ext_component_reply_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_register_ext_component_request_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_attitude_setpoint_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_attitude_status_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_rate_setpoint_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_rate_status_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_steering_setpoint_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_throttle_setpoint_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rover_velocity_status_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rpm_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rtl_status_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_rtl_time_estimate_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_satellite_info_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_accel_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_accel_fifo_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_airflow_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_baro_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_combined_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_sensor_correction_s.c.o
@@ -3604,14 +2980,15 @@ libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.di
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_telemetry_status_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_tiltrotor_extra_controls_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_timesync_status_s.c.o
+libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_bezier_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_setpoint_s.c.o
+libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_trajectory_waypoint_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_transponder_report_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_tune_control_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_uavcan_parameter_request_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_uavcan_parameter_value_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ulog_stream_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_ulog_stream_ack_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_unregister_ext_component_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_acceleration_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_air_data_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_angular_acceleration_setpoint_s.c.o
@@ -3637,43 +3014,34 @@ libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.di
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_status_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_thrust_setpoint_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_torque_setpoint_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_velocity_limits_s.c.o
+libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_trajectory_bezier_s.c.o
+libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_trajectory_waypoint_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_vtol_vehicle_status_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_wheel_encoders_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_wind_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/msg/_yaw_estimator_status_s.c.o
-libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/rosidl_generator_py/px4_msgs/srv/_vehicle_command_s.c.o
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/build.make
 libpx4_msgs__rosidl_generator_py.so: libpx4_msgs__rosidl_typesupport_c.so
-libpx4_msgs__rosidl_generator_py.so: /opt/ros/jazzy/lib/libservice_msgs__rosidl_typesupport_fastrtps_c.so
-libpx4_msgs__rosidl_generator_py.so: /opt/ros/jazzy/lib/libservice_msgs__rosidl_typesupport_fastrtps_cpp.so
-libpx4_msgs__rosidl_generator_py.so: /opt/ros/jazzy/lib/libservice_msgs__rosidl_typesupport_introspection_c.so
-libpx4_msgs__rosidl_generator_py.so: /opt/ros/jazzy/lib/libservice_msgs__rosidl_typesupport_introspection_cpp.so
-libpx4_msgs__rosidl_generator_py.so: /opt/ros/jazzy/lib/libservice_msgs__rosidl_typesupport_cpp.so
-libpx4_msgs__rosidl_generator_py.so: /opt/ros/jazzy/lib/libservice_msgs__rosidl_generator_py.so
-libpx4_msgs__rosidl_generator_py.so: libpx4_msgs__rosidl_generator_c.so
 libpx4_msgs__rosidl_generator_py.so: /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_c.so
-libpx4_msgs__rosidl_generator_py.so: /opt/ros/jazzy/lib/librosidl_typesupport_fastrtps_c.so
 libpx4_msgs__rosidl_generator_py.so: /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_c.so
 libpx4_msgs__rosidl_generator_py.so: /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_cpp.so
+libpx4_msgs__rosidl_generator_py.so: /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.so
+libpx4_msgs__rosidl_generator_py.so: /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_typesupport_cpp.so
+libpx4_msgs__rosidl_generator_py.so: /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_generator_py.so
+libpx4_msgs__rosidl_generator_py.so: libpx4_msgs__rosidl_generator_c.so
+libpx4_msgs__rosidl_generator_py.so: /opt/ros/jazzy/lib/librosidl_typesupport_fastrtps_c.so
 libpx4_msgs__rosidl_generator_py.so: /opt/ros/jazzy/lib/librosidl_typesupport_fastrtps_cpp.so
 libpx4_msgs__rosidl_generator_py.so: /opt/ros/jazzy/lib/libfastcdr.so.2.2.5
 libpx4_msgs__rosidl_generator_py.so: /opt/ros/jazzy/lib/librmw.so
 libpx4_msgs__rosidl_generator_py.so: /opt/ros/jazzy/lib/librosidl_dynamic_typesupport.so
-libpx4_msgs__rosidl_generator_py.so: /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.so
 libpx4_msgs__rosidl_generator_py.so: /opt/ros/jazzy/lib/librosidl_typesupport_introspection_cpp.so
 libpx4_msgs__rosidl_generator_py.so: /opt/ros/jazzy/lib/librosidl_typesupport_introspection_c.so
-libpx4_msgs__rosidl_generator_py.so: /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_typesupport_cpp.so
-libpx4_msgs__rosidl_generator_py.so: /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_generator_py.so
 libpx4_msgs__rosidl_generator_py.so: /usr/lib/x86_64-linux-gnu/libpython3.12.so
-libpx4_msgs__rosidl_generator_py.so: /opt/ros/jazzy/lib/libservice_msgs__rosidl_typesupport_c.so
 libpx4_msgs__rosidl_generator_py.so: /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_typesupport_c.so
-libpx4_msgs__rosidl_generator_py.so: /opt/ros/jazzy/lib/libservice_msgs__rosidl_generator_c.so
 libpx4_msgs__rosidl_generator_py.so: /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_generator_c.so
 libpx4_msgs__rosidl_generator_py.so: /opt/ros/jazzy/lib/librosidl_runtime_c.so
 libpx4_msgs__rosidl_generator_py.so: /opt/ros/jazzy/lib/librcutils.so
 libpx4_msgs__rosidl_generator_py.so: CMakeFiles/px4_msgs__rosidl_generator_py.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_224) "Linking C shared library libpx4_msgs__rosidl_generator_py.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/blazar/workspaces/rockytimes_ws/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_185) "Linking C shared library libpx4_msgs__rosidl_generator_py.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/px4_msgs__rosidl_generator_py.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

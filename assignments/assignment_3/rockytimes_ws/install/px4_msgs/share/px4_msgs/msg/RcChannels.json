@@ -47,7 +47,7 @@
           "name": "function",
           "type": {
             "type_id": 50,
-            "capacity": 29,
+            "capacity": 28,
             "string_capacity": 0,
             "nested_type_name": ""
           },
@@ -90,7 +90,7 @@
   "type_hashes": [
     {
       "type_name": "px4_msgs/msg/RcChannels",
-      "hash_string": "RIHS01_db975784bce84be24f38c9d6079b3c190466091be1c428e38be9c23857a84968"
+      "hash_string": "RIHS01_c2214e2b986e5e5b3f42496077eda8dbe3aea9f07772204333c530646b5f3af0"
     }
   ]
 }

@@ -82,36 +82,6 @@
             "nested_type_name": ""
           },
           "default_value": ""
-        },
-        {
-          "name": "airspeed_derivative_filtered",
-          "type": {
-            "type_id": 10,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "throttle_filtered",
-          "type": {
-            "type_id": 10,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "pitch_filtered",
-          "type": {
-            "type_id": 10,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
         }
       ]
     },
@@ -120,7 +90,7 @@
   "type_hashes": [
     {
       "type_name": "px4_msgs/msg/AirspeedValidated",
-      "hash_string": "RIHS01_9ea4464bc635505f621fe7f0bf94bb2aa17cb7329a2f230ada20fb71ca7f7349"
+      "hash_string": "RIHS01_25514b081eb16f777fdd0fa7ec361ab2a924bbe9760deb9123596cb56743bdc2"
     }
   ]
 }

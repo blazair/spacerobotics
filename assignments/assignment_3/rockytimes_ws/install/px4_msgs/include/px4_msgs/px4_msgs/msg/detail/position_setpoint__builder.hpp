@@ -24,16 +24,32 @@ namespace msg
 namespace builder
 {
 
+class Init_PositionSetpoint_disable_weather_vane
+{
+public:
+  explicit Init_PositionSetpoint_disable_weather_vane(::px4_msgs::msg::PositionSetpoint & msg)
+  : msg_(msg)
+  {}
+  ::px4_msgs::msg::PositionSetpoint disable_weather_vane(::px4_msgs::msg::PositionSetpoint::_disable_weather_vane_type arg)
+  {
+    msg_.disable_weather_vane = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::px4_msgs::msg::PositionSetpoint msg_;
+};
+
 class Init_PositionSetpoint_cruising_throttle
 {
 public:
   explicit Init_PositionSetpoint_cruising_throttle(::px4_msgs::msg::PositionSetpoint & msg)
   : msg_(msg)
   {}
-  ::px4_msgs::msg::PositionSetpoint cruising_throttle(::px4_msgs::msg::PositionSetpoint::_cruising_throttle_type arg)
+  Init_PositionSetpoint_disable_weather_vane cruising_throttle(::px4_msgs::msg::PositionSetpoint::_cruising_throttle_type arg)
   {
     msg_.cruising_throttle = std::move(arg);
-    return std::move(msg_);
+    return Init_PositionSetpoint_disable_weather_vane(msg_);
   }
 
 private:
@@ -72,64 +88,16 @@ private:
   ::px4_msgs::msg::PositionSetpoint msg_;
 };
 
-class Init_PositionSetpoint_alt_acceptance_radius
-{
-public:
-  explicit Init_PositionSetpoint_alt_acceptance_radius(::px4_msgs::msg::PositionSetpoint & msg)
-  : msg_(msg)
-  {}
-  Init_PositionSetpoint_cruising_speed alt_acceptance_radius(::px4_msgs::msg::PositionSetpoint::_alt_acceptance_radius_type arg)
-  {
-    msg_.alt_acceptance_radius = std::move(arg);
-    return Init_PositionSetpoint_cruising_speed(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::PositionSetpoint msg_;
-};
-
 class Init_PositionSetpoint_acceptance_radius
 {
 public:
   explicit Init_PositionSetpoint_acceptance_radius(::px4_msgs::msg::PositionSetpoint & msg)
   : msg_(msg)
   {}
-  Init_PositionSetpoint_alt_acceptance_radius acceptance_radius(::px4_msgs::msg::PositionSetpoint::_acceptance_radius_type arg)
+  Init_PositionSetpoint_cruising_speed acceptance_radius(::px4_msgs::msg::PositionSetpoint::_acceptance_radius_type arg)
   {
     msg_.acceptance_radius = std::move(arg);
-    return Init_PositionSetpoint_alt_acceptance_radius(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::PositionSetpoint msg_;
-};
-
-class Init_PositionSetpoint_loiter_pattern
-{
-public:
-  explicit Init_PositionSetpoint_loiter_pattern(::px4_msgs::msg::PositionSetpoint & msg)
-  : msg_(msg)
-  {}
-  Init_PositionSetpoint_acceptance_radius loiter_pattern(::px4_msgs::msg::PositionSetpoint::_loiter_pattern_type arg)
-  {
-    msg_.loiter_pattern = std::move(arg);
-    return Init_PositionSetpoint_acceptance_radius(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::PositionSetpoint msg_;
-};
-
-class Init_PositionSetpoint_loiter_orientation
-{
-public:
-  explicit Init_PositionSetpoint_loiter_orientation(::px4_msgs::msg::PositionSetpoint & msg)
-  : msg_(msg)
-  {}
-  Init_PositionSetpoint_loiter_pattern loiter_orientation(::px4_msgs::msg::PositionSetpoint::_loiter_orientation_type arg)
-  {
-    msg_.loiter_orientation = std::move(arg);
-    return Init_PositionSetpoint_loiter_pattern(msg_);
+    return Init_PositionSetpoint_cruising_speed(msg_);
   }
 
 private:
@@ -142,26 +110,10 @@ public:
   explicit Init_PositionSetpoint_loiter_direction_counter_clockwise(::px4_msgs::msg::PositionSetpoint & msg)
   : msg_(msg)
   {}
-  Init_PositionSetpoint_loiter_orientation loiter_direction_counter_clockwise(::px4_msgs::msg::PositionSetpoint::_loiter_direction_counter_clockwise_type arg)
+  Init_PositionSetpoint_acceptance_radius loiter_direction_counter_clockwise(::px4_msgs::msg::PositionSetpoint::_loiter_direction_counter_clockwise_type arg)
   {
     msg_.loiter_direction_counter_clockwise = std::move(arg);
-    return Init_PositionSetpoint_loiter_orientation(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::PositionSetpoint msg_;
-};
-
-class Init_PositionSetpoint_loiter_minor_radius
-{
-public:
-  explicit Init_PositionSetpoint_loiter_minor_radius(::px4_msgs::msg::PositionSetpoint & msg)
-  : msg_(msg)
-  {}
-  Init_PositionSetpoint_loiter_direction_counter_clockwise loiter_minor_radius(::px4_msgs::msg::PositionSetpoint::_loiter_minor_radius_type arg)
-  {
-    msg_.loiter_minor_radius = std::move(arg);
-    return Init_PositionSetpoint_loiter_direction_counter_clockwise(msg_);
+    return Init_PositionSetpoint_acceptance_radius(msg_);
   }
 
 private:
@@ -174,10 +126,58 @@ public:
   explicit Init_PositionSetpoint_loiter_radius(::px4_msgs::msg::PositionSetpoint & msg)
   : msg_(msg)
   {}
-  Init_PositionSetpoint_loiter_minor_radius loiter_radius(::px4_msgs::msg::PositionSetpoint::_loiter_radius_type arg)
+  Init_PositionSetpoint_loiter_direction_counter_clockwise loiter_radius(::px4_msgs::msg::PositionSetpoint::_loiter_radius_type arg)
   {
     msg_.loiter_radius = std::move(arg);
-    return Init_PositionSetpoint_loiter_minor_radius(msg_);
+    return Init_PositionSetpoint_loiter_direction_counter_clockwise(msg_);
+  }
+
+private:
+  ::px4_msgs::msg::PositionSetpoint msg_;
+};
+
+class Init_PositionSetpoint_yawspeed_valid
+{
+public:
+  explicit Init_PositionSetpoint_yawspeed_valid(::px4_msgs::msg::PositionSetpoint & msg)
+  : msg_(msg)
+  {}
+  Init_PositionSetpoint_loiter_radius yawspeed_valid(::px4_msgs::msg::PositionSetpoint::_yawspeed_valid_type arg)
+  {
+    msg_.yawspeed_valid = std::move(arg);
+    return Init_PositionSetpoint_loiter_radius(msg_);
+  }
+
+private:
+  ::px4_msgs::msg::PositionSetpoint msg_;
+};
+
+class Init_PositionSetpoint_yawspeed
+{
+public:
+  explicit Init_PositionSetpoint_yawspeed(::px4_msgs::msg::PositionSetpoint & msg)
+  : msg_(msg)
+  {}
+  Init_PositionSetpoint_yawspeed_valid yawspeed(::px4_msgs::msg::PositionSetpoint::_yawspeed_type arg)
+  {
+    msg_.yawspeed = std::move(arg);
+    return Init_PositionSetpoint_yawspeed_valid(msg_);
+  }
+
+private:
+  ::px4_msgs::msg::PositionSetpoint msg_;
+};
+
+class Init_PositionSetpoint_yaw_valid
+{
+public:
+  explicit Init_PositionSetpoint_yaw_valid(::px4_msgs::msg::PositionSetpoint & msg)
+  : msg_(msg)
+  {}
+  Init_PositionSetpoint_yawspeed yaw_valid(::px4_msgs::msg::PositionSetpoint::_yaw_valid_type arg)
+  {
+    msg_.yaw_valid = std::move(arg);
+    return Init_PositionSetpoint_yawspeed(msg_);
   }
 
 private:
@@ -190,10 +190,10 @@ public:
   explicit Init_PositionSetpoint_yaw(::px4_msgs::msg::PositionSetpoint & msg)
   : msg_(msg)
   {}
-  Init_PositionSetpoint_loiter_radius yaw(::px4_msgs::msg::PositionSetpoint::_yaw_type arg)
+  Init_PositionSetpoint_yaw_valid yaw(::px4_msgs::msg::PositionSetpoint::_yaw_type arg)
   {
     msg_.yaw = std::move(arg);
-    return Init_PositionSetpoint_loiter_radius(msg_);
+    return Init_PositionSetpoint_yaw_valid(msg_);
   }
 
 private:

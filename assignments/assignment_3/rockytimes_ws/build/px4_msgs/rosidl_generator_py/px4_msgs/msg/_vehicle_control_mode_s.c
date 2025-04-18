@@ -104,13 +104,31 @@ bool px4_msgs__msg__vehicle_control_mode__convert_from_py(PyObject * _pymsg, voi
     ros_message->flag_control_offboard_enabled = (Py_True == field);
     Py_DECREF(field);
   }
-  {  // flag_control_position_enabled
-    PyObject * field = PyObject_GetAttrString(_pymsg, "flag_control_position_enabled");
+  {  // flag_control_rates_enabled
+    PyObject * field = PyObject_GetAttrString(_pymsg, "flag_control_rates_enabled");
     if (!field) {
       return false;
     }
     assert(PyBool_Check(field));
-    ros_message->flag_control_position_enabled = (Py_True == field);
+    ros_message->flag_control_rates_enabled = (Py_True == field);
+    Py_DECREF(field);
+  }
+  {  // flag_control_attitude_enabled
+    PyObject * field = PyObject_GetAttrString(_pymsg, "flag_control_attitude_enabled");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->flag_control_attitude_enabled = (Py_True == field);
+    Py_DECREF(field);
+  }
+  {  // flag_control_acceleration_enabled
+    PyObject * field = PyObject_GetAttrString(_pymsg, "flag_control_acceleration_enabled");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->flag_control_acceleration_enabled = (Py_True == field);
     Py_DECREF(field);
   }
   {  // flag_control_velocity_enabled
@@ -120,6 +138,15 @@ bool px4_msgs__msg__vehicle_control_mode__convert_from_py(PyObject * _pymsg, voi
     }
     assert(PyBool_Check(field));
     ros_message->flag_control_velocity_enabled = (Py_True == field);
+    Py_DECREF(field);
+  }
+  {  // flag_control_position_enabled
+    PyObject * field = PyObject_GetAttrString(_pymsg, "flag_control_position_enabled");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->flag_control_position_enabled = (Py_True == field);
     Py_DECREF(field);
   }
   {  // flag_control_altitude_enabled
@@ -140,42 +167,6 @@ bool px4_msgs__msg__vehicle_control_mode__convert_from_py(PyObject * _pymsg, voi
     ros_message->flag_control_climb_rate_enabled = (Py_True == field);
     Py_DECREF(field);
   }
-  {  // flag_control_acceleration_enabled
-    PyObject * field = PyObject_GetAttrString(_pymsg, "flag_control_acceleration_enabled");
-    if (!field) {
-      return false;
-    }
-    assert(PyBool_Check(field));
-    ros_message->flag_control_acceleration_enabled = (Py_True == field);
-    Py_DECREF(field);
-  }
-  {  // flag_control_attitude_enabled
-    PyObject * field = PyObject_GetAttrString(_pymsg, "flag_control_attitude_enabled");
-    if (!field) {
-      return false;
-    }
-    assert(PyBool_Check(field));
-    ros_message->flag_control_attitude_enabled = (Py_True == field);
-    Py_DECREF(field);
-  }
-  {  // flag_control_rates_enabled
-    PyObject * field = PyObject_GetAttrString(_pymsg, "flag_control_rates_enabled");
-    if (!field) {
-      return false;
-    }
-    assert(PyBool_Check(field));
-    ros_message->flag_control_rates_enabled = (Py_True == field);
-    Py_DECREF(field);
-  }
-  {  // flag_control_allocation_enabled
-    PyObject * field = PyObject_GetAttrString(_pymsg, "flag_control_allocation_enabled");
-    if (!field) {
-      return false;
-    }
-    assert(PyBool_Check(field));
-    ros_message->flag_control_allocation_enabled = (Py_True == field);
-    Py_DECREF(field);
-  }
   {  // flag_control_termination_enabled
     PyObject * field = PyObject_GetAttrString(_pymsg, "flag_control_termination_enabled");
     if (!field) {
@@ -183,15 +174,6 @@ bool px4_msgs__msg__vehicle_control_mode__convert_from_py(PyObject * _pymsg, voi
     }
     assert(PyBool_Check(field));
     ros_message->flag_control_termination_enabled = (Py_True == field);
-    Py_DECREF(field);
-  }
-  {  // source_id
-    PyObject * field = PyObject_GetAttrString(_pymsg, "source_id");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->source_id = (uint8_t)PyLong_AsUnsignedLong(field);
     Py_DECREF(field);
   }
 
@@ -282,11 +264,33 @@ PyObject * px4_msgs__msg__vehicle_control_mode__convert_to_py(void * raw_ros_mes
       }
     }
   }
-  {  // flag_control_position_enabled
+  {  // flag_control_rates_enabled
     PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->flag_control_position_enabled ? 1 : 0);
+    field = PyBool_FromLong(ros_message->flag_control_rates_enabled ? 1 : 0);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "flag_control_position_enabled", field);
+      int rc = PyObject_SetAttrString(_pymessage, "flag_control_rates_enabled", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // flag_control_attitude_enabled
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->flag_control_attitude_enabled ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "flag_control_attitude_enabled", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // flag_control_acceleration_enabled
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->flag_control_acceleration_enabled ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "flag_control_acceleration_enabled", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
@@ -298,6 +302,17 @@ PyObject * px4_msgs__msg__vehicle_control_mode__convert_to_py(void * raw_ros_mes
     field = PyBool_FromLong(ros_message->flag_control_velocity_enabled ? 1 : 0);
     {
       int rc = PyObject_SetAttrString(_pymessage, "flag_control_velocity_enabled", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // flag_control_position_enabled
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->flag_control_position_enabled ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "flag_control_position_enabled", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
@@ -326,66 +341,11 @@ PyObject * px4_msgs__msg__vehicle_control_mode__convert_to_py(void * raw_ros_mes
       }
     }
   }
-  {  // flag_control_acceleration_enabled
-    PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->flag_control_acceleration_enabled ? 1 : 0);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "flag_control_acceleration_enabled", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // flag_control_attitude_enabled
-    PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->flag_control_attitude_enabled ? 1 : 0);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "flag_control_attitude_enabled", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // flag_control_rates_enabled
-    PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->flag_control_rates_enabled ? 1 : 0);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "flag_control_rates_enabled", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // flag_control_allocation_enabled
-    PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->flag_control_allocation_enabled ? 1 : 0);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "flag_control_allocation_enabled", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
   {  // flag_control_termination_enabled
     PyObject * field = NULL;
     field = PyBool_FromLong(ros_message->flag_control_termination_enabled ? 1 : 0);
     {
       int rc = PyObject_SetAttrString(_pymessage, "flag_control_termination_enabled", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // source_id
-    PyObject * field = NULL;
-    field = PyLong_FromUnsignedLong(ros_message->source_id);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "source_id", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

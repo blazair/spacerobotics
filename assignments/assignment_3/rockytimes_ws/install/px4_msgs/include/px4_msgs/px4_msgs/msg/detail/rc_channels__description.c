@@ -11,10 +11,10 @@ px4_msgs__msg__RcChannels__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0xdb, 0x97, 0x57, 0x84, 0xbc, 0xe8, 0x4b, 0xe2,
-      0x4f, 0x38, 0xc9, 0xd6, 0x07, 0x9b, 0x3c, 0x19,
-      0x04, 0x66, 0x09, 0x1b, 0xe1, 0xc4, 0x28, 0xe3,
-      0x8b, 0xe9, 0xc2, 0x38, 0x57, 0xa8, 0x49, 0x68,
+      0xc2, 0x21, 0x4e, 0x2b, 0x98, 0x6e, 0x5e, 0x5b,
+      0x3f, 0x42, 0x49, 0x60, 0x77, 0xed, 0xa8, 0xdb,
+      0xe3, 0xae, 0xa9, 0xf0, 0x77, 0x72, 0x20, 0x43,
+      0x33, 0xc5, 0x30, 0x64, 0x6b, 0x5f, 0x3a, 0xf0,
     }};
   return &hash;
 }
@@ -85,7 +85,7 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__RcChannels__FIEL
     {px4_msgs__msg__RcChannels__FIELD_NAME__function, 8, 8},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_INT8_ARRAY,
-      29,
+      28,
       0,
       {NULL, 0, 0},
     },
@@ -173,14 +173,13 @@ static char toplevel_type_raw_source[] =
   "uint8 FUNCTION_FLTBTN_SLOT_5 = 25\n"
   "uint8 FUNCTION_FLTBTN_SLOT_6 = 26\n"
   "uint8 FUNCTION_ENGAGE_MAIN_MOTOR = 27\n"
-  "uint8 FUNCTION_PAYLOAD_POWER = 28\n"
   "\n"
   "uint8 FUNCTION_FLTBTN_SLOT_COUNT = 6\n"
   "\n"
   "uint64 timestamp_last_valid\\t\\t\\t\\t\\t# Timestamp of last valid RC signal\n"
   "float32[18] channels\\t\\t\\t\\t\\t\\t# Scaled to -1..1 (throttle: 0..1)\n"
   "uint8 channel_count\\t\\t\\t\\t\\t\\t# Number of valid channels\n"
-  "int8[29] function\\t\\t\\t\\t\\t\\t# Functions mapping\n"
+  "int8[28] function\\t\\t\\t\\t\\t\\t# Functions mapping\n"
   "uint8 rssi\\t\\t\\t\\t\\t\\t\\t# Receive signal strength index\n"
   "bool signal_lost\\t\\t\\t\\t\\t\\t# Control signal lost, should be checked together with topic timeout\n"
   "uint32 frame_drop_count\\t\\t\\t\\t\\t\\t# Number of dropped frames";
@@ -197,7 +196,7 @@ px4_msgs__msg__RcChannels__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__RcChannels__TYPE_NAME, 23, 23},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 1503, 1503},
+    {toplevel_type_raw_source, 1469, 1469},
   };
   return &source;
 }

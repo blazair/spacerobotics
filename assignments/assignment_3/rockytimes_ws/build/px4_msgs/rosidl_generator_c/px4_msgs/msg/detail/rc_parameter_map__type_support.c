@@ -5,9 +5,9 @@
 #include <string.h>
 
 #include "px4_msgs/msg/detail/rc_parameter_map__functions.h"
-#include "rosidl_typesupport_interface/macros.h"
-#include "px4_msgs/msg/detail/rc_parameter_map__struct.h"
 #include "px4_msgs/msg/detail/rc_parameter_map__type_support.h"
+#include "px4_msgs/msg/detail/rc_parameter_map__struct.h"
+#include "rosidl_typesupport_interface/macros.h"
 
 #ifdef __cplusplus
 extern "C"

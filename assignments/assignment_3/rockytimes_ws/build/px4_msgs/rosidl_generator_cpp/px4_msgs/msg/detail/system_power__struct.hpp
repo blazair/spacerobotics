@@ -43,7 +43,6 @@ struct SystemPower_
     {
       this->timestamp = 0ull;
       this->voltage5v_v = 0.0f;
-      this->voltage_payload_v = 0.0f;
       std::fill<typename std::array<float, 4>::iterator, float>(this->sensors3v3.begin(), this->sensors3v3.end(), 0.0f);
       this->sensors3v3_valid = 0;
       this->usb_connected = 0;
@@ -54,7 +53,6 @@ struct SystemPower_
       this->hipower_5v_oc = 0;
       this->comp_5v_valid = 0;
       this->can1_gps1_5v_valid = 0;
-      this->payload_v_valid = 0;
     }
   }
 
@@ -66,7 +64,6 @@ struct SystemPower_
     {
       this->timestamp = 0ull;
       this->voltage5v_v = 0.0f;
-      this->voltage_payload_v = 0.0f;
       std::fill<typename std::array<float, 4>::iterator, float>(this->sensors3v3.begin(), this->sensors3v3.end(), 0.0f);
       this->sensors3v3_valid = 0;
       this->usb_connected = 0;
@@ -77,7 +74,6 @@ struct SystemPower_
       this->hipower_5v_oc = 0;
       this->comp_5v_valid = 0;
       this->can1_gps1_5v_valid = 0;
-      this->payload_v_valid = 0;
     }
   }
 
@@ -88,9 +84,6 @@ struct SystemPower_
   using _voltage5v_v_type =
     float;
   _voltage5v_v_type voltage5v_v;
-  using _voltage_payload_v_type =
-    float;
-  _voltage_payload_v_type voltage_payload_v;
   using _sensors3v3_type =
     std::array<float, 4>;
   _sensors3v3_type sensors3v3;
@@ -121,9 +114,6 @@ struct SystemPower_
   using _can1_gps1_5v_valid_type =
     uint8_t;
   _can1_gps1_5v_valid_type can1_gps1_5v_valid;
-  using _payload_v_valid_type =
-    uint8_t;
-  _payload_v_valid_type payload_v_valid;
 
   // setters for named parameter idiom
   Type & set__timestamp(
@@ -136,12 +126,6 @@ struct SystemPower_
     const float & _arg)
   {
     this->voltage5v_v = _arg;
-    return *this;
-  }
-  Type & set__voltage_payload_v(
-    const float & _arg)
-  {
-    this->voltage_payload_v = _arg;
     return *this;
   }
   Type & set__sensors3v3(
@@ -202,12 +186,6 @@ struct SystemPower_
     const uint8_t & _arg)
   {
     this->can1_gps1_5v_valid = _arg;
-    return *this;
-  }
-  Type & set__payload_v_valid(
-    const uint8_t & _arg)
-  {
-    this->payload_v_valid = _arg;
     return *this;
   }
 
@@ -275,9 +253,6 @@ struct SystemPower_
     if (this->voltage5v_v != other.voltage5v_v) {
       return false;
     }
-    if (this->voltage_payload_v != other.voltage_payload_v) {
-      return false;
-    }
     if (this->sensors3v3 != other.sensors3v3) {
       return false;
     }
@@ -306,9 +281,6 @@ struct SystemPower_
       return false;
     }
     if (this->can1_gps1_5v_valid != other.can1_gps1_5v_valid) {
-      return false;
-    }
-    if (this->payload_v_valid != other.payload_v_valid) {
       return false;
     }
     return true;

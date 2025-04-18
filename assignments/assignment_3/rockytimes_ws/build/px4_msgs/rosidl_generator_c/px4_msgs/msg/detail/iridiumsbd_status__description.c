@@ -11,10 +11,10 @@ px4_msgs__msg__IridiumsbdStatus__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x61, 0xa5, 0x3d, 0x22, 0x46, 0x13, 0xfa, 0x73,
-      0x9f, 0x94, 0xa7, 0xf1, 0x07, 0xec, 0x1d, 0x14,
-      0xbd, 0xfc, 0x5b, 0x49, 0x17, 0x91, 0x5d, 0x1e,
-      0x5b, 0xc7, 0x20, 0xa8, 0x9b, 0xc1, 0xd6, 0xed,
+      0x29, 0xa1, 0x70, 0x2c, 0x86, 0x39, 0xc8, 0x08,
+      0xc2, 0x8f, 0x25, 0x31, 0x3d, 0xa2, 0x98, 0xb0,
+      0x83, 0xaa, 0xc5, 0x53, 0x1b, 0x5f, 0xe3, 0x3d,
+      0x61, 0x48, 0x7e, 0x83, 0x6b, 0x30, 0xb1, 0xad,
     }};
   return &hash;
 }
@@ -32,7 +32,7 @@ static char px4_msgs__msg__IridiumsbdStatus__TYPE_NAME[] = "px4_msgs/msg/Iridium
 
 // Define type names, field names, and default values
 static char px4_msgs__msg__IridiumsbdStatus__FIELD_NAME__timestamp[] = "timestamp";
-static char px4_msgs__msg__IridiumsbdStatus__FIELD_NAME__last_at_ok_timestamp[] = "last_at_ok_timestamp";
+static char px4_msgs__msg__IridiumsbdStatus__FIELD_NAME__last_heartbeat[] = "last_heartbeat";
 static char px4_msgs__msg__IridiumsbdStatus__FIELD_NAME__tx_buf_write_index[] = "tx_buf_write_index";
 static char px4_msgs__msg__IridiumsbdStatus__FIELD_NAME__rx_buf_read_index[] = "rx_buf_read_index";
 static char px4_msgs__msg__IridiumsbdStatus__FIELD_NAME__rx_buf_end_index[] = "rx_buf_end_index";
@@ -59,7 +59,7 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__IridiumsbdStatus
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__IridiumsbdStatus__FIELD_NAME__last_at_ok_timestamp, 20, 20},
+    {px4_msgs__msg__IridiumsbdStatus__FIELD_NAME__last_heartbeat, 14, 14},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT64,
       0,
@@ -221,7 +221,7 @@ px4_msgs__msg__IridiumsbdStatus__get_type_description(
 
 static char toplevel_type_raw_source[] =
   "uint64 timestamp\\t\\t\\t\\t# time since system start (microseconds)\n"
-  "uint64 last_at_ok_timestamp\\t\\t\\t# timestamp of the last \"OK\" received after the \"AT\" command\n"
+  "uint64 last_heartbeat\\t\\t\\t\\t# timestamp of the last successful sbd session\n"
   "uint16 tx_buf_write_index\\t\\t\\t# current size of the tx buffer\n"
   "uint16 rx_buf_read_index\\t\\t\\t# the rx buffer is parsed up to that index\n"
   "uint16 rx_buf_end_index\\t\\t\\t\\t# current size of the rx buffer\n"
@@ -248,7 +248,7 @@ px4_msgs__msg__IridiumsbdStatus__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__IridiumsbdStatus__TYPE_NAME, 29, 29},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 1140, 1140},
+    {toplevel_type_raw_source, 1121, 1121},
   };
   return &source;
 }

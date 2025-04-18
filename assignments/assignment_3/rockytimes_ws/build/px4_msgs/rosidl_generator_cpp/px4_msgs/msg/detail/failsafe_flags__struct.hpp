@@ -70,13 +70,12 @@ struct FailsafeFlags_
       this->battery_warning = 0;
       this->battery_low_remaining_time = false;
       this->battery_unhealthy = false;
-      this->geofence_breached = false;
+      this->primary_geofence_breached = false;
       this->mission_failure = false;
       this->vtol_fixed_wing_system_failure = false;
       this->wind_limit_exceeded = false;
       this->flight_time_limit_exceeded = false;
       this->local_position_accuracy_low = false;
-      this->navigator_failure = false;
       this->fd_critical_failure = false;
       this->fd_esc_arming_failure = false;
       this->fd_imbalanced_prop = false;
@@ -119,13 +118,12 @@ struct FailsafeFlags_
       this->battery_warning = 0;
       this->battery_low_remaining_time = false;
       this->battery_unhealthy = false;
-      this->geofence_breached = false;
+      this->primary_geofence_breached = false;
       this->mission_failure = false;
       this->vtol_fixed_wing_system_failure = false;
       this->wind_limit_exceeded = false;
       this->flight_time_limit_exceeded = false;
       this->local_position_accuracy_low = false;
-      this->navigator_failure = false;
       this->fd_critical_failure = false;
       this->fd_esc_arming_failure = false;
       this->fd_imbalanced_prop = false;
@@ -221,9 +219,9 @@ struct FailsafeFlags_
   using _battery_unhealthy_type =
     bool;
   _battery_unhealthy_type battery_unhealthy;
-  using _geofence_breached_type =
+  using _primary_geofence_breached_type =
     bool;
-  _geofence_breached_type geofence_breached;
+  _primary_geofence_breached_type primary_geofence_breached;
   using _mission_failure_type =
     bool;
   _mission_failure_type mission_failure;
@@ -239,9 +237,6 @@ struct FailsafeFlags_
   using _local_position_accuracy_low_type =
     bool;
   _local_position_accuracy_low_type local_position_accuracy_low;
-  using _navigator_failure_type =
-    bool;
-  _navigator_failure_type navigator_failure;
   using _fd_critical_failure_type =
     bool;
   _fd_critical_failure_type fd_critical_failure;
@@ -430,10 +425,10 @@ struct FailsafeFlags_
     this->battery_unhealthy = _arg;
     return *this;
   }
-  Type & set__geofence_breached(
+  Type & set__primary_geofence_breached(
     const bool & _arg)
   {
-    this->geofence_breached = _arg;
+    this->primary_geofence_breached = _arg;
     return *this;
   }
   Type & set__mission_failure(
@@ -464,12 +459,6 @@ struct FailsafeFlags_
     const bool & _arg)
   {
     this->local_position_accuracy_low = _arg;
-    return *this;
-  }
-  Type & set__navigator_failure(
-    const bool & _arg)
-  {
-    this->navigator_failure = _arg;
     return *this;
   }
   Type & set__fd_critical_failure(
@@ -626,7 +615,7 @@ struct FailsafeFlags_
     if (this->battery_unhealthy != other.battery_unhealthy) {
       return false;
     }
-    if (this->geofence_breached != other.geofence_breached) {
+    if (this->primary_geofence_breached != other.primary_geofence_breached) {
       return false;
     }
     if (this->mission_failure != other.mission_failure) {
@@ -642,9 +631,6 @@ struct FailsafeFlags_
       return false;
     }
     if (this->local_position_accuracy_low != other.local_position_accuracy_low) {
-      return false;
-    }
-    if (this->navigator_failure != other.navigator_failure) {
       return false;
     }
     if (this->fd_critical_failure != other.fd_critical_failure) {

@@ -71,15 +71,6 @@ bool px4_msgs__msg__system_power__convert_from_py(PyObject * _pymsg, void * _ros
     ros_message->voltage5v_v = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
-  {  // voltage_payload_v
-    PyObject * field = PyObject_GetAttrString(_pymsg, "voltage_payload_v");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->voltage_payload_v = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
   {  // sensors3v3
     PyObject * field = PyObject_GetAttrString(_pymsg, "sensors3v3");
     if (!field) {
@@ -185,15 +176,6 @@ bool px4_msgs__msg__system_power__convert_from_py(PyObject * _pymsg, void * _ros
     ros_message->can1_gps1_5v_valid = (uint8_t)PyLong_AsUnsignedLong(field);
     Py_DECREF(field);
   }
-  {  // payload_v_valid
-    PyObject * field = PyObject_GetAttrString(_pymsg, "payload_v_valid");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->payload_v_valid = (uint8_t)PyLong_AsUnsignedLong(field);
-    Py_DECREF(field);
-  }
 
   return true;
 }
@@ -232,17 +214,6 @@ PyObject * px4_msgs__msg__system_power__convert_to_py(void * raw_ros_message)
     field = PyFloat_FromDouble(ros_message->voltage5v_v);
     {
       int rc = PyObject_SetAttrString(_pymessage, "voltage5v_v", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // voltage_payload_v
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->voltage_payload_v);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "voltage_payload_v", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
@@ -360,17 +331,6 @@ PyObject * px4_msgs__msg__system_power__convert_to_py(void * raw_ros_message)
     field = PyLong_FromUnsignedLong(ros_message->can1_gps1_5v_valid);
     {
       int rc = PyObject_SetAttrString(_pymessage, "can1_gps1_5v_valid", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // payload_v_valid
-    PyObject * field = NULL;
-    field = PyLong_FromUnsignedLong(ros_message->payload_v_valid);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "payload_v_valid", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

@@ -45,6 +45,7 @@ struct Airspeed_
       this->timestamp_sample = 0ull;
       this->indicated_airspeed_m_s = 0.0f;
       this->true_airspeed_m_s = 0.0f;
+      this->air_temperature_celsius = 0.0f;
       this->confidence = 0.0f;
     }
   }
@@ -59,6 +60,7 @@ struct Airspeed_
       this->timestamp_sample = 0ull;
       this->indicated_airspeed_m_s = 0.0f;
       this->true_airspeed_m_s = 0.0f;
+      this->air_temperature_celsius = 0.0f;
       this->confidence = 0.0f;
     }
   }
@@ -76,6 +78,9 @@ struct Airspeed_
   using _true_airspeed_m_s_type =
     float;
   _true_airspeed_m_s_type true_airspeed_m_s;
+  using _air_temperature_celsius_type =
+    float;
+  _air_temperature_celsius_type air_temperature_celsius;
   using _confidence_type =
     float;
   _confidence_type confidence;
@@ -103,6 +108,12 @@ struct Airspeed_
     const float & _arg)
   {
     this->true_airspeed_m_s = _arg;
+    return *this;
+  }
+  Type & set__air_temperature_celsius(
+    const float & _arg)
+  {
+    this->air_temperature_celsius = _arg;
     return *this;
   }
   Type & set__confidence(
@@ -164,6 +175,9 @@ struct Airspeed_
       return false;
     }
     if (this->true_airspeed_m_s != other.true_airspeed_m_s) {
+      return false;
+    }
+    if (this->air_temperature_celsius != other.air_temperature_celsius) {
       return false;
     }
     if (this->confidence != other.confidence) {

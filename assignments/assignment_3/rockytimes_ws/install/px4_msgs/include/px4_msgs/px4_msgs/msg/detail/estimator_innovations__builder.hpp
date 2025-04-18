@@ -152,16 +152,48 @@ private:
   ::px4_msgs::msg::EstimatorInnovations msg_;
 };
 
+class Init_EstimatorInnovations_terr_flow
+{
+public:
+  explicit Init_EstimatorInnovations_terr_flow(::px4_msgs::msg::EstimatorInnovations & msg)
+  : msg_(msg)
+  {}
+  Init_EstimatorInnovations_heading terr_flow(::px4_msgs::msg::EstimatorInnovations::_terr_flow_type arg)
+  {
+    msg_.terr_flow = std::move(arg);
+    return Init_EstimatorInnovations_heading(msg_);
+  }
+
+private:
+  ::px4_msgs::msg::EstimatorInnovations msg_;
+};
+
 class Init_EstimatorInnovations_flow
 {
 public:
   explicit Init_EstimatorInnovations_flow(::px4_msgs::msg::EstimatorInnovations & msg)
   : msg_(msg)
   {}
-  Init_EstimatorInnovations_heading flow(::px4_msgs::msg::EstimatorInnovations::_flow_type arg)
+  Init_EstimatorInnovations_terr_flow flow(::px4_msgs::msg::EstimatorInnovations::_flow_type arg)
   {
     msg_.flow = std::move(arg);
-    return Init_EstimatorInnovations_heading(msg_);
+    return Init_EstimatorInnovations_terr_flow(msg_);
+  }
+
+private:
+  ::px4_msgs::msg::EstimatorInnovations msg_;
+};
+
+class Init_EstimatorInnovations_aux_vvel
+{
+public:
+  explicit Init_EstimatorInnovations_aux_vvel(::px4_msgs::msg::EstimatorInnovations & msg)
+  : msg_(msg)
+  {}
+  Init_EstimatorInnovations_flow aux_vvel(::px4_msgs::msg::EstimatorInnovations::_aux_vvel_type arg)
+  {
+    msg_.aux_vvel = std::move(arg);
+    return Init_EstimatorInnovations_flow(msg_);
   }
 
 private:
@@ -174,10 +206,10 @@ public:
   explicit Init_EstimatorInnovations_aux_hvel(::px4_msgs::msg::EstimatorInnovations & msg)
   : msg_(msg)
   {}
-  Init_EstimatorInnovations_flow aux_hvel(::px4_msgs::msg::EstimatorInnovations::_aux_hvel_type arg)
+  Init_EstimatorInnovations_aux_vvel aux_hvel(::px4_msgs::msg::EstimatorInnovations::_aux_hvel_type arg)
   {
     msg_.aux_hvel = std::move(arg);
-    return Init_EstimatorInnovations_flow(msg_);
+    return Init_EstimatorInnovations_aux_vvel(msg_);
   }
 
 private:

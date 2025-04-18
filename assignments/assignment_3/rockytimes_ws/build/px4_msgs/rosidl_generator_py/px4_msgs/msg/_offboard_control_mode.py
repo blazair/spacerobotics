@@ -68,8 +68,7 @@ class OffboardControlMode(metaclass=Metaclass_OffboardControlMode):
         '_acceleration',
         '_attitude',
         '_body_rate',
-        '_thrust_and_torque',
-        '_direct_actuator',
+        '_actuator',
         '_check_fields',
     ]
 
@@ -80,15 +79,13 @@ class OffboardControlMode(metaclass=Metaclass_OffboardControlMode):
         'acceleration': 'boolean',
         'attitude': 'boolean',
         'body_rate': 'boolean',
-        'thrust_and_torque': 'boolean',
-        'direct_actuator': 'boolean',
+        'actuator': 'boolean',
     }
 
     # This attribute is used to store an rosidl_parser.definition variable
     # related to the data type of each of the components the message.
     SLOT_TYPES = (
         rosidl_parser.definition.BasicType('uint64'),  # noqa: E501
-        rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
@@ -112,8 +109,7 @@ class OffboardControlMode(metaclass=Metaclass_OffboardControlMode):
         self.acceleration = kwargs.get('acceleration', bool())
         self.attitude = kwargs.get('attitude', bool())
         self.body_rate = kwargs.get('body_rate', bool())
-        self.thrust_and_torque = kwargs.get('thrust_and_torque', bool())
-        self.direct_actuator = kwargs.get('direct_actuator', bool())
+        self.actuator = kwargs.get('actuator', bool())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -157,9 +153,7 @@ class OffboardControlMode(metaclass=Metaclass_OffboardControlMode):
             return False
         if self.body_rate != other.body_rate:
             return False
-        if self.thrust_and_torque != other.thrust_and_torque:
-            return False
-        if self.direct_actuator != other.direct_actuator:
+        if self.actuator != other.actuator:
             return False
         return True
 
@@ -249,27 +243,14 @@ class OffboardControlMode(metaclass=Metaclass_OffboardControlMode):
         self._body_rate = value
 
     @builtins.property
-    def thrust_and_torque(self):
-        """Message field 'thrust_and_torque'."""
-        return self._thrust_and_torque
+    def actuator(self):
+        """Message field 'actuator'."""
+        return self._actuator
 
-    @thrust_and_torque.setter
-    def thrust_and_torque(self, value):
+    @actuator.setter
+    def actuator(self, value):
         if self._check_fields:
             assert \
                 isinstance(value, bool), \
-                "The 'thrust_and_torque' field must be of type 'bool'"
-        self._thrust_and_torque = value
-
-    @builtins.property
-    def direct_actuator(self):
-        """Message field 'direct_actuator'."""
-        return self._direct_actuator
-
-    @direct_actuator.setter
-    def direct_actuator(self, value):
-        if self._check_fields:
-            assert \
-                isinstance(value, bool), \
-                "The 'direct_actuator' field must be of type 'bool'"
-        self._direct_actuator = value
+                "The 'actuator' field must be of type 'bool'"
+        self._actuator = value

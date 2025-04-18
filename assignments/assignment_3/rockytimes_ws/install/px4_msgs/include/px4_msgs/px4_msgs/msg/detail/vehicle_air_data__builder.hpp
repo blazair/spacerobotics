@@ -56,15 +56,15 @@ private:
   ::px4_msgs::msg::VehicleAirData msg_;
 };
 
-class Init_VehicleAirData_temperature_source
+class Init_VehicleAirData_baro_pressure_pa
 {
 public:
-  explicit Init_VehicleAirData_temperature_source(::px4_msgs::msg::VehicleAirData & msg)
+  explicit Init_VehicleAirData_baro_pressure_pa(::px4_msgs::msg::VehicleAirData & msg)
   : msg_(msg)
   {}
-  Init_VehicleAirData_rho temperature_source(::px4_msgs::msg::VehicleAirData::_temperature_source_type arg)
+  Init_VehicleAirData_rho baro_pressure_pa(::px4_msgs::msg::VehicleAirData::_baro_pressure_pa_type arg)
   {
-    msg_.temperature_source = std::move(arg);
+    msg_.baro_pressure_pa = std::move(arg);
     return Init_VehicleAirData_rho(msg_);
   }
 
@@ -72,32 +72,16 @@ private:
   ::px4_msgs::msg::VehicleAirData msg_;
 };
 
-class Init_VehicleAirData_ambient_temperature
+class Init_VehicleAirData_baro_temp_celcius
 {
 public:
-  explicit Init_VehicleAirData_ambient_temperature(::px4_msgs::msg::VehicleAirData & msg)
+  explicit Init_VehicleAirData_baro_temp_celcius(::px4_msgs::msg::VehicleAirData & msg)
   : msg_(msg)
   {}
-  Init_VehicleAirData_temperature_source ambient_temperature(::px4_msgs::msg::VehicleAirData::_ambient_temperature_type arg)
+  Init_VehicleAirData_baro_pressure_pa baro_temp_celcius(::px4_msgs::msg::VehicleAirData::_baro_temp_celcius_type arg)
   {
-    msg_.ambient_temperature = std::move(arg);
-    return Init_VehicleAirData_temperature_source(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::VehicleAirData msg_;
-};
-
-class Init_VehicleAirData_baro_pressure_pa
-{
-public:
-  explicit Init_VehicleAirData_baro_pressure_pa(::px4_msgs::msg::VehicleAirData & msg)
-  : msg_(msg)
-  {}
-  Init_VehicleAirData_ambient_temperature baro_pressure_pa(::px4_msgs::msg::VehicleAirData::_baro_pressure_pa_type arg)
-  {
-    msg_.baro_pressure_pa = std::move(arg);
-    return Init_VehicleAirData_ambient_temperature(msg_);
+    msg_.baro_temp_celcius = std::move(arg);
+    return Init_VehicleAirData_baro_pressure_pa(msg_);
   }
 
 private:
@@ -110,10 +94,10 @@ public:
   explicit Init_VehicleAirData_baro_alt_meter(::px4_msgs::msg::VehicleAirData & msg)
   : msg_(msg)
   {}
-  Init_VehicleAirData_baro_pressure_pa baro_alt_meter(::px4_msgs::msg::VehicleAirData::_baro_alt_meter_type arg)
+  Init_VehicleAirData_baro_temp_celcius baro_alt_meter(::px4_msgs::msg::VehicleAirData::_baro_alt_meter_type arg)
   {
     msg_.baro_alt_meter = std::move(arg);
-    return Init_VehicleAirData_baro_pressure_pa(msg_);
+    return Init_VehicleAirData_baro_temp_celcius(msg_);
   }
 
 private:

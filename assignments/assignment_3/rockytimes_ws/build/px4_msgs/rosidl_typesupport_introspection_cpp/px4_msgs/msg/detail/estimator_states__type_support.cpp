@@ -41,20 +41,20 @@ void EstimatorStates_fini_function(void * message_memory)
 size_t size_function__EstimatorStates__states(const void * untyped_member)
 {
   (void)untyped_member;
-  return 25;
+  return 24;
 }
 
 const void * get_const_function__EstimatorStates__states(const void * untyped_member, size_t index)
 {
   const auto & member =
-    *reinterpret_cast<const std::array<float, 25> *>(untyped_member);
+    *reinterpret_cast<const std::array<float, 24> *>(untyped_member);
   return &member[index];
 }
 
 void * get_function__EstimatorStates__states(void * untyped_member, size_t index)
 {
   auto & member =
-    *reinterpret_cast<std::array<float, 25> *>(untyped_member);
+    *reinterpret_cast<std::array<float, 24> *>(untyped_member);
   return &member[index];
 }
 
@@ -158,7 +158,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember EstimatorStat
     nullptr,  // members of sub message
     false,  // is key
     true,  // is array
-    25,  // array size
+    24,  // array size
     false,  // is upper bound
     offsetof(px4_msgs::msg::EstimatorStates, states),  // bytes offset in struct
     nullptr,  // default value

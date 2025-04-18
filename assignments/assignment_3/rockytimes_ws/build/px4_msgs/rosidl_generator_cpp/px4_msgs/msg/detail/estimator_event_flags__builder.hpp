@@ -24,16 +24,224 @@ namespace msg
 namespace builder
 {
 
+class Init_EstimatorEventFlags_emergency_yaw_reset_gps_yaw_stopped
+{
+public:
+  explicit Init_EstimatorEventFlags_emergency_yaw_reset_gps_yaw_stopped(::px4_msgs::msg::EstimatorEventFlags & msg)
+  : msg_(msg)
+  {}
+  ::px4_msgs::msg::EstimatorEventFlags emergency_yaw_reset_gps_yaw_stopped(::px4_msgs::msg::EstimatorEventFlags::_emergency_yaw_reset_gps_yaw_stopped_type arg)
+  {
+    msg_.emergency_yaw_reset_gps_yaw_stopped = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::px4_msgs::msg::EstimatorEventFlags msg_;
+};
+
+class Init_EstimatorEventFlags_emergency_yaw_reset_mag_stopped
+{
+public:
+  explicit Init_EstimatorEventFlags_emergency_yaw_reset_mag_stopped(::px4_msgs::msg::EstimatorEventFlags & msg)
+  : msg_(msg)
+  {}
+  Init_EstimatorEventFlags_emergency_yaw_reset_gps_yaw_stopped emergency_yaw_reset_mag_stopped(::px4_msgs::msg::EstimatorEventFlags::_emergency_yaw_reset_mag_stopped_type arg)
+  {
+    msg_.emergency_yaw_reset_mag_stopped = std::move(arg);
+    return Init_EstimatorEventFlags_emergency_yaw_reset_gps_yaw_stopped(msg_);
+  }
+
+private:
+  ::px4_msgs::msg::EstimatorEventFlags msg_;
+};
+
+class Init_EstimatorEventFlags_vision_data_stopped
+{
+public:
+  explicit Init_EstimatorEventFlags_vision_data_stopped(::px4_msgs::msg::EstimatorEventFlags & msg)
+  : msg_(msg)
+  {}
+  Init_EstimatorEventFlags_emergency_yaw_reset_mag_stopped vision_data_stopped(::px4_msgs::msg::EstimatorEventFlags::_vision_data_stopped_type arg)
+  {
+    msg_.vision_data_stopped = std::move(arg);
+    return Init_EstimatorEventFlags_emergency_yaw_reset_mag_stopped(msg_);
+  }
+
+private:
+  ::px4_msgs::msg::EstimatorEventFlags msg_;
+};
+
+class Init_EstimatorEventFlags_stopping_mag_use
+{
+public:
+  explicit Init_EstimatorEventFlags_stopping_mag_use(::px4_msgs::msg::EstimatorEventFlags & msg)
+  : msg_(msg)
+  {}
+  Init_EstimatorEventFlags_vision_data_stopped stopping_mag_use(::px4_msgs::msg::EstimatorEventFlags::_stopping_mag_use_type arg)
+  {
+    msg_.stopping_mag_use = std::move(arg);
+    return Init_EstimatorEventFlags_vision_data_stopped(msg_);
+  }
+
+private:
+  ::px4_msgs::msg::EstimatorEventFlags msg_;
+};
+
+class Init_EstimatorEventFlags_bad_yaw_using_gps_course
+{
+public:
+  explicit Init_EstimatorEventFlags_bad_yaw_using_gps_course(::px4_msgs::msg::EstimatorEventFlags & msg)
+  : msg_(msg)
+  {}
+  Init_EstimatorEventFlags_stopping_mag_use bad_yaw_using_gps_course(::px4_msgs::msg::EstimatorEventFlags::_bad_yaw_using_gps_course_type arg)
+  {
+    msg_.bad_yaw_using_gps_course = std::move(arg);
+    return Init_EstimatorEventFlags_stopping_mag_use(msg_);
+  }
+
+private:
+  ::px4_msgs::msg::EstimatorEventFlags msg_;
+};
+
+class Init_EstimatorEventFlags_invalid_accel_bias_cov_reset
+{
+public:
+  explicit Init_EstimatorEventFlags_invalid_accel_bias_cov_reset(::px4_msgs::msg::EstimatorEventFlags & msg)
+  : msg_(msg)
+  {}
+  Init_EstimatorEventFlags_bad_yaw_using_gps_course invalid_accel_bias_cov_reset(::px4_msgs::msg::EstimatorEventFlags::_invalid_accel_bias_cov_reset_type arg)
+  {
+    msg_.invalid_accel_bias_cov_reset = std::move(arg);
+    return Init_EstimatorEventFlags_bad_yaw_using_gps_course(msg_);
+  }
+
+private:
+  ::px4_msgs::msg::EstimatorEventFlags msg_;
+};
+
+class Init_EstimatorEventFlags_stopping_navigation
+{
+public:
+  explicit Init_EstimatorEventFlags_stopping_navigation(::px4_msgs::msg::EstimatorEventFlags & msg)
+  : msg_(msg)
+  {}
+  Init_EstimatorEventFlags_invalid_accel_bias_cov_reset stopping_navigation(::px4_msgs::msg::EstimatorEventFlags::_stopping_navigation_type arg)
+  {
+    msg_.stopping_navigation = std::move(arg);
+    return Init_EstimatorEventFlags_invalid_accel_bias_cov_reset(msg_);
+  }
+
+private:
+  ::px4_msgs::msg::EstimatorEventFlags msg_;
+};
+
+class Init_EstimatorEventFlags_height_sensor_timeout
+{
+public:
+  explicit Init_EstimatorEventFlags_height_sensor_timeout(::px4_msgs::msg::EstimatorEventFlags & msg)
+  : msg_(msg)
+  {}
+  Init_EstimatorEventFlags_stopping_navigation height_sensor_timeout(::px4_msgs::msg::EstimatorEventFlags::_height_sensor_timeout_type arg)
+  {
+    msg_.height_sensor_timeout = std::move(arg);
+    return Init_EstimatorEventFlags_stopping_navigation(msg_);
+  }
+
+private:
+  ::px4_msgs::msg::EstimatorEventFlags msg_;
+};
+
+class Init_EstimatorEventFlags_gps_data_stopped_using_alternate
+{
+public:
+  explicit Init_EstimatorEventFlags_gps_data_stopped_using_alternate(::px4_msgs::msg::EstimatorEventFlags & msg)
+  : msg_(msg)
+  {}
+  Init_EstimatorEventFlags_height_sensor_timeout gps_data_stopped_using_alternate(::px4_msgs::msg::EstimatorEventFlags::_gps_data_stopped_using_alternate_type arg)
+  {
+    msg_.gps_data_stopped_using_alternate = std::move(arg);
+    return Init_EstimatorEventFlags_height_sensor_timeout(msg_);
+  }
+
+private:
+  ::px4_msgs::msg::EstimatorEventFlags msg_;
+};
+
+class Init_EstimatorEventFlags_gps_data_stopped
+{
+public:
+  explicit Init_EstimatorEventFlags_gps_data_stopped(::px4_msgs::msg::EstimatorEventFlags & msg)
+  : msg_(msg)
+  {}
+  Init_EstimatorEventFlags_gps_data_stopped_using_alternate gps_data_stopped(::px4_msgs::msg::EstimatorEventFlags::_gps_data_stopped_type arg)
+  {
+    msg_.gps_data_stopped = std::move(arg);
+    return Init_EstimatorEventFlags_gps_data_stopped_using_alternate(msg_);
+  }
+
+private:
+  ::px4_msgs::msg::EstimatorEventFlags msg_;
+};
+
+class Init_EstimatorEventFlags_gps_fusion_timout
+{
+public:
+  explicit Init_EstimatorEventFlags_gps_fusion_timout(::px4_msgs::msg::EstimatorEventFlags & msg)
+  : msg_(msg)
+  {}
+  Init_EstimatorEventFlags_gps_data_stopped gps_fusion_timout(::px4_msgs::msg::EstimatorEventFlags::_gps_fusion_timout_type arg)
+  {
+    msg_.gps_fusion_timout = std::move(arg);
+    return Init_EstimatorEventFlags_gps_data_stopped(msg_);
+  }
+
+private:
+  ::px4_msgs::msg::EstimatorEventFlags msg_;
+};
+
+class Init_EstimatorEventFlags_gps_quality_poor
+{
+public:
+  explicit Init_EstimatorEventFlags_gps_quality_poor(::px4_msgs::msg::EstimatorEventFlags & msg)
+  : msg_(msg)
+  {}
+  Init_EstimatorEventFlags_gps_fusion_timout gps_quality_poor(::px4_msgs::msg::EstimatorEventFlags::_gps_quality_poor_type arg)
+  {
+    msg_.gps_quality_poor = std::move(arg);
+    return Init_EstimatorEventFlags_gps_fusion_timout(msg_);
+  }
+
+private:
+  ::px4_msgs::msg::EstimatorEventFlags msg_;
+};
+
+class Init_EstimatorEventFlags_warning_event_changes
+{
+public:
+  explicit Init_EstimatorEventFlags_warning_event_changes(::px4_msgs::msg::EstimatorEventFlags & msg)
+  : msg_(msg)
+  {}
+  Init_EstimatorEventFlags_gps_quality_poor warning_event_changes(::px4_msgs::msg::EstimatorEventFlags::_warning_event_changes_type arg)
+  {
+    msg_.warning_event_changes = std::move(arg);
+    return Init_EstimatorEventFlags_gps_quality_poor(msg_);
+  }
+
+private:
+  ::px4_msgs::msg::EstimatorEventFlags msg_;
+};
+
 class Init_EstimatorEventFlags_reset_hgt_to_ev
 {
 public:
   explicit Init_EstimatorEventFlags_reset_hgt_to_ev(::px4_msgs::msg::EstimatorEventFlags & msg)
   : msg_(msg)
   {}
-  ::px4_msgs::msg::EstimatorEventFlags reset_hgt_to_ev(::px4_msgs::msg::EstimatorEventFlags::_reset_hgt_to_ev_type arg)
+  Init_EstimatorEventFlags_warning_event_changes reset_hgt_to_ev(::px4_msgs::msg::EstimatorEventFlags::_reset_hgt_to_ev_type arg)
   {
     msg_.reset_hgt_to_ev = std::move(arg);
-    return std::move(msg_);
+    return Init_EstimatorEventFlags_warning_event_changes(msg_);
   }
 
 private:

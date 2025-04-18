@@ -119,13 +119,6 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
-  // member: check_fail_spoofed_gps
-  {
-    out << "check_fail_spoofed_gps: ";
-    rosidl_generator_traits::value_to_yaml(msg.check_fail_spoofed_gps, out);
-    out << ", ";
-  }
-
   // member: position_drift_rate_horizontal_m_s
   {
     out << "position_drift_rate_horizontal_m_s: ";
@@ -279,16 +272,6 @@ inline void to_block_style_yaml(
     }
     out << "check_fail_max_vert_spd_err: ";
     rosidl_generator_traits::value_to_yaml(msg.check_fail_max_vert_spd_err, out);
-    out << "\n";
-  }
-
-  // member: check_fail_spoofed_gps
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "check_fail_spoofed_gps: ";
-    rosidl_generator_traits::value_to_yaml(msg.check_fail_spoofed_gps, out);
     out << "\n";
   }
 

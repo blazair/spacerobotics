@@ -24,32 +24,16 @@ namespace msg
 namespace builder
 {
 
-class Init_HomePosition_update_count
-{
-public:
-  explicit Init_HomePosition_update_count(::px4_msgs::msg::HomePosition & msg)
-  : msg_(msg)
-  {}
-  ::px4_msgs::msg::HomePosition update_count(::px4_msgs::msg::HomePosition::_update_count_type arg)
-  {
-    msg_.update_count = std::move(arg);
-    return std::move(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::HomePosition msg_;
-};
-
 class Init_HomePosition_manual_home
 {
 public:
   explicit Init_HomePosition_manual_home(::px4_msgs::msg::HomePosition & msg)
   : msg_(msg)
   {}
-  Init_HomePosition_update_count manual_home(::px4_msgs::msg::HomePosition::_manual_home_type arg)
+  ::px4_msgs::msg::HomePosition manual_home(::px4_msgs::msg::HomePosition::_manual_home_type arg)
   {
     msg_.manual_home = std::move(arg);
-    return Init_HomePosition_update_count(msg_);
+    return std::move(msg_);
   }
 
 private:

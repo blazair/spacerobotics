@@ -138,7 +138,6 @@ static char toplevel_type_raw_source[] =
   "uint8 ORBIT_YAW_BEHAVIOUR_UNCONTROLLED = 2\n"
   "uint8 ORBIT_YAW_BEHAVIOUR_HOLD_FRONT_TANGENT_TO_CIRCLE = 3\n"
   "uint8 ORBIT_YAW_BEHAVIOUR_RC_CONTROLLED = 4\n"
-  "uint8 ORBIT_YAW_BEHAVIOUR_UNCHANGED = 5\n"
   "\n"
   "uint64 timestamp # time since system start (microseconds)\n"
   "float32 radius   # Radius of the orbit circle. Positive values orbit clockwise, negative values orbit counter-clockwise. [m]\n"
@@ -160,7 +159,7 @@ px4_msgs__msg__OrbitStatus__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__OrbitStatus__TYPE_NAME, 24, 24},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 999, 999},
+    {toplevel_type_raw_source, 959, 959},
   };
   return &source;
 }

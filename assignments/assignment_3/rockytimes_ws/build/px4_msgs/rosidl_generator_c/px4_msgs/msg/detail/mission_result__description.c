@@ -11,10 +11,10 @@ px4_msgs__msg__MissionResult__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0xb2, 0x42, 0x16, 0x6a, 0xdd, 0x12, 0xbd, 0x29,
-      0x1b, 0x2a, 0x2d, 0x5d, 0x0d, 0xc0, 0x68, 0xef,
-      0x65, 0x56, 0x21, 0x46, 0x91, 0x36, 0xed, 0xa9,
-      0x56, 0x6d, 0xbb, 0x28, 0xb7, 0x65, 0x02, 0xce,
+      0xc3, 0x50, 0x1c, 0x79, 0x69, 0xbf, 0x22, 0x42,
+      0x47, 0x36, 0xfc, 0x43, 0x45, 0x8b, 0x88, 0x22,
+      0xc2, 0x1a, 0xf3, 0xda, 0x4b, 0xd4, 0xee, 0x24,
+      0x7a, 0xab, 0x10, 0x5a, 0xfb, 0xc5, 0x08, 0xe8,
     }};
   return &hash;
 }
@@ -32,9 +32,7 @@ static char px4_msgs__msg__MissionResult__TYPE_NAME[] = "px4_msgs/msg/MissionRes
 
 // Define type names, field names, and default values
 static char px4_msgs__msg__MissionResult__FIELD_NAME__timestamp[] = "timestamp";
-static char px4_msgs__msg__MissionResult__FIELD_NAME__mission_id[] = "mission_id";
-static char px4_msgs__msg__MissionResult__FIELD_NAME__geofence_id[] = "geofence_id";
-static char px4_msgs__msg__MissionResult__FIELD_NAME__home_position_counter[] = "home_position_counter";
+static char px4_msgs__msg__MissionResult__FIELD_NAME__instance_count[] = "instance_count";
 static char px4_msgs__msg__MissionResult__FIELD_NAME__seq_reached[] = "seq_reached";
 static char px4_msgs__msg__MissionResult__FIELD_NAME__seq_current[] = "seq_current";
 static char px4_msgs__msg__MissionResult__FIELD_NAME__seq_total[] = "seq_total";
@@ -59,27 +57,7 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__MissionResult__F
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__MissionResult__FIELD_NAME__mission_id, 10, 10},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT32,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__MissionResult__FIELD_NAME__geofence_id, 11, 11},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT32,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__MissionResult__FIELD_NAME__home_position_counter, 21, 21},
+    {px4_msgs__msg__MissionResult__FIELD_NAME__instance_count, 14, 14},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT32,
       0,
@@ -209,7 +187,7 @@ px4_msgs__msg__MissionResult__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {px4_msgs__msg__MissionResult__TYPE_NAME, 26, 26},
-      {px4_msgs__msg__MissionResult__FIELDS, 15, 15},
+      {px4_msgs__msg__MissionResult__FIELDS, 13, 13},
     },
     {NULL, 0, 0},
   };
@@ -220,11 +198,12 @@ px4_msgs__msg__MissionResult__get_type_description(
 }
 
 static char toplevel_type_raw_source[] =
-  "uint64 timestamp\\t\\t# time since system start (microseconds)\n"
+  "uint64 timestamp\\t\\t\\t\\t# time since system start (microseconds)\n"
+  "uint8 MISSION_EXECUTION_MODE_NORMAL = 0\\t# Execute the mission according to the planned items\n"
+  "uint8 MISSION_EXECUTION_MODE_REVERSE = 1\\t# Execute the mission in reverse order, ignoring commands and converting all waypoints to normal ones\n"
+  "uint8 MISSION_EXECUTION_MODE_FAST_FORWARD = 2\\t# Execute the mission as fast as possible, for example converting loiter waypoints to normal ones\n"
   "\n"
-  "uint32 mission_id   \\t\\t# Id for the mission for which the result was generated\n"
-  "uint32 geofence_id  \\t\\t# Id for the corresponding geofence for which the result was generated (used for mission feasibility)\n"
-  "uint32 home_position_counter  \\t# Counter of the home position for which the result was generated (used for mission feasibility)\n"
+  "uint32 instance_count\\t\\t# Instance count of this mission. Increments monotonically whenever the mission is modified\n"
   "\n"
   "int32 seq_reached\\t\\t# Sequence of the mission item which has been reached, default -1\n"
   "uint16 seq_current\\t\\t# Sequence of the current mission item\n"
@@ -253,7 +232,7 @@ px4_msgs__msg__MissionResult__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__MissionResult__TYPE_NAME, 26, 26},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 1176, 1176},
+    {toplevel_type_raw_source, 1343, 1343},
   };
   return &source;
 }

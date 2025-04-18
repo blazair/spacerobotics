@@ -5,9 +5,6 @@
 
 module px4_msgs {
   module msg {
-    module VehicleGlobalPosition_Constants {
-      const uint32 MESSAGE_VERSION = 0;
-    };
     @verbatim (language="comment", text=
       "Fused global position in WGS84." "\n"
       "This struct contains global position estimation. It is not the raw GPS" "\n"
@@ -39,17 +36,9 @@ module px4_msgs {
         "Altitude above ellipsoid, (meters)")
       float alt_ellipsoid;
 
-      boolean lat_lon_valid;
-
-      boolean alt_valid;
-
       @verbatim (language="comment", text=
         "Reset delta for altitude")
       float delta_alt;
-
-      @verbatim (language="comment", text=
-        "Reset delta for terrain")
-      float delta_terrain;
 
       @verbatim (language="comment", text=
         "Counter for reset events on horizontal position coordinates")
@@ -58,10 +47,6 @@ module px4_msgs {
       @verbatim (language="comment", text=
         "Counter for reset events on altitude")
       uint8 alt_reset_counter;
-
-      @verbatim (language="comment", text=
-        "Counter for reset events on terrain")
-      uint8 terrain_reset_counter;
 
       @verbatim (language="comment", text=
         "Standard deviation of horizontal position error, (metres)")

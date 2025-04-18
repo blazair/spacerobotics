@@ -53,6 +53,21 @@ bool cdr_serialize_px4_msgs__msg__VehicleAttitudeSetpoint(
     cdr << ros_message->timestamp;
   }
 
+  // Field name: roll_body
+  {
+    cdr << ros_message->roll_body;
+  }
+
+  // Field name: pitch_body
+  {
+    cdr << ros_message->pitch_body;
+  }
+
+  // Field name: yaw_body
+  {
+    cdr << ros_message->yaw_body;
+  }
+
   // Field name: yaw_sp_move_rate
   {
     cdr << ros_message->yaw_sp_move_rate;
@@ -93,6 +108,21 @@ bool cdr_deserialize_px4_msgs__msg__VehicleAttitudeSetpoint(
   // Field name: timestamp
   {
     cdr >> ros_message->timestamp;
+  }
+
+  // Field name: roll_body
+  {
+    cdr >> ros_message->roll_body;
+  }
+
+  // Field name: pitch_body
+  {
+    cdr >> ros_message->pitch_body;
+  }
+
+  // Field name: yaw_body
+  {
+    cdr >> ros_message->yaw_body;
   }
 
   // Field name: yaw_sp_move_rate
@@ -149,6 +179,27 @@ size_t get_serialized_size_px4_msgs__msg__VehicleAttitudeSetpoint(
   // Field name: timestamp
   {
     size_t item_size = sizeof(ros_message->timestamp);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: roll_body
+  {
+    size_t item_size = sizeof(ros_message->roll_body);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: pitch_body
+  {
+    size_t item_size = sizeof(ros_message->pitch_body);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: yaw_body
+  {
+    size_t item_size = sizeof(ros_message->yaw_body);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -224,6 +275,30 @@ size_t max_serialized_size_px4_msgs__msg__VehicleAttitudeSetpoint(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
+  // Field name: roll_body
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Field name: pitch_body
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Field name: yaw_body
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
   // Field name: yaw_sp_move_rate
   {
     size_t array_size = 1;
@@ -288,6 +363,21 @@ bool cdr_serialize_key_px4_msgs__msg__VehicleAttitudeSetpoint(
     cdr << ros_message->timestamp;
   }
 
+  // Field name: roll_body
+  {
+    cdr << ros_message->roll_body;
+  }
+
+  // Field name: pitch_body
+  {
+    cdr << ros_message->pitch_body;
+  }
+
+  // Field name: yaw_body
+  {
+    cdr << ros_message->yaw_body;
+  }
+
   // Field name: yaw_sp_move_rate
   {
     cdr << ros_message->yaw_sp_move_rate;
@@ -338,6 +428,27 @@ size_t get_serialized_size_key_px4_msgs__msg__VehicleAttitudeSetpoint(
   // Field name: timestamp
   {
     size_t item_size = sizeof(ros_message->timestamp);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: roll_body
+  {
+    size_t item_size = sizeof(ros_message->roll_body);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: pitch_body
+  {
+    size_t item_size = sizeof(ros_message->pitch_body);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: yaw_body
+  {
+    size_t item_size = sizeof(ros_message->yaw_body);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -409,6 +520,30 @@ size_t max_serialized_size_key_px4_msgs__msg__VehicleAttitudeSetpoint(
     last_member_size = array_size * sizeof(uint64_t);
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
+  // Field name: roll_body
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Field name: pitch_body
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Field name: yaw_body
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
   // Field name: yaw_sp_move_rate

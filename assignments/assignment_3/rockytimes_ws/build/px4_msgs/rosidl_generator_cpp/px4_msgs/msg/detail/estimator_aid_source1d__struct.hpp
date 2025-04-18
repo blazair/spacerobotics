@@ -49,10 +49,9 @@ struct EstimatorAidSource1d_
       this->observation = 0.0f;
       this->observation_variance = 0.0f;
       this->innovation = 0.0f;
-      this->innovation_filtered = 0.0f;
       this->innovation_variance = 0.0f;
       this->test_ratio = 0.0f;
-      this->test_ratio_filtered = 0.0f;
+      this->fusion_enabled = false;
       this->innovation_rejected = false;
       this->fused = false;
     }
@@ -72,10 +71,9 @@ struct EstimatorAidSource1d_
       this->observation = 0.0f;
       this->observation_variance = 0.0f;
       this->innovation = 0.0f;
-      this->innovation_filtered = 0.0f;
       this->innovation_variance = 0.0f;
       this->test_ratio = 0.0f;
-      this->test_ratio_filtered = 0.0f;
+      this->fusion_enabled = false;
       this->innovation_rejected = false;
       this->fused = false;
     }
@@ -106,18 +104,15 @@ struct EstimatorAidSource1d_
   using _innovation_type =
     float;
   _innovation_type innovation;
-  using _innovation_filtered_type =
-    float;
-  _innovation_filtered_type innovation_filtered;
   using _innovation_variance_type =
     float;
   _innovation_variance_type innovation_variance;
   using _test_ratio_type =
     float;
   _test_ratio_type test_ratio;
-  using _test_ratio_filtered_type =
-    float;
-  _test_ratio_filtered_type test_ratio_filtered;
+  using _fusion_enabled_type =
+    bool;
+  _fusion_enabled_type fusion_enabled;
   using _innovation_rejected_type =
     bool;
   _innovation_rejected_type innovation_rejected;
@@ -174,12 +169,6 @@ struct EstimatorAidSource1d_
     this->innovation = _arg;
     return *this;
   }
-  Type & set__innovation_filtered(
-    const float & _arg)
-  {
-    this->innovation_filtered = _arg;
-    return *this;
-  }
   Type & set__innovation_variance(
     const float & _arg)
   {
@@ -192,10 +181,10 @@ struct EstimatorAidSource1d_
     this->test_ratio = _arg;
     return *this;
   }
-  Type & set__test_ratio_filtered(
-    const float & _arg)
+  Type & set__fusion_enabled(
+    const bool & _arg)
   {
-    this->test_ratio_filtered = _arg;
+    this->fusion_enabled = _arg;
     return *this;
   }
   Type & set__innovation_rejected(
@@ -277,16 +266,13 @@ struct EstimatorAidSource1d_
     if (this->innovation != other.innovation) {
       return false;
     }
-    if (this->innovation_filtered != other.innovation_filtered) {
-      return false;
-    }
     if (this->innovation_variance != other.innovation_variance) {
       return false;
     }
     if (this->test_ratio != other.test_ratio) {
       return false;
     }
-    if (this->test_ratio_filtered != other.test_ratio_filtered) {
+    if (this->fusion_enabled != other.fusion_enabled) {
       return false;
     }
     if (this->innovation_rejected != other.innovation_rejected) {

@@ -11,10 +11,10 @@ px4_msgs__msg__ManualControlSwitches__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x73, 0x4a, 0x35, 0x70, 0x06, 0xb0, 0x9e, 0xc5,
-      0xa4, 0x84, 0x19, 0x73, 0x66, 0xc7, 0x72, 0x14,
-      0xd4, 0x9e, 0xa3, 0x82, 0x7d, 0x18, 0xd6, 0xab,
-      0xb5, 0x75, 0x06, 0xf7, 0x88, 0x66, 0xd7, 0x21,
+      0xe2, 0xd4, 0xb8, 0xe5, 0xe7, 0x74, 0x97, 0xd2,
+      0xa5, 0x55, 0xcf, 0x30, 0x6b, 0xa4, 0x99, 0x69,
+      0x00, 0xf9, 0x5d, 0xde, 0x1e, 0x1b, 0x26, 0x9e,
+      0x4f, 0xf5, 0xc3, 0x98, 0x5d, 0x81, 0xf5, 0x3e,
     }};
   return &hash;
 }
@@ -43,7 +43,6 @@ static char px4_msgs__msg__ManualControlSwitches__FIELD_NAME__gear_switch[] = "g
 static char px4_msgs__msg__ManualControlSwitches__FIELD_NAME__transition_switch[] = "transition_switch";
 static char px4_msgs__msg__ManualControlSwitches__FIELD_NAME__photo_switch[] = "photo_switch";
 static char px4_msgs__msg__ManualControlSwitches__FIELD_NAME__video_switch[] = "video_switch";
-static char px4_msgs__msg__ManualControlSwitches__FIELD_NAME__payload_power_switch[] = "payload_power_switch";
 static char px4_msgs__msg__ManualControlSwitches__FIELD_NAME__engage_main_motor_switch[] = "engage_main_motor_switch";
 static char px4_msgs__msg__ManualControlSwitches__FIELD_NAME__switch_changes[] = "switch_changes";
 
@@ -169,16 +168,6 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__ManualControlSwi
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__ManualControlSwitches__FIELD_NAME__payload_power_switch, 20, 20},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT8,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
     {px4_msgs__msg__ManualControlSwitches__FIELD_NAME__engage_main_motor_switch, 24, 24},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT8,
@@ -209,7 +198,7 @@ px4_msgs__msg__ManualControlSwitches__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {px4_msgs__msg__ManualControlSwitches__TYPE_NAME, 34, 34},
-      {px4_msgs__msg__ManualControlSwitches__FIELDS, 15, 15},
+      {px4_msgs__msg__ManualControlSwitches__FIELDS, 14, 14},
     },
     {NULL, 0, 0},
   };
@@ -251,8 +240,6 @@ static char toplevel_type_raw_source[] =
   "uint8 photo_switch               # Photo trigger switch\n"
   "uint8 video_switch               # Photo trigger switch\n"
   "\n"
-  "uint8 payload_power_switch       # Payload power switch\n"
-  "\n"
   "uint8 engage_main_motor_switch   # Engage the main motor (for helicopters)\n"
   "\n"
   "uint32 switch_changes            # number of switch changes";
@@ -269,7 +256,7 @@ px4_msgs__msg__ManualControlSwitches__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__ManualControlSwitches__TYPE_NAME, 34, 34},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 1804, 1804},
+    {toplevel_type_raw_source, 1747, 1747},
   };
   return &source;
 }

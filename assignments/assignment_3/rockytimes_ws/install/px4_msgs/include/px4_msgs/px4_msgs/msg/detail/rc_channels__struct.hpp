@@ -45,7 +45,7 @@ struct RcChannels_
       this->timestamp_last_valid = 0ull;
       std::fill<typename std::array<float, 18>::iterator, float>(this->channels.begin(), this->channels.end(), 0.0f);
       this->channel_count = 0;
-      std::fill<typename std::array<int8_t, 29>::iterator, int8_t>(this->function.begin(), this->function.end(), 0);
+      std::fill<typename std::array<int8_t, 28>::iterator, int8_t>(this->function.begin(), this->function.end(), 0);
       this->rssi = 0;
       this->signal_lost = false;
       this->frame_drop_count = 0ul;
@@ -63,7 +63,7 @@ struct RcChannels_
       this->timestamp_last_valid = 0ull;
       std::fill<typename std::array<float, 18>::iterator, float>(this->channels.begin(), this->channels.end(), 0.0f);
       this->channel_count = 0;
-      std::fill<typename std::array<int8_t, 29>::iterator, int8_t>(this->function.begin(), this->function.end(), 0);
+      std::fill<typename std::array<int8_t, 28>::iterator, int8_t>(this->function.begin(), this->function.end(), 0);
       this->rssi = 0;
       this->signal_lost = false;
       this->frame_drop_count = 0ul;
@@ -84,7 +84,7 @@ struct RcChannels_
     uint8_t;
   _channel_count_type channel_count;
   using _function_type =
-    std::array<int8_t, 29>;
+    std::array<int8_t, 28>;
   _function_type function;
   using _rssi_type =
     uint8_t;
@@ -122,7 +122,7 @@ struct RcChannels_
     return *this;
   }
   Type & set__function(
-    const std::array<int8_t, 29> & _arg)
+    const std::array<int8_t, 28> & _arg)
   {
     this->function = _arg;
     return *this;
@@ -203,8 +203,6 @@ struct RcChannels_
     26u;
   static constexpr uint8_t FUNCTION_ENGAGE_MAIN_MOTOR =
     27u;
-  static constexpr uint8_t FUNCTION_PAYLOAD_POWER =
-    28u;
   static constexpr uint8_t FUNCTION_FLTBTN_SLOT_COUNT =
     6u;
 
@@ -424,11 +422,6 @@ constexpr uint8_t RcChannels_<ContainerAllocator>::FUNCTION_FLTBTN_SLOT_6;
 // static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint8_t RcChannels_<ContainerAllocator>::FUNCTION_ENGAGE_MAIN_MOTOR;
-#endif  // __cplusplus < 201703L
-#if __cplusplus < 201703L
-// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
-template<typename ContainerAllocator>
-constexpr uint8_t RcChannels_<ContainerAllocator>::FUNCTION_PAYLOAD_POWER;
 #endif  // __cplusplus < 201703L
 #if __cplusplus < 201703L
 // static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17

@@ -44,10 +44,10 @@ struct SensorGps_
       this->timestamp = 0ull;
       this->timestamp_sample = 0ull;
       this->device_id = 0ul;
-      this->latitude_deg = 0.0;
-      this->longitude_deg = 0.0;
-      this->altitude_msl_m = 0.0;
-      this->altitude_ellipsoid_m = 0.0;
+      this->lat = 0l;
+      this->lon = 0l;
+      this->alt = 0l;
+      this->alt_ellipsoid = 0l;
       this->s_variance_m_s = 0.0f;
       this->c_variance_rad = 0.0f;
       this->fix_type = 0;
@@ -74,8 +74,6 @@ struct SensorGps_
       this->heading_accuracy = 0.0f;
       this->rtcm_injection_rate = 0.0f;
       this->selected_rtcm_instance = 0;
-      this->rtcm_crc_failed = false;
-      this->rtcm_msg_used = 0;
     }
   }
 
@@ -88,10 +86,10 @@ struct SensorGps_
       this->timestamp = 0ull;
       this->timestamp_sample = 0ull;
       this->device_id = 0ul;
-      this->latitude_deg = 0.0;
-      this->longitude_deg = 0.0;
-      this->altitude_msl_m = 0.0;
-      this->altitude_ellipsoid_m = 0.0;
+      this->lat = 0l;
+      this->lon = 0l;
+      this->alt = 0l;
+      this->alt_ellipsoid = 0l;
       this->s_variance_m_s = 0.0f;
       this->c_variance_rad = 0.0f;
       this->fix_type = 0;
@@ -118,8 +116,6 @@ struct SensorGps_
       this->heading_accuracy = 0.0f;
       this->rtcm_injection_rate = 0.0f;
       this->selected_rtcm_instance = 0;
-      this->rtcm_crc_failed = false;
-      this->rtcm_msg_used = 0;
     }
   }
 
@@ -133,18 +129,18 @@ struct SensorGps_
   using _device_id_type =
     uint32_t;
   _device_id_type device_id;
-  using _latitude_deg_type =
-    double;
-  _latitude_deg_type latitude_deg;
-  using _longitude_deg_type =
-    double;
-  _longitude_deg_type longitude_deg;
-  using _altitude_msl_m_type =
-    double;
-  _altitude_msl_m_type altitude_msl_m;
-  using _altitude_ellipsoid_m_type =
-    double;
-  _altitude_ellipsoid_m_type altitude_ellipsoid_m;
+  using _lat_type =
+    int32_t;
+  _lat_type lat;
+  using _lon_type =
+    int32_t;
+  _lon_type lon;
+  using _alt_type =
+    int32_t;
+  _alt_type alt;
+  using _alt_ellipsoid_type =
+    int32_t;
+  _alt_ellipsoid_type alt_ellipsoid;
   using _s_variance_m_s_type =
     float;
   _s_variance_m_s_type s_variance_m_s;
@@ -223,12 +219,6 @@ struct SensorGps_
   using _selected_rtcm_instance_type =
     uint8_t;
   _selected_rtcm_instance_type selected_rtcm_instance;
-  using _rtcm_crc_failed_type =
-    bool;
-  _rtcm_crc_failed_type rtcm_crc_failed;
-  using _rtcm_msg_used_type =
-    uint8_t;
-  _rtcm_msg_used_type rtcm_msg_used;
 
   // setters for named parameter idiom
   Type & set__timestamp(
@@ -249,28 +239,28 @@ struct SensorGps_
     this->device_id = _arg;
     return *this;
   }
-  Type & set__latitude_deg(
-    const double & _arg)
+  Type & set__lat(
+    const int32_t & _arg)
   {
-    this->latitude_deg = _arg;
+    this->lat = _arg;
     return *this;
   }
-  Type & set__longitude_deg(
-    const double & _arg)
+  Type & set__lon(
+    const int32_t & _arg)
   {
-    this->longitude_deg = _arg;
+    this->lon = _arg;
     return *this;
   }
-  Type & set__altitude_msl_m(
-    const double & _arg)
+  Type & set__alt(
+    const int32_t & _arg)
   {
-    this->altitude_msl_m = _arg;
+    this->alt = _arg;
     return *this;
   }
-  Type & set__altitude_ellipsoid_m(
-    const double & _arg)
+  Type & set__alt_ellipsoid(
+    const int32_t & _arg)
   {
-    this->altitude_ellipsoid_m = _arg;
+    this->alt_ellipsoid = _arg;
     return *this;
   }
   Type & set__s_variance_m_s(
@@ -429,34 +419,8 @@ struct SensorGps_
     this->selected_rtcm_instance = _arg;
     return *this;
   }
-  Type & set__rtcm_crc_failed(
-    const bool & _arg)
-  {
-    this->rtcm_crc_failed = _arg;
-    return *this;
-  }
-  Type & set__rtcm_msg_used(
-    const uint8_t & _arg)
-  {
-    this->rtcm_msg_used = _arg;
-    return *this;
-  }
 
   // constant declarations
-  static constexpr uint8_t FIX_TYPE_NONE =
-    1u;
-  static constexpr uint8_t FIX_TYPE_2D =
-    2u;
-  static constexpr uint8_t FIX_TYPE_3D =
-    3u;
-  static constexpr uint8_t FIX_TYPE_RTCM_CODE_DIFFERENTIAL =
-    4u;
-  static constexpr uint8_t FIX_TYPE_RTK_FLOAT =
-    5u;
-  static constexpr uint8_t FIX_TYPE_RTK_FIXED =
-    6u;
-  static constexpr uint8_t FIX_TYPE_EXTRAPOLATED =
-    8u;
   static constexpr uint8_t JAMMING_STATE_UNKNOWN =
     0u;
   static constexpr uint8_t JAMMING_STATE_OK =
@@ -473,12 +437,6 @@ struct SensorGps_
     2u;
   static constexpr uint8_t SPOOFING_STATE_MULTIPLE =
     3u;
-  static constexpr uint8_t RTCM_MSG_USED_UNKNOWN =
-    0u;
-  static constexpr uint8_t RTCM_MSG_USED_NOT_USED =
-    1u;
-  static constexpr uint8_t RTCM_MSG_USED_USED =
-    2u;
 
   // pointer types
   using RawPtr =
@@ -529,16 +487,16 @@ struct SensorGps_
     if (this->device_id != other.device_id) {
       return false;
     }
-    if (this->latitude_deg != other.latitude_deg) {
+    if (this->lat != other.lat) {
       return false;
     }
-    if (this->longitude_deg != other.longitude_deg) {
+    if (this->lon != other.lon) {
       return false;
     }
-    if (this->altitude_msl_m != other.altitude_msl_m) {
+    if (this->alt != other.alt) {
       return false;
     }
-    if (this->altitude_ellipsoid_m != other.altitude_ellipsoid_m) {
+    if (this->alt_ellipsoid != other.alt_ellipsoid) {
       return false;
     }
     if (this->s_variance_m_s != other.s_variance_m_s) {
@@ -619,12 +577,6 @@ struct SensorGps_
     if (this->selected_rtcm_instance != other.selected_rtcm_instance) {
       return false;
     }
-    if (this->rtcm_crc_failed != other.rtcm_crc_failed) {
-      return false;
-    }
-    if (this->rtcm_msg_used != other.rtcm_msg_used) {
-      return false;
-    }
     return true;
   }
   bool operator!=(const SensorGps_ & other) const
@@ -638,41 +590,6 @@ using SensorGps =
   px4_msgs::msg::SensorGps_<std::allocator<void>>;
 
 // constant definitions
-#if __cplusplus < 201703L
-// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
-template<typename ContainerAllocator>
-constexpr uint8_t SensorGps_<ContainerAllocator>::FIX_TYPE_NONE;
-#endif  // __cplusplus < 201703L
-#if __cplusplus < 201703L
-// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
-template<typename ContainerAllocator>
-constexpr uint8_t SensorGps_<ContainerAllocator>::FIX_TYPE_2D;
-#endif  // __cplusplus < 201703L
-#if __cplusplus < 201703L
-// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
-template<typename ContainerAllocator>
-constexpr uint8_t SensorGps_<ContainerAllocator>::FIX_TYPE_3D;
-#endif  // __cplusplus < 201703L
-#if __cplusplus < 201703L
-// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
-template<typename ContainerAllocator>
-constexpr uint8_t SensorGps_<ContainerAllocator>::FIX_TYPE_RTCM_CODE_DIFFERENTIAL;
-#endif  // __cplusplus < 201703L
-#if __cplusplus < 201703L
-// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
-template<typename ContainerAllocator>
-constexpr uint8_t SensorGps_<ContainerAllocator>::FIX_TYPE_RTK_FLOAT;
-#endif  // __cplusplus < 201703L
-#if __cplusplus < 201703L
-// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
-template<typename ContainerAllocator>
-constexpr uint8_t SensorGps_<ContainerAllocator>::FIX_TYPE_RTK_FIXED;
-#endif  // __cplusplus < 201703L
-#if __cplusplus < 201703L
-// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
-template<typename ContainerAllocator>
-constexpr uint8_t SensorGps_<ContainerAllocator>::FIX_TYPE_EXTRAPOLATED;
-#endif  // __cplusplus < 201703L
 #if __cplusplus < 201703L
 // static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
@@ -712,21 +629,6 @@ constexpr uint8_t SensorGps_<ContainerAllocator>::SPOOFING_STATE_INDICATED;
 // static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint8_t SensorGps_<ContainerAllocator>::SPOOFING_STATE_MULTIPLE;
-#endif  // __cplusplus < 201703L
-#if __cplusplus < 201703L
-// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
-template<typename ContainerAllocator>
-constexpr uint8_t SensorGps_<ContainerAllocator>::RTCM_MSG_USED_UNKNOWN;
-#endif  // __cplusplus < 201703L
-#if __cplusplus < 201703L
-// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
-template<typename ContainerAllocator>
-constexpr uint8_t SensorGps_<ContainerAllocator>::RTCM_MSG_USED_NOT_USED;
-#endif  // __cplusplus < 201703L
-#if __cplusplus < 201703L
-// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
-template<typename ContainerAllocator>
-constexpr uint8_t SensorGps_<ContainerAllocator>::RTCM_MSG_USED_USED;
 #endif  // __cplusplus < 201703L
 
 }  // namespace msg

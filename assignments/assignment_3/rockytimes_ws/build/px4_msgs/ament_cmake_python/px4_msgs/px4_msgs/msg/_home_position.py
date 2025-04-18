@@ -29,7 +29,6 @@ class Metaclass_HomePosition(type):
     _TYPE_SUPPORT = None
 
     __constants = {
-        'MESSAGE_VERSION': 0,
     }
 
     @classmethod
@@ -58,22 +57,11 @@ class Metaclass_HomePosition(type):
         # the message class under "Data and other attributes defined here:"
         # as well as populate each message instance
         return {
-            'MESSAGE_VERSION': cls.__constants['MESSAGE_VERSION'],
         }
-
-    @property
-    def MESSAGE_VERSION(self):
-        """Message constant 'MESSAGE_VERSION'."""
-        return Metaclass_HomePosition.__constants['MESSAGE_VERSION']
 
 
 class HomePosition(metaclass=Metaclass_HomePosition):
-    """
-    Message class 'HomePosition'.
-
-    Constants:
-      MESSAGE_VERSION
-    """
+    """Message class 'HomePosition'."""
 
     __slots__ = [
         '_timestamp',
@@ -88,7 +76,6 @@ class HomePosition(metaclass=Metaclass_HomePosition):
         '_valid_hpos',
         '_valid_lpos',
         '_manual_home',
-        '_update_count',
         '_check_fields',
     ]
 
@@ -105,7 +92,6 @@ class HomePosition(metaclass=Metaclass_HomePosition):
         'valid_hpos': 'boolean',
         'valid_lpos': 'boolean',
         'manual_home': 'boolean',
-        'update_count': 'uint32',
     }
 
     # This attribute is used to store an rosidl_parser.definition variable
@@ -123,7 +109,6 @@ class HomePosition(metaclass=Metaclass_HomePosition):
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
-        rosidl_parser.definition.BasicType('uint32'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -147,7 +132,6 @@ class HomePosition(metaclass=Metaclass_HomePosition):
         self.valid_hpos = kwargs.get('valid_hpos', bool())
         self.valid_lpos = kwargs.get('valid_lpos', bool())
         self.manual_home = kwargs.get('manual_home', bool())
-        self.update_count = kwargs.get('update_count', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -202,8 +186,6 @@ class HomePosition(metaclass=Metaclass_HomePosition):
         if self.valid_lpos != other.valid_lpos:
             return False
         if self.manual_home != other.manual_home:
-            return False
-        if self.update_count != other.update_count:
             return False
         return True
 
@@ -383,18 +365,3 @@ class HomePosition(metaclass=Metaclass_HomePosition):
                 isinstance(value, bool), \
                 "The 'manual_home' field must be of type 'bool'"
         self._manual_home = value
-
-    @builtins.property
-    def update_count(self):
-        """Message field 'update_count'."""
-        return self._update_count
-
-    @update_count.setter
-    def update_count(self, value):
-        if self._check_fields:
-            assert \
-                isinstance(value, int), \
-                "The 'update_count' field must be of type 'int'"
-            assert value >= 0 and value < 4294967296, \
-                "The 'update_count' field must be an unsigned integer in [0, 4294967295]"
-        self._update_count = value

@@ -89,12 +89,8 @@ px4_msgs__msg__ModeCompleted__get_type_description(
 
 static char toplevel_type_raw_source[] =
   "# Mode completion result, published by an active mode.\n"
-  "# The possible values of nav_state are defined in the VehicleStatus msg.\n"
   "# Note that this is not always published (e.g. when a user switches modes or on\n"
   "# failsafe activation)\n"
-  "\n"
-  "uint32 MESSAGE_VERSION = 0\n"
-  "\n"
   "uint64 timestamp\\t\\t\\t\\t # time since system start (microseconds)\n"
   "\n"
   "\n"
@@ -104,7 +100,8 @@ static char toplevel_type_raw_source[] =
   "\n"
   "uint8 result                     # One of RESULT_*\n"
   "\n"
-  "uint8 nav_state                  # Source mode (values in VehicleStatus)";
+  "uint8 nav_state                  # Source mode\n"
+  "";
 
 static char msg_encoding[] = "msg";
 
@@ -118,7 +115,7 @@ px4_msgs__msg__ModeCompleted__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__ModeCompleted__TYPE_NAME, 26, 26},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 557, 557},
+    {toplevel_type_raw_source, 430, 430},
   };
   return &source;
 }

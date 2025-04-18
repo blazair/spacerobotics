@@ -54,11 +54,8 @@ cdr_serialize(
   // Member: body_rate
   cdr << (ros_message.body_rate ? true : false);
 
-  // Member: thrust_and_torque
-  cdr << (ros_message.thrust_and_torque ? true : false);
-
-  // Member: direct_actuator
-  cdr << (ros_message.direct_actuator ? true : false);
+  // Member: actuator
+  cdr << (ros_message.actuator ? true : false);
 
   return true;
 }
@@ -107,18 +104,11 @@ cdr_deserialize(
     ros_message.body_rate = tmp ? true : false;
   }
 
-  // Member: thrust_and_torque
+  // Member: actuator
   {
     uint8_t tmp;
     cdr >> tmp;
-    ros_message.thrust_and_torque = tmp ? true : false;
-  }
-
-  // Member: direct_actuator
-  {
-    uint8_t tmp;
-    cdr >> tmp;
-    ros_message.direct_actuator = tmp ? true : false;
+    ros_message.actuator = tmp ? true : false;
   }
 
   return true;
@@ -180,16 +170,9 @@ get_serialized_size(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Member: thrust_and_torque
+  // Member: actuator
   {
-    size_t item_size = sizeof(ros_message.thrust_and_torque);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: direct_actuator
-  {
-    size_t item_size = sizeof(ros_message.direct_actuator);
+    size_t item_size = sizeof(ros_message.actuator);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -254,13 +237,7 @@ max_serialized_size_OffboardControlMode(
     last_member_size = array_size * sizeof(uint8_t);
     current_alignment += array_size * sizeof(uint8_t);
   }
-  // Member: thrust_and_torque
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-  // Member: direct_actuator
+  // Member: actuator
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint8_t);
@@ -275,7 +252,7 @@ max_serialized_size_OffboardControlMode(
     using DataType = px4_msgs::msg::OffboardControlMode;
     is_plain =
       (
-      offsetof(DataType, direct_actuator) +
+      offsetof(DataType, actuator) +
       last_member_size
       ) == ret_val;
   }
@@ -307,11 +284,8 @@ cdr_serialize_key(
   // Member: body_rate
   cdr << (ros_message.body_rate ? true : false);
 
-  // Member: thrust_and_torque
-  cdr << (ros_message.thrust_and_torque ? true : false);
-
-  // Member: direct_actuator
-  cdr << (ros_message.direct_actuator ? true : false);
+  // Member: actuator
+  cdr << (ros_message.actuator ? true : false);
 
   return true;
 }
@@ -371,16 +345,9 @@ get_serialized_size_key(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Member: thrust_and_torque
+  // Member: actuator
   {
-    size_t item_size = sizeof(ros_message.thrust_and_torque);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: direct_actuator
-  {
-    size_t item_size = sizeof(ros_message.direct_actuator);
+    size_t item_size = sizeof(ros_message.actuator);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -450,14 +417,7 @@ max_serialized_size_key_OffboardControlMode(
     current_alignment += array_size * sizeof(uint8_t);
   }
 
-  // Member: thrust_and_torque
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
-  // Member: direct_actuator
+  // Member: actuator
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint8_t);
@@ -472,7 +432,7 @@ max_serialized_size_key_OffboardControlMode(
     using DataType = px4_msgs::msg::OffboardControlMode;
     is_plain =
       (
-      offsetof(DataType, direct_actuator) +
+      offsetof(DataType, actuator) +
       last_member_size
       ) == ret_val;
   }

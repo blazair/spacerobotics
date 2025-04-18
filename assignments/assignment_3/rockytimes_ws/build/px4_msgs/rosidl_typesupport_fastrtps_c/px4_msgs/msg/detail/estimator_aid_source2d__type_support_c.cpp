@@ -94,13 +94,6 @@ bool cdr_serialize_px4_msgs__msg__EstimatorAidSource2d(
     cdr.serialize_array(array_ptr, size);
   }
 
-  // Field name: innovation_filtered
-  {
-    size_t size = 2;
-    auto array_ptr = ros_message->innovation_filtered;
-    cdr.serialize_array(array_ptr, size);
-  }
-
   // Field name: innovation_variance
   {
     size_t size = 2;
@@ -115,11 +108,9 @@ bool cdr_serialize_px4_msgs__msg__EstimatorAidSource2d(
     cdr.serialize_array(array_ptr, size);
   }
 
-  // Field name: test_ratio_filtered
+  // Field name: fusion_enabled
   {
-    size_t size = 2;
-    auto array_ptr = ros_message->test_ratio_filtered;
-    cdr.serialize_array(array_ptr, size);
+    cdr << (ros_message->fusion_enabled ? true : false);
   }
 
   // Field name: innovation_rejected
@@ -186,13 +177,6 @@ bool cdr_deserialize_px4_msgs__msg__EstimatorAidSource2d(
     cdr.deserialize_array(array_ptr, size);
   }
 
-  // Field name: innovation_filtered
-  {
-    size_t size = 2;
-    auto array_ptr = ros_message->innovation_filtered;
-    cdr.deserialize_array(array_ptr, size);
-  }
-
   // Field name: innovation_variance
   {
     size_t size = 2;
@@ -207,11 +191,11 @@ bool cdr_deserialize_px4_msgs__msg__EstimatorAidSource2d(
     cdr.deserialize_array(array_ptr, size);
   }
 
-  // Field name: test_ratio_filtered
+  // Field name: fusion_enabled
   {
-    size_t size = 2;
-    auto array_ptr = ros_message->test_ratio_filtered;
-    cdr.deserialize_array(array_ptr, size);
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message->fusion_enabled = tmp ? true : false;
   }
 
   // Field name: innovation_rejected
@@ -311,16 +295,6 @@ size_t get_serialized_size_px4_msgs__msg__EstimatorAidSource2d(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: innovation_filtered
-  {
-    size_t array_size = 2;
-    auto array_ptr = ros_message->innovation_filtered;
-    (void)array_ptr;
-    size_t item_size = sizeof(array_ptr[0]);
-    current_alignment += array_size * item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
   // Field name: innovation_variance
   {
     size_t array_size = 2;
@@ -341,13 +315,10 @@ size_t get_serialized_size_px4_msgs__msg__EstimatorAidSource2d(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: test_ratio_filtered
+  // Field name: fusion_enabled
   {
-    size_t array_size = 2;
-    auto array_ptr = ros_message->test_ratio_filtered;
-    (void)array_ptr;
-    size_t item_size = sizeof(array_ptr[0]);
-    current_alignment += array_size * item_size +
+    size_t item_size = sizeof(ros_message->fusion_enabled);
+    current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
@@ -429,9 +400,9 @@ size_t max_serialized_size_px4_msgs__msg__EstimatorAidSource2d(
   // Field name: observation
   {
     size_t array_size = 2;
-    last_member_size = array_size * sizeof(uint64_t);
-    current_alignment += array_size * sizeof(uint64_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
   // Field name: observation_variance
@@ -443,14 +414,6 @@ size_t max_serialized_size_px4_msgs__msg__EstimatorAidSource2d(
   }
 
   // Field name: innovation
-  {
-    size_t array_size = 2;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Field name: innovation_filtered
   {
     size_t array_size = 2;
     last_member_size = array_size * sizeof(uint32_t);
@@ -474,12 +437,11 @@ size_t max_serialized_size_px4_msgs__msg__EstimatorAidSource2d(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
-  // Field name: test_ratio_filtered
+  // Field name: fusion_enabled
   {
-    size_t array_size = 2;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
   }
 
   // Field name: innovation_rejected
@@ -563,13 +525,6 @@ bool cdr_serialize_key_px4_msgs__msg__EstimatorAidSource2d(
     cdr.serialize_array(array_ptr, size);
   }
 
-  // Field name: innovation_filtered
-  {
-    size_t size = 2;
-    auto array_ptr = ros_message->innovation_filtered;
-    cdr.serialize_array(array_ptr, size);
-  }
-
   // Field name: innovation_variance
   {
     size_t size = 2;
@@ -584,11 +539,9 @@ bool cdr_serialize_key_px4_msgs__msg__EstimatorAidSource2d(
     cdr.serialize_array(array_ptr, size);
   }
 
-  // Field name: test_ratio_filtered
+  // Field name: fusion_enabled
   {
-    size_t size = 2;
-    auto array_ptr = ros_message->test_ratio_filtered;
-    cdr.serialize_array(array_ptr, size);
+    cdr << (ros_message->fusion_enabled ? true : false);
   }
 
   // Field name: innovation_rejected
@@ -684,16 +637,6 @@ size_t get_serialized_size_key_px4_msgs__msg__EstimatorAidSource2d(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: innovation_filtered
-  {
-    size_t array_size = 2;
-    auto array_ptr = ros_message->innovation_filtered;
-    (void)array_ptr;
-    size_t item_size = sizeof(array_ptr[0]);
-    current_alignment += array_size * item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
   // Field name: innovation_variance
   {
     size_t array_size = 2;
@@ -714,13 +657,10 @@ size_t get_serialized_size_key_px4_msgs__msg__EstimatorAidSource2d(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: test_ratio_filtered
+  // Field name: fusion_enabled
   {
-    size_t array_size = 2;
-    auto array_ptr = ros_message->test_ratio_filtered;
-    (void)array_ptr;
-    size_t item_size = sizeof(array_ptr[0]);
-    current_alignment += array_size * item_size +
+    size_t item_size = sizeof(ros_message->fusion_enabled);
+    current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
@@ -800,9 +740,9 @@ size_t max_serialized_size_key_px4_msgs__msg__EstimatorAidSource2d(
   // Field name: observation
   {
     size_t array_size = 2;
-    last_member_size = array_size * sizeof(uint64_t);
-    current_alignment += array_size * sizeof(uint64_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
   // Field name: observation_variance
@@ -814,14 +754,6 @@ size_t max_serialized_size_key_px4_msgs__msg__EstimatorAidSource2d(
   }
 
   // Field name: innovation
-  {
-    size_t array_size = 2;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Field name: innovation_filtered
   {
     size_t array_size = 2;
     last_member_size = array_size * sizeof(uint32_t);
@@ -845,12 +777,11 @@ size_t max_serialized_size_key_px4_msgs__msg__EstimatorAidSource2d(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
-  // Field name: test_ratio_filtered
+  // Field name: fusion_enabled
   {
-    size_t array_size = 2;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
   }
 
   // Field name: innovation_rejected

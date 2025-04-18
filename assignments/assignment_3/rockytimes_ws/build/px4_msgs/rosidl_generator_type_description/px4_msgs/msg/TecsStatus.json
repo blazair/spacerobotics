@@ -34,16 +34,6 @@
           "default_value": ""
         },
         {
-          "name": "altitude_time_constant",
-          "type": {
-            "type_id": 10,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
           "name": "height_rate_reference",
           "type": {
             "type_id": 10,
@@ -234,19 +224,9 @@
           "default_value": ""
         },
         {
-          "name": "underspeed_ratio",
+          "name": "mode",
           "type": {
-            "type_id": 10,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "fast_descend_ratio",
-          "type": {
-            "type_id": 10,
+            "type_id": 3,
             "capacity": 0,
             "string_capacity": 0,
             "nested_type_name": ""
@@ -260,7 +240,7 @@
   "type_hashes": [
     {
       "type_name": "px4_msgs/msg/TecsStatus",
-      "hash_string": "RIHS01_70baacd1f7b490eafc33128c846274d807027844c40b573bb10ba0cf1d43ce3b"
+      "hash_string": "RIHS01_7b5598c2ddc8e51307073a0d591ff91ca121e4818513194ac334ea69345e5bae"
     }
   ]
 }

@@ -148,6 +148,71 @@ bool cdr_serialize_px4_msgs__msg__EstimatorEventFlags(
     cdr << (ros_message->reset_hgt_to_ev ? true : false);
   }
 
+  // Field name: warning_event_changes
+  {
+    cdr << ros_message->warning_event_changes;
+  }
+
+  // Field name: gps_quality_poor
+  {
+    cdr << (ros_message->gps_quality_poor ? true : false);
+  }
+
+  // Field name: gps_fusion_timout
+  {
+    cdr << (ros_message->gps_fusion_timout ? true : false);
+  }
+
+  // Field name: gps_data_stopped
+  {
+    cdr << (ros_message->gps_data_stopped ? true : false);
+  }
+
+  // Field name: gps_data_stopped_using_alternate
+  {
+    cdr << (ros_message->gps_data_stopped_using_alternate ? true : false);
+  }
+
+  // Field name: height_sensor_timeout
+  {
+    cdr << (ros_message->height_sensor_timeout ? true : false);
+  }
+
+  // Field name: stopping_navigation
+  {
+    cdr << (ros_message->stopping_navigation ? true : false);
+  }
+
+  // Field name: invalid_accel_bias_cov_reset
+  {
+    cdr << (ros_message->invalid_accel_bias_cov_reset ? true : false);
+  }
+
+  // Field name: bad_yaw_using_gps_course
+  {
+    cdr << (ros_message->bad_yaw_using_gps_course ? true : false);
+  }
+
+  // Field name: stopping_mag_use
+  {
+    cdr << (ros_message->stopping_mag_use ? true : false);
+  }
+
+  // Field name: vision_data_stopped
+  {
+    cdr << (ros_message->vision_data_stopped ? true : false);
+  }
+
+  // Field name: emergency_yaw_reset_mag_stopped
+  {
+    cdr << (ros_message->emergency_yaw_reset_mag_stopped ? true : false);
+  }
+
+  // Field name: emergency_yaw_reset_gps_yaw_stopped
+  {
+    cdr << (ros_message->emergency_yaw_reset_gps_yaw_stopped ? true : false);
+  }
+
   return true;
 }
 
@@ -288,6 +353,95 @@ bool cdr_deserialize_px4_msgs__msg__EstimatorEventFlags(
     uint8_t tmp;
     cdr >> tmp;
     ros_message->reset_hgt_to_ev = tmp ? true : false;
+  }
+
+  // Field name: warning_event_changes
+  {
+    cdr >> ros_message->warning_event_changes;
+  }
+
+  // Field name: gps_quality_poor
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message->gps_quality_poor = tmp ? true : false;
+  }
+
+  // Field name: gps_fusion_timout
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message->gps_fusion_timout = tmp ? true : false;
+  }
+
+  // Field name: gps_data_stopped
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message->gps_data_stopped = tmp ? true : false;
+  }
+
+  // Field name: gps_data_stopped_using_alternate
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message->gps_data_stopped_using_alternate = tmp ? true : false;
+  }
+
+  // Field name: height_sensor_timeout
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message->height_sensor_timeout = tmp ? true : false;
+  }
+
+  // Field name: stopping_navigation
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message->stopping_navigation = tmp ? true : false;
+  }
+
+  // Field name: invalid_accel_bias_cov_reset
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message->invalid_accel_bias_cov_reset = tmp ? true : false;
+  }
+
+  // Field name: bad_yaw_using_gps_course
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message->bad_yaw_using_gps_course = tmp ? true : false;
+  }
+
+  // Field name: stopping_mag_use
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message->stopping_mag_use = tmp ? true : false;
+  }
+
+  // Field name: vision_data_stopped
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message->vision_data_stopped = tmp ? true : false;
+  }
+
+  // Field name: emergency_yaw_reset_mag_stopped
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message->emergency_yaw_reset_mag_stopped = tmp ? true : false;
+  }
+
+  // Field name: emergency_yaw_reset_gps_yaw_stopped
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message->emergency_yaw_reset_gps_yaw_stopped = tmp ? true : false;
   }
 
   return true;
@@ -444,6 +598,97 @@ size_t get_serialized_size_px4_msgs__msg__EstimatorEventFlags(
   // Field name: reset_hgt_to_ev
   {
     size_t item_size = sizeof(ros_message->reset_hgt_to_ev);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: warning_event_changes
+  {
+    size_t item_size = sizeof(ros_message->warning_event_changes);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: gps_quality_poor
+  {
+    size_t item_size = sizeof(ros_message->gps_quality_poor);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: gps_fusion_timout
+  {
+    size_t item_size = sizeof(ros_message->gps_fusion_timout);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: gps_data_stopped
+  {
+    size_t item_size = sizeof(ros_message->gps_data_stopped);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: gps_data_stopped_using_alternate
+  {
+    size_t item_size = sizeof(ros_message->gps_data_stopped_using_alternate);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: height_sensor_timeout
+  {
+    size_t item_size = sizeof(ros_message->height_sensor_timeout);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: stopping_navigation
+  {
+    size_t item_size = sizeof(ros_message->stopping_navigation);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: invalid_accel_bias_cov_reset
+  {
+    size_t item_size = sizeof(ros_message->invalid_accel_bias_cov_reset);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: bad_yaw_using_gps_course
+  {
+    size_t item_size = sizeof(ros_message->bad_yaw_using_gps_course);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: stopping_mag_use
+  {
+    size_t item_size = sizeof(ros_message->stopping_mag_use);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: vision_data_stopped
+  {
+    size_t item_size = sizeof(ros_message->vision_data_stopped);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: emergency_yaw_reset_mag_stopped
+  {
+    size_t item_size = sizeof(ros_message->emergency_yaw_reset_mag_stopped);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: emergency_yaw_reset_gps_yaw_stopped
+  {
+    size_t item_size = sizeof(ros_message->emergency_yaw_reset_gps_yaw_stopped);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -613,6 +858,98 @@ size_t max_serialized_size_px4_msgs__msg__EstimatorEventFlags(
     current_alignment += array_size * sizeof(uint8_t);
   }
 
+  // Field name: warning_event_changes
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Field name: gps_quality_poor
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Field name: gps_fusion_timout
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Field name: gps_data_stopped
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Field name: gps_data_stopped_using_alternate
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Field name: height_sensor_timeout
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Field name: stopping_navigation
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Field name: invalid_accel_bias_cov_reset
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Field name: bad_yaw_using_gps_course
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Field name: stopping_mag_use
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Field name: vision_data_stopped
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Field name: emergency_yaw_reset_mag_stopped
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Field name: emergency_yaw_reset_gps_yaw_stopped
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
 
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
@@ -622,7 +959,7 @@ size_t max_serialized_size_px4_msgs__msg__EstimatorEventFlags(
     using DataType = px4_msgs__msg__EstimatorEventFlags;
     is_plain =
       (
-      offsetof(DataType, reset_hgt_to_ev) +
+      offsetof(DataType, emergency_yaw_reset_gps_yaw_stopped) +
       last_member_size
       ) == ret_val;
   }
@@ -732,6 +1069,71 @@ bool cdr_serialize_key_px4_msgs__msg__EstimatorEventFlags(
   // Field name: reset_hgt_to_ev
   {
     cdr << (ros_message->reset_hgt_to_ev ? true : false);
+  }
+
+  // Field name: warning_event_changes
+  {
+    cdr << ros_message->warning_event_changes;
+  }
+
+  // Field name: gps_quality_poor
+  {
+    cdr << (ros_message->gps_quality_poor ? true : false);
+  }
+
+  // Field name: gps_fusion_timout
+  {
+    cdr << (ros_message->gps_fusion_timout ? true : false);
+  }
+
+  // Field name: gps_data_stopped
+  {
+    cdr << (ros_message->gps_data_stopped ? true : false);
+  }
+
+  // Field name: gps_data_stopped_using_alternate
+  {
+    cdr << (ros_message->gps_data_stopped_using_alternate ? true : false);
+  }
+
+  // Field name: height_sensor_timeout
+  {
+    cdr << (ros_message->height_sensor_timeout ? true : false);
+  }
+
+  // Field name: stopping_navigation
+  {
+    cdr << (ros_message->stopping_navigation ? true : false);
+  }
+
+  // Field name: invalid_accel_bias_cov_reset
+  {
+    cdr << (ros_message->invalid_accel_bias_cov_reset ? true : false);
+  }
+
+  // Field name: bad_yaw_using_gps_course
+  {
+    cdr << (ros_message->bad_yaw_using_gps_course ? true : false);
+  }
+
+  // Field name: stopping_mag_use
+  {
+    cdr << (ros_message->stopping_mag_use ? true : false);
+  }
+
+  // Field name: vision_data_stopped
+  {
+    cdr << (ros_message->vision_data_stopped ? true : false);
+  }
+
+  // Field name: emergency_yaw_reset_mag_stopped
+  {
+    cdr << (ros_message->emergency_yaw_reset_mag_stopped ? true : false);
+  }
+
+  // Field name: emergency_yaw_reset_gps_yaw_stopped
+  {
+    cdr << (ros_message->emergency_yaw_reset_gps_yaw_stopped ? true : false);
   }
 
   return true;
@@ -888,6 +1290,97 @@ size_t get_serialized_size_key_px4_msgs__msg__EstimatorEventFlags(
   // Field name: reset_hgt_to_ev
   {
     size_t item_size = sizeof(ros_message->reset_hgt_to_ev);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: warning_event_changes
+  {
+    size_t item_size = sizeof(ros_message->warning_event_changes);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: gps_quality_poor
+  {
+    size_t item_size = sizeof(ros_message->gps_quality_poor);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: gps_fusion_timout
+  {
+    size_t item_size = sizeof(ros_message->gps_fusion_timout);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: gps_data_stopped
+  {
+    size_t item_size = sizeof(ros_message->gps_data_stopped);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: gps_data_stopped_using_alternate
+  {
+    size_t item_size = sizeof(ros_message->gps_data_stopped_using_alternate);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: height_sensor_timeout
+  {
+    size_t item_size = sizeof(ros_message->height_sensor_timeout);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: stopping_navigation
+  {
+    size_t item_size = sizeof(ros_message->stopping_navigation);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: invalid_accel_bias_cov_reset
+  {
+    size_t item_size = sizeof(ros_message->invalid_accel_bias_cov_reset);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: bad_yaw_using_gps_course
+  {
+    size_t item_size = sizeof(ros_message->bad_yaw_using_gps_course);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: stopping_mag_use
+  {
+    size_t item_size = sizeof(ros_message->stopping_mag_use);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: vision_data_stopped
+  {
+    size_t item_size = sizeof(ros_message->vision_data_stopped);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: emergency_yaw_reset_mag_stopped
+  {
+    size_t item_size = sizeof(ros_message->emergency_yaw_reset_mag_stopped);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: emergency_yaw_reset_gps_yaw_stopped
+  {
+    size_t item_size = sizeof(ros_message->emergency_yaw_reset_gps_yaw_stopped);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -1055,6 +1548,98 @@ size_t max_serialized_size_key_px4_msgs__msg__EstimatorEventFlags(
     current_alignment += array_size * sizeof(uint8_t);
   }
 
+  // Field name: warning_event_changes
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Field name: gps_quality_poor
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Field name: gps_fusion_timout
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Field name: gps_data_stopped
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Field name: gps_data_stopped_using_alternate
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Field name: height_sensor_timeout
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Field name: stopping_navigation
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Field name: invalid_accel_bias_cov_reset
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Field name: bad_yaw_using_gps_course
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Field name: stopping_mag_use
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Field name: vision_data_stopped
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Field name: emergency_yaw_reset_mag_stopped
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Field name: emergency_yaw_reset_gps_yaw_stopped
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
     // All members are plain, and type is not empty.
@@ -1063,7 +1648,7 @@ size_t max_serialized_size_key_px4_msgs__msg__EstimatorEventFlags(
     using DataType = px4_msgs__msg__EstimatorEventFlags;
     is_plain =
       (
-      offsetof(DataType, reset_hgt_to_ev) +
+      offsetof(DataType, emergency_yaw_reset_gps_yaw_stopped) +
       last_member_size
       ) == ret_val;
   }

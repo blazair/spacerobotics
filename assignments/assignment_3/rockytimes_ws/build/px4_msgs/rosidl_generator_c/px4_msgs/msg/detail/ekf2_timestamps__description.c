@@ -11,10 +11,10 @@ px4_msgs__msg__Ekf2Timestamps__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x5a, 0xce, 0xea, 0x90, 0x4d, 0xd3, 0xe5, 0x61,
-      0x4a, 0x8b, 0x42, 0x91, 0x69, 0x0c, 0x29, 0xe4,
-      0x4d, 0xe4, 0xb7, 0xf5, 0xf6, 0xd0, 0x90, 0x3a,
-      0x78, 0xdf, 0xa1, 0xe3, 0x4b, 0xef, 0xb9, 0xa7,
+      0xd0, 0x29, 0x46, 0x03, 0x96, 0x53, 0x4f, 0xfb,
+      0x69, 0x91, 0x10, 0xda, 0x1b, 0x0b, 0x14, 0x76,
+      0x7d, 0xea, 0x0e, 0x4c, 0xa5, 0xbf, 0xde, 0x14,
+      0x89, 0xa1, 0x27, 0x31, 0x72, 0x9e, 0x16, 0x71,
     }};
   return &hash;
 }
@@ -33,7 +33,6 @@ static char px4_msgs__msg__Ekf2Timestamps__TYPE_NAME[] = "px4_msgs/msg/Ekf2Times
 // Define type names, field names, and default values
 static char px4_msgs__msg__Ekf2Timestamps__FIELD_NAME__timestamp[] = "timestamp";
 static char px4_msgs__msg__Ekf2Timestamps__FIELD_NAME__airspeed_timestamp_rel[] = "airspeed_timestamp_rel";
-static char px4_msgs__msg__Ekf2Timestamps__FIELD_NAME__airspeed_validated_timestamp_rel[] = "airspeed_validated_timestamp_rel";
 static char px4_msgs__msg__Ekf2Timestamps__FIELD_NAME__distance_sensor_timestamp_rel[] = "distance_sensor_timestamp_rel";
 static char px4_msgs__msg__Ekf2Timestamps__FIELD_NAME__optical_flow_timestamp_rel[] = "optical_flow_timestamp_rel";
 static char px4_msgs__msg__Ekf2Timestamps__FIELD_NAME__vehicle_air_data_timestamp_rel[] = "vehicle_air_data_timestamp_rel";
@@ -53,16 +52,6 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__Ekf2Timestamps__
   },
   {
     {px4_msgs__msg__Ekf2Timestamps__FIELD_NAME__airspeed_timestamp_rel, 22, 22},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_INT16,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__Ekf2Timestamps__FIELD_NAME__airspeed_validated_timestamp_rel, 32, 32},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_INT16,
       0,
@@ -132,7 +121,7 @@ px4_msgs__msg__Ekf2Timestamps__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {px4_msgs__msg__Ekf2Timestamps__TYPE_NAME, 27, 27},
-      {px4_msgs__msg__Ekf2Timestamps__FIELDS, 8, 8},
+      {px4_msgs__msg__Ekf2Timestamps__FIELDS, 7, 7},
     },
     {NULL, 0, 0},
   };
@@ -159,7 +148,6 @@ static char toplevel_type_raw_source[] =
   "# difference of +-3.2s to the sensor_combined topic.\n"
   "\n"
   "int16 airspeed_timestamp_rel\n"
-  "int16 airspeed_validated_timestamp_rel\n"
   "int16 distance_sensor_timestamp_rel\n"
   "int16 optical_flow_timestamp_rel\n"
   "int16 vehicle_air_data_timestamp_rel\n"
@@ -180,7 +168,7 @@ px4_msgs__msg__Ekf2Timestamps__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__Ekf2Timestamps__TYPE_NAME, 27, 27},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 1043, 1043},
+    {toplevel_type_raw_source, 1004, 1004},
   };
   return &source;
 }

@@ -56,24 +56,17 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
+  // member: baro_temp_celcius
+  {
+    out << "baro_temp_celcius: ";
+    rosidl_generator_traits::value_to_yaml(msg.baro_temp_celcius, out);
+    out << ", ";
+  }
+
   // member: baro_pressure_pa
   {
     out << "baro_pressure_pa: ";
     rosidl_generator_traits::value_to_yaml(msg.baro_pressure_pa, out);
-    out << ", ";
-  }
-
-  // member: ambient_temperature
-  {
-    out << "ambient_temperature: ";
-    rosidl_generator_traits::value_to_yaml(msg.ambient_temperature, out);
-    out << ", ";
-  }
-
-  // member: temperature_source
-  {
-    out << "temperature_source: ";
-    rosidl_generator_traits::value_to_yaml(msg.temperature_source, out);
     out << ", ";
   }
 
@@ -136,6 +129,16 @@ inline void to_block_style_yaml(
     out << "\n";
   }
 
+  // member: baro_temp_celcius
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "baro_temp_celcius: ";
+    rosidl_generator_traits::value_to_yaml(msg.baro_temp_celcius, out);
+    out << "\n";
+  }
+
   // member: baro_pressure_pa
   {
     if (indentation > 0) {
@@ -143,26 +146,6 @@ inline void to_block_style_yaml(
     }
     out << "baro_pressure_pa: ";
     rosidl_generator_traits::value_to_yaml(msg.baro_pressure_pa, out);
-    out << "\n";
-  }
-
-  // member: ambient_temperature
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "ambient_temperature: ";
-    rosidl_generator_traits::value_to_yaml(msg.ambient_temperature, out);
-    out << "\n";
-  }
-
-  // member: temperature_source
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "temperature_source: ";
-    rosidl_generator_traits::value_to_yaml(msg.temperature_source, out);
     out << "\n";
   }
 

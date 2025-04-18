@@ -14,7 +14,7 @@
           "default_value": ""
         },
         {
-          "name": "last_at_ok_timestamp",
+          "name": "last_heartbeat",
           "type": {
             "type_id": 9,
             "capacity": 0,
@@ -160,7 +160,7 @@
   "type_hashes": [
     {
       "type_name": "px4_msgs/msg/IridiumsbdStatus",
-      "hash_string": "RIHS01_61a53d224613fa739f94a7f107ec1d14bdfc5b4917915d1e5bc720a89bc1d6ed"
+      "hash_string": "RIHS01_29a1702c8639c808c28f25313da298b083aac5531b5fe33d61487e836b30b1ad"
     }
   ]
 }

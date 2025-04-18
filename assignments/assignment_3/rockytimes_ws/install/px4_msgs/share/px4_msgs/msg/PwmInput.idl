@@ -15,11 +15,11 @@ module px4_msgs {
       uint64 error_count;
 
       @verbatim (language="comment", text=
-        "Pulse width, timer counts (microseconds)")
+        "Pulse width, timer counts")
       uint32 pulse_width;
 
       @verbatim (language="comment", text=
-        "Period, timer counts (microseconds)")
+        "Period, timer counts")
       uint32 period;
     };
   };

@@ -6,7 +6,6 @@
 module px4_msgs {
   module msg {
     module ManualControlSetpoint_Constants {
-      const uint32 MESSAGE_VERSION = 0;
       const uint8 SOURCE_UNKNOWN = 0;
       @verbatim (language="comment", text=
         "radio control (input_rc)")
@@ -82,10 +81,6 @@ module px4_msgs {
       float aux6;
 
       boolean sticks_moving;
-
-      @verbatim (language="comment", text=
-        "From uint16 buttons field of Mavlink manual_control message")
-      uint16 buttons;
     };
   };
 };

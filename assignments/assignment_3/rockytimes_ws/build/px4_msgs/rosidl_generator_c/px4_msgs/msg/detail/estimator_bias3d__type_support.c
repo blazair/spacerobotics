@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "rosidl_typesupport_interface/macros.h"
-#include "px4_msgs/msg/detail/estimator_bias3d__struct.h"
-#include "px4_msgs/msg/detail/estimator_bias3d__type_support.h"
 #include "px4_msgs/msg/detail/estimator_bias3d__functions.h"
+#include "px4_msgs/msg/detail/estimator_bias3d__type_support.h"
+#include "px4_msgs/msg/detail/estimator_bias3d__struct.h"
+#include "rosidl_typesupport_interface/macros.h"
 
 #ifdef __cplusplus
 extern "C"

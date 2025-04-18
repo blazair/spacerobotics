@@ -67,7 +67,7 @@ include CMakeFiles/ament_cmake_python_build_px4_msgs_egg.dir/compiler_depend.mak
 include CMakeFiles/ament_cmake_python_build_px4_msgs_egg.dir/progress.make
 
 CMakeFiles/ament_cmake_python_build_px4_msgs_egg:
-	cd /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/ament_cmake_python/px4_msgs && /home/blazar/envs/thingsbro/bin/python3 setup.py egg_info
+	cd /home/blazar/workspaces/rockytimes_ws/build/px4_msgs/ament_cmake_python/px4_msgs && /usr/bin/python3 setup.py egg_info
 
 ament_cmake_python_build_px4_msgs_egg: CMakeFiles/ament_cmake_python_build_px4_msgs_egg
 ament_cmake_python_build_px4_msgs_egg: CMakeFiles/ament_cmake_python_build_px4_msgs_egg.dir/build.make

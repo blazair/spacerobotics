@@ -176,15 +176,6 @@ bool px4_msgs__msg__distance_sensor__convert_from_py(PyObject * _pymsg, void * _
     ros_message->orientation = (uint8_t)PyLong_AsUnsignedLong(field);
     Py_DECREF(field);
   }
-  {  // mode
-    PyObject * field = PyObject_GetAttrString(_pymsg, "mode");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->mode = (uint8_t)PyLong_AsUnsignedLong(field);
-    Py_DECREF(field);
-  }
 
   return true;
 }
@@ -340,17 +331,6 @@ PyObject * px4_msgs__msg__distance_sensor__convert_to_py(void * raw_ros_message)
     field = PyLong_FromUnsignedLong(ros_message->orientation);
     {
       int rc = PyObject_SetAttrString(_pymessage, "orientation", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // mode
-    PyObject * field = NULL;
-    field = PyLong_FromUnsignedLong(ros_message->mode);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "mode", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

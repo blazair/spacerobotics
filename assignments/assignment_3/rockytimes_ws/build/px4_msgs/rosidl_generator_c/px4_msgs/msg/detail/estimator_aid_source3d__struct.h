@@ -32,12 +32,10 @@ typedef struct px4_msgs__msg__EstimatorAidSource3d
   float observation[3];
   float observation_variance[3];
   float innovation[3];
-  float innovation_filtered[3];
   float innovation_variance[3];
-  /// normalized innovation squared
   float test_ratio[3];
-  /// signed filtered test ratio
-  float test_ratio_filtered[3];
+  /// true when measurements are being fused
+  bool fusion_enabled;
   /// true if the observation has been rejected
   bool innovation_rejected;
   /// true if the sample was successfully fused

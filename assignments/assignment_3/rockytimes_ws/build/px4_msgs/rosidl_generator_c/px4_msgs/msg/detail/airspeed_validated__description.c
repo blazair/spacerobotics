@@ -11,10 +11,10 @@ px4_msgs__msg__AirspeedValidated__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x9e, 0xa4, 0x46, 0x4b, 0xc6, 0x35, 0x50, 0x5f,
-      0x62, 0x1f, 0xe7, 0xf0, 0xbf, 0x94, 0xbb, 0x2a,
-      0xa1, 0x7c, 0xb7, 0x32, 0x9a, 0x2f, 0x23, 0x0a,
-      0xda, 0x20, 0xfb, 0x71, 0xca, 0x7f, 0x73, 0x49,
+      0x25, 0x51, 0x4b, 0x08, 0x1e, 0xb1, 0x6f, 0x77,
+      0x7f, 0xdd, 0x0f, 0xa7, 0xec, 0x36, 0x1a, 0xb2,
+      0xa9, 0x24, 0xbb, 0xe9, 0x76, 0x0d, 0xeb, 0x91,
+      0x23, 0x59, 0x6c, 0xb5, 0x67, 0x43, 0xbd, 0xc2,
     }};
   return &hash;
 }
@@ -39,9 +39,6 @@ static char px4_msgs__msg__AirspeedValidated__FIELD_NAME__calibrated_ground_minu
 static char px4_msgs__msg__AirspeedValidated__FIELD_NAME__true_ground_minus_wind_m_s[] = "true_ground_minus_wind_m_s";
 static char px4_msgs__msg__AirspeedValidated__FIELD_NAME__airspeed_sensor_measurement_valid[] = "airspeed_sensor_measurement_valid";
 static char px4_msgs__msg__AirspeedValidated__FIELD_NAME__selected_airspeed_index[] = "selected_airspeed_index";
-static char px4_msgs__msg__AirspeedValidated__FIELD_NAME__airspeed_derivative_filtered[] = "airspeed_derivative_filtered";
-static char px4_msgs__msg__AirspeedValidated__FIELD_NAME__throttle_filtered[] = "throttle_filtered";
-static char px4_msgs__msg__AirspeedValidated__FIELD_NAME__pitch_filtered[] = "pitch_filtered";
 
 static rosidl_runtime_c__type_description__Field px4_msgs__msg__AirspeedValidated__FIELDS[] = {
   {
@@ -124,36 +121,6 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__AirspeedValidate
     },
     {NULL, 0, 0},
   },
-  {
-    {px4_msgs__msg__AirspeedValidated__FIELD_NAME__airspeed_derivative_filtered, 28, 28},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__AirspeedValidated__FIELD_NAME__throttle_filtered, 17, 17},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__AirspeedValidated__FIELD_NAME__pitch_filtered, 14, 14},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
 };
 
 const rosidl_runtime_c__type_description__TypeDescription *
@@ -165,7 +132,7 @@ px4_msgs__msg__AirspeedValidated__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {px4_msgs__msg__AirspeedValidated__TYPE_NAME, 30, 30},
-      {px4_msgs__msg__AirspeedValidated__FIELDS, 11, 11},
+      {px4_msgs__msg__AirspeedValidated__FIELDS, 8, 8},
     },
     {NULL, 0, 0},
   };
@@ -187,11 +154,7 @@ static char toplevel_type_raw_source[] =
   "\n"
   "bool airspeed_sensor_measurement_valid \\t\\t# True if data from at least one airspeed sensor is declared valid.\n"
   "\n"
-  "int8 selected_airspeed_index \\t\\t\\t# 1-3: airspeed sensor index, 0: groundspeed-windspeed, -1: airspeed invalid\n"
-  "\n"
-  "float32 airspeed_derivative_filtered\\t\\t# filtered indicated airspeed derivative [m/s/s]\n"
-  "float32 throttle_filtered\\t\\t\\t# filtered fixed-wing throttle [-]\n"
-  "float32 pitch_filtered\\t\\t\\t\\t# filtered pitch [rad]";
+  "int8 selected_airspeed_index \\t\\t\\t# 1-3: airspeed sensor index, 0: groundspeed-windspeed, -1: airspeed invalid";
 
 static char msg_encoding[] = "msg";
 
@@ -205,7 +168,7 @@ px4_msgs__msg__AirspeedValidated__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__AirspeedValidated__TYPE_NAME, 30, 30},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 1144, 1144},
+    {toplevel_type_raw_source, 944, 944},
   };
   return &source;
 }

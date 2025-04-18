@@ -56,7 +56,7 @@
         {
           "name": "observation",
           "type": {
-            "type_id": 59,
+            "type_id": 58,
             "capacity": 2,
             "string_capacity": 0,
             "nested_type_name": ""
@@ -75,16 +75,6 @@
         },
         {
           "name": "innovation",
-          "type": {
-            "type_id": 58,
-            "capacity": 2,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "innovation_filtered",
           "type": {
             "type_id": 58,
             "capacity": 2,
@@ -114,10 +104,10 @@
           "default_value": ""
         },
         {
-          "name": "test_ratio_filtered",
+          "name": "fusion_enabled",
           "type": {
-            "type_id": 58,
-            "capacity": 2,
+            "type_id": 15,
+            "capacity": 0,
             "string_capacity": 0,
             "nested_type_name": ""
           },
@@ -150,7 +140,7 @@
   "type_hashes": [
     {
       "type_name": "px4_msgs/msg/EstimatorAidSource2d",
-      "hash_string": "RIHS01_df46e21862905a8108bb5b33ebab2b374073497515f7168b556f092642dfea7f"
+      "hash_string": "RIHS01_086fce4a246b885aa998322d47bfd4e8a24d3f6d36e9716b8ac3e3f5f7c55cdd"
     }
   ]
 }

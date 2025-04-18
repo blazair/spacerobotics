@@ -11,10 +11,10 @@ px4_msgs__msg__VehicleGlobalPosition__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0xcf, 0x9a, 0x06, 0xf6, 0xa8, 0xc3, 0x28, 0xf7,
-      0x20, 0x09, 0x84, 0xe3, 0xaa, 0xbc, 0x0f, 0xb7,
-      0x6f, 0xde, 0x3b, 0x1f, 0xa6, 0x93, 0xba, 0xff,
-      0x68, 0xeb, 0xaf, 0x16, 0x2d, 0x2f, 0xdc, 0x60,
+      0x16, 0x0a, 0x88, 0x73, 0xf3, 0x16, 0x79, 0xf2,
+      0xf1, 0xc1, 0x2b, 0x61, 0xbd, 0xa9, 0x52, 0x5d,
+      0x85, 0x46, 0xca, 0x96, 0x9f, 0x9c, 0x53, 0x61,
+      0x52, 0xb4, 0x7c, 0x35, 0x1c, 0x53, 0x14, 0x49,
     }};
   return &hash;
 }
@@ -37,13 +37,9 @@ static char px4_msgs__msg__VehicleGlobalPosition__FIELD_NAME__lat[] = "lat";
 static char px4_msgs__msg__VehicleGlobalPosition__FIELD_NAME__lon[] = "lon";
 static char px4_msgs__msg__VehicleGlobalPosition__FIELD_NAME__alt[] = "alt";
 static char px4_msgs__msg__VehicleGlobalPosition__FIELD_NAME__alt_ellipsoid[] = "alt_ellipsoid";
-static char px4_msgs__msg__VehicleGlobalPosition__FIELD_NAME__lat_lon_valid[] = "lat_lon_valid";
-static char px4_msgs__msg__VehicleGlobalPosition__FIELD_NAME__alt_valid[] = "alt_valid";
 static char px4_msgs__msg__VehicleGlobalPosition__FIELD_NAME__delta_alt[] = "delta_alt";
-static char px4_msgs__msg__VehicleGlobalPosition__FIELD_NAME__delta_terrain[] = "delta_terrain";
 static char px4_msgs__msg__VehicleGlobalPosition__FIELD_NAME__lat_lon_reset_counter[] = "lat_lon_reset_counter";
 static char px4_msgs__msg__VehicleGlobalPosition__FIELD_NAME__alt_reset_counter[] = "alt_reset_counter";
-static char px4_msgs__msg__VehicleGlobalPosition__FIELD_NAME__terrain_reset_counter[] = "terrain_reset_counter";
 static char px4_msgs__msg__VehicleGlobalPosition__FIELD_NAME__eph[] = "eph";
 static char px4_msgs__msg__VehicleGlobalPosition__FIELD_NAME__epv[] = "epv";
 static char px4_msgs__msg__VehicleGlobalPosition__FIELD_NAME__terrain_alt[] = "terrain_alt";
@@ -112,37 +108,7 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__VehicleGlobalPos
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__VehicleGlobalPosition__FIELD_NAME__lat_lon_valid, 13, 13},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__VehicleGlobalPosition__FIELD_NAME__alt_valid, 9, 9},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
     {px4_msgs__msg__VehicleGlobalPosition__FIELD_NAME__delta_alt, 9, 9},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__VehicleGlobalPosition__FIELD_NAME__delta_terrain, 13, 13},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
       0,
@@ -163,16 +129,6 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__VehicleGlobalPos
   },
   {
     {px4_msgs__msg__VehicleGlobalPosition__FIELD_NAME__alt_reset_counter, 17, 17},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT8,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__VehicleGlobalPosition__FIELD_NAME__terrain_reset_counter, 21, 21},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT8,
       0,
@@ -242,7 +198,7 @@ px4_msgs__msg__VehicleGlobalPosition__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {px4_msgs__msg__VehicleGlobalPosition__TYPE_NAME, 34, 34},
-      {px4_msgs__msg__VehicleGlobalPosition__FIELDS, 18, 18},
+      {px4_msgs__msg__VehicleGlobalPosition__FIELDS, 14, 14},
     },
     {NULL, 0, 0},
   };
@@ -260,8 +216,6 @@ static char toplevel_type_raw_source[] =
   "# e.g. control inputs of the vehicle in a Kalman-filter implementation.\n"
   "#\n"
   "\n"
-  "uint32 MESSAGE_VERSION = 0\n"
-  "\n"
   "uint64 timestamp\\t\\t# time since system start (microseconds)\n"
   "uint64 timestamp_sample         # the timestamp of the raw data (microseconds)\n"
   "\n"
@@ -270,14 +224,9 @@ static char toplevel_type_raw_source[] =
   "float32 alt\\t\\t\\t# Altitude AMSL, (meters)\n"
   "float32 alt_ellipsoid\\t\\t# Altitude above ellipsoid, (meters)\n"
   "\n"
-  "bool lat_lon_valid\n"
-  "bool alt_valid\n"
-  "\n"
   "float32 delta_alt \\t# Reset delta for altitude\n"
-  "float32 delta_terrain   # Reset delta for terrain\n"
   "uint8 lat_lon_reset_counter\\t# Counter for reset events on horizontal position coordinates\n"
   "uint8 alt_reset_counter \\t# Counter for reset events on altitude\n"
-  "uint8 terrain_reset_counter     # Counter for reset events on terrain\n"
   "\n"
   "float32 eph\\t\\t\\t# Standard deviation of horizontal position error, (metres)\n"
   "float32 epv\\t\\t\\t# Standard deviation of vertical position error, (metres)\n"
@@ -288,8 +237,7 @@ static char toplevel_type_raw_source[] =
   "bool dead_reckoning\\t\\t# True if this position is estimated through dead-reckoning\n"
   "\n"
   "# TOPICS vehicle_global_position vehicle_global_position_groundtruth external_ins_global_position\n"
-  "# TOPICS estimator_global_position\n"
-  "# TOPICS aux_global_position";
+  "# TOPICS estimator_global_position";
 
 static char msg_encoding[] = "msg";
 
@@ -303,7 +251,7 @@ px4_msgs__msg__VehicleGlobalPosition__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__VehicleGlobalPosition__TYPE_NAME, 34, 34},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 1564, 1564},
+    {toplevel_type_raw_source, 1352, 1352},
   };
   return &source;
 }

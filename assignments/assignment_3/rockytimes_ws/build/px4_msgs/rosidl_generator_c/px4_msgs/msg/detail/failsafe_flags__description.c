@@ -11,10 +11,10 @@ px4_msgs__msg__FailsafeFlags__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0xa3, 0xb2, 0x31, 0xa2, 0x85, 0x77, 0x1d, 0x62,
-      0x0f, 0x31, 0xef, 0xa5, 0x01, 0xaa, 0x3b, 0x44,
-      0x0c, 0x9e, 0x66, 0xe9, 0x5d, 0x29, 0x50, 0xfb,
-      0xe8, 0x61, 0x70, 0x56, 0xb3, 0x3d, 0x58, 0x5f,
+      0xd3, 0xaa, 0x9f, 0x3d, 0x65, 0xba, 0x66, 0xf2,
+      0xa3, 0x1b, 0x14, 0x42, 0x42, 0xfd, 0x7b, 0xf2,
+      0x1e, 0x52, 0xfe, 0x60, 0x63, 0x23, 0x12, 0x12,
+      0xa5, 0xa1, 0xbd, 0x4b, 0x12, 0x1d, 0x6a, 0x20,
     }};
   return &hash;
 }
@@ -60,13 +60,12 @@ static char px4_msgs__msg__FailsafeFlags__FIELD_NAME__gcs_connection_lost[] = "g
 static char px4_msgs__msg__FailsafeFlags__FIELD_NAME__battery_warning[] = "battery_warning";
 static char px4_msgs__msg__FailsafeFlags__FIELD_NAME__battery_low_remaining_time[] = "battery_low_remaining_time";
 static char px4_msgs__msg__FailsafeFlags__FIELD_NAME__battery_unhealthy[] = "battery_unhealthy";
-static char px4_msgs__msg__FailsafeFlags__FIELD_NAME__geofence_breached[] = "geofence_breached";
+static char px4_msgs__msg__FailsafeFlags__FIELD_NAME__primary_geofence_breached[] = "primary_geofence_breached";
 static char px4_msgs__msg__FailsafeFlags__FIELD_NAME__mission_failure[] = "mission_failure";
 static char px4_msgs__msg__FailsafeFlags__FIELD_NAME__vtol_fixed_wing_system_failure[] = "vtol_fixed_wing_system_failure";
 static char px4_msgs__msg__FailsafeFlags__FIELD_NAME__wind_limit_exceeded[] = "wind_limit_exceeded";
 static char px4_msgs__msg__FailsafeFlags__FIELD_NAME__flight_time_limit_exceeded[] = "flight_time_limit_exceeded";
 static char px4_msgs__msg__FailsafeFlags__FIELD_NAME__local_position_accuracy_low[] = "local_position_accuracy_low";
-static char px4_msgs__msg__FailsafeFlags__FIELD_NAME__navigator_failure[] = "navigator_failure";
 static char px4_msgs__msg__FailsafeFlags__FIELD_NAME__fd_critical_failure[] = "fd_critical_failure";
 static char px4_msgs__msg__FailsafeFlags__FIELD_NAME__fd_esc_arming_failure[] = "fd_esc_arming_failure";
 static char px4_msgs__msg__FailsafeFlags__FIELD_NAME__fd_imbalanced_prop[] = "fd_imbalanced_prop";
@@ -364,7 +363,7 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__FailsafeFlags__F
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__FailsafeFlags__FIELD_NAME__geofence_breached, 17, 17},
+    {px4_msgs__msg__FailsafeFlags__FIELD_NAME__primary_geofence_breached, 25, 25},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
       0,
@@ -424,16 +423,6 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__FailsafeFlags__F
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__FailsafeFlags__FIELD_NAME__navigator_failure, 17, 17},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
     {px4_msgs__msg__FailsafeFlags__FIELD_NAME__fd_critical_failure, 19, 19},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
@@ -484,7 +473,7 @@ px4_msgs__msg__FailsafeFlags__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {px4_msgs__msg__FailsafeFlags__TYPE_NAME, 26, 26},
-      {px4_msgs__msg__FailsafeFlags__FIELDS, 40, 40},
+      {px4_msgs__msg__FailsafeFlags__FIELDS, 39, 39},
     },
     {NULL, 0, 0},
   };
@@ -535,24 +524,25 @@ static char toplevel_type_raw_source[] =
   "bool gcs_connection_lost              # GCS connection lost\n"
   "\n"
   "# Battery\n"
-  "uint8 battery_warning                 # Battery warning level (see BatteryStatus.msg)\n"
+  "uint8 battery_warning                 # Battery warning level\n"
   "bool battery_low_remaining_time       # Low battery based on remaining flight time\n"
   "bool battery_unhealthy                # Battery unhealthy\n"
   "\n"
   "# Other\n"
-  "bool geofence_breached        \\t      # Geofence breached (one or multiple)\n"
+  "bool primary_geofence_breached        # Primary Geofence breached\n"
   "bool mission_failure                  # Mission failure\n"
   "bool vtol_fixed_wing_system_failure   # vehicle in fixed-wing system failure failsafe mode (after quad-chute)\n"
   "bool wind_limit_exceeded              # Wind limit exceeded\n"
   "bool flight_time_limit_exceeded       # Maximum flight time exceeded\n"
   "bool local_position_accuracy_low      # Local position estimate has dropped below threshold, but is currently still declared valid\n"
-  "bool navigator_failure        \\t      # Navigator failed to execute a mode\n"
   "\n"
   "# Failure detector\n"
   "bool fd_critical_failure              # Critical failure (attitude/altitude limit exceeded, or external ATS)\n"
   "bool fd_esc_arming_failure            # ESC failed to arm\n"
   "bool fd_imbalanced_prop               # Imbalanced propeller detected\n"
-  "bool fd_motor_failure                 # Motor failure";
+  "bool fd_motor_failure                 # Motor failure\n"
+  "\n"
+  "";
 
 static char msg_encoding[] = "msg";
 
@@ -566,7 +556,7 @@ px4_msgs__msg__FailsafeFlags__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__FailsafeFlags__TYPE_NAME, 26, 26},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 2952, 2952},
+    {toplevel_type_raw_source, 2847, 2847},
   };
   return &source;
 }

@@ -33,8 +33,8 @@ typedef struct px4_msgs__msg__EstimatorStatusFlags
   bool cs_tilt_align;
   /// 1 - true if the filter yaw alignment is complete
   bool cs_yaw_align;
-  /// 2 - true if GNSS position measurement fusion is intended
-  bool cs_gnss_pos;
+  /// 2 - true if GPS measurement fusion is intended
+  bool cs_gps;
   /// 3 - true if optical flow measurements fusion is intended
   bool cs_opt_flow;
   /// 4 - true if a simple magnetic yaw heading fusion is intended
@@ -47,11 +47,11 @@ typedef struct px4_msgs__msg__EstimatorStatusFlags
   bool cs_in_air;
   /// 8 - true when wind velocity is being estimated
   bool cs_wind;
-  /// 9 - true when baro data is being fused
+  /// 9 - true when baro height is being fused as a primary height reference
   bool cs_baro_hgt;
-  /// 10 - true when range finder data is being fused for height aiding
+  /// 10 - true when range finder height is being fused as a primary height reference
   bool cs_rng_hgt;
-  /// 11 - true when GPS altitude is being fused
+  /// 11 - true when GPS height is being fused as a primary height reference
   bool cs_gps_hgt;
   /// 12 - true when local position data fusion from external vision is intended
   bool cs_ev_pos;
@@ -74,7 +74,7 @@ typedef struct px4_msgs__msg__EstimatorStatusFlags
   /// 21 - true when rng data wasn't ready for more than 10s and new rng values haven't changed enough
   bool cs_rng_stuck;
   /// 22 - true when yaw (not ground course) data fusion from a GPS receiver is intended
-  bool cs_gnss_yaw;
+  bool cs_gps_yaw;
   /// 23 - true when the in-flight mag field alignment has been completed
   bool cs_mag_aligned_in_flight;
   /// 24 - true when local frame velocity data fusion from external vision measurements is intended
@@ -84,7 +84,7 @@ typedef struct px4_msgs__msg__EstimatorStatusFlags
   /// 26 - true when the vehicle is at rest
   bool cs_vehicle_at_rest;
   /// 27 - true when the GNSS heading has been declared faulty and is no longer being used
-  bool cs_gnss_yaw_fault;
+  bool cs_gps_yaw_fault;
   /// 28 - true when the range finder has been declared faulty and is no longer being used
   bool cs_rng_fault;
   /// 29 - true if we are no longer fusing measurements that constrain horizontal velocity drift
@@ -99,26 +99,6 @@ typedef struct px4_msgs__msg__EstimatorStatusFlags
   bool cs_fake_hgt;
   /// 34 - true when gravity vector measurements are being fused
   bool cs_gravity_vector;
-  /// 35 - true if 3-axis magnetometer measurement fusion (mag states only) is intended
-  bool cs_mag;
-  /// 36 - true when the EV heading has been declared faulty and is no longer being used
-  bool cs_ev_yaw_fault;
-  /// 37 - true when the heading obtained from mag data is declared consistent with the filter
-  bool cs_mag_heading_consistent;
-  /// 38 - true if auxiliary global position measurement fusion is intended
-  bool cs_aux_gpos;
-  /// 39 - true if we are fusing range finder data for terrain
-  bool cs_rng_terrain;
-  /// 40 - true if we are fusing flow data for terrain
-  bool cs_opt_flow_terrain;
-  /// 41 - true if a valid constant position is being fused
-  bool cs_valid_fake_pos;
-  /// 42 - true if the vehicle is at a constant position
-  bool cs_constant_pos;
-  /// 43 - true when the current baro has been declared faulty and is no longer being used
-  bool cs_baro_fault;
-  /// 44 - true if GNSS velocity measurement fusion is intended
-  bool cs_gnss_vel;
   /// fault status
   /// number of filter fault status (fs) changes
   uint32_t fault_status_changes;
@@ -140,9 +120,23 @@ typedef struct px4_msgs__msg__EstimatorStatusFlags
   bool fs_bad_optflow_x;
   /// 8 - true if fusion of the optical flow Y axis has encountered a numerical error
   bool fs_bad_optflow_y;
-  /// 10 - true if bad vertical accelerometer data has been detected
+  /// 9 - true if fusion of the North velocity has encountered a numerical error
+  bool fs_bad_vel_n;
+  /// 10 - true if fusion of the East velocity has encountered a numerical error
+  bool fs_bad_vel_e;
+  /// 11 - true if fusion of the Down velocity has encountered a numerical error
+  bool fs_bad_vel_d;
+  /// 12 - true if fusion of the North position has encountered a numerical error
+  bool fs_bad_pos_n;
+  /// 13 - true if fusion of the East position has encountered a numerical error
+  bool fs_bad_pos_e;
+  /// 14 - true if fusion of the Down position has encountered a numerical error
+  bool fs_bad_pos_d;
+  /// 15 - true if bad delta velocity bias estimates have been detected
+  bool fs_bad_acc_bias;
+  /// 16 - true if bad vertical accelerometer data has been detected
   bool fs_bad_acc_vertical;
-  /// 11 - true if delta velocity data contains clipping (asymmetric railing)
+  /// 17 - true if delta velocity data contains clipping (asymmetric railing)
   bool fs_bad_acc_clipping;
   /// innovation test failures
   /// number of innovation fault status (reject) changes

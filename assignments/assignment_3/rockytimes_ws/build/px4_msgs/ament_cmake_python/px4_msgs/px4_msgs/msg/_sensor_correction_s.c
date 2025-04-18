@@ -62,150 +62,6 @@ bool px4_msgs__msg__sensor_correction__convert_from_py(PyObject * _pymsg, void *
     ros_message->timestamp = PyLong_AsUnsignedLongLong(field);
     Py_DECREF(field);
   }
-  {  // accel_device_ids
-    PyObject * field = PyObject_GetAttrString(_pymsg, "accel_device_ids");
-    if (!field) {
-      return false;
-    }
-    {
-      // TODO(dirk-thomas) use a better way to check the type before casting
-      assert(field->ob_type != NULL);
-      assert(field->ob_type->tp_name != NULL);
-      assert(strcmp(field->ob_type->tp_name, "numpy.ndarray") == 0);
-      PyArrayObject * seq_field = (PyArrayObject *)field;
-      Py_INCREF(seq_field);
-      assert(PyArray_NDIM(seq_field) == 1);
-      assert(PyArray_TYPE(seq_field) == NPY_UINT32);
-      Py_ssize_t size = 4;
-      uint32_t * dest = ros_message->accel_device_ids;
-      for (Py_ssize_t i = 0; i < size; ++i) {
-        uint32_t tmp = *(npy_uint32 *)PyArray_GETPTR1(seq_field, i);
-        memcpy(&dest[i], &tmp, sizeof(uint32_t));
-      }
-      Py_DECREF(seq_field);
-    }
-    Py_DECREF(field);
-  }
-  {  // accel_temperature
-    PyObject * field = PyObject_GetAttrString(_pymsg, "accel_temperature");
-    if (!field) {
-      return false;
-    }
-    {
-      // TODO(dirk-thomas) use a better way to check the type before casting
-      assert(field->ob_type != NULL);
-      assert(field->ob_type->tp_name != NULL);
-      assert(strcmp(field->ob_type->tp_name, "numpy.ndarray") == 0);
-      PyArrayObject * seq_field = (PyArrayObject *)field;
-      Py_INCREF(seq_field);
-      assert(PyArray_NDIM(seq_field) == 1);
-      assert(PyArray_TYPE(seq_field) == NPY_FLOAT32);
-      Py_ssize_t size = 4;
-      float * dest = ros_message->accel_temperature;
-      for (Py_ssize_t i = 0; i < size; ++i) {
-        float tmp = *(npy_float32 *)PyArray_GETPTR1(seq_field, i);
-        memcpy(&dest[i], &tmp, sizeof(float));
-      }
-      Py_DECREF(seq_field);
-    }
-    Py_DECREF(field);
-  }
-  {  // accel_offset_0
-    PyObject * field = PyObject_GetAttrString(_pymsg, "accel_offset_0");
-    if (!field) {
-      return false;
-    }
-    {
-      // TODO(dirk-thomas) use a better way to check the type before casting
-      assert(field->ob_type != NULL);
-      assert(field->ob_type->tp_name != NULL);
-      assert(strcmp(field->ob_type->tp_name, "numpy.ndarray") == 0);
-      PyArrayObject * seq_field = (PyArrayObject *)field;
-      Py_INCREF(seq_field);
-      assert(PyArray_NDIM(seq_field) == 1);
-      assert(PyArray_TYPE(seq_field) == NPY_FLOAT32);
-      Py_ssize_t size = 3;
-      float * dest = ros_message->accel_offset_0;
-      for (Py_ssize_t i = 0; i < size; ++i) {
-        float tmp = *(npy_float32 *)PyArray_GETPTR1(seq_field, i);
-        memcpy(&dest[i], &tmp, sizeof(float));
-      }
-      Py_DECREF(seq_field);
-    }
-    Py_DECREF(field);
-  }
-  {  // accel_offset_1
-    PyObject * field = PyObject_GetAttrString(_pymsg, "accel_offset_1");
-    if (!field) {
-      return false;
-    }
-    {
-      // TODO(dirk-thomas) use a better way to check the type before casting
-      assert(field->ob_type != NULL);
-      assert(field->ob_type->tp_name != NULL);
-      assert(strcmp(field->ob_type->tp_name, "numpy.ndarray") == 0);
-      PyArrayObject * seq_field = (PyArrayObject *)field;
-      Py_INCREF(seq_field);
-      assert(PyArray_NDIM(seq_field) == 1);
-      assert(PyArray_TYPE(seq_field) == NPY_FLOAT32);
-      Py_ssize_t size = 3;
-      float * dest = ros_message->accel_offset_1;
-      for (Py_ssize_t i = 0; i < size; ++i) {
-        float tmp = *(npy_float32 *)PyArray_GETPTR1(seq_field, i);
-        memcpy(&dest[i], &tmp, sizeof(float));
-      }
-      Py_DECREF(seq_field);
-    }
-    Py_DECREF(field);
-  }
-  {  // accel_offset_2
-    PyObject * field = PyObject_GetAttrString(_pymsg, "accel_offset_2");
-    if (!field) {
-      return false;
-    }
-    {
-      // TODO(dirk-thomas) use a better way to check the type before casting
-      assert(field->ob_type != NULL);
-      assert(field->ob_type->tp_name != NULL);
-      assert(strcmp(field->ob_type->tp_name, "numpy.ndarray") == 0);
-      PyArrayObject * seq_field = (PyArrayObject *)field;
-      Py_INCREF(seq_field);
-      assert(PyArray_NDIM(seq_field) == 1);
-      assert(PyArray_TYPE(seq_field) == NPY_FLOAT32);
-      Py_ssize_t size = 3;
-      float * dest = ros_message->accel_offset_2;
-      for (Py_ssize_t i = 0; i < size; ++i) {
-        float tmp = *(npy_float32 *)PyArray_GETPTR1(seq_field, i);
-        memcpy(&dest[i], &tmp, sizeof(float));
-      }
-      Py_DECREF(seq_field);
-    }
-    Py_DECREF(field);
-  }
-  {  // accel_offset_3
-    PyObject * field = PyObject_GetAttrString(_pymsg, "accel_offset_3");
-    if (!field) {
-      return false;
-    }
-    {
-      // TODO(dirk-thomas) use a better way to check the type before casting
-      assert(field->ob_type != NULL);
-      assert(field->ob_type->tp_name != NULL);
-      assert(strcmp(field->ob_type->tp_name, "numpy.ndarray") == 0);
-      PyArrayObject * seq_field = (PyArrayObject *)field;
-      Py_INCREF(seq_field);
-      assert(PyArray_NDIM(seq_field) == 1);
-      assert(PyArray_TYPE(seq_field) == NPY_FLOAT32);
-      Py_ssize_t size = 3;
-      float * dest = ros_message->accel_offset_3;
-      for (Py_ssize_t i = 0; i < size; ++i) {
-        float tmp = *(npy_float32 *)PyArray_GETPTR1(seq_field, i);
-        memcpy(&dest[i], &tmp, sizeof(float));
-      }
-      Py_DECREF(seq_field);
-    }
-    Py_DECREF(field);
-  }
   {  // gyro_device_ids
     PyObject * field = PyObject_GetAttrString(_pymsg, "gyro_device_ids");
     if (!field) {
@@ -350,8 +206,8 @@ bool px4_msgs__msg__sensor_correction__convert_from_py(PyObject * _pymsg, void *
     }
     Py_DECREF(field);
   }
-  {  // mag_device_ids
-    PyObject * field = PyObject_GetAttrString(_pymsg, "mag_device_ids");
+  {  // accel_device_ids
+    PyObject * field = PyObject_GetAttrString(_pymsg, "accel_device_ids");
     if (!field) {
       return false;
     }
@@ -365,7 +221,7 @@ bool px4_msgs__msg__sensor_correction__convert_from_py(PyObject * _pymsg, void *
       assert(PyArray_NDIM(seq_field) == 1);
       assert(PyArray_TYPE(seq_field) == NPY_UINT32);
       Py_ssize_t size = 4;
-      uint32_t * dest = ros_message->mag_device_ids;
+      uint32_t * dest = ros_message->accel_device_ids;
       for (Py_ssize_t i = 0; i < size; ++i) {
         uint32_t tmp = *(npy_uint32 *)PyArray_GETPTR1(seq_field, i);
         memcpy(&dest[i], &tmp, sizeof(uint32_t));
@@ -374,8 +230,8 @@ bool px4_msgs__msg__sensor_correction__convert_from_py(PyObject * _pymsg, void *
     }
     Py_DECREF(field);
   }
-  {  // mag_temperature
-    PyObject * field = PyObject_GetAttrString(_pymsg, "mag_temperature");
+  {  // accel_temperature
+    PyObject * field = PyObject_GetAttrString(_pymsg, "accel_temperature");
     if (!field) {
       return false;
     }
@@ -389,7 +245,7 @@ bool px4_msgs__msg__sensor_correction__convert_from_py(PyObject * _pymsg, void *
       assert(PyArray_NDIM(seq_field) == 1);
       assert(PyArray_TYPE(seq_field) == NPY_FLOAT32);
       Py_ssize_t size = 4;
-      float * dest = ros_message->mag_temperature;
+      float * dest = ros_message->accel_temperature;
       for (Py_ssize_t i = 0; i < size; ++i) {
         float tmp = *(npy_float32 *)PyArray_GETPTR1(seq_field, i);
         memcpy(&dest[i], &tmp, sizeof(float));
@@ -398,8 +254,8 @@ bool px4_msgs__msg__sensor_correction__convert_from_py(PyObject * _pymsg, void *
     }
     Py_DECREF(field);
   }
-  {  // mag_offset_0
-    PyObject * field = PyObject_GetAttrString(_pymsg, "mag_offset_0");
+  {  // accel_offset_0
+    PyObject * field = PyObject_GetAttrString(_pymsg, "accel_offset_0");
     if (!field) {
       return false;
     }
@@ -413,7 +269,7 @@ bool px4_msgs__msg__sensor_correction__convert_from_py(PyObject * _pymsg, void *
       assert(PyArray_NDIM(seq_field) == 1);
       assert(PyArray_TYPE(seq_field) == NPY_FLOAT32);
       Py_ssize_t size = 3;
-      float * dest = ros_message->mag_offset_0;
+      float * dest = ros_message->accel_offset_0;
       for (Py_ssize_t i = 0; i < size; ++i) {
         float tmp = *(npy_float32 *)PyArray_GETPTR1(seq_field, i);
         memcpy(&dest[i], &tmp, sizeof(float));
@@ -422,8 +278,8 @@ bool px4_msgs__msg__sensor_correction__convert_from_py(PyObject * _pymsg, void *
     }
     Py_DECREF(field);
   }
-  {  // mag_offset_1
-    PyObject * field = PyObject_GetAttrString(_pymsg, "mag_offset_1");
+  {  // accel_offset_1
+    PyObject * field = PyObject_GetAttrString(_pymsg, "accel_offset_1");
     if (!field) {
       return false;
     }
@@ -437,7 +293,7 @@ bool px4_msgs__msg__sensor_correction__convert_from_py(PyObject * _pymsg, void *
       assert(PyArray_NDIM(seq_field) == 1);
       assert(PyArray_TYPE(seq_field) == NPY_FLOAT32);
       Py_ssize_t size = 3;
-      float * dest = ros_message->mag_offset_1;
+      float * dest = ros_message->accel_offset_1;
       for (Py_ssize_t i = 0; i < size; ++i) {
         float tmp = *(npy_float32 *)PyArray_GETPTR1(seq_field, i);
         memcpy(&dest[i], &tmp, sizeof(float));
@@ -446,8 +302,8 @@ bool px4_msgs__msg__sensor_correction__convert_from_py(PyObject * _pymsg, void *
     }
     Py_DECREF(field);
   }
-  {  // mag_offset_2
-    PyObject * field = PyObject_GetAttrString(_pymsg, "mag_offset_2");
+  {  // accel_offset_2
+    PyObject * field = PyObject_GetAttrString(_pymsg, "accel_offset_2");
     if (!field) {
       return false;
     }
@@ -461,7 +317,7 @@ bool px4_msgs__msg__sensor_correction__convert_from_py(PyObject * _pymsg, void *
       assert(PyArray_NDIM(seq_field) == 1);
       assert(PyArray_TYPE(seq_field) == NPY_FLOAT32);
       Py_ssize_t size = 3;
-      float * dest = ros_message->mag_offset_2;
+      float * dest = ros_message->accel_offset_2;
       for (Py_ssize_t i = 0; i < size; ++i) {
         float tmp = *(npy_float32 *)PyArray_GETPTR1(seq_field, i);
         memcpy(&dest[i], &tmp, sizeof(float));
@@ -470,8 +326,8 @@ bool px4_msgs__msg__sensor_correction__convert_from_py(PyObject * _pymsg, void *
     }
     Py_DECREF(field);
   }
-  {  // mag_offset_3
-    PyObject * field = PyObject_GetAttrString(_pymsg, "mag_offset_3");
+  {  // accel_offset_3
+    PyObject * field = PyObject_GetAttrString(_pymsg, "accel_offset_3");
     if (!field) {
       return false;
     }
@@ -485,7 +341,7 @@ bool px4_msgs__msg__sensor_correction__convert_from_py(PyObject * _pymsg, void *
       assert(PyArray_NDIM(seq_field) == 1);
       assert(PyArray_TYPE(seq_field) == NPY_FLOAT32);
       Py_ssize_t size = 3;
-      float * dest = ros_message->mag_offset_3;
+      float * dest = ros_message->accel_offset_3;
       for (Py_ssize_t i = 0; i < size; ++i) {
         float tmp = *(npy_float32 *)PyArray_GETPTR1(seq_field, i);
         memcpy(&dest[i], &tmp, sizeof(float));
@@ -611,114 +467,6 @@ PyObject * px4_msgs__msg__sensor_correction__convert_to_py(void * raw_ros_messag
       }
     }
   }
-  {  // accel_device_ids
-    PyObject * field = NULL;
-    field = PyObject_GetAttrString(_pymessage, "accel_device_ids");
-    if (!field) {
-      return NULL;
-    }
-    assert(field->ob_type != NULL);
-    assert(field->ob_type->tp_name != NULL);
-    assert(strcmp(field->ob_type->tp_name, "numpy.ndarray") == 0);
-    PyArrayObject * seq_field = (PyArrayObject *)field;
-    assert(PyArray_NDIM(seq_field) == 1);
-    assert(PyArray_TYPE(seq_field) == NPY_UINT32);
-    assert(sizeof(npy_uint32) == sizeof(uint32_t));
-    npy_uint32 * dst = (npy_uint32 *)PyArray_GETPTR1(seq_field, 0);
-    uint32_t * src = &(ros_message->accel_device_ids[0]);
-    memcpy(dst, src, 4 * sizeof(uint32_t));
-    Py_DECREF(field);
-  }
-  {  // accel_temperature
-    PyObject * field = NULL;
-    field = PyObject_GetAttrString(_pymessage, "accel_temperature");
-    if (!field) {
-      return NULL;
-    }
-    assert(field->ob_type != NULL);
-    assert(field->ob_type->tp_name != NULL);
-    assert(strcmp(field->ob_type->tp_name, "numpy.ndarray") == 0);
-    PyArrayObject * seq_field = (PyArrayObject *)field;
-    assert(PyArray_NDIM(seq_field) == 1);
-    assert(PyArray_TYPE(seq_field) == NPY_FLOAT32);
-    assert(sizeof(npy_float32) == sizeof(float));
-    npy_float32 * dst = (npy_float32 *)PyArray_GETPTR1(seq_field, 0);
-    float * src = &(ros_message->accel_temperature[0]);
-    memcpy(dst, src, 4 * sizeof(float));
-    Py_DECREF(field);
-  }
-  {  // accel_offset_0
-    PyObject * field = NULL;
-    field = PyObject_GetAttrString(_pymessage, "accel_offset_0");
-    if (!field) {
-      return NULL;
-    }
-    assert(field->ob_type != NULL);
-    assert(field->ob_type->tp_name != NULL);
-    assert(strcmp(field->ob_type->tp_name, "numpy.ndarray") == 0);
-    PyArrayObject * seq_field = (PyArrayObject *)field;
-    assert(PyArray_NDIM(seq_field) == 1);
-    assert(PyArray_TYPE(seq_field) == NPY_FLOAT32);
-    assert(sizeof(npy_float32) == sizeof(float));
-    npy_float32 * dst = (npy_float32 *)PyArray_GETPTR1(seq_field, 0);
-    float * src = &(ros_message->accel_offset_0[0]);
-    memcpy(dst, src, 3 * sizeof(float));
-    Py_DECREF(field);
-  }
-  {  // accel_offset_1
-    PyObject * field = NULL;
-    field = PyObject_GetAttrString(_pymessage, "accel_offset_1");
-    if (!field) {
-      return NULL;
-    }
-    assert(field->ob_type != NULL);
-    assert(field->ob_type->tp_name != NULL);
-    assert(strcmp(field->ob_type->tp_name, "numpy.ndarray") == 0);
-    PyArrayObject * seq_field = (PyArrayObject *)field;
-    assert(PyArray_NDIM(seq_field) == 1);
-    assert(PyArray_TYPE(seq_field) == NPY_FLOAT32);
-    assert(sizeof(npy_float32) == sizeof(float));
-    npy_float32 * dst = (npy_float32 *)PyArray_GETPTR1(seq_field, 0);
-    float * src = &(ros_message->accel_offset_1[0]);
-    memcpy(dst, src, 3 * sizeof(float));
-    Py_DECREF(field);
-  }
-  {  // accel_offset_2
-    PyObject * field = NULL;
-    field = PyObject_GetAttrString(_pymessage, "accel_offset_2");
-    if (!field) {
-      return NULL;
-    }
-    assert(field->ob_type != NULL);
-    assert(field->ob_type->tp_name != NULL);
-    assert(strcmp(field->ob_type->tp_name, "numpy.ndarray") == 0);
-    PyArrayObject * seq_field = (PyArrayObject *)field;
-    assert(PyArray_NDIM(seq_field) == 1);
-    assert(PyArray_TYPE(seq_field) == NPY_FLOAT32);
-    assert(sizeof(npy_float32) == sizeof(float));
-    npy_float32 * dst = (npy_float32 *)PyArray_GETPTR1(seq_field, 0);
-    float * src = &(ros_message->accel_offset_2[0]);
-    memcpy(dst, src, 3 * sizeof(float));
-    Py_DECREF(field);
-  }
-  {  // accel_offset_3
-    PyObject * field = NULL;
-    field = PyObject_GetAttrString(_pymessage, "accel_offset_3");
-    if (!field) {
-      return NULL;
-    }
-    assert(field->ob_type != NULL);
-    assert(field->ob_type->tp_name != NULL);
-    assert(strcmp(field->ob_type->tp_name, "numpy.ndarray") == 0);
-    PyArrayObject * seq_field = (PyArrayObject *)field;
-    assert(PyArray_NDIM(seq_field) == 1);
-    assert(PyArray_TYPE(seq_field) == NPY_FLOAT32);
-    assert(sizeof(npy_float32) == sizeof(float));
-    npy_float32 * dst = (npy_float32 *)PyArray_GETPTR1(seq_field, 0);
-    float * src = &(ros_message->accel_offset_3[0]);
-    memcpy(dst, src, 3 * sizeof(float));
-    Py_DECREF(field);
-  }
   {  // gyro_device_ids
     PyObject * field = NULL;
     field = PyObject_GetAttrString(_pymessage, "gyro_device_ids");
@@ -827,9 +575,9 @@ PyObject * px4_msgs__msg__sensor_correction__convert_to_py(void * raw_ros_messag
     memcpy(dst, src, 3 * sizeof(float));
     Py_DECREF(field);
   }
-  {  // mag_device_ids
+  {  // accel_device_ids
     PyObject * field = NULL;
-    field = PyObject_GetAttrString(_pymessage, "mag_device_ids");
+    field = PyObject_GetAttrString(_pymessage, "accel_device_ids");
     if (!field) {
       return NULL;
     }
@@ -841,13 +589,13 @@ PyObject * px4_msgs__msg__sensor_correction__convert_to_py(void * raw_ros_messag
     assert(PyArray_TYPE(seq_field) == NPY_UINT32);
     assert(sizeof(npy_uint32) == sizeof(uint32_t));
     npy_uint32 * dst = (npy_uint32 *)PyArray_GETPTR1(seq_field, 0);
-    uint32_t * src = &(ros_message->mag_device_ids[0]);
+    uint32_t * src = &(ros_message->accel_device_ids[0]);
     memcpy(dst, src, 4 * sizeof(uint32_t));
     Py_DECREF(field);
   }
-  {  // mag_temperature
+  {  // accel_temperature
     PyObject * field = NULL;
-    field = PyObject_GetAttrString(_pymessage, "mag_temperature");
+    field = PyObject_GetAttrString(_pymessage, "accel_temperature");
     if (!field) {
       return NULL;
     }
@@ -859,13 +607,13 @@ PyObject * px4_msgs__msg__sensor_correction__convert_to_py(void * raw_ros_messag
     assert(PyArray_TYPE(seq_field) == NPY_FLOAT32);
     assert(sizeof(npy_float32) == sizeof(float));
     npy_float32 * dst = (npy_float32 *)PyArray_GETPTR1(seq_field, 0);
-    float * src = &(ros_message->mag_temperature[0]);
+    float * src = &(ros_message->accel_temperature[0]);
     memcpy(dst, src, 4 * sizeof(float));
     Py_DECREF(field);
   }
-  {  // mag_offset_0
+  {  // accel_offset_0
     PyObject * field = NULL;
-    field = PyObject_GetAttrString(_pymessage, "mag_offset_0");
+    field = PyObject_GetAttrString(_pymessage, "accel_offset_0");
     if (!field) {
       return NULL;
     }
@@ -877,13 +625,13 @@ PyObject * px4_msgs__msg__sensor_correction__convert_to_py(void * raw_ros_messag
     assert(PyArray_TYPE(seq_field) == NPY_FLOAT32);
     assert(sizeof(npy_float32) == sizeof(float));
     npy_float32 * dst = (npy_float32 *)PyArray_GETPTR1(seq_field, 0);
-    float * src = &(ros_message->mag_offset_0[0]);
+    float * src = &(ros_message->accel_offset_0[0]);
     memcpy(dst, src, 3 * sizeof(float));
     Py_DECREF(field);
   }
-  {  // mag_offset_1
+  {  // accel_offset_1
     PyObject * field = NULL;
-    field = PyObject_GetAttrString(_pymessage, "mag_offset_1");
+    field = PyObject_GetAttrString(_pymessage, "accel_offset_1");
     if (!field) {
       return NULL;
     }
@@ -895,13 +643,13 @@ PyObject * px4_msgs__msg__sensor_correction__convert_to_py(void * raw_ros_messag
     assert(PyArray_TYPE(seq_field) == NPY_FLOAT32);
     assert(sizeof(npy_float32) == sizeof(float));
     npy_float32 * dst = (npy_float32 *)PyArray_GETPTR1(seq_field, 0);
-    float * src = &(ros_message->mag_offset_1[0]);
+    float * src = &(ros_message->accel_offset_1[0]);
     memcpy(dst, src, 3 * sizeof(float));
     Py_DECREF(field);
   }
-  {  // mag_offset_2
+  {  // accel_offset_2
     PyObject * field = NULL;
-    field = PyObject_GetAttrString(_pymessage, "mag_offset_2");
+    field = PyObject_GetAttrString(_pymessage, "accel_offset_2");
     if (!field) {
       return NULL;
     }
@@ -913,13 +661,13 @@ PyObject * px4_msgs__msg__sensor_correction__convert_to_py(void * raw_ros_messag
     assert(PyArray_TYPE(seq_field) == NPY_FLOAT32);
     assert(sizeof(npy_float32) == sizeof(float));
     npy_float32 * dst = (npy_float32 *)PyArray_GETPTR1(seq_field, 0);
-    float * src = &(ros_message->mag_offset_2[0]);
+    float * src = &(ros_message->accel_offset_2[0]);
     memcpy(dst, src, 3 * sizeof(float));
     Py_DECREF(field);
   }
-  {  // mag_offset_3
+  {  // accel_offset_3
     PyObject * field = NULL;
-    field = PyObject_GetAttrString(_pymessage, "mag_offset_3");
+    field = PyObject_GetAttrString(_pymessage, "accel_offset_3");
     if (!field) {
       return NULL;
     }
@@ -931,7 +679,7 @@ PyObject * px4_msgs__msg__sensor_correction__convert_to_py(void * raw_ros_messag
     assert(PyArray_TYPE(seq_field) == NPY_FLOAT32);
     assert(sizeof(npy_float32) == sizeof(float));
     npy_float32 * dst = (npy_float32 *)PyArray_GETPTR1(seq_field, 0);
-    float * src = &(ros_message->mag_offset_3[0]);
+    float * src = &(ros_message->accel_offset_3[0]);
     memcpy(dst, src, 3 * sizeof(float));
     Py_DECREF(field);
   }

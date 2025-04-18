@@ -27,17 +27,13 @@ module px4_msgs {
 
       float__3 innovation;
 
-      float__3 innovation_filtered;
-
       float__3 innovation_variance;
 
-      @verbatim (language="comment", text=
-        "normalized innovation squared")
       float__3 test_ratio;
 
       @verbatim (language="comment", text=
-        "signed filtered test ratio")
-      float__3 test_ratio_filtered;
+        "true when measurements are being fused")
+      boolean fusion_enabled;
 
       @verbatim (language="comment", text=
         "true if the observation has been rejected")

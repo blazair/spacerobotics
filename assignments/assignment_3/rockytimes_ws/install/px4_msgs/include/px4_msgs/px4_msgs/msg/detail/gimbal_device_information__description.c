@@ -11,10 +11,10 @@ px4_msgs__msg__GimbalDeviceInformation__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x0b, 0xde, 0xd9, 0xb6, 0x48, 0x72, 0x24, 0x46,
-      0xd3, 0xde, 0x47, 0x73, 0xea, 0x4e, 0x9c, 0x63,
-      0x05, 0xd0, 0xf8, 0x8d, 0x47, 0xf8, 0x35, 0x7a,
-      0x53, 0x4b, 0x42, 0x42, 0x10, 0xbb, 0x6f, 0x47,
+      0xba, 0x5a, 0xab, 0xe1, 0x8b, 0xe3, 0xb5, 0x3b,
+      0xd0, 0x8f, 0x13, 0x8a, 0x5c, 0x81, 0x34, 0x61,
+      0x4d, 0x87, 0x4d, 0x93, 0xa4, 0xe9, 0x71, 0xab,
+      0xd7, 0xd4, 0x6d, 0x86, 0xcc, 0xe4, 0x0c, 0x20,
     }};
   return &hash;
 }
@@ -46,7 +46,7 @@ static char px4_msgs__msg__GimbalDeviceInformation__FIELD_NAME__pitch_min[] = "p
 static char px4_msgs__msg__GimbalDeviceInformation__FIELD_NAME__pitch_max[] = "pitch_max";
 static char px4_msgs__msg__GimbalDeviceInformation__FIELD_NAME__yaw_min[] = "yaw_min";
 static char px4_msgs__msg__GimbalDeviceInformation__FIELD_NAME__yaw_max[] = "yaw_max";
-static char px4_msgs__msg__GimbalDeviceInformation__FIELD_NAME__gimbal_device_id[] = "gimbal_device_id";
+static char px4_msgs__msg__GimbalDeviceInformation__FIELD_NAME__gimbal_device_compid[] = "gimbal_device_compid";
 
 static rosidl_runtime_c__type_description__Field px4_msgs__msg__GimbalDeviceInformation__FIELDS[] = {
   {
@@ -200,7 +200,7 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__GimbalDeviceInfo
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__GimbalDeviceInformation__FIELD_NAME__gimbal_device_id, 16, 16},
+    {px4_msgs__msg__GimbalDeviceInformation__FIELD_NAME__gimbal_device_compid, 20, 20},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT8,
       0,
@@ -266,7 +266,7 @@ static char toplevel_type_raw_source[] =
   "float32 yaw_min # [rad]\n"
   "float32 yaw_max # [rad]\n"
   "\n"
-  "uint8 gimbal_device_id";
+  "uint8 gimbal_device_compid";
 
 static char msg_encoding[] = "msg";
 
@@ -280,7 +280,7 @@ px4_msgs__msg__GimbalDeviceInformation__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__GimbalDeviceInformation__TYPE_NAME, 36, 36},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 1022, 1022},
+    {toplevel_type_raw_source, 1026, 1026},
   };
   return &source;
 }

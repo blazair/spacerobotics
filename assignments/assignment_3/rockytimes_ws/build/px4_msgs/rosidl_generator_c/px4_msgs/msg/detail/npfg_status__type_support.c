@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "px4_msgs/msg/detail/npfg_status__struct.h"
-#include "rosidl_typesupport_interface/macros.h"
 #include "px4_msgs/msg/detail/npfg_status__functions.h"
 #include "px4_msgs/msg/detail/npfg_status__type_support.h"
+#include "rosidl_typesupport_interface/macros.h"
+#include "px4_msgs/msg/detail/npfg_status__struct.h"
 
 #ifdef __cplusplus
 extern "C"

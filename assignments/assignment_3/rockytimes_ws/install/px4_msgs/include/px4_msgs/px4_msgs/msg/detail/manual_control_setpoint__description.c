@@ -11,10 +11,10 @@ px4_msgs__msg__ManualControlSetpoint__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x2e, 0xc0, 0xe5, 0x28, 0xa3, 0x55, 0x53, 0x3a,
-      0xd4, 0xc6, 0x68, 0x54, 0xef, 0xef, 0x10, 0x4b,
-      0x62, 0xf4, 0x2e, 0xde, 0xd5, 0xd8, 0x30, 0xaf,
-      0x9d, 0xc1, 0x8a, 0xb2, 0x05, 0xb8, 0x25, 0xed,
+      0x99, 0xb9, 0x96, 0xa5, 0xb1, 0xaa, 0x6f, 0xb5,
+      0x29, 0x64, 0x1c, 0x00, 0x5a, 0xdd, 0x9d, 0xad,
+      0x98, 0xef, 0xae, 0x24, 0x10, 0xe3, 0x0d, 0x0f,
+      0xf3, 0x88, 0xe4, 0x9c, 0x51, 0x50, 0x08, 0xdf,
     }};
   return &hash;
 }
@@ -47,7 +47,6 @@ static char px4_msgs__msg__ManualControlSetpoint__FIELD_NAME__aux4[] = "aux4";
 static char px4_msgs__msg__ManualControlSetpoint__FIELD_NAME__aux5[] = "aux5";
 static char px4_msgs__msg__ManualControlSetpoint__FIELD_NAME__aux6[] = "aux6";
 static char px4_msgs__msg__ManualControlSetpoint__FIELD_NAME__sticks_moving[] = "sticks_moving";
-static char px4_msgs__msg__ManualControlSetpoint__FIELD_NAME__buttons[] = "buttons";
 
 static rosidl_runtime_c__type_description__Field px4_msgs__msg__ManualControlSetpoint__FIELDS[] = {
   {
@@ -210,16 +209,6 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__ManualControlSet
     },
     {NULL, 0, 0},
   },
-  {
-    {px4_msgs__msg__ManualControlSetpoint__FIELD_NAME__buttons, 7, 7},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT16,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
 };
 
 const rosidl_runtime_c__type_description__TypeDescription *
@@ -231,7 +220,7 @@ px4_msgs__msg__ManualControlSetpoint__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {px4_msgs__msg__ManualControlSetpoint__TYPE_NAME, 34, 34},
-      {px4_msgs__msg__ManualControlSetpoint__FIELDS, 17, 17},
+      {px4_msgs__msg__ManualControlSetpoint__FIELDS, 16, 16},
     },
     {NULL, 0, 0},
   };
@@ -242,8 +231,6 @@ px4_msgs__msg__ManualControlSetpoint__get_type_description(
 }
 
 static char toplevel_type_raw_source[] =
-  "uint32 MESSAGE_VERSION = 0\n"
-  "\n"
   "uint64 timestamp                        # time since system start (microseconds)\n"
   "uint64 timestamp_sample                 # the timestamp of the raw data (microseconds)\n"
   "\n"
@@ -283,8 +270,6 @@ static char toplevel_type_raw_source[] =
   "\n"
   "bool sticks_moving\n"
   "\n"
-  "uint16 buttons\\t\\t# From uint16 buttons field of Mavlink manual_control message\n"
-  "\n"
   "# TOPICS manual_control_setpoint manual_control_input\n"
   "# DEPRECATED: float32 x\n"
   "# DEPRECATED: float32 y\n"
@@ -303,7 +288,7 @@ px4_msgs__msg__ManualControlSetpoint__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__ManualControlSetpoint__TYPE_NAME, 34, 34},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 1763, 1763},
+    {toplevel_type_raw_source, 1656, 1656},
   };
   return &source;
 }

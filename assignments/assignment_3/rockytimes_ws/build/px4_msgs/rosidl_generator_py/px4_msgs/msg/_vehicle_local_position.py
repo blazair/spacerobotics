@@ -33,7 +33,6 @@ class Metaclass_VehicleLocalPosition(type):
     _TYPE_SUPPORT = None
 
     __constants = {
-        'MESSAGE_VERSION': 0,
         'DIST_BOTTOM_SENSOR_NONE': 0,
         'DIST_BOTTOM_SENSOR_RANGE': 1,
         'DIST_BOTTOM_SENSOR_FLOW': 2,
@@ -65,16 +64,10 @@ class Metaclass_VehicleLocalPosition(type):
         # the message class under "Data and other attributes defined here:"
         # as well as populate each message instance
         return {
-            'MESSAGE_VERSION': cls.__constants['MESSAGE_VERSION'],
             'DIST_BOTTOM_SENSOR_NONE': cls.__constants['DIST_BOTTOM_SENSOR_NONE'],
             'DIST_BOTTOM_SENSOR_RANGE': cls.__constants['DIST_BOTTOM_SENSOR_RANGE'],
             'DIST_BOTTOM_SENSOR_FLOW': cls.__constants['DIST_BOTTOM_SENSOR_FLOW'],
         }
-
-    @property
-    def MESSAGE_VERSION(self):
-        """Message constant 'MESSAGE_VERSION'."""
-        return Metaclass_VehicleLocalPosition.__constants['MESSAGE_VERSION']
 
     @property
     def DIST_BOTTOM_SENSOR_NONE(self):
@@ -97,7 +90,6 @@ class VehicleLocalPosition(metaclass=Metaclass_VehicleLocalPosition):
     Message class 'VehicleLocalPosition'.
 
     Constants:
-      MESSAGE_VERSION
       DIST_BOTTOM_SENSOR_NONE
       DIST_BOTTOM_SENSOR_RANGE
       DIST_BOTTOM_SENSOR_FLOW
@@ -129,23 +121,17 @@ class VehicleLocalPosition(metaclass=Metaclass_VehicleLocalPosition):
         '_ay',
         '_az',
         '_heading',
-        '_heading_var',
-        '_unaided_heading',
         '_delta_heading',
         '_heading_reset_counter',
         '_heading_good_for_control',
-        '_tilt_var',
         '_xy_global',
         '_z_global',
         '_ref_timestamp',
         '_ref_lat',
         '_ref_lon',
         '_ref_alt',
-        '_dist_bottom_valid',
         '_dist_bottom',
-        '_dist_bottom_var',
-        '_delta_dist_bottom',
-        '_dist_bottom_reset_counter',
+        '_dist_bottom_valid',
         '_dist_bottom_sensor_bitfield',
         '_eph',
         '_epv',
@@ -155,8 +141,7 @@ class VehicleLocalPosition(metaclass=Metaclass_VehicleLocalPosition):
         '_vxy_max',
         '_vz_max',
         '_hagl_min',
-        '_hagl_max_z',
-        '_hagl_max_xy',
+        '_hagl_max',
         '_check_fields',
     ]
 
@@ -186,23 +171,17 @@ class VehicleLocalPosition(metaclass=Metaclass_VehicleLocalPosition):
         'ay': 'float',
         'az': 'float',
         'heading': 'float',
-        'heading_var': 'float',
-        'unaided_heading': 'float',
         'delta_heading': 'float',
         'heading_reset_counter': 'uint8',
         'heading_good_for_control': 'boolean',
-        'tilt_var': 'float',
         'xy_global': 'boolean',
         'z_global': 'boolean',
         'ref_timestamp': 'uint64',
         'ref_lat': 'double',
         'ref_lon': 'double',
         'ref_alt': 'float',
-        'dist_bottom_valid': 'boolean',
         'dist_bottom': 'float',
-        'dist_bottom_var': 'float',
-        'delta_dist_bottom': 'float',
-        'dist_bottom_reset_counter': 'uint8',
+        'dist_bottom_valid': 'boolean',
         'dist_bottom_sensor_bitfield': 'uint8',
         'eph': 'float',
         'epv': 'float',
@@ -212,8 +191,7 @@ class VehicleLocalPosition(metaclass=Metaclass_VehicleLocalPosition):
         'vxy_max': 'float',
         'vz_max': 'float',
         'hagl_min': 'float',
-        'hagl_max_z': 'float',
-        'hagl_max_xy': 'float',
+        'hagl_max': 'float',
     }
 
     # This attribute is used to store an rosidl_parser.definition variable
@@ -245,29 +223,22 @@ class VehicleLocalPosition(metaclass=Metaclass_VehicleLocalPosition):
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
-        rosidl_parser.definition.BasicType('float'),  # noqa: E501
-        rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
-        rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint64'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
-        rosidl_parser.definition.BasicType('float'),  # noqa: E501
-        rosidl_parser.definition.BasicType('float'),  # noqa: E501
-        rosidl_parser.definition.BasicType('float'),  # noqa: E501
-        rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
-        rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
@@ -316,23 +287,17 @@ class VehicleLocalPosition(metaclass=Metaclass_VehicleLocalPosition):
         self.ay = kwargs.get('ay', float())
         self.az = kwargs.get('az', float())
         self.heading = kwargs.get('heading', float())
-        self.heading_var = kwargs.get('heading_var', float())
-        self.unaided_heading = kwargs.get('unaided_heading', float())
         self.delta_heading = kwargs.get('delta_heading', float())
         self.heading_reset_counter = kwargs.get('heading_reset_counter', int())
         self.heading_good_for_control = kwargs.get('heading_good_for_control', bool())
-        self.tilt_var = kwargs.get('tilt_var', float())
         self.xy_global = kwargs.get('xy_global', bool())
         self.z_global = kwargs.get('z_global', bool())
         self.ref_timestamp = kwargs.get('ref_timestamp', int())
         self.ref_lat = kwargs.get('ref_lat', float())
         self.ref_lon = kwargs.get('ref_lon', float())
         self.ref_alt = kwargs.get('ref_alt', float())
-        self.dist_bottom_valid = kwargs.get('dist_bottom_valid', bool())
         self.dist_bottom = kwargs.get('dist_bottom', float())
-        self.dist_bottom_var = kwargs.get('dist_bottom_var', float())
-        self.delta_dist_bottom = kwargs.get('delta_dist_bottom', float())
-        self.dist_bottom_reset_counter = kwargs.get('dist_bottom_reset_counter', int())
+        self.dist_bottom_valid = kwargs.get('dist_bottom_valid', bool())
         self.dist_bottom_sensor_bitfield = kwargs.get('dist_bottom_sensor_bitfield', int())
         self.eph = kwargs.get('eph', float())
         self.epv = kwargs.get('epv', float())
@@ -342,8 +307,7 @@ class VehicleLocalPosition(metaclass=Metaclass_VehicleLocalPosition):
         self.vxy_max = kwargs.get('vxy_max', float())
         self.vz_max = kwargs.get('vz_max', float())
         self.hagl_min = kwargs.get('hagl_min', float())
-        self.hagl_max_z = kwargs.get('hagl_max_z', float())
-        self.hagl_max_xy = kwargs.get('hagl_max_xy', float())
+        self.hagl_max = kwargs.get('hagl_max', float())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -425,17 +389,11 @@ class VehicleLocalPosition(metaclass=Metaclass_VehicleLocalPosition):
             return False
         if self.heading != other.heading:
             return False
-        if self.heading_var != other.heading_var:
-            return False
-        if self.unaided_heading != other.unaided_heading:
-            return False
         if self.delta_heading != other.delta_heading:
             return False
         if self.heading_reset_counter != other.heading_reset_counter:
             return False
         if self.heading_good_for_control != other.heading_good_for_control:
-            return False
-        if self.tilt_var != other.tilt_var:
             return False
         if self.xy_global != other.xy_global:
             return False
@@ -449,15 +407,9 @@ class VehicleLocalPosition(metaclass=Metaclass_VehicleLocalPosition):
             return False
         if self.ref_alt != other.ref_alt:
             return False
-        if self.dist_bottom_valid != other.dist_bottom_valid:
-            return False
         if self.dist_bottom != other.dist_bottom:
             return False
-        if self.dist_bottom_var != other.dist_bottom_var:
-            return False
-        if self.delta_dist_bottom != other.delta_dist_bottom:
-            return False
-        if self.dist_bottom_reset_counter != other.dist_bottom_reset_counter:
+        if self.dist_bottom_valid != other.dist_bottom_valid:
             return False
         if self.dist_bottom_sensor_bitfield != other.dist_bottom_sensor_bitfield:
             return False
@@ -477,9 +429,7 @@ class VehicleLocalPosition(metaclass=Metaclass_VehicleLocalPosition):
             return False
         if self.hagl_min != other.hagl_min:
             return False
-        if self.hagl_max_z != other.hagl_max_z:
-            return False
-        if self.hagl_max_xy != other.hagl_max_xy:
+        if self.hagl_max != other.hagl_max:
             return False
         return True
 
@@ -888,36 +838,6 @@ class VehicleLocalPosition(metaclass=Metaclass_VehicleLocalPosition):
         self._heading = value
 
     @builtins.property
-    def heading_var(self):
-        """Message field 'heading_var'."""
-        return self._heading_var
-
-    @heading_var.setter
-    def heading_var(self, value):
-        if self._check_fields:
-            assert \
-                isinstance(value, float), \
-                "The 'heading_var' field must be of type 'float'"
-            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'heading_var' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
-        self._heading_var = value
-
-    @builtins.property
-    def unaided_heading(self):
-        """Message field 'unaided_heading'."""
-        return self._unaided_heading
-
-    @unaided_heading.setter
-    def unaided_heading(self, value):
-        if self._check_fields:
-            assert \
-                isinstance(value, float), \
-                "The 'unaided_heading' field must be of type 'float'"
-            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'unaided_heading' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
-        self._unaided_heading = value
-
-    @builtins.property
     def delta_heading(self):
         """Message field 'delta_heading'."""
         return self._delta_heading
@@ -959,21 +879,6 @@ class VehicleLocalPosition(metaclass=Metaclass_VehicleLocalPosition):
                 isinstance(value, bool), \
                 "The 'heading_good_for_control' field must be of type 'bool'"
         self._heading_good_for_control = value
-
-    @builtins.property
-    def tilt_var(self):
-        """Message field 'tilt_var'."""
-        return self._tilt_var
-
-    @tilt_var.setter
-    def tilt_var(self, value):
-        if self._check_fields:
-            assert \
-                isinstance(value, float), \
-                "The 'tilt_var' field must be of type 'float'"
-            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'tilt_var' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
-        self._tilt_var = value
 
     @builtins.property
     def xy_global(self):
@@ -1062,19 +967,6 @@ class VehicleLocalPosition(metaclass=Metaclass_VehicleLocalPosition):
         self._ref_alt = value
 
     @builtins.property
-    def dist_bottom_valid(self):
-        """Message field 'dist_bottom_valid'."""
-        return self._dist_bottom_valid
-
-    @dist_bottom_valid.setter
-    def dist_bottom_valid(self, value):
-        if self._check_fields:
-            assert \
-                isinstance(value, bool), \
-                "The 'dist_bottom_valid' field must be of type 'bool'"
-        self._dist_bottom_valid = value
-
-    @builtins.property
     def dist_bottom(self):
         """Message field 'dist_bottom'."""
         return self._dist_bottom
@@ -1090,49 +982,17 @@ class VehicleLocalPosition(metaclass=Metaclass_VehicleLocalPosition):
         self._dist_bottom = value
 
     @builtins.property
-    def dist_bottom_var(self):
-        """Message field 'dist_bottom_var'."""
-        return self._dist_bottom_var
+    def dist_bottom_valid(self):
+        """Message field 'dist_bottom_valid'."""
+        return self._dist_bottom_valid
 
-    @dist_bottom_var.setter
-    def dist_bottom_var(self, value):
+    @dist_bottom_valid.setter
+    def dist_bottom_valid(self, value):
         if self._check_fields:
             assert \
-                isinstance(value, float), \
-                "The 'dist_bottom_var' field must be of type 'float'"
-            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'dist_bottom_var' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
-        self._dist_bottom_var = value
-
-    @builtins.property
-    def delta_dist_bottom(self):
-        """Message field 'delta_dist_bottom'."""
-        return self._delta_dist_bottom
-
-    @delta_dist_bottom.setter
-    def delta_dist_bottom(self, value):
-        if self._check_fields:
-            assert \
-                isinstance(value, float), \
-                "The 'delta_dist_bottom' field must be of type 'float'"
-            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'delta_dist_bottom' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
-        self._delta_dist_bottom = value
-
-    @builtins.property
-    def dist_bottom_reset_counter(self):
-        """Message field 'dist_bottom_reset_counter'."""
-        return self._dist_bottom_reset_counter
-
-    @dist_bottom_reset_counter.setter
-    def dist_bottom_reset_counter(self, value):
-        if self._check_fields:
-            assert \
-                isinstance(value, int), \
-                "The 'dist_bottom_reset_counter' field must be of type 'int'"
-            assert value >= 0 and value < 256, \
-                "The 'dist_bottom_reset_counter' field must be an unsigned integer in [0, 255]"
-        self._dist_bottom_reset_counter = value
+                isinstance(value, bool), \
+                "The 'dist_bottom_valid' field must be of type 'bool'"
+        self._dist_bottom_valid = value
 
     @builtins.property
     def dist_bottom_sensor_bitfield(self):
@@ -1268,31 +1128,16 @@ class VehicleLocalPosition(metaclass=Metaclass_VehicleLocalPosition):
         self._hagl_min = value
 
     @builtins.property
-    def hagl_max_z(self):
-        """Message field 'hagl_max_z'."""
-        return self._hagl_max_z
+    def hagl_max(self):
+        """Message field 'hagl_max'."""
+        return self._hagl_max
 
-    @hagl_max_z.setter
-    def hagl_max_z(self, value):
+    @hagl_max.setter
+    def hagl_max(self, value):
         if self._check_fields:
             assert \
                 isinstance(value, float), \
-                "The 'hagl_max_z' field must be of type 'float'"
+                "The 'hagl_max' field must be of type 'float'"
             assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'hagl_max_z' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
-        self._hagl_max_z = value
-
-    @builtins.property
-    def hagl_max_xy(self):
-        """Message field 'hagl_max_xy'."""
-        return self._hagl_max_xy
-
-    @hagl_max_xy.setter
-    def hagl_max_xy(self, value):
-        if self._check_fields:
-            assert \
-                isinstance(value, float), \
-                "The 'hagl_max_xy' field must be of type 'float'"
-            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'hagl_max_xy' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
-        self._hagl_max_xy = value
+                "The 'hagl_max' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._hagl_max = value

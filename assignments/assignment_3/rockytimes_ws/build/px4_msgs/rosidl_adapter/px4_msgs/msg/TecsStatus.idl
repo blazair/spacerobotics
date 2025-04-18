@@ -5,6 +5,10 @@
 
 module px4_msgs {
   module msg {
+    module TecsStatus_Constants {
+      const uint8 TECS_MODE_NORMAL = 0;
+      const uint8 TECS_MODE_UNDERSPEED = 1;
+    };
     struct TecsStatus {
       @verbatim (language="comment", text=
         "time since system start (microseconds)")
@@ -19,11 +23,6 @@ module px4_msgs {
         "Altitude setpoint reference AMSL")
       @unit (value="m")
       float altitude_reference;
-
-      @verbatim (language="comment", text=
-        "Time constant of the altitude tracker")
-      @unit (value="s")
-      float altitude_time_constant;
 
       @verbatim (language="comment", text=
         "Height rate setpoint reference")
@@ -120,13 +119,8 @@ module px4_msgs {
       float throttle_trim;
 
       @verbatim (language="comment", text=
-        "0: no underspeed, 1: maximal underspeed. Controller takes measures to avoid stall proportional to ratio if >0.")
-      float underspeed_ratio;
-
-      @verbatim (language="comment", text=
-        "value indicating if fast descend mode is enabled with ramp up and ramp down")
-      @unit (value="0-1")
-      float fast_descend_ratio;
+        "TECS mode")
+      uint8 mode;
     };
   };
 };

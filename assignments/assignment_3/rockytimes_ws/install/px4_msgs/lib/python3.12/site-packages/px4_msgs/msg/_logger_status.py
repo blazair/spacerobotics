@@ -111,7 +111,6 @@ class LoggerStatus(metaclass=Metaclass_LoggerStatus):
         '_timestamp',
         '_type',
         '_backend',
-        '_is_logging',
         '_total_written_kb',
         '_write_rate_kb_s',
         '_dropouts',
@@ -126,7 +125,6 @@ class LoggerStatus(metaclass=Metaclass_LoggerStatus):
         'timestamp': 'uint64',
         'type': 'uint8',
         'backend': 'uint8',
-        'is_logging': 'boolean',
         'total_written_kb': 'float',
         'write_rate_kb_s': 'float',
         'dropouts': 'uint32',
@@ -142,7 +140,6 @@ class LoggerStatus(metaclass=Metaclass_LoggerStatus):
         rosidl_parser.definition.BasicType('uint64'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
-        rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint32'),  # noqa: E501
@@ -164,7 +161,6 @@ class LoggerStatus(metaclass=Metaclass_LoggerStatus):
         self.timestamp = kwargs.get('timestamp', int())
         self.type = kwargs.get('type', int())
         self.backend = kwargs.get('backend', int())
-        self.is_logging = kwargs.get('is_logging', bool())
         self.total_written_kb = kwargs.get('total_written_kb', float())
         self.write_rate_kb_s = kwargs.get('write_rate_kb_s', float())
         self.dropouts = kwargs.get('dropouts', int())
@@ -208,8 +204,6 @@ class LoggerStatus(metaclass=Metaclass_LoggerStatus):
         if self.type != other.type:
             return False
         if self.backend != other.backend:
-            return False
-        if self.is_logging != other.is_logging:
             return False
         if self.total_written_kb != other.total_written_kb:
             return False
@@ -276,19 +270,6 @@ class LoggerStatus(metaclass=Metaclass_LoggerStatus):
             assert value >= 0 and value < 256, \
                 "The 'backend' field must be an unsigned integer in [0, 255]"
         self._backend = value
-
-    @builtins.property
-    def is_logging(self):
-        """Message field 'is_logging'."""
-        return self._is_logging
-
-    @is_logging.setter
-    def is_logging(self, value):
-        if self._check_fields:
-            assert \
-                isinstance(value, bool), \
-                "The 'is_logging' field must be of type 'bool'"
-        self._is_logging = value
 
     @builtins.property
     def total_written_kb(self):

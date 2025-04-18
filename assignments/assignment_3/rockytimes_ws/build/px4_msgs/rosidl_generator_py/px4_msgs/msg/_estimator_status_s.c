@@ -140,13 +140,22 @@ bool px4_msgs__msg__estimator_status__convert_from_py(PyObject * _pymsg, void * 
     ros_message->pos_vert_accuracy = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
-  {  // hdg_test_ratio
-    PyObject * field = PyObject_GetAttrString(_pymsg, "hdg_test_ratio");
+  {  // innovation_check_flags
+    PyObject * field = PyObject_GetAttrString(_pymsg, "innovation_check_flags");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->innovation_check_flags = (uint16_t)PyLong_AsUnsignedLong(field);
+    Py_DECREF(field);
+  }
+  {  // mag_test_ratio
+    PyObject * field = PyObject_GetAttrString(_pymsg, "mag_test_ratio");
     if (!field) {
       return false;
     }
     assert(PyFloat_Check(field));
-    ros_message->hdg_test_ratio = (float)PyFloat_AS_DOUBLE(field);
+    ros_message->mag_test_ratio = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
   {  // vel_test_ratio
@@ -275,24 +284,6 @@ bool px4_msgs__msg__estimator_status__convert_from_py(PyObject * _pymsg, void * 
     ros_message->pre_flt_fail_innov_heading = (Py_True == field);
     Py_DECREF(field);
   }
-  {  // pre_flt_fail_innov_height
-    PyObject * field = PyObject_GetAttrString(_pymsg, "pre_flt_fail_innov_height");
-    if (!field) {
-      return false;
-    }
-    assert(PyBool_Check(field));
-    ros_message->pre_flt_fail_innov_height = (Py_True == field);
-    Py_DECREF(field);
-  }
-  {  // pre_flt_fail_innov_pos_horiz
-    PyObject * field = PyObject_GetAttrString(_pymsg, "pre_flt_fail_innov_pos_horiz");
-    if (!field) {
-      return false;
-    }
-    assert(PyBool_Check(field));
-    ros_message->pre_flt_fail_innov_pos_horiz = (Py_True == field);
-    Py_DECREF(field);
-  }
   {  // pre_flt_fail_innov_vel_horiz
     PyObject * field = PyObject_GetAttrString(_pymsg, "pre_flt_fail_innov_vel_horiz");
     if (!field) {
@@ -309,6 +300,15 @@ bool px4_msgs__msg__estimator_status__convert_from_py(PyObject * _pymsg, void * 
     }
     assert(PyBool_Check(field));
     ros_message->pre_flt_fail_innov_vel_vert = (Py_True == field);
+    Py_DECREF(field);
+  }
+  {  // pre_flt_fail_innov_height
+    PyObject * field = PyObject_GetAttrString(_pymsg, "pre_flt_fail_innov_height");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->pre_flt_fail_innov_height = (Py_True == field);
     Py_DECREF(field);
   }
   {  // pre_flt_fail_mag_field_disturbed
@@ -372,42 +372,6 @@ bool px4_msgs__msg__estimator_status__convert_from_py(PyObject * _pymsg, void * 
     }
     assert(PyLong_Check(field));
     ros_message->timeout_flags = (uint8_t)PyLong_AsUnsignedLong(field);
-    Py_DECREF(field);
-  }
-  {  // mag_inclination_deg
-    PyObject * field = PyObject_GetAttrString(_pymsg, "mag_inclination_deg");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->mag_inclination_deg = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
-  {  // mag_inclination_ref_deg
-    PyObject * field = PyObject_GetAttrString(_pymsg, "mag_inclination_ref_deg");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->mag_inclination_ref_deg = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
-  {  // mag_strength_gs
-    PyObject * field = PyObject_GetAttrString(_pymsg, "mag_strength_gs");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->mag_strength_gs = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
-  {  // mag_strength_ref_gs
-    PyObject * field = PyObject_GetAttrString(_pymsg, "mag_strength_ref_gs");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->mag_strength_ref_gs = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
 
@@ -527,11 +491,22 @@ PyObject * px4_msgs__msg__estimator_status__convert_to_py(void * raw_ros_message
       }
     }
   }
-  {  // hdg_test_ratio
+  {  // innovation_check_flags
     PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->hdg_test_ratio);
+    field = PyLong_FromUnsignedLong(ros_message->innovation_check_flags);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "hdg_test_ratio", field);
+      int rc = PyObject_SetAttrString(_pymessage, "innovation_check_flags", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // mag_test_ratio
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->mag_test_ratio);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "mag_test_ratio", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
@@ -692,28 +667,6 @@ PyObject * px4_msgs__msg__estimator_status__convert_to_py(void * raw_ros_message
       }
     }
   }
-  {  // pre_flt_fail_innov_height
-    PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->pre_flt_fail_innov_height ? 1 : 0);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "pre_flt_fail_innov_height", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // pre_flt_fail_innov_pos_horiz
-    PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->pre_flt_fail_innov_pos_horiz ? 1 : 0);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "pre_flt_fail_innov_pos_horiz", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
   {  // pre_flt_fail_innov_vel_horiz
     PyObject * field = NULL;
     field = PyBool_FromLong(ros_message->pre_flt_fail_innov_vel_horiz ? 1 : 0);
@@ -730,6 +683,17 @@ PyObject * px4_msgs__msg__estimator_status__convert_to_py(void * raw_ros_message
     field = PyBool_FromLong(ros_message->pre_flt_fail_innov_vel_vert ? 1 : 0);
     {
       int rc = PyObject_SetAttrString(_pymessage, "pre_flt_fail_innov_vel_vert", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // pre_flt_fail_innov_height
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->pre_flt_fail_innov_height ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "pre_flt_fail_innov_height", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
@@ -807,50 +771,6 @@ PyObject * px4_msgs__msg__estimator_status__convert_to_py(void * raw_ros_message
     field = PyLong_FromUnsignedLong(ros_message->timeout_flags);
     {
       int rc = PyObject_SetAttrString(_pymessage, "timeout_flags", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // mag_inclination_deg
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->mag_inclination_deg);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "mag_inclination_deg", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // mag_inclination_ref_deg
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->mag_inclination_ref_deg);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "mag_inclination_ref_deg", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // mag_strength_gs
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->mag_strength_gs);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "mag_strength_gs", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // mag_strength_ref_gs
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->mag_strength_ref_gs);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "mag_strength_ref_gs", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

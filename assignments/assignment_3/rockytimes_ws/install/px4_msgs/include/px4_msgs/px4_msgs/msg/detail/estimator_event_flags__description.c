@@ -11,10 +11,10 @@ px4_msgs__msg__EstimatorEventFlags__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0xc1, 0xe2, 0x85, 0xda, 0x58, 0x18, 0x6c, 0x97,
-      0x57, 0x13, 0xe4, 0x6e, 0x25, 0xeb, 0xc7, 0x4b,
-      0xe3, 0x8c, 0x9a, 0xc6, 0x9f, 0x2b, 0x8a, 0xff,
-      0xb8, 0x9d, 0xf4, 0xd1, 0x06, 0x78, 0x29, 0x4e,
+      0x94, 0x3c, 0x1c, 0x96, 0x1c, 0x12, 0x32, 0x4e,
+      0x89, 0x4e, 0xb6, 0x01, 0xae, 0x4a, 0xcf, 0x27,
+      0xf5, 0xe7, 0x7d, 0xb8, 0x6e, 0xca, 0xe4, 0xf5,
+      0x98, 0x2c, 0x0e, 0x23, 0x63, 0x26, 0xd5, 0x59,
     }};
   return &hash;
 }
@@ -51,6 +51,19 @@ static char px4_msgs__msg__EstimatorEventFlags__FIELD_NAME__reset_hgt_to_baro[] 
 static char px4_msgs__msg__EstimatorEventFlags__FIELD_NAME__reset_hgt_to_gps[] = "reset_hgt_to_gps";
 static char px4_msgs__msg__EstimatorEventFlags__FIELD_NAME__reset_hgt_to_rng[] = "reset_hgt_to_rng";
 static char px4_msgs__msg__EstimatorEventFlags__FIELD_NAME__reset_hgt_to_ev[] = "reset_hgt_to_ev";
+static char px4_msgs__msg__EstimatorEventFlags__FIELD_NAME__warning_event_changes[] = "warning_event_changes";
+static char px4_msgs__msg__EstimatorEventFlags__FIELD_NAME__gps_quality_poor[] = "gps_quality_poor";
+static char px4_msgs__msg__EstimatorEventFlags__FIELD_NAME__gps_fusion_timout[] = "gps_fusion_timout";
+static char px4_msgs__msg__EstimatorEventFlags__FIELD_NAME__gps_data_stopped[] = "gps_data_stopped";
+static char px4_msgs__msg__EstimatorEventFlags__FIELD_NAME__gps_data_stopped_using_alternate[] = "gps_data_stopped_using_alternate";
+static char px4_msgs__msg__EstimatorEventFlags__FIELD_NAME__height_sensor_timeout[] = "height_sensor_timeout";
+static char px4_msgs__msg__EstimatorEventFlags__FIELD_NAME__stopping_navigation[] = "stopping_navigation";
+static char px4_msgs__msg__EstimatorEventFlags__FIELD_NAME__invalid_accel_bias_cov_reset[] = "invalid_accel_bias_cov_reset";
+static char px4_msgs__msg__EstimatorEventFlags__FIELD_NAME__bad_yaw_using_gps_course[] = "bad_yaw_using_gps_course";
+static char px4_msgs__msg__EstimatorEventFlags__FIELD_NAME__stopping_mag_use[] = "stopping_mag_use";
+static char px4_msgs__msg__EstimatorEventFlags__FIELD_NAME__vision_data_stopped[] = "vision_data_stopped";
+static char px4_msgs__msg__EstimatorEventFlags__FIELD_NAME__emergency_yaw_reset_mag_stopped[] = "emergency_yaw_reset_mag_stopped";
+static char px4_msgs__msg__EstimatorEventFlags__FIELD_NAME__emergency_yaw_reset_gps_yaw_stopped[] = "emergency_yaw_reset_gps_yaw_stopped";
 
 static rosidl_runtime_c__type_description__Field px4_msgs__msg__EstimatorEventFlags__FIELDS[] = {
   {
@@ -253,6 +266,136 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__EstimatorEventFl
     },
     {NULL, 0, 0},
   },
+  {
+    {px4_msgs__msg__EstimatorEventFlags__FIELD_NAME__warning_event_changes, 21, 21},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT32,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {px4_msgs__msg__EstimatorEventFlags__FIELD_NAME__gps_quality_poor, 16, 16},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {px4_msgs__msg__EstimatorEventFlags__FIELD_NAME__gps_fusion_timout, 17, 17},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {px4_msgs__msg__EstimatorEventFlags__FIELD_NAME__gps_data_stopped, 16, 16},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {px4_msgs__msg__EstimatorEventFlags__FIELD_NAME__gps_data_stopped_using_alternate, 32, 32},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {px4_msgs__msg__EstimatorEventFlags__FIELD_NAME__height_sensor_timeout, 21, 21},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {px4_msgs__msg__EstimatorEventFlags__FIELD_NAME__stopping_navigation, 19, 19},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {px4_msgs__msg__EstimatorEventFlags__FIELD_NAME__invalid_accel_bias_cov_reset, 28, 28},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {px4_msgs__msg__EstimatorEventFlags__FIELD_NAME__bad_yaw_using_gps_course, 24, 24},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {px4_msgs__msg__EstimatorEventFlags__FIELD_NAME__stopping_mag_use, 16, 16},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {px4_msgs__msg__EstimatorEventFlags__FIELD_NAME__vision_data_stopped, 19, 19},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {px4_msgs__msg__EstimatorEventFlags__FIELD_NAME__emergency_yaw_reset_mag_stopped, 31, 31},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {px4_msgs__msg__EstimatorEventFlags__FIELD_NAME__emergency_yaw_reset_gps_yaw_stopped, 35, 35},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
 };
 
 const rosidl_runtime_c__type_description__TypeDescription *
@@ -264,7 +407,7 @@ px4_msgs__msg__EstimatorEventFlags__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {px4_msgs__msg__EstimatorEventFlags__TYPE_NAME, 32, 32},
-      {px4_msgs__msg__EstimatorEventFlags__FIELDS, 20, 20},
+      {px4_msgs__msg__EstimatorEventFlags__FIELDS, 33, 33},
     },
     {NULL, 0, 0},
   };
@@ -296,7 +439,22 @@ static char toplevel_type_raw_source[] =
   "bool reset_hgt_to_baro                  # 13 - true when the vertical position state is reset to the baro measurement\n"
   "bool reset_hgt_to_gps                   # 14 - true when the vertical position state is reset to the gps measurement\n"
   "bool reset_hgt_to_rng                   # 15 - true when the vertical position state is reset to the rng measurement\n"
-  "bool reset_hgt_to_ev                    # 16 - true when the vertical position state is reset to the ev measurement";
+  "bool reset_hgt_to_ev                    # 16 - true when the vertical position state is reset to the ev measurement\n"
+  "\n"
+  "# warning events\n"
+  "uint32 warning_event_changes            # number of warning event changes\n"
+  "bool gps_quality_poor                   #  0 - true when the gps is failing quality checks\n"
+  "bool gps_fusion_timout                  #  1 - true when the gps data has not been used to correct the state estimates for a significant time period\n"
+  "bool gps_data_stopped                   #  2 - true when the gps data has stopped for a significant time period\n"
+  "bool gps_data_stopped_using_alternate   #  3 - true when the gps data has stopped for a significant time period but the filter is able to use other sources of data to maintain navigation\n"
+  "bool height_sensor_timeout              #  4 - true when the height sensor has not been used to correct the state estimates for a significant time period\n"
+  "bool stopping_navigation                #  5 - true when the filter has insufficient data to estimate velocity and position and is falling back to an attitude, height and height rate mode of operation\n"
+  "bool invalid_accel_bias_cov_reset       #  6 - true when the filter has detected bad acceerometer bias state esitmstes and has reset the corresponding covariance matrix elements\n"
+  "bool bad_yaw_using_gps_course           #  7 - true when the filter has detected an invalid yaw estimate and has reset the yaw angle to the GPS ground course\n"
+  "bool stopping_mag_use                   #  8 - true when the filter has detected bad magnetometer data and is stopping further use of the magnetometer data\n"
+  "bool vision_data_stopped                #  9 - true when the vision system data has stopped for a significant time period\n"
+  "bool emergency_yaw_reset_mag_stopped    # 10 - true when the filter has detected bad magnetometer data, has reset the yaw to anothter source of data and has stopped further use of the magnetometer data\n"
+  "bool emergency_yaw_reset_gps_yaw_stopped # 11 - true when the filter has detected bad GNSS yaw data, has reset the yaw to anothter source of data and has stopped further use of the GNSS yaw data";
 
 static char msg_encoding[] = "msg";
 
@@ -310,7 +468,7 @@ px4_msgs__msg__EstimatorEventFlags__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__EstimatorEventFlags__TYPE_NAME, 32, 32},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 2319, 2319},
+    {toplevel_type_raw_source, 4316, 4316},
   };
   return &source;
 }

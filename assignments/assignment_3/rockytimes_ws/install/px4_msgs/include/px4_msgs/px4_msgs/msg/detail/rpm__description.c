@@ -11,10 +11,10 @@ px4_msgs__msg__Rpm__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x31, 0xd1, 0xaf, 0x67, 0xe5, 0xe0, 0x95, 0x0a,
-      0x9c, 0xfe, 0xdb, 0x1d, 0x95, 0xf5, 0x85, 0x46,
-      0xae, 0x6c, 0x75, 0x60, 0x49, 0xf1, 0xfd, 0x10,
-      0x8e, 0xd4, 0xfd, 0x33, 0xde, 0x4f, 0x35, 0x06,
+      0x76, 0x43, 0x50, 0xb0, 0xff, 0xfd, 0x10, 0x81,
+      0xf7, 0x61, 0xc9, 0x7a, 0x29, 0x5c, 0x95, 0x4b,
+      0xa1, 0x3d, 0xb9, 0xc6, 0xeb, 0xa2, 0x0a, 0x01,
+      0x31, 0x27, 0xb7, 0x61, 0x06, 0x27, 0xb4, 0xe5,
     }};
   return &hash;
 }
@@ -32,8 +32,8 @@ static char px4_msgs__msg__Rpm__TYPE_NAME[] = "px4_msgs/msg/Rpm";
 
 // Define type names, field names, and default values
 static char px4_msgs__msg__Rpm__FIELD_NAME__timestamp[] = "timestamp";
-static char px4_msgs__msg__Rpm__FIELD_NAME__rpm_estimate[] = "rpm_estimate";
-static char px4_msgs__msg__Rpm__FIELD_NAME__rpm_raw[] = "rpm_raw";
+static char px4_msgs__msg__Rpm__FIELD_NAME__indicated_frequency_rpm[] = "indicated_frequency_rpm";
+static char px4_msgs__msg__Rpm__FIELD_NAME__estimated_accurancy_rpm[] = "estimated_accurancy_rpm";
 
 static rosidl_runtime_c__type_description__Field px4_msgs__msg__Rpm__FIELDS[] = {
   {
@@ -47,7 +47,7 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__Rpm__FIELDS[] = 
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__Rpm__FIELD_NAME__rpm_estimate, 12, 12},
+    {px4_msgs__msg__Rpm__FIELD_NAME__indicated_frequency_rpm, 23, 23},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
       0,
@@ -57,7 +57,7 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__Rpm__FIELDS[] = 
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__Rpm__FIELD_NAME__rpm_raw, 7, 7},
+    {px4_msgs__msg__Rpm__FIELD_NAME__estimated_accurancy_rpm, 23, 23},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
       0,
@@ -88,11 +88,10 @@ px4_msgs__msg__Rpm__get_type_description(
 }
 
 static char toplevel_type_raw_source[] =
-  "uint64 timestamp # time since system start (microseconds)\n"
+  "uint64 timestamp                      # time since system start (microseconds)\n"
   "\n"
-  "# rpm values of 0.0 mean within a timeout there is no movement measured\n"
-  "float32 rpm_estimate # filtered revolutions per minute\n"
-  "float32 rpm_raw";
+  "float32 indicated_frequency_rpm       # indicated rotor Frequency in Revolution per minute\n"
+  "float32 estimated_accurancy_rpm       # estimated accuracy in Revolution per minute";
 
 static char msg_encoding[] = "msg";
 
@@ -106,7 +105,7 @@ px4_msgs__msg__Rpm__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__Rpm__TYPE_NAME, 16, 16},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 202, 202},
+    {toplevel_type_raw_source, 255, 255},
   };
   return &source;
 }

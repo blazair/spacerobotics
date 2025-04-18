@@ -68,6 +68,7 @@ class Airspeed(metaclass=Metaclass_Airspeed):
         '_timestamp_sample',
         '_indicated_airspeed_m_s',
         '_true_airspeed_m_s',
+        '_air_temperature_celsius',
         '_confidence',
         '_check_fields',
     ]
@@ -77,6 +78,7 @@ class Airspeed(metaclass=Metaclass_Airspeed):
         'timestamp_sample': 'uint64',
         'indicated_airspeed_m_s': 'float',
         'true_airspeed_m_s': 'float',
+        'air_temperature_celsius': 'float',
         'confidence': 'float',
     }
 
@@ -85,6 +87,7 @@ class Airspeed(metaclass=Metaclass_Airspeed):
     SLOT_TYPES = (
         rosidl_parser.definition.BasicType('uint64'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint64'),  # noqa: E501
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
@@ -103,6 +106,7 @@ class Airspeed(metaclass=Metaclass_Airspeed):
         self.timestamp_sample = kwargs.get('timestamp_sample', int())
         self.indicated_airspeed_m_s = kwargs.get('indicated_airspeed_m_s', float())
         self.true_airspeed_m_s = kwargs.get('true_airspeed_m_s', float())
+        self.air_temperature_celsius = kwargs.get('air_temperature_celsius', float())
         self.confidence = kwargs.get('confidence', float())
 
     def __repr__(self):
@@ -142,6 +146,8 @@ class Airspeed(metaclass=Metaclass_Airspeed):
         if self.indicated_airspeed_m_s != other.indicated_airspeed_m_s:
             return False
         if self.true_airspeed_m_s != other.true_airspeed_m_s:
+            return False
+        if self.air_temperature_celsius != other.air_temperature_celsius:
             return False
         if self.confidence != other.confidence:
             return False
@@ -211,6 +217,21 @@ class Airspeed(metaclass=Metaclass_Airspeed):
             assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
                 "The 'true_airspeed_m_s' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
         self._true_airspeed_m_s = value
+
+    @builtins.property
+    def air_temperature_celsius(self):
+        """Message field 'air_temperature_celsius'."""
+        return self._air_temperature_celsius
+
+    @air_temperature_celsius.setter
+    def air_temperature_celsius(self, value):
+        if self._check_fields:
+            assert \
+                isinstance(value, float), \
+                "The 'air_temperature_celsius' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'air_temperature_celsius' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._air_temperature_celsius = value
 
     @builtins.property
     def confidence(self):

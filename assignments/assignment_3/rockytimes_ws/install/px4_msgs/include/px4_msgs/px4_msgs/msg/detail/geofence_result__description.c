@@ -11,10 +11,10 @@ px4_msgs__msg__GeofenceResult__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0xa9, 0xa9, 0x3c, 0x90, 0x30, 0xc2, 0x2b, 0xc6,
-      0x9c, 0xff, 0xa2, 0xa1, 0xe0, 0x3f, 0x81, 0x7f,
-      0x7f, 0xf1, 0x5c, 0xd1, 0x19, 0xdb, 0x34, 0x1f,
-      0x86, 0xad, 0xbd, 0x38, 0xd1, 0x69, 0x22, 0x69,
+      0xd2, 0xb3, 0x0b, 0x95, 0x32, 0x9e, 0x07, 0x11,
+      0xbf, 0xa3, 0x19, 0xcd, 0x8f, 0x21, 0x2b, 0xe3,
+      0x62, 0xc7, 0x0e, 0x3a, 0xfc, 0xa9, 0x13, 0x9f,
+      0x54, 0x02, 0xe4, 0xb6, 0xf2, 0x4a, 0x7c, 0xb7,
     }};
   return &hash;
 }
@@ -32,10 +32,10 @@ static char px4_msgs__msg__GeofenceResult__TYPE_NAME[] = "px4_msgs/msg/GeofenceR
 
 // Define type names, field names, and default values
 static char px4_msgs__msg__GeofenceResult__FIELD_NAME__timestamp[] = "timestamp";
-static char px4_msgs__msg__GeofenceResult__FIELD_NAME__geofence_max_dist_triggered[] = "geofence_max_dist_triggered";
-static char px4_msgs__msg__GeofenceResult__FIELD_NAME__geofence_max_alt_triggered[] = "geofence_max_alt_triggered";
-static char px4_msgs__msg__GeofenceResult__FIELD_NAME__geofence_custom_fence_triggered[] = "geofence_custom_fence_triggered";
-static char px4_msgs__msg__GeofenceResult__FIELD_NAME__geofence_action[] = "geofence_action";
+static char px4_msgs__msg__GeofenceResult__FIELD_NAME__geofence_violation_reason[] = "geofence_violation_reason";
+static char px4_msgs__msg__GeofenceResult__FIELD_NAME__primary_geofence_breached[] = "primary_geofence_breached";
+static char px4_msgs__msg__GeofenceResult__FIELD_NAME__primary_geofence_action[] = "primary_geofence_action";
+static char px4_msgs__msg__GeofenceResult__FIELD_NAME__home_required[] = "home_required";
 
 static rosidl_runtime_c__type_description__Field px4_msgs__msg__GeofenceResult__FIELDS[] = {
   {
@@ -49,39 +49,39 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__GeofenceResult__
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__GeofenceResult__FIELD_NAME__geofence_max_dist_triggered, 27, 27},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__GeofenceResult__FIELD_NAME__geofence_max_alt_triggered, 26, 26},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__GeofenceResult__FIELD_NAME__geofence_custom_fence_triggered, 31, 31},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__GeofenceResult__FIELD_NAME__geofence_action, 15, 15},
+    {px4_msgs__msg__GeofenceResult__FIELD_NAME__geofence_violation_reason, 25, 25},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT8,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {px4_msgs__msg__GeofenceResult__FIELD_NAME__primary_geofence_breached, 25, 25},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {px4_msgs__msg__GeofenceResult__FIELD_NAME__primary_geofence_action, 23, 23},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT8,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {px4_msgs__msg__GeofenceResult__FIELD_NAME__home_required, 13, 13},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
       0,
       0,
       {NULL, 0, 0},
@@ -118,11 +118,12 @@ static char toplevel_type_raw_source[] =
   "uint8 GF_ACTION_TERMINATE = 4           # flight termination\n"
   "uint8 GF_ACTION_LAND = 5                # switch to AUTO|LAND\n"
   "\n"
-  "bool geofence_max_dist_triggered\\t# true the check for max distance from Home is triggered\n"
-  "bool geofence_max_alt_triggered\\t\\t# true the check for max altitude above Home is triggered\n"
-  "bool geofence_custom_fence_triggered\\t# true the check for custom inclusion/exclusion geofence(s) is triggered\n"
+  "uint8 geofence_violation_reason         # one of geofence_violation_reason_t::*\n"
   "\n"
-  "uint8 geofence_action           \\t# action to take when the geofence is breached";
+  "bool primary_geofence_breached          # true if the primary geofence is breached\n"
+  "uint8 primary_geofence_action           # action to take when the primary geofence is breached\n"
+  "\n"
+  "bool home_required                      # true if the geofence requires a valid home position";
 
 static char msg_encoding[] = "msg";
 
@@ -136,7 +137,7 @@ px4_msgs__msg__GeofenceResult__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__GeofenceResult__TYPE_NAME, 27, 27},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 843, 843},
+    {toplevel_type_raw_source, 825, 825},
   };
   return &source;
 }

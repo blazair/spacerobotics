@@ -11,10 +11,10 @@ px4_msgs__msg__EstimatorStates__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x91, 0x45, 0x36, 0x4b, 0xd4, 0xfd, 0x54, 0xa8,
-      0xf9, 0x15, 0xf3, 0x04, 0x63, 0x53, 0xf0, 0x3b,
-      0x79, 0xc5, 0x9d, 0xa1, 0x9f, 0xef, 0x13, 0x9b,
-      0x7a, 0x5e, 0xd5, 0x15, 0xcb, 0x9e, 0xab, 0x02,
+      0x84, 0x46, 0x83, 0x89, 0xaf, 0x89, 0x10, 0x29,
+      0xbc, 0x68, 0x5b, 0x9b, 0x6a, 0x1a, 0x10, 0xbf,
+      0x33, 0xc0, 0xbd, 0x19, 0x18, 0xa0, 0x7c, 0x11,
+      0x64, 0xca, 0x0d, 0xb2, 0xda, 0x0e, 0x37, 0xe8,
     }};
   return &hash;
 }
@@ -62,7 +62,7 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__EstimatorStates_
     {px4_msgs__msg__EstimatorStates__FIELD_NAME__states, 6, 6},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT_ARRAY,
-      25,
+      24,
       0,
       {NULL, 0, 0},
     },
@@ -113,7 +113,7 @@ static char toplevel_type_raw_source[] =
   "uint64 timestamp\\t\\t# time since system start (microseconds)\n"
   "uint64 timestamp_sample         # the timestamp of the raw data (microseconds)\n"
   "\n"
-  "float32[25] states\\t\\t# Internal filter states\n"
+  "float32[24] states\\t\\t# Internal filter states\n"
   "uint8 n_states\\t\\t# Number of states effectively used\n"
   "\n"
   "float32[24] covariances\\t# Diagonal Elements of Covariance Matrix";

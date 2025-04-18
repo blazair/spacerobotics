@@ -153,7 +153,7 @@ get_serialized_size(
 
   // Member: function
   {
-    size_t array_size = 29;
+    size_t array_size = 28;
     size_t item_size = sizeof(ros_message.function[0]);
     current_alignment += array_size * item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
@@ -232,7 +232,7 @@ max_serialized_size_RcChannels(
   }
   // Member: function
   {
-    size_t array_size = 29;
+    size_t array_size = 28;
     last_member_size = array_size * sizeof(uint8_t);
     current_alignment += array_size * sizeof(uint8_t);
   }
@@ -353,7 +353,7 @@ get_serialized_size_key(
 
   // Member: function
   {
-    size_t array_size = 29;
+    size_t array_size = 28;
     size_t item_size = sizeof(ros_message.function[0]);
     current_alignment += array_size * item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
@@ -435,7 +435,7 @@ max_serialized_size_key_RcChannels(
 
   // Member: function
   {
-    size_t array_size = 29;
+    size_t array_size = 28;
     last_member_size = array_size * sizeof(uint8_t);
     current_alignment += array_size * sizeof(uint8_t);
   }

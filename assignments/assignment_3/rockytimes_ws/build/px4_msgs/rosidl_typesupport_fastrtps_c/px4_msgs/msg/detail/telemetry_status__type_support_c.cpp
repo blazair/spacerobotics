@@ -208,6 +208,11 @@ bool cdr_serialize_px4_msgs__msg__TelemetryStatus(
     cdr << (ros_message->heartbeat_component_osd ? true : false);
   }
 
+  // Field name: heartbeat_component_obstacle_avoidance
+  {
+    cdr << (ros_message->heartbeat_component_obstacle_avoidance ? true : false);
+  }
+
   // Field name: heartbeat_component_vio
   {
     cdr << (ros_message->heartbeat_component_vio ? true : false);
@@ -226,6 +231,11 @@ bool cdr_serialize_px4_msgs__msg__TelemetryStatus(
   // Field name: heartbeat_component_uart_bridge
   {
     cdr << (ros_message->heartbeat_component_uart_bridge ? true : false);
+  }
+
+  // Field name: avoidance_system_healthy
+  {
+    cdr << (ros_message->avoidance_system_healthy ? true : false);
   }
 
   // Field name: open_drone_id_system_healthy
@@ -436,6 +446,13 @@ bool cdr_deserialize_px4_msgs__msg__TelemetryStatus(
     ros_message->heartbeat_component_osd = tmp ? true : false;
   }
 
+  // Field name: heartbeat_component_obstacle_avoidance
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message->heartbeat_component_obstacle_avoidance = tmp ? true : false;
+  }
+
   // Field name: heartbeat_component_vio
   {
     uint8_t tmp;
@@ -462,6 +479,13 @@ bool cdr_deserialize_px4_msgs__msg__TelemetryStatus(
     uint8_t tmp;
     cdr >> tmp;
     ros_message->heartbeat_component_uart_bridge = tmp ? true : false;
+  }
+
+  // Field name: avoidance_system_healthy
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message->avoidance_system_healthy = tmp ? true : false;
   }
 
   // Field name: open_drone_id_system_healthy
@@ -720,6 +744,13 @@ size_t get_serialized_size_px4_msgs__msg__TelemetryStatus(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
+  // Field name: heartbeat_component_obstacle_avoidance
+  {
+    size_t item_size = sizeof(ros_message->heartbeat_component_obstacle_avoidance);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
   // Field name: heartbeat_component_vio
   {
     size_t item_size = sizeof(ros_message->heartbeat_component_vio);
@@ -744,6 +775,13 @@ size_t get_serialized_size_px4_msgs__msg__TelemetryStatus(
   // Field name: heartbeat_component_uart_bridge
   {
     size_t item_size = sizeof(ros_message->heartbeat_component_uart_bridge);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: avoidance_system_healthy
+  {
+    size_t item_size = sizeof(ros_message->avoidance_system_healthy);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -1022,6 +1060,13 @@ size_t max_serialized_size_px4_msgs__msg__TelemetryStatus(
     current_alignment += array_size * sizeof(uint8_t);
   }
 
+  // Field name: heartbeat_component_obstacle_avoidance
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
   // Field name: heartbeat_component_vio
   {
     size_t array_size = 1;
@@ -1044,6 +1089,13 @@ size_t max_serialized_size_px4_msgs__msg__TelemetryStatus(
   }
 
   // Field name: heartbeat_component_uart_bridge
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Field name: avoidance_system_healthy
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint8_t);
@@ -1245,6 +1297,11 @@ bool cdr_serialize_key_px4_msgs__msg__TelemetryStatus(
     cdr << (ros_message->heartbeat_component_osd ? true : false);
   }
 
+  // Field name: heartbeat_component_obstacle_avoidance
+  {
+    cdr << (ros_message->heartbeat_component_obstacle_avoidance ? true : false);
+  }
+
   // Field name: heartbeat_component_vio
   {
     cdr << (ros_message->heartbeat_component_vio ? true : false);
@@ -1263,6 +1320,11 @@ bool cdr_serialize_key_px4_msgs__msg__TelemetryStatus(
   // Field name: heartbeat_component_uart_bridge
   {
     cdr << (ros_message->heartbeat_component_uart_bridge ? true : false);
+  }
+
+  // Field name: avoidance_system_healthy
+  {
+    cdr << (ros_message->avoidance_system_healthy ? true : false);
   }
 
   // Field name: open_drone_id_system_healthy
@@ -1517,6 +1579,13 @@ size_t get_serialized_size_key_px4_msgs__msg__TelemetryStatus(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
+  // Field name: heartbeat_component_obstacle_avoidance
+  {
+    size_t item_size = sizeof(ros_message->heartbeat_component_obstacle_avoidance);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
   // Field name: heartbeat_component_vio
   {
     size_t item_size = sizeof(ros_message->heartbeat_component_vio);
@@ -1541,6 +1610,13 @@ size_t get_serialized_size_key_px4_msgs__msg__TelemetryStatus(
   // Field name: heartbeat_component_uart_bridge
   {
     size_t item_size = sizeof(ros_message->heartbeat_component_uart_bridge);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: avoidance_system_healthy
+  {
+    size_t item_size = sizeof(ros_message->avoidance_system_healthy);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -1817,6 +1893,13 @@ size_t max_serialized_size_key_px4_msgs__msg__TelemetryStatus(
     current_alignment += array_size * sizeof(uint8_t);
   }
 
+  // Field name: heartbeat_component_obstacle_avoidance
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
   // Field name: heartbeat_component_vio
   {
     size_t array_size = 1;
@@ -1839,6 +1922,13 @@ size_t max_serialized_size_key_px4_msgs__msg__TelemetryStatus(
   }
 
   // Field name: heartbeat_component_uart_bridge
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Field name: avoidance_system_healthy
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint8_t);

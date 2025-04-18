@@ -27,7 +27,7 @@
           "name": "states",
           "type": {
             "type_id": 58,
-            "capacity": 25,
+            "capacity": 24,
             "string_capacity": 0,
             "nested_type_name": ""
           },
@@ -60,7 +60,7 @@
   "type_hashes": [
     {
       "type_name": "px4_msgs/msg/EstimatorStates",
-      "hash_string": "RIHS01_9145364bd4fd54a8f915f3046353f03b79c59da19fef139b7a5ed515cb9eab02"
+      "hash_string": "RIHS01_84468389af891029bc685b9b6a1a10bf33c0bd1918a07c1164ca0db2da0e37e8"
     }
   ]
 }

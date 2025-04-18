@@ -95,13 +95,13 @@ bool px4_msgs__msg__estimator_status_flags__convert_from_py(PyObject * _pymsg, v
     ros_message->cs_yaw_align = (Py_True == field);
     Py_DECREF(field);
   }
-  {  // cs_gnss_pos
-    PyObject * field = PyObject_GetAttrString(_pymsg, "cs_gnss_pos");
+  {  // cs_gps
+    PyObject * field = PyObject_GetAttrString(_pymsg, "cs_gps");
     if (!field) {
       return false;
     }
     assert(PyBool_Check(field));
-    ros_message->cs_gnss_pos = (Py_True == field);
+    ros_message->cs_gps = (Py_True == field);
     Py_DECREF(field);
   }
   {  // cs_opt_flow
@@ -275,13 +275,13 @@ bool px4_msgs__msg__estimator_status_flags__convert_from_py(PyObject * _pymsg, v
     ros_message->cs_rng_stuck = (Py_True == field);
     Py_DECREF(field);
   }
-  {  // cs_gnss_yaw
-    PyObject * field = PyObject_GetAttrString(_pymsg, "cs_gnss_yaw");
+  {  // cs_gps_yaw
+    PyObject * field = PyObject_GetAttrString(_pymsg, "cs_gps_yaw");
     if (!field) {
       return false;
     }
     assert(PyBool_Check(field));
-    ros_message->cs_gnss_yaw = (Py_True == field);
+    ros_message->cs_gps_yaw = (Py_True == field);
     Py_DECREF(field);
   }
   {  // cs_mag_aligned_in_flight
@@ -320,13 +320,13 @@ bool px4_msgs__msg__estimator_status_flags__convert_from_py(PyObject * _pymsg, v
     ros_message->cs_vehicle_at_rest = (Py_True == field);
     Py_DECREF(field);
   }
-  {  // cs_gnss_yaw_fault
-    PyObject * field = PyObject_GetAttrString(_pymsg, "cs_gnss_yaw_fault");
+  {  // cs_gps_yaw_fault
+    PyObject * field = PyObject_GetAttrString(_pymsg, "cs_gps_yaw_fault");
     if (!field) {
       return false;
     }
     assert(PyBool_Check(field));
-    ros_message->cs_gnss_yaw_fault = (Py_True == field);
+    ros_message->cs_gps_yaw_fault = (Py_True == field);
     Py_DECREF(field);
   }
   {  // cs_rng_fault
@@ -390,96 +390,6 @@ bool px4_msgs__msg__estimator_status_flags__convert_from_py(PyObject * _pymsg, v
     }
     assert(PyBool_Check(field));
     ros_message->cs_gravity_vector = (Py_True == field);
-    Py_DECREF(field);
-  }
-  {  // cs_mag
-    PyObject * field = PyObject_GetAttrString(_pymsg, "cs_mag");
-    if (!field) {
-      return false;
-    }
-    assert(PyBool_Check(field));
-    ros_message->cs_mag = (Py_True == field);
-    Py_DECREF(field);
-  }
-  {  // cs_ev_yaw_fault
-    PyObject * field = PyObject_GetAttrString(_pymsg, "cs_ev_yaw_fault");
-    if (!field) {
-      return false;
-    }
-    assert(PyBool_Check(field));
-    ros_message->cs_ev_yaw_fault = (Py_True == field);
-    Py_DECREF(field);
-  }
-  {  // cs_mag_heading_consistent
-    PyObject * field = PyObject_GetAttrString(_pymsg, "cs_mag_heading_consistent");
-    if (!field) {
-      return false;
-    }
-    assert(PyBool_Check(field));
-    ros_message->cs_mag_heading_consistent = (Py_True == field);
-    Py_DECREF(field);
-  }
-  {  // cs_aux_gpos
-    PyObject * field = PyObject_GetAttrString(_pymsg, "cs_aux_gpos");
-    if (!field) {
-      return false;
-    }
-    assert(PyBool_Check(field));
-    ros_message->cs_aux_gpos = (Py_True == field);
-    Py_DECREF(field);
-  }
-  {  // cs_rng_terrain
-    PyObject * field = PyObject_GetAttrString(_pymsg, "cs_rng_terrain");
-    if (!field) {
-      return false;
-    }
-    assert(PyBool_Check(field));
-    ros_message->cs_rng_terrain = (Py_True == field);
-    Py_DECREF(field);
-  }
-  {  // cs_opt_flow_terrain
-    PyObject * field = PyObject_GetAttrString(_pymsg, "cs_opt_flow_terrain");
-    if (!field) {
-      return false;
-    }
-    assert(PyBool_Check(field));
-    ros_message->cs_opt_flow_terrain = (Py_True == field);
-    Py_DECREF(field);
-  }
-  {  // cs_valid_fake_pos
-    PyObject * field = PyObject_GetAttrString(_pymsg, "cs_valid_fake_pos");
-    if (!field) {
-      return false;
-    }
-    assert(PyBool_Check(field));
-    ros_message->cs_valid_fake_pos = (Py_True == field);
-    Py_DECREF(field);
-  }
-  {  // cs_constant_pos
-    PyObject * field = PyObject_GetAttrString(_pymsg, "cs_constant_pos");
-    if (!field) {
-      return false;
-    }
-    assert(PyBool_Check(field));
-    ros_message->cs_constant_pos = (Py_True == field);
-    Py_DECREF(field);
-  }
-  {  // cs_baro_fault
-    PyObject * field = PyObject_GetAttrString(_pymsg, "cs_baro_fault");
-    if (!field) {
-      return false;
-    }
-    assert(PyBool_Check(field));
-    ros_message->cs_baro_fault = (Py_True == field);
-    Py_DECREF(field);
-  }
-  {  // cs_gnss_vel
-    PyObject * field = PyObject_GetAttrString(_pymsg, "cs_gnss_vel");
-    if (!field) {
-      return false;
-    }
-    assert(PyBool_Check(field));
-    ros_message->cs_gnss_vel = (Py_True == field);
     Py_DECREF(field);
   }
   {  // fault_status_changes
@@ -570,6 +480,69 @@ bool px4_msgs__msg__estimator_status_flags__convert_from_py(PyObject * _pymsg, v
     }
     assert(PyBool_Check(field));
     ros_message->fs_bad_optflow_y = (Py_True == field);
+    Py_DECREF(field);
+  }
+  {  // fs_bad_vel_n
+    PyObject * field = PyObject_GetAttrString(_pymsg, "fs_bad_vel_n");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->fs_bad_vel_n = (Py_True == field);
+    Py_DECREF(field);
+  }
+  {  // fs_bad_vel_e
+    PyObject * field = PyObject_GetAttrString(_pymsg, "fs_bad_vel_e");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->fs_bad_vel_e = (Py_True == field);
+    Py_DECREF(field);
+  }
+  {  // fs_bad_vel_d
+    PyObject * field = PyObject_GetAttrString(_pymsg, "fs_bad_vel_d");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->fs_bad_vel_d = (Py_True == field);
+    Py_DECREF(field);
+  }
+  {  // fs_bad_pos_n
+    PyObject * field = PyObject_GetAttrString(_pymsg, "fs_bad_pos_n");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->fs_bad_pos_n = (Py_True == field);
+    Py_DECREF(field);
+  }
+  {  // fs_bad_pos_e
+    PyObject * field = PyObject_GetAttrString(_pymsg, "fs_bad_pos_e");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->fs_bad_pos_e = (Py_True == field);
+    Py_DECREF(field);
+  }
+  {  // fs_bad_pos_d
+    PyObject * field = PyObject_GetAttrString(_pymsg, "fs_bad_pos_d");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->fs_bad_pos_d = (Py_True == field);
+    Py_DECREF(field);
+  }
+  {  // fs_bad_acc_bias
+    PyObject * field = PyObject_GetAttrString(_pymsg, "fs_bad_acc_bias");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->fs_bad_acc_bias = (Py_True == field);
     Py_DECREF(field);
   }
   {  // fs_bad_acc_vertical
@@ -766,11 +739,11 @@ PyObject * px4_msgs__msg__estimator_status_flags__convert_to_py(void * raw_ros_m
       }
     }
   }
-  {  // cs_gnss_pos
+  {  // cs_gps
     PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->cs_gnss_pos ? 1 : 0);
+    field = PyBool_FromLong(ros_message->cs_gps ? 1 : 0);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "cs_gnss_pos", field);
+      int rc = PyObject_SetAttrString(_pymessage, "cs_gps", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
@@ -986,11 +959,11 @@ PyObject * px4_msgs__msg__estimator_status_flags__convert_to_py(void * raw_ros_m
       }
     }
   }
-  {  // cs_gnss_yaw
+  {  // cs_gps_yaw
     PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->cs_gnss_yaw ? 1 : 0);
+    field = PyBool_FromLong(ros_message->cs_gps_yaw ? 1 : 0);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "cs_gnss_yaw", field);
+      int rc = PyObject_SetAttrString(_pymessage, "cs_gps_yaw", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
@@ -1041,11 +1014,11 @@ PyObject * px4_msgs__msg__estimator_status_flags__convert_to_py(void * raw_ros_m
       }
     }
   }
-  {  // cs_gnss_yaw_fault
+  {  // cs_gps_yaw_fault
     PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->cs_gnss_yaw_fault ? 1 : 0);
+    field = PyBool_FromLong(ros_message->cs_gps_yaw_fault ? 1 : 0);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "cs_gnss_yaw_fault", field);
+      int rc = PyObject_SetAttrString(_pymessage, "cs_gps_yaw_fault", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
@@ -1123,116 +1096,6 @@ PyObject * px4_msgs__msg__estimator_status_flags__convert_to_py(void * raw_ros_m
     field = PyBool_FromLong(ros_message->cs_gravity_vector ? 1 : 0);
     {
       int rc = PyObject_SetAttrString(_pymessage, "cs_gravity_vector", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // cs_mag
-    PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->cs_mag ? 1 : 0);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "cs_mag", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // cs_ev_yaw_fault
-    PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->cs_ev_yaw_fault ? 1 : 0);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "cs_ev_yaw_fault", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // cs_mag_heading_consistent
-    PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->cs_mag_heading_consistent ? 1 : 0);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "cs_mag_heading_consistent", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // cs_aux_gpos
-    PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->cs_aux_gpos ? 1 : 0);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "cs_aux_gpos", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // cs_rng_terrain
-    PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->cs_rng_terrain ? 1 : 0);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "cs_rng_terrain", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // cs_opt_flow_terrain
-    PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->cs_opt_flow_terrain ? 1 : 0);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "cs_opt_flow_terrain", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // cs_valid_fake_pos
-    PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->cs_valid_fake_pos ? 1 : 0);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "cs_valid_fake_pos", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // cs_constant_pos
-    PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->cs_constant_pos ? 1 : 0);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "cs_constant_pos", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // cs_baro_fault
-    PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->cs_baro_fault ? 1 : 0);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "cs_baro_fault", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // cs_gnss_vel
-    PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->cs_gnss_vel ? 1 : 0);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "cs_gnss_vel", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
@@ -1343,6 +1206,83 @@ PyObject * px4_msgs__msg__estimator_status_flags__convert_to_py(void * raw_ros_m
     field = PyBool_FromLong(ros_message->fs_bad_optflow_y ? 1 : 0);
     {
       int rc = PyObject_SetAttrString(_pymessage, "fs_bad_optflow_y", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // fs_bad_vel_n
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->fs_bad_vel_n ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "fs_bad_vel_n", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // fs_bad_vel_e
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->fs_bad_vel_e ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "fs_bad_vel_e", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // fs_bad_vel_d
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->fs_bad_vel_d ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "fs_bad_vel_d", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // fs_bad_pos_n
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->fs_bad_pos_n ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "fs_bad_pos_n", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // fs_bad_pos_e
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->fs_bad_pos_e ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "fs_bad_pos_e", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // fs_bad_pos_d
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->fs_bad_pos_d ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "fs_bad_pos_d", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // fs_bad_acc_bias
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->fs_bad_acc_bias ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "fs_bad_acc_bias", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

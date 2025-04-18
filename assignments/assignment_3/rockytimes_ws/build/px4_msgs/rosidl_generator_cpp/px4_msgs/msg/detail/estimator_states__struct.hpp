@@ -43,7 +43,7 @@ struct EstimatorStates_
     {
       this->timestamp = 0ull;
       this->timestamp_sample = 0ull;
-      std::fill<typename std::array<float, 25>::iterator, float>(this->states.begin(), this->states.end(), 0.0f);
+      std::fill<typename std::array<float, 24>::iterator, float>(this->states.begin(), this->states.end(), 0.0f);
       this->n_states = 0;
       std::fill<typename std::array<float, 24>::iterator, float>(this->covariances.begin(), this->covariances.end(), 0.0f);
     }
@@ -58,7 +58,7 @@ struct EstimatorStates_
     {
       this->timestamp = 0ull;
       this->timestamp_sample = 0ull;
-      std::fill<typename std::array<float, 25>::iterator, float>(this->states.begin(), this->states.end(), 0.0f);
+      std::fill<typename std::array<float, 24>::iterator, float>(this->states.begin(), this->states.end(), 0.0f);
       this->n_states = 0;
       std::fill<typename std::array<float, 24>::iterator, float>(this->covariances.begin(), this->covariances.end(), 0.0f);
     }
@@ -72,7 +72,7 @@ struct EstimatorStates_
     uint64_t;
   _timestamp_sample_type timestamp_sample;
   using _states_type =
-    std::array<float, 25>;
+    std::array<float, 24>;
   _states_type states;
   using _n_states_type =
     uint8_t;
@@ -95,7 +95,7 @@ struct EstimatorStates_
     return *this;
   }
   Type & set__states(
-    const std::array<float, 25> & _arg)
+    const std::array<float, 24> & _arg)
   {
     this->states = _arg;
     return *this;

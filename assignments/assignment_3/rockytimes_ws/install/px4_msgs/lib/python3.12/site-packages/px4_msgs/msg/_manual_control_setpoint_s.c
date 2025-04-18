@@ -194,15 +194,6 @@ bool px4_msgs__msg__manual_control_setpoint__convert_from_py(PyObject * _pymsg, 
     ros_message->sticks_moving = (Py_True == field);
     Py_DECREF(field);
   }
-  {  // buttons
-    PyObject * field = PyObject_GetAttrString(_pymsg, "buttons");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->buttons = (uint16_t)PyLong_AsUnsignedLong(field);
-    Py_DECREF(field);
-  }
 
   return true;
 }
@@ -395,17 +386,6 @@ PyObject * px4_msgs__msg__manual_control_setpoint__convert_to_py(void * raw_ros_
     field = PyBool_FromLong(ros_message->sticks_moving ? 1 : 0);
     {
       int rc = PyObject_SetAttrString(_pymessage, "sticks_moving", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // buttons
-    PyObject * field = NULL;
-    field = PyLong_FromUnsignedLong(ros_message->buttons);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "buttons", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

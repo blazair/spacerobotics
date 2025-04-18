@@ -5,9 +5,9 @@
 #include <string.h>
 
 #include "px4_msgs/msg/detail/power_button_state__functions.h"
-#include "rosidl_typesupport_interface/macros.h"
-#include "px4_msgs/msg/detail/power_button_state__struct.h"
 #include "px4_msgs/msg/detail/power_button_state__type_support.h"
+#include "px4_msgs/msg/detail/power_button_state__struct.h"
+#include "rosidl_typesupport_interface/macros.h"
 
 #ifdef __cplusplus
 extern "C"

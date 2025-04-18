@@ -11,10 +11,10 @@ px4_msgs__msg__SystemPower__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x0e, 0x21, 0x97, 0x6e, 0x6f, 0x9e, 0x06, 0xe1,
-      0x3e, 0xc0, 0x94, 0x81, 0x98, 0xe0, 0x84, 0xe0,
-      0x5b, 0xa8, 0x77, 0x67, 0xff, 0xaa, 0xf9, 0xb2,
-      0xc3, 0xfd, 0xbc, 0xf2, 0x9b, 0x22, 0x23, 0x52,
+      0xdb, 0x59, 0x6a, 0xed, 0x2f, 0x1d, 0x20, 0x29,
+      0x68, 0x10, 0xce, 0x54, 0x5f, 0xec, 0xeb, 0xc0,
+      0x46, 0xa6, 0x94, 0xb9, 0x6f, 0xf4, 0xab, 0x42,
+      0xf6, 0x5c, 0x0b, 0x25, 0x5d, 0xf2, 0x19, 0xc6,
     }};
   return &hash;
 }
@@ -33,7 +33,6 @@ static char px4_msgs__msg__SystemPower__TYPE_NAME[] = "px4_msgs/msg/SystemPower"
 // Define type names, field names, and default values
 static char px4_msgs__msg__SystemPower__FIELD_NAME__timestamp[] = "timestamp";
 static char px4_msgs__msg__SystemPower__FIELD_NAME__voltage5v_v[] = "voltage5v_v";
-static char px4_msgs__msg__SystemPower__FIELD_NAME__voltage_payload_v[] = "voltage_payload_v";
 static char px4_msgs__msg__SystemPower__FIELD_NAME__sensors3v3[] = "sensors3v3";
 static char px4_msgs__msg__SystemPower__FIELD_NAME__sensors3v3_valid[] = "sensors3v3_valid";
 static char px4_msgs__msg__SystemPower__FIELD_NAME__usb_connected[] = "usb_connected";
@@ -44,7 +43,6 @@ static char px4_msgs__msg__SystemPower__FIELD_NAME__periph_5v_oc[] = "periph_5v_
 static char px4_msgs__msg__SystemPower__FIELD_NAME__hipower_5v_oc[] = "hipower_5v_oc";
 static char px4_msgs__msg__SystemPower__FIELD_NAME__comp_5v_valid[] = "comp_5v_valid";
 static char px4_msgs__msg__SystemPower__FIELD_NAME__can1_gps1_5v_valid[] = "can1_gps1_5v_valid";
-static char px4_msgs__msg__SystemPower__FIELD_NAME__payload_v_valid[] = "payload_v_valid";
 
 static rosidl_runtime_c__type_description__Field px4_msgs__msg__SystemPower__FIELDS[] = {
   {
@@ -59,16 +57,6 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__SystemPower__FIE
   },
   {
     {px4_msgs__msg__SystemPower__FIELD_NAME__voltage5v_v, 11, 11},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__SystemPower__FIELD_NAME__voltage_payload_v, 17, 17},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
       0,
@@ -177,16 +165,6 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__SystemPower__FIE
     },
     {NULL, 0, 0},
   },
-  {
-    {px4_msgs__msg__SystemPower__FIELD_NAME__payload_v_valid, 15, 15},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT8,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
 };
 
 const rosidl_runtime_c__type_description__TypeDescription *
@@ -198,7 +176,7 @@ px4_msgs__msg__SystemPower__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {px4_msgs__msg__SystemPower__TYPE_NAME, 24, 24},
-      {px4_msgs__msg__SystemPower__FIELDS, 14, 14},
+      {px4_msgs__msg__SystemPower__FIELDS, 12, 12},
     },
     {NULL, 0, 0},
   };
@@ -211,7 +189,6 @@ px4_msgs__msg__SystemPower__get_type_description(
 static char toplevel_type_raw_source[] =
   "uint64 timestamp\\t\\t# time since system start (microseconds)\n"
   "float32 voltage5v_v\\t\\t# peripheral 5V rail voltage\n"
-  "float32 voltage_payload_v\\t# payload rail voltage\n"
   "float32[4] sensors3v3\\t\\t# Sensors 3V3 rail voltage\n"
   "uint8 sensors3v3_valid\\t\\t# Sensors 3V3 rail voltage was read (bitfield).\n"
   "uint8 usb_connected\\t\\t# USB is connected when 1\n"
@@ -222,7 +199,6 @@ static char toplevel_type_raw_source[] =
   "uint8 hipower_5v_oc\\t\\t# high power peripheral overcurrent when 1\n"
   "uint8 comp_5v_valid\\t\\t# 5V to companion valid\n"
   "uint8 can1_gps1_5v_valid\\t# 5V for CAN1/GPS1 valid\n"
-  "uint8 payload_v_valid\\t\\t# payload rail voltage is valid\n"
   "\n"
   "uint8 BRICK1_VALID_SHIFTS=0\n"
   "uint8 BRICK1_VALID_MASK=1\n"
@@ -245,7 +221,7 @@ px4_msgs__msg__SystemPower__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__SystemPower__TYPE_NAME, 24, 24},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 955, 955},
+    {toplevel_type_raw_source, 851, 851},
   };
   return &source;
 }

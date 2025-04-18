@@ -76,7 +76,7 @@ void px4_msgs__msg__SystemPower__rosidl_typesupport_introspection_c__assign_func
   *item = *value;
 }
 
-static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__SystemPower__rosidl_typesupport_introspection_c__SystemPower_message_member_array[14] = {
+static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__SystemPower__rosidl_typesupport_introspection_c__SystemPower_message_member_array[12] = {
   {
     "timestamp",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_UINT64,  // type
@@ -105,24 +105,6 @@ static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__SystemPo
     0,  // array size
     false,  // is upper bound
     offsetof(px4_msgs__msg__SystemPower, voltage5v_v),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
-  },
-  {
-    "voltage_payload_v",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(px4_msgs__msg__SystemPower, voltage_payload_v),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -310,31 +292,13 @@ static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__SystemPo
     NULL,  // fetch(index, &value) function pointer
     NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
-  },
-  {
-    "payload_v_valid",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(px4_msgs__msg__SystemPower, payload_v_valid),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
   }
 };
 
 static const rosidl_typesupport_introspection_c__MessageMembers px4_msgs__msg__SystemPower__rosidl_typesupport_introspection_c__SystemPower_message_members = {
   "px4_msgs__msg",  // message namespace
   "SystemPower",  // message name
-  14,  // number of fields
+  12,  // number of fields
   sizeof(px4_msgs__msg__SystemPower),
   false,  // has_any_key_member_
   px4_msgs__msg__SystemPower__rosidl_typesupport_introspection_c__SystemPower_message_member_array,  // message members

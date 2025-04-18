@@ -32,7 +32,6 @@ px4_msgs__msg__NpfgStatus__init(px4_msgs__msg__NpfgStatus * msg)
   // adapted_period
   // p_gain
   // time_const
-  // can_run_factor
   return true;
 }
 
@@ -57,7 +56,6 @@ px4_msgs__msg__NpfgStatus__fini(px4_msgs__msg__NpfgStatus * msg)
   // adapted_period
   // p_gain
   // time_const
-  // can_run_factor
 }
 
 bool
@@ -126,10 +124,6 @@ px4_msgs__msg__NpfgStatus__are_equal(const px4_msgs__msg__NpfgStatus * lhs, cons
   if (lhs->time_const != rhs->time_const) {
     return false;
   }
-  // can_run_factor
-  if (lhs->can_run_factor != rhs->can_run_factor) {
-    return false;
-  }
   return true;
 }
 
@@ -171,8 +165,6 @@ px4_msgs__msg__NpfgStatus__copy(
   output->p_gain = input->p_gain;
   // time_const
   output->time_const = input->time_const;
-  // can_run_factor
-  output->can_run_factor = input->can_run_factor;
   return true;
 }
 

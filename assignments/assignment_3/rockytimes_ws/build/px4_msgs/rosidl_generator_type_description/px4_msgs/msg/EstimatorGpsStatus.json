@@ -134,16 +134,6 @@
           "default_value": ""
         },
         {
-          "name": "check_fail_spoofed_gps",
-          "type": {
-            "type_id": 15,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
           "name": "position_drift_rate_horizontal_m_s",
           "type": {
             "type_id": 10,
@@ -180,7 +170,7 @@
   "type_hashes": [
     {
       "type_name": "px4_msgs/msg/EstimatorGpsStatus",
-      "hash_string": "RIHS01_3ec2715b101574842f9045eb60f612ac52fcab2bc35d19f4405aae18cb729785"
+      "hash_string": "RIHS01_bc8fa240524cbf34237f49c0d51b128e21a9d51f870b981b10405c1c736a428c"
     }
   ]
 }

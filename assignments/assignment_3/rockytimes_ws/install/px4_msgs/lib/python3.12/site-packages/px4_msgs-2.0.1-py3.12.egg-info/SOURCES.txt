@@ -28,6 +28,7 @@ px4_msgs/msg/_camera_trigger.py
 px4_msgs/msg/_can_interface_status.py
 px4_msgs/msg/_cellular_status.py
 px4_msgs/msg/_collision_constraints.py
+px4_msgs/msg/_collision_report.py
 px4_msgs/msg/_config_overrides.py
 px4_msgs/msg/_control_allocator_status.py
 px4_msgs/msg/_cpuload.py
@@ -189,7 +190,9 @@ px4_msgs/msg/_tecs_status.py
 px4_msgs/msg/_telemetry_status.py
 px4_msgs/msg/_tiltrotor_extra_controls.py
 px4_msgs/msg/_timesync_status.py
+px4_msgs/msg/_trajectory_bezier.py
 px4_msgs/msg/_trajectory_setpoint.py
+px4_msgs/msg/_trajectory_waypoint.py
 px4_msgs/msg/_transponder_report.py
 px4_msgs/msg/_tune_control.py
 px4_msgs/msg/_uavcan_parameter_request.py
@@ -222,6 +225,8 @@ px4_msgs/msg/_vehicle_roi.py
 px4_msgs/msg/_vehicle_status.py
 px4_msgs/msg/_vehicle_thrust_setpoint.py
 px4_msgs/msg/_vehicle_torque_setpoint.py
+px4_msgs/msg/_vehicle_trajectory_bezier.py
+px4_msgs/msg/_vehicle_trajectory_waypoint.py
 px4_msgs/msg/_velocity_limits.py
 px4_msgs/msg/_vtol_vehicle_status.py
 px4_msgs/msg/_wheel_encoders.py

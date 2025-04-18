@@ -60,17 +60,14 @@ cdr_serialize(
   // Member: innovation
   cdr << ros_message.innovation;
 
-  // Member: innovation_filtered
-  cdr << ros_message.innovation_filtered;
-
   // Member: innovation_variance
   cdr << ros_message.innovation_variance;
 
   // Member: test_ratio
   cdr << ros_message.test_ratio;
 
-  // Member: test_ratio_filtered
-  cdr << ros_message.test_ratio_filtered;
+  // Member: fusion_enabled
+  cdr << (ros_message.fusion_enabled ? true : false);
 
   // Member: innovation_rejected
   cdr << (ros_message.innovation_rejected ? true : false);
@@ -111,17 +108,18 @@ cdr_deserialize(
   // Member: innovation
   cdr >> ros_message.innovation;
 
-  // Member: innovation_filtered
-  cdr >> ros_message.innovation_filtered;
-
   // Member: innovation_variance
   cdr >> ros_message.innovation_variance;
 
   // Member: test_ratio
   cdr >> ros_message.test_ratio;
 
-  // Member: test_ratio_filtered
-  cdr >> ros_message.test_ratio_filtered;
+  // Member: fusion_enabled
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message.fusion_enabled = tmp ? true : false;
+  }
 
   // Member: innovation_rejected
   {
@@ -210,13 +208,6 @@ get_serialized_size(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Member: innovation_filtered
-  {
-    size_t item_size = sizeof(ros_message.innovation_filtered);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
   // Member: innovation_variance
   {
     size_t item_size = sizeof(ros_message.innovation_variance);
@@ -231,9 +222,9 @@ get_serialized_size(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Member: test_ratio_filtered
+  // Member: fusion_enabled
   {
-    size_t item_size = sizeof(ros_message.test_ratio_filtered);
+    size_t item_size = sizeof(ros_message.fusion_enabled);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -330,13 +321,6 @@ max_serialized_size_EstimatorAidSource1d(
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
-  // Member: innovation_filtered
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
   // Member: innovation_variance
   {
     size_t array_size = 1;
@@ -351,12 +335,11 @@ max_serialized_size_EstimatorAidSource1d(
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
-  // Member: test_ratio_filtered
+  // Member: fusion_enabled
   {
     size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
   }
   // Member: innovation_rejected
   {
@@ -417,17 +400,14 @@ cdr_serialize_key(
   // Member: innovation
   cdr << ros_message.innovation;
 
-  // Member: innovation_filtered
-  cdr << ros_message.innovation_filtered;
-
   // Member: innovation_variance
   cdr << ros_message.innovation_variance;
 
   // Member: test_ratio
   cdr << ros_message.test_ratio;
 
-  // Member: test_ratio_filtered
-  cdr << ros_message.test_ratio_filtered;
+  // Member: fusion_enabled
+  cdr << (ros_message.fusion_enabled ? true : false);
 
   // Member: innovation_rejected
   cdr << (ros_message.innovation_rejected ? true : false);
@@ -507,13 +487,6 @@ get_serialized_size_key(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Member: innovation_filtered
-  {
-    size_t item_size = sizeof(ros_message.innovation_filtered);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
   // Member: innovation_variance
   {
     size_t item_size = sizeof(ros_message.innovation_variance);
@@ -528,9 +501,9 @@ get_serialized_size_key(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Member: test_ratio_filtered
+  // Member: fusion_enabled
   {
-    size_t item_size = sizeof(ros_message.test_ratio_filtered);
+    size_t item_size = sizeof(ros_message.fusion_enabled);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -634,14 +607,6 @@ max_serialized_size_key_EstimatorAidSource1d(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
-  // Member: innovation_filtered
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
   // Member: innovation_variance
   {
     size_t array_size = 1;
@@ -658,12 +623,11 @@ max_serialized_size_key_EstimatorAidSource1d(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
-  // Member: test_ratio_filtered
+  // Member: fusion_enabled
   {
     size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
   }
 
   // Member: innovation_rejected

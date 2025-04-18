@@ -251,7 +251,7 @@ px4_msgs__msg__InputRc__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__InputRc__TYPE_NAME, 20, 20},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 2356, 2356},
+    {toplevel_type_raw_source, 2355, 2355},
   };
   return &source;
 }

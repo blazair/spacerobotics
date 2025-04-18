@@ -154,7 +154,7 @@
           "default_value": ""
         },
         {
-          "name": "gimbal_device_id",
+          "name": "gimbal_device_compid",
           "type": {
             "type_id": 3,
             "capacity": 0,
@@ -170,7 +170,7 @@
   "type_hashes": [
     {
       "type_name": "px4_msgs/msg/GimbalDeviceInformation",
-      "hash_string": "RIHS01_0bded9b648722446d3de4773ea4e9c6305d0f88d47f8357a534b424210bb6f47"
+      "hash_string": "RIHS01_ba5aabe18be3b53bd08f138a5c8134614d874d93a4e971abd7d46d86cce40c20"
     }
   ]
 }

@@ -11,10 +11,10 @@ px4_msgs__msg__VehicleAirData__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x09, 0x96, 0x33, 0xed, 0x65, 0x33, 0xa1, 0x53,
-      0x04, 0xfa, 0x22, 0x99, 0x13, 0xb1, 0x2d, 0x1e,
-      0xe5, 0xe9, 0x8e, 0xde, 0x1f, 0x8d, 0xb7, 0x26,
-      0xbd, 0xd4, 0x19, 0xc4, 0xcc, 0x80, 0xef, 0xc2,
+      0x1f, 0x6f, 0x54, 0x22, 0x44, 0x13, 0xe3, 0x95,
+      0x50, 0x51, 0xd4, 0xcd, 0x68, 0x2f, 0xbe, 0x1c,
+      0xcf, 0x93, 0x94, 0xca, 0x97, 0xae, 0x77, 0x54,
+      0xdf, 0xa4, 0xd5, 0x3c, 0x45, 0x2f, 0x2d, 0xf8,
     }};
   return &hash;
 }
@@ -35,9 +35,8 @@ static char px4_msgs__msg__VehicleAirData__FIELD_NAME__timestamp[] = "timestamp"
 static char px4_msgs__msg__VehicleAirData__FIELD_NAME__timestamp_sample[] = "timestamp_sample";
 static char px4_msgs__msg__VehicleAirData__FIELD_NAME__baro_device_id[] = "baro_device_id";
 static char px4_msgs__msg__VehicleAirData__FIELD_NAME__baro_alt_meter[] = "baro_alt_meter";
+static char px4_msgs__msg__VehicleAirData__FIELD_NAME__baro_temp_celcius[] = "baro_temp_celcius";
 static char px4_msgs__msg__VehicleAirData__FIELD_NAME__baro_pressure_pa[] = "baro_pressure_pa";
-static char px4_msgs__msg__VehicleAirData__FIELD_NAME__ambient_temperature[] = "ambient_temperature";
-static char px4_msgs__msg__VehicleAirData__FIELD_NAME__temperature_source[] = "temperature_source";
 static char px4_msgs__msg__VehicleAirData__FIELD_NAME__rho[] = "rho";
 static char px4_msgs__msg__VehicleAirData__FIELD_NAME__calibration_count[] = "calibration_count";
 
@@ -83,29 +82,19 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__VehicleAirData__
     {NULL, 0, 0},
   },
   {
+    {px4_msgs__msg__VehicleAirData__FIELD_NAME__baro_temp_celcius, 17, 17},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
     {px4_msgs__msg__VehicleAirData__FIELD_NAME__baro_pressure_pa, 16, 16},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__VehicleAirData__FIELD_NAME__ambient_temperature, 19, 19},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__VehicleAirData__FIELD_NAME__temperature_source, 18, 18},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT8,
       0,
       0,
       {NULL, 0, 0},
@@ -143,7 +132,7 @@ px4_msgs__msg__VehicleAirData__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {px4_msgs__msg__VehicleAirData__TYPE_NAME, 27, 27},
-      {px4_msgs__msg__VehicleAirData__FIELDS, 9, 9},
+      {px4_msgs__msg__VehicleAirData__FIELDS, 8, 8},
     },
     {NULL, 0, 0},
   };
@@ -162,9 +151,8 @@ static char toplevel_type_raw_source[] =
   "uint32 baro_device_id       # unique device ID for the selected barometer\n"
   "\n"
   "float32 baro_alt_meter\\t\\t\\t# Altitude above MSL calculated from temperature compensated baro sensor data using an ISA corrected for sea level pressure SENS_BARO_QNH.\n"
+  "float32 baro_temp_celcius\\t\\t# Temperature in degrees Celsius\n"
   "float32 baro_pressure_pa\\t\\t# Absolute pressure in Pascals\n"
-  "float32 ambient_temperature\\t\\t# Abient temperature in degrees Celsius\n"
-  "uint8 temperature_source\\t\\t# Source of temperature data: 0: Default Temperature (15\\xc2\\xb0C), 1: External Baro, 2: Airspeed\n"
   "\n"
   "float32 rho\\t\\t\\t\\t# air density\n"
   "\n"
@@ -182,7 +170,7 @@ px4_msgs__msg__VehicleAirData__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__VehicleAirData__TYPE_NAME, 27, 27},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 773, 773},
+    {toplevel_type_raw_source, 647, 647},
   };
   return &source;
 }

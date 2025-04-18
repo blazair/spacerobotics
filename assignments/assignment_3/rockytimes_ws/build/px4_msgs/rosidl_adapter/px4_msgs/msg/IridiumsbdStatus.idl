@@ -11,8 +11,8 @@ module px4_msgs {
       uint64 timestamp;
 
       @verbatim (language="comment", text=
-        "timestamp of the last \"OK\" received after the \"AT\" command")
-      uint64 last_at_ok_timestamp;
+        "timestamp of the last successful sbd session")
+      uint64 last_heartbeat;
 
       @verbatim (language="comment", text=
         "current size of the tx buffer")

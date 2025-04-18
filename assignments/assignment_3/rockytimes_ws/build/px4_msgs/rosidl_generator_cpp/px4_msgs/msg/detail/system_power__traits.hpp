@@ -42,13 +42,6 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
-  // member: voltage_payload_v
-  {
-    out << "voltage_payload_v: ";
-    rosidl_generator_traits::value_to_yaml(msg.voltage_payload_v, out);
-    out << ", ";
-  }
-
   // member: sensors3v3
   {
     if (msg.sensors3v3.size() == 0) {
@@ -127,13 +120,6 @@ inline void to_flow_style_yaml(
   {
     out << "can1_gps1_5v_valid: ";
     rosidl_generator_traits::value_to_yaml(msg.can1_gps1_5v_valid, out);
-    out << ", ";
-  }
-
-  // member: payload_v_valid
-  {
-    out << "payload_v_valid: ";
-    rosidl_generator_traits::value_to_yaml(msg.payload_v_valid, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -159,16 +145,6 @@ inline void to_block_style_yaml(
     }
     out << "voltage5v_v: ";
     rosidl_generator_traits::value_to_yaml(msg.voltage5v_v, out);
-    out << "\n";
-  }
-
-  // member: voltage_payload_v
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "voltage_payload_v: ";
-    rosidl_generator_traits::value_to_yaml(msg.voltage_payload_v, out);
     out << "\n";
   }
 
@@ -279,16 +255,6 @@ inline void to_block_style_yaml(
     }
     out << "can1_gps1_5v_valid: ";
     rosidl_generator_traits::value_to_yaml(msg.can1_gps1_5v_valid, out);
-    out << "\n";
-  }
-
-  // member: payload_v_valid
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "payload_v_valid: ";
-    rosidl_generator_traits::value_to_yaml(msg.payload_v_valid, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)

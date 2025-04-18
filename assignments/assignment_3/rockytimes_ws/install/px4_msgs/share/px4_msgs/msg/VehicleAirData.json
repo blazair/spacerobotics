@@ -44,29 +44,19 @@
           "default_value": ""
         },
         {
+          "name": "baro_temp_celcius",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
           "name": "baro_pressure_pa",
           "type": {
             "type_id": 10,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "ambient_temperature",
-          "type": {
-            "type_id": 10,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "temperature_source",
-          "type": {
-            "type_id": 3,
             "capacity": 0,
             "string_capacity": 0,
             "nested_type_name": ""
@@ -100,7 +90,7 @@
   "type_hashes": [
     {
       "type_name": "px4_msgs/msg/VehicleAirData",
-      "hash_string": "RIHS01_099633ed6533a15304fa229913b12d1ee5e98ede1f8db726bdd419c4cc80efc2"
+      "hash_string": "RIHS01_1f6f54224413e3955051d4cd682fbe1ccf9394ca97ae7754dfa4d53c452f2df8"
     }
   ]
 }

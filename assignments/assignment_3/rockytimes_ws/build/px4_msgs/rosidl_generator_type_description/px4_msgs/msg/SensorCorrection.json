@@ -14,66 +14,6 @@
           "default_value": ""
         },
         {
-          "name": "accel_device_ids",
-          "type": {
-            "type_id": 55,
-            "capacity": 4,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "accel_temperature",
-          "type": {
-            "type_id": 58,
-            "capacity": 4,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "accel_offset_0",
-          "type": {
-            "type_id": 58,
-            "capacity": 3,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "accel_offset_1",
-          "type": {
-            "type_id": 58,
-            "capacity": 3,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "accel_offset_2",
-          "type": {
-            "type_id": 58,
-            "capacity": 3,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "accel_offset_3",
-          "type": {
-            "type_id": 58,
-            "capacity": 3,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
           "name": "gyro_device_ids",
           "type": {
             "type_id": 55,
@@ -134,7 +74,7 @@
           "default_value": ""
         },
         {
-          "name": "mag_device_ids",
+          "name": "accel_device_ids",
           "type": {
             "type_id": 55,
             "capacity": 4,
@@ -144,7 +84,7 @@
           "default_value": ""
         },
         {
-          "name": "mag_temperature",
+          "name": "accel_temperature",
           "type": {
             "type_id": 58,
             "capacity": 4,
@@ -154,7 +94,7 @@
           "default_value": ""
         },
         {
-          "name": "mag_offset_0",
+          "name": "accel_offset_0",
           "type": {
             "type_id": 58,
             "capacity": 3,
@@ -164,7 +104,7 @@
           "default_value": ""
         },
         {
-          "name": "mag_offset_1",
+          "name": "accel_offset_1",
           "type": {
             "type_id": 58,
             "capacity": 3,
@@ -174,7 +114,7 @@
           "default_value": ""
         },
         {
-          "name": "mag_offset_2",
+          "name": "accel_offset_2",
           "type": {
             "type_id": 58,
             "capacity": 3,
@@ -184,7 +124,7 @@
           "default_value": ""
         },
         {
-          "name": "mag_offset_3",
+          "name": "accel_offset_3",
           "type": {
             "type_id": 58,
             "capacity": 3,
@@ -260,7 +200,7 @@
   "type_hashes": [
     {
       "type_name": "px4_msgs/msg/SensorCorrection",
-      "hash_string": "RIHS01_308196fe5ee9cfc37696208dbb17546476e89159b683f884f991190b78d3f0de"
+      "hash_string": "RIHS01_383bdc56bf27ec9dccc98dcca689f8669ebcc53cedbd313c509976e149d5819e"
     }
   ]
 }

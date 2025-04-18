@@ -154,7 +154,7 @@ static char toplevel_type_raw_source[] =
   "float32 innov_var\\t\\t# innovation variance of the last measurement fusion (m^2)\n"
   "float32 innov_test_ratio\\t# normalized innovation squared test ratio\n"
   "\n"
-  "# TOPICS estimator_baro_bias estimator_gnss_hgt_bias";
+  "# TOPICS estimator_baro_bias estimator_gnss_hgt_bias estimator_rng_hgt_bias";
 
 static char msg_encoding[] = "msg";
 
@@ -168,7 +168,7 @@ px4_msgs__msg__EstimatorBias__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__EstimatorBias__TYPE_NAME, 26, 26},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 638, 638},
+    {toplevel_type_raw_source, 661, 661},
   };
   return &source;
 }

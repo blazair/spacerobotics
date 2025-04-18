@@ -61,7 +61,7 @@ add_library(px4_msgs::px4_msgs__rosidl_generator_cpp INTERFACE IMPORTED)
 set_target_properties(px4_msgs::px4_msgs__rosidl_generator_cpp PROPERTIES
   INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include/px4_msgs"
-  INTERFACE_LINK_LIBRARIES "builtin_interfaces::builtin_interfaces__rosidl_generator_cpp;service_msgs::service_msgs__rosidl_generator_cpp;rosidl_runtime_cpp::rosidl_runtime_cpp"
+  INTERFACE_LINK_LIBRARIES "builtin_interfaces::builtin_interfaces__rosidl_generator_cpp;rosidl_runtime_cpp::rosidl_runtime_cpp"
 )
 
 if(CMAKE_VERSION VERSION_LESS 3.0.0)

@@ -142,7 +142,7 @@ static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__VehicleC
   },
   {
     "target_component",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_UINT16,  // type
+    rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is key

@@ -49,31 +49,31 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
-  // member: latitude_deg
+  // member: lat
   {
-    out << "latitude_deg: ";
-    rosidl_generator_traits::value_to_yaml(msg.latitude_deg, out);
+    out << "lat: ";
+    rosidl_generator_traits::value_to_yaml(msg.lat, out);
     out << ", ";
   }
 
-  // member: longitude_deg
+  // member: lon
   {
-    out << "longitude_deg: ";
-    rosidl_generator_traits::value_to_yaml(msg.longitude_deg, out);
+    out << "lon: ";
+    rosidl_generator_traits::value_to_yaml(msg.lon, out);
     out << ", ";
   }
 
-  // member: altitude_msl_m
+  // member: alt
   {
-    out << "altitude_msl_m: ";
-    rosidl_generator_traits::value_to_yaml(msg.altitude_msl_m, out);
+    out << "alt: ";
+    rosidl_generator_traits::value_to_yaml(msg.alt, out);
     out << ", ";
   }
 
-  // member: altitude_ellipsoid_m
+  // member: alt_ellipsoid
   {
-    out << "altitude_ellipsoid_m: ";
-    rosidl_generator_traits::value_to_yaml(msg.altitude_ellipsoid_m, out);
+    out << "alt_ellipsoid: ";
+    rosidl_generator_traits::value_to_yaml(msg.alt_ellipsoid, out);
     out << ", ";
   }
 
@@ -256,20 +256,6 @@ inline void to_flow_style_yaml(
   {
     out << "selected_rtcm_instance: ";
     rosidl_generator_traits::value_to_yaml(msg.selected_rtcm_instance, out);
-    out << ", ";
-  }
-
-  // member: rtcm_crc_failed
-  {
-    out << "rtcm_crc_failed: ";
-    rosidl_generator_traits::value_to_yaml(msg.rtcm_crc_failed, out);
-    out << ", ";
-  }
-
-  // member: rtcm_msg_used
-  {
-    out << "rtcm_msg_used: ";
-    rosidl_generator_traits::value_to_yaml(msg.rtcm_msg_used, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -308,43 +294,43 @@ inline void to_block_style_yaml(
     out << "\n";
   }
 
-  // member: latitude_deg
+  // member: lat
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "latitude_deg: ";
-    rosidl_generator_traits::value_to_yaml(msg.latitude_deg, out);
+    out << "lat: ";
+    rosidl_generator_traits::value_to_yaml(msg.lat, out);
     out << "\n";
   }
 
-  // member: longitude_deg
+  // member: lon
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "longitude_deg: ";
-    rosidl_generator_traits::value_to_yaml(msg.longitude_deg, out);
+    out << "lon: ";
+    rosidl_generator_traits::value_to_yaml(msg.lon, out);
     out << "\n";
   }
 
-  // member: altitude_msl_m
+  // member: alt
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "altitude_msl_m: ";
-    rosidl_generator_traits::value_to_yaml(msg.altitude_msl_m, out);
+    out << "alt: ";
+    rosidl_generator_traits::value_to_yaml(msg.alt, out);
     out << "\n";
   }
 
-  // member: altitude_ellipsoid_m
+  // member: alt_ellipsoid
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "altitude_ellipsoid_m: ";
-    rosidl_generator_traits::value_to_yaml(msg.altitude_ellipsoid_m, out);
+    out << "alt_ellipsoid: ";
+    rosidl_generator_traits::value_to_yaml(msg.alt_ellipsoid, out);
     out << "\n";
   }
 
@@ -605,26 +591,6 @@ inline void to_block_style_yaml(
     }
     out << "selected_rtcm_instance: ";
     rosidl_generator_traits::value_to_yaml(msg.selected_rtcm_instance, out);
-    out << "\n";
-  }
-
-  // member: rtcm_crc_failed
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "rtcm_crc_failed: ";
-    rosidl_generator_traits::value_to_yaml(msg.rtcm_crc_failed, out);
-    out << "\n";
-  }
-
-  // member: rtcm_msg_used
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "rtcm_msg_used: ";
-    rosidl_generator_traits::value_to_yaml(msg.rtcm_msg_used, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)

@@ -11,10 +11,10 @@ px4_msgs__msg__GimbalDeviceAttitudeStatus__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x3a, 0x57, 0x50, 0x79, 0x51, 0xe5, 0x53, 0x88,
-      0xc7, 0xd4, 0x8b, 0xbc, 0xe2, 0xcc, 0x64, 0x4f,
-      0x82, 0x4a, 0x13, 0x5a, 0x57, 0xb3, 0x8e, 0x2d,
-      0x67, 0x50, 0xb0, 0xe6, 0x31, 0x01, 0x19, 0x7b,
+      0x9c, 0xf5, 0x40, 0x4f, 0x4f, 0x56, 0x0e, 0x34,
+      0x8c, 0x03, 0x8c, 0xd3, 0x32, 0x18, 0x5b, 0xea,
+      0xd0, 0xdf, 0x3b, 0xee, 0x31, 0x1b, 0x5c, 0x8f,
+      0x9b, 0x14, 0x08, 0x10, 0xef, 0xf9, 0x28, 0x61,
     }};
   return &hash;
 }
@@ -40,9 +40,6 @@ static char px4_msgs__msg__GimbalDeviceAttitudeStatus__FIELD_NAME__angular_veloc
 static char px4_msgs__msg__GimbalDeviceAttitudeStatus__FIELD_NAME__angular_velocity_y[] = "angular_velocity_y";
 static char px4_msgs__msg__GimbalDeviceAttitudeStatus__FIELD_NAME__angular_velocity_z[] = "angular_velocity_z";
 static char px4_msgs__msg__GimbalDeviceAttitudeStatus__FIELD_NAME__failure_flags[] = "failure_flags";
-static char px4_msgs__msg__GimbalDeviceAttitudeStatus__FIELD_NAME__delta_yaw[] = "delta_yaw";
-static char px4_msgs__msg__GimbalDeviceAttitudeStatus__FIELD_NAME__delta_yaw_velocity[] = "delta_yaw_velocity";
-static char px4_msgs__msg__GimbalDeviceAttitudeStatus__FIELD_NAME__gimbal_device_id[] = "gimbal_device_id";
 static char px4_msgs__msg__GimbalDeviceAttitudeStatus__FIELD_NAME__received_from_mavlink[] = "received_from_mavlink";
 
 static rosidl_runtime_c__type_description__Field px4_msgs__msg__GimbalDeviceAttitudeStatus__FIELDS[] = {
@@ -137,36 +134,6 @@ static rosidl_runtime_c__type_description__Field px4_msgs__msg__GimbalDeviceAtti
     {NULL, 0, 0},
   },
   {
-    {px4_msgs__msg__GimbalDeviceAttitudeStatus__FIELD_NAME__delta_yaw, 9, 9},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__GimbalDeviceAttitudeStatus__FIELD_NAME__delta_yaw_velocity, 18, 18},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {px4_msgs__msg__GimbalDeviceAttitudeStatus__FIELD_NAME__gimbal_device_id, 16, 16},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT8,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
     {px4_msgs__msg__GimbalDeviceAttitudeStatus__FIELD_NAME__received_from_mavlink, 21, 21},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
@@ -187,7 +154,7 @@ px4_msgs__msg__GimbalDeviceAttitudeStatus__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {px4_msgs__msg__GimbalDeviceAttitudeStatus__TYPE_NAME, 39, 39},
-      {px4_msgs__msg__GimbalDeviceAttitudeStatus__FIELDS, 13, 13},
+      {px4_msgs__msg__GimbalDeviceAttitudeStatus__FIELDS, 10, 10},
     },
     {NULL, 0, 0},
   };
@@ -216,9 +183,6 @@ static char toplevel_type_raw_source[] =
   "float32 angular_velocity_z\n"
   "\n"
   "uint32 failure_flags\n"
-  "float32 delta_yaw\n"
-  "float32 delta_yaw_velocity\n"
-  "uint8 gimbal_device_id\n"
   "\n"
   "bool received_from_mavlink";
 
@@ -234,7 +198,7 @@ px4_msgs__msg__GimbalDeviceAttitudeStatus__get_individual_type_description_sourc
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__GimbalDeviceAttitudeStatus__TYPE_NAME, 39, 39},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 508, 508},
+    {toplevel_type_raw_source, 440, 440},
   };
   return &source;
 }

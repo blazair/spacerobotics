@@ -29,7 +29,6 @@ class Metaclass_ManualControlSetpoint(type):
     _TYPE_SUPPORT = None
 
     __constants = {
-        'MESSAGE_VERSION': 0,
         'SOURCE_UNKNOWN': 0,
         'SOURCE_RC': 1,
         'SOURCE_MAVLINK_0': 2,
@@ -66,7 +65,6 @@ class Metaclass_ManualControlSetpoint(type):
         # the message class under "Data and other attributes defined here:"
         # as well as populate each message instance
         return {
-            'MESSAGE_VERSION': cls.__constants['MESSAGE_VERSION'],
             'SOURCE_UNKNOWN': cls.__constants['SOURCE_UNKNOWN'],
             'SOURCE_RC': cls.__constants['SOURCE_RC'],
             'SOURCE_MAVLINK_0': cls.__constants['SOURCE_MAVLINK_0'],
@@ -76,11 +74,6 @@ class Metaclass_ManualControlSetpoint(type):
             'SOURCE_MAVLINK_4': cls.__constants['SOURCE_MAVLINK_4'],
             'SOURCE_MAVLINK_5': cls.__constants['SOURCE_MAVLINK_5'],
         }
-
-    @property
-    def MESSAGE_VERSION(self):
-        """Message constant 'MESSAGE_VERSION'."""
-        return Metaclass_ManualControlSetpoint.__constants['MESSAGE_VERSION']
 
     @property
     def SOURCE_UNKNOWN(self):
@@ -128,7 +121,6 @@ class ManualControlSetpoint(metaclass=Metaclass_ManualControlSetpoint):
     Message class 'ManualControlSetpoint'.
 
     Constants:
-      MESSAGE_VERSION
       SOURCE_UNKNOWN
       SOURCE_RC
       SOURCE_MAVLINK_0
@@ -156,7 +148,6 @@ class ManualControlSetpoint(metaclass=Metaclass_ManualControlSetpoint):
         '_aux5',
         '_aux6',
         '_sticks_moving',
-        '_buttons',
         '_check_fields',
     ]
 
@@ -177,7 +168,6 @@ class ManualControlSetpoint(metaclass=Metaclass_ManualControlSetpoint):
         'aux5': 'float',
         'aux6': 'float',
         'sticks_moving': 'boolean',
-        'buttons': 'uint16',
     }
 
     # This attribute is used to store an rosidl_parser.definition variable
@@ -199,7 +189,6 @@ class ManualControlSetpoint(metaclass=Metaclass_ManualControlSetpoint):
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
-        rosidl_parser.definition.BasicType('uint16'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -227,7 +216,6 @@ class ManualControlSetpoint(metaclass=Metaclass_ManualControlSetpoint):
         self.aux5 = kwargs.get('aux5', float())
         self.aux6 = kwargs.get('aux6', float())
         self.sticks_moving = kwargs.get('sticks_moving', bool())
-        self.buttons = kwargs.get('buttons', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -290,8 +278,6 @@ class ManualControlSetpoint(metaclass=Metaclass_ManualControlSetpoint):
         if self.aux6 != other.aux6:
             return False
         if self.sticks_moving != other.sticks_moving:
-            return False
-        if self.buttons != other.buttons:
             return False
         return True
 
@@ -535,18 +521,3 @@ class ManualControlSetpoint(metaclass=Metaclass_ManualControlSetpoint):
                 isinstance(value, bool), \
                 "The 'sticks_moving' field must be of type 'bool'"
         self._sticks_moving = value
-
-    @builtins.property
-    def buttons(self):
-        """Message field 'buttons'."""
-        return self._buttons
-
-    @buttons.setter
-    def buttons(self, value):
-        if self._check_fields:
-            assert \
-                isinstance(value, int), \
-                "The 'buttons' field must be of type 'int'"
-            assert value >= 0 and value < 65536, \
-                "The 'buttons' field must be an unsigned integer in [0, 65535]"
-        self._buttons = value

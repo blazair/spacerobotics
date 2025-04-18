@@ -86,6 +86,15 @@ bool px4_msgs__msg__vehicle_air_data__convert_from_py(PyObject * _pymsg, void * 
     ros_message->baro_alt_meter = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
+  {  // baro_temp_celcius
+    PyObject * field = PyObject_GetAttrString(_pymsg, "baro_temp_celcius");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->baro_temp_celcius = (float)PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
   {  // baro_pressure_pa
     PyObject * field = PyObject_GetAttrString(_pymsg, "baro_pressure_pa");
     if (!field) {
@@ -93,24 +102,6 @@ bool px4_msgs__msg__vehicle_air_data__convert_from_py(PyObject * _pymsg, void * 
     }
     assert(PyFloat_Check(field));
     ros_message->baro_pressure_pa = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
-  {  // ambient_temperature
-    PyObject * field = PyObject_GetAttrString(_pymsg, "ambient_temperature");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->ambient_temperature = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
-  {  // temperature_source
-    PyObject * field = PyObject_GetAttrString(_pymsg, "temperature_source");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->temperature_source = (uint8_t)PyLong_AsUnsignedLong(field);
     Py_DECREF(field);
   }
   {  // rho
@@ -197,33 +188,22 @@ PyObject * px4_msgs__msg__vehicle_air_data__convert_to_py(void * raw_ros_message
       }
     }
   }
+  {  // baro_temp_celcius
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->baro_temp_celcius);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "baro_temp_celcius", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
   {  // baro_pressure_pa
     PyObject * field = NULL;
     field = PyFloat_FromDouble(ros_message->baro_pressure_pa);
     {
       int rc = PyObject_SetAttrString(_pymessage, "baro_pressure_pa", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // ambient_temperature
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->ambient_temperature);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "ambient_temperature", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // temperature_source
-    PyObject * field = NULL;
-    field = PyLong_FromUnsignedLong(ros_message->temperature_source);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "temperature_source", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

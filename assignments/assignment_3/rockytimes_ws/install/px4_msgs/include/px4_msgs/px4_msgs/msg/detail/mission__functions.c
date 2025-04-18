@@ -18,16 +18,9 @@ px4_msgs__msg__Mission__init(px4_msgs__msg__Mission * msg)
     return false;
   }
   // timestamp
-  // mission_dataman_id
-  // fence_dataman_id
-  // safepoint_dataman_id
+  // dataman_id
   // count
   // current_seq
-  // land_start_index
-  // land_index
-  // mission_id
-  // geofence_id
-  // safe_points_id
   return true;
 }
 
@@ -38,16 +31,9 @@ px4_msgs__msg__Mission__fini(px4_msgs__msg__Mission * msg)
     return;
   }
   // timestamp
-  // mission_dataman_id
-  // fence_dataman_id
-  // safepoint_dataman_id
+  // dataman_id
   // count
   // current_seq
-  // land_start_index
-  // land_index
-  // mission_id
-  // geofence_id
-  // safe_points_id
 }
 
 bool
@@ -60,16 +46,8 @@ px4_msgs__msg__Mission__are_equal(const px4_msgs__msg__Mission * lhs, const px4_
   if (lhs->timestamp != rhs->timestamp) {
     return false;
   }
-  // mission_dataman_id
-  if (lhs->mission_dataman_id != rhs->mission_dataman_id) {
-    return false;
-  }
-  // fence_dataman_id
-  if (lhs->fence_dataman_id != rhs->fence_dataman_id) {
-    return false;
-  }
-  // safepoint_dataman_id
-  if (lhs->safepoint_dataman_id != rhs->safepoint_dataman_id) {
+  // dataman_id
+  if (lhs->dataman_id != rhs->dataman_id) {
     return false;
   }
   // count
@@ -78,26 +56,6 @@ px4_msgs__msg__Mission__are_equal(const px4_msgs__msg__Mission * lhs, const px4_
   }
   // current_seq
   if (lhs->current_seq != rhs->current_seq) {
-    return false;
-  }
-  // land_start_index
-  if (lhs->land_start_index != rhs->land_start_index) {
-    return false;
-  }
-  // land_index
-  if (lhs->land_index != rhs->land_index) {
-    return false;
-  }
-  // mission_id
-  if (lhs->mission_id != rhs->mission_id) {
-    return false;
-  }
-  // geofence_id
-  if (lhs->geofence_id != rhs->geofence_id) {
-    return false;
-  }
-  // safe_points_id
-  if (lhs->safe_points_id != rhs->safe_points_id) {
     return false;
   }
   return true;
@@ -113,26 +71,12 @@ px4_msgs__msg__Mission__copy(
   }
   // timestamp
   output->timestamp = input->timestamp;
-  // mission_dataman_id
-  output->mission_dataman_id = input->mission_dataman_id;
-  // fence_dataman_id
-  output->fence_dataman_id = input->fence_dataman_id;
-  // safepoint_dataman_id
-  output->safepoint_dataman_id = input->safepoint_dataman_id;
+  // dataman_id
+  output->dataman_id = input->dataman_id;
   // count
   output->count = input->count;
   // current_seq
   output->current_seq = input->current_seq;
-  // land_start_index
-  output->land_start_index = input->land_start_index;
-  // land_index
-  output->land_index = input->land_index;
-  // mission_id
-  output->mission_id = input->mission_id;
-  // geofence_id
-  output->geofence_id = input->geofence_id;
-  // safe_points_id
-  output->safe_points_id = input->safe_points_id;
   return true;
 }
 

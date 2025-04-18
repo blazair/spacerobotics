@@ -19,12 +19,6 @@ extern "C"
 
 // Constants defined in the message
 
-/// Constant 'MESSAGE_VERSION'.
-enum
-{
-  px4_msgs__msg__VehicleGlobalPosition__MESSAGE_VERSION = 0ul
-};
-
 /// Struct defined in msg/VehicleGlobalPosition in the package px4_msgs.
 /**
   * Fused global position in WGS84.
@@ -47,18 +41,12 @@ typedef struct px4_msgs__msg__VehicleGlobalPosition
   float alt;
   /// Altitude above ellipsoid, (meters)
   float alt_ellipsoid;
-  bool lat_lon_valid;
-  bool alt_valid;
   /// Reset delta for altitude
   float delta_alt;
-  /// Reset delta for terrain
-  float delta_terrain;
   /// Counter for reset events on horizontal position coordinates
   uint8_t lat_lon_reset_counter;
   /// Counter for reset events on altitude
   uint8_t alt_reset_counter;
-  /// Counter for reset events on terrain
-  uint8_t terrain_reset_counter;
   /// Standard deviation of horizontal position error, (metres)
   float eph;
   /// Standard deviation of vertical position error, (metres)

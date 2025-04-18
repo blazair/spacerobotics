@@ -22,6 +22,7 @@ import math  # noqa: E402, I100
 # Member 'ev_hpos'
 # Member 'aux_hvel'
 # Member 'flow'
+# Member 'terr_flow'
 # Member 'mag_field'
 # Member 'gravity'
 # Member 'drag'
@@ -88,7 +89,9 @@ class EstimatorInnovations(metaclass=Metaclass_EstimatorInnovations):
         '_rng_vpos',
         '_baro_vpos',
         '_aux_hvel',
+        '_aux_vvel',
         '_flow',
+        '_terr_flow',
         '_heading',
         '_mag_field',
         '_gravity',
@@ -114,7 +117,9 @@ class EstimatorInnovations(metaclass=Metaclass_EstimatorInnovations):
         'rng_vpos': 'float',
         'baro_vpos': 'float',
         'aux_hvel': 'float[2]',
+        'aux_vvel': 'float',
         'flow': 'float[2]',
+        'terr_flow': 'float[2]',
         'heading': 'float',
         'mag_field': 'float[3]',
         'gravity': 'float[3]',
@@ -139,6 +144,8 @@ class EstimatorInnovations(metaclass=Metaclass_EstimatorInnovations):
         rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('float'), 2),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
+        rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('float'), 2),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('float'), 2),  # noqa: E501
         rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('float'), 2),  # noqa: E501
@@ -194,11 +201,17 @@ class EstimatorInnovations(metaclass=Metaclass_EstimatorInnovations):
         else:
             self.aux_hvel = numpy.array(kwargs.get('aux_hvel'), dtype=numpy.float32)
             assert self.aux_hvel.shape == (2, )
+        self.aux_vvel = kwargs.get('aux_vvel', float())
         if 'flow' not in kwargs:
             self.flow = numpy.zeros(2, dtype=numpy.float32)
         else:
             self.flow = numpy.array(kwargs.get('flow'), dtype=numpy.float32)
             assert self.flow.shape == (2, )
+        if 'terr_flow' not in kwargs:
+            self.terr_flow = numpy.zeros(2, dtype=numpy.float32)
+        else:
+            self.terr_flow = numpy.array(kwargs.get('terr_flow'), dtype=numpy.float32)
+            assert self.terr_flow.shape == (2, )
         self.heading = kwargs.get('heading', float())
         if 'mag_field' not in kwargs:
             self.mag_field = numpy.zeros(3, dtype=numpy.float32)
@@ -276,7 +289,11 @@ class EstimatorInnovations(metaclass=Metaclass_EstimatorInnovations):
             return False
         if all(self.aux_hvel != other.aux_hvel):
             return False
+        if self.aux_vvel != other.aux_vvel:
+            return False
         if all(self.flow != other.flow):
+            return False
+        if all(self.terr_flow != other.terr_flow):
             return False
         if self.heading != other.heading:
             return False
@@ -577,6 +594,21 @@ class EstimatorInnovations(metaclass=Metaclass_EstimatorInnovations):
         self._aux_hvel = numpy.array(value, dtype=numpy.float32)
 
     @builtins.property
+    def aux_vvel(self):
+        """Message field 'aux_vvel'."""
+        return self._aux_vvel
+
+    @aux_vvel.setter
+    def aux_vvel(self, value):
+        if self._check_fields:
+            assert \
+                isinstance(value, float), \
+                "The 'aux_vvel' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'aux_vvel' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._aux_vvel = value
+
+    @builtins.property
     def flow(self):
         """Message field 'flow'."""
         return self._flow
@@ -606,6 +638,37 @@ class EstimatorInnovations(metaclass=Metaclass_EstimatorInnovations):
                  all(not (val < -3.402823466e+38 or val > 3.402823466e+38) or math.isinf(val) for val in value)), \
                 "The 'flow' field must be a set or sequence with length 2 and each value of type 'float' and each float in [-340282346600000016151267322115014000640.000000, 340282346600000016151267322115014000640.000000]"
         self._flow = numpy.array(value, dtype=numpy.float32)
+
+    @builtins.property
+    def terr_flow(self):
+        """Message field 'terr_flow'."""
+        return self._terr_flow
+
+    @terr_flow.setter
+    def terr_flow(self, value):
+        if self._check_fields:
+            if isinstance(value, numpy.ndarray):
+                assert value.dtype == numpy.float32, \
+                    "The 'terr_flow' numpy.ndarray() must have the dtype of 'numpy.float32'"
+                assert value.size == 2, \
+                    "The 'terr_flow' numpy.ndarray() must have a size of 2"
+                self._terr_flow = value
+                return
+            from collections.abc import Sequence
+            from collections.abc import Set
+            from collections import UserList
+            from collections import UserString
+            assert \
+                ((isinstance(value, Sequence) or
+                  isinstance(value, Set) or
+                  isinstance(value, UserList)) and
+                 not isinstance(value, str) and
+                 not isinstance(value, UserString) and
+                 len(value) == 2 and
+                 all(isinstance(v, float) for v in value) and
+                 all(not (val < -3.402823466e+38 or val > 3.402823466e+38) or math.isinf(val) for val in value)), \
+                "The 'terr_flow' field must be a set or sequence with length 2 and each value of type 'float' and each float in [-340282346600000016151267322115014000640.000000, 340282346600000016151267322115014000640.000000]"
+        self._terr_flow = numpy.array(value, dtype=numpy.float32)
 
     @builtins.property
     def heading(self):

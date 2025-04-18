@@ -124,16 +124,6 @@
           "default_value": ""
         },
         {
-          "name": "payload_power_switch",
-          "type": {
-            "type_id": 3,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
           "name": "engage_main_motor_switch",
           "type": {
             "type_id": 3,
@@ -160,7 +150,7 @@
   "type_hashes": [
     {
       "type_name": "px4_msgs/msg/ManualControlSwitches",
-      "hash_string": "RIHS01_734a357006b09ec5a484197366c77214d49ea3827d18d6abb57506f78866d721"
+      "hash_string": "RIHS01_e2d4b8e5e77497d2a555cf306ba4996900f95dde1e1b269e4ff5c3985d81f53e"
     }
   ]
 }

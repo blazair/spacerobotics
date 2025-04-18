@@ -94,8 +94,6 @@ static char toplevel_type_raw_source[] =
   "\n"
   "uint8[64] junk\n"
   "\n"
-  "uint8 ORB_QUEUE_LENGTH = 16\n"
-  "\n"
   "# TOPICS orb_test_medium orb_test_medium_multi orb_test_medium_wrap_around orb_test_medium_queue orb_test_medium_queue_poll";
 
 static char msg_encoding[] = "msg";
@@ -110,7 +108,7 @@ px4_msgs__msg__OrbTestMedium__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {px4_msgs__msg__OrbTestMedium__TYPE_NAME, 26, 26},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 240, 240},
+    {toplevel_type_raw_source, 211, 211},
   };
   return &source;
 }

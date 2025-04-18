@@ -44,7 +44,9 @@ struct BatteryStatus_
       this->timestamp = 0ull;
       this->connected = false;
       this->voltage_v = 0.0f;
+      this->voltage_filtered_v = 0.0f;
       this->current_a = 0.0f;
+      this->current_filtered_a = 0.0f;
       this->current_average_a = 0.0f;
       this->discharged_mah = 0.0f;
       this->remaining = 0.0f;
@@ -68,18 +70,17 @@ struct BatteryStatus_
       this->is_powering_off = false;
       this->is_required = false;
       this->faults = 0;
+      this->custom_faults = 0ul;
       this->warning = 0;
+      this->mode = 0;
+      this->average_power = 0.0f;
+      this->available_energy = 0.0f;
       this->full_charge_capacity_wh = 0.0f;
       this->remaining_capacity_wh = 0.0f;
+      this->design_capacity = 0.0f;
+      this->average_time_to_full = 0;
       this->over_discharge_count = 0;
       this->nominal_voltage = 0.0f;
-      this->internal_resistance_estimate = 0.0f;
-      this->ocv_estimate = 0.0f;
-      this->ocv_estimate_filtered = 0.0f;
-      this->volt_based_soc_estimate = 0.0f;
-      this->voltage_prediction = 0.0f;
-      this->prediction_error = 0.0f;
-      this->estimation_covariance_norm = 0.0f;
     }
   }
 
@@ -92,7 +93,9 @@ struct BatteryStatus_
       this->timestamp = 0ull;
       this->connected = false;
       this->voltage_v = 0.0f;
+      this->voltage_filtered_v = 0.0f;
       this->current_a = 0.0f;
+      this->current_filtered_a = 0.0f;
       this->current_average_a = 0.0f;
       this->discharged_mah = 0.0f;
       this->remaining = 0.0f;
@@ -116,18 +119,17 @@ struct BatteryStatus_
       this->is_powering_off = false;
       this->is_required = false;
       this->faults = 0;
+      this->custom_faults = 0ul;
       this->warning = 0;
+      this->mode = 0;
+      this->average_power = 0.0f;
+      this->available_energy = 0.0f;
       this->full_charge_capacity_wh = 0.0f;
       this->remaining_capacity_wh = 0.0f;
+      this->design_capacity = 0.0f;
+      this->average_time_to_full = 0;
       this->over_discharge_count = 0;
       this->nominal_voltage = 0.0f;
-      this->internal_resistance_estimate = 0.0f;
-      this->ocv_estimate = 0.0f;
-      this->ocv_estimate_filtered = 0.0f;
-      this->volt_based_soc_estimate = 0.0f;
-      this->voltage_prediction = 0.0f;
-      this->prediction_error = 0.0f;
-      this->estimation_covariance_norm = 0.0f;
     }
   }
 
@@ -141,9 +143,15 @@ struct BatteryStatus_
   using _voltage_v_type =
     float;
   _voltage_v_type voltage_v;
+  using _voltage_filtered_v_type =
+    float;
+  _voltage_filtered_v_type voltage_filtered_v;
   using _current_a_type =
     float;
   _current_a_type current_a;
+  using _current_filtered_a_type =
+    float;
+  _current_filtered_a_type current_filtered_a;
   using _current_average_a_type =
     float;
   _current_average_a_type current_average_a;
@@ -213,42 +221,39 @@ struct BatteryStatus_
   using _faults_type =
     uint16_t;
   _faults_type faults;
+  using _custom_faults_type =
+    uint32_t;
+  _custom_faults_type custom_faults;
   using _warning_type =
     uint8_t;
   _warning_type warning;
+  using _mode_type =
+    uint8_t;
+  _mode_type mode;
+  using _average_power_type =
+    float;
+  _average_power_type average_power;
+  using _available_energy_type =
+    float;
+  _available_energy_type available_energy;
   using _full_charge_capacity_wh_type =
     float;
   _full_charge_capacity_wh_type full_charge_capacity_wh;
   using _remaining_capacity_wh_type =
     float;
   _remaining_capacity_wh_type remaining_capacity_wh;
+  using _design_capacity_type =
+    float;
+  _design_capacity_type design_capacity;
+  using _average_time_to_full_type =
+    uint16_t;
+  _average_time_to_full_type average_time_to_full;
   using _over_discharge_count_type =
     uint16_t;
   _over_discharge_count_type over_discharge_count;
   using _nominal_voltage_type =
     float;
   _nominal_voltage_type nominal_voltage;
-  using _internal_resistance_estimate_type =
-    float;
-  _internal_resistance_estimate_type internal_resistance_estimate;
-  using _ocv_estimate_type =
-    float;
-  _ocv_estimate_type ocv_estimate;
-  using _ocv_estimate_filtered_type =
-    float;
-  _ocv_estimate_filtered_type ocv_estimate_filtered;
-  using _volt_based_soc_estimate_type =
-    float;
-  _volt_based_soc_estimate_type volt_based_soc_estimate;
-  using _voltage_prediction_type =
-    float;
-  _voltage_prediction_type voltage_prediction;
-  using _prediction_error_type =
-    float;
-  _prediction_error_type prediction_error;
-  using _estimation_covariance_norm_type =
-    float;
-  _estimation_covariance_norm_type estimation_covariance_norm;
 
   // setters for named parameter idiom
   Type & set__timestamp(
@@ -269,10 +274,22 @@ struct BatteryStatus_
     this->voltage_v = _arg;
     return *this;
   }
+  Type & set__voltage_filtered_v(
+    const float & _arg)
+  {
+    this->voltage_filtered_v = _arg;
+    return *this;
+  }
   Type & set__current_a(
     const float & _arg)
   {
     this->current_a = _arg;
+    return *this;
+  }
+  Type & set__current_filtered_a(
+    const float & _arg)
+  {
+    this->current_filtered_a = _arg;
     return *this;
   }
   Type & set__current_average_a(
@@ -413,10 +430,34 @@ struct BatteryStatus_
     this->faults = _arg;
     return *this;
   }
+  Type & set__custom_faults(
+    const uint32_t & _arg)
+  {
+    this->custom_faults = _arg;
+    return *this;
+  }
   Type & set__warning(
     const uint8_t & _arg)
   {
     this->warning = _arg;
+    return *this;
+  }
+  Type & set__mode(
+    const uint8_t & _arg)
+  {
+    this->mode = _arg;
+    return *this;
+  }
+  Type & set__average_power(
+    const float & _arg)
+  {
+    this->average_power = _arg;
+    return *this;
+  }
+  Type & set__available_energy(
+    const float & _arg)
+  {
+    this->available_energy = _arg;
     return *this;
   }
   Type & set__full_charge_capacity_wh(
@@ -431,6 +472,18 @@ struct BatteryStatus_
     this->remaining_capacity_wh = _arg;
     return *this;
   }
+  Type & set__design_capacity(
+    const float & _arg)
+  {
+    this->design_capacity = _arg;
+    return *this;
+  }
+  Type & set__average_time_to_full(
+    const uint16_t & _arg)
+  {
+    this->average_time_to_full = _arg;
+    return *this;
+  }
   Type & set__over_discharge_count(
     const uint16_t & _arg)
   {
@@ -443,96 +496,60 @@ struct BatteryStatus_
     this->nominal_voltage = _arg;
     return *this;
   }
-  Type & set__internal_resistance_estimate(
-    const float & _arg)
-  {
-    this->internal_resistance_estimate = _arg;
-    return *this;
-  }
-  Type & set__ocv_estimate(
-    const float & _arg)
-  {
-    this->ocv_estimate = _arg;
-    return *this;
-  }
-  Type & set__ocv_estimate_filtered(
-    const float & _arg)
-  {
-    this->ocv_estimate_filtered = _arg;
-    return *this;
-  }
-  Type & set__volt_based_soc_estimate(
-    const float & _arg)
-  {
-    this->volt_based_soc_estimate = _arg;
-    return *this;
-  }
-  Type & set__voltage_prediction(
-    const float & _arg)
-  {
-    this->voltage_prediction = _arg;
-    return *this;
-  }
-  Type & set__prediction_error(
-    const float & _arg)
-  {
-    this->prediction_error = _arg;
-    return *this;
-  }
-  Type & set__estimation_covariance_norm(
-    const float & _arg)
-  {
-    this->estimation_covariance_norm = _arg;
-    return *this;
-  }
 
   // constant declarations
-  static constexpr uint32_t MESSAGE_VERSION =
+  static constexpr uint8_t BATTERY_SOURCE_POWER_MODULE =
     0u;
-  static constexpr uint8_t SOURCE_POWER_MODULE =
-    0u;
-  static constexpr uint8_t SOURCE_EXTERNAL =
+  static constexpr uint8_t BATTERY_SOURCE_EXTERNAL =
     1u;
-  static constexpr uint8_t SOURCE_ESCS =
+  static constexpr uint8_t BATTERY_SOURCE_ESCS =
     2u;
-  static constexpr uint8_t WARNING_NONE =
+  static constexpr uint8_t BATTERY_WARNING_NONE =
     0u;
-  static constexpr uint8_t WARNING_LOW =
+  static constexpr uint8_t BATTERY_WARNING_LOW =
     1u;
-  static constexpr uint8_t WARNING_CRITICAL =
+  static constexpr uint8_t BATTERY_WARNING_CRITICAL =
     2u;
-  static constexpr uint8_t WARNING_EMERGENCY =
+  static constexpr uint8_t BATTERY_WARNING_EMERGENCY =
     3u;
-  static constexpr uint8_t WARNING_FAILED =
+  static constexpr uint8_t BATTERY_WARNING_FAILED =
     4u;
-  static constexpr uint8_t STATE_UNHEALTHY =
+  static constexpr uint8_t BATTERY_STATE_UNHEALTHY =
     6u;
-  static constexpr uint8_t STATE_CHARGING =
+  static constexpr uint8_t BATTERY_STATE_CHARGING =
     7u;
-  static constexpr uint8_t FAULT_DEEP_DISCHARGE =
+  static constexpr uint8_t BATTERY_FAULT_DEEP_DISCHARGE =
     0u;
-  static constexpr uint8_t FAULT_SPIKES =
+  static constexpr uint8_t BATTERY_FAULT_SPIKES =
     1u;
-  static constexpr uint8_t FAULT_CELL_FAIL =
+  static constexpr uint8_t BATTERY_FAULT_CELL_FAIL =
     2u;
-  static constexpr uint8_t FAULT_OVER_CURRENT =
+  static constexpr uint8_t BATTERY_FAULT_OVER_CURRENT =
     3u;
-  static constexpr uint8_t FAULT_OVER_TEMPERATURE =
+  static constexpr uint8_t BATTERY_FAULT_OVER_TEMPERATURE =
     4u;
-  static constexpr uint8_t FAULT_UNDER_TEMPERATURE =
+  static constexpr uint8_t BATTERY_FAULT_UNDER_TEMPERATURE =
     5u;
-  static constexpr uint8_t FAULT_INCOMPATIBLE_VOLTAGE =
+  static constexpr uint8_t BATTERY_FAULT_INCOMPATIBLE_VOLTAGE =
     6u;
-  static constexpr uint8_t FAULT_INCOMPATIBLE_FIRMWARE =
+  static constexpr uint8_t BATTERY_FAULT_INCOMPATIBLE_FIRMWARE =
     7u;
-  static constexpr uint8_t FAULT_INCOMPATIBLE_MODEL =
+  static constexpr uint8_t BATTERY_FAULT_INCOMPATIBLE_MODEL =
     8u;
-  static constexpr uint8_t FAULT_HARDWARE_FAILURE =
+  static constexpr uint8_t BATTERY_FAULT_HARDWARE_FAILURE =
     9u;
-  static constexpr uint8_t FAULT_FAILED_TO_ARM =
+  static constexpr uint8_t BATTERY_WARNING_OVER_TEMPERATURE =
     10u;
-  static constexpr uint8_t FAULT_COUNT =
+  static constexpr uint8_t BATTERY_FAULT_COUNT =
     11u;
+  static constexpr uint8_t BATTERY_MODE_UNKNOWN =
+    0u;
+  static constexpr uint8_t BATTERY_MODE_AUTO_DISCHARGING =
+    1u;
+  static constexpr uint8_t BATTERY_MODE_HOT_SWAP =
+    2u;
+  static constexpr uint8_t BATTERY_MODE_COUNT =
+    3u;
   static constexpr uint8_t MAX_INSTANCES =
     4u;
 
@@ -585,7 +602,13 @@ struct BatteryStatus_
     if (this->voltage_v != other.voltage_v) {
       return false;
     }
+    if (this->voltage_filtered_v != other.voltage_filtered_v) {
+      return false;
+    }
     if (this->current_a != other.current_a) {
+      return false;
+    }
+    if (this->current_filtered_a != other.current_filtered_a) {
       return false;
     }
     if (this->current_average_a != other.current_average_a) {
@@ -657,7 +680,19 @@ struct BatteryStatus_
     if (this->faults != other.faults) {
       return false;
     }
+    if (this->custom_faults != other.custom_faults) {
+      return false;
+    }
     if (this->warning != other.warning) {
+      return false;
+    }
+    if (this->mode != other.mode) {
+      return false;
+    }
+    if (this->average_power != other.average_power) {
+      return false;
+    }
+    if (this->available_energy != other.available_energy) {
       return false;
     }
     if (this->full_charge_capacity_wh != other.full_charge_capacity_wh) {
@@ -666,31 +701,16 @@ struct BatteryStatus_
     if (this->remaining_capacity_wh != other.remaining_capacity_wh) {
       return false;
     }
+    if (this->design_capacity != other.design_capacity) {
+      return false;
+    }
+    if (this->average_time_to_full != other.average_time_to_full) {
+      return false;
+    }
     if (this->over_discharge_count != other.over_discharge_count) {
       return false;
     }
     if (this->nominal_voltage != other.nominal_voltage) {
-      return false;
-    }
-    if (this->internal_resistance_estimate != other.internal_resistance_estimate) {
-      return false;
-    }
-    if (this->ocv_estimate != other.ocv_estimate) {
-      return false;
-    }
-    if (this->ocv_estimate_filtered != other.ocv_estimate_filtered) {
-      return false;
-    }
-    if (this->volt_based_soc_estimate != other.volt_based_soc_estimate) {
-      return false;
-    }
-    if (this->voltage_prediction != other.voltage_prediction) {
-      return false;
-    }
-    if (this->prediction_error != other.prediction_error) {
-      return false;
-    }
-    if (this->estimation_covariance_norm != other.estimation_covariance_norm) {
       return false;
     }
     return true;
@@ -709,117 +729,132 @@ using BatteryStatus =
 #if __cplusplus < 201703L
 // static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
-constexpr uint32_t BatteryStatus_<ContainerAllocator>::MESSAGE_VERSION;
+constexpr uint8_t BatteryStatus_<ContainerAllocator>::BATTERY_SOURCE_POWER_MODULE;
 #endif  // __cplusplus < 201703L
 #if __cplusplus < 201703L
 // static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
-constexpr uint8_t BatteryStatus_<ContainerAllocator>::SOURCE_POWER_MODULE;
+constexpr uint8_t BatteryStatus_<ContainerAllocator>::BATTERY_SOURCE_EXTERNAL;
 #endif  // __cplusplus < 201703L
 #if __cplusplus < 201703L
 // static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
-constexpr uint8_t BatteryStatus_<ContainerAllocator>::SOURCE_EXTERNAL;
+constexpr uint8_t BatteryStatus_<ContainerAllocator>::BATTERY_SOURCE_ESCS;
 #endif  // __cplusplus < 201703L
 #if __cplusplus < 201703L
 // static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
-constexpr uint8_t BatteryStatus_<ContainerAllocator>::SOURCE_ESCS;
+constexpr uint8_t BatteryStatus_<ContainerAllocator>::BATTERY_WARNING_NONE;
 #endif  // __cplusplus < 201703L
 #if __cplusplus < 201703L
 // static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
-constexpr uint8_t BatteryStatus_<ContainerAllocator>::WARNING_NONE;
+constexpr uint8_t BatteryStatus_<ContainerAllocator>::BATTERY_WARNING_LOW;
 #endif  // __cplusplus < 201703L
 #if __cplusplus < 201703L
 // static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
-constexpr uint8_t BatteryStatus_<ContainerAllocator>::WARNING_LOW;
+constexpr uint8_t BatteryStatus_<ContainerAllocator>::BATTERY_WARNING_CRITICAL;
 #endif  // __cplusplus < 201703L
 #if __cplusplus < 201703L
 // static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
-constexpr uint8_t BatteryStatus_<ContainerAllocator>::WARNING_CRITICAL;
+constexpr uint8_t BatteryStatus_<ContainerAllocator>::BATTERY_WARNING_EMERGENCY;
 #endif  // __cplusplus < 201703L
 #if __cplusplus < 201703L
 // static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
-constexpr uint8_t BatteryStatus_<ContainerAllocator>::WARNING_EMERGENCY;
+constexpr uint8_t BatteryStatus_<ContainerAllocator>::BATTERY_WARNING_FAILED;
 #endif  // __cplusplus < 201703L
 #if __cplusplus < 201703L
 // static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
-constexpr uint8_t BatteryStatus_<ContainerAllocator>::WARNING_FAILED;
+constexpr uint8_t BatteryStatus_<ContainerAllocator>::BATTERY_STATE_UNHEALTHY;
 #endif  // __cplusplus < 201703L
 #if __cplusplus < 201703L
 // static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
-constexpr uint8_t BatteryStatus_<ContainerAllocator>::STATE_UNHEALTHY;
+constexpr uint8_t BatteryStatus_<ContainerAllocator>::BATTERY_STATE_CHARGING;
 #endif  // __cplusplus < 201703L
 #if __cplusplus < 201703L
 // static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
-constexpr uint8_t BatteryStatus_<ContainerAllocator>::STATE_CHARGING;
+constexpr uint8_t BatteryStatus_<ContainerAllocator>::BATTERY_FAULT_DEEP_DISCHARGE;
 #endif  // __cplusplus < 201703L
 #if __cplusplus < 201703L
 // static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
-constexpr uint8_t BatteryStatus_<ContainerAllocator>::FAULT_DEEP_DISCHARGE;
+constexpr uint8_t BatteryStatus_<ContainerAllocator>::BATTERY_FAULT_SPIKES;
 #endif  // __cplusplus < 201703L
 #if __cplusplus < 201703L
 // static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
-constexpr uint8_t BatteryStatus_<ContainerAllocator>::FAULT_SPIKES;
+constexpr uint8_t BatteryStatus_<ContainerAllocator>::BATTERY_FAULT_CELL_FAIL;
 #endif  // __cplusplus < 201703L
 #if __cplusplus < 201703L
 // static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
-constexpr uint8_t BatteryStatus_<ContainerAllocator>::FAULT_CELL_FAIL;
+constexpr uint8_t BatteryStatus_<ContainerAllocator>::BATTERY_FAULT_OVER_CURRENT;
 #endif  // __cplusplus < 201703L
 #if __cplusplus < 201703L
 // static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
-constexpr uint8_t BatteryStatus_<ContainerAllocator>::FAULT_OVER_CURRENT;
+constexpr uint8_t BatteryStatus_<ContainerAllocator>::BATTERY_FAULT_OVER_TEMPERATURE;
 #endif  // __cplusplus < 201703L
 #if __cplusplus < 201703L
 // static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
-constexpr uint8_t BatteryStatus_<ContainerAllocator>::FAULT_OVER_TEMPERATURE;
+constexpr uint8_t BatteryStatus_<ContainerAllocator>::BATTERY_FAULT_UNDER_TEMPERATURE;
 #endif  // __cplusplus < 201703L
 #if __cplusplus < 201703L
 // static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
-constexpr uint8_t BatteryStatus_<ContainerAllocator>::FAULT_UNDER_TEMPERATURE;
+constexpr uint8_t BatteryStatus_<ContainerAllocator>::BATTERY_FAULT_INCOMPATIBLE_VOLTAGE;
 #endif  // __cplusplus < 201703L
 #if __cplusplus < 201703L
 // static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
-constexpr uint8_t BatteryStatus_<ContainerAllocator>::FAULT_INCOMPATIBLE_VOLTAGE;
+constexpr uint8_t BatteryStatus_<ContainerAllocator>::BATTERY_FAULT_INCOMPATIBLE_FIRMWARE;
 #endif  // __cplusplus < 201703L
 #if __cplusplus < 201703L
 // static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
-constexpr uint8_t BatteryStatus_<ContainerAllocator>::FAULT_INCOMPATIBLE_FIRMWARE;
+constexpr uint8_t BatteryStatus_<ContainerAllocator>::BATTERY_FAULT_INCOMPATIBLE_MODEL;
 #endif  // __cplusplus < 201703L
 #if __cplusplus < 201703L
 // static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
-constexpr uint8_t BatteryStatus_<ContainerAllocator>::FAULT_INCOMPATIBLE_MODEL;
+constexpr uint8_t BatteryStatus_<ContainerAllocator>::BATTERY_FAULT_HARDWARE_FAILURE;
 #endif  // __cplusplus < 201703L
 #if __cplusplus < 201703L
 // static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
-constexpr uint8_t BatteryStatus_<ContainerAllocator>::FAULT_HARDWARE_FAILURE;
+constexpr uint8_t BatteryStatus_<ContainerAllocator>::BATTERY_WARNING_OVER_TEMPERATURE;
 #endif  // __cplusplus < 201703L
 #if __cplusplus < 201703L
 // static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
-constexpr uint8_t BatteryStatus_<ContainerAllocator>::FAULT_FAILED_TO_ARM;
+constexpr uint8_t BatteryStatus_<ContainerAllocator>::BATTERY_FAULT_COUNT;
 #endif  // __cplusplus < 201703L
 #if __cplusplus < 201703L
 // static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
-constexpr uint8_t BatteryStatus_<ContainerAllocator>::FAULT_COUNT;
+constexpr uint8_t BatteryStatus_<ContainerAllocator>::BATTERY_MODE_UNKNOWN;
+#endif  // __cplusplus < 201703L
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
+template<typename ContainerAllocator>
+constexpr uint8_t BatteryStatus_<ContainerAllocator>::BATTERY_MODE_AUTO_DISCHARGING;
+#endif  // __cplusplus < 201703L
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
+template<typename ContainerAllocator>
+constexpr uint8_t BatteryStatus_<ContainerAllocator>::BATTERY_MODE_HOT_SWAP;
+#endif  // __cplusplus < 201703L
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
+template<typename ContainerAllocator>
+constexpr uint8_t BatteryStatus_<ContainerAllocator>::BATTERY_MODE_COUNT;
 #endif  // __cplusplus < 201703L
 #if __cplusplus < 201703L
 // static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17

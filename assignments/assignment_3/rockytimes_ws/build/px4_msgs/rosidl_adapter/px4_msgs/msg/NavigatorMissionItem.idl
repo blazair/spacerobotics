@@ -11,6 +11,10 @@ module px4_msgs {
       uint64 timestamp;
 
       @verbatim (language="comment", text=
+        "Instance count of this mission. Increments monotonically whenever the mission is modified")
+      uint32 instance_count;
+
+      @verbatim (language="comment", text=
         "Sequence of the current mission item")
       uint16 sequence_current;
 

@@ -4,9 +4,9 @@
 
 #include <string.h>
 
-#include "rosidl_typesupport_interface/macros.h"
 #include "px4_msgs/msg/detail/cpuload__type_support.h"
 #include "px4_msgs/msg/detail/cpuload__functions.h"
+#include "rosidl_typesupport_interface/macros.h"
 #include "px4_msgs/msg/detail/cpuload__struct.h"
 
 #ifdef __cplusplus

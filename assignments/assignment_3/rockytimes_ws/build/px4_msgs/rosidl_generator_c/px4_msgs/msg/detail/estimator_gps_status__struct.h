@@ -47,8 +47,6 @@ typedef struct px4_msgs__msg__EstimatorGpsStatus
   bool check_fail_max_horz_spd_err;
   /// 9 : maximum allowed vertical velocity discrepancy fail
   bool check_fail_max_vert_spd_err;
-  /// 10 : GPS signal is spoofed
-  bool check_fail_spoofed_gps;
   /// Horizontal position rate magnitude (m/s)
   float position_drift_rate_horizontal_m_s;
   /// Vertical position rate magnitude (m/s)

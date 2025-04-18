@@ -280,16 +280,32 @@ private:
   ::px4_msgs::msg::NavigatorMissionItem msg_;
 };
 
+class Init_NavigatorMissionItem_instance_count
+{
+public:
+  explicit Init_NavigatorMissionItem_instance_count(::px4_msgs::msg::NavigatorMissionItem & msg)
+  : msg_(msg)
+  {}
+  Init_NavigatorMissionItem_sequence_current instance_count(::px4_msgs::msg::NavigatorMissionItem::_instance_count_type arg)
+  {
+    msg_.instance_count = std::move(arg);
+    return Init_NavigatorMissionItem_sequence_current(msg_);
+  }
+
+private:
+  ::px4_msgs::msg::NavigatorMissionItem msg_;
+};
+
 class Init_NavigatorMissionItem_timestamp
 {
 public:
   Init_NavigatorMissionItem_timestamp()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_NavigatorMissionItem_sequence_current timestamp(::px4_msgs::msg::NavigatorMissionItem::_timestamp_type arg)
+  Init_NavigatorMissionItem_instance_count timestamp(::px4_msgs::msg::NavigatorMissionItem::_timestamp_type arg)
   {
     msg_.timestamp = std::move(arg);
-    return Init_NavigatorMissionItem_sequence_current(msg_);
+    return Init_NavigatorMissionItem_instance_count(msg_);
   }
 
 private:
