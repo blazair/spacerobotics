@@ -125,14 +125,12 @@ h_m = \frac{h_{px} \cdot Z}{f_y}
 where
 Bounding box and intrinsics:
 ```math
-w_{px}, h_{px} \quad \text{(bounding box pixel dimensions)}\\
+w_{px}, h_{px} \quad \text{(bounding box pixel dimensions)};
 
-Z \quad \text{(median depth)}\\
+Z \quad \text{(median depth)};
 
 f_x, f_y \quad \text{(camera intrinsics)}
 ```
-
-
 ---
 
 ### 2. Circle Flight Path
@@ -156,36 +154,36 @@ One full revolution is complete when:
 #### Error Definition
 
 ```math
-e_x = x_m, \quad
-e_y = y_m, \quad
+e_x = x_m \quad,
+e_y = y_m \quad,
 e_z = Z - Z_{\text{des}}
 ```
 where
 ```math
-(x_m, y_m) \quad \text{marker error in image space} \\
-Z \quad \text{current drone altitude}\\
+(x_m, y_m) \quad \text{marker error in image space},
+Z \quad \text{current drone altitude},
 Z_{\text{des}} = 0 \quad \text{desired ground level}
 ```
 
 #### Control Gains
 
 ```math
-K_{\text{LAT}} = 0.1, \quad K_{\text{ALT}} = 0.05, \quad \Delta t = 0.1\; \text{s}
+K_{\text{LAT}} = 0.1; \quad K_{\text{ALT}} = 0.05; \quad \Delta t = 0.1\; \text{s}
 ```
 
 #### Velocity Commands
 
 ```math
-v_x = -K_{\text{LAT}} \cdot e_x \\
-v_y = -K_{\text{LAT}} \cdot e_y \\
+v_x = -K_{\text{LAT}} \cdot e_x,
+v_y = -K_{\text{LAT}} \cdot e_y,
 v_z = -K_{\text{ALT}} \cdot e_z
 ```
 
 #### Setpoint Update
 
 ```math
-X_{\text{next}} = X + v_x \cdot \Delta t \\
-Y_{\text{next}} = Y + v_y \cdot \Delta t \\
+X_{\text{next}} = X + v_x \cdot \Delta t,
+Y_{\text{next}} = Y + v_y \cdot \Delta t,
 Z_{\text{next}} = Z + v_z \cdot \Delta t
 ```
 
