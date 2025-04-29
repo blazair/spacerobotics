@@ -102,8 +102,8 @@ class BrysonLQRController(Node):
 
     def update_q_r(self):
         # Variant A: update multipliers each call (dynamic update)
-        self.q_multiplier = getattr(self, 'q_multiplier', 1.0) * 1.5
-        self.r_multiplier = getattr(self, 'r_multiplier', 1.0) * 0.8
+        self.q_multiplier = getattr(self, 'q_multiplier', 1.0) * 1.0
+        self.r_multiplier = getattr(self, 'r_multiplier', 1.0) * 1.0
         self.Q = self.q_multiplier * self.Q_orig
         self.R = self.r_multiplier * self.R_orig
         self.K = self.compute_lqr_gain()
