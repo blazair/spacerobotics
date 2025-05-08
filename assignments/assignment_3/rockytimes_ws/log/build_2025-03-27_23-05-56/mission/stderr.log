@@ -1,4 +1,0 @@
-[0mCMake Error: The current CMakeCache.txt directory /home/blazar/workspace/rockytimes_ws/build/mission/CMakeCache.txt is different than the directory /home/blazar/workspaces/rockytimes_ws/build/mission where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m
-[0mCMake Error: The source directory "/home/blazar/workspaces/rockytimes_ws/src/mission" does not exist.
-Specify --help for usage, or press the help button on the CMake GUI.[0m
-gmake: *** [Makefile:226: cmake_check_build_system] Error 1

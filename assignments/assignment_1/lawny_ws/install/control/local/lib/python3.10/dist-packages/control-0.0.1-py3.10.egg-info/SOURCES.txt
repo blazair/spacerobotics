@@ -1,8 +1,0 @@
-setup.py
-control/__init__.py
-control.egg-info/PKG-INFO
-control.egg-info/SOURCES.txt
-control.egg-info/dependency_links.txt
-control.egg-info/top_level.txt
-control/msg/__init__.py
-control/msg/_performance_metrics.py

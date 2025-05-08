@@ -1,2 +1,0 @@
-Invoking command in '/home/blazar/lawny_ws/build/control': /usr/bin/cmake --build /home/blazar/lawny_ws/build/control -- -j16 -l16
-Invoked command in '/home/blazar/lawny_ws/build/control' returned '2': /usr/bin/cmake --build /home/blazar/lawny_ws/build/control -- -j16 -l16

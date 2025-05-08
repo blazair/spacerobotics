@@ -1,0 +1,82 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, amsthm, graphicx, hyperref}
+
+\title{Spatiotemporal-Weather Gaussian Process Kernel with Nonstationary Matérn Kernel}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Mathematical Formulation}
+
+\subsection{Spatial Kernel: Nonstationary Matérn Kernel}
+We define the \textbf{local covariance matrix}:
+\[
+\Sigma(x) =
+\begin{bmatrix}
+\sigma_x^2 & \rho \sigma_x \sigma_y \\
+\rho \sigma_x \sigma_y & \sigma_y^2
+\end{bmatrix}
+\]
+
+Given two points \( x, x' \), we compute:
+\[
+M = \frac{1}{2} \left( \Sigma(x) + \Sigma(x') \right)
+\]
+\[
+Q_{ij} = (x - x')^T M^{-1} (x - x')
+\]
+
+The \textbf{Matérn covariance} function is:
+\[
+K_S(x, x') = \sigma_f^2 \cdot \frac{(\det \Sigma(x))^{1/4} (\det \Sigma(x'))^{1/4}}{(\det M)^{1/2}} 
+\cdot \frac{1}{\Gamma{\left(\nu\right)} 2^{\nu - 1}} \cdot \left( \sqrt{2\nu Q_{ij}} \right)^\nu K_\nu \left( \sqrt{2\nu Q_{ij}} \right)
+\]
+
+\subsection{Temporal Kernel: Exponential Kernel}
+\[
+K_T(t, t') = \sigma_T^2 \exp \left( -\frac{|t - t'|}{\ell_T} \right)
+\]
+
+\subsection{Weather Kernel: Periodic Kernel}
+\[
+K_W(w, w') = \sigma_W^2 \exp \left( -\frac{2 \sin^2{\left(\frac{\pi |w - w'|}{p}\right)}}{\ell_W^2} \right)
+\]
+
+\subsection{Final Spatiotemporal-Weather Kernel}
+We compute the full kernel as:
+\[
+K((x,t,w), (x',t',w')) = K_T(t, t') \cdot \left( K_S(x, x') \cdot K_W(w, w') \right)
+\]
+
+\section{RKHS Weights Computation}
+To estimate function values in the Reproducing Kernel Hilbert Space (RKHS), we solve:
+
+\[
+\boldsymbol{\alpha} = K^{-1} \mathbf{y}
+\]
+
+Using Cholesky factorization:
+\[
+K = L L^T
+\]
+
+Solving for \( \boldsymbol{\alpha} \):
+
+\[
+L \mathbf{u} = \mathbf{y}
+\]
+\[
+L^T \boldsymbol{\alpha} = \mathbf{u}
+\]
+
+\section{Final RKHS Function Representation}
+The function reconstruction in RKHS is given by:
+
+\[
+f(x, t, w) = \sum_{i=1}^{N} \alpha_i K((x,t,w), (x_i,t_i,w_i))
+\]
+
+\end{document}

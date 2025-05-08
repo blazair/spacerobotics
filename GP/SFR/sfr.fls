@@ -1,0 +1,281 @@
+PWD c:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR
+INPUT C:\Users\battu\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
+INPUT c:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\sfr.tex
+OUTPUT sfr.log
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\ieeetran\IEEEtran.cls
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\ieeetran\IEEEtran.cls
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\ot1ptm.fd
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\ot1ptm.fd
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\ot1ptm.fd
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr7t.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr7t.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr7t.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb7t.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmri7t.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmbi7t.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr7t.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb7t.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmri7t.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmbi7t.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr7t.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb7t.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmri7t.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmbi7t.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb7t.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmri7t.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmbi7t.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb7t.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmri7t.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmbi7t.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr7t.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb7t.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmri7t.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmbi7t.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr7t.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb7t.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmri7t.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmbi7t.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr7t.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb7t.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmri7t.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmbi7t.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr7t.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb7t.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmri7t.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmbi7t.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr7t.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb7t.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmri7t.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmbi7t.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\graphics\keyval.sty
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\graphics\keyval.sty
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\graphics\trig.sty
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\graphics\trig.sty
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\graphics-def\pdftex.def
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\graphics-def\pdftex.def
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\graphics-def\pdftex.def
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsmath.sty
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsmath.sty
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsopn.sty
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amstext.sty
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amstext.sty
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsgen.sty
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsgen.sty
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsbsy.sty
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsbsy.sty
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsopn.sty
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\amssymb.sty
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\amssymb.sty
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\amsfonts.sty
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\amsfonts.sty
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\cite\cite.sty
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\cite\cite.sty
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\mathtools\mathtools.sty
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\mathtools\mathtools.sty
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\tools\calc.sty
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\tools\calc.sty
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\mathtools\mhsetup.sty
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\mathtools\mhsetup.sty
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\subfig\subfig.sty
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\subfig\subfig.sty
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption.sty
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption.sty
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.sty
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.sty
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\url\url.sty
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\url\url.sty
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT .\sfr.aux
+INPUT .\sfr.aux
+INPUT sfr.aux
+OUTPUT sfr.aux
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi8.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy8.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsa.fd
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsa.fd
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsa.fd
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam5.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsb.fd
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsb.fd
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsb.fd
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr7t.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi6.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy6.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam5.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmrc7t.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx7.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx5.tfm
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\exponential\1.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\exponential\1.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\exponential\1.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\exponential\1.png
+OUTPUT sfr.pdf
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\exponential\1.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\exponential\1.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\exponential\1.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\matern_1.5\1.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\matern_1.5\1.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\matern_1.5\1.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\matern_1.5\1.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\matern_1.5\1.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\matern_1.5\1.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\matern_1.5\1.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\matern_2.5\1.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\matern_2.5\1.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\matern_2.5\1.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\matern_2.5\1.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\matern_2.5\1.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\matern_2.5\1.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\matern_2.5\1.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\squared exponential\1.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\squared exponential\1.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\squared exponential\1.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\squared exponential\1.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\squared exponential\1.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\squared exponential\1.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\squared exponential\1.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\exponential\2.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\exponential\2.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\exponential\2.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\exponential\2.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\exponential\2.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\exponential\2.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\exponential\2.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\matern_1.5\2.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\matern_1.5\2.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\matern_1.5\2.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\matern_1.5\2.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\matern_1.5\2.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\matern_1.5\2.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\matern_1.5\2.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\matern_2.5\2.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\matern_2.5\2.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\matern_2.5\2.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\matern_2.5\2.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\matern_2.5\2.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\matern_2.5\2.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\matern_2.5\2.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\squared exponential\2.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\squared exponential\2.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\squared exponential\2.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\squared exponential\2.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\squared exponential\2.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\squared exponential\2.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\squared exponential\2.png
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmr7t.vf
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
+INPUT C:\Users\battu\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\base\8r.enc
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmr7t.vf
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmr7t.vf
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmbi7t.vf
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmbi8r.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmb7t.vf
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb8r.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmrc7t.vf
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmr7t.vf
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmri7t.vf
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmri8r.tfm
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\exponential\3.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\exponential\3.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\exponential\3.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\exponential\3.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\exponential\3.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\exponential\3.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\exponential\3.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\matern_1.5\3.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\matern_1.5\3.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\matern_1.5\3.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\matern_1.5\3.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\matern_1.5\3.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\matern_1.5\3.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\matern_1.5\3.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\matern_2.5\3.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\matern_2.5\3.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\matern_2.5\3.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\matern_2.5\3.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\matern_2.5\3.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\matern_2.5\3.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\matern_2.5\3.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\squared exponential\3.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\squared exponential\3.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\squared exponential\3.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\squared exponential\3.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\squared exponential\3.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\squared exponential\3.png
+INPUT C:\ASU\Semester 2\space robotics and ai\codeyy\GP\SFR\safir\squared exponential\3.png
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmr7t.vf
+INPUT sfr.aux
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi7.pfb
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi7.pfb
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy7.pfb
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy7.pfb
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\type1\urw\times\utmb8a.pfb
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\type1\urw\times\utmb8a.pfb
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\type1\urw\times\utmbi8a.pfb
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\type1\urw\times\utmbi8a.pfb
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\type1\urw\times\utmr8a.pfb
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\type1\urw\times\utmr8a.pfb
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\type1\urw\times\utmri8a.pfb
+INPUT C:\Users\battu\AppData\Local\Programs\MiKTeX\fonts\type1\urw\times\utmri8a.pfb

@@ -1,2 +1,0 @@
-Invoking command in '/home/blazar/workspace/rockytimes_ws/build/mission': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/blazar/workspace/rockytimes_ws/build/mission -- -j16 -l16
-Invoked command in '/home/blazar/workspace/rockytimes_ws/build/mission' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/blazar/workspace/rockytimes_ws/build/mission -- -j16 -l16

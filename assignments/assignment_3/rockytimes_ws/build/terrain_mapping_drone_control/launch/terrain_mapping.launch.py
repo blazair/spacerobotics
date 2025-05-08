@@ -1,1 +1,0 @@
-/home/blazar/workspaces/rockytimes_ws/src/terrain_mapping_drone_control/launch/terrain_mapping.launch.py

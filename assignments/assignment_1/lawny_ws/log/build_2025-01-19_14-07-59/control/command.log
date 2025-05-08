@@ -1,6 +1,0 @@
-Invoking command in '/home/blazar/lawny_ws/build/control': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/blazar/lawny_ws/src/control -DCMAKE_INSTALL_PREFIX=/home/blazar/lawny_ws/install/control
-Invoked command in '/home/blazar/lawny_ws/build/control' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/blazar/lawny_ws/src/control -DCMAKE_INSTALL_PREFIX=/home/blazar/lawny_ws/install/control
-Invoking command in '/home/blazar/lawny_ws/build/control': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/blazar/lawny_ws/build/control -- -j16 -l16
-Invoked command in '/home/blazar/lawny_ws/build/control' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/blazar/lawny_ws/build/control -- -j16 -l16
-Invoking command in '/home/blazar/lawny_ws/build/control': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/blazar/lawny_ws/build/control
-Invoked command in '/home/blazar/lawny_ws/build/control' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/blazar/lawny_ws/build/control
