@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: ralpoley
+Version: 0.0.1
+Summary: Reinforcement Learning package using Gymnasium inside ROS 2
+Maintainer: blazar
+Maintainer-email: your_email@example.com
+License: Apache License 2.0

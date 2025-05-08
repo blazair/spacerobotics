@@ -1,0 +1,30 @@
+[0.542s] Invoking command in '/home/blazar/workspaces/cartip_ws/src/cart_pole_optimal_control': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/blazar/workspaces/cartip_ws/build/cart_pole_optimal_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/blazar/workspaces/cartip_ws/install/cart_pole_optimal_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cart_pole_optimal_control build --build-base /home/blazar/workspaces/cartip_ws/build/cart_pole_optimal_control/build install --record /home/blazar/workspaces/cartip_ws/build/cart_pole_optimal_control/install.log --single-version-externally-managed install_data
+[0.668s] running egg_info
+[0.676s] writing ../../build/cart_pole_optimal_control/cart_pole_optimal_control.egg-info/PKG-INFO
+[0.676s] writing dependency_links to ../../build/cart_pole_optimal_control/cart_pole_optimal_control.egg-info/dependency_links.txt
+[0.676s] writing entry points to ../../build/cart_pole_optimal_control/cart_pole_optimal_control.egg-info/entry_points.txt
+[0.676s] writing requirements to ../../build/cart_pole_optimal_control/cart_pole_optimal_control.egg-info/requires.txt
+[0.676s] writing top-level names to ../../build/cart_pole_optimal_control/cart_pole_optimal_control.egg-info/top_level.txt
+[0.693s] reading manifest file '../../build/cart_pole_optimal_control/cart_pole_optimal_control.egg-info/SOURCES.txt'
+[0.694s] writing manifest file '../../build/cart_pole_optimal_control/cart_pole_optimal_control.egg-info/SOURCES.txt'
+[0.694s] running build
+[0.694s] running build_py
+[0.694s] copying cart_pole_optimal_control/bryson_multipliers.py -> /home/blazar/workspaces/cartip_ws/build/cart_pole_optimal_control/build/lib/cart_pole_optimal_control
+[0.694s] running install
+[0.698s] running install_lib
+[0.706s] copying /home/blazar/workspaces/cartip_ws/build/cart_pole_optimal_control/build/lib/cart_pole_optimal_control/bryson_multipliers.py -> /home/blazar/workspaces/cartip_ws/install/cart_pole_optimal_control/lib/python3.12/site-packages/cart_pole_optimal_control
+[0.706s] byte-compiling /home/blazar/workspaces/cartip_ws/install/cart_pole_optimal_control/lib/python3.12/site-packages/cart_pole_optimal_control/bryson_multipliers.py to bryson_multipliers.cpython-312.pyc
+[0.708s] running install_data
+[0.708s] copying launch/cart_pole_bryson_multipliers.launch.py -> /home/blazar/workspaces/cartip_ws/install/cart_pole_optimal_control/share/cart_pole_optimal_control/launch
+[0.708s] running install_egg_info
+[0.717s] removing '/home/blazar/workspaces/cartip_ws/install/cart_pole_optimal_control/lib/python3.12/site-packages/cart_pole_optimal_control-0.0.1-py3.12.egg-info' (and everything under it)
+[0.718s] Copying ../../build/cart_pole_optimal_control/cart_pole_optimal_control.egg-info to /home/blazar/workspaces/cartip_ws/install/cart_pole_optimal_control/lib/python3.12/site-packages/cart_pole_optimal_control-0.0.1-py3.12.egg-info
+[0.718s] running install_scripts
+[0.779s] Installing bryson_lqr_controller script to /home/blazar/workspaces/cartip_ws/install/cart_pole_optimal_control/lib/cart_pole_optimal_control
+[0.779s] Installing bryson_multipliers script to /home/blazar/workspaces/cartip_ws/install/cart_pole_optimal_control/lib/cart_pole_optimal_control
+[0.779s] Installing earthquake_force_generator script to /home/blazar/workspaces/cartip_ws/install/cart_pole_optimal_control/lib/cart_pole_optimal_control
+[0.779s] Installing force_visualizer script to /home/blazar/workspaces/cartip_ws/install/cart_pole_optimal_control/lib/cart_pole_optimal_control
+[0.779s] Installing lqr_controller script to /home/blazar/workspaces/cartip_ws/install/cart_pole_optimal_control/lib/cart_pole_optimal_control
+[0.779s] Installing state_republisher script to /home/blazar/workspaces/cartip_ws/install/cart_pole_optimal_control/lib/cart_pole_optimal_control
+[0.780s] writing list of installed files to '/home/blazar/workspaces/cartip_ws/build/cart_pole_optimal_control/install.log'
+[0.792s] Invoked command in '/home/blazar/workspaces/cartip_ws/src/cart_pole_optimal_control' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/blazar/workspaces/cartip_ws/build/cart_pole_optimal_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/blazar/workspaces/cartip_ws/install/cart_pole_optimal_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cart_pole_optimal_control build --build-base /home/blazar/workspaces/cartip_ws/build/cart_pole_optimal_control/build install --record /home/blazar/workspaces/cartip_ws/build/cart_pole_optimal_control/install.log --single-version-externally-managed install_data

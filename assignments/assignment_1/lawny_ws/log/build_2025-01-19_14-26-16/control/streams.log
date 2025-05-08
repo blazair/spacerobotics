@@ -1,0 +1,323 @@
+[0.015s] Invoking command in '/home/blazar/lawny_ws/build/control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/blazar/lawny_ws/install/first_order_boustrophedon_navigator:/opt/ros/humble /usr/bin/cmake --build /home/blazar/lawny_ws/build/control -- -j16 -l16
+[0.040s] /usr/bin/cmake -S/home/blazar/lawny_ws/src/control -B/home/blazar/lawny_ws/build/control --check-build-system CMakeFiles/Makefile.cmake 0
+[0.053s] Re-run cmake file: Makefile older than: /home/blazar/lawny_ws/src/control/CMakeLists.txt
+[0.058s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.200s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.202s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.206s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.238s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.266s] -- Found rclpy: 3.3.15 (/opt/ros/humble/share/rclpy/cmake)
+[0.266s] -- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.593s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[0.802s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.081s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.107s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.134s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.135s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.135s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.151s] -- Configuring done
+[1.187s] -- Generating done
+[1.201s] -- Build files have been written to: /home/blazar/lawny_ws/build/control
+[1.210s] /usr/bin/cmake -E cmake_progress_start /home/blazar/lawny_ws/build/control/CMakeFiles /home/blazar/lawny_ws/build/control//CMakeFiles/progress.marks
+[1.222s] /usr/bin/gmake  -f CMakeFiles/Makefile2 all
+[1.225s] gmake[1]: Entering directory '/home/blazar/lawny_ws/build/control'
+[1.225s] /usr/bin/gmake  -f CMakeFiles/control__cpp.dir/build.make CMakeFiles/control__cpp.dir/depend
+[1.225s] /usr/bin/gmake  -f CMakeFiles/control__rosidl_generator_c.dir/build.make CMakeFiles/control__rosidl_generator_c.dir/depend
+[1.225s] /usr/bin/gmake  -f CMakeFiles/ament_cmake_python_copy_control.dir/build.make CMakeFiles/ament_cmake_python_copy_control.dir/depend
+[1.226s] gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'
+[1.226s] cd /home/blazar/lawny_ws/build/control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control/CMakeFiles/control__cpp.dir/DependInfo.cmake --color=
+[1.227s] gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'
+[1.227s] cd /home/blazar/lawny_ws/build/control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control/CMakeFiles/control__rosidl_generator_c.dir/DependInfo.cmake --color=
+[1.227s] gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'
+[1.227s] cd /home/blazar/lawny_ws/build/control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control/CMakeFiles/ament_cmake_python_copy_control.dir/DependInfo.cmake --color=
+[1.239s] Dependencies file "CMakeFiles/control__rosidl_generator_c.dir/rosidl_generator_c/control/msg/detail/performance_metrics__functions.c.o.d" is newer than depends file "/home/blazar/lawny_ws/build/control/CMakeFiles/control__rosidl_generator_c.dir/compiler_depend.internal".
+[1.239s] [35m[1mConsolidate compiler generated dependencies of target control__rosidl_generator_c[0m
+[1.240s] gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'
+[1.240s] gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'
+[1.240s] /usr/bin/gmake  -f CMakeFiles/ament_cmake_python_copy_control.dir/build.make CMakeFiles/ament_cmake_python_copy_control.dir/build
+[1.241s] /usr/bin/gmake  -f CMakeFiles/control__cpp.dir/build.make CMakeFiles/control__cpp.dir/build
+[1.241s] gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'
+[1.242s] /usr/bin/gmake  -f CMakeFiles/control__rosidl_generator_c.dir/build.make CMakeFiles/control__rosidl_generator_c.dir/build
+[1.242s] gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'
+[1.242s] /usr/bin/cmake -E copy_directory /home/blazar/lawny_ws/build/control/rosidl_generator_py/control /home/blazar/lawny_ws/build/control/ament_cmake_python/control/control
+[1.242s] gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'
+[1.243s] gmake[2]: Nothing to be done for 'CMakeFiles/control__cpp.dir/build'.
+[1.243s] gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'
+[1.244s] gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'
+[1.244s] gmake[2]: Nothing to be done for 'CMakeFiles/control__rosidl_generator_c.dir/build'.
+[1.244s] gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'
+[1.252s] [  3%] Built target control__cpp
+[1.253s] [ 12%] Built target control__rosidl_generator_c
+[1.253s] /usr/bin/gmake  -f CMakeFiles/control__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/control__rosidl_typesupport_introspection_cpp.dir/depend
+[1.253s] /usr/bin/gmake  -f CMakeFiles/control__rosidl_typesupport_cpp.dir/build.make CMakeFiles/control__rosidl_typesupport_cpp.dir/depend
+[1.254s] /usr/bin/gmake  -f CMakeFiles/control__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/control__rosidl_typesupport_fastrtps_cpp.dir/depend
+[1.255s] /usr/bin/gmake  -f CMakeFiles/control__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/control__rosidl_typesupport_fastrtps_c.dir/depend
+[1.255s] /usr/bin/gmake  -f CMakeFiles/control__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/control__rosidl_typesupport_introspection_c.dir/depend
+[1.255s] /usr/bin/gmake  -f CMakeFiles/control__rosidl_typesupport_c.dir/build.make CMakeFiles/control__rosidl_typesupport_c.dir/depend
+[1.255s] gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'
+[1.255s] gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'
+[1.255s] cd /home/blazar/lawny_ws/build/control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control/CMakeFiles/control__rosidl_typesupport_introspection_cpp.dir/DependInfo.cmake --color=
+[1.256s] gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'
+[1.256s] cd /home/blazar/lawny_ws/build/control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control/CMakeFiles/control__rosidl_typesupport_cpp.dir/DependInfo.cmake --color=
+[1.256s] gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'
+[1.256s] cd /home/blazar/lawny_ws/build/control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control/CMakeFiles/control__rosidl_typesupport_fastrtps_cpp.dir/DependInfo.cmake --color=
+[1.256s] gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'
+[1.256s] cd /home/blazar/lawny_ws/build/control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control/CMakeFiles/control__rosidl_typesupport_fastrtps_c.dir/DependInfo.cmake --color=
+[1.256s] gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'
+[1.256s] cd /home/blazar/lawny_ws/build/control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control/CMakeFiles/control__rosidl_typesupport_introspection_c.dir/DependInfo.cmake --color=
+[1.257s] gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'
+[1.257s] cd /home/blazar/lawny_ws/build/control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control/CMakeFiles/control__rosidl_typesupport_c.dir/DependInfo.cmake --color=
+[1.267s] [ 12%] Built target ament_cmake_python_copy_control
+[1.268s] Dependencies file "CMakeFiles/control__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control/msg/performance_metrics__type_support.cpp.o.d" is newer than depends file "/home/blazar/lawny_ws/build/control/CMakeFiles/control__rosidl_typesupport_cpp.dir/compiler_depend.internal".
+[1.268s] Dependencies file "CMakeFiles/control__rosidl_typesupport_c.dir/rosidl_typesupport_c/control/msg/performance_metrics__type_support.cpp.o.d" is newer than depends file "/home/blazar/lawny_ws/build/control/CMakeFiles/control__rosidl_typesupport_c.dir/compiler_depend.internal".
+[1.268s] Dependencies file "CMakeFiles/control__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control/msg/detail/performance_metrics__type_support.cpp.o.d" is newer than depends file "/home/blazar/lawny_ws/build/control/CMakeFiles/control__rosidl_typesupport_introspection_cpp.dir/compiler_depend.internal".
+[1.268s] Dependencies file "CMakeFiles/control__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control/msg/detail/performance_metrics__type_support_c.cpp.o.d" is newer than depends file "/home/blazar/lawny_ws/build/control/CMakeFiles/control__rosidl_typesupport_fastrtps_c.dir/compiler_depend.internal".
+[1.268s] Dependencies file "CMakeFiles/control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control/msg/detail/performance_metrics__type_support.c.o.d" is newer than depends file "/home/blazar/lawny_ws/build/control/CMakeFiles/control__rosidl_typesupport_introspection_c.dir/compiler_depend.internal".
+[1.268s] Dependencies file "CMakeFiles/control__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control/msg/detail/dds_fastrtps/performance_metrics__type_support.cpp.o.d" is newer than depends file "/home/blazar/lawny_ws/build/control/CMakeFiles/control__rosidl_typesupport_fastrtps_cpp.dir/compiler_depend.internal".
+[1.268s] [35m[1mConsolidate compiler generated dependencies of target control__rosidl_typesupport_c[0m
+[1.268s] [35m[1mConsolidate compiler generated dependencies of target control__rosidl_typesupport_introspection_c[0m
+[1.268s] [35m[1mConsolidate compiler generated dependencies of target control__rosidl_typesupport_cpp[0m
+[1.268s] [35m[1mConsolidate compiler generated dependencies of target control__rosidl_typesupport_introspection_cpp[0m
+[1.269s] [35m[1mConsolidate compiler generated dependencies of target control__rosidl_typesupport_fastrtps_c[0m
+[1.269s] [35m[1mConsolidate compiler generated dependencies of target control__rosidl_typesupport_fastrtps_cpp[0m
+[1.269s] /usr/bin/gmake  -f CMakeFiles/ament_cmake_python_build_control_egg.dir/build.make CMakeFiles/ament_cmake_python_build_control_egg.dir/depend
+[1.269s] gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'
+[1.270s] /usr/bin/gmake  -f CMakeFiles/control__rosidl_typesupport_c.dir/build.make CMakeFiles/control__rosidl_typesupport_c.dir/build
+[1.270s] gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'
+[1.270s] gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'
+[1.270s] cd /home/blazar/lawny_ws/build/control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control/CMakeFiles/ament_cmake_python_build_control_egg.dir/DependInfo.cmake --color=
+[1.271s] /usr/bin/gmake  -f CMakeFiles/control__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/control__rosidl_typesupport_introspection_c.dir/build
+[1.271s] gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'
+[1.271s] gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'
+[1.271s] gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'
+[1.271s] /usr/bin/gmake  -f CMakeFiles/control__rosidl_typesupport_cpp.dir/build.make CMakeFiles/control__rosidl_typesupport_cpp.dir/build
+[1.271s] /usr/bin/gmake  -f CMakeFiles/control__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/control__rosidl_typesupport_introspection_cpp.dir/build
+[1.272s] /usr/bin/gmake  -f CMakeFiles/control__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/control__rosidl_typesupport_fastrtps_c.dir/build
+[1.272s] gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'
+[1.272s] gmake[2]: Nothing to be done for 'CMakeFiles/control__rosidl_typesupport_c.dir/build'.
+[1.272s] gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'
+[1.272s] gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'
+[1.272s] /usr/bin/gmake  -f CMakeFiles/control__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/control__rosidl_typesupport_fastrtps_cpp.dir/build
+[1.272s] gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'
+[1.272s] gmake[2]: Nothing to be done for 'CMakeFiles/control__rosidl_typesupport_introspection_c.dir/build'.
+[1.273s] gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'
+[1.274s] gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'
+[1.274s] gmake[2]: Nothing to be done for 'CMakeFiles/control__rosidl_typesupport_cpp.dir/build'.
+[1.274s] gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'
+[1.274s] gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'
+[1.274s] gmake[2]: Nothing to be done for 'CMakeFiles/control__rosidl_typesupport_introspection_cpp.dir/build'.
+[1.274s] gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'
+[1.274s] gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'
+[1.275s] gmake[2]: Nothing to be done for 'CMakeFiles/control__rosidl_typesupport_fastrtps_c.dir/build'.
+[1.275s] gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'
+[1.275s] gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'
+[1.275s] gmake[2]: Nothing to be done for 'CMakeFiles/control__rosidl_typesupport_fastrtps_cpp.dir/build'.
+[1.275s] gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'
+[1.282s] [ 32%] Built target control__rosidl_typesupport_c
+[1.283s] [ 32%] Built target control__rosidl_typesupport_introspection_c
+[1.283s] [ 45%] Built target control__rosidl_typesupport_cpp
+[1.283s] [ 51%] Built target control__rosidl_typesupport_introspection_cpp
+[1.284s] [ 61%] Built target control__rosidl_typesupport_fastrtps_c
+[1.284s] [ 70%] Built target control__rosidl_typesupport_fastrtps_cpp
+[1.284s] gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'
+[1.284s] /usr/bin/gmake  -f CMakeFiles/ament_cmake_python_build_control_egg.dir/build.make CMakeFiles/ament_cmake_python_build_control_egg.dir/build
+[1.285s] /usr/bin/gmake  -f CMakeFiles/control.dir/build.make CMakeFiles/control.dir/depend
+[1.286s] gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'
+[1.286s] cd /home/blazar/lawny_ws/build/control/ament_cmake_python/control && /usr/bin/python3 setup.py egg_info
+[1.287s] gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'
+[1.287s] cd /home/blazar/lawny_ws/build/control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control/CMakeFiles/control.dir/DependInfo.cmake --color=
+[1.299s] gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'
+[1.299s] /usr/bin/gmake  -f CMakeFiles/control.dir/build.make CMakeFiles/control.dir/build
+[1.301s] gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'
+[1.301s] gmake[2]: Nothing to be done for 'CMakeFiles/control.dir/build'.
+[1.301s] gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'
+[1.312s] [ 70%] Built target control
+[1.314s] /usr/bin/gmake  -f control__py/CMakeFiles/control__py.dir/build.make control__py/CMakeFiles/control__py.dir/depend
+[1.315s] gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'
+[1.316s] cd /home/blazar/lawny_ws/build/control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/build/control/control__py /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control/control__py /home/blazar/lawny_ws/build/control/control__py/CMakeFiles/control__py.dir/DependInfo.cmake --color=
+[1.328s] gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'
+[1.328s] /usr/bin/gmake  -f control__py/CMakeFiles/control__py.dir/build.make control__py/CMakeFiles/control__py.dir/build
+[1.330s] gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'
+[1.330s] gmake[2]: Nothing to be done for 'control__py/CMakeFiles/control__py.dir/build'.
+[1.330s] gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'
+[1.341s] [ 74%] Built target control__py
+[1.343s] /usr/bin/gmake  -f CMakeFiles/control__rosidl_generator_py.dir/build.make CMakeFiles/control__rosidl_generator_py.dir/depend
+[1.344s] gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'
+[1.345s] cd /home/blazar/lawny_ws/build/control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control/CMakeFiles/control__rosidl_generator_py.dir/DependInfo.cmake --color=
+[1.355s] Dependencies file "CMakeFiles/control__rosidl_generator_py.dir/rosidl_generator_py/control/msg/_performance_metrics_s.c.o.d" is newer than depends file "/home/blazar/lawny_ws/build/control/CMakeFiles/control__rosidl_generator_py.dir/compiler_depend.internal".
+[1.355s] [35m[1mConsolidate compiler generated dependencies of target control__rosidl_generator_py[0m
+[1.360s] gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'
+[1.360s] /usr/bin/gmake  -f CMakeFiles/control__rosidl_generator_py.dir/build.make CMakeFiles/control__rosidl_generator_py.dir/build
+[1.363s] gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'
+[1.364s] gmake[2]: Nothing to be done for 'CMakeFiles/control__rosidl_generator_py.dir/build'.
+[1.364s] gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'
+[1.374s] [ 80%] Built target control__rosidl_generator_py
+[1.376s] /usr/bin/gmake  -f CMakeFiles/control__rosidl_typesupport_fastrtps_c__pyext.dir/build.make CMakeFiles/control__rosidl_typesupport_fastrtps_c__pyext.dir/depend
+[1.376s] /usr/bin/gmake  -f CMakeFiles/control__rosidl_typesupport_introspection_c__pyext.dir/build.make CMakeFiles/control__rosidl_typesupport_introspection_c__pyext.dir/depend
+[1.376s] /usr/bin/gmake  -f CMakeFiles/control__rosidl_typesupport_c__pyext.dir/build.make CMakeFiles/control__rosidl_typesupport_c__pyext.dir/depend
+[1.377s] gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'
+[1.377s] cd /home/blazar/lawny_ws/build/control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control/CMakeFiles/control__rosidl_typesupport_fastrtps_c__pyext.dir/DependInfo.cmake --color=
+[1.378s] gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'
+[1.378s] cd /home/blazar/lawny_ws/build/control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control/CMakeFiles/control__rosidl_typesupport_introspection_c__pyext.dir/DependInfo.cmake --color=
+[1.378s] gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'
+[1.378s] cd /home/blazar/lawny_ws/build/control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/src/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control /home/blazar/lawny_ws/build/control/CMakeFiles/control__rosidl_typesupport_c__pyext.dir/DependInfo.cmake --color=
+[1.388s] Dependencies file "CMakeFiles/control__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/control/_control_s.ep.rosidl_typesupport_c.c.o.d" is newer than depends file "/home/blazar/lawny_ws/build/control/CMakeFiles/control__rosidl_typesupport_c__pyext.dir/compiler_depend.internal".
+[1.388s] Dependencies file "CMakeFiles/control__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/control/_control_s.ep.rosidl_typesupport_introspection_c.c.o.d" is newer than depends file "/home/blazar/lawny_ws/build/control/CMakeFiles/control__rosidl_typesupport_introspection_c__pyext.dir/compiler_depend.internal".
+[1.388s] Dependencies file "CMakeFiles/control__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/control/_control_s.ep.rosidl_typesupport_fastrtps_c.c.o.d" is newer than depends file "/home/blazar/lawny_ws/build/control/CMakeFiles/control__rosidl_typesupport_fastrtps_c__pyext.dir/compiler_depend.internal".
+[1.388s] [35m[1mConsolidate compiler generated dependencies of target control__rosidl_typesupport_introspection_c__pyext[0m
+[1.388s] [35m[1mConsolidate compiler generated dependencies of target control__rosidl_typesupport_fastrtps_c__pyext[0m
+[1.388s] [35m[1mConsolidate compiler generated dependencies of target control__rosidl_typesupport_c__pyext[0m
+[1.392s] gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'
+[1.392s] gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'
+[1.392s] gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'
+[1.392s] /usr/bin/gmake  -f CMakeFiles/control__rosidl_typesupport_fastrtps_c__pyext.dir/build.make CMakeFiles/control__rosidl_typesupport_fastrtps_c__pyext.dir/build
+[1.392s] /usr/bin/gmake  -f CMakeFiles/control__rosidl_typesupport_introspection_c__pyext.dir/build.make CMakeFiles/control__rosidl_typesupport_introspection_c__pyext.dir/build
+[1.393s] /usr/bin/gmake  -f CMakeFiles/control__rosidl_typesupport_c__pyext.dir/build.make CMakeFiles/control__rosidl_typesupport_c__pyext.dir/build
+[1.395s] gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'
+[1.395s] gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'
+[1.396s] gmake[2]: Entering directory '/home/blazar/lawny_ws/build/control'
+[1.396s] gmake[2]: Nothing to be done for 'CMakeFiles/control__rosidl_typesupport_introspection_c__pyext.dir/build'.
+[1.396s] gmake[2]: Nothing to be done for 'CMakeFiles/control__rosidl_typesupport_fastrtps_c__pyext.dir/build'.
+[1.396s] gmake[2]: Nothing to be done for 'CMakeFiles/control__rosidl_typesupport_c__pyext.dir/build'.
+[1.396s] gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'
+[1.396s] gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'
+[1.396s] gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'
+[1.407s] [100%] Built target control__rosidl_typesupport_c__pyext
+[1.407s] [100%] Built target control__rosidl_typesupport_introspection_c__pyext
+[1.407s] [100%] Built target control__rosidl_typesupport_fastrtps_c__pyext
+[1.530s] running egg_info
+[1.530s] writing control.egg-info/PKG-INFO
+[1.531s] writing dependency_links to control.egg-info/dependency_links.txt
+[1.531s] writing top-level names to control.egg-info/top_level.txt
+[1.533s] reading manifest file 'control.egg-info/SOURCES.txt'
+[1.534s] writing manifest file 'control.egg-info/SOURCES.txt'
+[1.554s] gmake[2]: Leaving directory '/home/blazar/lawny_ws/build/control'
+[1.565s] [100%] Built target ament_cmake_python_build_control_egg
+[1.567s] gmake[1]: Leaving directory '/home/blazar/lawny_ws/build/control'
+[1.567s] /usr/bin/cmake -E cmake_progress_start /home/blazar/lawny_ws/build/control/CMakeFiles 0
+[1.584s] Invoked command in '/home/blazar/lawny_ws/build/control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/blazar/lawny_ws/install/first_order_boustrophedon_navigator:/opt/ros/humble /usr/bin/cmake --build /home/blazar/lawny_ws/build/control -- -j16 -l16
+[1.598s] Invoking command in '/home/blazar/lawny_ws/build/control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/blazar/lawny_ws/install/first_order_boustrophedon_navigator:/opt/ros/humble /usr/bin/cmake --install /home/blazar/lawny_ws/build/control
+[1.608s] -- Install configuration: ""
+[1.608s] -- Up-to-date: /home/blazar/lawny_ws/install/control/share/ament_index/resource_index/rosidl_interfaces/control
+[1.608s] -- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control
+[1.608s] -- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg
+[1.608s] -- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/performance_metrics.h
+[1.608s] -- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/rosidl_generator_c__visibility_control.h
+[1.608s] -- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/detail
+[1.608s] -- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/detail/performance_metrics__functions.h
+[1.608s] -- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/detail/performance_metrics__struct.h
+[1.608s] -- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/detail/performance_metrics__functions.c
+[1.609s] -- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/detail/performance_metrics__type_support.h
+[1.609s] -- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/environment/library_path.sh
+[1.609s] -- Installing: /home/blazar/lawny_ws/install/control/share/control/environment/library_path.dsv
+[1.609s] -- Up-to-date: /home/blazar/lawny_ws/install/control/lib/libcontrol__rosidl_generator_c.so
+[1.609s] -- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control
+[1.609s] -- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg
+[1.609s] -- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[1.609s] -- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/detail
+[1.609s] -- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/detail/performance_metrics__rosidl_typesupport_fastrtps_c.h
+[1.609s] -- Up-to-date: /home/blazar/lawny_ws/install/control/lib/libcontrol__rosidl_typesupport_fastrtps_c.so
+[1.609s] -- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control
+[1.610s] -- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg
+[1.610s] -- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[1.610s] -- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/detail
+[1.610s] -- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/detail/performance_metrics__type_support.c
+[1.610s] -- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/detail/performance_metrics__rosidl_typesupport_introspection_c.h
+[1.610s] -- Up-to-date: /home/blazar/lawny_ws/install/control/lib/libcontrol__rosidl_typesupport_introspection_c.so
+[1.610s] -- Up-to-date: /home/blazar/lawny_ws/install/control/lib/libcontrol__rosidl_typesupport_c.so
+[1.610s] -- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control
+[1.610s] -- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg
+[1.610s] -- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/rosidl_generator_cpp__visibility_control.hpp
+[1.611s] -- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/performance_metrics.hpp
+[1.611s] -- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/detail
+[1.611s] -- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/detail/performance_metrics__builder.hpp
+[1.611s] -- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/detail/performance_metrics__struct.hpp
+[1.611s] -- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/detail/performance_metrics__traits.hpp
+[1.611s] -- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/detail/performance_metrics__type_support.hpp
+[1.611s] -- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control
+[1.611s] -- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg
+[1.611s] -- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[1.611s] -- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/detail
+[1.611s] -- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/detail/dds_fastrtps
+[1.611s] -- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/detail/performance_metrics__rosidl_typesupport_fastrtps_cpp.hpp
+[1.611s] -- Up-to-date: /home/blazar/lawny_ws/install/control/lib/libcontrol__rosidl_typesupport_fastrtps_cpp.so
+[1.611s] -- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control
+[1.612s] -- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg
+[1.612s] -- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/detail
+[1.612s] -- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/detail/performance_metrics__type_support.cpp
+[1.612s] -- Up-to-date: /home/blazar/lawny_ws/install/control/include/control/control/msg/detail/performance_metrics__rosidl_typesupport_introspection_cpp.hpp
+[1.612s] -- Up-to-date: /home/blazar/lawny_ws/install/control/lib/libcontrol__rosidl_typesupport_introspection_cpp.so
+[1.612s] -- Up-to-date: /home/blazar/lawny_ws/install/control/lib/libcontrol__rosidl_typesupport_cpp.so
+[1.612s] -- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/environment/pythonpath.sh
+[1.612s] -- Installing: /home/blazar/lawny_ws/install/control/share/control/environment/pythonpath.dsv
+[1.613s] -- Up-to-date: /home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control-0.0.1-py3.10.egg-info
+[1.613s] -- Installing: /home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control-0.0.1-py3.10.egg-info/PKG-INFO
+[1.613s] -- Installing: /home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control-0.0.1-py3.10.egg-info/dependency_links.txt
+[1.613s] -- Installing: /home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control-0.0.1-py3.10.egg-info/SOURCES.txt
+[1.613s] -- Installing: /home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control-0.0.1-py3.10.egg-info/top_level.txt
+[1.614s] -- Up-to-date: /home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control
+[1.614s] -- Up-to-date: /home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control/_control_s.ep.rosidl_typesupport_c.c
+[1.614s] -- Up-to-date: /home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control/libcontrol__rosidl_generator_py.so
+[1.614s] -- Up-to-date: /home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control/control_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[1.614s] -- Up-to-date: /home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control/_control_s.ep.rosidl_typesupport_introspection_c.c
+[1.614s] -- Installing: /home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control/__init__.py
+[1.614s] -- Up-to-date: /home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control/control_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[1.614s] -- Up-to-date: /home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control/control_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[1.614s] -- Up-to-date: /home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control/msg
+[1.614s] -- Up-to-date: /home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control/msg/__init__.py
+[1.615s] -- Up-to-date: /home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control/msg/_performance_metrics.py
+[1.615s] -- Up-to-date: /home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control/msg/_performance_metrics_s.c
+[1.615s] -- Up-to-date: /home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control/_control_s.ep.rosidl_typesupport_fastrtps_c.c
+[1.651s] Listing '/home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control'...
+[1.651s] Compiling '/home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control/__init__.py'...
+[1.651s] Listing '/home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control/msg'...
+[1.656s] -- Up-to-date: /home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control/control_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[1.656s] -- Up-to-date: /home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control/control_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[1.656s] -- Up-to-date: /home/blazar/lawny_ws/install/control/local/lib/python3.10/dist-packages/control/control_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[1.657s] -- Up-to-date: /home/blazar/lawny_ws/install/control/lib/libcontrol__rosidl_generator_py.so
+[1.657s] -- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/msg/PerformanceMetrics.idl
+[1.657s] -- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/msg/PerformanceMetrics.msg
+[1.657s] -- Up-to-date: /home/blazar/lawny_ws/install/control/lib/control/controller.py
+[1.657s] -- Installing: /home/blazar/lawny_ws/install/control/lib/control/exp.py
+[1.657s] -- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/launch/launch
+[1.658s] -- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/launch/launch/controller_launch.xml
+[1.658s] -- Up-to-date: /home/blazar/lawny_ws/install/control/share/ament_index/resource_index/package_run_dependencies/control
+[1.658s] -- Up-to-date: /home/blazar/lawny_ws/install/control/share/ament_index/resource_index/parent_prefix_path/control
+[1.658s] -- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/environment/ament_prefix_path.sh
+[1.658s] -- Installing: /home/blazar/lawny_ws/install/control/share/control/environment/ament_prefix_path.dsv
+[1.658s] -- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/environment/path.sh
+[1.658s] -- Installing: /home/blazar/lawny_ws/install/control/share/control/environment/path.dsv
+[1.658s] -- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/local_setup.bash
+[1.658s] -- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/local_setup.sh
+[1.659s] -- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/local_setup.zsh
+[1.659s] -- Installing: /home/blazar/lawny_ws/install/control/share/control/local_setup.dsv
+[1.659s] -- Installing: /home/blazar/lawny_ws/install/control/share/control/package.dsv
+[1.659s] -- Up-to-date: /home/blazar/lawny_ws/install/control/share/ament_index/resource_index/packages/control
+[1.659s] -- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/export_control__rosidl_generator_cExport.cmake
+[1.659s] -- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/export_control__rosidl_generator_cExport-noconfig.cmake
+[1.659s] -- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/export_control__rosidl_typesupport_fastrtps_cExport.cmake
+[1.660s] -- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/export_control__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[1.660s] -- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/control__rosidl_typesupport_introspection_cExport.cmake
+[1.660s] -- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/control__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[1.660s] -- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/control__rosidl_typesupport_cExport.cmake
+[1.660s] -- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/control__rosidl_typesupport_cExport-noconfig.cmake
+[1.660s] -- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/export_control__rosidl_generator_cppExport.cmake
+[1.660s] -- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/export_control__rosidl_typesupport_fastrtps_cppExport.cmake
+[1.660s] -- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/export_control__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[1.660s] -- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/control__rosidl_typesupport_introspection_cppExport.cmake
+[1.660s] -- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/control__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[1.660s] -- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/control__rosidl_typesupport_cppExport.cmake
+[1.660s] -- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/control__rosidl_typesupport_cppExport-noconfig.cmake
+[1.661s] -- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/export_control__rosidl_generator_pyExport.cmake
+[1.661s] -- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/export_control__rosidl_generator_pyExport-noconfig.cmake
+[1.661s] -- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/rosidl_cmake-extras.cmake
+[1.661s] -- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.661s] -- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/ament_cmake_export_libraries-extras.cmake
+[1.661s] -- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/ament_cmake_export_targets-extras.cmake
+[1.661s] -- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[1.661s] -- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.661s] -- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[1.661s] -- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/controlConfig.cmake
+[1.661s] -- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/cmake/controlConfig-version.cmake
+[1.661s] -- Up-to-date: /home/blazar/lawny_ws/install/control/share/control/package.xml
+[1.665s] Invoked command in '/home/blazar/lawny_ws/build/control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/blazar/lawny_ws/install/first_order_boustrophedon_navigator:/opt/ros/humble /usr/bin/cmake --install /home/blazar/lawny_ws/build/control

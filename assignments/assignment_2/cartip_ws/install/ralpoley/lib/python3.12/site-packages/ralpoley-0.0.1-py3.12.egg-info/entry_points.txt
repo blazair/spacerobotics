@@ -1,0 +1,2 @@
+[console_scripts]
+gymmie = ralpoley.gymmie:main

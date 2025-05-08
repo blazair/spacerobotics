@@ -1,0 +1,63 @@
+running egg_info
+writing ../../build/terrain_mapping_drone_control/terrain_mapping_drone_control.egg-info/PKG-INFO
+writing dependency_links to ../../build/terrain_mapping_drone_control/terrain_mapping_drone_control.egg-info/dependency_links.txt
+writing entry points to ../../build/terrain_mapping_drone_control/terrain_mapping_drone_control.egg-info/entry_points.txt
+writing requirements to ../../build/terrain_mapping_drone_control/terrain_mapping_drone_control.egg-info/requires.txt
+writing top-level names to ../../build/terrain_mapping_drone_control/terrain_mapping_drone_control.egg-info/top_level.txt
+reading manifest file '../../build/terrain_mapping_drone_control/terrain_mapping_drone_control.egg-info/SOURCES.txt'
+writing manifest file '../../build/terrain_mapping_drone_control/terrain_mapping_drone_control.egg-info/SOURCES.txt'
+running build
+running build_py
+copying terrain_mapping_drone_control/geometry_tracker.py -> /home/blazar/workspaces/rockytimes_ws/build/terrain_mapping_drone_control/build/lib/terrain_mapping_drone_control
+copying terrain_mapping_drone_control/aruco_tracker.py -> /home/blazar/workspaces/rockytimes_ws/build/terrain_mapping_drone_control/build/lib/terrain_mapping_drone_control
+copying terrain_mapping_drone_control/__init__.py -> /home/blazar/workspaces/rockytimes_ws/build/terrain_mapping_drone_control/build/lib/terrain_mapping_drone_control
+copying terrain_mapping_drone_control/pose_visualizer.py -> /home/blazar/workspaces/rockytimes_ws/build/terrain_mapping_drone_control/build/lib/terrain_mapping_drone_control
+copying terrain_mapping_drone_control/cylinder_landing_node.py -> /home/blazar/workspaces/rockytimes_ws/build/terrain_mapping_drone_control/build/lib/terrain_mapping_drone_control
+copying terrain_mapping_drone_control/spiral_trajectory.py -> /home/blazar/workspaces/rockytimes_ws/build/terrain_mapping_drone_control/build/lib/terrain_mapping_drone_control
+copying terrain_mapping_drone_control/mission.py -> /home/blazar/workspaces/rockytimes_ws/build/terrain_mapping_drone_control/build/lib/terrain_mapping_drone_control
+copying terrain_mapping_drone_control/feature_tracker.py -> /home/blazar/workspaces/rockytimes_ws/build/terrain_mapping_drone_control/build/lib/terrain_mapping_drone_control
+running install
+running install_lib
+copying /home/blazar/workspaces/rockytimes_ws/build/terrain_mapping_drone_control/build/lib/terrain_mapping_drone_control/geometry_tracker.py -> /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/lib/python3.12/site-packages/terrain_mapping_drone_control
+copying /home/blazar/workspaces/rockytimes_ws/build/terrain_mapping_drone_control/build/lib/terrain_mapping_drone_control/aruco_tracker.py -> /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/lib/python3.12/site-packages/terrain_mapping_drone_control
+copying /home/blazar/workspaces/rockytimes_ws/build/terrain_mapping_drone_control/build/lib/terrain_mapping_drone_control/__init__.py -> /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/lib/python3.12/site-packages/terrain_mapping_drone_control
+copying /home/blazar/workspaces/rockytimes_ws/build/terrain_mapping_drone_control/build/lib/terrain_mapping_drone_control/pose_visualizer.py -> /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/lib/python3.12/site-packages/terrain_mapping_drone_control
+copying /home/blazar/workspaces/rockytimes_ws/build/terrain_mapping_drone_control/build/lib/terrain_mapping_drone_control/cylinder_landing_node.py -> /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/lib/python3.12/site-packages/terrain_mapping_drone_control
+copying /home/blazar/workspaces/rockytimes_ws/build/terrain_mapping_drone_control/build/lib/terrain_mapping_drone_control/spiral_trajectory.py -> /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/lib/python3.12/site-packages/terrain_mapping_drone_control
+copying /home/blazar/workspaces/rockytimes_ws/build/terrain_mapping_drone_control/build/lib/terrain_mapping_drone_control/mission.py -> /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/lib/python3.12/site-packages/terrain_mapping_drone_control
+copying /home/blazar/workspaces/rockytimes_ws/build/terrain_mapping_drone_control/build/lib/terrain_mapping_drone_control/feature_tracker.py -> /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/lib/python3.12/site-packages/terrain_mapping_drone_control
+byte-compiling /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/lib/python3.12/site-packages/terrain_mapping_drone_control/geometry_tracker.py to geometry_tracker.cpython-312.pyc
+byte-compiling /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/lib/python3.12/site-packages/terrain_mapping_drone_control/aruco_tracker.py to aruco_tracker.cpython-312.pyc
+byte-compiling /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/lib/python3.12/site-packages/terrain_mapping_drone_control/__init__.py to __init__.cpython-312.pyc
+byte-compiling /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/lib/python3.12/site-packages/terrain_mapping_drone_control/pose_visualizer.py to pose_visualizer.cpython-312.pyc
+byte-compiling /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/lib/python3.12/site-packages/terrain_mapping_drone_control/cylinder_landing_node.py to cylinder_landing_node.cpython-312.pyc
+byte-compiling /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/lib/python3.12/site-packages/terrain_mapping_drone_control/spiral_trajectory.py to spiral_trajectory.cpython-312.pyc
+byte-compiling /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/lib/python3.12/site-packages/terrain_mapping_drone_control/mission.py to mission.cpython-312.pyc
+byte-compiling /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/lib/python3.12/site-packages/terrain_mapping_drone_control/feature_tracker.py to feature_tracker.cpython-312.pyc
+running install_data
+copying resource/terrain_mapping_drone_control -> /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/share/ament_index/resource_index/packages
+copying launch/terrain_mapping.launch.py -> /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/share/terrain_mapping_drone_control/launch
+copying launch/mission.launch.py -> /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/share/terrain_mapping_drone_control/launch
+copying launch/cylinder_landing.launch.py -> /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/share/terrain_mapping_drone_control/launch
+copying launch/rtabmap.launch.py -> /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/share/terrain_mapping_drone_control/launch
+copying config/Default.perspective -> /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/share/terrain_mapping_drone_control/config
+copying config/terrain_mapping_params.yaml -> /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/share/terrain_mapping_drone_control/config
+copying config/drone_viz.rviz -> /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/share/terrain_mapping_drone_control/config
+copying models/cylinder/materials/aruco_marker_0.png -> /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/share/terrain_mapping_drone_control/models/cylinder/materials
+creating /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/share/terrain_mapping_drone_control/models/cylinder_small
+creating /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/share/terrain_mapping_drone_control/models/cylinder_small/materials
+creating /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/share/terrain_mapping_drone_control/models/cylinder_small/materials/textures
+creating /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/share/terrain_mapping_drone_control/models/cylinder_short/materials/textures
+running install_egg_info
+removing '/home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/lib/python3.12/site-packages/terrain_mapping_drone_control-0.0.1-py3.12.egg-info' (and everything under it)
+Copying ../../build/terrain_mapping_drone_control/terrain_mapping_drone_control.egg-info to /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/lib/python3.12/site-packages/terrain_mapping_drone_control-0.0.1-py3.12.egg-info
+running install_scripts
+Installing aruco_tracker script to /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/bin
+Installing cylinder_landing_node script to /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/bin
+Installing feature_tracker script to /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/bin
+Installing geometry_tracker script to /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/bin
+Installing mission script to /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/bin
+Installing pose_visualizer script to /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/bin
+Installing px4_odom_converter script to /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/bin
+Installing spiral_trajectory script to /home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control/bin
+writing list of installed files to '/home/blazar/workspaces/rockytimes_ws/build/terrain_mapping_drone_control/install.log'

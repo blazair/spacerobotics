@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dds>
+  <participant profile_name="custom_participant_profile" is_default_profile="true">
+    <rtps>
+      <builtin>
+        <!-- (Other builtin settings as needed) -->
+      </builtin>
+      <properties>
+        <!-- Increase the preallocated payload size to a value above your largest expected payload -->
+        <property>
+          <name>fast_rtps.historyPayloadSize</name>
+          <value>200</value>
+        </property>
+      </properties>
+    </rtps>
+  </participant>
+</dds>

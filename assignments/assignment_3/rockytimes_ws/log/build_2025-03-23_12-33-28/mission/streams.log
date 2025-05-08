@@ -1,0 +1,42 @@
+[0.008s] Invoking command in '/home/blazar/workspaces/rockytimes_ws/build/mission': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control:/home/blazar/workspaces/ellie_ws/install/ellie:/home/blazar/robotics1/scara_ws/install/desco:/home/blazar/workspaces/arduinobot_ws/install/arduinobot_py_examples:/home/blazar/workspaces/cartip_ws/install/ralpoley:/home/blazar/workspaces/cartip_ws/install/cart_pole_optimal_control:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(thingsbro) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(thingsbro) /usr/bin/cmake /home/blazar/workspaces/rockytimes_ws/src/mission -DCMAKE_INSTALL_PREFIX=/home/blazar/workspaces/rockytimes_ws/install/mission
+[0.048s] -- The C compiler identification is GNU 13.3.0
+[0.086s] -- The CXX compiler identification is GNU 13.3.0
+[0.098s] -- Detecting C compiler ABI info
+[0.163s] -- Detecting C compiler ABI info - done
+[0.169s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.170s] -- Detecting C compile features
+[0.170s] -- Detecting C compile features - done
+[0.176s] -- Detecting CXX compiler ABI info
+[0.248s] -- Detecting CXX compiler ABI info - done
+[0.255s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.255s] -- Detecting CXX compile features
+[0.255s] -- Detecting CXX compile features - done
+[0.260s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.345s] -- Found Python3: /home/blazar/envs/thingsbro/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.449s] -- Found rclcpp: 28.1.6 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.495s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.510s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.526s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.544s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.622s] -- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.627s] -- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.717s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[0.733s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[0.764s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.896s] -- Configuring done (0.9s)
+[0.898s] [31mCMake Error at CMakeLists.txt:16 (add_executable):
+[0.898s]   Cannot find source file:
+[0.898s] 
+[0.898s]     src/mission_node.cpp
+[0.898s] 
+[0.898s]   Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm
+[0.898s]   .ccm .cxxm .c++m .h .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90
+[0.898s]   .f95 .f03 .hip .ispc
+[0.898s] 
+[0.898s] [0m
+[0.899s] [31mCMake Error at CMakeLists.txt:16 (add_executable):
+[0.899s]   No SOURCES given to target: mission_node
+[0.899s] 
+[0.899s] [0m
+[0.899s] [0mCMake Generate step failed.  Build files cannot be regenerated correctly.[0m
+[0.906s] Invoked command in '/home/blazar/workspaces/rockytimes_ws/build/mission' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/blazar/workspaces/rockytimes_ws/install/terrain_mapping_drone_control:/home/blazar/workspaces/ellie_ws/install/ellie:/home/blazar/robotics1/scara_ws/install/desco:/home/blazar/workspaces/arduinobot_ws/install/arduinobot_py_examples:/home/blazar/workspaces/cartip_ws/install/ralpoley:/home/blazar/workspaces/cartip_ws/install/cart_pole_optimal_control:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(thingsbro) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(thingsbro) /usr/bin/cmake /home/blazar/workspaces/rockytimes_ws/src/mission -DCMAKE_INSTALL_PREFIX=/home/blazar/workspaces/rockytimes_ws/install/mission
