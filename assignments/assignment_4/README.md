@@ -1,8 +1,8 @@
 # Photogrammetry and Gaussian Splatting
 
 Notaiton
-N15 ---> original dataset
-N25 ---> original + 10 novel images
+N15 ---> original dataset /
+N25 ---> original + 10 novel images /
 
 A code was written to compare image renders from the same position to get SNIR and PNIR, but since ground truth model was not available to compare with the N15 and N25 reconstructions, its quite useless to deply now. Hence Cloud Compare was used to get some metrics that prove
 that the N25 model is densser and has been reconstructed properly even when the new images were taken 
