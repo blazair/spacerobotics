@@ -1,6 +1,7 @@
 # Photogrammetry and Gaussian Splatting
 
 Notaiton
+
 N15 ---> original dataset
 
 N25 ---> original + 10 novel images
